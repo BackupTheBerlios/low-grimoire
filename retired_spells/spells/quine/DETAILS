@@ -7,6 +7,6 @@
 # FRESHMEAT=""
      SHORT="Quine is a kit which allows you to write your own quines"
 cat << EOF
-Programs which print their own source code are called `quines'. 
+Programs which print their own source code are called quines. 
 Quine is a kit which allows you to write your own quines.
 EOF
