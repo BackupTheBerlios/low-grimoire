@@ -4,8 +4,8 @@
  CATEGORY="network"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
- HOMEPAGE="http://www.lintux.cx/axel.html"
-      URL="http://www.lintux.cx/downloads"
+ HOMEPAGE="http://wilmer.gaast.net/main.php/axel.html"
+      URL="http://wilmer.gaast.net/downloads"
    OPT[0]="gettext:--i18n=1::add internationalization"
       REQ=( "curl"
             "gettext:--i18n=1::add internationalization" )
