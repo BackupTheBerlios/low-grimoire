@@ -1,0 +1,15 @@
+  VERSION=( "0.5" )
+ CATEGORY="db development"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.hardgeus.com/projects/pgdesigner/"
+      URL="http://www.hardgeus.com/projects"
+      REQ="postgresql fltk"
+#FRESHMEAT=""
+    SHORT="PGDesigner is my attempt at implementing a datamodel designer for PostgreSQL."
+cat << EOF
+PGDesigner is my attempt at implementing a datamodel designer for
+PostgreSQL. Good datamodeling tools already exist, but none are open
+source. So here we are. This program is in the alpha stage, but is usable
+for basic datamodeling.
+EOF
