@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="http://librdf.org/dist/source"
       REQ=( "libxml2 curl" )
  ESTIMATE="115"
+FRESHMEAT="raptor"
 DESC="Raptor is a library that provides a set of rdf parsers.
 Raptor is a free software / Open Source C library that provides a set of
 parsers and serializers that generate Resource Description Framework (RDF)

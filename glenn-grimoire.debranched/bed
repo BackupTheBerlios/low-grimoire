@@ -8,6 +8,7 @@ ATTRIBUTE="console"
       URL="http://bedlinux.tripod.com/download"
       REQ=( "ncurses" )
  ESTIMATE="115"
+FRESHMEAT="bed"
 DESC="Menu driven binary editor.
 Menu driven binary editor. Dataformats are ascii, unsigned and signed
 integers, float, bitflags, bitfields, labels, ebcdic and time_t. Different

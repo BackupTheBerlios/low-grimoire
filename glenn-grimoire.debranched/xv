@@ -35,8 +35,7 @@ SOURCE[14]="bmp32.patch"
    URL[13]="${URL[1]}/$SPELL/patches"
    URL[14]="${URL[1]}/$SPELL/patches"
       REQ=( "patch jpeg tiff" )
-#   OPT[4]="Csound:--with-ladspa::"
-#FRESHMEAT=""
+FRESHMEAT="xv"
 DESC="xv is an interactive image manipulation program for the X Window System.
 xv is an interactive image manipulation program for the X Window System. It
 can operate on images in the GIF, JPEG, TIFF, PBM, PGM, PPM, XPM, X11 bitmap,

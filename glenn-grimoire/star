@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
       URL="ftp://ftp.berlios.de/pub/star"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="star"
 DESC="The fastest and most POSIX 1003.1 conformant tar implementation.
 The fastest and most POSIX 1003.1 conformant tar implementation.
 "

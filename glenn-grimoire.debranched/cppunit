@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
 #      REQ=( "" )
  ESTIMATE="115"
+FRESHMEAT="cppunit"
 DESC="CppUnit is a C++ unit testing framework.
 CppUnit is a C++ unit testing framework. It started its life as a port of
 JUnit to C++ by Michael Feathers.

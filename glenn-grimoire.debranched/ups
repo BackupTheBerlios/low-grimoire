@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
  HOMEPAGE="http://ups.sourceforge.net/main.html"
       URL="$SOURCEFORGE_URL"
       REQ=( "XFree86" )
-#FRESHMEAT=""
+FRESHMEAT="ups"
 DESC="Ups is a source level C,C++ and Fortran debugger that runs under X11.
 Ups is a source level C,C++ and Fortran debugger that runs under X11.
 Currently supported systems are FreeBSD and GNU/Linux on Intel x86 and

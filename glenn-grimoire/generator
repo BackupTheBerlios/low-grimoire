@@ -15,6 +15,7 @@ ATTRIBUTE="x11"
    OPT[2]="svgalib:--with-svgalib::build svgalib gui"
      OPTS="--with-raze --with-cmz80"
  ESTIMATE="115"
+FRESHMEAT="generator"
 DESC="Generator is an open source emulator designed to emulate the Sega Genesis / Mega Drive console.
 Generator is an open source emulator designed to emulate the Sega Genesis /
 Mega Drive console, a popular games machine produced in the early 1990s.

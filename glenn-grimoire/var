@@ -12,7 +12,7 @@ ATTRIBUTE="library"
             "dmalloc:--with-dmalloc::add malloc debugging support" )
    OPT[0]="ex:--with-ex::add ex exception handling support"
    OPT[1]="dmalloc:--with-dmalloc::add malloc debugging support"
-#FRESHMEAT=""
+FRESHMEAT="var"
 DESC="OSSP var is a flexible, full-featured and fast variable construct expansion library.
 OSSP var is a flexible, full-featured and fast variable construct
 expansion library. It supports a configurable variable construct syntax

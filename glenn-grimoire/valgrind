@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://valgrind.kde.org/"
       URL="http://developer.kde.org/~sewardj"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="valgrind"
 DESC="Valgrind is a GPL tool to help you find memory-management problems in your programs.
 Valgrind is a GPL tool to help you find memory-management problems in
 your programs. When a program is run under Valgrinds supervision, all
