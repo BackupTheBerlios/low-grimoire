@@ -1,0 +1,17 @@
+   VERSION=( "2.0.24" )
+  CATEGORY="video-editor"
+ ATTRIBUTE="library x11"
+    SOURCE="avidemux-$VERSION"
+      URL="http://fixounet.free.fr/avidemux/"
+  HOMEPAGE="http://fixounet.free.fr/avidemux/"
+       REQ="gtk+ glib mad,lib libxml2 nasm"
+    OPT[0]="XviD::For Alternate Mpeg-4 Encoding"
+    OPT[1]="lame::For MP3 Encoding"
+    OPT[2]="a52dec::For AC3 Decoding"
+    OPT[3]="libvorbis::For Ogg Vorbis encoding/decoding"
+  ESTIMATE="1466"
+ FRESHMEAT="avidemux"
+     SHORT="A graphical video editor supporting many formats"
+cat << EOF
+A graphical video editor supporting many formats
+EOF
