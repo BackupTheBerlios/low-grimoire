@@ -1,0 +1,8 @@
+I cleaned a little the tree :
+the symboic links are a bad practice with cvs so.... removed and moved 
+glenn-grimoire.debranched to glenn-grimoire
+
+I moved glenn-grimoire.branched to retired_spells with some others outdated 
+directories (like moonbase...)
+
+now the main tree only contain debranched spells
