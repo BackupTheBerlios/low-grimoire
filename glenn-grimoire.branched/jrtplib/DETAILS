@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="JRTPLIB is an object-oriented RTP library written in C++."
-stream << EOF
+LONG="
 JRTPLIB is an object-oriented RTP library written in C++.
-EOF
+"

@@ -8,6 +8,6 @@ ATTRIBUTE="client|server"
 #   OPT[0]="mysql:::to use mysql as a backend"
 #FRESHMEAT=""
     SHORT="This program implements a client/server gateway to the SMS protocol."
-stream << EOF
+LONG="
 This program implements a client/server gateway to the SMS protocol.
-EOF
+"

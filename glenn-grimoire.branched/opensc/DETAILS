@@ -11,7 +11,7 @@ ATTRIBUTE="console library"
 #   OPT[3]="osfsia:--with-ladspa::for ladspa plugins"
 #FRESHMEAT=""
     SHORT="Many smart card related tools."
-stream << EOF
+LONG="
 libopensc is a library for accessing smart card devices using PC/SC Lite
 middleware package. It is also the core library of the OpenSC project.
 Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any
@@ -19,4 +19,4 @@ ISO 7816-4 compatible smart card. Encryption and decryption using private
 keys on the smart card is at the moment possible only with PKCS #15
 compatible cards, such as the FINEID (Finnish electronic ID card) card
 manufactured by Setec.
-EOF
+"

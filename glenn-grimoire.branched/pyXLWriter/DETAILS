@@ -8,10 +8,10 @@
   ESTIMATE="16"
 # FRESHMEAT=""
      SHORT="pyXLWriter is a Python library for generating Excel spreadsheets."
-stream << EOF
+LONG="
 pyXLWriter is a Python library for generating Excel spreadsheets. It's a
 port of John McNamara's Perl Spreadsheet::WriteExcel module (see
 http://www.cpan.org) to Python. Requires Python 2.3+.
-EOF
+"
 
 

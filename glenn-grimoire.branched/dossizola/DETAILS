@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
       REQ="SDL_image"
 #FRESHMEAT=""
     SHORT="Do'SSi Zo'la is a board game under GPL licence, using SDL."
-stream << EOF
+LONG="
 Do'SSi Zo'la is a board game under GPL licence, using SDL. You can play
 with two players or you can play on your own against the computer.
 
@@ -16,4 +16,4 @@ the fields which surround him without being blocked yourself. Every turn
 of play, each player must first move to some adjacent field and then
 destroy a field of his choice. The first player who cannot move anymore
 loses the game. 
-EOF
+"

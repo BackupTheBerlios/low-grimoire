@@ -9,6 +9,6 @@ ATTRIBUTE="x11"
    OPT[1]="jpeg:::add jpeg support"
 #FRESHMEAT=""
     SHORT="Kaptain is a universal graphical front-end for command line programs."
-stream << EOF
+LONG="
 Kaptain is a universal graphical front-end for command line programs.
-EOF
+"

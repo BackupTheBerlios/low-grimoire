@@ -7,9 +7,9 @@ ATTRIBUTE="console"
       REQ=""
 FRESHMEAT="calltree"
     SHORT="calltree - static call tree generator for C programs."
-stream << EOF
+LONG="
 calltree - static call tree generator for C programs
 The calltree command parses  a  collection  of  input  files
 (assuming  C  syntax) and builds a graph that represents the
 static call structure of these files.
-EOF
+"

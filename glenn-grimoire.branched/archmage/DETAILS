@@ -8,9 +8,9 @@
   ESTIMATE="16"
 # FRESHMEAT=""
      SHORT="arCHMage - extensible reader/decompiler of files in CHM format(Microsoft HTML help, also known as Compiled HTML)."
-stream << EOF
+LONG="
 arCHMage - extensible reader/decompiler of files in CHM format(Microsoft
 HTML help, also known as Compiled HTML).
-EOF
+"
 
 

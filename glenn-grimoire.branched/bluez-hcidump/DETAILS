@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ="bluez-libs"
 #FRESHMEAT=""
     SHORT="HCIDump - HCI packet analyzer."
-stream << EOF
+LONG="
 HCIDump - HCI packet analyzer.
-EOF
+"

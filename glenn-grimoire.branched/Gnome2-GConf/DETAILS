@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="Gtk2 GConf"
      SHORT="The Gnome2 module allows a perl developer to use Gnome's GConf libraries."
-stream << EOF
+LONG="
 The Gnome2 module allows a perl developer to use Gnome's GConf libraries.
-EOF
+"

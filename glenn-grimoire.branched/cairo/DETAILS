@@ -10,11 +10,11 @@ ATTRIBUTE="library"
    OPT[1]="glitz::--disable-gl:add OpenGL backend"
 #FRESHMEAT=""
     SHORT="Cairo is a vector graphics library with cross-device output support."
-stream << EOF
+LONG="
 Cairo is a vector graphics library with cross-device output support.
 Currently supported output targets include the X Window System, in-memory
 image buffers, and PostScript. An OpenGL backend is in progress, and PDF
 file output is planned. Cairo is designed to produce identical output on
 all output media while taking advantage of display hardware acceleration
 when available (eg. through the X Render Extension). 
-EOF
+"

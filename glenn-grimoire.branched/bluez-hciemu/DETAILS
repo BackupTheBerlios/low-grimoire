@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ="glib bluez-libs"
 #FRESHMEAT=""
     SHORT="HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)."
-stream << EOF
+LONG="
 HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)
-EOF
+"

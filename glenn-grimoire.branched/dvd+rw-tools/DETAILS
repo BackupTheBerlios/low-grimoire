@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ="m4"
 #FRESHMEAT=""
     SHORT="dvd+rw-tools masters the DVD media, both +RW/+R and -R[W]."
-stream << EOF
+LONG="
 dvd+rw-tools masters the DVD media, both +RW/+R and -R[W].
-EOF
+"

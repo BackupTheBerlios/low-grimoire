@@ -8,10 +8,10 @@ ATTRIBUTE="console"
       URL="http://flatassembler.net"
 FRESHMEAT="fasm"
     SHORT="The flat assembler is a fast and efficient self-assembling 80x86 assembler."
-stream << EOF
+LONG="
 The flat assembler is a fast and efficient self-assembling 80x86 assembler
 for DOS, Windows and Linux. It supports all 8086-80486/Pentium instructions
 with MMX, SSE, SSE2 and 3DNow! extensions, can produce output in binary, 
 MZ, PE or COFF format. Has the advanced but easy to use macroinstruction
 support and does multiple quick passes to optimize the code for size.
-EOF
+"

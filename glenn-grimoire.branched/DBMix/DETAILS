@@ -8,8 +8,8 @@ ATTRIBUTE="server library"
    OPT[0]="xmms:::make a plugin for xmms"
 #FRESHMEAT=""
     SHORT="DBMix Digital Audio Mixing System"
-stream << EOF
+LONG="
 DBMix is a software DJ mixing system for digital audio. DBMix allows a user
 to output multiple simultaneous audio streams on a single sound device, and
 to transform/modify each stream independently.
-EOF
+"

@@ -8,6 +8,6 @@ ATTRIBUTE="x11 client|server"
 #   OPT[0]="nxcomp:::add nx compression"
 #FRESHMEAT=""
     SHORT="X11 proxy which has support for compression."
-stream << EOF
+LONG="
 X11 proxy which has support for compression.
-EOF
+"

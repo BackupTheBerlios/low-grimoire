@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ="libebml"
 #FRESHMEAT=""
     SHORT="Library for reading matroska files, a video wrapper format like avi."
-stream << EOF
+LONG="
 Library for reading matroska files, a video wrapper format like avi.
-EOF
+"

@@ -7,8 +7,8 @@ ATTRIBUTE="console"
       REQ="libpng"
 #FRESHMEAT=""
     SHORT="SNG is a specialized markup language for expressing the contents of a PNG."
-stream << EOF
+LONG="
 SNG is a specialized markup language for expressing the contents of a PNG
 (Portable Network Graphics) in an editable, all-text form. The project
 supports the sng compiler, which can translate between SNG and PNG.
-EOF
+"

@@ -8,6 +8,6 @@ ATTRIBUTE="lilbrary"
 #   OPT[0]="nxcomp:::add nx compression"
 #FRESHMEAT=""
     SHORT="X11 compression library."
-stream << EOF
+LONG="
 X11 compression library.
-EOF
+"

@@ -9,6 +9,6 @@ ATTRIBUTE="data"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Magic card data, used for mindless."
-stream << EOF
+LONG="
 Magic card data, used for mindless.
-EOF
+"

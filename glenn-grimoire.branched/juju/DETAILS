@@ -7,7 +7,7 @@
 	    http://fresh.t-systems-sfr.com/cgi-bin/warex?linux/src"
     OPT[0]="gpgme:::to use pgp with juen"
      SHORT="juju is a smart decoder for uu-, base64-, binhex- or xxencoded data."
-stream << EOF
+LONG="
 juju is a smart decoder for uu-, 
 base64-, binhex- or xxencoded data.
 juen is also included.
@@ -15,4 +15,4 @@ It encodes binary data with one of
 the formats uu-, base64- or xxencoding.
 It supports automatic mailing or 
 posting in one or more parts.
-EOF
+"

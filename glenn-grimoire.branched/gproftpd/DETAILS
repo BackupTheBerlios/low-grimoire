@@ -7,7 +7,7 @@ ATTRIBUTE="gnome|x11"
       REQ="gtk+ pango gdk-pixbuf gettext"
 #FRESHMEAT=""
     SHORT="GProftpd is a fast and easy to use GTK+ administration tool for the Proftpd standalone server."
-stream << EOF
+LONG="
 GProftpd is a fast and easy to use GTK+ administration tool for the
 Proftpd standalone server.
-EOF
+"

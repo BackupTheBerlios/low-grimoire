@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ="axel mktemp"
 #FRESHMEAT=""
     SHORT="Queue manager for axel."
-stream << EOF
+LONG="
 axelq is a queue manager for the download accelerator axel. axelq
 basically reads some URLs, caches them and runs axel to download them.
-EOF
+"

@@ -11,7 +11,7 @@
 #   OPTS[4]="libpng:::For PNG2SWF converter"
 #   OPTS[5]="lame:::For WAV2SWF converter"
      SHORT="SWF Tools is a collection of SWF manipulation and generation utilities"
-stream << EOF
+LONG="
  SWF Tools is a collection of SWF manipulation and generation utilities
  written by Rainer Bo"hme and Matthias Kramm. It is released under the GPL.
 Included are:
@@ -43,4 +43,4 @@ SWFExtract Allows to extract Movieclips, Sounds, Images etc. from SWF files.
 RFXSWF Library A fully featured library which can be used for standalone
  SWF generation. Includes support for Bitmaps, Buttons, Shapes, Text, 
  Fonts, Sound etc.
-EOF
+"

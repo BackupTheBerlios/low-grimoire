@@ -8,7 +8,7 @@
     OPT[0]="glut:--enable-hopengl::add openGL support"
 # FRESHMEAT="ethereal"
      SHORT="Glascow Haskell Compiler (binary)"
-stream << EOF
+LONG="
 The Glasgow Haskell Compiler is a robust, fully-featured, optimising
 compiler and interactive environment for Haskell 98, GHC compiles Haskell
 to either native code or C.  It implements numerous experimental language
@@ -17,4 +17,4 @@ interface, multi-parameter type classes, scoped type variables,
 existential and universal quantification, unboxed types, exceptions, weak
 pointers, and so on.  GHC comes with a generational garbage collector,
 and a space and time profiler.
-EOF
+"

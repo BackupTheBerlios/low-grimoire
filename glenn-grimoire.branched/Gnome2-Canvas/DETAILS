@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="Gtk2 libgnomecanvas"
      SHORT="The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas."
-stream << EOF
+LONG="
 The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas.
-EOF
+"

@@ -9,10 +9,10 @@ ATTRIBUTE="x11"
 #   OPT[0]="alsa:::to use alsa libraries"
 #FRESHMEAT="zinf"
     SHORT="Protux aims to be the most practical and one of the most powerful audio tools for Linux."
-stream << EOF
+LONG="
 Protux aims to be the most practical and one of the most powerful audio
 tools for Linux. Protux will allow you to utilize the power of
 keyboard+mouse combination (with no clicks) to vastly speed up the process
 of audio production. This concept we call "Jog-Mouse-Board" or JMB, for
 short.
-EOF
+"

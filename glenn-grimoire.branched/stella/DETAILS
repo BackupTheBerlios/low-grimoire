@@ -9,8 +9,8 @@
   ESTIMATE="16"
 # FRESHMEAT=""
      SHORT="Stella is a multi-platform Atari 2600 VCS emulator."
-stream << EOF
+LONG="
 Stella is a multi-platform Atari 2600 VCS emulator.
-EOF
+"
 
 

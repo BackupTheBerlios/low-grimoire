@@ -7,10 +7,10 @@ ATTRIBUTE="console"
       REQ="perl sed m4"
 #FRESHMEAT=""
     SHORT="The ext system is a set of programs that generate documentation."
-stream << EOF
+LONG="
 The ext system is a set of programs that generate documentation for the
 World-Wide Web from specially-formatted C programs and automatically
 place function prototypes in header files. These are being used in a
 variety of large software projects and have been shown to simplify the
 programmer's task. 
-EOF
+"

@@ -5,7 +5,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.packetfactory.net/projects/libnet/"
       URL="http://www.packetfactory.net/libnet/dist"
     SHORT="Libnet is a high-level API (toolkit) allowing the application programmer to construct and inject network packets."
-stream << EOF
+LONG="
 Libnet is a high-level API (toolkit) allowing the application programmer to
 construct and inject network packets. It provides a portable and simplified
 interface for low-level network packet shaping, handling and injection.
@@ -18,4 +18,4 @@ Using libnet, quick and simple packet assembly applications can be whipped
 up with little effort. With a bit more time, more complex programs can be
 written (Traceroute and ping were easily rewritten using libnet and
 libpcap).
-EOF
+"

@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ="svgalib"
 #FRESHMEAT=""
     SHORT="Eckbox is software that allows a user to remotely shoulder surf on a target computer's monitor."
-stream << EOF
+LONG="
 Eckbox is software that allows a user to remotely shoulder surf on a target
 computer's monitor (this is known as van Eck Phreaking).  It requires a
 certain amount of hardware that must be made by the user.  Instructions for
@@ -15,4 +15,4 @@ building this hardware is located on eckbox's sourceforge project page at
 http://eckbox.sourceforge.net
 
 *** Read the README also
-EOF
+"

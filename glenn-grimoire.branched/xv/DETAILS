@@ -36,7 +36,7 @@ SOURCE[14]="bmp32.patch"
 #   OPT[4]="Csound:--with-ladspa::"
 #FRESHMEAT=""
     SHORT="xv is an interactive image manipulation program for the X Window System."
-stream << EOF
+LONG="
 xv is an interactive image manipulation program for the X Window System. It
 can operate on images in the GIF, JPEG, TIFF, PBM, PGM, PPM, XPM, X11 bitmap,
 Sun Rasterfile, Targa, RLE, RGB, BMP, PCX, FITS, and PM formats on all known
@@ -68,4 +68,4 @@ including, but not limited to, the following:
     * dither in color and b/w
     * crop off solid borders automatically
     * convert image formats
-EOF
+"

@@ -7,10 +7,10 @@ ATTRIBUTE="driver"
       REQ="flex libusb"
 #FRESHMEAT=""
     SHORT="PC/SC Architecture (smart cards)."
-stream << EOF
+LONG="
 PC/SC Architecture for most Unix type operating systems. Allows easy
 porting of Windows smartcard software to other operating systems. Supports
 many types of serial, PCMCIA, and USB smartcard readers and cryptographic
 tokens. Tested under Redhat, Suse, Solaris 2.8, Open BSD, OS X v10.1, and
 HPUX.
-EOF
+"

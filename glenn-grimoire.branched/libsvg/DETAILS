@@ -8,6 +8,6 @@ ATTRIBUTE="library"
       REQ="libxml2"
 #FRESHMEAT=""
     SHORT="libsvg provides a parser for SVG content in files or buffers."
-stream << EOF
+LONG="
 libsvg provides a parser for SVG content in files or buffers.
-EOF
+"

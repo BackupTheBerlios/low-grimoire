@@ -6,7 +6,7 @@
        URL="ftp://ftp.debian.org/debian/pool/main/l"
        REQ="gzip popt"
      SHORT="Rotates, compresses, removes and mails system log files."
-stream << EOF
+LONG="
 The logrotate utility is designed to simplify the administration of
 log files on a system which generates a lot of log files.  Logrotate
 allows for the automatic rotation compression, removal and mailing of
@@ -16,4 +16,4 @@ logrotate runs as a daily cron job.
 
 Check out this site for some good examples:
 http://www.topology.org/linux/logrotate.html
-EOF
+"

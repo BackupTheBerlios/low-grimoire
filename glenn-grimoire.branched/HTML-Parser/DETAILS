@@ -6,6 +6,6 @@
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/G/GA/GAAS"
        REQ="perl HTML-Tagset"
      SHORT="HTML parser class."
-stream << EOF
+LONG="
 HTML parser class.
-EOF
+"

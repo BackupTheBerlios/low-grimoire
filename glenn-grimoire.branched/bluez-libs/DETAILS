@@ -7,6 +7,6 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Bluetooth Libraries."
-stream << EOF
+LONG="
 Bluetooth Libraries.
-EOF
+"

@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ=""
 #FRESHMEAT=""
     SHORT="ethtool is used for querying settings of an ethernet device and  changing them."
-stream << EOF
+LONG="
 ethtool is used for querying settings of an ethernet device and  changing them.
-EOF
+"

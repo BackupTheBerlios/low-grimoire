@@ -6,6 +6,6 @@ ATTRIBUTE="x11"
       URL="$SOURCEFORGE_URL"
       REQ="gtk+,v1.2 iptables"
     SHORT="gtk-iptables is a gtk-based frontend for iptables written in C."
-stream << EOF
+LONG="
 gtk-iptables is a gtk-based frontend for iptables written in C.
-EOF
+"

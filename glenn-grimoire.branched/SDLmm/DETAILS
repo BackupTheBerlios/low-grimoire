@@ -8,8 +8,8 @@ ATTRIBUTE="library"
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
     SHORT="This is a C++ glue to SDL (Simple DirectMedia Layer) library."
-stream << EOF
+LONG="
 This is a C++ glue to SDL (Simple DirectMedia Layer) library- a low-level,
 cross-platform multimedia library. SDLmm will utilize C++ features while
 still being close to SDL in syntax (and naming).
-EOF
+"

@@ -7,9 +7,9 @@ ATTRIBUTE="kde|x11"
       REQ="kde,libs graphviz binutils valgrind"
 #FRESHMEAT=""
     SHORT="KCachegrind - Profiling Visualization."
-stream << EOF
+LONG="
 KCachegrind is able to visualize output of other profilers like OProfile,
 a system-wide profiler for Linux using statistical sampling with hardware
 performance counters. There also exist converters for profiling output of
 Python, PHP and PERL. 
-EOF
+"

@@ -7,7 +7,7 @@ ATTRIBUTE="console driver"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Tools for Emu10k1 sound cards."
-stream << EOF
+LONG="
 Card support
 ------------
 - Creative Sound Blaster Live! (all models)
@@ -39,4 +39,4 @@ Tools for Emu10k1 sound cards.
 Also, several ".bin" dsp patches will be installed in /usr/local/share/emu10k1/
 you can load these patches using emu-dspmgr. A description of each effect
 is provided in  /usr/local/share/emu10k1/README
-EOF
+"

@@ -5,10 +5,10 @@
              URL="ftp://ftp.inet.no/pub/socks"
         HOMEPAGE="http://www.inet.no/dante"
            SHORT="Dante is a SOCKS v4 & v5 server"
-stream << EOF
+LONG="
 Dante - SOCKS v4 & v5 server
 Dante is a circuit-level firewall/proxy that can be used to provide
 convenient and secure network connectivity to a wide range of hosts
 while requiring only the server Dante runs on to have external network
 connectivity.
-EOF
+"

@@ -10,7 +10,7 @@ ATTRIBUTE="gnome|x11"
 #   OPT[1]="mozilla::--disable-mozilla:add built in mozilla browser"
 #FRESHMEAT=""
     SHORT="Gnophone is an internet telephone that allows you to make calls to other GnoPhone users or to an Asterisk PBX Gateway."
-stream << EOF
+LONG="
 Gnophone is an open source internet telephone that allows you to make
 calls to other GnoPhone users or to an Asterisk PBX Gateway. It supports
 a fully featured web interface allowing you to participate in various
@@ -21,4 +21,4 @@ quality that doesn't require very high bandwidth.
     * Web based discussion groups
     * Provides simulated full-duplex on half-duplex sound cards
     * GnoPhone interfaces with the Asterisk Open Source PBX 
-EOF
+"

@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ="gmetadom t1lib"
 #FRESHMEAT=""
     SHORT="GtkMathView is a C++ rendering engine for MathML documents."
-stream << EOF
+LONG="
 GtkMathView is a C++ rendering engine for MathML documents.
-EOF
+"

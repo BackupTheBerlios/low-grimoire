@@ -7,7 +7,7 @@ ATTRIBUTE="other"
       REQ="ladspa_sdk fftw"
 #FRESHMEAT=""
     SHORT="These are audio plugins for LADSPA, the Linux Audio Developers Plugin API."
-stream << EOF
+LONG="
 Set of LADSPA pluggins by Steve Harris.
 These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
-EOF
+"

@@ -7,10 +7,10 @@ ATTRIBUTE="gnome|x11"
       REQ="gnome-libs ORBit"
 #FRESHMEAT=""
     SHORT="Glitter is an interactive GUI program for extracting binaries from newsgroups."
-stream << EOF
+LONG="
 Glitter is an interactive GUI program for extracting binaries from
 newsgroups. It provides a powerful mechanism for filtering files to
 ensure that you retrieve only the binaries that you want. You may also
 schedule the binary download for a convenient time, perhaps when you are
 asleep, when charges are low and the network is not congested.
-EOF
+"

@@ -7,8 +7,8 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="The JThread package provides some classes to make use of threads easy on different platforms."
-stream << EOF
+LONG="
 The JThread package provides some classes to make use of threads easy on
 different platforms. The classes are actually rather simple wrappers
 around existing thread implementations.
-EOF
+"

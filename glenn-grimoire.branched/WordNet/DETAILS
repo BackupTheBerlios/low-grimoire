@@ -7,10 +7,10 @@ ATTRIBUTE="kde|x11"
       REQ="tk"
 #FRESHMEAT=""
     SHORT="WordNet® is an online lexical reference system."
-stream << EOF
+LONG="
 WordNet® is an online lexical reference system whose design is inspired
 by current psycholinguistic theories of human lexical memory. English
 nouns, verbs, adjectives and adverbs are organized into synonym sets,
 each representing one underlying lexical concept. Different relations
 link the synonym sets.
-EOF
+"

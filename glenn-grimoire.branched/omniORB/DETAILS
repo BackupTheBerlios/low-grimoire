@@ -8,6 +8,6 @@ ATTRIBUTE="library"
    OPT[0]="openssl:--with-openssl=/usr::add ssl support"
 #FRESHMEAT=""
     SHORT="omniORB is a robust high performance CORBA ORB for C++ and Python."
-stream << EOF
+LONG="
 omniORB is a robust high performance CORBA ORB for C++ and Python.
-EOF
+"

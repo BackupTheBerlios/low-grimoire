@@ -12,6 +12,6 @@
   ESTIMATE="1466"
  FRESHMEAT="avidemux"
      SHORT="A graphical video editor supporting many formats"
-cat << EOF
+LONG="
 A graphical video editor supporting many formats
-EOF
+"

@@ -8,11 +8,11 @@ ATTRIBUTE="client|server"
 #   OPT[0]="openssl:--with-openssl=/usr::add ssl support"
 #FRESHMEAT=""
     SHORT="frox is a transparent ftp proxy."
-stream << EOF
+LONG="
 This is the homepage of frox. It is a transparent ftp proxy which is
 released under the GPL. It optionally supports caching (either through
 an external http cache (eg. squid), or by maintaining a cache locally),
 and/or running a virus scanner, on downloaded files. It is written with
 security in mind, and in the default setup it runs as a non root user in
 a chroot jail.
-EOF
+"

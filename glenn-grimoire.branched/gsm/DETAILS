@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="GSM 06.10 compresses frames of 160 13-bit samples into 260 bits."
-stream << EOF
+LONG="
 GSM 06.10 compresses frames of 160 13-bit samples (8 kHz sampling
 rate, i.e. a frame rate of 50 Hz) into 260 bits; for compatibility
 with typical UNIX applications, our implementation turns frames of 160
@@ -15,4 +15,4 @@ with typical UNIX applications, our implementation turns frames of 160
 The quality of the algorithm is good enough for reliable speaker
 recognition; even music often survives transcoding in recognizable 
 form (given the bandwidth limitations of 8 kHz sampling rate).
-EOF
+"

@@ -8,8 +8,8 @@ ATTRIBUTE="x11"
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
     SHORT="Mindless Automaton is a virtual tabletop on which you can play card games against other people over a network."
-stream << EOF
+LONG="
 Mindless Automaton is a virtual tabletop on which you can play card games
 against other people over a network.  It was designed to simulate the
 Magic: The Gathering game, but it can be expanded to simulate other games.
-EOF
+"

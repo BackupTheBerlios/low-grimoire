@@ -7,8 +7,8 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="A Free Ansi C Library to facilitate the creation of CGI softwares using the C/C++ programming language."
-stream << EOF
+LONG="
 A Free Ansi C Library to facilitate the creation of CGI softwares using
 the C/C++ programming language. Documentations, examples and source codes
 are included.
-EOF
+"

@@ -6,7 +6,7 @@
        URL="http://www.mojotoad.com/sisk/projects"
        REQ="perl HTML-Parser"
      SHORT="This is a module based on HTML::Parser that serves to extract information contained in tables from HTML documents."
-stream << EOF
+LONG="
 This is a module based on HTML::Parser that serves to extract information
 contained in tables from HTML documents.
-EOF
+"

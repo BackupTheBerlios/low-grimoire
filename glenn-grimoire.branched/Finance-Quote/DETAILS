@@ -6,8 +6,8 @@
        URL="$SOURCEFORGE_URL"
        REQ="perl HTML-TableExtract"
      SHORT="Finance::Quote is a perl module which can be used to obtain financial information from a variety of sources"
-stream << EOF
+LONG="
 Finance::Quote is a perl module which can be used to obtain information
 from a variety of sources, including markets in Australia, USA, Canada,
 Europe, and a number of managed funds.
-EOF
+"

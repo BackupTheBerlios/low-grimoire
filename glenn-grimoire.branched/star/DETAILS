@@ -7,6 +7,6 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="The fastest and most POSIX 1003.1 conformant tar implementation."
-stream << EOF
+LONG="
 The fastest and most POSIX 1003.1 conformant tar implementation.
-EOF
+"

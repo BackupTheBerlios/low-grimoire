@@ -6,8 +6,8 @@ ATTRIBUTE="console"
  HOMEPAGE="http://armin.emx.at/cddb/"
       REQ="perl"
     SHORT="CDDB_get gets the CDDB info for an audio cd."
-stream << EOF
+LONG="
 CDDB_get gets the CDDB info for an audio cd.
 You can connect to CDDB directly, with http or http through a proxy.
 There is OS autodetection for: cdrom device, endiness and cdrom ioctl values. 
-EOF
+"

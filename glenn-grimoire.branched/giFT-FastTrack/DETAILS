@@ -6,9 +6,9 @@ ATTRIBUTE="library"
       URL="http://download.berlios.de"
       REQ="giftd"
     SHORT="giFT-FastTrack is a FastTrack plugin for giFT."
-stream << EOF
+LONG="
 giFT-FastTrack is a plugin for giFT (http://giftproject.org) which enables
 users of giFT to participate in the FastTrack network. The required
 cryptographic algorithms have been successfully reverse engineered and
 searching/downloading already work.
-EOF
+"

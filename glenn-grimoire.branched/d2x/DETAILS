@@ -12,6 +12,6 @@ SOURCE[1]="d2shar10.tar.gz"
 #   OPT[2]=":--with-ggi::add GGI support"
 #FRESHMEAT=""
     SHORT="Descent 2 for linux."
-stream << EOF
+LONG="
 Descent 2 for linux.
-EOF
+"

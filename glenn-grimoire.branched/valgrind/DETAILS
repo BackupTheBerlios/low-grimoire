@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Valgrind is a GPL tool to help you find memory-management problems in your programs."
-stream << EOF
+LONG="
 Valgrind is a GPL tool to help you find memory-management problems in
 your programs. When a program is run under Valgrinds supervision, all
 reads and writes of memory are checked, and calls to malloc/new/free/delete
@@ -27,4 +27,4 @@ status bits, one of which tracks addressibility of that byte, while the
 other eight track the validity of the byte. As a result, it can detect the
 use of single uninitialised bits, and does not report spurious errors on
 bitfield operations.
-EOF
+"

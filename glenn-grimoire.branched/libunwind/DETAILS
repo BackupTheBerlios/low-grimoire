@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="libunwind provides a portable and efficient C API to determine the call-chain of a program."
-stream << EOF
+LONG="
 The goal of the libunwind project is to define a portable and efficient C
 programming interface (API) to determine the call-chain of a program.
-EOF
+"

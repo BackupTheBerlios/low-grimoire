@@ -8,8 +8,8 @@ ATTRIBUTE="x11"
    OPT[0]="bluez-libs:::add bluetooth support"
 #FRESHMEAT=""
     SHORT="gnokii is a package that allowss you to interact nearly every aspect of your mobile phone."
-stream << EOF
+LONG="
 With gnokii you can do such things as make data calls, update your
 address book, change calendar entires, send and receive SMS messages
 and load ring tones depending on the phone you have.
-EOF
+"

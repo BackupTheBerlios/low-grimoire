@@ -7,6 +7,6 @@ ATTRIBUTE="x11"
       REQ="wxGTK postgresql"
 #FRESHMEAT=""
     SHORT="pgAdmin3 is a comprehensive PostgreSQL database design and management system."
-stream << EOF
+LONG="
 pgAdmin3 is a comprehensive PostgreSQL database design and management system.
-EOF
+"

@@ -7,9 +7,9 @@ ATTRIBUTE="x11"
       REQ="postgresql fltk"
 #FRESHMEAT=""
     SHORT="PGDesigner is my attempt at implementing a datamodel designer for PostgreSQL."
-stream << EOF
+LONG="
 PGDesigner is my attempt at implementing a datamodel designer for
 PostgreSQL. Good datamodeling tools already exist, but none are open
 source. So here we are. This program is in the alpha stage, but is usable
 for basic datamodeling.
-EOF
+"

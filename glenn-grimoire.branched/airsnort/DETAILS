@@ -6,7 +6,7 @@
        URL="$SOURCEFORGE_URL"
        REQ="gtk+,v1.2 libpcap"
      SHORT="AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys."
-stream << EOF
+LONG="
 AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
 AirSnort operates by passively monitoring transmissions, computing the
 encryption key when enough packets have been gathered. 
@@ -18,4 +18,4 @@ Itsik Mantin and Adi Shamir. Adam Stubblefield was the first to implement
 this attack, but he has not made his software public. AirSnort, along with
 WEPCrack, which was released about the same time as AirSnort, are the
 first publicly available implementaions of this attack.
-EOF
+"

@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ="id3lib"
 #FRESHMEAT=""
     SHORT="The id3v2 tagger is a GNU/Linux command-line editor for ID3v1/v2 tags."
-stream << EOF
+LONG="
 The id3v2 tagger is a GNU/Linux command-line editor for ID3v1/v2 tags.
-EOF
+"

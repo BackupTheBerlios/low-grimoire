@@ -7,7 +7,7 @@ ATTRIBUTE="library|x11"
       REQ="XFree86"
 #FRESHMEAT=""
     SHORT="GPL implementation of flash(TM)."
-stream << EOF
+LONG="
 GPL Flash (TM) library is a set of source codes that allow to play Flash
 (TM) movies. The core of the library is a graphic renderer that is
 portable is to be re-used in applications that need to play Flash(TM)
@@ -20,4 +20,4 @@ movies. This library comes with those freely redistributable tools:
   play movies on root window (suitable for xscreensaver).
 # KDE screen saver. Cool screen saver that allows to play Flash(TM) movies
   as a KDE screen saver.
-EOF
+"

@@ -7,9 +7,9 @@ ATTRIBUTE="console"
       REQ="postgresql gtk+"
 #FRESHMEAT=""
     SHORT="Pg_designer creates maintenance programs for Postgresql databases."
-stream << EOF
+LONG="
 Pg_designer creates maintenance programs for Postgresql databases. A
 program capable of adding, querying, changing or deleting entries, as
 well as a makefile for the generated program is created. The program uses
 gtk and libpq, as well as requiring a working Postgresql database.
-EOF
+"

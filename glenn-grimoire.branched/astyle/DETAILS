@@ -5,7 +5,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://astyle.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
     SHORT="A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java Source Codes"
-stream << EOF
+LONG="
 A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java
 Source Codes
-EOF
+"

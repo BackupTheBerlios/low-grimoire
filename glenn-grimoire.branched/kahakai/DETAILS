@@ -9,7 +9,7 @@ ATTRIBUTE="x11"
    OPT[1]="Python:::add python bindings"
 #FRESHMEAT=""
     SHORT="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager."
-stream << EOF
+LONG="
 Kahakai is a fork of the Waimea window manager, with the intent to create
 a language agnostic scriptable window manager, while maintaining the
 original features of Waimea, and extending upon them. Kahakai is
@@ -19,4 +19,4 @@ By \"language agnostic\", we mean that the scripts which control actions in
 the window manager are not language specific, they can be written in any
 language supported by SWIG. For starters, we plan on supporting Python
 with the addition of Ruby and Perl shortly thereafter.
-EOF
+"

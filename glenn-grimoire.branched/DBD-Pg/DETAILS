@@ -5,7 +5,7 @@
        URL="ftp://gborg.postgresql.org/pub/dbdpg/stable"
        REQ="perl"
      SHORT="DBD-Pg is a PostgreSQL interface for Perl5 using DBI."
-stream << EOF
+LONG="
 DBD-Pg is a PostgreSQL interface for Perl5 using DBI.
 
 DBI (Database independent interface) is a database access API (Application
@@ -15,4 +15,4 @@ database interface independent of the actual database being used.
 PostgreSQL is an ORDBMS (Object oriented Relational Database Management
 System). It runs on a variety of different operating systems and it is
 open-source. 
-EOF
+"

@@ -7,6 +7,6 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="An implementation of the Inter-Asterisk eXchange protocol."
-stream << EOF
+LONG="
 An implementation of the Inter-Asterisk eXchange protocol.
-EOF
+"

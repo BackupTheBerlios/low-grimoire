@@ -7,6 +7,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="perl glib"
      SHORT="Easily build XS extensions that depend on XS extensions."
-stream << EOF
+LONG="
 Easily build XS extensions that depend on XS extensions.
-EOF
+"

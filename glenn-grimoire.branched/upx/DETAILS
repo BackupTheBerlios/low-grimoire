@@ -8,7 +8,7 @@
   ESTIMATE=41
  FRESHMEAT="upx"
      SHORT="UPX is a versatile executable packer."
-stream << EOF
+LONG="
     UPX is a versatile executable packer with the following features:
         * excellent compression ratio: typically compresses better than
 	  WinZip/zip/gzip, use UPX to decrease the size of your
@@ -37,4 +37,4 @@ stream << EOF
         * free: UPX is distibuted with full source code under the GNU
 	  General Public License, and may be used freely even with
 	  commercial programs.
-EOF
+"

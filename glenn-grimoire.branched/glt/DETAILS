@@ -14,6 +14,6 @@ SOURCE[4]="$SPELL/$SPELL-dox-$VERSION"
       REQ="XFree86 glut" # change to freeglut later? there should be an EPROVIDE
 #FRESHMEAT=""
     SHORT="GLT is a C++ class library for programming interactive 3D graphics with OpenGL."
-stream << EOF
+LONG="
 GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
-EOF
+"

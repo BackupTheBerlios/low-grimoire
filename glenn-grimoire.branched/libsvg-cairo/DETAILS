@@ -8,7 +8,7 @@ ATTRIBUTE="library"
       REQ="cairo libsvg"
 #FRESHMEAT=""
     SHORT="libsvg-cairo provides the ability to render SVG content from files or buffers using cairo."
-stream << EOF
+LONG="
 libsvg-cairo provides the ability to render SVG content from files or
 buffers. All rendering is performed using the cairo rendering library.
-EOF
+"

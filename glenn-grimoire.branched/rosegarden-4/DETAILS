@@ -12,9 +12,9 @@ ATTRIBUTE="kde|x11"
 #   OPT[4]="Csound:--with-ladspa::"
 #FRESHMEAT=""
     SHORT="Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer, notation editor, and general-purpose music composition and editing application for Unix and Linux."
-stream << EOF
+LONG="
 Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer,
 notation editor, and general-purpose music composition and editing
 application for Unix and Linux. It is currently somewhere approaching
 beta quality, following two years of sustained active development.
-EOF
+"

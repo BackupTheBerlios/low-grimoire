@@ -12,11 +12,11 @@
   ESTIMATE="16"
 # FRESHMEAT=""
      SHORT="FCE Ultra is a NES(Nintendo Entertainment System) emulator."
-stream << EOF
+LONG="
 FCE Ultra is a NES(Nintendo Entertainment System) and Famicom(Family
 Computer) emulator for a variety of different platforms, based on Bero's
 FCE. Game compatibility is very high, provided you provide non-corrupt
 ROM/disk images.
-EOF
+"
 
 

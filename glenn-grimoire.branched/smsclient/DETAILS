@@ -9,7 +9,7 @@ ATTRIBUTE="console"
    OPT[0]="libmodem:-modemlib libmodem:-modemlib smsmodem: Use libmodem instead of buggy internal library"
 #FRESHMEAT=""
     SHORT="A simple UNIX client Allowing you to send SMS messages to mobile phones and pagers."
-stream << EOF
+LONG="
 A simple UNIX client Allowing you to send SMS messages to mobile phones
 and pagers.
-EOF
+"

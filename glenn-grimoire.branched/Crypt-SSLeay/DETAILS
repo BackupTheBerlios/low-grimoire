@@ -6,6 +6,6 @@
        URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/C/CH/CHAMAS"
        REQ="perl openssl"
      SHORT="OpenSSL glue that provides LWP https support."
-stream << EOF
+LONG="
 OpenSSL glue that provides LWP https support.
-EOF
+"

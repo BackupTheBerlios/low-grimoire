@@ -8,11 +8,11 @@ ATTRIBUTE="x11"
 #   OPT[0]="arts:--with-arts::add arts capability"
 FRESHMEAT="efax-gtk"
     SHORT="This program is a Gtk+/Gtkmm front end for the efax program for receiving and sending faxes with a fax modem."
-stream << EOF
+LONG="
 This program is a Gtk+/Gtkmm front end for the efax program for
 receiving and sending faxes with a fax modem.  The efax-gtk distribution
 now also compiles and installs a patched version of efax-0.9a-001114, so
 you do not need to separately build and install efax.
-EOF
+"
 
 # add BUILD which installs efax-gtk-socket-client
