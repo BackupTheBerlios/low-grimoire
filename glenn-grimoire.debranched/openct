@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.opensc.org"
       URL="http://www.opensc.org/files/"
       REQ=( "pcsc-lite" )
-#FRESHMEAT=""
+FRESHMEAT="openct"
 DESC="OpenCT, a middleware framework for smart card terminals.
 It all started with a reader driver library - I wanted to write a
 library to provide a framework for people writing drivers for smart

@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://mpgtx.sourceforge.net"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="mpgtx"
 DESC="mpgtx a command line MPEG audio/video/system file toolbox.
 mpgtx a command line MPEG audio/video/system file toolbox.
 mpgtx was designed with the good old Unix philosophy in mind : do few but

@@ -9,7 +9,7 @@ ATTRIBUTE="library"
       REQ=( "bison flex"
             "openssl:--with-openssl=/usr::add ssl support" )
    OPT[0]="openssl:--with-openssl=/usr::add ssl support"
-#FRESHMEAT=""
+FRESHMEAT="omniorb"
 DESC="omniORB is a robust high performance CORBA ORB for C++ and Python.
 omniORB is a robust high performance CORBA ORB for C++ and Python.
 "

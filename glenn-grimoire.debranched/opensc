@@ -14,7 +14,7 @@ ATTRIBUTE="console library"
    OPT[1]="openldap:--enable-ldap --disable-ldap-ssl::for LDAP support"
    OPT[2]="Linux-PAM:--with-pam::add PAM support"
 #   OPT[3]="osfsia:--with-ladspa::for ladspa plugins"
-#FRESHMEAT=""
+FRESHMEAT="opensc"
 DESC="Many smart card related tools.
 libopensc is a library for accessing smart card devices using PC/SC Lite
 middleware package. It is also the core library of the OpenSC project.

@@ -7,6 +7,7 @@
   HOMEPAGE="http://middle-man.sourceforge.net"
        URL="$SOURCEFORGE_URL"
        REQ=( "zlib Linux-PAM pcre" )
+FRESHMEAT="middleman"
 DESC="Middleman filtering proxy server.
 Middleman filtering proxy server.
 "
