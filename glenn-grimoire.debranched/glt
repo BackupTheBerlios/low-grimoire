@@ -13,7 +13,7 @@ SOURCE[4]="$SPELL/$SPELL-dox-$VERSION"
    URL[1]="${URL[0]}"
    URL[2]="${URL[0]}"
    URL[3]="${URL[0]}"
-      REQ=( "XFree86 glut" # change to freeglut later? there should be an EPROVIDE )
+      REQ=( "XFree86 glut" ) # change to freeglut later? there should be an EPROVIDE
 #FRESHMEAT=""
 DESC="GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
 GLT is a C++ class library for programming interactive 3D graphics with OpenGL.

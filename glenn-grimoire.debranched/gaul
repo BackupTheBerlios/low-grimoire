@@ -6,8 +6,8 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-devel-$VERSION"
  HOMEPAGE="http://gaul.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-||REQ||            REQ=( ""
-                  "slang:--enable-slang=yes::use S-Lang for scripting" )
+      REQ=( ""
+            "slang:--enable-slang=yes::use S-Lang for scripting" )
    OPT[0]="slang:--enable-slang=yes::use S-Lang for scripting"
 #FRESHMEAT=""
 DESC="The Genetic Algorithm Utility Library.
