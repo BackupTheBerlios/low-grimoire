@@ -1,7 +1,7 @@
 inherit ffmpeg
 unset SOURCE URL
    VERSION=( "cvs" )
- ATTRIBUTE="cvs console"
+ ATTRIBUTE="cvs $ATTRIBUTE"
        REQ=( ""
              "nasm::--disable-mmx:for MMX support"
              "a52dec:--enable-a52bin:--disable-a52:for a52 support"

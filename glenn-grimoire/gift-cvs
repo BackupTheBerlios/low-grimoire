@@ -3,7 +3,7 @@
 inherit gift
 unset SOURCE URL
   VERSION=( "cvs" )
-ATTRIBUTE="cvs server"
+ATTRIBUTE="cvs $ATTRIBUTE"
       REQ=( "cvs autoconf automake" )
  EPROVIDE="giftd"
    ASSUME="off"

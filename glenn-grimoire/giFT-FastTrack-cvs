@@ -3,7 +3,7 @@
 inherit giFT-FastTrack
 unset SOURCE URL
   VERSION=( "cvs" )
-ATTRIBUTE="cvs library"
+ATTRIBUTE="cvs $ATTRIBUTE"
       REQ=( "cvs autoconf automake libtool giftd" )
  EPROVIDE="giFT-FastTrack"
    ASSUME="off"

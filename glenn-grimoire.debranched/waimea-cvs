@@ -3,7 +3,7 @@
 inherit waimea
 unset SOURCE URL
   VERSION=( "cvs" )
-ATTRIBUTE="cvs window-manager"
+ATTRIBUTE="cvs $ATTRIBUTE"
  HOMEPAGE="http://www.freedesktop.org/Software/waimea"
       REQ=( "cvs autoconf automake expat cairo"
             "libpng:::add png support"

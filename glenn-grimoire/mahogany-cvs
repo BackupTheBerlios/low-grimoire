@@ -3,6 +3,7 @@
 inherit mahogany
 unset URL SOURCE
   VERSION=( "cvs" )
+ATTRIBUTE="x11 $ATTRIBUTE"
       REQ=( "cvs autoconf automake" )
  EPROVIDE="mahogany"
    ASSUME="off"

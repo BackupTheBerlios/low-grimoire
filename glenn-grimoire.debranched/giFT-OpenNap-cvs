@@ -3,7 +3,7 @@
 inherit giFT-OpenNap
 unset SOURCE URL
   VERSION=( "cvs" )
-ATTRIBUTE="cvs library"
+ATTRIBUTE="cvs $ATTRIBUTE"
       REQ=( "cvs autoconf automake giftd" )
  EPROVIDE="giFT-OpenNap"
    ASSUME="off"
