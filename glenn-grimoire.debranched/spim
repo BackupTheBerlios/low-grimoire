@@ -1,0 +1,44 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "7.0" )
+ CATEGORY="emulator"
+ATTRIBUTE="console x11"
+ HOMEPAGE="http://www.cs.wisc.edu/~larus/spim.html"
+SOURCE[0]="$SPELL-$VERSION.tar.gz"
+SOURCE[1]="spim.pdf"
+SOURCE[2]="xspim.pdf"
+SOURCE[3]="spim_documentation.pdf"
+SOURCE[4]="SPIM_command-line.pdf"
+SOURCE[5]="HP_AppA.pdf"
+      URL="http://www.cs.wisc.edu/~larus/SPIM"
+      REQ=( "XFree86" )
+ ESTIMATE="115"
+DESC="spim is a self-contained simulator that will run MIPS32 assembly language programs.
+spim is a self-contained simulator that will run MIPS32 assembly language
+programs. It reads and immediately executes assembly language code for this
+processor. spim provides a simple debugger and minimal set of operating
+system services.spim does not execute binary (compiled) programs.
+"
+
+build() {
+
+  sed -i "s|^EXCEPTION_DIR = .*|EXCEPTION_DIR = /usr/share/spim|" Makefile.std &&
+  sed -i "s|/usr/unsup|/usr|" Makefile.std &&
+  sed -i "s|/usr/man|/usr/man/man1|" Makefile.std &&
+  sed -i "s|\\.man|\\.1|" Makefile.std  &&
+  mv spim.man spim.1                    &&
+  mv xspim.man xspim.1                  &&
+  ./Configure                           &&
+  make -f Makefile.std spim xspim       &&
+  prepare_install                       &&
+  mkdir -p /usr/share/$SPELL            &&
+  make  -f Makefile.std install         &&
+  mkdir -p /usr/doc/$SPELL              &&
+  cp -r Documentation /usr/doc/$SPELL   &&
+  install -o root -g root -m 644 $( guess_filename ${SOURCE[1]} ) /usr/doc/$SPELL &&
+  install -o root -g root -m 644 $( guess_filename ${SOURCE[2]} ) /usr/doc/$SPELL &&
+  install -o root -g root -m 644 $( guess_filename ${SOURCE[3]} ) /usr/doc/$SPELL &&
+  install -o root -g root -m 644 $( guess_filename ${SOURCE[4]} ) /usr/doc/$SPELL &&
+  install -o root -g root -m 644 $( guess_filename ${SOURCE[5]} ) /usr/doc/$SPELL
+
+}

@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.03" )
+ CATEGORY="graphic"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-flash-$VERSION"
+ HOMEPAGE="http://spalah.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gtk+ ming"
+#FRESHMEAT=""
+DESC="Spalah Flash is a GTK2/GNOME2 based application for generating Macromedia SWF and W3C SVGanimations.
+Spalah Flash is a GTK2/GNOME2 based application for generating Macromedia
+SWF and W3C SVGanimations.
+"
+
+build() {
+  sed -i 's|$(top_builddir)/$(MKINSTALLDIRS)|$(MKINSTALLDIRS)|' po/Makefile.in.in &&
+  cp -i /usr/share/automake/mkinstalldirs . &&
+  default_build
+}
