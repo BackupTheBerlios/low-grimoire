@@ -1,5 +1,5 @@
 (
-  cd /usr/src/sorcery.cvs/$SPELL/giFT-OpenNap	&&
+  cd /usr/src/sorcery.cvs/$SPELL/$MODULE &&
 
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
