@@ -1,0 +1,19 @@
+   VERSION=( "1.0.4" )
+  CATEGORY="utility"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://flexbackup.sourceforge.net"
+       URL="http://flexbackup.sourceforge.net/tarball"
+       REQ="perl findutils fileutils tar bzip2"
+    OPT[0]="cpio:::for cpio backup"
+    OPT[1]="afio:::for afio support"
+    OPT[2]="zip:::for zip archives"
+  ESTIMATE="8"
+ FRESHMEAT="flexbackup"
+     SHORT="flexbackup is a configurable and easy to use Perl-based backup tool"
+cat << EOF
+flexbackup is a configurable and easy to use Perl-based backup tool, 
+that can backup local files as well as remote machines (using ssh). 
+It allows the backup itself to be made with afio, cpio, tar, dump, 
+star, or pax. It can work with tape drives, or can easily archive 
+to on-disk files
+EOF
