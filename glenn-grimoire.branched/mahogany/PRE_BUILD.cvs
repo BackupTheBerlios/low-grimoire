@@ -1,0 +1,14 @@
+  CVSSERVER=':pserver:anonymous@cvs.sourceforge.net:/cvsroot/mahogany'
+
+  mkdir -p /usr/src/sorcery.cvs/$SPELL/
+  cd /usr/src/sorcery.cvs/$SPELL/
+
+  if ( true ); then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/M ]; then
+          CVSCOMMAND="update -dP"
+      else
+          CVSCOMMAND="checkout M"
+      fi
+
+      cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  fi

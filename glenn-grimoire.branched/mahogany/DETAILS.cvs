@@ -1,11 +1,10 @@
-  VERSION=( "0.65" "0.64" )
+  VERSION=( "cvs" )
  CATEGORY="email"
 ATTRIBUTE="x11"
-   SOURCE="$SPELL/$SPELL-$VERSION"
+#   SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://mahogany.sourceforge.net"
-      URL="$SOURCEFORGE_URL"
+#      URL="$SOURCEFORGE_URL"
       REQ="wxGTK openssl latex2html"
-   OPT[0]="Python:--with-python=dynamic::add support for python"
    ASSUME="off"
 #FRESHMEAT=""
     SHORT="Mahogany is an OpenSource cross-platform mail and news client."
