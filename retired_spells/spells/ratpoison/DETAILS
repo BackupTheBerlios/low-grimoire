@@ -1,0 +1,17 @@
+   VERSION=( "1.3.0" )
+  CATEGORY="window-manager"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://ratpoison.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="ratpoison/ratpoison-$VERSION.tar.gz"
+#       REQ="libpcap ncurses"
+  ESTIMATE=35
+ FRESHMEAT="ratpoison"
+     SHORT="ratpoison is a fat free simple window manager"
+
+stream << EOF
+Ratpoison is a simple Window Manager with no fat library dependencies, 
+no fancy graphics, no window decorations, and no rodent dependence. 
+It is largely modelled after GNU Screen which has done wonders 
+in the virtual terminal market.
+EOF
