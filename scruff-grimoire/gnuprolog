@@ -1,0 +1,30 @@
+  VERSION="1.2.16"
+ CATEGORY="compiler"
+ATTRIBUTE="console"
+   SOURCE="gprolog/gprolog-$VERSION"
+      URL="$GNU_URL"
+ HOMEPAGE="http://pauillac.inria.fr/~diaz/gnu-prolog"
+FRESHMEAT="gnuprolog"
+    SHORT="gnuprolog is a native compiler for Prolog"
+     LONG="
+GNU Prolog is a free Prolog compiler with constraint solving over finite
+domains developed by Daniel Diaz.
+
+GNU Prolog accepts Prolog+constraint programs and produces native
+binaries (like gcc does from a C source). The obtained executable is then
+stand-alone. The size of this executable can be quite small since GNU Prolog
+can avoid to link the code of most unused built-in predicates. The
+performances of GNU Prolog are very encouraging (comparable to commercial
+systems).
+"
+
+build() {
+
+  ./configure  --prefix=/usr         \
+               --sysconfdir=/etc     \
+               --localstatedir=/var  &&
+  make                               &&
+  prepare_install                    &&
+  make    install
+
+}
