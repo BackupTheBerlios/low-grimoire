@@ -1,0 +1,13 @@
+   VERSION=( "0.2.2" )
+  CATEGORY="utility"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://michaelo.free.fr/todos"
+       URL="http://michaelo.free.fr/todos/releases"
+       REQ="glib gtk+"
+ FRESHMEAT="todos"
+     SHORT="todos is a simple, generic, multi-user, database-free todo list manager and tracking system"
+
+cat << EOF
+todos is a simple, generic, multi-user, database-free todo list manager and tracking system. 
+Its interface is generated from a simple data description file in XML
+EOF
