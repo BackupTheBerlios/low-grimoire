@@ -9,10 +9,12 @@ ATTRIBUTE="kde"
       REQ=( "zlib libpng jpeg qt-x11-free alsa-lib"
             "jack-audio-connection-kit::--disable-jack-support:add jack support"
             "::--disable-oss-support:add oss support"
-            "liblrdf::--disable-lrdf-support:add lrdf support for ladspa plugins" )
+            "liblrdf::--disable-lrdf-support:add lrdf support for ladspa plugins"
+            "flac:::add flac support" )
    OPT[0]="jack-audio-connection-kit::--disable-jack-support:add jack support"
    OPT[1]="::--disable-oss-support:add oss support"
    OPT[2]="liblrdf::--disable-lrdf-support:add lrdf support for ladspa plugins"
+   OPT[3]="flac:::add flac support"
 #   OPT[3]="audiofile:::add support for audiofile"
 FRESHMEAT="hydrogen"
 DESC="Hydrogen is an advanced drum machine
