@@ -1,0 +1,17 @@
+  VERSION=( "0.8.4" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="ggi/$SPELL-$VERSION.src"
+ HOMEPAGE="http://www.ggi-project.org"
+      URL="$SOURCEFORGE_URL"
+      REQ="XFree86"
+#FRESHMEAT=""
+    SHORT="LibGII (General Input Interface) is intended to be to input what our LibGGI (General Graphics Interface) library is to graphics."
+cat << EOF
+LibGII (General Input Interface) is intended to be to input what our LibGGI
+(General Graphics Interface) library is to graphics.
+
+The goal of LibGII is to provide a single easy to use, but yet powerful,
+API for all possible input sources. However we are not there yet. The
+API is far from set in stone yet, and is likely to change.
+EOF

@@ -1,0 +1,19 @@
+(
+  cd $MODULE                         &&
+  cd  linux                          &&
+  ./autogen.sh                       &&
+  ./configure  --build=$BUILD        \
+               --prefix=/usr         \
+               --sysconfdir=/etc     \
+               --localstatedir=/var  \
+               $OPTS                 &&
+  make                               &&
+  prepare_install                    &&
+  make    install                    &&
+  make  distclean                    &&
+  mkdir -p /usr/doc/$BSPELL             &&
+  cp doc/{EXT_vorbis,LOKI*,openal.texi,sample.openalrc} \
+     ../docs/*ml /usr/doc/$BSPELL
+  
+) > $C_FIFO 2>&1
+

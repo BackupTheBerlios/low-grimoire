@@ -1,0 +1,17 @@
+  VERSION=( "1.0" )
+ CATEGORY="library network encryption"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-src-$VERSION"
+ HOMEPAGE="http://www.opentnl.org"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="TNL is a cross-platform C++ networking API designed for high performance simulations and games."
+cat << EOF
+The Torque Network Library is a robust, secure, easy to use, cross-platform
+C++ networking API designed for high performance simulations and games.
+The network architecture in TNL has powered some of the best internet
+multiplayer action games to date. Whether you're writing a multiplayer
+game, developing a complex simulation, or just need a solid foundation for
+network apps, TNL will meet your needs. 
+EOF

@@ -1,0 +1,23 @@
+  VERSION=( "2.0.4" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="ggi/$SPELL-$VERSION.src"
+ HOMEPAGE="http://www.ggi-project.org"
+      URL="$SOURCEFORGE_URL"
+      REQ="libgii"
+   OPT[0]="svgalib:::add support for output through svgalib"
+#   OPT[1]="directfb:::add support for output through frame buffer"
+#   OPT[2]="aalib:::add support for output through aalib"
+#FRESHMEAT=""
+    SHORT="LibGGI, the dynamic GGI (General Graphics Interface) library is a flexible drawing library."
+cat << EOF
+GGI aims at unifying the way applications access the user display by
+defining a generic abstraction of the notion of graphic display. 
+
+Generally speaking, a display is a 2D surface that can be drawn on and
+with which a user can interact. Whatever the physical displays actually
+are (a TV screen or an X11 window) they always have this basic in common.
+Of course, they all have specific characteristics and low-level access
+methods, but the idea behind GGI is that this difference is not a concern
+to the application. 
+EOF
