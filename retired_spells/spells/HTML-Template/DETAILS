@@ -1,0 +1,12 @@
+   VERSION=( "2.6" )
+  CATEGORY="library"
+ ATTRIBUTE="perl"
+  HOMEPAGE="http://search.cpan.org/~samtregar/HTML-Template-$VERSION"
+       URL="http://search.cpan.org/CPAN/authors/id/S/SA/SAMTREGAR"
+       REQ="perl"
+  ESTIMATE="26"
+     SHORT="This module attempts make using HTML templates simple and natural"
+cat << EOF
+This module attempts make using HTML templates simple and natural.  It
+extends standard HTML with a few new HTML-esque tags 
+EOF
