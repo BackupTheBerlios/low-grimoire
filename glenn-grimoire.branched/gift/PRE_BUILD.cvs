@@ -12,6 +12,5 @@
           CVSCOMMAND="checkout $MODULE"
       fi
 
-      echo "cvs -z4 -d $CVSSERVER $CVSCOMMAND" > /mygiftd
       cvs -z4 -d $CVSSERVER $CVSCOMMAND
   fi
