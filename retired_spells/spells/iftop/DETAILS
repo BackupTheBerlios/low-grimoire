@@ -1,10 +1,10 @@
-   VERSION=( "0.14" "0.13" "0.12" )
+   VERSION=( "0.15" "0.14" "0.13" "0.12" )
   CATEGORY="network utility"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.ex-parrot.com/~pdw/iftop/"
        URL="http://www.ex-parrot.com/~pdw/iftop/download"
        REQ="libpcap ncurses"
-  ESTIMATE=174
+  ESTIMATE=35
  FRESHMEAT="iftop"
      SHORT="iftop provides real-time bandwidth usage information on a specified interface, listed by host pairs"
 
