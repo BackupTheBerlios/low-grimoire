@@ -1,0 +1,12 @@
+  VERSION=( "1.2a22" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private"
+      URL="ftp://ftp.berlios.de/pub/smake/alpha"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="smake is a highly portable make program with automake features."
+cat << EOF
+smake is a highly portable make program with automake features.
+EOF

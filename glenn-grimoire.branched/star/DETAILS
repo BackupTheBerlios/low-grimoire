@@ -1,0 +1,12 @@
+  VERSION=( "1.4.3" )
+ CATEGORY="archive"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
+      URL="ftp://ftp.berlios.de/pub/star"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="The fastest and most POSIX 1003.1 conformant tar implementation."
+cat << EOF
+The fastest and most POSIX 1003.1 conformant tar implementation.
+EOF
