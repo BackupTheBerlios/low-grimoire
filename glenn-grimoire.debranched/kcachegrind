@@ -6,7 +6,7 @@ ATTRIBUTE="kde x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://kcachegrind.sourceforge.net"
       URL="http://kcachegrind.sourceforge.net"
-      REQ=( "kde,libs graphviz binutils valgrind" )
+      REQ=( "kdelibs graphviz binutils valgrind" )
 #FRESHMEAT=""
 DESC="KCachegrind - Profiling Visualization.
 KCachegrind is able to visualize output of other profilers like OProfile,
@@ -16,8 +16,6 @@ Python, PHP and PERL.
 "
 
 build() {
-
-
   ./configure --prefix=/usr    \
               --with-xinerama  \
               --enable-objprelink \
