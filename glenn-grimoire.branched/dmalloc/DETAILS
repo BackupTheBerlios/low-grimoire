@@ -1,4 +1,4 @@
-  VERSION=( "5.2.4" "5.2.1" "5.1.0" )
+  VERSION=( "5.3.0" "5.2.4" "5.2.1" "5.1.0" )
  CATEGORY="debugger"
 ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"

@@ -1,9 +1,9 @@
-  VERSION=( "0.4.6b" )
+  VERSION=( "0.5.1" "0.4.6b" )
  CATEGORY="security"
 ATTRIBUTE="console"
-   SOURCE="$SPELL-$VERSION"
+   SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://steghide.sourceforge.net"
-      URL="http://steghide.sourceforge.net/download"
+      URL="$SOURCEFORGE_URL"
       REQ="gettext mhash libmcrypt"
 #FRESHMEAT=""
     SHORT="Steghide is a steganography program which embeds a secret message in a cover file"

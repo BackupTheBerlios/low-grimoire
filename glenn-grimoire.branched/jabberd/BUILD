@@ -15,6 +15,6 @@
   prepare_install             &&
   make install                &&
   mkdir -p /usr/share/jabberd &&
-  cp tools/db* tools/pipe-auth.pl /usr/share/jabberd
+  cp tools/* /usr/share/jabberd
 
 ) > $C_FIFO 2>&1
