@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.4.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://librdf.org/raptor"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+      URL="http://librdf.org/dist/source"
+      REQ=( "libxml2 curl" )
+ ESTIMATE="115"
+DESC="Raptor is a library that provides a set of rdf parsers.
+Raptor is a free software / Open Source C library that provides a set of
+parsers and serializers that generate Resource Description Framework (RDF)
+triples by parsing syntaxes or serialize the triples into a syntax.
+The supported parsing syntaxes are RDF/XML, N-Triples, Turtle, RSS tag
+soup including Atom 0.3 and the serializing syntaxes are RDF/XML and
+N-Triples.
+"
+
+build() {
+  default_build                    &&
+  mkdir -p /usr/share/$SPELL       &&
+  cp -R examples /usr/share/$SPELL
+}

@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.7" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://plugin.org.uk/lrdf"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+      URL="http://plugin.org.uk/lrdf"
+      REQ=( "raptor" )
+ ESTIMATE="115"
+DESC="This is a library to make it easy to manipulate RDF files describing LADSPA plugins.
+This is a library to make it easy to manipulate RDF files describing LADSPA
+plugins.
+
+It can also be used for general RDF manipulation.
+
+It can read RDF/XLM and N3 files and export N3 files, it also has a light
+taxonomic inference capablility.
+"
+
+build() {
+  default_build                       &&
+  mkdir -p /usr/share/$SPELL/examples &&
+  cp -R examples/{Makefile,*.{c,rdf,n3}} /usr/share/$SPELL/examples
+}
