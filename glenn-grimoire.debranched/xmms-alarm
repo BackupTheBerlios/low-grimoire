@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.6" )
+ CATEGORY="xmms-plugin"
+ATTRIBUTE="other"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.snika.uklinux.net/index.php?show=xmms-alarm"
+      URL="http://www.snika.uklinux.net"
+      REQ=( "xmms" )
+#FRESHMEAT=""
+DESC="xmms General plugin for using xmms as an alarm clock.
+xmms General plugin for using xmms as an alarm clock.
+"
