@@ -1,0 +1,12 @@
+  VERSION=( "5.19.4.9.7" )
+ CATEGORY="dvd"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW"
+      URL="http://fy.chalmers.se/~appro/linux/DVD+RW/tools"
+      REQ="m4"
+#FRESHMEAT=""
+    SHORT="dvd+rw-tools masters the DVD media, both +RW/+R and -R[W]."
+cat << EOF
+dvd+rw-tools masters the DVD media, both +RW/+R and -R[W].
+EOF

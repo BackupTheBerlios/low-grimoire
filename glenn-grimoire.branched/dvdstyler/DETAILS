@@ -1,0 +1,13 @@
+  VERSION=( "1.0b2" )
+ CATEGORY="video-editor dvd"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/DVDStyler-$VERSION"
+ HOMEPAGE="http://dvdstyler.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="mpgtx mjpegtools dvdauthor wxGTK"
+#FRESHMEAT=""
+    SHORT="DVDStyler is a crossplatform GUI frontend to the dvd authoring and recording programs dvdauthor and dvdrecord."
+cat << EOF
+DVDStyler is a crossplatform GUI frontend to the dvd authoring and
+recording programs dvdauthor and dvdrecord.
+EOF

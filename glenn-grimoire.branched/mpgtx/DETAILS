@@ -1,0 +1,15 @@
+  VERSION=( "1.3" )
+ CATEGORY="video-editor"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://mpgtx.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="mpgtx a command line MPEG audio/video/system file toolbox."
+cat << EOF
+mpgtx a command line MPEG audio/video/system file toolbox.
+mpgtx was designed with the good old Unix philosophy in mind : do few but
+do it well and provide end user an austary yet powerfull command line
+interface.
+EOF
