@@ -1,0 +1,22 @@
+   VERSION=( "2.11.22" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://dd.cron.ru/dbg"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="dbg2/dbg-$VERSION-src.tar.gz"
+       REQ="php"
+ FRESHMEAT="DBG DEBUGGER AND PROFILER"
+     SHORT="DBG is a PHP debugger and profiler"
+cat << EOF
+DBG is a PHP debugger and profiler. It makes it much 
+easier to discover the origins of problems and bugs in 
+PHP scripts. It's equipped with the ability to backtrace 
+errors. It shows local and global variables as well as 
+parameters which have been passed to all nested function 
+calls at any point of execution. Among other things, it 
+allows you to execute scripts in a step-by-step manner, 
+set breakpoints (including conditional ones), evaluate 
+expressions, and watch variables. The profiler allows 
+you to find bottlenecks in PHP code at the functions 
+level as well as the modules level and even the source lines level.
+EOF
