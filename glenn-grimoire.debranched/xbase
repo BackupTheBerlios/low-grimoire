@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.0" )
+ CATEGORY="development db"
+ATTRIBUTE="library console"
+ HOMEPAGE="http://linux.techass.com/projects/xdb"
+   SOURCE="xdb/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+FRESHMEAT="xbase"
+DESC="XBase manipulates dBase, Clipper, FoxPro, etc. compatible databases.
+We define XBase here to mean any dBase, Clipper, FoxPro, etc. compatible
+database (including index and memo files). Currently, XBase supports DBF
+(dBase and other) database files, NDX (dbase) and NTX (Clipper) index files,
+and DBT (dBase and other) memo field files. xBase (with a lowercase 'x')
+means the xBase library. We hope to add support for other XBase file
+formats in the future.
+"
+
+build() {
+  default_build              &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r examples/{Makefile,*cpp} /usr/share/$SPELL
+}

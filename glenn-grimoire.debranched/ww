@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.26" )
+ CATEGORY="network file-transfer"
+ATTRIBUTE="console"
+ HOMEPAGE="http://ww.walrond.org"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="ftp://ftp.walrond.org"
+      REQ=( "openssl" )
+ ESTIMATE="115"
+#FRESHMEAT=""
+DESC="WW is a file publishing tool with bandwidth sharing and integrity checking.
+White Water allows people with limited or metered bandwidth to publish
+files for download by thousands of people without saturating their
+bandwidth. Downloaders participate by distributing chunks of the file
+amongst themselves but gain by downloading several parts of the file
+simultaneously. The download speed will generally be limited only by the
+downloaders own bandwidth, not that of the publisher.
+"
+
+build() {
+  make             &&
+  prepare_install  &&
+  install -o root -g root -m 755 ww /usr/bin
+}
