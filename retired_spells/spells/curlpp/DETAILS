@@ -1,4 +1,3 @@
-echo "curlpp"
   VERSION=( "0.3.0" )
  CATEGORY="library"
 ATTRIBUTE="new library"
