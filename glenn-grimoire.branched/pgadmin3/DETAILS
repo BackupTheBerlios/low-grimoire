@@ -1,11 +1,10 @@
-  VERSION=("0.1.1")
+  VERSION=( "1.0.1" "1.0.0" "0.1.1" )
  CATEGORY="db"
 ATTRIBUTE="x11"
-   SOURCE="$SPELL-Alpha-src"
+   SOURCE="$SPELL/release/src/$SPELL-$VERSION"
  HOMEPAGE="http://pgadmin.postgresql.org/"
-      URL="http://www.pgadmin.org/snapshots"
+      URL="$POSTGRESQL_URL"
       REQ="wxGTK postgresql"
-#   OPT[0]="Csound:--with-ladspa::"
 #FRESHMEAT=""
     SHORT="pgAdmin3 is a comprehensive PostgreSQL database design and management system."
 cat << EOF
