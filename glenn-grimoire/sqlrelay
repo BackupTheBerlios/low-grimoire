@@ -1,0 +1,47 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.35" )
+ CATEGORY="database networking"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://sqlrelay.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "rudiments"
+            "postgresql:::add support for postgresql"
+            "mysql:::add support for mysql"
+            "gdbm:::add support for gdbm"
+            "unixODBC:--enable-odbc::add support for odbc"
+#            "msql:::add support for msql"
+            "sqlite:::add support for sqlite"
+            "freetds:::add support for freedts"
+            "perl:::add support for perl"
+            "python:::add support for python"
+            "php:::add support for php"
+            "tcl:::add support for tcl"
+            "j2sdk:::add support for java"
+#            "zope:::add support for zope"
+            "gtk+-v1.2::--disable-gtk:for gtk config tool" )
+   OPT[0]="postgresql:::add support for postgresql"
+   OPT[1]="mysql:::add support for mysql"
+   OPT[2]="gdbm:::add support for gdbm"
+   OPT[3]="unixODBC:--enable-odbc::add support for odbc"
+   OPT[4]="sqlite:::add support for sqlite"
+   OPT[5]="freetds:::add support for freedts"
+   OPT[6]="perl:::add support for perl"
+   OPT[7]="python:::add support for python"
+   OPT[8]="php:::add support for php"
+   OPT[9]="tcl:::add support for tcl"
+   OPT[10]="j2sdk:::add support for java"
+   OPT[11]="gtk+-v1.2::--disable-gtk:for gtk config tool"
+#FRESHMEAT=""
+DESC="SQL Relay is a persistent database connection pooling, proxying and load balancing system for Unix and Linux.
+SQL Relay is a persistent database connection pooling, proxying and load
+balancing system for Unix and Linux.
+SQL Relay is ideal for: 
+  *speeding up database-driven web-based applications 
+  *enhancing the scalability of database-driven web-based applications 
+  *distributing access to replicated databases 
+  *throttling database access 
+  *accessing databases from unsupported platforms 
+  *migrating applications from one database to another
+"
