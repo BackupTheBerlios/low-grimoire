@@ -1,0 +1,12 @@
+  VERSION=( "0.4.2" "0.4.1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://helm.cs.unibo.it/mml-widget/"
+      URL="http://helm.cs.unibo.it/mml-widget/sources"
+      REQ="gmetadom t1lib"
+#FRESHMEAT=""
+    SHORT="GtkMathView is a C++ rendering engine for MathML documents."
+cat << EOF
+GtkMathView is a C++ rendering engine for MathML documents.
+EOF
