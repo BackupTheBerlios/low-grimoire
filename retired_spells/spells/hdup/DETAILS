@@ -1,4 +1,4 @@
-  VERSION=( "1.6.25" )
+  VERSION=( "1.6.26" "1.6.25" )
  CATEGORY="utility"
 ATTRIBUTE="console"
       URL="http://www.miek.nl/projects/hdup16/previous"

@@ -2,7 +2,7 @@
   CATEGORY="file-transfer"
  ATTRIBUTE="utility console"
   HOMEPAGE="http://loci.cs.utk.edu/lors"
-       URL=" http://loci.cs.utk.edu/lors/distributions"
+       URL="http://loci.cs.utk.edu/lors/distributions"
  FRESHMEAT="lors"
      SHORT="A BitTorrent like tool"
 cat << EOF
