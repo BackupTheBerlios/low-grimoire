@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.07" )
+ CATEGORY="development"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sweb.cz/tripie/utils/wmctrl"
+      URL="http://sweb.cz/tripie/utils/wmctrl/dist"
+      REQ=( "glib x11" )
+#FRESHMEAT=""
+DESC="wmctrl is a command line tool to interact with an EWMH/NetWM compatible X Window Manager and provides access to almost all features defined in the EWMH specification.
+wmctrl is a command line tool to interact with an EWMH/NetWM compatible X Window Manager and provides access to almost all features defined in the EWMH specification.
+"

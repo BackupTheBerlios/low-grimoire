@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "1.02" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sweb.cz/tripie/gkrellm/trayicons"
+      URL="http://sweb.cz/tripie/gkrellm/trayicons/dist"
+      REQ=( "gkrellm" )
+#FRESHMEAT=""
+DESC="gkrellm-trayicons is a plugin for gkrellm that displays a variable number of user-defined, automatically scaled icons.
+gkrellm-trayicons is a plugin for gkrellm that displays a variable number
+of user-defined, automatically scaled icons. The icons may be used either
+for notification or as application launchers.
+"
+
+build() {
+
+  make                         &&
+  prepare_install              &&
+  make install PREFIX=/usr     &&
+  mkdir -p /usr/share/$SPELL   &&
+  cp -r misc /usr/share/$SPELL                    
+  
+}
