@@ -1,11 +1,11 @@
-   VERSION=( "2.23" "2.22" "2.21" "2.20" "2.10" "2.06" "2.05" "2.04" "2.03" "2.02" "2.01" )
+   VERSION=( "2.25" "2.24" "2.23" "2.22" "2.21" "2.20" "2.10" "2.06" "2.05" "2.04" "2.03" "2.02" "2.01" )
   CATEGORY="utility"
  ATTRIBUTE="console"
   HOMEPAGE="http://txt2html.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="txt2html/txt2html-$VERSION"
        REQ="ExtUtils-configPL perl"
-  ESTIMATE="14"
+  ESTIMATE=14
  FRESHMEAT="txt2html"
      SHORT="Converts plain text to html"
 stream << EOF
