@@ -1,0 +1,11 @@
+   VERSION=( "1.0.2" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.brain-tokyo.jp/research/amrita/index.html"
+       URL="http://www.brain-tokyo.jp/research/amrita"
+       REQ="ruby strscan"
+     SHORT="Amrita is an html/xhtml template library for Ruby"
+
+cat << EOF
+Amrita is an html/xhtml template library for Ruby. It makes html documents from a template and model data
+EOF
