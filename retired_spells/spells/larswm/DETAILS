@@ -1,10 +1,10 @@
-   VERSION=( "7.4.8" )
+   VERSION=( "7.5.0" "7.4.8" )
   CATEGORY="window-manager"
  ATTRIBUTE="x11"
   HOMEPAGE="http://larswm.fnurt.net"
        URL="http://home.earthlink.net/~lab1701"
     SOURCE="larswm/larswm-$VERSION.tar.gz"
-  ESTIMATE=49
+  ESTIMATE=31
  FRESHMEAT="larswm"
      SHORT="larswm is a rewrite of 9wm that adds additional features"
 
