@@ -15,9 +15,8 @@ port of John McNamara's Perl Spreadsheet::WriteExcel module (see
 http://www.cpan.org) to Python. Requires Python 2.3+.
 "
 
-
-
 build() {
+    cd $SPELL-$VERSION
 #    python setup.py build			&&
     prepare_install                 		&&
     python setup.py install                     &&
