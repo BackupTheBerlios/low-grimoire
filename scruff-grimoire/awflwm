@@ -35,6 +35,14 @@ make    install
 configure() {
 if  !  grep  -q  "EDIT_CONFIG"  $SPELL_CONFIG;  then
   if    query "Would you like to edit config.h?" "n";  then
+	write_config.h
+	${EDITOR:=nano}           $CONFIG_LOGS/$BSPELL/config.h
+  fi
+  echo  "EDIT_CONFIG=true"  >>  $SPELL_CONFIG
+fi
+}
+
+write_config.h() {
 cat << EOF > $CONFIG_LOGS/$SPELL/config.h
 // config.h
 // You can edit these symbols to change the behavior & appearance of flwm.
@@ -203,9 +211,5 @@ cat << EOF > $CONFIG_LOGS/$SPELL/config.h
 #define CURSOR_BG_SLOT Fl_Color(30)
 #define CURSOR_FG_SLOT Fl_Color(31)
 EOF
-    ${EDITOR:=nano}           $CONFIG_LOGS/$BSPELL/config.h
-  fi
-  echo  "EDIT_CONFIG=true"  >>  $SPELL_CONFIG
-fi
 }
 
