@@ -1,4 +1,4 @@
-  VERSION=( "2.2.3" )
+  VERSION=( "2.2.4" "2.2.3" )
  CATEGORY="telephony"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-${VERSION}.src"
@@ -14,3 +14,5 @@ receiving and sending faxes with a fax modem.  The efax-gtk distribution
 now also compiles and installs a patched version of efax-0.9a-001114, so
 you do not need to separately build and install efax.
 EOF
+
+# add BUILD which installs efax-gtk-socket-client
