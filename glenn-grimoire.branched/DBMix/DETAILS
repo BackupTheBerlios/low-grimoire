@@ -1,0 +1,15 @@
+  VERSION=("0.9.8")
+ CATEGORY="audio audio-mixer"
+ATTRIBUTE="server library"
+   SOURCE="dbmix/$SPELL-$VERSION"
+ HOMEPAGE="http://dbmix.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="glib gtk+"
+   OPT[0]="xmms:::make a plugin for xmms"
+#FRESHMEAT=""
+    SHORT="DBMix Digital Audio Mixing System"
+cat << EOF
+DBMix is a software DJ mixing system for digital audio. DBMix allows a user
+to output multiple simultaneous audio streams on a single sound device, and
+to transform/modify each stream independently.
+EOF

@@ -1,0 +1,14 @@
+  VERSION=("0.17.5" "0.16.0" "0.15.7" "0.15.6")
+ CATEGORY="audio-editor"
+ATTRIBUTE="library"
+   SOURCE="protux/$SPELL-$VERSION"
+ HOMEPAGE="http://www.nongnu.org/protux/"
+      URL="http://savannah.nongnu.org/download"
+      REQ="qt-x11-free"
+   OPT[0]=":--with-xinerama::Xinerama support"
+   OPT[1]="jpeg:::jpeg support"
+   OPT[2]="libpng:::png support"
+    SHORT="libmustux is a library needed by protux"
+cat << EOF
+libmustux is a library needed by protux
+EOF

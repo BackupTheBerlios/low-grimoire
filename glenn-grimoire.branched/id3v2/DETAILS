@@ -1,0 +1,12 @@
+  VERSION=("0.1.7")
+ CATEGORY="audio-editor mp3"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://id3v2.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="id3lib"
+#FRESHMEAT=""
+    SHORT="The id3v2 tagger is a GNU/Linux command-line editor for ID3v1/v2 tags."
+cat << EOF
+The id3v2 tagger is a GNU/Linux command-line editor for ID3v1/v2 tags.
+EOF

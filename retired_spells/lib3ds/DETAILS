@@ -1,0 +1,18 @@
+  VERSION=("1.2.0")
+ CATEGORY="graphic-editor"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://lib3ds.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="glut"
+#   OPT[0]="arts:--with-arts::add arts capability"
+#FRESHMEAT=""
+    SHORT="The 3D Studio File Format Library is an overall software library for managing 3D-Studio Release 3 and 4 ".3DS" files."
+cat << EOF
+The 3D Studio File Format Library is an overall software library for
+managing 3D-Studio Release 3 and 4 ".3DS" files. It is a free alternative
+to Autodesk's 3DS File Toolkit for managing 3DS files. It started out in
+1996 to be released in 1999 under the GNU General Public License (GPL) as
+Open-Source software. In 2000, the library was completely rewritten in
+ANSI-C to attain more hardware platform independence.
+EOF

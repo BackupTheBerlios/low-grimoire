@@ -1,0 +1,14 @@
+  VERSION=("0.1")
+ CATEGORY="game"
+ATTRIBUTE="data"
+   SOURCE="approracle.zip"
+ HOMEPAGE="http://www.e-league.com"
+      URL="http://www-personal.engin.umich.edu/~wgoeman/e-league
+           http://homepage.eircom.net/~island/j3
+	   http://www.e-league.com/files"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="Magic card data, used for mindless."
+cat << EOF
+Magic card data, used for mindless.
+EOF

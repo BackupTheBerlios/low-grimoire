@@ -1,0 +1,37 @@
+echo "P:$(pwd)" >> /root/xv.debug
+unpack           ${SOURCE[0]}      &&
+cd               $BUILD_DIR        &&
+
+cp -v ${SOURCE[1]}  . &&
+cp -v ${SOURCE[2]}  . &&
+cp -v ${SOURCE[3]}  . &&
+cp -v ${SOURCE[4]}  . &&
+cp -v ${SOURCE[5]}  . &&
+cp -v ${SOURCE[6]}  . &&
+cp -v ${SOURCE[7]}  . &&
+cp -v ${SOURCE[8]}  . &&
+cp -v ${SOURCE[9]}  . &&
+cp -v ${SOURCE[10]} . &&
+cp -v ${SOURCE[11]} . &&
+cp -v ${SOURCE[12]} . &&
+cp -v ${SOURCE[13]} . &&
+cp -v ${SOURCE[14]} .
+
+echo "B:$BUILD_DIR" >> /root/xv.debug
+echo "S0:${SOURCE[0]}" >> /root/xv.debug
+echo "S1:${SOURCE[1]}" >> /root/xv.debug
+
+#cp ${SOURCE[1]} $BUILD_DIR  &&
+#cp ${SOURCE[2]} $BUILD_DIR  &&
+#cp ${SOURCE[3]} $BUILD_DIR  &&
+#cp ${SOURCE[4]} $BUILD_DIR  &&
+#cp ${SOURCE[5]} $BUILD_DIR  &&
+#cp ${SOURCE[6]} $BUILD_DIR  &&
+#cp ${SOURCE[7]} $BUILD_DIR  &&
+#cp ${SOURCE[8]} $BUILD_DIR  &&
+#cp ${SOURCE[9]} $BUILD_DIR  &&
+#cp ${SOURCE[10]} $BUILD_DIR &&
+#cp ${SOURCE[11]} $BUILD_DIR &&
+#cp ${SOURCE[12]} $BUILD_DIR &&
+#cp ${SOURCE[13]} $BUILD_DIR &&
+#cp ${SOURCE[14]} $BUILD_DIR

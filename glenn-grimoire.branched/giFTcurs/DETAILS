@@ -1,0 +1,13 @@
+  VERSION=("0.5.5")
+ CATEGORY="file-share"
+ATTRIBUTE="console client"
+   SOURCE="giftcurs/$SPELL-$VERSION"
+ HOMEPAGE="http://giftcurs.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+#      REQ="giFT"
+#FRESHMEAT=""
+    SHORT="giFTcurs is an ncurses front end to giFT."
+cat << EOF
+YOU MUST HAVE giFT!  this is technically not a requirement (in the spell)
+giFTcurs is an ncurses front end to giFT.
+EOF

@@ -1,0 +1,58 @@
+  VERSION=("0.2")
+ CATEGORY="audio"
+ATTRIBUTE="server library"
+   SOURCE="$SPELL/${SPELL}4-$VERSION"
+ HOMEPAGE="http://asd.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ="glib,v1.2 libxml2"
+#FRESHMEAT=""
+    SHORT="ASD will eventually be a full featured drop-in replacement for Esound."
+cat << EOF
+ASD will eventually be a full featured drop-in replacement for Esound.
+ ASD will implement all features of Esound, plus:
+    * Capture/full-duplex facility (DONE)
+    * Multiple input sources (DONE)
+    * Multiple output sinks (DONE)
+    * Multiple links between sinks and sources (DONE)
+    * Multiple output sync samplerate synchronisation (e.g. use two normal soundcards do achieve real quadrophonic sound) (PART)
+    * Very low latency (Suitable for games) (PART, not optimized, currently as bad as 180msec)
+    * EsounD compatibility (Use ESD-aware programs to connect to ASD) (DONE)
+    * Runtime configuration
+    * Implicit sample format conversion (DONE)
+    * Different types of sources:
+          o socket (client-program) (DONE)
+          o unix-fifo (DONE)
+          o unix-pipe
+          o oss-dsp (DONE)
+          o alsa-dsp
+          o sine-generator
+          o silence-generator
+          o noise-generator
+          o rate-fixer
+          o http-stream
+          o udp-receive
+    * Different types of sinks:
+          o socket (client-program) (DONE)
+          o unix-fifo (DONE)
+          o unix-pipe
+          o oss-dsp (DONE)
+          o alsa-dsp
+          o null
+          o rate-fixer
+          o http-stream
+          o udp-broadcast
+    * Different interfaces:
+          o asd-compatible tcp-inet (DONE)
+          o asd-compatible unix-socket (DONE)
+          o esound-compatible tcp-inet (DONE)
+          o esound-compatible unix-socket (DONE)
+          o http-compatible tcp-inet (PART)
+    * Secure multiple user access (PART)
+    * Saving of different server layouts to XML (PART)
+    * Fine grainedLatency/throughput measuring facility (DONE)
+    * Arbitrary bit depth and sample rates (PART)
+    * Low latency mode for telephony-applications. When this is activated all data is passed between the device and the application without further processing or mixing.
+    * Gtk+ based configuration program
+    * Gtk+ library with controls for ASD configuration issues
+    * and much more
+EOF

@@ -1,0 +1,15 @@
+  VERSION=("0.1.6")
+ CATEGORY="graphic network"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.ex-parrot.com/~chris/driftnet/"
+      URL="http://www.ex-parrot.com/~chris"
+      REQ="libpcap gtk+ jpeg libpng libungif mpg123"
+#FRESHMEAT=""
+    SHORT="Driftnet is a program which listens to network traffic and picks out images from TCP streams it observes."
+cat << EOF
+Inspired by EtherPEG (though, not owning an Apple Macintosh, I've never
+actually seen it in operation), Driftnet is a program which listens to
+network traffic and picks out images from TCP streams it observes. Fun
+to run on a host which sees lots of web traffic.
+EOF

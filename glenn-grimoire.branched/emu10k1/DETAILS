@@ -1,0 +1,42 @@
+  VERSION=("v0.20a")
+ CATEGORY="audio development"
+ATTRIBUTE="console driver"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://opensource.creative.com/"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="Tools for Emu10k1 sound cards."
+cat << EOF
+Card support
+------------
+- Creative Sound Blaster Live! (all models)
+- Creative Sound Blaster PCI 512
+- Creative Audigy
+
+Features
+--------
+- Open Sound System (OSS) compatible
+- Full duplex wave playback/recording functionality (/dev/dsp and /dev/dsp1)
+- Simultaneous wave playback streams
+- Analog mixer (AC97) support (/dev/mixer)
+- MIDI UART support (/dev/midi)
+- Joystick interface support (>= 2.2.x kernels only)
+- Supports multiple EMU10K1-based cards
+- AC3 passthrough
+- Sequencer Support
+- Multi-channel PCM
+
+Tools for Emu10k1 sound cards.
+* as10k1     - a dsp assembler for the emu10k1
+* emu-dspmgr - A tool for configuring the cards dsp patch management system
+               (e.g for loading "effects", or routing an input to an output)
+* emu-config - A tool for configuring the card (e.g. toggling the
+               analog/digital output, selecting recording modes, etc)
+* dbgemu     - debug emu10k1 registers
+* compiler   - use C like laguage to write dsp code for emu10k1
+
+Also, several ".bin" dsp patches will be installed in /usr/local/share/emu10k1/
+you can load these patches using emu-dspmgr. A description of each effect
+is provided in  /usr/local/share/emu10k1/README
+EOF

@@ -1,0 +1,22 @@
+  VERSION=("0.9.4")
+ CATEGORY="audio development"
+ATTRIBUTE="console"
+   SOURCE="emu10k1/$SPELL-$VERSION"
+ HOMEPAGE="http://opensource.creative.com/"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="Tools for Emu10k1 sound cards."
+cat << EOF
+Tools for Emu10k1 sound cards.
+* as10k1     - a dsp assembler for the emu10k1
+* emu-dspmgr - A tool for configuring the cards dsp patch management system
+               (e.g for loading "effects", or routing an input to an output)
+* emu-config - A tool for configuring the card (e.g. toggling the
+               analog/digital output, selecting recording modes, etc)
+* dbgemu     - debug emu10k1 registers
+
+Also, several ".bin" dsp patches will be installed in /usr/local/share/emu10k1/
+you can load these patches using emu-dspmgr. A description of each effect
+is provided in  /usr/local/share/emu10k1/README
+EOF

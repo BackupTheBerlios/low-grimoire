@@ -1,0 +1,27 @@
+  VERSION=("0.4.0b")
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-current"
+ HOMEPAGE="http://www.wavemage.com/projects-software.html"
+      URL="http://www.wavemage.com"
+      REQ="ncurses"
+#FRESHMEAT=""
+    SHORT="wavemon is a ncurses-based monitoring application for wireless network devices."
+cat << EOF
+wavemon is a ncurses-based monitoring application for wireless network
+devices. It currently works under Linux with devices that are supported by
+the wireless extensions by Jean Tourrilhes (included in Kernel 2.4 and
+higher), e.g. the Lucent Orinoco cards.
+
+Key features:
+- overview screen, displaying all important information like device
+  configuration, encryption and power management parameters and network
+  information at once
+- adaptive level bargraphs for link quality, signal/noise strength and
+  signal-to-noise ratio
+- customizeable "level alarm" feature that notices the user of changes in
+  signal level strength audibly and/or visually
+- full-screen level histogram displaying signal/noise levels and SNR
+- list of access points in range
+- menu-based configuration from within the program
+EOF

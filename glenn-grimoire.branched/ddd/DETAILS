@@ -1,0 +1,19 @@
+  VERSION=("3.3.1" "3.3")
+ CATEGORY="development debugger"
+ATTRIBUTE="x11"
+SOURCE[0]="$SPELL/$SPELL-$VERSION"
+SOURCE[1]="$SPELL/$SPELL-$VERSION-html-manual"
+ HOMEPAGE="http://www.gnu.org/software/ddd/"
+   URL[0]="$GNU_URL"
+   URL[1]="${URL[0]}"
+#      REQ="gtk+2 libpng gdk-pixbuf"
+#   OPT[0]=":::"
+#FRESHMEAT=""
+    SHORT="GNU DDD is a graphical front-end for command-line debuggers."
+cat << EOF
+GNU DDD is a graphical front-end for command-line debuggers such as GDB, 
+DBX, WDB, Ladebug, JDB, XDB, the Perl debugger, or the Python debugger.
+Besides ``usual'' front-end features such as viewing source texts, DDD has
+become famous through its interactive graphical data display, where data
+structures are displayed as graphs.
+EOF

@@ -1,0 +1,46 @@
+   VERSION=( "0.4.2" )
+  CATEGORY="web graphic"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.quiss.org/swftools"
+       URL="http://www.quiss.org/swftools"
+   OPTS[0]="avifile:::For AVI2SWF converter"
+   OPTS[1]="jpeg:::For JPEG2SWF converter"
+   OPTS[2]="t1lib:::For PDF2SWF"
+#   OPTS[3]="xpdf:::For PDF2SWF"
+#   OPTS[4]="libpng:::For PNG2SWF converter"
+#   OPTS[5]="lame:::For WAV2SWF converter"
+     SHORT="SWF Tools is a collection of SWF manipulation and generation utilities"
+cat << EOF
+ SWF Tools is a collection of SWF manipulation and generation utilities
+ written by Rainer Bo"hme and Matthias Kramm. It is released under the GPL.
+Included are:
+
+PDF2SWF A PDF to SWF Converter. Generates one frame per page. Enables you 
+ to have fully formatted text, including tables, formulas etc. inside your
+ Flash Movie. Uses the xpdf PDF parser from Derek B. Noonburg and the
+ tt2pt1 font converter developed by the TTF2PT1 Project and its contributors.
+
+SWFCombine A tool for inserting SWFs into Wrapper SWFs. (Templates) E.g. 
+ for including the pdf2swf SWFs in some sort of Browsing-SWF.
+
+SWFStrings Scans SWFs for text data.
+
+SWFDump Prints out various informations about SWFs.
+
+JPEG2SWF Takes one or more JPEG pictures and generates a SWF slideshow.
+
+PNG2SWF Like JPEG2SWF, only for PNGs.
+
+WAV2SWF Converts WAV audio files to SWFs with MP3 Streams, using the
+ L.A.M.E. MP3 encoder.
+
+AVI2SWF Converts AVI animation files to SWF. Still Alpha, but some examples
+ can already be found at examples.html.
+
+SWFExtract Allows to extract Movieclips, Sounds, Images etc. from SWF files.
+
+RFXSWF Library A fully featured library which can be used for standalone
+ SWF generation. Includes support for Bitmaps, Buttons, Shapes, Text, 
+ Fonts, Sound etc.
+EOF

@@ -1,0 +1,13 @@
+  VERSION=("0.3.0")
+ CATEGORY="ladspa-plugin"
+ATTRIBUTE="other"
+   SOURCE="$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://plugin.org.uk"
+      URL="http://plugin.org.uk/releases"
+      REQ="ladspa_sdk fftw"
+#FRESHMEAT=""
+    SHORT="These are audio plugins for LADSPA, the Linux Audio Developers Plugin API."
+cat << EOF
+Set of LADSPA pluggins by Steve Harris.
+These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
+EOF

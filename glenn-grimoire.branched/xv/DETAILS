@@ -1,0 +1,71 @@
+  VERSION=("3.10a")
+ CATEGORY="graphic-editor graphic-viewer"
+ATTRIBUTE="x11"
+SOURCE[0]="$SPELL/$SPELL-$VERSION"
+SOURCE[1]="$SPELL/patches/grabpatch"
+SOURCE[2]="$SPELL/patches/vispatch"
+SOURCE[3]="$SPELL/patches/mp-tiff-patch"
+SOURCE[4]="$SPELL/patches/longname.patch"
+SOURCE[5]="$SPELL/patches/xpm.patch"
+SOURCE[6]="$SPELL/patches/deepcolor.patch"
+SOURCE[7]="$SPELL/patches/gifpatch"
+SOURCE[8]="$SPELL/patches/exceed_grab.patch"
+SOURCE[9]="$SPELL/patches/gssafer.patch"
+SOURCE[10]="$SPELL/xv-3.10a.JPEG-patch"
+SOURCE[11]="$SPELL/xv-3.10a.TIFF-patch"
+SOURCE[12]="$SPELL/patches/pdf.patch"
+SOURCE[13]="$SPELL/patches/windowid.patch"
+SOURCE[14]="$SPELL/patches/bmp32.patch"
+ HOMEPAGE="http://www.trilon.com/xv"
+   URL[0]="ftp://ftp.cis.upenn.edu/pub"
+   URL[1]="ftp://ftp.trilon.com/pub"
+   URL[2]="${URL[1]}"
+   URL[3]="${URL[1]}"
+   URL[4]="${URL[1]}"
+   URL[5]="${URL[1]}"
+   URL[6]="${URL[1]}"
+   URL[7]="${URL[1]}"
+   URL[8]="${URL[1]}"
+   URL[9]="${URL[1]}"
+   URL[10]="${URL[0]}"
+   URL[11]="${URL[0]}"
+   URL[12]="${URL[1]}"
+   URL[13]="${URL[1]}"
+   URL[14]="${URL[1]}"
+      REQ="patch jpeg tiff"
+#   OPT[4]="Csound:--with-ladspa::"
+#FRESHMEAT=""
+    SHORT="xv is an interactive image manipulation program for the X Window System."
+cat << EOF
+xv is an interactive image manipulation program for the X Window System. It
+can operate on images in the GIF, JPEG, TIFF, PBM, PGM, PPM, XPM, X11 bitmap,
+Sun Rasterfile, Targa, RLE, RGB, BMP, PCX, FITS, and PM formats on all known
+types of X displays. It can generate PostScript files, and if you have
+ghostscript (version 2.6 or above) installed on your machine, it can also
+display them.
+
+xv lets you do a large number of things (many of them actually useful),
+including, but not limited to, the following:
+    * display an image in a window on the screen
+    * display an image on the root window, in a variety of styles
+    * grab any rectangular portion of the screen and turn it into an image
+    * arbitrarily stretch, compress, rotate or flip the image
+    * crop or pad images
+    * view files as ASCII text or hexadecimal data
+    * magnify any portion of the image by any amount, up to the size of the
+      screen
+    * determine pixel values and x,y coordinates in the image
+    * adjust image brightness and contrast with a gamma correction function
+    * apply different gamma functions to the Red, Green, and Blue color
+      components, to correct for non-linear color response
+    * adjust global image saturation
+    * perform global hue remapping
+    * perform histogram equalization
+    * run a number of image-processing algorithms on any rectangular portion
+      of the image
+    * edit an image's colormap
+    * reduce the number of colors in an image
+    * dither in color and b/w
+    * crop off solid borders automatically
+    * convert image formats
+EOF

@@ -1,0 +1,13 @@
+  VERSION=("0.1.1")
+ CATEGORY="db"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-Alpha-src"
+ HOMEPAGE="http://pgadmin.postgresql.org/"
+      URL="http://www.pgadmin.org/snapshots"
+      REQ="wxGTK postgresql"
+#   OPT[0]="Csound:--with-ladspa::"
+#FRESHMEAT=""
+    SHORT="pgAdmin3 is a comprehensive PostgreSQL database design and management system."
+cat << EOF
+pgAdmin3 is a comprehensive PostgreSQL database design and management system.
+EOF

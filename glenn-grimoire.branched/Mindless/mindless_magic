@@ -1,0 +1,4 @@
+#!/bin/sh
+
+export CARDINFO_DAT=/usr/share/magic_data/cardinfo.dat
+mindless

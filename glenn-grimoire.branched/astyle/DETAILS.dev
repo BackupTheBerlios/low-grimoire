@@ -1,0 +1,11 @@
+  VERSION="1.13.8"
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/${SPELL}_$VERSION"
+ HOMEPAGE="http://astyle.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+    SHORT="A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java Source Codes"
+cat << EOF
+A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java
+Source Codes
+EOF
