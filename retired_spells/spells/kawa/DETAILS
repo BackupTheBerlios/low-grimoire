@@ -1,10 +1,10 @@
-   VERSION=( "1.7" "1.7beta2" )
+   VERSION=( "1.7.90" "1.7" "1.7beta2" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.gnu.org/software/kawa"
        URL="ftp://ftp.gnu.org/pub/gnu/kawa"
        REQ="j2sdk"
-  ESTIMATE=465
+  ESTIMATE=276
  FRESHMEAT="kawa"
      SHORT="The Kawa Scheme System is a full Scheme implementation, completely written in Java"
 
