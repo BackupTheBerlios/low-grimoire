@@ -1,9 +1,9 @@
-   VERSION=( "1.1" "1.0.6" "1.0.4" )
+   VERSION=( "1.2" "1.1" "1.0.6" "1.0.4" )
   CATEGORY="development"
  ATTRIBUTE="console"
   HOMEPAGE="http://arch.quackerhead.com/~lord"
        URL="http://arch.quackerhead.com/~lord/releases/tla"
-  ESTIMATE="2173"
+  ESTIMATE="2224"
  FRESHMEAT="arch revision control system - tla branch"
      SHORT="arch is a modern replacement for CVS, specifically designed for the distributed development needs of open source projects"
 
