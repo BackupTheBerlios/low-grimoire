@@ -4,7 +4,7 @@
   HOMEPAGE="http://apollon.sf.net"
   URL="$SOURCEFORGE_URL"
   SOURCE="apollon/apollon-$VERSION"
-  REQ="giFT kdelibs libtool qt-x11-free"
+  REQ="giFT kdelibs libtool"
   FRESHMEAT="apollon"
   ESTIMATE=444
   SHORT="A P2P client for Linux which supports Kazaa, Gnutlella, and OpenFT."
