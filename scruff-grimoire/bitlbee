@@ -7,12 +7,13 @@ ATTRIBUTE="client|server"
    OPT[0]=":--msn=1:--msn=0:MSN support"
    OPT[1]=":--jabber=1:--jabber=0:Jabber support"
    OPT[2]=":--oscar=1:--oscar=0:Oscar (ICQ, AIM) support"
-   OPT[3]=":--yahoo=1:--yahoo=0;Yahoo support"
+   OPT[3]=":--yahoo=1:--yahoo=0:Yahoo support"
    OPT[4]="epic4:::to use as a front-end to bitlbee"
    OPT[5]="ircii:::to use as a front-end to bitlbee"
    OPT[6]="irssi:::to use as a front-end to bitlbee"
    OPT[7]="xchat:::to use as a front-end to bitlbee"
-      REQ="glib gnutls"
+   OPT[8]="ircii:::to use as a front-end to bitlbee"
+      REQ="glib gnutls xinetd"
  ESTIMATE="108"
 FRESHMEAT="bitlbee"
     SHORT="BitlBee: An IRC to other chat networks gateway"
@@ -24,18 +25,49 @@ responses are also returned.
 
 build() {
 
+groupadd bitlbee	                  2>/dev/null
+useradd  bitlbee -g bitlbee -s /bin/false 2>/dev/null
+
   ./configure  --prefix=/usr         \
 	       --etcdir=/etc/bitlbee \
 	       $OPTS		     &&
   make                               &&
-  echo "Sorcerer Specific follows"   &&
-  cd utils                           &&
-  echo "Compiling bitlbeed.c"        &&
-  gcc bitlbeed.c -o bitlbeed         &&
-  cd ..                              &&
-  echo "End Sorcerer Specific"       &&
   prepare_install                    &&
   make    install		     &&
-  install -p -m 0755 -o root -g 0 utils/bitlbeed /usr/sbin
+  make    install-etc		     &&
 
+if ! grep "bitlbee" /etc/services >/dev/null
+	then
+	echo "ircd-bitlbee 6667/tcp # Added by spell bitlbee" >> /etc/services 
+	else
+	true
+	fi &&
+cat << EOF > /etc/xinetd.d/bitlbee
+service ircd-bitlbee
+{
+## This file installed by spell bitlbee
+	socket_type	= stream
+	protocol	= tcp
+	wait		= no
+	user		= bitlbee
+	server		= /usr/sbin/bitlbee
+	port		= 6667
+## comment the following two lines for a public server
+ 	interface	= localhost
+ 	per_source	= 1
+	log_type	= FILE /var/log/xinetd/bitlbee
+	log_on_success	= PID HOST USERID EXIT DURATION
+	log_on_failure	= USERID ATTEMPT
+}
+EOF
+}
+
+
+# It would appear that not all verbose spell scripts have a terse
+# equivalent.  For example ...
+
+post_remove()
+{
+default_post_remove
+cat /etc/services | grep -v "Added by spell bitlbee" > /etc/services
 }
