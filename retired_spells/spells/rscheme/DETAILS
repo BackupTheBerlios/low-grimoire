@@ -1,0 +1,12 @@
+  VERSION=( "0.7.3.2" )
+  CATEGORY="intepreter"
+  ATTRIBUTE="console"
+  HOMEPAGE="http://www.rscheme.org"
+  URL="$SOURCEFORGE_URL"
+  SOURCE="rscheme/rs-$VERSION"
+  FRESHMEAT="rscheme"
+  ESTIMATE=4925
+  SHORT="An object-oriented, extended Scheme implementation."
+  cat << EOF
+  RScheme is an object-oriented, extended Scheme
+  EOF
