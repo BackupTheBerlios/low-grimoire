@@ -1,0 +1,13 @@
+  VERSION=( "2.0.0-a6" )
+ CATEGORY="network chat"
+ATTRIBUTE="server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.jabberstudio.org/projects/jabberd2/project/view.php"
+      URL="http://www.jabberstudio.org/files/jabberd2"
+# Nearly all of these requirements should be OPT[x]
+      REQ="openssl Linux-PAM db postgresql"
+#FRESHMEAT=""
+    SHORT="Jabberd 2.0 server"
+cat << EOF
+Jabberd 2.0 server
+EOF
