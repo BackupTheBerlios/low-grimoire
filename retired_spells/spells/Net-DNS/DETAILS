@@ -1,10 +1,10 @@
-   VERSION=( "0.45" "0.44" "0.43" "0.42" "0.41" "0.40" "0.38" "0.37" )
+   VERSION=( "0.46" "0.45_01" "0.45" "0.44" "0.43" "0.42" "0.41" "0.40" "0.38" "0.37" )
   CATEGORY="library"
  ATTRIBUTE="development"
   HOMEPAGE="http://www.net-dns.org"
        URL="http://www.net-dns.org/download"
        REQ="perl"
-  ESTIMATE=119
+  ESTIMATE=117
      SHORT="Net::DNS is a Perl interface to the DNS resolver"
 
 cat << EOF
