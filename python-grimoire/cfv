@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "1.18.1" )
+  CATEGORY="archive python"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://cfv.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ=( "Python" )
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="cfv is a utility to both test and create .sfv, .csv, .crc, .md5(sfv-like), md5sum, bsd md5, sha1sum, and .torrent files.
+cfv is a utility to both test and create .sfv, .csv, .crc, .md5(sfv-like),
+md5sum, bsd md5, sha1sum, and .torrent files. These files are commonly used
+to ensure the correct retrieval or storage of data.
+"
+
+build() {
+    sed -i "s:/local::" Makefile &&
+    make                         &&
+    prepare_install              &&
+    make install
+}
