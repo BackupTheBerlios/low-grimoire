@@ -1,11 +1,11 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.7" )
+  VERSION=( "3.1.0" "2.7" )
  CATEGORY="networking"
 ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://lumumba.luc.ac.be/jori/jrtplib/jrtplib.html"
-      URL="http://lumumba.luc.ac.be/jori"
+ HOMEPAGE="http://research.edm.luc.ac.be/jori/jrtplib/jrtplib.html"
+      URL="http://research.edm.luc.ac.be/jori"
       REQ=""
 #FRESHMEAT=""
 DESC="JRTPLIB is an object-oriented RTP library written in C++.
