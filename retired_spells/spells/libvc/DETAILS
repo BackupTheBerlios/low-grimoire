@@ -1,0 +1,16 @@
+   VERSION=( "002" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://rolo.sf.net/"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="rolo/libvc-$VERSION.tar.bz2"
+       REQ="flex bison grep"
+ FRESHMEAT="libvc"
+     SHORT="Libvc is a vCard library which was written using 'flex' and 'bison'"
+
+cat << EOF
+Libvc is a vCard library which was written using 'flex' and 'bison'. 
+It handles scanning a vCard file, parsing the vCard file into a data storage 
+structure, manipulating the data storage structure, and writing the structure back to a file. 
+It was originally written for 'rolo', but has been split off for general use
+EOF

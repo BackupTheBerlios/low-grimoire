@@ -1,0 +1,18 @@
+   VERSION=( "3.2.4" )
+  CATEGORY="editor"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://konst.org.ua/motor"
+       URL="http://konst.org.ua/download"
+       OPT="gettext::--disable-nls:to enable nls"
+       REQ="ncurses"
+ FRESHMEAT="motor"
+     SHORT="Motor is a text-mode integrated programming environment for Linux"
+
+cat << EOF
+Motor is a text-mode integrated programming environment for Linux. It consists of 
+an editor with syntax highlighting, a project manager, a makefile generator, gcc, 
+ctags, gdb, autoconf/automake and grep front-ends. CVS integration is also provided. 
+It allows one to edit, compile, and debug programs without a need to leave the IDE, 
+automatically check in/out files from a CVS repository and import projects into CVS, 
+and generate distribution packages (tar.gz and RPM). The color schemes are customisable 
+EOF

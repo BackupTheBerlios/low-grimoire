@@ -1,0 +1,14 @@
+   VERSION=( "4.2" )
+  CATEGORY="intepreter"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/q/"
+       URL="http://www.musikwissenschaft.uni-mainz.de/~ag/q/"
+ FRESHMEAT="Q"
+       REQ="gmp"
+     SHORT="Q is a powerful and extensible functional programming 
+language based on the term rewriting calculus."
+
+cat << EOF
+Q is useful for scientific programming and other advanced applications, 
+and also as a sophisticated kind of desktop calculator. 
+EOF

@@ -1,0 +1,13 @@
+   VERSION=( "1.0.3" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.modruby.net"
+       URL="http://modruby.net/archive"
+       REQ="ruby"
+     SHORT="eRuby interprets a Ruby code embedded text file"
+
+cat << EOF
+eRuby interprets a Ruby code embedded text file. For example, eRuby
+enables you to embed a Ruby code to a HTML file
+EOF
+
