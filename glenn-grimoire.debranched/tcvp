@@ -1,0 +1,34 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "0.2.0" )
+ CATEGORY="video-player"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://tcvp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "tc2-modules"
+            "file:::add file support"
+            "openssl:::add ssl support"
+            "libdvdnav:::add dvdnav support"
+            "libdvdcss:::add dvd decryption support"
+            "libdvdread:::add dvd reading support" 
+            "libogg:::add ogg support"
+            "cdparanoia:::add audio cd support"
+            "libvorbis:::add vorbis support"
+            "a52dec:::add AC3 decoding support"
+            "lame:::add mp3 support"
+            "libmad:::add mp3 support"
+            "faac:::add AAC support"
+            "faad2:::add AAC support"
+            "libmpeg2:::add mpeg2 support"
+            "ffmpeg:::add ffmpeg codecs support"
+            "alsa-lib:::add alsa driver support"
+#            "vidix:::add vidix DGA support"
+            "XFree86:::add X support" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="TCVP is a video and music player and encoder/transcoder for Unix-like operating systems.
+TCVP is a video and music player and encoder/transcoder for Unix-like
+operating systems.
+"

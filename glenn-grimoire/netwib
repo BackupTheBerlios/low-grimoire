@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "5.30.0" )
+ CATEGORY="network"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION-src.tgz"
+ HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwib/download/v5"
+      URL="http://www.laurentconstantin.com/common/netw/$SPELL/download/v5"
+      REQ=( "libpcap libnet" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="Netwib is a network library.
+Netwib is a network library.
+"
+
+build() {
+  sed -i "s:/local::" src/config.dat &&
+  cd src                &&
+  ./genemake            &&
+  make all libnetwib.so &&
+  prepare_install       &&
+  make install installso
+}

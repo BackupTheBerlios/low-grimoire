@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "0.6.0" )
+ CATEGORY="utility"
+ATTRIBUTE="library console"
+   SOURCE="tc2/$SPELL-$VERSION"
+ HOMEPAGE="http://tc2.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "tc2"
+            "curl:::build url module"
+            "libpng:::build png module"
+            "jpeg:::build jpeg module"
+            "libungif:::build gif module"
+            "file:::build file module"
+            "readline:::build shell module"
+            "perl:::build perl module"
+            "openssl:::add ssl support" )
+     OPTS="--enable-verbose"
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="TC2 is a library to simplify writing of modular programs.
+TC2 is a library to simplify writing of modular programs.
+"

@@ -1,0 +1,132 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "beta-0.5.1" )
+ CATEGORY="video"
+ATTRIBUTE="library console"
+   SOURCE="$SPELL/$SPELL-$VERSION.zip"
+ HOMEPAGE="http://www.freemxf.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "e2fsprogs"
+            "openssl:--enable-crypt::to enable mxfcrypt" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="A simple C++ library for MXF file I/O.
+A simple C++ library for MXF file I/O.
+"
+
+patches() {
+  patch -p1 <<'EOF'
+diff -ru mxf.orig/mxflib/metadata.h mxf/mxflib/metadata.h
+--- mxf.orig/mxflib/metadata.h	2004-12-18 20:41:28.000000000 -0600
++++ mxf/mxflib/metadata.h	2005-04-04 01:58:56.000000000 -0500
+@@ -147,7 +147,7 @@
+ 		void SetParent(TrackPtr &NewParent) { Parent = NewParent; }
+ 
+ 		//! Set the track containing this component
+-		void SetParent(IRefCount<Track> *NewParent) { Parent = TrackParent(NewParent); }
++		void SetParent(IRefCount<Track> *NewParent) { Parent = NewParent; }
+ 
+ 		//! Allow polymorphic destructors
+ 		virtual ~Component() {};
+@@ -346,10 +346,10 @@
+ 		PackageParent GetParent(void) { return Parent; };
+ 
+ 		//! Set the package containing this track
+-		void SetParent(PackagePtr &NewParent) { Parent = PackageParent(NewParent.GetRef()); }
++		void SetParent(PackagePtr &NewParent) { Parent = NewParent.GetRef(); }
+ 
+ 		//! Set the track containing this component
+-		void SetParent(IRefCount<Package> *NewParent) { Parent = PackageParent(NewParent); }
++		void SetParent(IRefCount<Package> *NewParent) { Parent = NewParent; }
+ 
+ 		//! Return the containing "Track" object for this MDObject
+ 		/*! \return NULL if MDObject is not contained in a Track object
+diff -ru mxf.orig/mxflib/smartptr.h mxf/mxflib/smartptr.h
+--- mxf.orig/mxflib/smartptr.h	2004-11-12 09:20:44.000000000 -0600
++++ mxf/mxflib/smartptr.h	2005-04-04 04:21:54.000000000 -0500
+@@ -519,10 +519,10 @@
+ 			PTRDEBUG( debug("Assigning parent pointer at 0x%08x to 0x%08x\n", (int)this, (int)refcount); )
+ 
+ 			// Remove us from the old parent's list of parent pointers
+-			if(__m_refcount) __m_refcount->DeleteRef(*this);
++			if(this->__m_refcount) this->__m_refcount->DeleteRef(*this);
+ 
+ 			// Make the new attachment
+-			__m_refcount = refcount;
++			this->__m_refcount = refcount;
+ 
+ 			// Add us to the new parent's list of parent pointers (so we will be cleared if it is deleted)
+ 			if(refcount) refcount->AddRef(*this);
+@@ -532,27 +532,27 @@
+ 		//! Construct a parent pointer that points to nothing
+ 		ParentPtr()
+ 		{
+-			__m_refcount = NULL;
++			this->__m_refcount = NULL;
+ 		}
+ 
+ 		//!	Construct a parent pointer from a smart pointer
+ 		ParentPtr(SmartPtr<T> ptr)
+ 		{
+-			__m_refcount = NULL;
++			this->__m_refcount = NULL;
+ 			__Assign(ptr.GetRef());
+ 		}
+ 
+ 		//!	Construct a parent pointer to an object
+ 		ParentPtr(IRefCount<T> * ptr)
+ 		{
+-			__m_refcount = NULL;
++			this->__m_refcount = NULL;
+ 			__Assign(ptr);
+ 		}
+ 
+ 		//! Copy construct
+ 		ParentPtr(ParentPtr &rhs)
+ 		{
+-			__m_refcount = NULL;
++			this->__m_refcount = NULL;
+ 			__Assign(rhs.GetRef());
+ 		}
+ 
+@@ -560,9 +560,9 @@
+ 		~ParentPtr()
+ 		{
+ 			// Remove us from the old parent's list of parent pointers
+-			if(__m_refcount) __m_refcount->DeleteRef(*this);
++			if(this->__m_refcount) this->__m_refcount->DeleteRef(*this);
+ 
+-			__m_refcount = NULL;
++			this->__m_refcount = NULL;
+ 		}
+ 
+ 		//! Set value from a smart pointer
+@@ -578,14 +578,14 @@
+ 		void Clear(void) 
+ 		{
+ 			// Remove us from the old parent's list of parent pointers
+-			if(__m_refcount) __m_refcount->DeleteRef(*this);
++			if(this->__m_refcount) this->__m_refcount->DeleteRef(*this);
+ 
+-			__m_refcount = NULL; 
++			this->__m_refcount = NULL; 
+ 		}
+ 
+ 		//! Clear the recorded value of this pointer
+ 		/*! This call <b>does not</b> remove us from the parent's list of parent pointers (called by the parent) */
+-		void ClearFromParent(void) { __m_refcount = NULL; };
++		void ClearFromParent(void) { this->__m_refcount = NULL; };
+ 	};
+ }
+ 
+EOF
+}
+
+build() {
+  sed -i "s:\r::g" bootstrap.sh configure.ac mxflib/Makefile.am Makefile.am &&
+  sed -i "s:\\\n\n:\\\n:g" mxflib/Makefile.am Makefile.am &&
+  patches           &&
+  bash bootstrap.sh &&
+  default_build
+}

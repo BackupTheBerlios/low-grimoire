@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "0.18" )
+ CATEGORY="audio network"
+ATTRIBUTE="console server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://zaheer.merali.org/mediawiki/index.php/Acast"
+      URL="http://live.hujjat.org"
+      REQ=( "gnome-media libshout" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="acast is a program for webcasting audio from your sound device to a variety of different streaming servers
+acast is a program for webcasting audio from your sound device to a variety
+of different streaming servers
+"
+
+build() {
+  default_build &&
+  mkdir -p /usr/share/$SPELL &&
+  cp config/*.xml /usr/share/$SPELL
+}
