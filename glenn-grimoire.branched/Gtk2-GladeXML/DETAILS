@@ -1,0 +1,11 @@
+   VERSION=( "0.26" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl Gtk2 libglade"
+     SHORT="This package adds perl support for Glade 2.x to Gtk2-Perl."
+cat << EOF
+This package adds perl support for Glade 2.x to Gtk2-Perl.
+EOF

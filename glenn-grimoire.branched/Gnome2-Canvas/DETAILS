@@ -1,0 +1,11 @@
+   VERSION=( "0.26" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl Gtk2 libgnomecanvas"
+     SHORT="The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas."
+cat << EOF
+The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas.
+EOF
