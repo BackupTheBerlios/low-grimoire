@@ -1,0 +1,14 @@
+  VERSION=( "3.12" )
+ CATEGORY="disk"
+ATTRIBUTE="console"
+   SOURCE="linuxquota/quota-$VERSION"
+ HOMEPAGE="http://kahakai.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+   OPT[0]="gettext:--enable-nls=yes:--enable-nls=no:add gettext support"
+#FRESHMEAT=""
+    SHORT="Tools and patches for the Linux Diskquota system as part of the Linux kernel."
+LONG="
+Tools and patches for the Linux Diskquota system as part of the Linux
+kernel.
+"
