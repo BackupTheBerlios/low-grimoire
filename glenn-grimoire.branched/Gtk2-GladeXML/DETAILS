@@ -1,4 +1,4 @@
-   VERSION=( "0.92" "0.26" )
+   VERSION=( "0.94" "0.92" "0.26" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
     SOURCE="gtk2-perl/$SPELL-$VERSION"

@@ -1,4 +1,4 @@
-  VERSION=( "0.11.3" "0.11.2" "0.11.1" )
+  VERSION=( "0.11.5" "0.11.3" "0.11.2" "0.11.1" )
  CATEGORY="file-transfer"
 ATTRIBUTE="server"
    SOURCE="gift/$SPELL-$VERSION"

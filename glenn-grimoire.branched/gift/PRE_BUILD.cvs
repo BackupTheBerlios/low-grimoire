@@ -1,8 +1,9 @@
   CVSSERVER=':pserver:anonymous@cvs.gift.sf.net:/cvsroot/gift'
   MODULE=giFT
-
-  mkdir -p /usr/src/sorcery.cvs/$SPELL/
-  cd /usr/src/sorcery.cvs/$SPELL/
+  export CVS_RSH=ssh
+  
+  mkdir -p /usr/src/sorcery.cvs/$SPELL/ &&
+  cd /usr/src/sorcery.cvs/$SPELL/ &&
 
   if ( true ); then
       if [ -a /usr/src/sorcery.cvs/$SPELL/$MODULE ]; then
@@ -11,5 +12,6 @@
           CVSCOMMAND="checkout $MODULE"
       fi
 
+      echo "cvs -z4 -d $CVSSERVER $CVSCOMMAND" > /mygiftd
       cvs -z4 -d $CVSSERVER $CVSCOMMAND
   fi
