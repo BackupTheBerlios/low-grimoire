@@ -1,4 +1,6 @@
+unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs library"
       REQ="cvs autoconf automake giftd"
+  PROVIDE="giFT-OpenNap"
    ASSUME="off"

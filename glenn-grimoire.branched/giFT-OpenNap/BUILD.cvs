@@ -1,6 +1,4 @@
 (
-  cd /usr/src/sorcery.cvs/$SPELL/$MODULE &&
-
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
                $OPTS
@@ -9,8 +7,6 @@
   prepare_install			&&
   make    install			&&
   make distclean
-
-
-
+  
 ) > $C_FIFO 2>&1
 

@@ -1,3 +1,4 @@
+unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs library"
       REQ="cvs autoconf automake libtool giftd"

@@ -1,5 +1,7 @@
+unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
       REQ="cvs autoconf automake giftd db zlib"
+  PROVIDE="gift-openft"
    ASSUME="off"
  ESTIMATE="763"

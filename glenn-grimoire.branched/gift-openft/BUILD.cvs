@@ -1,6 +1,4 @@
 (
-  cd /usr/src/sorcery.cvs/$SPELL/$MODULE &&
-
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
                $OPTS

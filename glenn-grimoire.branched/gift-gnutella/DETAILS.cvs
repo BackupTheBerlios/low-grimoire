@@ -1,5 +1,7 @@
+unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
       REQ="cvs autoconf automake giftd"
+  PROVIDE="gift-gnutella"
    ASSUME="off"
  ESTIMATE="763"
