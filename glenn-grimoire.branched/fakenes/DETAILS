@@ -1,0 +1,13 @@
+  VERSION=( "0.1.5" )
+ CATEGORY="emulator"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://fakenes.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ="allegro zlib"
+#FRESHMEAT=""
+    SHORT="FakeNES is a portable, Open Source NES emulator."
+cat << EOF
+FakeNES is a portable, Open Source NES emulator which is written mostly
+in C, using the excellent Allegro library for cross-platform capabilities.
+EOF
