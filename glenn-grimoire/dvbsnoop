@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.77" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+ HOMEPAGE="http://dvbsnoop.sourceforge.net/dvbsnoop.html"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="dvbsnoop is a DVB / MPEG stream analyzer program.
+dvbsnoop is a DVB / MPEG stream analyzer program.
+Its purpose is to debug, dump or view stream information (e.g. digital
+television broadcasts) send via satellite, cable or terrestrial. Streams
+can be SI, PES or transport streams. DSM-CC and MHP will follow...
+Basically you can describe dvbsnoop as a simple stream analyzing program,
+similar to TCP network sniffer programs like snoop on Sun Solaris or
+tcpdump under Linux.
+"
