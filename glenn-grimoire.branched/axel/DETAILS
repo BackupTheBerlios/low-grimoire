@@ -1,0 +1,13 @@
+  VERSION=( "1.0a" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.lintux.cx/axel.html"
+      URL="http://www.lintux.cx/downloads"
+   OPT[0]="gettext:--i18n=1::add internationalization"
+      REQ="curl"
+#FRESHMEAT=""
+    SHORT="download accelerator using libcurl."
+cat << EOF
+Axel does the same thing any other accelerator does: it opens more than one HTTP/FTP connection per download and each connection transfers its own, separate, part of the file. It may sound weird, but it works very well in practice. For example, some FTP sites limit the speed of each connection, therefore opening more than one connection at a time multiplies the allowable bandwidth.
+EOF

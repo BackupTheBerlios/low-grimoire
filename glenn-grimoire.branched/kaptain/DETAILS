@@ -1,0 +1,14 @@
+  VERSION=( "0.71" )
+ CATEGORY="terminal-emulator"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://kaptain.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ="zlib qt-x11-free "
+   OPT[0]="libpng:::add png support"
+   OPT[1]="jpeg:::add jpeg support"
+#FRESHMEAT=""
+    SHORT="Kaptain is a universal graphical front-end for command line programs."
+cat << EOF
+Kaptain is a universal graphical front-end for command line programs.
+EOF
