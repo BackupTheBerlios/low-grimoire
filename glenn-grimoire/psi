@@ -1,0 +1,34 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.3" )
+ CATEGORY="chat encryption"
+ATTRIBUTE="kde"
+ HOMEPAGE="http://psi.affinix.com"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "qca zlib" )
+     OPTS="--qtdir=/usr"
+ ESTIMATE="115"
+#FRESHMEAT=""
+DESC="QCA aims to provide a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
+QCA aims to provide a straightforward and cross-platform crypto API, using
+Qt datatypes and conventions.
+"
+
+build() {
+#  qmake sucks, it uses relatives paths to install, so sorcerer doesn't pick it up
+  QTINC='INCLUDEPATH+=/usr/include/qt'
+  sed -i "s:SOURCES:$QTINC\nSOURCES:" configure &&
+  for I in $(find | grep pro\$); do
+    echo $QTINC >> $I;
+  done                        &&
+  ./configure --prefix=/usr   \
+              $OPTS           &&
+  make                        &&
+  for I in $(find | grep Makefile\$); do
+    echo "fixing $I" &&
+    sed -i "s:../../../\(../\)*:/usr/:" $I;
+  done                        &&
+  prepare_install             &&
+  make install
+}
