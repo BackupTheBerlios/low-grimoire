@@ -1,0 +1,14 @@
+  VERSION=( "1.0.1" )
+ CATEGORY="graphic"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://catb.org/~esr/sng"
+      URL="$SOURCEFORGE_URL"
+      REQ="libpng"
+#FRESHMEAT=""
+    SHORT="SNG is a specialized markup language for expressing the contents of a PNG."
+cat << EOF
+SNG is a specialized markup language for expressing the contents of a PNG
+(Portable Network Graphics) in an editable, all-text form. The project
+supports the sng compiler, which can translate between SNG and PNG.
+EOF
