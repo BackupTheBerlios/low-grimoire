@@ -1,0 +1,15 @@
+   VERSION=( "0.82" )
+  CATEGORY="file-transfer"
+ ATTRIBUTE="utility console"
+  HOMEPAGE="http://loci.cs.utk.edu/lors"
+       URL=" http://loci.cs.utk.edu/lors/distributions"
+ FRESHMEAT="lors"
+     SHORT="A BitTorrent like tool"
+cat << EOF
+LoRS tools is a suite of utilities useful for storage, transfer, 
+and retrieval of large datasets in the National Logistical 
+Networking Testbed (NLNT), which currently holds nearly 20TB of 
+publicly accessible storage. The NLNT is part of LoCI Laboratory's 
+research with information logistics in distributed computer systems 
+and networks.
+EOF
