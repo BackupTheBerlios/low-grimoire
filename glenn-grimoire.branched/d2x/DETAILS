@@ -2,7 +2,7 @@
  CATEGORY="game"
 ATTRIBUTE="x11"
 SOURCE[0]="$SPELL-$VERSION"
-SOURCE[1]="d2shar10"
+SOURCE[1]="d2shar10.tar.gz"
  HOMEPAGE="http://www.icculus.org/d2x"
    URL[0]="http://www.icculus.org/d2x/src"
    URL[1]="http://www.icculus.org/d2x/data"
