@@ -1,0 +1,12 @@
+   VERSION=( "1.08" "1.07" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://www.mojotoad.com/sisk/projects/HTML-TableExtract"
+       URL="http://www.mojotoad.com/sisk/projects"
+       REQ="perl HTML-Parser"
+     SHORT="This is a module based on HTML::Parser that serves to extract information contained in tables from HTML documents."
+cat << EOF
+This is a module based on HTML::Parser that serves to extract information
+contained in tables from HTML documents.
+EOF
