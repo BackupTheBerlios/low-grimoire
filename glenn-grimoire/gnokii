@@ -1,11 +1,12 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.6.0" "0.5.2" "0.5.1" )
+  VERSION=( "0.6.3" "0.6.0" "0.5.2" "0.5.1" )
  CATEGORY="telephony"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.gnokii.org"
-      URL="http://savannah.nongnu.org/download"
+      URL="http://savannah.nongnu.org/download
+           ftp://ftp.gnokii.org/pub"
       REQ=( "gtk+,v1.2"
             "bluez-libs:::add bluetooth support" )
    OPT[0]="bluez-libs:::add bluetooth support"
