@@ -2,7 +2,7 @@
  CATEGORY="disk"
 ATTRIBUTE="console"
    SOURCE="linuxquota/quota-$VERSION"
- HOMEPAGE="http://kahakai.sourceforge.net"
+ HOMEPAGE="http://sourceforge.net/projects/linuxquota"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
    OPT[0]="gettext:--enable-nls=yes:--enable-nls=no:add gettext support"
