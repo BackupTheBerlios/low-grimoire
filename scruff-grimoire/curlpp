@@ -1,4 +1,4 @@
-  VERSION=( "0.3.0" )
+  VERSION=( "0.3.1" "0.3.0" )
  CATEGORY="library"
 ATTRIBUTE="new library"
    SOURCE="curlpp/$SPELL-$VERSION"

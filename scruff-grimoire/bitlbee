@@ -1,14 +1,18 @@
-  VERSION=( "0.83" "0.80" "0.74" "0.73")
+  VERSION=( "0.90a" "0.83" "0.80" "0.74" "0.73")
  CATEGORY="chat"
 ATTRIBUTE="client|server"
    SOURCE="bitlbee-$VERSION"
       URL="http://get.bitlbee.org/src"
  HOMEPAGE="http://www.bitlbee.org/main.php/intro.html"
-   OPT[0]="epic4:::to use as a front-end to bitlbee"
-   OPT[1]="ircii:::to use as a front-end to bitlbee"
-   OPT[2]="irssi:::to use as a front-end to bitlbee"
-   OPT[3]="xchat:::to use as a front-end to bitlbee"
-      REQ="glib-v1.2"
+   OPT[0]=":--msn=1:--msn=0:MSN support"
+   OPT[1]=":--jabber=1:--jabber=0:Jabber support"
+   OPT[2]=":--oscar=1:--oscar=0:Oscar (ICQ, AIM) support"
+   OPT[3]=":--yahoo=1:--yahoo=0;Yahoo support"
+   OPT[4]="epic4:::to use as a front-end to bitlbee"
+   OPT[5]="ircii:::to use as a front-end to bitlbee"
+   OPT[6]="irssi:::to use as a front-end to bitlbee"
+   OPT[7]="xchat:::to use as a front-end to bitlbee"
+      REQ="glib gnutls"
  ESTIMATE="108"
 FRESHMEAT="bitlbee"
     SHORT="BitlBee: An IRC to other chat networks gateway"
@@ -20,8 +24,9 @@ responses are also returned.
 
 build() {
 
-(
-  ./configure  --prefix=/usr         &&
+  ./configure  --prefix=/usr         \
+	       --etcdir=/etc/bitlbee \
+	       $OPTS		     &&
   make                               &&
   echo "Sorcerer Specific follows"   &&
   cd utils                           &&
@@ -32,7 +37,5 @@ build() {
   prepare_install                    &&
   make    install		     &&
   install -p -m 0755 -o root -g 0 utils/bitlbeed /usr/sbin
-
-) > $C_FIFO 2>&1
 
 }

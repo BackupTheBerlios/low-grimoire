@@ -1,4 +1,4 @@
-  VERSION=( "0.9.1" )
+  VERSION=( "1.04" "0.9.1" )
  CATEGORY="library"
 ATTRIBUTE="new library"
    SOURCE="pme-$VERSION"

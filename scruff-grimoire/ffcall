@@ -1,4 +1,4 @@
-  VERSION="1.9"
+  VERSION=( "1.10" "1.9" )
  CATEGORY="library"
 ATTRIBUTE="new"
 SOURCE="ffcall-$VERSION"

@@ -1,4 +1,4 @@
-  VERSION=( "0.12.5" )
+  VERSION=( "0.13.3" "0.12.5" )
  CATEGORY="x11"
 ATTRIBUTE="driver"
    SOURCE="synaptics-$VERSION"
