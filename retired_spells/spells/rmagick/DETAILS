@@ -4,7 +4,7 @@
   HOMEPAGE="http://home.nc.rr.com/rmagick"
        URL="http://home.nc.rr.com"
     SOURCE="rmagick/RMagick-$VERSION"
-       REQ="ruby ImageMagick"
+       REQ="ruby ImageMagick ghostscript"
      SHORT="interface between the Ruby programming language and the ImageMagick"
 
 cat << EOF
