@@ -1,4 +1,4 @@
-  VERSION=( "0.4.4" "0.4.3" "0.4.2" "0.4.0" "0.3.6" )
+  VERSION=( "0.4.5" "0.4.4" "0.4.3" "0.4.2" "0.4.0" "0.3.6" )
   CATEGORY="utility"
   ATTRIBUTE="gnome"
   HOMEPAGE="http://liferea.sourceforge.net"
