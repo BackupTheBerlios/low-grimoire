@@ -1,4 +1,5 @@
 (
+  sed -i "s:/usr/local:/usr:" configure
   ./configure --prefix=/usr \
               --parachute   \
               $OPTS         &&
