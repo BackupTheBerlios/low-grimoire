@@ -1,3 +1,4 @@
+inherit gift
 unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
@@ -7,33 +8,35 @@ ATTRIBUTE="cvs server"
  ESTIMATE="763"
 
 build() {
-
-  ./autogen.sh --build=$BUILD		\
-               --prefix=/usr		\
+  ./autogen.sh --prefix=/usr		\
                $OPTS
+  # yuck! do this twice and it works, I think cause automake needs to be run again
+  #./autogen.sh --prefix=/usr		\
+  #             $OPTS
+  automake
+  ./configure --prefix=/usr		\
+              $OPTS
   
   make					&&
   prepare_install			&&
   make    install			&&
   make distclean
-  
-
-
 }
 
 pre_build() {
 default_pre_build
-  CVSSERVER=":pserver:anonymous@cvs.sf.net:/cvsroot/$SPELL"
+  CVSSERVER=":pserver:anonymous@cvs.sf.net:/cvsroot/gift"
   MODULE=giFT
   export CVS_RSH=ssh
   
+  cd $BUILD_DIR/..
   rmdir $BUILD_DIR
   
-  if [ -f $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 ]; then
-    unpack "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2"
+  if [ -f $SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2"
   fi
   
-  if [ -a $BUILD_DIR ]; then
+  if [ -d $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
   else
       CVSCOMMAND="checkout $MODULE"
@@ -41,14 +44,14 @@ default_pre_build
   
   cvs -z4 -d $CVSSERVER $CVSCOMMAND
   
-  if ! [ -a $BUILD_DIR ]; then
+  if ! [ -d $BUILD_DIR ]; then
     mv $MODULE $BUILD_DIR
   fi
 }
 
 post_install() {
 default_post_install
-mkdir -p $SOURCE_CACHE/$BSPELL/$VERSION &&
-tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2" "$SPELL-$VERSION-$BRANCH"
+  mkdir -p $SOURCE_CACHE/$SPELL/$VERSION &&
+  tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2" "$SPELL-$VERSION"
 }
 
