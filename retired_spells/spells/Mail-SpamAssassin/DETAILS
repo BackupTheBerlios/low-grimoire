@@ -1,4 +1,4 @@
-   VERSION=( "2.60" "2.55" )
+   VERSION=( "2.62" "2.60" "2.55" )
   CATEGORY="utility mail"
  ATTRIBUTE="console"
   HOMEPAGE="http://au2.spamassassin.org/index.html"
