@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.35" )
+ CATEGORY="game"
+ATTRIBUTE="x11"
+ HOMEPAGE="http://www.squish.net/generator"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://www.squish.net/generator/files"
+      REQ=( ""
+            "gtk+:--with-gtk::build gtk gui"
+            "allegro:--with-allegro::build allegro gui"
+            "svgalib:--with-svgalib::build svgalib gui" )
+   OPT[0]="gtk+:--with-gtk::build gtk gui"
+   OPT[1]="allegro:--with-allegro::build allegro gui"
+   OPT[2]="svgalib:--with-svgalib::build svgalib gui"
+     OPTS="--with-raze --with-cmz80"
+ ESTIMATE="115"
+DESC="Generator is an open source emulator designed to emulate the Sega Genesis / Mega Drive console.
+Generator is an open source emulator designed to emulate the Sega Genesis /
+Mega Drive console, a popular games machine produced in the early 1990s.
+It is a portable program written in C and has been ported to the Amiga,
+Macintosh, Windows and even pocket PCs such as the iPAQ and Cassiopeia.
+Natively it compiles under unix for X Windows with either tcl/tk or gtk/SDL,
+for svgalib and even cross-compiles to DOS with djgpp/allegro.
+"
+
