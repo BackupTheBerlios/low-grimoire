@@ -7,18 +7,6 @@
     make					            	      	   &&
     prepare_install                   					   &&
     make install                                			   &&
-    mkdir -p      /usr/doc/$BSPELL                                         &&
-    cp ninjabutton.png /usr/doc/$BSPELL                                    &&
-    cp *.txt      /usr/doc/$BSPELL                                         &&
-    cp TRADEMARK  /usr/doc/$BSPELL                                         &&
-    cp README     /usr/doc/$BSPELL                                         &&
-    cp procmailrc.example /usr/doc/$BSPELL                                 &&
-    cp Changes    /usr/doc/$BSPELL                                         &&
-    cp -r contrib /usr/doc/$BSPELL                                         &&
-    cp -r masses  /usr/doc/$BSPELL                                         &&
-    cp -r rules   /usr/doc/$BSPELL                                         &&
-    cp -r sql     /usr/doc/$BSPELL                                         &&
-    cp -r tools   /usr/doc/$BSPELL 
 
     install -D -m 755 $SCRIPT_DIR/spamd.sh /etc/init.d/spamd.sh 
     install -D -m 644 $SCRIPT_DIR/spamd.conf.d /etc/spamd.conf 
