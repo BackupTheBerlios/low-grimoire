@@ -1,0 +1,15 @@
+  VERSION=( "0.4.6b" )
+ CATEGORY="security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://steghide.sourceforge.net"
+      URL="http://steghide.sourceforge.net/download"
+      REQ="gettext mhash libmcrypt"
+#FRESHMEAT=""
+    SHORT="Steghide is a steganography program which embeds a secret message in a cover file"
+cat << EOF
+Steghide is a steganography program which embeds a secret message in a
+cover file by replacing some of the least significant bits of the cover
+file with bits of the secret message. After that, the secret message is
+imperceptible and can only be extracted with the correct passphrase.
+EOF
