@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.39" )
+ CATEGORY="graphic-editor"
+ATTRIBUTE="console gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.inkscape.org"
+      URL="$SOURCEFORGE_URL"
+      REQ="zlib gtk+ libxml2 gtkspell libsigc++ popt pango"
+#FRESHMEAT=""
+    SHORT="Inkscape is an open source SVG editor"
+LONG="
+Inkscape is an open source SVG editor with capabilities similar to
+Illustrator, CorelDraw, Visio, etc. Supported SVG features include basic
+shapes, paths, text, alpha blending, transforms, gradients, node editing,
+svg-to-png export, grouping, and more.
+"
