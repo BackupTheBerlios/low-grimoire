@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.99.2" "0.99.1" )
+  VERSION=( "0.99.6" "0.99.2" "0.99.1" )
  CATEGORY="chat"
 ATTRIBUTE="console"
    SOURCE="ojnk/$SPELL-$VERSION"

@@ -1,9 +1,9 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "0.4a2" "0.3a1" )
+   VERSION=( "0.4a3" "0.4a2" "0.3a1" )
   CATEGORY="development python"
  ATTRIBUTE="library"
-    SOURCE="pyxlwriter/$SPELL-$VERSION"
+    SOURCE="pyxlwriter/$SPELL-$VERSION.zip"
   HOMEPAGE="http://sourceforge.net/projects/pyxlwriter"
        URL="$SOURCEFORGE_URL"
        REQ=( "Python" )
