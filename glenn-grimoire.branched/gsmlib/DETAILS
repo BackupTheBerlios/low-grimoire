@@ -1,0 +1,21 @@
+  VERSION=( "1.10" "1.9" "1.8" )
+ CATEGORY="telephony"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.pxh.de/fs/gsmlib"
+      URL="http://www.pxh.de/fs/gsmlib/download"
+      REQ="gettext bison "
+#FRESHMEAT=""
+    SHORT="gsmlib is a library to access GSM mobile phones through GSM modems."
+cat << EOF
+This distribution contains a library to access GSM mobile phones through
+GSM modems. Features include:
+
+    * modification of phonebooks stored in the mobile phone or on the SIM
+      card
+    * reading and writing of SMS messages stored in the mobile phone
+    * sending and reception of SMS messages 
+
+Additionally, some simple command line programs are provided to use these
+functionalities. 
+EOF
