@@ -1,10 +1,10 @@
    VERSION=( "2.01" )
   CATEGORY="library"
  ATTRIBUTE="development"
-  HOMEPAGE="http://www.triptico.com/software/grutatxt.html"
+  HOMEPAGE="http://txt2html.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="txt2html/txt2html-$VERSION"
-       REQ="perl ExtUtils-configPL"
+       REQ="ExtUtils-configPL perl"
   ESTIMATE="14"
  FRESHMEAT="txt2html"
      SHORT="Converts plain text to html"
