@@ -1,6 +1,6 @@
-  VERSION="cvs"
+  VERSION=( "cvs" )
  CATEGORY="file-transfer"
-ATTRIBUTE="server"
+ATTRIBUTE="cvs server"
  HOMEPAGE="http://gift.sf.net"
     SHORT="giFT: Internet File Transfer"
       REQ="cvs autoconf automake"
