@@ -6,7 +6,6 @@ ATTRIBUTE="x11"
       URL="$SOURCEFORGE_URL"
       REQ="wxGTK openssl latex2html"
    OPT[0]="Python:--with-python=dynamic::add support for python"
-   ASSUME="off"
 #FRESHMEAT=""
     SHORT="Mahogany is an OpenSource cross-platform mail and news client."
 cat << EOF

@@ -1,7 +1,8 @@
 (
-  cd /usr/src/sorcery.cvs/$SPELL/M	&&
-
+  cd $MODULE				&&
+  
   ./configure --prefix=/usr		\
+	      --with-modules=dynamic    \
                $OPTS                    &&
   make					&&
   prepare_install			&&
