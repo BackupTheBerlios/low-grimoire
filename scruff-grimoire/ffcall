@@ -15,7 +15,7 @@ function call interfaces in embedded interpreters.
 build() {
 
 
-configure	--prefix=/usr			\
+./configure	--prefix=/usr			\
 		--bindir=/usr/bin		\
 		--sysconfdir=/etc/ffcall	&&
 make		&&
