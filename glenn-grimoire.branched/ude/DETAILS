@@ -1,6 +1,6 @@
   VERSION=("0.2.8a")
  CATEGORY="window-manager"
-ATTRIBUTE="xll"
+ATTRIBUTE="x11"
    SOURCE="udeproject/$SPELL-$VERSION"
  HOMEPAGE="http://udeproject.sourceforge.net"
       URL="$SOURCEFORGE_URL"

@@ -1,0 +1,22 @@
+   VERSION=( "2.8.1")
+  CATEGORY="network"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.kismetwireless.net"
+       URL="http://www.kismetwireless.net/code"
+       REQ="libpcap mktemp ncurses zlib"
+    OPT[0]="ImageMagick:::for ImageMagick support"
+#    OPT[1]="ethereal:::for ethereal wiretap"
+# FRESHMEAT="ethereal"
+     SHORT="Kismet is a wirelesss network detector"
+cat << EOF
+Kismet is an 802.11 wireless network sniffer - this is different from
+a normal network sniffer (such as Ethereal or tcpdump) because it
+separates and identifies different wireless networks in the area. Kismet
+works with any 802.11b wireless card which is capable of reporting raw
+packets (rfmon support), which include any prism2 based card (Linksys,
+D-Link, Rangelan, etc), Cisco Aironet cards, and Orinoco based cards.
+Kismet also supports the WSP100 802.11b remote sensor by Network
+Chemistry and is able to monitor 802.11a networks with cards which use
+the ar5k chipset.
+EOF
