@@ -3,12 +3,15 @@
   echo "void __ctype_b(void) {}" > ctype_b.c
   gcc -c ctype_b.c
   
-  ./configure --prefix=/usr    \
+  #PREFIX=/usr
+  PREFIX=/opt/ghc/$VERSION-binary
+  ./configure --prefix=$PREFIX \
 	      $OPTS            &&
   make                         &&
   prepare_install              &&
+  mkdir -p $PREFIX             &&
   make    install              &&
-  ar -ra RtsFlags.o /usr/lib/ghc-6.0.1/libHSrts.a ctype_b.o &&
-  ar -s /usr/lib/ghc-6.0.1/libHSrts.a
+  ar -ra RtsFlags.o $PREFIX/lib/ghc-6.0.1/libHSrts.a ctype_b.o &&
+  ar -s $PREFIX/lib/ghc-6.0.1/libHSrts.a
 
 ) > $C_FIFO 2>&1

@@ -9,15 +9,19 @@
   
   sed -i "s:GdkRegion \\*clipRgn,:GdkRegion \\*clipRgn,\n\t\t\t\t\t BOOL FIXME /\\* added in to allow ObjectIO to compile \\*/,:" libraries/ObjectIO/cbits/Linux/cpicture_121.c
   
-  ./configure --prefix=/usr    \
-	      --enable-objectio\
-	      --enable-threaded-rts \
-	      --enable-src-tree-happy \
-	      --enable-src-tree-haddock \
+  GHC_BIN=/opt/ghc/6.0.1-binary/bin/ghc
+  ./configure --prefix=/opt/ghc/$VERSION \
+	      --with-ghc=$GHC_BIN        \
+	      --with-hc=$GHC_BIN         \
+	      --enable-objectio          \
+	      --enable-threaded-rts      \
+	      --enable-src-tree-happy    \
+	      --enable-src-tree-haddock  \
 	      $OPTS            &&
   make                         &&
-  dispel "ghc,bin"             &&
   prepare_install              &&
   make    install              
+
+#  dispel "ghc,bin"             &&
 
 ) > $C_FIFO 2>&1
