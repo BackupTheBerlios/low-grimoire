@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.10" )
  CATEGORY="graphic"
-ATTRIBUTE="library|x11"
+ATTRIBUTE="library x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.swift-tools.net/Flash"
       URL="http://www.swift-tools.net/Flash"

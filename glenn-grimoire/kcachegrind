@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.5" )
  CATEGORY="development"
-ATTRIBUTE="kde|x11"
+ATTRIBUTE="kde x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://kcachegrind.sourceforge.net"
       URL="http://kcachegrind.sourceforge.net"

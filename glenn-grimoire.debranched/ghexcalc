@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.1" )
  CATEGORY="math development"
-ATTRIBUTE="gnome|x11"
+ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION-src"
  HOMEPAGE="http://ghexcalc.sourceforge.net"
       URL="$SOURCEFORGE_URL"

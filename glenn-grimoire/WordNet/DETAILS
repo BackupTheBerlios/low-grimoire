@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "2.0" )
  CATEGORY="audio-editor"
-ATTRIBUTE="kde|x11"
+ATTRIBUTE="kde x11"
    SOURCE="$VERSION/$SPELL-$VERSION"
  HOMEPAGE="http://www.cogsci.princeton.edu/~wn"
       URL="ftp://ftp.cogsci.princeton.edu/pub/wordnet"

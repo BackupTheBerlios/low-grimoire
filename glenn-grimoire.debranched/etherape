@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=("0.9.0")
  CATEGORY="network"
-ATTRIBUTE="gnome|x11"
+ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://etherape.sourceforge.net/"
       URL="$SOURCEFORGE_URL"

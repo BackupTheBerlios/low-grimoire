@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.0" )
  CATEGORY="news"
-ATTRIBUTE="gnome|x11"
+ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.mews.org.uk/glitter"
       URL="http://www.mews.org.uk"

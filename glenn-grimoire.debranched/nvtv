@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.7" )
  CATEGORY="television utility"
-ATTRIBUTE="gnome|x11"
+ATTRIBUTE="gnome x11"
    SOURCE="nv-tv-out/$SPELL-$VERSION"
  HOMEPAGE="http://sourceforge.net/projects/nv-tv-out"
       URL="$SOURCEFORGE_URL"

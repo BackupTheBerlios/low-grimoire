@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.9.7" "0.9.6" "0.9.5" "0.9.1" "0.8" )
  CATEGORY="audio-editor"
-ATTRIBUTE="kde|x11"
+ATTRIBUTE="kde x11"
    SOURCE="rosegarden/$SPELL-$VERSION"
  HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
       URL="$SOURCEFORGE_URL"

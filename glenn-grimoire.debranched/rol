@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.3.0" )
  CATEGORY="web"
-ATTRIBUTE="gnome|x11"
+ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://unknown-days.com/rol"
       URL="http://unknown-days.com"
