@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.4" "1.3" "1.2" )
+  VERSION=( "1.5" "1.4" "1.3" "1.2" )
  CATEGORY="game"
 ATTRIBUTE="x11"
    SOURCE="mindless/mindless-$VERSION"
@@ -19,5 +19,6 @@ build() {
   make                                                      &&
   prepare_install                                           &&
   install  -o root -g root -m 755  mindless        /usr/bin &&
-  install  -o root -g root -m 755  $SCRIPT_DIR/mindless_magic  /usr/bin
+  echo -e "#!/bin/sh\n\nexport CARDINFO_DAT=/usr/share/magic_data/cardinfo.dat\nmindless" > /usr/bin/mindless_magic &&
+  chmod 755 /usr/bin/mindless_magic
 }
