@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5.9" )
+ CATEGORY="development dsn"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.gnu.org/software/libidn"
+   SOURCE="$SPELL-$VERSION"
+      URL="ftp://alpha.gnu.org/pub/gnu/libidn
+           http://josefsson.org/libidn/releases"
+#      REQ=( "" )
+ ESTIMATE="115"
+#FRESHMEAT=""
+DESC="GNU Libidn is an implementation of the Stringprep, Punycode and IDNA specifications, used for internationalized domain names.
+GNU Libidn is an implementation of the Stringprep, Punycode and IDNA
+specifications, used for internationalized domain names.
+"

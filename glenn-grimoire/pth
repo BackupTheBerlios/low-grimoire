@@ -1,0 +1,29 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.4" "2.0.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/pth"
+      URL="$GNU_URL"
+#      REQ=""
+   OPT[0]="ex:--with-ex::add ex exception handling support"
+#   OPT[0]="sfio:--with-sfio::add sfio support"
+   OPT[1]="dmalloc:--with-dmalloc::add malloc debugging support"
+#     OPTS="--enable-pthread"
+#FRESHMEAT=""
+     DESC="POSIXs thread library.
+Pth is a very portable POSIX/ANSI-C based library for Unix platforms
+which provides non-preemptive priority-based scheduling for multiple
+threads of execution (aka \`multithreading\') inside event-driven
+applications. All threads run in the same address space of the server
+application, but each thread has its own individual program-counter,
+run-time stack, signal mask and errno variable.
+"
+
+build() {
+  # This fixes a macro/variable clash in ex.h
+  sed -i "s:#include \"pth_p.h\":#include \"pth_p.h\"\\n#undef cleanup:" pth_clean.c &&
+  sed -i "s:-lpth:-lpth \$pth_libs:"  pth-config.in
+  default_build
+}

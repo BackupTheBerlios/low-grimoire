@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.4" "1.0.2" "1.0.1" "1.0.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.ossp.org/pkg/lib/ex"
+      URL="ftp://ftp.ossp.org/pkg/lib"
+      REQ="libtool"
+#FRESHMEAT=""
+DESC="OSSP ex is a small ISO-C++ style exception handling library for use in the ISO-C language.
+OSSP ex is a small ISO-C++ style exception handling library for use in
+the ISO-C language. It allows you to use the paradigm of throwing and
+catching exceptions in order to reduce the amount of error handling code
+without making your program less robust.
+"
