@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.52.0" )
+ CATEGORY="archive"
+ATTRIBUTE="console"
+ HOMEPAGE="http://dvdisaster.berlios.de"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="http://download.berlios.de"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="dvdisaster: Additional error correction for CD and DVD media.
+dvdisaster: Additional error correction for CD and DVD media.
+"
+
+build() {
+  ./configure --prefix=/usr &&
+  make                      &&
+  prepare_install           &&
+  install -o root -g root -m 755 dvdisaster /usr/bin &&
+  install -d -o root -g root -m 644 documentation /usr/doc/$SPELL/
+  
+}
