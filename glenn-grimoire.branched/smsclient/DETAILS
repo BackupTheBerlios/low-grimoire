@@ -1,9 +1,10 @@
-  VERSION=( "3.0.2" "3.0.1" "2.0.8y" )
+  VERSION=( "2.0.9a" "2.0.8y" )
+   UNSAFE=( "3.0.2" "3.0.1" )
  CATEGORY="telephony"
 ATTRIBUTE="console"
-   SOURCE="$SPELL-$VERSION"
+   SOURCE="$SPELL-2.0.9/$SPELL-$VERSION"
  HOMEPAGE="http://www.smsclient.org"
-      URL="http://www.smsclient.org/download/smsclient-3.0-testing"
+      URL="http://www.smsclient.org/download"
 #      REQ=""
    OPT[0]="libmodem:-modemlib libmodem:-modemlib smsmodem: Use libmodem instead of buggy internal library"
 #FRESHMEAT=""
