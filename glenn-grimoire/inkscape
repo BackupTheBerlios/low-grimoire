@@ -1,12 +1,12 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.39" )
+  VERSION=( "0.41" "0.39" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.inkscape.org"
       URL="$SOURCEFORGE_URL"
-      REQ=( "zlib gtk+ libxml2 gtkspell libsigc++-v1.2 popt pango" )
+      REQ=( "zlib gtk+ libxml2 gtkspell libsigc++-v1.2 popt pango gc" )
 #FRESHMEAT=""
 DESC="Inkscape is an open source SVG editor
 Inkscape is an open source SVG editor with capabilities similar to
