@@ -1,4 +1,4 @@
-  VERSION=( "0.4.9" "0.4.8" "0.4.6e" "0.4.6b" "0.4.6" "0.4.5" "0.4.4" "0.4.3" "0.4.2" "0.4.0" "0.3.6" )
+  VERSION=( "0.5.0" "0.4.9" "0.4.8" "0.4.6e" "0.4.6b" "0.4.6" "0.4.5" "0.4.4" "0.4.3" "0.4.2" "0.4.0" "0.3.6" )
   CATEGORY="utility"
   ATTRIBUTE="gnome"
   HOMEPAGE="http://liferea.sourceforge.net"
@@ -6,7 +6,7 @@
   SOURCE="$SPELL/$SPELL-$VERSION"
   FRESHMEAT="liferea"
   REQ="libxml2 gtk+ gtkhtml libgtkhtml"
-  ESTIMATE=118
+  ESTIMATE=125
   SHORT="A FeedReader clone for GNU/Linux."
   stream << EOF
   Liferea (Linux Feed Reader) is an RSS/RDF feed
