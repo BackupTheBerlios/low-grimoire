@@ -1,4 +1,5 @@
   VERSION=( "cvs" )
 ATTRIBUTE="cvs library"
       REQ="cvs autoconf automake libtool giftd"
+  PROVIDE="giFT-FastTrack"
    ASSUME="off"
