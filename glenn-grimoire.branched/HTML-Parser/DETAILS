@@ -1,0 +1,11 @@
+   VERSION=( "3.28" )
+  CATEGORY="library"
+ ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://gisle.aas.no"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/G/GA/GAAS"
+       REQ="perl HTML-Tagset"
+     SHORT="HTML parser class."
+cat << EOF
+HTML parser class.
+EOF

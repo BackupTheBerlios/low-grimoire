@@ -1,0 +1,11 @@
+   VERSION=( "1.24" )
+  CATEGORY="library"
+ ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://gisle.aas.no"
+       URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/G/GA/GAAS"
+       REQ="perl"
+     SHORT="Uniform Resource Identifiers (absolute and relative)."
+cat << EOF
+Uniform Resource Identifiers (absolute and relative).
+EOF
