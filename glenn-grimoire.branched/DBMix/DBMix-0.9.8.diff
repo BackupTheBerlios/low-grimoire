@@ -1,0 +1,18 @@
+--- dbaudiolib/dbaudiolib.c	2003-06-27 00:35:59.000000000 -0500
++++ dbaudiolib/dbaudiolib.fixed.c	2003-06-27 00:36:32.000000000 -0500
+@@ -38,6 +38,7 @@
+ {
+ #endif
+ 
++#include <errno.h>
+ #include <dbsoundcard.h>
+ #include <dbchannel.h>
+ #include <dbdebug.h>
+@@ -45,7 +46,6 @@
+ 
+ #include "prototypes.h"
+ 
+-extern int errno;
+ extern int debug_level; /* declared in debug module */
+ 
+ 
