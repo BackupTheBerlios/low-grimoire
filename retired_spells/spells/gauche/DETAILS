@@ -4,6 +4,7 @@
   HOMEPAGE="http://www.sourceforge.net/projects/pipeworks"
        URL="$SOURCEFORGE_URL"
     SOURCE="gauche/Gauche-$VERSION.tgz"
+  ESTIMATE="879"
  FRESHMEAT="gauche"
      SHORT="Gauche is an R5RS Scheme implementation that aims to be a handy tool for daily work"
 cat << EOF
