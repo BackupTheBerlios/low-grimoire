@@ -1,9 +1,9 @@
    VERSION=( "0.26" "0.24" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
-    SOURCE="$SPELL-$VERSION"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.netp"
-       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       URL="$SOURCEFORGE_URL"
        REQ="perl gtk+ Glib"
      SHORT="Perl bindings to the 2.x series of the Gtk+ graphical user interface library."
 cat << EOF

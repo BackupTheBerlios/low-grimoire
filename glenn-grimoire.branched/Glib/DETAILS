@@ -1,9 +1,9 @@
    VERSION=( "0.26" "0.24" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
-    SOURCE="$SPELL-$VERSION"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
-       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       URL="$SOURCEFORGE_URL"
        REQ="perl glib ExtUtils-Depends"
      SHORT="This module provides perl access to Glib and GLib's GObject libraries."
 cat << EOF
