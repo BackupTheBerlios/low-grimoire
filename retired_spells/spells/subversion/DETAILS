@@ -1,0 +1,19 @@
+  VERSION=( "0.24.2" )
+  DIRECTORY_VERSION=( "4807" )
+  CATEGORY="development"
+  ATTRIBUTE="console"
+  HOMEPAGE="http://subversion.tigris.org"
+  URL="http://subversion.tigris.org/files/documents/15"
+  SOURCE="$DIRECTORY_VERSION/subversion-$VERSION"
+  REQ="neon zlib openssl"
+  OPT="db:--with-berkeley-db::db support"
+  FRESHMEAT="subversion"
+  #ESTIMATE=
+  SHORT="Version Control rethought."
+
+cat << EOF
+  The goal of the Subversion project is to build a
+  version control system that is a compelling
+  replacement for CVS in the open source community.
+EOF
+
