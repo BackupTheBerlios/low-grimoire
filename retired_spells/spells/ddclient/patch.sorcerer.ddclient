@@ -1,0 +1,11 @@
+--- ddclient	2004-06-20 14:53:07.000000000 +0800
++++ ddclient.new	2004-06-20 14:49:29.000000000 +0800
+@@ -20,7 +20,7 @@
+ $program  =~ s/d$//;
+ my $now       = time;
+ my $hostname  = hostname();
+-my $etc       = ($program =~ /test/i) ? './'   : '/etc/';
++my $etc       = ($program =~ /test/i) ? './'   : '/etc/ddclient/';
+ my $savedir   = ($program =~ /test/i) ? 'URL/' : '/tmp/';
+ my $msgs      = '';
+ my $last_msgs = '';

@@ -1,0 +1,13 @@
+   VERSION=( "3.6.3" )
+  CATEGORY="dns perl"
+ ATTRIBUTE="utility console"
+  HOMEPAGE="http://freshmeat.net/projects/ddclient"
+       URL="http://members.rogers.com/ddclient"
+    SOURCE="pub/ddclient.tar.gz"
+       REQ="perl"
+  ESTIMATE="377"
+ FRESHMEAT="ddclient"
+     SHORT="ddclient is a Perl client used to update dynamic DNS entries"
+cat << EOF
+ddclient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Services' free DNS service.
+EOF
