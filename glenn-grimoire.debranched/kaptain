@@ -11,7 +11,7 @@ ATTRIBUTE="x11"
             "jpeg:::add jpeg support" )
    OPT[0]="libpng:::add png support"
    OPT[1]="jpeg:::add jpeg support"
-#FRESHMEAT=""
+FRESHMEAT="kaptain"
 DESC="Kaptain is a universal graphical front-end for command line programs.
 Kaptain is a universal graphical front-end for command line programs.
 "

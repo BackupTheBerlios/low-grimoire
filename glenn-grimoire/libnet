@@ -6,6 +6,7 @@ ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.packetfactory.net/projects/libnet/"
       URL="http://www.packetfactory.net/libnet/dist"
+FRESHMEAT="libnet"
 DESC="Libnet is a high-level API (toolkit) allowing the application programmer to construct and inject network packets.
 Libnet is a high-level API (toolkit) allowing the application programmer to
 construct and inject network packets. It provides a portable and simplified

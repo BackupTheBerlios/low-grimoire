@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.6.4" )
+  VERSION=( "0.7.1" "0.6.4" )
  CATEGORY="video-editor"
 ATTRIBUTE="gnome x11"
    SOURCE="$SPELL-$VERSION"
@@ -11,7 +11,7 @@ ATTRIBUTE="gnome x11"
             "ffmpeg:--with-avcodec::Use FFMPEG libavcodec for DV video decoding instead of libdv" )
    OPT[0]="libquicktime:--with-quicktime::add quicktime support"
    OPT[1]="ffmpeg:--with-avcodec::Use FFMPEG libavcodec for DV video decoding instead of libdv"
-#FRESHMEAT=""
+FRESHMEAT="kino"
 DESC="Kino is a non-linear DV editor for GNU/Linux.
 Kino is a non-linear DV editor for GNU/Linux. It features excellent
 integration with IEEE-1394 for capture, VTR control, and recording back

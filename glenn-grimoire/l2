@@ -10,7 +10,7 @@ ATTRIBUTE="library"
       REQ=( ""
             "dmalloc:--with-dmalloc::add malloc debugging support" )
    OPT[0]="dmalloc:--with-dmalloc::add malloc debugging support"
-#FRESHMEAT=""
+FRESHMEAT="l2"
 DESC="OSSP l2 is a C library providing a very flexible and sophisticated Unix logging facility.
 OSSP l2 is a C library providing a very flexible and sophisticated Unix
 logging facility. It is based on the model of arbitrary number of

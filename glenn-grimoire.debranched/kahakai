@@ -11,7 +11,7 @@ ATTRIBUTE="x11"
             "Python:::add python bindings" )
    OPT[0]="ruby:::add ruby bindings"
    OPT[1]="Python:::add python bindings"
-#FRESHMEAT=""
+FRESHMEAT="kahakai"
 DESC="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager.
 Kahakai is a fork of the Waimea window manager, with the intent to create
 a language agnostic scriptable window manager, while maintaining the
