@@ -5,7 +5,7 @@
        URL="http://modruby.net/archive"
        OPT="eruby:--enable-eruby::to enable eruby"
        REQ="ruby httpd"
-  ESTIMATE="23"
+  ESTIMATE=17
  FRESHMEAT="mod_ruby"
      SHORT="Embeds Ruby into the Apache Webserver"
 
