@@ -1,0 +1,20 @@
+   VERSION=( "0.5.1" "0.4.5" "0.4.4" )
+  CATEGORY="file-share development"
+ ATTRIBUTE="client server library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://libtorrent.rakshasa.no/"
+       URL="http://libtorrent.rakshasa.no/downloads"
+       REQ=("libsigc++ openssl")
+ FRESHMEAT="libtorrent"
+  ESTIMATE="200"
+      DESC="LibTorrent is a BitTorrent library written in C++ for *nix.
+LibTorrent is a BitTorrent library written in C++ for *nix.
+It is designed to avoid redundant copying and storing of data
+that other clients and libraries suffer from.
+Basic features have been implemented and a ncurses client is
+included. Sloppy and biased test runs have shown that transferring
+a 200 MB file with libTorrent uses 1/4 of the CPU time that the 
+official BitTorrent client requires.
+The library and client are under heavy development.
+They are stable enough to handle any torrents thrown at them
+these days, although performance still requires some work."
