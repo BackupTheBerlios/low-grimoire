@@ -1,0 +1,11 @@
+  VERSION=("0.4.21")
+ CATEGORY="network"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://gtk-iptables.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gtk+,v1.2 iptables"
+    SHORT="gtk-iptables is a gtk-based frontend for iptables written in C."
+cat << EOF
+gtk-iptables is a gtk-based frontend for iptables written in C.
+EOF
