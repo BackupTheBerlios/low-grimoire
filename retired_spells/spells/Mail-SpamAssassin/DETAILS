@@ -1,0 +1,17 @@
+   VERSION=( "2.55" )
+  CATEGORY="utility mail"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://au2.spamassassin.org/index.html"
+       URL="http://au2.spamassassin.org/released"
+       REQ="perl Net-DNS"
+ FRESHMEAT="spamassassin"
+     SHORT="SpamAssassin is a mail filter that uses a wide range of heuristic tests on mail headers and body text to identify spam"
+
+cat << EOF
+SpamAssassin is a mail filter that uses a wide range of heuristic tests on mail headers and 
+body text to identify spam. Once identified, the mail can then be optionally tagged as spam 
+for later filtering. It provides a command line tool to perform filtering, a client-server 
+system to filter large volumes of mail, and Mail::SpamAssassin, a set of Perl modules that 
+implement a Mail::Audit plugin -- allowing SpamAssassin to be used in a Mail::Audit filter, 
+a spam-protection proxy POP/IMAP server, or almost anywhere.
+EOF
