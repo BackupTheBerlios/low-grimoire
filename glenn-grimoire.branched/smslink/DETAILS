@@ -1,0 +1,13 @@
+  VERSION=( "0.48b" "0.46" )
+ CATEGORY="telephony"
+ATTRIBUTE="client|server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.styx.demon.co.uk"
+      URL="http://www.styx.demon.co.uk/archive"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="libmodem is a library that allow you to use your modems transparently with regard of kind of modem attached to a line."
+cat << EOF
+libmodem is a library that allow you to use your modems transparently
+with regard of kind of modem attached to a line.
+EOF
