@@ -1,7 +1,7 @@
    VERSION=( "1.45" )
   CATEGORY="perl development"
  ATTRIBUTE="library"
-  HOMEPAGE="http://search.cpan.org/author/WRW/Number-Format-1.45"
+  HOMEPAGE="http://search.cpan.org/author/WRW/Number-Format-$VERSION"
        URL="http://search.cpan.org/CPAN/authors/id/W/WR/WRW"
        REQ="perl"
      SHORT="Number::Format is a library for formatting numbers"
