@@ -1,0 +1,14 @@
+   VERSION=( "2.0.4" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.triptico.com/software/grutatxt.html"
+       URL="http://www.triptico.org/download"
+       REQ="perl"
+ FRESHMEAT="grutatxt"
+     SHORT="Grutatxt is a plain text to HTML (and other formats) converter"
+cat << EOF
+Grutatxt is a plain text to HTML (and other formats) converter. It succesfully 
+converts subtle text markup to lists, bold, italics, tables and headings to 
+their corresponding HTML tags or troff commands without having to write unreadable 
+source text files. Grutatxt is a perl module and a command line utility.
+EOF

@@ -1,4 +1,4 @@
-   VERSION=( "4.2" )
+   VERSION=( "4.2.3" "4.2" )
   CATEGORY="intepreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/q/"
