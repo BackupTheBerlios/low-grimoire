@@ -1,11 +1,11 @@
-   VERSION=( "1.21" "1.20" "1.19" "1.15" "1.10" "1.09" )
+   VERSION=( "1.23" "1.21" "1.20" "1.19" "1.15" "1.10" "1.09" )
   CATEGORY="window-manager"
  ATTRIBUTE="x11"
   HOMEPAGE="http://www.nickgravgaard.com/windowlab"
        URL="http://www.nickgravgaard.com"
     SOURCE="windowlab/windowlab-$VERSION.tar"
  FRESHMEAT="WindowLab"
-  ESTIMATE=16
+  ESTIMATE=14
      SHORT="WindowLab is a small and simple window manager of novel design"
 cat << EOF
 It's click-to-focus, shares its window depth policy with the Amiga, 
