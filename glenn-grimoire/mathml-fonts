@@ -1,0 +1,31 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "1.0" )
+  CATEGORY="math font"
+ ATTRIBUTE="data"
+  HOMEPAGE="http://www.mozilla.org/projects/mathml/fonts"
+ SOURCE[0]="texcm-ttf.zip"
+ SOURCE[1]="MathFonts_TrueType.exe"
+    URL[0]="http://www.mozilla.org/projects/mathml/fonts/bakoma"
+    URL[1]="http://support.wolfram.com/mathematica/systems/windows/general"
+       REQ="unzip fontconfig"
+  ESTIMATE=""
+      DESC="mathml-fonts provides fonts for mathml.
+mathml-fonts provides fonts for mathml.  This is mainly for viewing in
+gecko based browsers.
+"
+
+pre_build() {
+  mkdir -p $BUILD_DIR &&
+  cd $BUILD_DIR       &&
+  unzip $SOURCE_CACHE/$SPELL/$VERSION/${SOURCE[0]}  &&
+  unzip $SOURCE_CACHE/$SPELL/$VERSION/${SOURCE[1]}
+}
+
+build() {
+  unset  DISPLAY
+  prepare_install  &&
+  cp -i *.ttf texcm-ttf/*.ttf  /usr/X11R6/lib/X11/fonts/TrueType  &&
+  mkfontdir     /usr/X11R6/lib/X11/fonts/TrueType &&
+  fc-cache     /usr/X11R6/lib/X11/fonts/TrueType
+}
