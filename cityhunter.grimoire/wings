@@ -1,0 +1,16 @@
+   VERSION=( "0.98.22c" )
+  CATEGORY="x11 graphic-editor"
+ ATTRIBUTE="x11"
+    SOURCE="wings/wings-${VERSION}.tar.bz2"
+       URL="$SOURCEFORGE_URL"
+  HOMEPAGE="http://wings.sourceforge.net"
+       REQ="edsl"
+     SHORT="wings is an a 3D modeler "
+	LONG="$SHORT"
+
+build() {
+	export ESDL_PATH="/usr/lib/erlang/lib/esdl-0.94.0615/"
+	make all &&
+	prepare_intall&&
+	make unix
+	}
