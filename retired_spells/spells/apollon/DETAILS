@@ -4,9 +4,9 @@
   HOMEPAGE="http://apollon.sf.net"
   URL="$SOURCEFORGE_URL"
   SOURCE="apollon/apollon-$VERSION"
-  REQ="giFT kdelibs qt-x11-free"
+  REQ="giFT kdelibs libtool qt-x11-free"
   FRESHMEAT="apollon"
-  ESTIMATE=
+  ESTIMATE=444
   SHORT="A P2P client for Linux which supports Kazaa, Gnutlella, and OpenFT."
   cat << EOF
   Apollon is the filesharing client you were waiting for! It uses giFT/openFT as a 
