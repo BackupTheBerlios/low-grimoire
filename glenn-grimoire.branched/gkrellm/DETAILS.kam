@@ -1,0 +1,18 @@
+unset OPT  
+  VERSION=( "2.0.0" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellkam/gkrellkam_$VERSION"
+ HOMEPAGE="http://gkrellkam.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ="gkrellm wget"
+#FRESHMEAT=""
+    SHORT="Keeping tabs on a webcam is only one of GKrellKam's uses."
+cat << EOF
+Keeping tabs on a webcam is only one of GKrellKam's uses, however. Each
+panel can be associated with an image URL, a local image filename, a list
+of image filenames and URLs, or a script that will be called to get a fresh
+image. The images can be nearly any format or size. GKrellKam will make
+them small enough to fit in the panel, and after N seconds, it will get
+check its source again.
+EOF

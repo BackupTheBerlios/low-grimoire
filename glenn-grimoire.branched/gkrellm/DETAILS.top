@@ -1,0 +1,13 @@
+unset OPT  
+  VERSION=( "2.2" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrelltop.$VERSION"
+ HOMEPAGE="http://psychology.rutgers.edu/~zaimi/software.html"
+      URL="http://psychology.rutgers.edu/~zaimi"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="GKrellm plugin to see the three most cpu intensive processes."
+cat << EOF
+GKrellm plugin to see the three most cpu intensive processes.
+EOF

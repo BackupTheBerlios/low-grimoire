@@ -1,0 +1,13 @@
+unset OPT  
+  VERSION=( "0.3" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellm-snort-$VERSION.tgz"
+ HOMEPAGE="http://opentony.free.fr/htdocs/index.php?/gkrellm-snort.html"
+      URL="http://opentony.free.fr/htdocs/upload"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="This plugin monitors the SNORT alert file (/var/log/snort/alert)."
+cat << EOF
+This plugin monitors the SNORT alert file (/var/log/snort/alert).
+EOF

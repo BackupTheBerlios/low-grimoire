@@ -1,0 +1,16 @@
+unset OPT  
+  VERSION=( "1.05" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellm-xkb-$VERSION"
+ HOMEPAGE="http://sweb.cz/tripie/gkrellm/xkb"
+      URL="http://sweb.cz/tripie/gkrellm/xkb/dist"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="gkrellm-xkb is a plugin for displaying and switching keybord layouts."
+cat << EOF
+gkrellm-xkb is a plugin for gkrellm that displays a small country flag
+indicating the currently-active national keyboard layout and two small
+CapsLock/NumLock indicators. It also has a popup menu to switch between
+the keyboard layouts. The plugin requires gkrellm2. 
+EOF

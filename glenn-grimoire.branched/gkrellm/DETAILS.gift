@@ -1,0 +1,16 @@
+unset OPT  
+  VERSION=( "0.2.2" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellm-gift/gkrellm-giFT-$VERSION"
+ HOMEPAGE="http://code-monkey.de/index.php?gkrellm-gift"
+      URL="ftp://ftp.code-monkey.de/pub"
+      REQ="gkrellm giftd"
+#FRESHMEAT=""
+    SHORT="GKrellM giFT monitors your active giFT transfers and their progress."
+cat << EOF
+GKrellM giFT monitors your active giFT transfers and their progress. 
+Each transfer is displayed in a panel showing the filename and the
+percentage of transmitted bytes.  There's also a chart showing the
+current speed of the transfers. 
+EOF

@@ -1,0 +1,14 @@
+unset OPT  
+  VERSION=( "0.5" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellmlaunch/gkrellmlaunch-$VERSION"
+ HOMEPAGE="http://gkrellmlaunch.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="GKrellMLaunch plugin which allows one-click access to frequently used applications from GKrellM."
+cat << EOF
+GKrellMLaunch plugin which allows one-click access to frequently used
+applications from GKrellM.
+EOF
