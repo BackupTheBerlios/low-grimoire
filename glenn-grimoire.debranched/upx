@@ -1,4 +1,4 @@
-   VERSION=( "1.24")
+   VERSION=( "1.25" "1.24" )
   CATEGORY="archive"
  ATTRIBUTE="console"
     SOURCE="$SPELL-$VERSION-src"
@@ -39,3 +39,10 @@ LONG="
 	  commercial programs.
 "
 
+build() {
+  export UCLDIR=/usr                     &&
+  cd src/                                &&
+  make target=linux                      &&
+  prepare_install                        &&
+  install -o root -g root -m 755 upx /usr/bin
+}
