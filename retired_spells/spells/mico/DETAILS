@@ -1,0 +1,16 @@
+  VERSION=( "2.3.10" )
+  CATEGORY="library"
+  ATTRIBUTE="development"
+  HOMEPAGE="http://www.mico.org"
+  URL="$HOMEPAGE"
+  FRESHMEAT="mico"
+  OPT="openssl:::for ssl support"
+  ESTIMATE=
+  SHORT="MICO Is COrba"
+  cat << EOF
+  The acronym MICO expands to MICO Is CORBA. The intention of this project is to 
+  provide a freely available and fully compliant implementation of the CORBA 2.2 
+  standard. MICO has become quite popular as an OpenSource project and is widely 
+  used for different purposes (see our success stories). Our goal is to keep MICO 
+  compliant to the latest CORBA standard.
+  EOF
