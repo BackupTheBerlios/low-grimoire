@@ -1,4 +1,4 @@
-  VERSION=("1.17rc1")
+  VERSION=( "1.17" "1.17rc1" )
  CATEGORY="network"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"

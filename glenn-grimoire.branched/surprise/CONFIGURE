@@ -1,0 +1,6 @@
+if  !  grep  -q  "BUILD_DOCUMENTATION"  $SPELL_CONFIG; then
+  if    query  "Build Documentation ? " y
+  then  echo  "BUILD_DOCUMENTATION=true"   >>  $SPELL_CONFIG
+  else  echo  "BUILD_DOCUMENTATION=false"  >>  $SPELL_CONFIG
+  fi
+fi

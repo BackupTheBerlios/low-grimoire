@@ -5,7 +5,7 @@ ATTRIBUTE="server library"
  HOMEPAGE="http://asd.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
       REQ="glib,v1.2 libxml2"
-#FRESHMEAT=""
+FRESHMEAT="asd"
     SHORT="ASD will eventually be a full featured drop-in replacement for Esound."
 cat << EOF
 ASD will eventually be a full featured drop-in replacement for Esound.
