@@ -9,7 +9,7 @@ ATTRIBUTE="library"
     SHORT="The debug memory allocation or dmalloc library."
 cat << EOF
 The debug memory allocation or dmalloc library has been designed as a
-drop in replacement for the system's malloc, realloc, calloc, free and
+drop in replacement for the system\'s malloc, realloc, calloc, free and
 other memory management routines while providing powerful debugging
 facilities configurable at runtime. These facilities include such things
 as memory-leak tracking, fence-post write detection, file/line number

@@ -63,7 +63,7 @@ including, but not limited to, the following:
     * perform histogram equalization
     * run a number of image-processing algorithms on any rectangular portion
       of the image
-    * edit an image's colormap
+    * edit an image\'s colormap
     * reduce the number of colors in an image
     * dither in color and b/w
     * crop off solid borders automatically

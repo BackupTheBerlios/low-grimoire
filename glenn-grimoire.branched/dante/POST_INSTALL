@@ -1,5 +1,5 @@
 prompt (){
-	RESPONSE=''
+	RESPONSE=""
 	echo -e -n "${QUERY_COLOR}$1 [$2] ${DEFAULT_COLOR}"
 	read -t 10 RESPONSE
 	RESPONSE=${RESPONSE:=$2}

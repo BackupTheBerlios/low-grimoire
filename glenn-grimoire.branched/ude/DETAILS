@@ -11,6 +11,6 @@ cat << EOF
 The UDE-Project is creating a new WM which will be a complete GUI in
 future. The project does not use any special GUI-Libraries such as QT
 or GTK+. We just use the standard Xlibs (also to make UDE faster). UDE
-is also not in any way like Windows, UDE has a new Look'n'Feel.
+is also not in any way like Windows, UDE has a new Look\'n\'Feel.
 UDE - Get used to it! 
 EOF

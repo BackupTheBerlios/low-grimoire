@@ -32,7 +32,7 @@ cat << EOF
               o watcom/le (supporting DOS4G, PMODE/W, DOS32a and CauseWay)
               o win32/pe
         * portable: UPX is written in portable endian-neutral C++
-        * extendable: because of the class layout it's very easy to add
+        * extendable: because of the class layout it\'s very easy to add
 	  new executable formats or new compression algorithms
         * free: UPX is distibuted with full source code under the GNU
 	  General Public License, and may be used freely even with

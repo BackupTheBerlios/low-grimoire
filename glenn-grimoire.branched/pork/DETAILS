@@ -2,7 +2,7 @@
  CATEGORY="chat"
 ATTRIBUTE="console"
    SOURCE="ojnk/$SPELL-$VERSION"
- HOMEPAGE="http://www.maxmind.com/geoip/"
+ HOMEPAGE="http://ojnk.sourceforge.net"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
 #FRESHMEAT=""
