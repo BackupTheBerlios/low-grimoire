@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3" )
+ CATEGORY="archive"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.fodder.org/cksfv"
+      URL="http://www.fodder.org"
+#      REQ=""
+#FRESHMEAT=""
+DESC="cksfv is a program that can use sfv files to verify and create files.
+cksfv is a program that can use sfv files to verify and create files.
+"
+
+build() {
+  sed -i "s:gmake:make:" Makefile  &&
+  sed -i "s:local/::" src/Makefile &&
+  make            &&
+  prepare_install &&
+  make install
+}
