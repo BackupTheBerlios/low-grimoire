@@ -1,6 +1,0 @@
-  VERSION=( "cvs" )
-ATTRIBUTE="cvs server"
-      REQ="cvs autoconf automake"
-EPROVIDES="giftd"
-   ASSUME="off"
- ESTIMATE="763"
