@@ -1,0 +1,38 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.1" "0.8.2" )
+ CATEGORY="audio"
+ATTRIBUTE="kde"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://hydrogen.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "zlib libpng jpeg qt-x11-free alsa-lib"
+            "jack-audio-connection-kit::--disable-jack-support:add jack support"
+            "::--disable-oss-support:add oss support"
+            "liblrdf::--disable-lrdf-support:add lrdf support for ladspa plugins" )
+   OPT[0]="jack-audio-connection-kit::--disable-jack-support:add jack support"
+   OPT[1]="::--disable-oss-support:add oss support"
+   OPT[2]="liblrdf::--disable-lrdf-support:add lrdf support for ladspa plugins"
+#   OPT[3]="audiofile:::add support for audiofile"
+FRESHMEAT="hydrogen"
+DESC="Hydrogen is an advanced drum machine
+Hydrogen is an advanced drum machine for GNU/Linux. It's main goal is to
+bring professional yet simple and intuitive pattern-based drum programming.
+"
+
+build() {
+  patch -p0 <<'EOF'
+--- lib/drivers/JackDriver.cpp~	2004-12-04 17:33:56.000000000 -0600
++++ lib/drivers/JackDriver.cpp	2004-12-04 17:34:15.000000000 -0600
+@@ -25,6 +25,7 @@
+ #include "JackDriver.h"
+ #ifdef JACK_SUPPORT
+ 
++#include <unistd.h>
+ #include "../Hydrogen.h"
+ 
+ unsigned long jack_server_sampleRate = 0;
+
+EOF
+  default_build
+}
