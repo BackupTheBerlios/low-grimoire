@@ -6,7 +6,7 @@
   FRESHMEAT="chkconfig"
   REQ="popt"
   OPT="xinetd:--with-xinetd-dir=/etc/xinetd.d::xinetd support"
-  ESTIMATE=
+  ESTIMATE=135
   SHORT="manage /etc/rc.d symbolic links"
 
   cat << EOF
