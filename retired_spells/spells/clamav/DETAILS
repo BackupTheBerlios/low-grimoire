@@ -1,6 +1,6 @@
    VERSION=( "0.54" )
   CATEGORY="net email"
- ATTRIBUTE="spells"
+ ATTRIBUTE="console"
   HOMEPAGE="http://clamav.elektrapro.com"
        URL="http://clamav.elektrapro.com/stable"
  FRESHMEAT="clamav"
