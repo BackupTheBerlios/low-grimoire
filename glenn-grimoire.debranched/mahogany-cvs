@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
 inherit mahogany
 unset URL SOURCE
   VERSION=( "cvs" )
@@ -47,4 +49,3 @@ default_post_install
   mkdir -p $SOURCE_CACHE/$SPELL/$VERSION &&
   tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2" "$SPELL-$VERSION"
 }
-

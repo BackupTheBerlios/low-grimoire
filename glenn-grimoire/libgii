@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.8.4" )
  CATEGORY="library"
 ATTRIBUTE="library"
@@ -15,4 +17,3 @@ The goal of LibGII is to provide a single easy to use, but yet powerful,
 API for all possible input sources. However we are not there yet. The
 API is far from set in stone yet, and is likely to change.
 "
-

@@ -1,4 +1,5 @@
-# This spell converted by cantripify.sh
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
 unset OPT
   VERSION=( "0.4.1" )
  CATEGORY="gkrellm-plugin"
@@ -26,4 +27,3 @@ build() {
   make install                           
   
 }
-

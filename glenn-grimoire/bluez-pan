@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.1" )
  CATEGORY="network"
 ATTRIBUTE="console"
@@ -23,4 +25,3 @@ build() {
   cp tools/pantest.8 /usr/man/man8       &&
   cp tools/pantest /usr/bin
 }
-

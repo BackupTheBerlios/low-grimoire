@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "3.12" )
  CATEGORY="disk"
 ATTRIBUTE="console"
@@ -12,4 +14,3 @@ LONG="
 Tools and patches for the Linux Diskquota system as part of the Linux
 kernel.
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.0" )
  CATEGORY="news"
 ATTRIBUTE="gnome|x11"
@@ -14,4 +16,3 @@ ensure that you retrieve only the binaries that you want. You may also
 schedule the binary download for a convenient time, perhaps when you are
 asleep, when charges are low and the network is not congested.
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.96" "0.93" )
  CATEGORY="development"
 ATTRIBUTE="library"
@@ -11,4 +13,3 @@ LONG="
 The goal of the libunwind project is to define a portable and efficient C
 programming interface (API) to determine the call-chain of a program.
 "
-

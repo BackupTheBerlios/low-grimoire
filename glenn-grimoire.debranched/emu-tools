@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=("0.9.4")
  CATEGORY="audio development"
 ATTRIBUTE="console"
@@ -30,4 +32,3 @@ build() {
   mkdir -p /usr/doc/emu-tools/dbgemu         &&
   cp dbgemu/README /usr/doc/emu-tools/dbgemu
 }
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.1" "0.4.0" )
  CATEGORY="development"
 ATTRIBUTE="library"
@@ -12,4 +14,3 @@ libavc1394 is a programming interface for the 1394 Trade Association
 AV/C (Audio/Video Control) Digital Interface Command Set. It is intended
 for use with GNU/Linux IEEE-1394 (http://linux1394.sourceforge.net/).
 "
-

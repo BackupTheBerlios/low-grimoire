@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "4.2.2" )
  CATEGORY="web"
 ATTRIBUTE="x11"
@@ -16,4 +18,3 @@ LogJam is a client for LiveJournal.  It lets you post, edit old
 entries, manage your friends, and whatever other useful
 LiveJournal-related features we can think of.
 "
-

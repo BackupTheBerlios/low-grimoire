@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   TK=$(echo -n $(augur version tk) | cut -d . --f=1,2)
   TCL=$(echo -n $(augur version tcl) | cut -d . --f=1,2)
 

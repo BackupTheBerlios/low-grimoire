@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=("0.4.21")
  CATEGORY="network"
 ATTRIBUTE="x11"
@@ -9,4 +11,3 @@ ATTRIBUTE="x11"
 LONG="
 gtk-iptables is a gtk-based frontend for iptables written in C.
 "
-

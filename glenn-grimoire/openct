@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.5.0" "0.1.0" )
  CATEGORY="smartcard"
 ATTRIBUTE="library"
@@ -14,4 +16,3 @@ card readers. The idea was to provide all the usualy stuff (T=0, T=1,
 serial vs USB device handling, etc) in a single place, and reduce
 driver writing to interaction with the device itself.
 "
-

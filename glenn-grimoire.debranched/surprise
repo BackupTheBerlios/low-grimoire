@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=("0.1.3")
  CATEGORY="disk"
 ATTRIBUTE="console|gnome|x11 client|server"
@@ -39,4 +41,3 @@ if  !  grep  -q  "BUILD_DOCUMENTATION"  $SPELL_CONFIG; then
   fi
 fi
 }
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.18" "1.17" "1.17rc1" )
  CATEGORY="network"
 ATTRIBUTE="library"
@@ -13,4 +15,3 @@ Libnids is an implementation of an E-component of Network Intrusion
 Detection System. It emulates the IP stack of Linux 2.0.x. Libnids offers
 IP defragmentation, TCP stream assembly and TCP port scan detection.
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.9.7" "0.9.6" "0.9.5" "0.9.1" "0.8" )
  CATEGORY="audio-editor"
 ATTRIBUTE="kde|x11"
@@ -30,4 +32,3 @@ build() {
   make    install  prefix=/usr
 
 }
-

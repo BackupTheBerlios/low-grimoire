@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   # This assumes that sed is invoked with -r, if not good luck
   ./configure --prefix=/usr   \
               $OPTS           &&

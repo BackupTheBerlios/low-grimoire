@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "2.09" "1.33" )
  ATTRIBUTE="x11"
   CATEGORY="utility"
@@ -20,5 +22,3 @@ Internet. All Garmin GPS reveiver with a serial output
 should be usable, also other GPS receiver which supports 
 NMEA protocol.
 "
-
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.9.1" )
  CATEGORY="documentation"
 ATTRIBUTE="x11"
@@ -26,4 +28,3 @@ build() {
   mkdir -p /usr/doc/$SPELL &&
   cp -r "${SOURCE[1]}/"* /usr/doc/$SPELL
 }
-

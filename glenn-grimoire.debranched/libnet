@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.1.2.1" "1.1.1" "1.1.0" )
  CATEGORY="network"
 ATTRIBUTE="library"
@@ -35,4 +37,3 @@ build() {
   install -o root -g root -m 755  libnet-config  /usr/bin
 
 }
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.3" "0.2" "0.1" )
  CATEGORY="archive"
 ATTRIBUTE="console"
@@ -12,4 +14,3 @@ Providing a tool to apply the data-recovery capability concepts of
 RAID-like systems to the posting & recovery of multi-part archives on
 Usenet.
 "
-

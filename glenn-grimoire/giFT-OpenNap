@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "none" )
  CATEGORY="plugin"
 ATTRIBUTE="library broken"
@@ -11,4 +13,3 @@ LONG="
 giFT-OpenNap is a giFT plugin for OpenNap, i.e. with this plugin,
 you will be able to acess the various OpenNap networks.
 "
-

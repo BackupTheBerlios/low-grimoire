@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
          VERSION=( "1.1.14" "1.1.14-pre1" "1.1.13" )
         CATEGORY="network"
        ATTRIBUTE="server"

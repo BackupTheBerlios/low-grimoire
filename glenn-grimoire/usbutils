@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.11" "0.10" )
  CATEGORY="utility"
 ATTRIBUTE="console"
@@ -11,4 +13,3 @@ LONG="
 This package is intended to be for USB what Martin Mares' pciutils is for
 PCI.
 "
-

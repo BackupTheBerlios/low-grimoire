@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "2.1.0" "1.9.3" )
  CATEGORY="debugger"
 ATTRIBUTE="console"
@@ -28,4 +30,3 @@ other eight track the validity of the byte. As a result, it can detect the
 use of single uninitialised bits, and does not report spurious errors on
 bitfield operations.
 "
-

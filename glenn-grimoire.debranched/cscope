@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "15.5" )
  CATEGORY="development"
 ATTRIBUTE="console"
@@ -20,4 +22,3 @@ default_build                &&
   mkdir -p /usr/share/$SPELL &&
   cp -R contrib/{webcscope,xcscope} /usr/share/$SPELL
 }
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "0.4.4" "0.4.2" )
   CATEGORY="web graphic"
  ATTRIBUTE="console"
@@ -44,4 +46,3 @@ RFXSWF Library A fully featured library which can be used for standalone
  SWF generation. Includes support for Bitmaps, Buttons, Shapes, Text, 
  Fonts, Sound etc.
 "
-

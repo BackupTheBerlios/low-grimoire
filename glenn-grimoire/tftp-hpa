@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.36" "0.35" )
  CATEGORY="network bootloader"
 ATTRIBUTE="server"
@@ -14,4 +16,3 @@ tftp-hpa is an enhanced version of the BSD TFTP client and server. It
 possesses a number of bugfixes and enhancements over the original. It has
 been made portable and will work on pretty much any modern Unix variant.
 "
-

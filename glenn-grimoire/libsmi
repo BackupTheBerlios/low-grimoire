@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.2" "0.4.1" )
  CATEGORY="network"
 ATTRIBUTE="library utility"
@@ -30,4 +32,3 @@ build() {
   cp doc/draft-irtf-nmrg-sming-02.txt smi.conf-example /usr/share/$SPELL
 
 }
-

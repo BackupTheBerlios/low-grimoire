@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.10" "1.9" "1.8" )
  CATEGORY="telephony"
 ATTRIBUTE="library"
@@ -19,4 +21,3 @@ GSM modems. Features include:
 Additionally, some simple command line programs are provided to use these
 functionalities. 
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "0.98.7" "0.98.5" "0.97.5" )
   CATEGORY="game emulator"
  ATTRIBUTE="console x11"
@@ -43,4 +45,3 @@ fi
 
 
 }
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "1.042" "1.030" "1.020" "1.00rc3" "0.26" "0.24" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
@@ -21,4 +23,3 @@ build() {
   prepare_install    &&
   make    install
 }
-

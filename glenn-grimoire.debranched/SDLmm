@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=("0.1.8")
  CATEGORY="development"
 ATTRIBUTE="library"
@@ -13,4 +15,3 @@ This is a C++ glue to SDL (Simple DirectMedia Layer) library- a low-level,
 cross-platform multimedia library. SDLmm will utilize C++ features while
 still being close to SDL in syntax (and naming).
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.9.3" )
  CATEGORY="security"
 ATTRIBUTE="console"
@@ -22,4 +24,3 @@ build() {
   default_build                &&
   cp bw /usr/bin
 }
-

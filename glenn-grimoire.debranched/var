@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.0.0" )
  CATEGORY="development"
 ATTRIBUTE="library"
@@ -14,4 +16,3 @@ OSSP var is a flexible, full-featured and fast variable construct
 expansion library. It supports a configurable variable construct syntax
 very similar to the style found in many scripting languages.
 "
-

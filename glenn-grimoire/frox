@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.7.8" "0.7.7" "0.7.6" )
  CATEGORY="proxy"
 ATTRIBUTE="client|server"
@@ -36,4 +38,3 @@ build() {
   cp doc/* /usr/doc/$SPELL
 
 }
-

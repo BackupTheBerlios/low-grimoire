@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.2.0" )
  CATEGORY="library"
 ATTRIBUTE="library"
@@ -12,4 +14,3 @@ MeshIO is a simple C++ library for the loading of 3D model files.
 Currently, MeshIO only supports plain .3DS files as well as its native
 .RAW format. MeshIO will undergo a major redesign in the future.
 "
-

@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.10" )
  CATEGORY="graphic"
 ATTRIBUTE="library|x11"
@@ -41,4 +43,3 @@ build() {
   install -o root -g root -m 644 Test/ScreenSaver.swf /usr/share/$SPELL
 
 }
-

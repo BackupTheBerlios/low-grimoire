@@ -1,3 +1,5 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.3.2" "0.3.1" )
  CATEGORY="library proxy"
 ATTRIBUTE="library"
@@ -14,4 +16,3 @@ library, autoconf macro for use in other applications, installed script
 to indicate how to use it) so this page distributes an improved version
 of the library.
 "
-
