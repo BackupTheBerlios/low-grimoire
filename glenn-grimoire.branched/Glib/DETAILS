@@ -6,7 +6,7 @@
        URL="$SOURCEFORGE_URL"
        REQ="glib ExtUtils-PkgConfig"
      SHORT="This module provides perl access to Glib and GLibs GObject libraries."
-cat << EOF
+stream << EOF
 This module provides perl access to Glib and GLibs GObject libraries.
 GLib is a portability and utility library; GObject provides a generic
 type system with inheritance and a powerful signal system.  Together

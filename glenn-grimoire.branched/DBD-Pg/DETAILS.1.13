@@ -5,7 +5,7 @@ VERSION[0]="1.13"
        URL="http://search.cpan.org/CPAN/authors/id/J/JB/JBAKER"
        REQ="perl"
      SHORT="DBD-Pg is a PostgreSQL interface for Perl5 using DBI."
-cat << EOF
+stream << EOF
 DBD-Pg is a PostgreSQL interface for Perl5 using DBI.
 
 DBI (Database independent interface) is a database access API (Application

@@ -6,6 +6,6 @@
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
        REQ="perl glib"
      SHORT="Easily build XS extensions that depend on XS extensions."
-cat << EOF
+stream << EOF
 Easily build XS extensions that depend on XS extensions.
 EOF

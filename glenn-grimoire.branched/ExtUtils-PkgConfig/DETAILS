@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="perl glib"
      SHORT="Package config for Gtk perl modules."
-cat << EOF
+stream << EOF
 Package config for Gtk perl modules.
 EOF

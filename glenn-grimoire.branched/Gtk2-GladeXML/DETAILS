@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="perl Gtk2 libglade"
      SHORT="This package adds perl support for Glade 2.x to Gtk2-Perl."
-cat << EOF
+stream << EOF
 This package adds perl support for Glade 2.x to Gtk2-Perl.
 EOF

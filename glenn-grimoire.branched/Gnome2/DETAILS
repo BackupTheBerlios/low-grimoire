@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="libgnomeui Gnome2-VFS"
      SHORT="The Gnome2 module allows a perl developer to use the Gnome libraries."
-cat << EOF
+stream << EOF
 The Gnome2 module allows a perl developer to use the Gnome libraries.
 EOF

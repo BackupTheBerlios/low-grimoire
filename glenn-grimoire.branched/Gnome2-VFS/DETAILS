@@ -6,6 +6,6 @@
        URL="$SOURCEFORGE_URL"
        REQ="Gtk2 gnome-vfs"
      SHORT="The Gnome2 module allows a perl developer to use Gnome's VFS libraries."
-cat << EOF
+stream << EOF
 The Gnome2 module allows a perl developer to use Gnome's VFS libraries.
 EOF

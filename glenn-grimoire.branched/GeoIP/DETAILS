@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="GeoIP is a C library that enables the user to find the country that any IP address or hostname originates from."
-cat << EOF
+stream << EOF
 GeoIP is a C library that enables the user to find the country that any
 IP address or hostname originates from.  It uses a file based database
 that is accurate as of March 2003.  This database simply contains IP
