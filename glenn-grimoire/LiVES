@@ -1,0 +1,38 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.1-pre5" )
+ CATEGORY="graphic-editor"
+ATTRIBUTE="console gnome"
+   SOURCE="$SPELL-$VERSION-src"
+ HOMEPAGE="http://www.xs4all.nl/~salsaman/lives"
+      URL="http://www.xs4all.nl/~salsaman/lives/current"
+      REQ="MPlayer ImageMagick perl gtk+ jpeg gdk-pixbuf sox transcode mjpegtools"
+    OPT[0]="xmms:::add xmms support"
+    OPT[1]="cdrtools:::add cda2wav support"
+    OPT[2]="sswf:::add encode flash support"
+    OPT[3]="libdv:::add encode digital video support"
+#FRESHMEAT=""
+    SHORT="LiVES began as the Linux Video Editing System."
+LONG="
+LiVES began as the Linux Video Editing System. Since it now runs on more
+operating systems, LiVES is a Video Editing System. It is designed to be
+simple to use, yet powerful. It is small in size, yet it has many advanced
+features.
+"
+
+build() {
+  ./configure --prefix=/usr     \
+	      $OPTS             &&
+  make                          &&
+  prepare_install               &&
+  make install                  &&
+  mkdir -p /usr/share/lives     &&
+  pushd `pwd`                   &&
+    cd /usr/share/lives         &&
+    tar zxf $OLDPWD/lives-plugins-$VERSION.tar.gz &&
+    tar zxf $OLDPWD/lives-themes-$VERSION.tar.gz &&
+    chmod -R a+rx plugins themes icons &&
+  popd                                 &&
+  cp build-lives-rfx-plugin* /usr/bin/ &&
+  chmod a+x /usr/bin/build-lives-rfx-plugin*
+}
