@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="ggi/$SPELL-$VERSION.src"
  HOMEPAGE="http://www.ggi-project.org"
       URL="$SOURCEFORGE_URL"
-      REQ="libggi"
+      REQ=( "libggi" )
 #FRESHMEAT=""
-    SHORT="LibGGIMisc is a place to put support for graphics target features which are not deserving their own special extensions."
-LONG="
+DESC="LibGGIMisc is a place to put support for graphics target features which are not deserving their own special extensions.
 LibGGIMisc is a place to put support for graphics target features
 which are not deserving their own special extensions.  Right
 now this means basically some VGA adaptor features -- 

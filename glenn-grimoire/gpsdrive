@@ -6,11 +6,10 @@
     SOURCE="gpsdrive-$VERSION"
        URL="http://www.kraftvoll.at/software"
   HOMEPAGE="http://www.kraftvoll.at/software/index.shtml"
-       REQ="gtk+ pcre"
+       REQ=( "gtk+ pcre" )
  FRESHMEAT="gpsdrive"
   ESTIMATE="98"
-     SHORT="GPS software for Linux"
-LONG="
+DESC="GPS software for Linux
 GpsDrive is a car (bike, ship, plane) navigation system. 
 GpsDrive displays your position provided from your NMEA 
 capable GPS receiver on a zoomable map, the map file is

@@ -9,8 +9,7 @@ ATTRIBUTE="client|server"
       REQ=""
 #   OPT[0]="openssl:--with-openssl=/usr::add ssl support"
 #FRESHMEAT=""
-    SHORT="frox is a transparent ftp proxy."
-LONG="
+DESC="frox is a transparent ftp proxy.
 This is the homepage of frox. It is a transparent ftp proxy which is
 released under the GPL. It optionally supports caching (either through
 an external http cache (eg. squid), or by maintaining a cache locally),

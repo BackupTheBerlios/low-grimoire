@@ -6,9 +6,8 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://www.goof.com/pcg/marc/"
        URL="$SOURCEFORGE_URL"
-       REQ="perl glib"
-     SHORT="Package config for Gtk perl modules."
-LONG="
+       REQ=( "perl glib" )
+DESC="Package config for Gtk perl modules.
 Package config for Gtk perl modules.
 "
 

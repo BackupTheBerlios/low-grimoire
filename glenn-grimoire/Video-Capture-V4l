@@ -6,9 +6,8 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.goof.com/pcg/marc/"
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
-       REQ="perl"
-     SHORT="Perl interface to the Video4linux framegrabber interface."
-LONG="
+       REQ=( "perl" )
+DESC="Perl interface to the Video4linux framegrabber interface.
 Perl interface to the Video4linux framegrabber interface.
 "
 

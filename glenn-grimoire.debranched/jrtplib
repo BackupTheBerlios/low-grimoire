@@ -8,7 +8,6 @@ ATTRIBUTE="library"
       URL="http://lumumba.luc.ac.be/jori"
       REQ=""
 #FRESHMEAT=""
-    SHORT="JRTPLIB is an object-oriented RTP library written in C++."
-LONG="
+DESC="JRTPLIB is an object-oriented RTP library written in C++.
 JRTPLIB is an object-oriented RTP library written in C++.
 "

@@ -6,10 +6,9 @@ ATTRIBUTE="x11"
    SOURCE="${SPELL}-src.$VERSION"
  HOMEPAGE="http://dossizola.sourceforge.net"
       URL="http://dossizola.sourceforge.net/packages/tgz/src"
-      REQ="SDL_image"
+      REQ=( "SDL_image" )
 #FRESHMEAT=""
-    SHORT="Do'SSi Zo'la is a board game under GPL licence, using SDL."
-LONG="
+DESC="Do'SSi Zo'la is a board game under GPL licence, using SDL.
 Do'SSi Zo'la is a board game under GPL licence, using SDL. You can play
 with two players or you can play on your own against the computer.
 

@@ -6,9 +6,8 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://gisle.aas.no"
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/G/GA/GAAS"
-       REQ="perl HTML-Tagset"
-     SHORT="HTML parser class."
-LONG="
+       REQ=( "perl HTML-Tagset" )
+DESC="HTML parser class.
 HTML parser class.
 "
 

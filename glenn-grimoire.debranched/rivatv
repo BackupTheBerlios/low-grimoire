@@ -6,11 +6,10 @@ ATTRIBUTE="driver"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://rivatv.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="linux XFree86"
+      REQ=( "linux XFree86" )
      OPTS="--enable-agp --enable-software-conversion"
 #FRESHMEAT=""
-    SHORT="Linux drivers for nVidia cards with video-in"
-LONG="
+DESC="Linux drivers for nVidia cards with video-in
 The RivaTV project is dedicated to producing linux drivers for nVidia
 based graphics boards with video-in feature. The term "RivaTV" is used
 to refer to the entire driver set. 

@@ -6,9 +6,8 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://bluez.sourceforge.net"
       URL="http://bluez.sourceforge.net/download"
-      REQ="bluez-libs"
+      REQ=( "bluez-libs" )
 #FRESHMEAT=""
-    SHORT="HCIDump - HCI packet analyzer."
-LONG="
+DESC="HCIDump - HCI packet analyzer.
 HCIDump - HCI packet analyzer.
 "

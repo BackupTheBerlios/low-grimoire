@@ -7,8 +7,7 @@
   HOMEPAGE="http://sourceforge.net/projects/linux-privs"
        URL="$KERNEL_URL"
 #       REQ=""
-     SHORT="This is a library for getting and setting capabilities."
-LONG="
+DESC="This is a library for getting and setting capabilities.
 This is a library for getting and setting POSIX.1e (formerly POSIX 6)
 draft 15 capabilities.
 "

@@ -6,10 +6,9 @@ ATTRIBUTE="library broken"
    SOURCE=""
  HOMEPAGE="http://gift-opennap.berlios.de"
       URL="http://download.berlios.de"
-      REQ="giftd"
+      REQ=( "giftd" )
 #FRESHMEAT=""
-    SHORT="giFT-OpenNap is a giFT plugin for OpenNap."
-LONG="
+DESC="giFT-OpenNap is a giFT plugin for OpenNap.
 giFT-OpenNap is a giFT plugin for OpenNap, i.e. with this plugin,
 you will be able to acess the various OpenNap networks.
 "

@@ -6,11 +6,10 @@
     SOURCE="$SPELL-$VERSION-src"
   HOMEPAGE="http://upx.sourceforge.net/"
        URL="http://upx.sourceforge.net/download"
-       REQ="ucl"
+       REQ=( "ucl" )
   ESTIMATE=41
  FRESHMEAT="upx"
-     SHORT="UPX is a versatile executable packer."
-LONG="
+DESC="UPX is a versatile executable packer.
     UPX is a versatile executable packer with the following features:
         * excellent compression ratio: typically compresses better than
 	  WinZip/zip/gzip, use UPX to decrease the size of your

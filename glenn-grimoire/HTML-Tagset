@@ -6,9 +6,8 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.speech.cs.cmu.edu/~sburke"
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/S/SB/SBURKE"
-       REQ="perl"
-     SHORT="data tables useful in parsing HTML."
-LONG="
+       REQ=( "perl" )
+DESC="data tables useful in parsing HTML.
 data tables useful in parsing HTML.
 "
 

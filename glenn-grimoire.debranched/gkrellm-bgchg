@@ -7,10 +7,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellmbgchg2-$VERSION"
  HOMEPAGE="http://www.bender-suhl.de/stefan/english/comp/gkrellmbgchg.html"
       URL="http://www.bender-suhl.de/stefan/comp/sources"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="GKrellMBgChg is a plugin for GKrellM, which periodically updates the desktops background image."
-LONG="
+DESC="GKrellMBgChg is a plugin for GKrellM, which periodically updates the desktops background image.
 GKrellMBgChg is a plugin for GKrellM, which periodically updates the
 desktops background image. It is also possible to force an image update
 by clicking on the panel or to "hold" the image with the mouse wheel. 

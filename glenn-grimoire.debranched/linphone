@@ -6,14 +6,15 @@ ATTRIBUTE="x11"
    SOURCE="$VERSION/source/$SPELL-$VERSION"
  HOMEPAGE="http://kahakai.sourceforge.net"
       URL="http://simon.morlat.free.fr/download"
-      REQ="libosip glib gnome-panel gnome-vfs"
+      REQ=( "libosip glib gnome-panel gnome-vfs"
+            "nasm:::add video support"
+            "alsa:::add alsa support" )
    OPT[0]="nasm:::add video support"
    OPT[1]="alsa:::add alsa support"
 # at sometime make the gnome gui optional
 #   OPT[2]="gnomeui:::add gnome gui"
 #FRESHMEAT=""
-    SHORT="Linphone is a web phone: it let you phone to your friends anywhere in the whole world, freely, simply by using the internet."
-LONG="
+DESC="Linphone is a web phone: it let you phone to your friends anywhere in the whole world, freely, simply by using the internet.
 Linphone is a web phone: it let you phone to your friends anywhere in the
 whole world, freely, simply by using the internet. The cost of the phone
 call is the cost that you spend connected to the internet.

@@ -8,8 +8,7 @@ ATTRIBUTE="console"
       URL="ftp://ftp.berlios.de/pub/smake/alpha"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="smake is a highly portable make program with automake features."
-LONG="
+DESC="smake is a highly portable make program with automake features.
 smake is a highly portable make program with automake features.
 "
 

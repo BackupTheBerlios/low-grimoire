@@ -50,8 +50,7 @@
             ftp://ftp.flash.net/pub/mirrors/metalab.unc.edu/pub/Linux
             ftp://ftp.yggdrasil.com/mirrors/sunsite
             ftp://ftp.iis.com.br/pub/Linux"
-    SHORT="This package contains utilities for mac (de)compression"
-LONG="
+DESC="This package contains utilities for mac (de)compression
 This package contains the following utilities:
 macunpack, hexbin, macsave, macstream, binhex, tomac, frommac.
 "

@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
       REQ=""
 #FRESHMEAT=""
-    SHORT="The debug memory allocation or dmalloc library."
-LONG="
+DESC="The debug memory allocation or dmalloc library.
 The debug memory allocation or dmalloc library has been designed as a
 drop in replacement for the system\'s malloc, realloc, calloc, free and
 other memory management routines while providing powerful debugging

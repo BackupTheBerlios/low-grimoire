@@ -12,8 +12,7 @@
 #   OPTS[3]="xpdf:::For PDF2SWF"
 #   OPTS[4]="libpng:::For PNG2SWF converter"
 #   OPTS[5]="lame:::For WAV2SWF converter"
-     SHORT="SWF Tools is a collection of SWF manipulation and generation utilities"
-LONG="
+DESC="SWF Tools is a collection of SWF manipulation and generation utilities
  SWF Tools is a collection of SWF manipulation and generation utilities
  written by Rainer Bo\"hme and Matthias Kramm. It is released under the GPL.
 Included are:

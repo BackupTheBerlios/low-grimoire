@@ -6,9 +6,8 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="Gtk2 libgnomecanvas"
-     SHORT="The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas."
-LONG="
+       REQ=( "Gtk2 libgnomecanvas" )
+DESC="The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas.
 The Gnome2::Canvas module allows a perl developer to use the GnomeCanvas.
 "
 

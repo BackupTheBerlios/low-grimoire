@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="TNL is a cross-platform C++ networking API designed for high performance simulations and games."
-LONG="
+DESC="TNL is a cross-platform C++ networking API designed for high performance simulations and games.
 The Torque Network Library is a robust, secure, easy to use, cross-platform
 C++ networking API designed for high performance simulations and games.
 The network architecture in TNL has powered some of the best internet

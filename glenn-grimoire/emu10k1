@@ -8,8 +8,7 @@ ATTRIBUTE="console driver"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="Tools for Emu10k1 sound cards."
-LONG="
+DESC="Tools for Emu10k1 sound cards.
 Card support
 ------------
 - Creative Sound Blaster Live! (all models)

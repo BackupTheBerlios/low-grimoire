@@ -8,10 +8,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrelltop.$VERSION"
  HOMEPAGE="http://psychology.rutgers.edu/~zaimi/software.html"
       URL="http://psychology.rutgers.edu/~zaimi"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="GKrellm plugin to see the three most cpu intensive processes."
-LONG="
+DESC="GKrellm plugin to see the three most cpu intensive processes.
 GKrellm plugin to see the three most cpu intensive processes.
 "
 

@@ -4,7 +4,7 @@ inherit gift
 unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
-      REQ="cvs autoconf automake"
+      REQ=( "cvs autoconf automake" )
  EPROVIDE="giftd"
    ASSUME="off"
  ESTIMATE="763"

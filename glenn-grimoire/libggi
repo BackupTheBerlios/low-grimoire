@@ -6,13 +6,13 @@ ATTRIBUTE="library"
    SOURCE="ggi/$SPELL-$VERSION.src"
  HOMEPAGE="http://www.ggi-project.org"
       URL="$SOURCEFORGE_URL"
-      REQ="libgii"
+      REQ=( "libgii"
+            "svgalib:::add support for output through svgalib" )
    OPT[0]="svgalib:::add support for output through svgalib"
 #   OPT[1]="directfb:::add support for output through frame buffer"
 #   OPT[2]="aalib:::add support for output through aalib"
 #FRESHMEAT=""
-    SHORT="LibGGI, the dynamic GGI (General Graphics Interface) library is a flexible drawing library."
-LONG="
+DESC="LibGGI, the dynamic GGI (General Graphics Interface) library is a flexible drawing library.
 GGI aims at unifying the way applications access the user display by
 defining a generic abstraction of the notion of graphic display. 
 

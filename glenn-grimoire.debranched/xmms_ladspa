@@ -6,10 +6,9 @@ ATTRIBUTE="other"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa"
       URL="http://www.ecs.soton.ac.uk/~njl98r/code/ladspa"
-      REQ="xmms ladspa_sdk"
+      REQ=( "xmms ladspa_sdk" )
 #FRESHMEAT=""
-    SHORT="XMMS LADSPA is an Effect for XMMS that provides (some of) the power of the Linux Audio Developer\'s Simple Plugin API to your everyday MP3 and all-around media player."
-LONG="
+DESC="XMMS LADSPA is an Effect for XMMS that provides (some of) the power of the Linux Audio Developer\'s Simple Plugin API to your everyday MP3 and all-around media player.
 XMMS LADSPA is an Effect for XMMS that provides (some of) the power of the
 Linux Audio Developer\'s Simple Plugin API to your everyday MP3 and
 all-around media player.

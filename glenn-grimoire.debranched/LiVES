@@ -6,14 +6,17 @@ ATTRIBUTE="console gnome"
    SOURCE="$SPELL-$VERSION-src"
  HOMEPAGE="http://www.xs4all.nl/~salsaman/lives"
       URL="http://www.xs4all.nl/~salsaman/lives/current"
-      REQ="MPlayer ImageMagick perl gtk+ jpeg gdk-pixbuf sox transcode mjpegtools"
+      REQ=( "MPlayer ImageMagick perl gtk+ jpeg gdk-pixbuf sox transcode mjpegtools"
+            "xmms:::add xmms support"
+            "cdrtools:::add cda2wav support"
+            "sswf:::add encode flash support"
+            "libdv:::add encode digital video support" )
     OPT[0]="xmms:::add xmms support"
     OPT[1]="cdrtools:::add cda2wav support"
     OPT[2]="sswf:::add encode flash support"
     OPT[3]="libdv:::add encode digital video support"
 #FRESHMEAT=""
-    SHORT="LiVES began as the Linux Video Editing System."
-LONG="
+DESC="LiVES began as the Linux Video Editing System.
 LiVES began as the Linux Video Editing System. Since it now runs on more
 operating systems, LiVES is a Video Editing System. It is designed to be
 simple to use, yet powerful. It is small in size, yet it has many advanced

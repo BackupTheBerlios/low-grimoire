@@ -7,10 +7,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellkam/gkrellkam_$VERSION"
  HOMEPAGE="http://gkrellkam.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
-      REQ="gkrellm wget"
+      REQ=( "gkrellm wget" )
 #FRESHMEAT=""
-    SHORT="Keeping tabs on a webcam is only one of GKrellKam's uses."
-LONG="
+DESC="Keeping tabs on a webcam is only one of GKrellKam's uses.
 Keeping tabs on a webcam is only one of GKrellKam's uses, however. Each
 panel can be associated with an image URL, a local image filename, a list
 of image filenames and URLs, or a script that will be called to get a fresh

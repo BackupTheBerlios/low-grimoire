@@ -8,7 +8,6 @@ ATTRIBUTE="library"
       URL="http://bluez.sourceforge.net/download"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="Bluetooth Libraries."
-LONG="
+DESC="Bluetooth Libraries.
 Bluetooth Libraries.
 "

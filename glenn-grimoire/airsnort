@@ -6,9 +6,8 @@
     SOURCE="$SPELL/$SPELL-$VERSION"
   HOMEPAGE="http://airsnort.shmoo.com"
        URL="$SOURCEFORGE_URL"
-       REQ="gtk+,v1.2 libpcap"
-     SHORT="AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys."
-LONG="
+       REQ=( "gtk+,v1.2 libpcap" )
+DESC="AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
 AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
 AirSnort operates by passively monitoring transmissions, computing the
 encryption key when enough packets have been gathered. 

@@ -7,10 +7,10 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.lintux.cx/axel.html"
       URL="http://www.lintux.cx/downloads"
    OPT[0]="gettext:--i18n=1::add internationalization"
-      REQ="curl"
+      REQ=( "curl"
+            "gettext:--i18n=1::add internationalization" )
 #FRESHMEAT=""
-    SHORT="download accelerator using libcurl."
-LONG="
+DESC="download accelerator using libcurl.
 Axel does the same thing any other accelerator does: 
 it opens more than one HTTP/FTP connection per download 
 and each connection transfers its own, separate, part of 

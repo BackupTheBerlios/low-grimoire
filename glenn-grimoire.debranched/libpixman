@@ -9,8 +9,7 @@ ATTRIBUTE="library"
            http://www.freedesktop.org/Cairo/snapshots"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="libpixregion - Pixel region Library."
-LONG="
+DESC="libpixregion - Pixel region Library.
 libpixregion is a generic library for manipulating pixel regions. A
 PixRegion is a set of Y-X banded rectangles that cover the desired
 region.

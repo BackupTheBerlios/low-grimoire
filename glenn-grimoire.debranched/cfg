@@ -7,10 +7,11 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.ossp.org/pkg/lib/cfg"
       URL="ftp://ftp.ossp.org/pkg/lib"
 #      REQ=""
+      REQ=( ""
+            "ex:--with-ex::add ex exception handling support" )
    OPT[0]="ex:--with-ex::add ex exception handling support"
 #FRESHMEAT=""
-    SHORT="OSSP cfg is a ISO-C library for parsing arbitrary C/C++-style configuration files."
-LONG="
+DESC="OSSP cfg is a ISO-C library for parsing arbitrary C/C++-style configuration files.
 OSSP cfg is a ISO-C library for parsing arbitrary C/C++-style
 configuration files. A configuration is sequence of directives. Each
 directive consists of zero or more tokens. Each token can be either a

@@ -6,10 +6,9 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://filmgimp.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="gtk+ tiff jpeg libpng "
+      REQ=( "gtk+ tiff jpeg libpng " )
 #FRESHMEAT=""
-    SHORT="Film Gimp is a motion picture editing tool."
-LONG="
+DESC="Film Gimp is a motion picture editing tool.
 Film Gimp is a motion picture editing tool primarily used for painting and
 retouching of movies. Its application to feature movie productions includes
 the movies Scooby-Doo, Harry Potter, and Stuart Little. Film Gimp is the

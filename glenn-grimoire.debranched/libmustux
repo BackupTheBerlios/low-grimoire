@@ -7,12 +7,14 @@ ATTRIBUTE="library"
    SOURCE="protux/$SPELL-$VERSION"
  HOMEPAGE="http://www.nongnu.org/protux/"
       URL="http://savannah.nongnu.org/download"
-      REQ="qt-x11-free"
+      REQ=( "qt-x11-free"
+            ":--with-xinerama::Xinerama support"
+            "jpeg:::jpeg support"
+            "libpng:::png support" )
    OPT[0]=":--with-xinerama::Xinerama support"
    OPT[1]="jpeg:::jpeg support"
    OPT[2]="libpng:::png support"
-    SHORT="libmustux is a library needed by protux"
-LONG="
+DESC="libmustux is a library needed by protux
 libmustux is a library needed by protux
 "
 

@@ -5,11 +5,10 @@ unset SOURCE URL
  CATEGORY="profile"
 ATTRIBUTE="profile"
  HOMEPAGE="glenniii@mail.utexas.edu"
-      REQ="distcc"
+      REQ=( "distcc" )
    ASSUME="off"
 # ESTIMATE="134"
-    SHORT="a spell to easily setup distcc"
-     LONG="
+DESC="a spell to easily setup distcc
 A spell to easily setup distcc.
 After casting, make sure you are satified with the defaults in
 /etc/init.d/distccd.sh. You probably only modify the ACCEPTLIST

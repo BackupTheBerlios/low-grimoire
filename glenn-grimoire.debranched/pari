@@ -6,11 +6,10 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.gnu.org/software/ddd/"
       URL="ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/"
-      REQ="readline"
+      REQ=( "readline" )
 #   OPT[0]=":::"
 #FRESHMEAT=""
-    SHORT="Pari is an advanced solver for applied number theory."
-LONG="
+DESC="Pari is an advanced solver for applied number theory.
 Pari is an advanced solver for applied number theory.
 "
 

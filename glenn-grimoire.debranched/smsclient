@@ -8,10 +8,11 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.smsclient.org"
       URL="http://www.smsclient.org/download"
 #      REQ=""
+      REQ=( ""
+            "libmodem:-modemlib libmodem:-modemlib smsmodem: Use libmodem instead of buggy internal library" )
    OPT[0]="libmodem:-modemlib libmodem:-modemlib smsmodem: Use libmodem instead of buggy internal library"
 #FRESHMEAT=""
-    SHORT="A simple UNIX client Allowing you to send SMS messages to mobile phones and pagers."
-LONG="
+DESC="A simple UNIX client Allowing you to send SMS messages to mobile phones and pagers.
 A simple UNIX client Allowing you to send SMS messages to mobile phones
 and pagers.
 "

@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="ggi/$SPELL-$VERSION.src"
  HOMEPAGE="http://www.ggi-project.org"
       URL="$SOURCEFORGE_URL"
-      REQ="libgii"
+      REQ=( "libgii" )
 #FRESHMEAT=""
-    SHORT="LibGGIGCP is a generic color and palette management extension."
-LONG="
+DESC="LibGGIGCP is a generic color and palette management extension.
 LibGGIGCP is a generic color and palette management extension. It supports
 conversion between different color spaces such as RGBA, YUV, HSV and CMYK.
 Furthermore it supports a generic color-blending, which can also be used

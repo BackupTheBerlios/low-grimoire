@@ -6,9 +6,8 @@
     SOURCE="middle-man/$SPELL-$VERSION"
   HOMEPAGE="http://middle-man.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="zlib Linux-PAM pcre"
-     SHORT="Middleman filtering proxy server."
-LONG="
+       REQ=( "zlib Linux-PAM pcre" )
+DESC="Middleman filtering proxy server.
 Middleman filtering proxy server.
 "
 

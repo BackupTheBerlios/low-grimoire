@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.pxh.de/fs/gsmlib"
       URL="http://www.pxh.de/fs/gsmlib/download"
-      REQ="gettext bison "
+      REQ=( "gettext bison " )
 #FRESHMEAT=""
-    SHORT="gsmlib is a library to access GSM mobile phones through GSM modems."
-LONG="
+DESC="gsmlib is a library to access GSM mobile phones through GSM modems.
 This distribution contains a library to access GSM mobile phones through
 GSM modems. Features include:
 

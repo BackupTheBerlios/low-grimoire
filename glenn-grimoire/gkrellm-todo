@@ -8,10 +8,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellm-gtodo-$VERSION"
  HOMEPAGE="http://voidtrance.home.comcast.net/software/"
       URL="http://voidtrance.home.comcast.net/software/files/gtodo"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="GKrellm plugin to track tasks and to-do items."
-LONG="
+DESC="GKrellm plugin to track tasks and to-do items.
 I have written a plugin for GKrellM, the purpose of which is to track
 tasks and to-do items. The plugin also supports deadline reminder alarms,
 tracking of time spent on individual tasks, and task-diary (sort of)

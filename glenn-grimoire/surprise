@@ -7,13 +7,15 @@ ATTRIBUTE="console gnome client server"
  HOMEPAGE="http://surprise.sourceforge.net"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
+      REQ=( ""
+            "readline:::add readline capability"
+            "gtk+,v1.2:::make the guiclient (desirable)" )
    OPT[0]="readline:::add readline capability"
    OPT[1]="gtk+,v1.2:::make the guiclient (desirable)"
 #   OPT[2]=":--with-doc-html=yes --with-doc-txt=yes::make documentation"
  ESTIMATE="1429"
 #FRESHMEAT=""
-    SHORT="Partition Surprise is a GPL partition managing software for Linux."
-LONG="
+DESC="Partition Surprise is a GPL partition managing software for Linux.
 Partition Surprise is a GPL partition managing software for Linux.
 Partition resizes, moves and conversions is implemented. Limited support
 of operations on mounted ext2-filesystem included as well.

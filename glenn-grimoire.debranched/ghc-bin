@@ -6,10 +6,9 @@
     SOURCE="$SPELL-$VERSION-i386-unknown-linux"
   HOMEPAGE="http://www.haskell.org/ghc"
        URL="http://www.haskell.org/ghc/dist/$VERSION"
-       REQ="readline ncurses"
+       REQ=( "readline ncurses" )
 # FRESHMEAT="ethereal"
-     SHORT="Glascow Haskell Compiler (binary)"
-LONG="
+DESC="Glascow Haskell Compiler (binary)
 The Glasgow Haskell Compiler is a robust, fully-featured, optimising
 compiler and interactive environment for Haskell 98, GHC compiles Haskell
 to either native code or C.  It implements numerous experimental language

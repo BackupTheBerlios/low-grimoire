@@ -6,12 +6,13 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://kahakai.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="imlib2 swig XFree86 boost"
+      REQ=( "imlib2 swig XFree86 boost"
+            "ruby:::add ruby bindings"
+            "Python:::add python bindings" )
    OPT[0]="ruby:::add ruby bindings"
    OPT[1]="Python:::add python bindings"
 #FRESHMEAT=""
-    SHORT="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager."
-LONG="
+DESC="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager.
 Kahakai is a fork of the Waimea window manager, with the intent to create
 a language agnostic scriptable window manager, while maintaining the
 original features of Waimea, and extending upon them. Kahakai is

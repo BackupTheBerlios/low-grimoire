@@ -6,11 +6,11 @@ ATTRIBUTE="server"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.cryptnet.net/fsp/cks/"
       URL="http://www.cryptnet.net/fsp"
-      REQ="postgresql"
+      REQ=( "postgresql"
+            "tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap" )
    OPT[0]="tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap"
 #FRESHMEAT=""
-    SHORT="CryptNET keyserver."
-LONG="
+DESC="CryptNET keyserver.
 CryptNET keyserver.
 "
 

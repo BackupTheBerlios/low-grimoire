@@ -8,8 +8,7 @@ ATTRIBUTE="console"
       URL="http://developer.kde.org/~sewardj"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="Valgrind is a GPLd tool to help you find memory-management problems in your programs."
-LONG="
+DESC="Valgrind is a GPLd tool to help you find memory-management problems in your programs.
 Valgrind is a GPLd tool to help you find memory-management problems in
 your programs. When a program is run under Valgrinds supervision, all
 reads and writes of memory are checked, and calls to malloc/new/free/delete

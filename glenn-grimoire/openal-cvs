@@ -3,7 +3,7 @@
 inherit openal
 unset URL SOURCE
   VERSION=( "cvs" )
-      REQ="cvs autoconf automake"
+      REQ=( "cvs autoconf automake" )
    ASSUME="off"
  EPROVIDE="openal"
 #FRESHMEAT=""

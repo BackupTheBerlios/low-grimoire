@@ -7,10 +7,9 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.freedesktop.org/Software/glitz"
       URL="http://cairographics.org/snapshots
            http://www.freedesktop.org/Cairo/snapshots"
-      REQ="XFree86"
+      REQ=( "XFree86" )
 #FRESHMEAT=""
-    SHORT="Glitz is a portable 2D graphics library that uses OpenGL to render hardware accelerated graphics."
-LONG="
+DESC="Glitz is a portable 2D graphics library that uses OpenGL to render hardware accelerated graphics.
 Glitz is a portable 2D graphics library that uses OpenGL to render hardware
 accelerated graphics. It supports many of the latest OpenGL features, such
 as efficient off-screen rendering using pbuffers. Rendering can be carried

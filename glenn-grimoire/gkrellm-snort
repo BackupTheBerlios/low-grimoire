@@ -8,10 +8,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellm-snort-$VERSION.tgz"
  HOMEPAGE="http://opentony.free.fr/htdocs/index.php?/gkrellm-snort.html"
       URL="http://opentony.free.fr/htdocs/upload"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="This plugin monitors the SNORT alert file (/var/log/snort/alert)."
-LONG="
+DESC="This plugin monitors the SNORT alert file (/var/log/snort/alert).
 This plugin monitors the SNORT alert file (/var/log/snort/alert).
 "
 

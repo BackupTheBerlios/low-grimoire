@@ -4,7 +4,7 @@ inherit gift-openft
 unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
-      REQ="cvs autoconf automake giftd db zlib"
+      REQ=( "cvs autoconf automake giftd db zlib" )
  EPROVIDE="gift-openft"
    ASSUME="off"
  ESTIMATE="763"

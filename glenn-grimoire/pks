@@ -6,10 +6,9 @@ ATTRIBUTE="server"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.mit.edu/people/marc/pks/pks.html"
       URL="http://www.mit.edu/people/marc"
-      REQ="db"
+      REQ=( "db" )
 #FRESHMEAT=""
-    SHORT="PGP Public Key Server."
-LONG="
+DESC="PGP Public Key Server.
 PGP Public Key Server.
 "
 

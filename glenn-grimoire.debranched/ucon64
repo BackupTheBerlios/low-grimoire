@@ -12,11 +12,10 @@ SOURCE[3]="$SPELL/n64-20031115.zip"
    URL[1]="${URL[0]}"
    URL[2]="${URL[0]}"
    URL[3]="${URL[0]}"
-      REQ="zlib"
+      REQ=( "zlib" )
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
-    SHORT="uCON64 - THE tool for all your video game console concerns."
-LONG="
+DESC="uCON64 - THE tool for all your video game console concerns.
 uCON64 - THE tool for all your video game console concerns.
 Its main features are:
 - It is Open Source Software

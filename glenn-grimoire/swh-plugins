@@ -6,10 +6,9 @@ ATTRIBUTE="other"
    SOURCE="$VERSION/$SPELL-$VERSION"
  HOMEPAGE="http://plugin.org.uk"
       URL="http://plugin.org.uk/releases"
-      REQ="ladspa_sdk fftw"
+      REQ=( "ladspa_sdk fftw" )
 #FRESHMEAT=""
-    SHORT="These are audio plugins for LADSPA, the Linux Audio Developers Plugin API."
-LONG="
+DESC="These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
 Set of LADSPA pluggins by Steve Harris.
 These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
 "

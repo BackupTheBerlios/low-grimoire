@@ -6,11 +6,10 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.nomachine.com/sources.php"
       URL="http://www.nomachine.com/download/nxsources"
-      REQ="XFree86"
+      REQ=( "XFree86" )
 #   OPT[0]="nxcomp:::add nx compression"
 #FRESHMEAT=""
-    SHORT="X11 compression library."
-LONG="
+DESC="X11 compression library.
 X11 compression library.
 "
 

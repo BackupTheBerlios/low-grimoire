@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.opensc.org"
       URL="http://www.opensc.org/files/"
-      REQ="pcsc-lite"
+      REQ=( "pcsc-lite" )
 #FRESHMEAT=""
-    SHORT="OpenCT, a middleware framework for smart card terminals."
-LONG="
+DESC="OpenCT, a middleware framework for smart card terminals.
 It all started with a reader driver library - I wanted to write a
 library to provide a framework for people writing drivers for smart
 card readers. The idea was to provide all the usualy stuff (T=0, T=1,

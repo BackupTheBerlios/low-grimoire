@@ -6,12 +6,13 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://kaptain.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
-      REQ="zlib qt-x11-free "
+      REQ=( "zlib qt-x11-free "
+            "libpng:::add png support"
+            "jpeg:::add jpeg support" )
    OPT[0]="libpng:::add png support"
    OPT[1]="jpeg:::add jpeg support"
 #FRESHMEAT=""
-    SHORT="Kaptain is a universal graphical front-end for command line programs."
-LONG="
+DESC="Kaptain is a universal graphical front-end for command line programs.
 Kaptain is a universal graphical front-end for command line programs.
 "
 

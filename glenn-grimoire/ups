@@ -6,10 +6,9 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.concerto.demon.co.uk/UPS/main.html"
       URL="$SOURCEFORGE_URL"
-      REQ="XFree86"
+      REQ=( "XFree86" )
 #FRESHMEAT=""
-    SHORT="Ups is a source level C,C++ and Fortran debugger that runs under X11."
-LONG="
+DESC="Ups is a source level C,C++ and Fortran debugger that runs under X11.
 Ups is a source level C,C++ and Fortran debugger that runs under X11.
 Currently supported systems are FreeBSD and GNU/Linux on Intel x86 and
 Solaris on SPARC. On these systems it runs native; it is not a front-end

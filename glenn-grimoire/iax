@@ -8,7 +8,6 @@ ATTRIBUTE="library"
       URL="ftp://ftp.digium.com/pub"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="An implementation of the Inter-Asterisk eXchange protocol."
-LONG="
+DESC="An implementation of the Inter-Asterisk eXchange protocol.
 An implementation of the Inter-Asterisk eXchange protocol.
 "

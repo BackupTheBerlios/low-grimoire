@@ -6,10 +6,9 @@ ATTRIBUTE="x11"
    SOURCE="udeproject/$SPELL-$VERSION"
  HOMEPAGE="http://udeproject.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="XFree86"
+      REQ=( "XFree86" )
 #FRESHMEAT=""
-    SHORT="The UDE-Project is creating a new WM."
-LONG="
+DESC="The UDE-Project is creating a new WM.
 The UDE-Project is creating a new WM which will be a complete GUI in
 future. The project does not use any special GUI-Libraries such as QT
 or GTK+. We just use the standard Xlibs (also to make UDE faster). UDE

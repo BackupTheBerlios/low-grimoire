@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://lumumba.luc.ac.be/jori/jvoiplib/jvoiplib.html"
       URL="http://lumumba.luc.ac.be/jori"
-      REQ="jrtplib jthread qt-x11-free"
+      REQ=( "jrtplib jthread qt-x11-free" )
 #FRESHMEAT=""
-    SHORT="JRTPLIB is an object-oriented RTP library written in C++."
-LONG="
+DESC="JRTPLIB is an object-oriented RTP library written in C++.
 JRTPLIB is an object-oriented RTP library written in C++.
 "
 

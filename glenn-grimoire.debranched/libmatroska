@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://matroska.org"
       URL="http://dl.matroska.org/downloads"
-      REQ="libebml"
+      REQ=( "libebml" )
 #FRESHMEAT=""
-    SHORT="Library for reading matroska files, a video wrapper format like avi."
-LONG="
+DESC="Library for reading matroska files, a video wrapper format like avi.
 Library for reading matroska files, a video wrapper format like avi.
 "
 

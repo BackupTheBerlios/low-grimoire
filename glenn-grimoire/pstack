@@ -8,8 +8,7 @@ ATTRIBUTE="console"
       URL="http://www.whatsis.com/"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="pstack dumps a stack trace for a process, given the pid of that process."
-LONG="
+DESC="pstack dumps a stack trace for a process, given the pid of that process.
 pstack dumps a stack trace for a process, given the pid of that process.
 If the process named is part of a thread group, then all the threads in
 the group are traced. See the man page for more information.

@@ -6,12 +6,11 @@
     SOURCE="$SPELL/${SPELL}_$VERSION.zip"
   HOMEPAGE="http://stella.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="SDL XFree86"
+       REQ=( "SDL XFree86" )
 #   OPT[0]="XFree86:--with-opengl::use opengl"
   ESTIMATE="16"
 # FRESHMEAT=""
-     SHORT="Stella is a multi-platform Atari 2600 VCS emulator."
-LONG="
+DESC="Stella is a multi-platform Atari 2600 VCS emulator.
 Stella is a multi-platform Atari 2600 VCS emulator.
 "
 

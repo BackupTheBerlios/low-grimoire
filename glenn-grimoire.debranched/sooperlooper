@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://essej.net/sooperlooper"
       URL="http://essej.net"
-      REQ="ladspa_sdk"
+      REQ=( "ladspa_sdk" )
 #FRESHMEAT=""
-    SHORT="SooperLooper is a looping sampler ladspa plugin"
-LONG="
+DESC="SooperLooper is a looping sampler ladspa plugin
 SooperLooper is a looping sampler very much like the Gibson/Oberheim
 Echoplex Digital Pro (EDP). In fact, it is a downright emulation of an
 EDP, with some additional features and a silly name. I figured that the

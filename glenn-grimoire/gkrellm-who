@@ -8,10 +8,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellmwho2_$VERSION.orig.tar.gz"
  HOMEPAGE="http://shisha.spb.ru/projects/GkrellmWHO2"
       URL="http://shisha.spb.ru/debian"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="This plugin displays currently logged in users in the scrolling line."
-LONG="
+DESC="This plugin displays currently logged in users in the scrolling line.
 This plugin displays currently logged in users in the scrolling line. It
 also shows number of logins for each username and may show idle status.
 

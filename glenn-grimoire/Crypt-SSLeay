@@ -6,9 +6,8 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-0.51"
        URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/C/CH/CHAMAS"
-       REQ="perl openssl"
-     SHORT="OpenSSL glue that provides LWP https support."
-LONG="
+       REQ=( "perl openssl" )
+DESC="OpenSSL glue that provides LWP https support.
 OpenSSL glue that provides LWP https support.
 "
 

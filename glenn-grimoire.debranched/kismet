@@ -6,12 +6,12 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.kismetwireless.net"
        URL="http://www.kismetwireless.net/code"
-       REQ="libpcap mktemp ncurses zlib"
+       REQ=( "libpcap mktemp ncurses zlib"
+             "ImageMagick:::for ImageMagick support" )
     OPT[0]="ImageMagick:::for ImageMagick support"
 #    OPT[1]="ethereal:::for ethereal wiretap"
 # FRESHMEAT="ethereal"
-     SHORT="Kismet is a wirelesss network detector"
-LONG="
+DESC="Kismet is a wirelesss network detector
 Kismet is an 802.11 wireless network sniffer - this is different from
 a normal network sniffer (such as Ethereal or tcpdump) because it
 separates and identifies different wireless networks in the area. Kismet

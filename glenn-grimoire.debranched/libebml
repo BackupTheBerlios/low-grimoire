@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="http://dl.matroska.org/downloads"
       REQ=""
 #FRESHMEAT=""
-    SHORT="Library for reading ebml files (binary ML)."
-LONG="
+DESC="Library for reading ebml files (binary ML).
 Library for reading ebml files (binary ML).
 "
 

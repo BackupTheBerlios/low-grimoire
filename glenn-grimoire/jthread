@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="http://lumumba.luc.ac.be/jori"
       REQ=""
 #FRESHMEAT=""
-    SHORT="The JThread package provides some classes to make use of threads easy on different platforms."
-LONG="
+DESC="The JThread package provides some classes to make use of threads easy on different platforms.
 The JThread package provides some classes to make use of threads easy on
 different platforms. The classes are actually rather simple wrappers
 around existing thread implementations.

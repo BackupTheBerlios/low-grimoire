@@ -7,9 +7,8 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.freedesktop.org/Cairo"
       URL="http://cairographics.org/snapshots
            http://www.freedesktop.org/Cairo/snapshots"
-      REQ="libxml2"
+      REQ=( "libxml2" )
 #FRESHMEAT=""
-    SHORT="libsvg provides a parser for SVG content in files or buffers."
-LONG="
+DESC="libsvg provides a parser for SVG content in files or buffers.
 libsvg provides a parser for SVG content in files or buffers.
 "

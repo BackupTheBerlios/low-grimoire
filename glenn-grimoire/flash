@@ -6,10 +6,9 @@ ATTRIBUTE="library x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.swift-tools.net/Flash"
       URL="http://www.swift-tools.net/Flash"
-      REQ="XFree86"
+      REQ=( "XFree86" )
 #FRESHMEAT=""
-    SHORT="GPL implementation of flash(TM)."
-LONG="
+DESC="GPL implementation of flash(TM).
 GPL Flash (TM) library is a set of source codes that allow to play Flash
 (TM) movies. The core of the library is a graphic renderer that is
 portable is to be re-used in applications that need to play Flash(TM)

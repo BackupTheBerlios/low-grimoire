@@ -6,10 +6,9 @@ ATTRIBUTE="driver"
    SOURCE="${SPELL}-drv-$VERSION"
  HOMEPAGE="http://www.linuxnet.com/sourcedrivers.html"
       URL="http://www.linuxnet.com/drivers/readers/files"
-      REQ="pcsc-lite"
+      REQ=( "pcsc-lite" )
 #FRESHMEAT=""
-    SHORT="Driver for the Reflex USB (Schlumberger Sema) reader for Linux."
-LONG="
+DESC="Driver for the Reflex USB (Schlumberger Sema) reader for Linux.
 Driver for the Reflex USB (Schlumberger Sema) reader for Linux.
 (based on SCM SCR 301 USB reader driver for Linux)
 "

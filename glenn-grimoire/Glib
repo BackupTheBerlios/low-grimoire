@@ -6,9 +6,8 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="glib ExtUtils-PkgConfig"
-     SHORT="This module provides perl access to Glib and GLibs GObject libraries."
-LONG="
+       REQ=( "glib ExtUtils-PkgConfig" )
+DESC="This module provides perl access to Glib and GLibs GObject libraries.
 This module provides perl access to Glib and GLibs GObject libraries.
 GLib is a portability and utility library; GObject provides a generic
 type system with inheritance and a powerful signal system.  Together

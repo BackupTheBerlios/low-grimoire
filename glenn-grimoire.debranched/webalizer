@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION-src"
  HOMEPAGE="http://www.mrunix.net/webalizer/"
       URL="ftp://ftp.mrunix.net/pub"
-      REQ="gd zlib db libpng"
+      REQ=( "gd zlib db libpng" )
 #FRESHMEAT=""
-    SHORT="The Webalizer is a fast, free web server log file analysis program."
-LONG="
+DESC="The Webalizer is a fast, free web server log file analysis program.
 The Webalizer is a fast, free web server log file analysis program. It
 produces highly detailed, easily configurable usage reports in HTML
 format, for viewing with a standard web browser.

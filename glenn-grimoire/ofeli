@@ -9,8 +9,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #   OPT[0]="metis:::add metis support"
 #FRESHMEAT=""
-    SHORT="An Object Finite Element Library"
-LONG="
+DESC="An Object Finite Element Library
 OFELI (Object Finite Element LIbrary) is an object oriented library of
 C++ classes for development of finite element codes. Its main features
 are : 

@@ -6,10 +6,9 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://siag.nu/neXtaw/"
       URL="http://siag.nu/pub"
-      REQ="xfree86"
+      REQ=( "xfree86" )
 #FRESHMEAT=""
-    SHORT="neXtaw is a replacement library for the Athena (libXaw) widget set."
-LONG="
+DESC="neXtaw is a replacement library for the Athena (libXaw) widget set.
 neXtaw is a replacement library for the Athena (libXaw) widget set. It is
 based on Xaw3d, by Kaleb Keithley and is almost 100% backward compatible
 with it. Its goal is to try to emulate the look and feel of the N*XTSTEP

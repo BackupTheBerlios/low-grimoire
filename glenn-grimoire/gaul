@@ -6,11 +6,11 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-devel-$VERSION"
  HOMEPAGE="http://gaul.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=""
+||REQ||            REQ=( ""
+                  "slang:--enable-slang=yes::use S-Lang for scripting" )
    OPT[0]="slang:--enable-slang=yes::use S-Lang for scripting"
 #FRESHMEAT=""
-    SHORT="The Genetic Algorithm Utility Library."
-LONG="
+DESC="The Genetic Algorithm Utility Library.
 The Genetic Algorithm Utility Library (or, GAUL for short) is a flexible
 programming library designed to aid in the development of applications
 that use genetic, or evolutionary, algorithms. It provides data structures

@@ -7,9 +7,8 @@
   HOMEPAGE="http://www.goof.com/pcg/marc/"
 #       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
        URL="$SOURCEFORGE_URL"
-       REQ="perl glib"
-     SHORT="Easily build XS extensions that depend on XS extensions."
-LONG="
+       REQ=( "perl glib" )
+DESC="Easily build XS extensions that depend on XS extensions.
 Easily build XS extensions that depend on XS extensions.
 "
 

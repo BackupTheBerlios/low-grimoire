@@ -6,9 +6,8 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="libgnomeui Gnome2-VFS"
-     SHORT="The Gnome2 module allows a perl developer to use the Gnome libraries."
-LONG="
+       REQ=( "libgnomeui Gnome2-VFS" )
+DESC="The Gnome2 module allows a perl developer to use the Gnome libraries.
 The Gnome2 module allows a perl developer to use the Gnome libraries.
 "
 

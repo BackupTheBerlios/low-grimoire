@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://cscope.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="ncurses"
+      REQ=( "ncurses" )
 #FRESHMEAT=""
-    SHORT="Cscope is a developer's tool for browsing source code."
-LONG="
+DESC="Cscope is a developer's tool for browsing source code.
 Cscope is a developer's tool for browsing source code. It has an impeccable
 Unix pedigree, having been originally developed at Bell Labs back in the
 days of the PDP-11. Cscope was part of the official AT&T Unix distribution

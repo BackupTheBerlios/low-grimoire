@@ -7,10 +7,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellshoot/gkrellshoot-$VERSION"
  HOMEPAGE="http://gkrellshoot.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="gkrellm ImageMagick"
+      REQ=( "gkrellm ImageMagick" )
 #FRESHMEAT=""
-    SHORT="This Plugin gives easy access to Screen Lock and Screen Shoot facility."
-LONG="
+DESC="This Plugin gives easy access to Screen Lock and Screen Shoot facility.
 This Plugin gives easy access to Screen Lock and Screen Shoot facility.
 For Screen capture this uses ImageMagick. Displays animation(Screen Saver
 like) along with 'Lock' and 'Shoot' button to be clicked on. With Screen

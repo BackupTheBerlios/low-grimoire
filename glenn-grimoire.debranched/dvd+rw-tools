@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://fy.chalmers.se/~appro/linux/DVD+RW"
       URL="http://fy.chalmers.se/~appro/linux/DVD+RW/tools"
-      REQ="m4"
+      REQ=( "m4" )
 #FRESHMEAT=""
-    SHORT="dvd+rw-tools masters the DVD media, both +RW/+R and -R[W]."
-LONG="
+DESC="dvd+rw-tools masters the DVD media, both +RW/+R and -R[W].
 dvd+rw-tools masters the DVD media, both +RW/+R and -R[W].
 "
 

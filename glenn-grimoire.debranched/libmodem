@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="http://www.smsclient.org/download/libmodem"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="libmodem is a library that allow you to use your modems transparently with regard of kind of modem attached to a line."
-LONG="
+DESC="libmodem is a library that allow you to use your modems transparently with regard of kind of modem attached to a line.
 libmodem is a library that allow you to use your modems transparently
 with regard of kind of modem attached to a line.
 "

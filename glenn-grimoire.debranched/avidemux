@@ -7,15 +7,18 @@
 #       URL="http://fixounet.free.fr/avidemux/"
        URL="http://download.berlios.de"
   HOMEPAGE="http://fixounet.free.fr/avidemux/"
-       REQ="gtk+ glib mad,lib libxml2 nasm"
+       REQ=( "gtk+ glib mad,lib libxml2 nasm"
+             "XviD:::For Alternate Mpeg-4 Encoding"
+             "lame:::For MP3 Encoding"
+             "a52dec:::For AC3 Decoding"
+             "libvorbis:::For Ogg Vorbis encoding/decoding" )
     OPT[0]="XviD:::For Alternate Mpeg-4 Encoding"
     OPT[1]="lame:::For MP3 Encoding"
     OPT[2]="a52dec:::For AC3 Decoding"
     OPT[3]="libvorbis:::For Ogg Vorbis encoding/decoding"
   ESTIMATE="1466"
  FRESHMEAT="avidemux"
-     SHORT="A graphical video editor supporting many formats"
-LONG="
+DESC="A graphical video editor supporting many formats
 A graphical video editor supporting many formats
 "
 

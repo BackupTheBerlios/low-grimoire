@@ -6,9 +6,8 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/release/src/$SPELL-$VERSION"
  HOMEPAGE="http://pgadmin.postgresql.org/"
       URL="$POSTGRESQL_URL"
-      REQ="wxGTK postgresql"
+      REQ=( "wxGTK postgresql" )
 #FRESHMEAT=""
-    SHORT="pgAdmin3 is a comprehensive PostgreSQL database design and management system."
-LONG="
+DESC="pgAdmin3 is a comprehensive PostgreSQL database design and management system.
 pgAdmin3 is a comprehensive PostgreSQL database design and management system.
 "

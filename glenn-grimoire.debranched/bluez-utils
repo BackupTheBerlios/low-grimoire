@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://bluez.sourceforge.net"
       URL="http://bluez.sourceforge.net/download"
-      REQ="bluez-libs"
+      REQ=( "bluez-libs" )
 #FRESHMEAT=""
-    SHORT="Bluetooth Utils."
-LONG="
+DESC="Bluetooth Utils.
 Bluetooth Utils.
 "
 

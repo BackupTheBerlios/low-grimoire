@@ -10,10 +10,9 @@ ATTRIBUTE="console client"
 #      URL="$SOURCEFORGE_URL"
       URL="http://savannah.nongnu.org/download/giftcurs"
  ESTIMATE="310"
-      REQ="giftd"
+      REQ=( "giftd" )
 #FRESHMEAT=""
-    SHORT="giFTcurs is an ncurses front end to giFT."
-LONG="
+DESC="giFTcurs is an ncurses front end to giFT.
 YOU MUST HAVE giFT\!  this is technically not a requirement (in the spell)
 giFTcurs is an ncurses front end to giFT.
 "

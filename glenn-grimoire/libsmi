@@ -6,10 +6,9 @@ ATTRIBUTE="library utility"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
       URL="ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/"
-      REQ="flex bison diffutils wget"
+      REQ=( "flex bison diffutils wget" )
 #FRESHMEAT=""
-    SHORT="libsmi - A Library to Access SMI MIB Information."
-LONG="
+DESC="libsmi - A Library to Access SMI MIB Information.
 The core of the libsmi distribution is a library that allows management
 applications to access SMI MIB module definitions. On top of this library,
 there are tools to check, analyze dump, convert, and compare MIB

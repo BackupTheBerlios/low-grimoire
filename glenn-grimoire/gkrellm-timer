@@ -8,10 +8,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellm_timers/gkrellm_timers-$VERSION"
  HOMEPAGE="http://triq.net/gkrellm_timers.html"
       URL="http://triq.net"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="GKrellm plugin that is a countdown timer."
-LONG="
+DESC="GKrellm plugin that is a countdown timer.
 Obviously there are many other things you need to monitor. Lets just say
 you want to count down the time needed to brew tee. Then   gkrellm_timers
 plugin is the solution. (Yes, you can count down to any event and even

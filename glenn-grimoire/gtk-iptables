@@ -6,8 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://gtk-iptables.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="gtk+,v1.2 iptables"
-    SHORT="gtk-iptables is a gtk-based frontend for iptables written in C."
-LONG="
+      REQ=( "gtk+,v1.2 iptables" )
+DESC="gtk-iptables is a gtk-based frontend for iptables written in C.
 gtk-iptables is a gtk-based frontend for iptables written in C.
 "

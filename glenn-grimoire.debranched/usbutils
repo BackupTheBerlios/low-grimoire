@@ -8,8 +8,7 @@ ATTRIBUTE="console"
       URL="http://wwwbode.cs.tum.edu/Par/arch/usb/download"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="This package is intended to be for USB what Martin Mares' pciutils is for PCI."
-LONG="
+DESC="This package is intended to be for USB what Martin Mares' pciutils is for PCI.
 This package is intended to be for USB what Martin Mares' pciutils is for
 PCI.
 "

@@ -6,10 +6,9 @@ ATTRIBUTE="driver"
    SOURCE="${SPELL}-$VERSION"
  HOMEPAGE="http://alioth.debian.org/projects/pcsclite"
       URL="http://alioth.debian.org/download.php/378"
-      REQ="flex libusb"
+      REQ=( "flex libusb" )
 #FRESHMEAT=""
-    SHORT="PC/SC Architecture (smart cards)."
-LONG="
+DESC="PC/SC Architecture (smart cards).
 PC/SC Architecture for most Unix type operating systems. Allows easy
 porting of Windows smartcard software to other operating systems. Supports
 many types of serial, PCMCIA, and USB smartcard readers and cryptographic

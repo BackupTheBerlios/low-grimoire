@@ -6,9 +6,8 @@
     SOURCE="$SPELL/$SPELL-$VERSION"
   HOMEPAGE="http://www.mojotoad.com/sisk/projects/HTML-TableExtract"
        URL="http://www.mojotoad.com/sisk/projects"
-       REQ="perl HTML-Parser"
-     SHORT="This is a module based on HTML::Parser that serves to extract information contained in tables from HTML documents."
-LONG="
+       REQ=( "perl HTML-Parser" )
+DESC="This is a module based on HTML::Parser that serves to extract information contained in tables from HTML documents.
 This is a module based on HTML::Parser that serves to extract information
 contained in tables from HTML documents.
 "

@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-v$VERSION"
  HOMEPAGE="http://eckbox.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="svgalib"
+      REQ=( "svgalib" )
 #FRESHMEAT=""
-    SHORT="Eckbox is software that allows a user to remotely shoulder surf on a target computer's monitor."
-LONG="
+DESC="Eckbox is software that allows a user to remotely shoulder surf on a target computer's monitor.
 Eckbox is software that allows a user to remotely shoulder surf on a target
 computer's monitor (this is known as van Eck Phreaking).  It requires a
 certain amount of hardware that must be made by the user.  Instructions for

@@ -6,14 +6,17 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://logjam.danga.com"
       URL="http://logjam.danga.com/download"
-      REQ="gtk+ curl libxml2"
+      REQ=( "gtk+ curl libxml2"
+            "gtkspell:::add gtkspell support"
+            "gtkhtml:::add gtkhtml support"
+            "librsvg:::add librsvg support"
+            "xmms:::add xmms support" )
    OPT[0]="gtkspell:::add gtkspell support"
    OPT[1]="gtkhtml:::add gtkhtml support"
    OPT[2]="librsvg:::add librsvg support"
    OPT[3]="xmms:::add xmms support"
 #FRESHMEAT=""
-    SHORT="LogJam is a client for LiveJournal."
-LONG="
+DESC="LogJam is a client for LiveJournal.
 LogJam is a client for LiveJournal.  It lets you post, edit old
 entries, manage your friends, and whatever other useful
 LiveJournal-related features we can think of.

@@ -6,11 +6,10 @@ ATTRIBUTE="library"
    SOURCE="sdlmm/$SPELL-$VERSION"
  HOMEPAGE="http://sdlmm.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
-      REQ="SDL"
+      REQ=( "SDL" )
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
-    SHORT="This is a C++ glue to SDL (Simple DirectMedia Layer) library."
-LONG="
+DESC="This is a C++ glue to SDL (Simple DirectMedia Layer) library.
 This is a C++ glue to SDL (Simple DirectMedia Layer) library- a low-level,
 cross-platform multimedia library. SDLmm will utilize C++ features while
 still being close to SDL in syntax (and naming).

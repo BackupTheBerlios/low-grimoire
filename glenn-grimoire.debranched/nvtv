@@ -7,10 +7,9 @@ ATTRIBUTE="gnome x11"
  HOMEPAGE="http://sourceforge.net/projects/nv-tv-out"
       URL="$SOURCEFORGE_URL"
     # There is a gtk2 gui, but might not look good (layouts)
-      REQ="gtk+-v1.2 pciutils XFree86 NVIDIA-Linux-x86"
+      REQ=( "gtk+-v1.2 pciutils XFree86 NVIDIA-Linux-x86" )
 #FRESHMEAT=""
-    SHORT="A tool to enable TV-Out on Linux for NVidia cards."
-LONG="
+DESC="A tool to enable TV-Out on Linux for NVidia cards.
 This is a tool to enable TV-Out on Linux for NVidia cards. It does not
 need the kernel, supports multiple TV encoder chips. You may use all the
 features of the chip, down to direct register access, and all resolutions

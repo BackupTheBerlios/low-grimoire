@@ -7,10 +7,9 @@ ATTRIBUTE="server"
  HOMEPAGE="http://jabberd.jabberstudio.org"
       URL="http://www.jabberstudio.org/files/jabberd2"
 # Nearly all of these requirements should be OPT[x]
-      REQ="openssl Linux-PAM db postgresql"
+      REQ=( "openssl Linux-PAM db postgresql" )
 #FRESHMEAT=""
-    SHORT="Jabberd 2.0 server"
-LONG="
+DESC="Jabberd 2.0 server
 Jabberd 2.0 server
 "
 

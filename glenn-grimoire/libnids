@@ -6,11 +6,11 @@ ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.packetfactory.net/projects/libnids/"
       URL="http://www.packetfactory.net/projects/libnids/dist"
-      REQ="libnet libpcap"
+      REQ=( "libnet libpcap"
+            "libnet::--disable-libnet:include code requiring libnet" )
    OPT[0]="libnet::--disable-libnet:include code requiring libnet"
 #FRESHMEAT=""
-    SHORT="Libnids is an implementation of an E-component of Network Intrusion Detection System."
-LONG="
+DESC="Libnids is an implementation of an E-component of Network Intrusion Detection System.
 Libnids is an implementation of an E-component of Network Intrusion
 Detection System. It emulates the IP stack of Linux 2.0.x. Libnids offers
 IP defragmentation, TCP stream assembly and TCP port scan detection.

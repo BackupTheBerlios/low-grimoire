@@ -6,9 +6,8 @@
     SOURCE="$SPELL/${SPELL}_$VERSION.orig"
   HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
        URL="ftp://ftp.debian.org/debian/pool/main/l"
-       REQ="gzip popt"
-     SHORT="Rotates, compresses, removes and mails system log files."
-LONG="
+       REQ=( "gzip popt" )
+DESC="Rotates, compresses, removes and mails system log files.
 The logrotate utility is designed to simplify the administration of
 log files on a system which generates a lot of log files.  Logrotate
 allows for the automatic rotation compression, removal and mailing of

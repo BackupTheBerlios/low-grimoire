@@ -6,9 +6,8 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://pdl.perl.org"
        URL="ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/C/CS/CSOE"
-       REQ="perl"
-     SHORT="The perlDL project aims to turn perl into an efficient numerical language for scientific computing."
-LONG="
+       REQ=( "perl" )
+DESC="The perlDL project aims to turn perl into an efficient numerical language for scientific computing.
 The perlDL project aims to turn perl into an efficient numerical language for
 scientific computing. The PDL module gives standard perl the ability to
 COMPACTLY store and SPEEDILY manipulate the large N-dimensional data sets which

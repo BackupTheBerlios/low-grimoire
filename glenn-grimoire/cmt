@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="http://www.ladspa.org/download"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="The Computer Music Toolkit (CMT) is a collection of LADSPA plugins."
-LONG="
+DESC="The Computer Music Toolkit (CMT) is a collection of LADSPA plugins.
 The Computer Music Toolkit (CMT) is a collection of LADSPA plugins for use
 with software synthesis and recording packages on Linux.
 "

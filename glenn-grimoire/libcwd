@@ -6,10 +6,9 @@ ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://libcwd.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="gcc doxygen graphviz"
+      REQ=( "gcc doxygen graphviz" )
 #FRESHMEAT=""
-    SHORT="Libcwd is a thread-safe, full-featured debugging support library for C++ developers."
-LONG="
+DESC="Libcwd is a thread-safe, full-featured debugging support library for C++ developers.
 Libcwd is a thread-safe, full-featured debugging support library for C++
 developers.  It includes ostream-based debug output with custom debug
 channels and devices, powerful memory allocation debugging support, as well

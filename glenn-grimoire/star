@@ -8,8 +8,7 @@ ATTRIBUTE="console"
       URL="ftp://ftp.berlios.de/pub/star"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="The fastest and most POSIX 1003.1 conformant tar implementation."
-LONG="
+DESC="The fastest and most POSIX 1003.1 conformant tar implementation.
 The fastest and most POSIX 1003.1 conformant tar implementation.
 "
 

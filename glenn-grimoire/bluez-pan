@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://bluez.sourceforge.net"
       URL="http://bluez.sourceforge.net/download"
-      REQ="bluez-sdp"
+      REQ=( "bluez-sdp" )
 #FRESHMEAT=""
-    SHORT="Bluetooth Personal Area Networking (PAN)."
-LONG="
+DESC="Bluetooth Personal Area Networking (PAN).
 Bluetooth Personal Area Networking (PAN)
 	pand - PAN profile daemon.
 	dund - LAN access profile daemon.

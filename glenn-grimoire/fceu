@@ -8,13 +8,13 @@
   HOMEPAGE="http://fceultra.sourceforge.net"
        URL="http://fceultra.sourceforge.net/releases"
 #       REQ="SDL gtk+,v1.2"
-       REQ="SDL"
+       REQ=( "SDL"
+             "XFree86:--with-opengl::use opengl" )
    OPT[0]="XFree86:--with-opengl::use opengl"
 #   OPT[1]="gtk+:--with-gtk::add gtk gui" # not functioning atm
   ESTIMATE="16"
 # FRESHMEAT=""
-     SHORT="FCE Ultra is a NES(Nintendo Entertainment System) emulator."
-LONG="
+DESC="FCE Ultra is a NES(Nintendo Entertainment System) emulator.
 FCE Ultra is a NES(Nintendo Entertainment System) and Famicom(Family
 Computer) emulator for a variety of different platforms, based on Bero's
 FCE. Game compatibility is very high, provided you provide non-corrupt

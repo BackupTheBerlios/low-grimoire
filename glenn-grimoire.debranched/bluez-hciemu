@@ -6,9 +6,8 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://bluez.sourceforge.net"
       URL="http://bluez.sourceforge.net/download"
-      REQ="glib bluez-libs"
+      REQ=( "glib bluez-libs" )
 #FRESHMEAT=""
-    SHORT="HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)."
-LONG="
+DESC="HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ).
 HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)
 "

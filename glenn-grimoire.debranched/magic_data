@@ -10,8 +10,7 @@ ATTRIBUTE="data"
 	   http://www.e-league.com/files"
 #      REQ=""
 #FRESHMEAT=""
-    SHORT="Magic card data, used for mindless."
-LONG="
+DESC="Magic card data, used for mindless.
 Magic card data, used for mindless.
 "
 

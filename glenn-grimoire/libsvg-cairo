@@ -7,10 +7,9 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.freedesktop.org/Cairo"
       URL="http://cairographics.org/snapshots
            http://www.freedesktop.org/Cairo/snapshots"
-      REQ="cairo libsvg"
+      REQ=( "cairo libsvg" )
 #FRESHMEAT=""
-    SHORT="libsvg-cairo provides the ability to render SVG content from files or buffers using cairo."
-LONG="
+DESC="libsvg-cairo provides the ability to render SVG content from files or buffers using cairo.
 libsvg-cairo provides the ability to render SVG content from files or
 buffers. All rendering is performed using the cairo rendering library.
 "

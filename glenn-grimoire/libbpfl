@@ -8,8 +8,7 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
       REQ=""
 #FRESHMEAT=""
-    SHORT="The Bayesian Probability Filtering Library ( BPFL ) is a C++ library intended for creation of Bayesian Filtering Programs."
-LONG="
+DESC="The Bayesian Probability Filtering Library ( BPFL ) is a C++ library intended for creation of Bayesian Filtering Programs.
 The Bayesian Probability Filtering Library ( BPFL ) is a C++ library
 intended for creation of Bayesian Filtering Programs.
 "

@@ -7,10 +7,9 @@ ATTRIBUTE="concurrent x11"
    SOURCE="gkrellmlaunch/gkrellmlaunch-$VERSION"
  HOMEPAGE="http://gkrellmlaunch.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="gkrellm"
+      REQ=( "gkrellm" )
 #FRESHMEAT=""
-    SHORT="GKrellMLaunch plugin which allows one-click access to frequently used applications from GKrellM."
-LONG="
+DESC="GKrellMLaunch plugin which allows one-click access to frequently used applications from GKrellM.
 GKrellMLaunch plugin which allows one-click access to frequently used
 applications from GKrellM.
 "

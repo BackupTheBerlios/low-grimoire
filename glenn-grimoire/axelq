@@ -6,10 +6,9 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.lintux.cx/axel.html"
       URL="http://zephilia.dyndns.org/tsuki_yomi/axelq/releases"
-      REQ="axel mktemp"
+      REQ=( "axel mktemp" )
 #FRESHMEAT=""
-    SHORT="Queue manager for axel."
-LONG="
+DESC="Queue manager for axel.
 axelq is a queue manager for the download accelerator axel. axelq
 basically reads some URLs, caches them and runs axel to download them.
 "

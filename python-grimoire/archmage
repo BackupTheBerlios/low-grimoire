@@ -6,11 +6,10 @@
     SOURCE="$SPELL/$SPELL-$VERSION"
   HOMEPAGE="http://archmage.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="Python swig"
+       REQ=( "Python swig" )
   ESTIMATE="16"
 # FRESHMEAT=""
-     SHORT="arCHMage - extensible reader/decompiler of files in CHM format(Microsoft HTML help, also known as Compiled HTML)."
-LONG="
+DESC="arCHMage - extensible reader/decompiler of files in CHM format(Microsoft HTML help, also known as Compiled HTML).
 arCHMage - extensible reader/decompiler of files in CHM format(Microsoft
 HTML help, also known as Compiled HTML).
 "

@@ -6,11 +6,10 @@
     SOURCE="pyxlwriter/$SPELL-$VERSION"
   HOMEPAGE="http://sourceforge.net/projects/pyxlwriter"
        URL="$SOURCEFORGE_URL"
-       REQ="Python"
+       REQ=( "Python" )
   ESTIMATE="16"
 # FRESHMEAT=""
-     SHORT="pyXLWriter is a Python library for generating Excel spreadsheets."
-LONG="
+DESC="pyXLWriter is a Python library for generating Excel spreadsheets.
 pyXLWriter is a Python library for generating Excel spreadsheets. It's a
 port of John McNamara's Perl Spreadsheet::WriteExcel module (see
 http://www.cpan.org) to Python. Requires Python 2.3+.

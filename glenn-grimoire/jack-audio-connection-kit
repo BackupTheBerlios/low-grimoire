@@ -7,13 +7,16 @@ ATTRIBUTE="server library"
  HOMEPAGE="http://jackit.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
+      REQ=( ""
+            "doxygen:::make documentation with dOxygen"
+            "libsndfile:::to build the jackrec example client"
+            "libcap:--enable-capabilities::to have realtime support (Note requires a kernel patch)" )
    OPT[0]="doxygen:::make documentation with dOxygen"
    OPT[1]="libsndfile:::to build the jackrec example client"
    OPT[2]="libcap:--enable-capabilities::to have realtime support (Note requires a kernel patch)"
 #   OPT[3]="fltk:::to build an example client"
 #FRESHMEAT=""
-    SHORT="JACK is a low-latency audio server."
-LONG="
+DESC="JACK is a low-latency audio server.
 JACK is a low-latency audio server, written primarily for the GNU/Linux
 operating system. It can connect a number of different applications to an
 audio device, as well as allowing them to share audio between themselves.

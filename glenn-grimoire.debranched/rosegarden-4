@@ -6,15 +6,18 @@ ATTRIBUTE="kde x11"
    SOURCE="rosegarden/$SPELL-$VERSION"
  HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
       URL="$SOURCEFORGE_URL"
-      REQ="kdemultimedia qt-x11-free"
+      REQ=( "kdemultimedia qt-x11-free"
+            "arts:--with-arts::add arts capability"
+            "alsa-lib:::for sound support"
+            "jack-audio-connection-kit:--with-jack::for connection to JACK the low-latency audio server"
+            "ladspa_sdk:--with-ladspa::for ladspa plugins" )
    OPT[0]="arts:--with-arts::add arts capability"
    OPT[1]="alsa-lib:::for sound support"
    OPT[2]="jack-audio-connection-kit:--with-jack::for connection to JACK the low-latency audio server"
    OPT[3]="ladspa_sdk:--with-ladspa::for ladspa plugins"
 #   OPT[4]="Csound:--with-ladspa::"
 #FRESHMEAT=""
-    SHORT="Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer, notation editor, and general-purpose music composition and editing application for Unix and Linux."
-LONG="
+DESC="Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer, notation editor, and general-purpose music composition and editing application for Unix and Linux.
 Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer,
 notation editor, and general-purpose music composition and editing
 application for Unix and Linux. It is currently somewhere approaching

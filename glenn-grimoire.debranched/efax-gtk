@@ -6,11 +6,10 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-${VERSION}.src"
  HOMEPAGE="http://www.cvine.freeserve.co.uk/efax-gtk"
       URL="http://www.cvine.freeserve.co.uk"
-      REQ="gtkmm libsigc++ gettext ghostscript"
+      REQ=( "gtkmm libsigc++ gettext ghostscript" )
 #   OPT[0]="arts:--with-arts::add arts capability"
 FRESHMEAT="efax-gtk"
-    SHORT="This program is a Gtk+/Gtkmm front end for the efax program for receiving and sending faxes with a fax modem."
-LONG="
+DESC="This program is a Gtk+/Gtkmm front end for the efax program for receiving and sending faxes with a fax modem.
 This program is a Gtk+/Gtkmm front end for the efax program for
 receiving and sending faxes with a fax modem.  The efax-gtk distribution
 now also compiles and installs a patched version of efax-0.9a-001114, so
