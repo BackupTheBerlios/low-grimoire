@@ -9,7 +9,7 @@ ATTRIBUTE="library"
     SHORT="C++ client API for PostgreSQL."
 LONG="
 C++ client API for PostgreSQL. The standard front-end (in the sense of
-"language binding") for writing C++ programs that use PostgreSQL.
+\"language binding\") for writing C++ programs that use PostgreSQL.
 Supersedes older libpq++ interface. Requires an up-to-date C++ compiler,
 like gcc 2.95 or better.
 "

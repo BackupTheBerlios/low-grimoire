@@ -13,7 +13,7 @@
      SHORT="SWF Tools is a collection of SWF manipulation and generation utilities"
 LONG="
  SWF Tools is a collection of SWF manipulation and generation utilities
- written by Rainer Bo"hme and Matthias Kramm. It is released under the GPL.
+ written by Rainer Bo\"hme and Matthias Kramm. It is released under the GPL.
 Included are:
 
 PDF2SWF A PDF to SWF Converter. Generates one frame per page. Enables you 

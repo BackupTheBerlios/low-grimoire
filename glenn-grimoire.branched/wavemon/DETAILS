@@ -19,7 +19,7 @@ Key features:
   information at once
 - adaptive level bargraphs for link quality, signal/noise strength and
   signal-to-noise ratio
-- customizeable "level alarm" feature that notices the user of changes in
+- customizeable \"level alarm\" feature that notices the user of changes in
   signal level strength audibly and/or visually
 - full-screen level histogram displaying signal/noise levels and SNR
 - list of access points in range

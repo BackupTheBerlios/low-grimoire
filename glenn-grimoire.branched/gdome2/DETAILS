@@ -10,8 +10,8 @@ ATTRIBUTE="library"
 LONG="
 Here some key points about libgdome: 
 * Libgdome is a DOM level2 Implementation.
-* Libgdome supports "Core" and "XML" modules (DOM level2 Core Recommendation).
-* Libgdome supports "Events" and "MutationEvents" modules (DOM level2 Events Recommendation).
+* Libgdome supports \"Core\" and \"XML\" modules (DOM level2 Core Recommendation).
+* Libgdome supports \"Events\" and \"MutationEvents\" modules (DOM level2 Events Recommendation).
 * Libgdome is based on libxml2.
 * Libgdome is written in C.
 "

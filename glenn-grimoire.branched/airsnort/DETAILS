@@ -13,7 +13,7 @@ encryption key when enough packets have been gathered.
 
 802.11b, using the Wired Equivalent Protocol (WEP), is crippled with
 numerous security flaws. Most damning of these is the weakness described
-in " Weaknesses in the Key Scheduling Algorithm of RC4 " by Scott Fluhrer,
+in \" Weaknesses in the Key Scheduling Algorithm of RC4 \" by Scott Fluhrer,
 Itsik Mantin and Adi Shamir. Adam Stubblefield was the first to implement
 this attack, but he has not made his software public. AirSnort, along with
 WEPCrack, which was released about the same time as AirSnort, are the
