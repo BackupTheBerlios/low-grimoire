@@ -6,7 +6,7 @@
   prepare_install            &&
   make    install            &&
   mkdir -p /usr/doc/$SPELL   &&
-  cp README* /usr/doc/$SPELL &&
+  cp doc/* /usr/doc/$SPELL &&
   mkdir -p /usr/share/$SPELL &&
   cp scripts/* /usr/share/$SPELL
 
