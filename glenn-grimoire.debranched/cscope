@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://cscope.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=( "ncurses" )
-#FRESHMEAT=""
+FRESHMEAT="cscope"
 DESC="Cscope is a developer's tool for browsing source code.
 Cscope is a developer's tool for browsing source code. It has an impeccable
 Unix pedigree, having been originally developed at Bell Labs back in the

@@ -9,7 +9,7 @@ ATTRIBUTE="console"
    OPT[0]="gettext:--i18n=1::add internationalization"
       REQ=( "curl"
             "gettext:--i18n=1::add internationalization" )
-#FRESHMEAT=""
+FRESHMEAT="axel"
 DESC="download accelerator using libcurl.
 Axel does the same thing any other accelerator does: 
 it opens more than one HTTP/FTP connection per download 

@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib"
       URL="http://66.93.236.84/~jedwin/projects"
       REQ=( "libtool" )
-#FRESHMEAT=""
+FRESHMEAT="chmlib"
 DESC="CHMLIB is a library for dealing with Microsoft ITSS/CHM format files.
 CHMLIB is a library for dealing with Microsoft ITSS/CHM format files. Right
 now, it is a very simple library, but sufficient for dealing with all of

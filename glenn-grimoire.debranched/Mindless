@@ -8,7 +8,7 @@ ATTRIBUTE="x11"
       URL="$SOURCEFORGE_URL"
       REQ=( "gtk+ magic_data" )
 #   OPT[0]="arts:--with-arts::add arts capability"
-#FRESHMEAT=""
+FRESHMEAT="mindless"
 DESC="Mindless Automaton is a virtual tabletop on which you can play card games against other people over a network.
 Mindless Automaton is a virtual tabletop on which you can play card games
 against other people over a network.  It was designed to simulate the

@@ -7,7 +7,7 @@ ATTRIBUTE="kde x11"
  HOMEPAGE="http://www.cogsci.princeton.edu/~wn"
       URL="ftp://ftp.cogsci.princeton.edu/pub/wordnet"
       REQ=( "tk" )
-#FRESHMEAT=""
+FRESHMEAT="wordnet"
 DESC="WordNet® is an online lexical reference system.
 WordNet® is an online lexical reference system whose design is inspired
 by current psycholinguistic theories of human lexical memory. English

@@ -9,7 +9,7 @@ ATTRIBUTE="server"
       REQ=( "postgresql"
             "tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap" )
    OPT[0]="tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap"
-#FRESHMEAT=""
+FRESHMEAT="cks"
 DESC="CryptNET keyserver.
 CryptNET keyserver.
 "
