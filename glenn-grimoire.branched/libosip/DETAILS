@@ -1,0 +1,12 @@
+  VERSION=( "0.9.7" "0.9.6" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="osip/$SPELL-$VERSION"
+ HOMEPAGE="http://www.fsf.org/software/osip/osip.html"
+      URL="$GNU_URL"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="The GNU oSIP library is an implementation of SIP - rfc3261."
+cat << EOF
+The GNU oSIP library is an implementation of SIP - rfc3261.
+EOF
