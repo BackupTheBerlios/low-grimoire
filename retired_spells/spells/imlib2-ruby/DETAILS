@@ -1,10 +1,10 @@
-   VERSION=( "0.4.1" )
+   VERSION=( "0.4.2" "0.4.1" )
   CATEGORY="development"
  ATTRIBUTE="library"
     SOURCE="download/$SPELL-$VERSION"
        URL="http://www.pablotron.org"
   HOMEPAGE="http://www.pablotron.org"
-       REQ="ruby imlib2"
+       REQ="imlib2 ruby"
   ESTIMATE="2"
      SHORT="Extension for ruby to imlib2"
 cat << EOF
