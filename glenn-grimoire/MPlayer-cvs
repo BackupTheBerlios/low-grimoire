@@ -1,0 +1,123 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+inherit MPlayer
+unset SOURCE URL
+  VERSION=( "cvs" )
+ATTRIBUTE="cvs $ATTRIBUTE"
+ HOMEPAGE="http://www.freedesktop.org/Software/waimea"
+      REQ=( "cvs autoconf automake gtk+-v1.2 libdvdread libpng popt unzip w32codec"
+            "MPlayer-Skin:::to install skins for GUI"
+            "MPlayer-font:::to install fonts"
+            "SDL:--enable-sdl::to use SDL audio/video output"
+            "alsa-lib:::for alsa sound support"
+            "aalib:::for ascii art video output rendering"
+            "cdparanoia:::for playing/reading audio CDs"
+            "freetype::--disable-freetype:for anti-aliased osd/subs support"
+            "lame:::to use lame mp3 codec"
+            "libdv:::a software codec for digital video camcorders"
+            "mad:::for playing mpeg audio formats"
+            "svgalib:::for output through svgalib"
+            "xmms:--enable-xmms::to build with XMMS input plugin support"
+            "lirc:--enable-lirc::to enable LIRC (remote control) support"
+            "XviD:::for encoding movies to XviD format"
+            "faad2:--enable-external-faad::for aac decoding support"
+            "samba:--enable-smb::for SMB input support"
+            ":--enable-menu::Enable OSD menu support (NOT DVD MENU)"
+            "libdts:--enable-libdts::for libdts support"
+            "esound:::for ESD sound support"
+            "jack-audio-connection-kit:::for JACK sound support" )
+   OPT[0]="MPlayer-Skin:::to install skins for GUI"
+   OPT[1]="MPlayer-font:::to install fonts"
+   OPT[2]="SDL:--enable-sdl::to use SDL audio/video output"
+   OPT[3]="alsa-lib:::for alsa sound support"
+   OPT[4]="aalib:::for ascii art video output rendering"
+   OPT[5]="cdparanoia:::for playing/reading audio CDs"
+   OPT[6]="freetype::--disable-freetype:for anti-aliased osd/subs support"
+   OPT[7]="lame:::to use lame mp3 codec"
+   OPT[8]="mad:::for playing mpeg audio formats"
+   OPT[9]="svgalib:::for output through svgalib"
+   OPT[10]="xmms:--enable-xmms::to build with XMMS input plugin support"
+   OPT[11]="lirc:--enable-lirc::to enable LIRC (remote control) support"
+   OPT[12]="XviD:::for encoding movies to XviD format"
+   OPT[13]="faad2:--enable-external-faad::for aac decoding support"
+   OPT[14]="samba:--enable-smb::for SMB input support"
+   OPT[15]=":--enable-menu::Enable OSD menu support (NOT DVD MENU)"
+   OPT[16]="libdts:--enable-libdts::for libdts support"
+   OPT[17]="esound:::for ESD sound support"
+   OPT[18]="jack-audio-connection-kit:::for JACK sound support"
+ EPROVIDE="MPlayer"
+   ASSUME="off"
+ ESTIMATE="134"
+
+build() {
+  
+  install_conf()  {
+  
+    mkdir  -p   doc
+    mv     etc  doc
+    cd          doc/etc
+    
+    sed    -i  "s:include =:# include =:
+                s:# vo=:vo=:
+                s:# ao=:ao=:"  example.conf
+    
+    mkdir  -p  /etc/mplayer
+    
+    for  FILE  in  *.conf
+    do   install  -m 0644 -o root -g root  $FILE  /etc/mplayer
+    done
+  
+  }
+  
+  unset  CFLAGS  CXXFLAGS
+  
+  ./configure  --prefix=/usr                      \
+               --enable-gui                       \
+               --confdir=/etc/mplayer             \
+               --enable-menu                      \
+               --enable-largefiles                \
+               --with-win32libdir=/usr/lib/win32  \
+               --with-reallibdir=/usr/lib/win32   \
+               --with-xanimlibdir=/usr/lib/win32  \
+               --enable-shared-pp                 \
+               --disable-shared-pp                \
+               $OPTS                              &&
+  make                                            &&
+  prepare_install                                 &&
+  make    install  prefix=/usr                    &&
+  make clean                                      &&
+  install_conf
+
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=":pserver:anonymous@mplayerhq.hu:/cvsroot/mplayer"
+  MODULE=main
+  export CVS_RSH=ssh
+  
+  cd $BUILD_DIR/..
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2"
+  fi
+  
+  if [ -d $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -d $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+  mkdir -p $SOURCE_CACHE/$SPELL/$VERSION &&
+  tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2" "$SPELL-$VERSION"
+}

@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.3" )
+ CATEGORY="graphic"
+ATTRIBUTE="gnome"
+ HOMEPAGE="http://gnofract4d.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "pygtk" )
+ ESTIMATE="115"
+DESC="Gnofract 4D is a program which allows you to create beautiful mathematically-based images called fractals.
+Gnofract 4D is a program which allows you to create beautiful mathematically-based images called fractals.
+"
+
+build() {
+  ./setup.py build    &&
+  ./setup.py install  &&
+  ./test.py
+}

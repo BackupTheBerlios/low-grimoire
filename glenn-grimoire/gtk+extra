@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.99.17" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://gtkextra.sourceforge.net"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+      URL="http://gtkextra.sourceforge.net/src"
+      REQ=( "gtk+-v1.2" )
+ ESTIMATE="115"
+DESC="GtkExtra is a useful set of widgets for creating GUI's for the Xwindows system using GTK+.
+GtkExtra is a useful set of widgets for creating GUI's for the Xwindows
+system using GTK+. You can use it complementary to GTK+ and it is written
+in C.
+"

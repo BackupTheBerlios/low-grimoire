@@ -1,0 +1,28 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.13" )
+ CATEGORY="audio"
+ATTRIBUTE="kde"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://qjackctl.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "qt-x11-free jack-audio-connection-kit alsa-lib" )
+#FRESHMEAT=""
+DESC="Qjackctl is a simple Qt application to control the JACK sound server daemon, specific for the Linux Audio Desktop infrastructure.
+Qjackctl is a simple Qt application to control the JACK sound server daemon, specific for the Linux Audio Desktop infrastructure.
+"
+
+build() {
+
+  export QTDIR=/usr
+  sed -i "s:QTDIR/include:QTDIR/include/qt:" configure &&
+  sed -i "s:INCLUDEPATH += ./src:INCLUDEPATH += ./src /usr/include/qt:" qjackctl.pro.in &&
+  default_build
+
+#  ./configure --with-xinerama \
+#              $OPTS           &&
+#  make                        &&
+#  prepare_install             &&
+#  make    install  prefix=/usr
+
+}
