@@ -1,10 +1,10 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.2" "2.11" "2.10" )
+  VERSION=( "2.23" "2.2" "2.11" "2.10" )
  CATEGORY="editor"
 ATTRIBUTE="console"
-   SOURCE="cddb/$SPELL-$VERSION.tar.gz"
-      URL="http://armin.emx.at"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+      URL="http://armin.emx.at/cddb/"
  HOMEPAGE="http://armin.emx.at/cddb/"
       REQ=( "perl" )
 DESC="CDDB_get gets the CDDB info for an audio cd.
