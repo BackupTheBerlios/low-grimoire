@@ -1,7 +1,9 @@
 (
-
+  if [ "$VERSION" == "0.4.2" ]; then
+    sed -i "s:fftw3f:fftw3:" configure
+  fi
+  
   ./configure --prefix=/usr   \
-              --enable-3dnow  \
               $OPTS           &&
   make                        &&
   prepare_install             &&

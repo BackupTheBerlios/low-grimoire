@@ -1,4 +1,4 @@
-   VERSION=( "1.21" "1.13" )
+   VERSION=( "1.22" "1.21" "1.13" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
   HOMEPAGE="http://gborg.postgresql.org/project/dbdpg/projdisplay.php"

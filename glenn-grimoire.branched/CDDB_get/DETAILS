@@ -1,4 +1,4 @@
-  VERSION="2.10"
+  VERSION=( "2.2" "2.11" "2.10" )
  CATEGORY="editor"
 ATTRIBUTE="console"
    SOURCE="cddb/$SPELL-$VERSION.tar.gz"

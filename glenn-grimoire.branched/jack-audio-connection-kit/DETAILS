@@ -1,4 +1,4 @@
-  VERSION=("0.72.4" "0.34.0")
+  VERSION=( "0.72.4" "0.34.0" )
  CATEGORY="audio audio-mixer"
 ATTRIBUTE="server library"
    SOURCE="jackit/$SPELL-$VERSION"

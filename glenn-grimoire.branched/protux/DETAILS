@@ -1,4 +1,5 @@
   VERSION=("0.17.9" "0.16.0" "0.15.7" "0.15.6")
+   IGNORE="rc\d+$"
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"

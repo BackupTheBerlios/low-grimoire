@@ -1,7 +1,7 @@
-  VERSION=("none")
+  VERSION=("1.12")
  CATEGORY="audio "
 ATTRIBUTE="driver"
-   SOURCE="$SPELL"
+   SOURCE="${SPELL}_$VERSION"
  HOMEPAGE="http://www.ladspa.org/"
       URL="http://www.ladspa.org/download"
 #      REQ="kdemultimedia qt-x11-free"

@@ -1,6 +1,7 @@
-         VERSION=1.1.13
+         VERSION=( "1.1.14-pre1" "1.1.13" )
         CATEGORY="network"
        ATTRIBUTE="server"
+          SOURCE="$SPELL-$VERSION"
              URL="ftp://ftp.inet.no/pub/socks"
         HOMEPAGE="http://www.inet.no/dante"
            SHORT="Dante is a SOCKS v4 & v5 server"

@@ -1,4 +1,4 @@
-  VERSION=("0.3.0")
+  VERSION=( "0.4.2" "0.3.0" )
  CATEGORY="ladspa-plugin"
 ATTRIBUTE="other"
    SOURCE="$VERSION/$SPELL-$VERSION"
