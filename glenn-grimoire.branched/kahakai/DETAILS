@@ -1,10 +1,10 @@
-  VERSION=("0.2" "0.1")
+  VERSION=( "0.2.1" "0.2" "0.1" )
  CATEGORY="window-manager"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://kahakai.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="imlib2 swig XFree86"
+      REQ="imlib2 swig,v1.3.17 XFree86"
    OPT[0]="ruby:::add ruby bindings"
    OPT[1]="python:::add python bindings"
 #FRESHMEAT=""
