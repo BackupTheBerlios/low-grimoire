@@ -19,5 +19,6 @@ build() {
   sed -i "s|YACC = @YACC@|YACC = @YACC@ -d|" src/sswf/Makefile.in &&
   sed -i 's|am_sswf_OBJECTS = .*|am_sswf_OBJECTS = sswf_grammar.\$(OBJEXT) sswf_lexical.\$(OBJEXT) sswf.\$(OBJEXT) sswf_memory.\$(OBJEXT) sswf_node.\$(OBJEXT) sswf_save.\$(OBJEXT)|' src/sswf/Makefile.in &&
   sed -i "87,88d" src/sswf/Makefile.in &&
+  sed -i 's|-release PACKAGE_VERSION|-release @PACKAGE_VERSION@|' src/lib/Makefile.in &&
   default_build
 }
