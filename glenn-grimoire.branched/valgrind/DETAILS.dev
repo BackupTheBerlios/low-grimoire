@@ -1,4 +1,4 @@
-  VERSION=("1.9.3")
+  VERSION=( "2.1.0" "1.9.3" )
  CATEGORY="debugger"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
