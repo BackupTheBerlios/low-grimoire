@@ -5,7 +5,7 @@ ATTRIBUTE="console client"
  HOMEPAGE="http://giftcurs.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
  ESTIMATE="310"
-      REQ="giFT"
+      REQ="giftd"
 #FRESHMEAT=""
     SHORT="giFTcurs is an ncurses front end to giFT."
 cat << EOF
