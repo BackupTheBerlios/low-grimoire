@@ -30,12 +30,12 @@ build() {
   mkdir -p /opt/distcc                  &&
   DISTCC=$(which distcc)                &&
   for binary in $(ls /opt/gcc/current/bin); do
-    ln -s $DISTCC $binary;
+    ln -s $DISTCC /opt/distcc/$binary;
   done                                  &&
   ( [ -f /etc/sorcery/cpref/distcc ] ||
     ( cp /etc/sorcery/cpref/default /etc/sorcery/cpref/distcc &&
       echo 'export    MAKEFLAGS="-j9"' >> /etc/sorcery/cpref/distcc &&
-      sed -i 's|PATH="|PATH="/opt/distcc|' /etc/sorcery/cpref/distcc )
+      sed -i 's|PATH="|PATH="/opt/distcc:|' /etc/sorcery/cpref/distcc )
   )  &&
   ( grep -q 'CCACHE_PREFIX=distcc' /etc/sorcery/local.config ||
     echo 'CCACHE_PREFIX=distcc' >> /etc/sorcery/local.config
