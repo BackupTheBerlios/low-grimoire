@@ -1,0 +1,16 @@
+  VERSION=( "0.9" )
+ CATEGORY="telephony"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.cce.com/efax"
+      URL="ftp://ftp.metalab.unc.edu/pub/Linux/apps/serialcomm/fax"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="efax is a small ANSI C/POSIX program that sends and receives faxes using any fax modem (Class 1, 2 or 2.0)."
+cat << EOF
+efax is a small ANSI C/POSIX program that sends and receives faxes using
+any fax modem (Class 1, 2 or 2.0).
+
+efax is smaller and easier to install than HylaFAX or mgetty+sendfax. As
+one user put it ``EFAX is a nice simple program for single user systems.''
+EOF
