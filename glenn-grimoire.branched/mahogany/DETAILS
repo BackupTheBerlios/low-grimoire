@@ -1,0 +1,16 @@
+  VERSION=( "cvs" "0.64" )
+ CATEGORY="email"
+ATTRIBUTE="gtk|x11"
+#   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://mahogany.sourceforge.net"
+#      URL="$SOURCEFORGE_URL"
+      REQ="wxGTK openssl latex2html"
+   ASSUME="off"
+#FRESHMEAT=""
+    SHORT="Mahogany is an OpenSource cross-platform mail and news client."
+cat << EOF
+Mahogany is an OpenSource cross-platform mail and news client. It is
+available for X11/Unix and MS Win32 platforms, supporting a wide range of
+protocols and standards, including SMTP, POP3, IMAP, NNTP (including SSL
+support for all of them) and full MIME support.
+EOF
