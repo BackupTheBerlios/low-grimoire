@@ -1,4 +1,4 @@
-   VERSION=( "0.2.4" "0.2.3c" "0.2.3a" "0.2.2" )
+   VERSION=( "0.2.4a" "0.2.4" "0.2.3c" "0.2.3a" "0.2.2" )
   CATEGORY="network"
  ATTRIBUTE="x11"
     SOURCE="$SPELL/$SPELL-$VERSION"
