@@ -1,7 +1,7 @@
-   VERSION=( "1.00" )
+   VERSION=( "1.03" "1.00" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
-    SOURCE="gtk2-perl/$SPELL-Perl-$VERSION"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
        REQ="perl Gtk2 gtkspell"
