@@ -1,0 +1,18 @@
+   VERSION=( "0.97.5" )
+  CATEGORY="game emulator"
+ ATTRIBUTE="console x11"
+    SOURCE="$SPELL-$VERSION.src"
+  HOMEPAGE="http://xodnizel.net/fceultra"
+       URL="http://xodnizel.net/fceultra/downloads"
+       REQ="SDL gtk+,v1.2"
+  ESTIMATE="16"
+# FRESHMEAT=""
+     SHORT="FCE Ultra is a NES(Nintendo Entertainment System) emulator."
+cat << EOF
+FCE Ultra is a NES(Nintendo Entertainment System) and Famicom(Family
+Computer) emulator for a variety of different platforms, based on Bero's
+FCE. Game compatibility is very high, provided you provide non-corrupt
+ROM/disk images.
+EOF
+
+
