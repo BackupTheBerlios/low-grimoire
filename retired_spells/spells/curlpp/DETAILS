@@ -1,0 +1,17 @@
+echo "curlpp"
+  VERSION=( "0.3.0" )
+ CATEGORY="library"
+ATTRIBUTE="new library"
+   SOURCE="curlpp/$SPELL-$VERSION"
+ HOMEPAGE="http://sourceforge.net/projects/curlpp"
+      URL="$SOURCEFORGE_URL"
+    SHORT="C++ bindings for libcurl"
+      REQ="curl"
+ ESTIMATE="83"
+FRESHMEAT="curlpp"
+cat << EOF
+curlpp is a C++ wrapper for libcurl, a free and easy-to-use client-side URL
+transfer library, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT,
+FILE and LDAP. libcurl supports HTTPS certificates, HTTP POST, HTTP PUT, FTP
+uploading, kerberos, HTTP
+EOF
