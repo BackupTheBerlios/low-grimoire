@@ -1,6 +1,4 @@
 (
-  cd $MODULE				&&
-  
   ./configure --prefix=/usr		\
 	      --with-modules=dynamic    \
                $OPTS                    &&

@@ -1,5 +1,4 @@
 (
-  cd $MODULE                         &&
   cd  linux                          &&
   ./autogen.sh                       &&
   ./configure  --build=$BUILD        \

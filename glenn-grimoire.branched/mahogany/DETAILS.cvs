@@ -1,5 +1,6 @@
 unset URL SOURCE
   VERSION=( "cvs" )
       REQ="cvs autoconf automake"
+  PROVIDE="mahogany"
    ASSUME="off"
 #FRESHMEAT=""

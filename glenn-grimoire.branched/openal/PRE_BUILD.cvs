@@ -2,22 +2,20 @@
   MODULE=openal
   export CVS_RSH=ssh
   
+  rmdir $BUILD_DIR
+  
   if [ -f $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 ]; then
     unpack "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2"
-  else
-    mkdir -p $BUILD_DIR
   fi
   
-  pushd $BUILD_DIR
-  if [ -a $BUILD_DIR/$MODULE ]; then
+  if [ -a $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
   else
       CVSCOMMAND="checkout $MODULE"
   fi
   
   cvs -z4 -d $CVSSERVER $CVSCOMMAND
-  popd
   
-  mkdir -p $SOURCE_CACHE/$BSPELL/$VERSION &&
-  tar cjf $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 `basename $BUILD_DIR`
-  
+  if ! [ -a $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
