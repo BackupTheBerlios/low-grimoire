@@ -1,4 +1,4 @@
-  VERSION=( "2.3.10" )
+  VERSION=( "2.3.11" "2.3.10" )
   CATEGORY="library"
   ATTRIBUTE="development"
   HOMEPAGE="http://www.mico.org"
