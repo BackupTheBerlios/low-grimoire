@@ -1,4 +1,4 @@
-   VERSION=( "0.38" "0.37" )
+   VERSION=( "0.40" "0.38" "0.37" )
   CATEGORY="library"
  ATTRIBUTE="development"
   HOMEPAGE="http://www.net-dns.org"

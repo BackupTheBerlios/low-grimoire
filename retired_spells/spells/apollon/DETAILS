@@ -1,4 +1,4 @@
-  VERSION=( "0.8.7" "0.8" )
+  VERSION=( "0.9" "0.8.7" "0.8" )
   CATEGORY="file-sharing"
   ATTRIBUTE="x11"
   HOMEPAGE="http://apollon.sf.net"
@@ -6,7 +6,7 @@
   SOURCE="apollon/apollon-$VERSION"
   REQ="giFT kdelibs"
   FRESHMEAT="apollon"
-  ESTIMATE=444
+  ESTIMATE=563
   SHORT="A P2P client for Linux which supports Kazaa, Gnutlella, and OpenFT."
   cat << EOF
   Apollon is the filesharing client you were waiting for! It uses giFT/openFT as a 

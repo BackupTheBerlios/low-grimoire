@@ -1,10 +1,10 @@
-  VERSION=( "1.0" )
-  CATEGORY="net library"
+  VERSION=( "1.1" "1.0" )
+  CATEGORY="perl net library"
   ATTRIBUTE="development"
   HOMEPAGE="http://www.chiark.greenend.org.uk/~ian/adns"
   URL="ftp://ftp.chiark.greenend.org.uk/users/ian/adns"
   FRESHMEAT="adns"
-  ESTIMATE=206
+  ESTIMATE=130
   SHORT="An advanced alternative, asynchronous resolver"
 
   cat << EOF
