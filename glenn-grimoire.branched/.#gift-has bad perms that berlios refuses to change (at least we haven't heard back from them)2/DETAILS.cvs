@@ -1,0 +1,15 @@
+  VERSION="cvs"
+ CATEGORY="file-transfer"
+ATTRIBUTE="server"
+ HOMEPAGE="http://gift.sf.net"
+    SHORT="giFT: Internet File Transfer"
+      REQ="cvs autoconf automake"
+   ASSUME="off"
+cat << EOF
+giFT is a modular daemon capable of abstracting the communication 
+between the end user and specific filesharing protocols (peer-to-peer 
+or otherwise). The giFT project differs from many other similar projects
+in that it is a distribution of a standalone (platform-independent)
+daemon, a library for client/frontend development, and our own homegrown
+network OpenFT.
+EOF
