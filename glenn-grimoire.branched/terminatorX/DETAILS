@@ -1,4 +1,4 @@
-  VERSION=( "3.80" "3.73" "3.72" )
+  VERSION=( "3.81" "3.80" "3.73" "3.72" )
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"
