@@ -1,0 +1,13 @@
+   VERSION=( "1.08" "1.07" )
+  CATEGORY="development financial"
+ ATTRIBUTE="perl library"
+    SOURCE="finance-quote/$SPELL-$VERSION"
+  HOMEPAGE="http://finance-quote.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl HTML-TableExtract"
+     SHORT="Finance::Quote is a perl module which can be used to obtain financial information from a variety of sources"
+cat << EOF
+Finance::Quote is a perl module which can be used to obtain information
+from a variety of sources, including markets in Australia, USA, Canada,
+Europe, and a number of managed funds.
+EOF
