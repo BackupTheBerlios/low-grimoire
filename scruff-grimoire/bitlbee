@@ -42,6 +42,20 @@ if ! grep "bitlbee" /etc/services >/dev/null
 	else
 	true
 	fi &&
+write_xinetd_bitlbee
+}
+
+
+# It would appear that not all verbose spell scripts have a terse
+# equivalent.  For example ...
+
+post_remove()
+{
+default_post_remove
+cat /etc/services | grep -v "Added by spell bitlbee" > /etc/services
+}
+
+write_xinetd_bitlbee() {
 cat << EOF > /etc/xinetd.d/bitlbee
 service ircd-bitlbee
 {
@@ -60,14 +74,4 @@ service ircd-bitlbee
 	log_on_failure	= USERID ATTEMPT
 }
 EOF
-}
-
-
-# It would appear that not all verbose spell scripts have a terse
-# equivalent.  For example ...
-
-post_remove()
-{
-default_post_remove
-cat /etc/services | grep -v "Added by spell bitlbee" > /etc/services
 }
