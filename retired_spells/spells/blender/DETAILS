@@ -1,4 +1,4 @@
-  VERSION="2.27"
+  VERSION=( "2.31" "2.30" "2.28" "2.27" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="x11"
    SOURCE="source/blender-$VERSION"
@@ -6,6 +6,7 @@ ATTRIBUTE="x11"
  HOMEPAGE="http://www.blender.org"
    OPT[0]="libogg:::for ogg support"
       REQ="egenix-mx-base xfree86 openal openssl Python jpeg libpng zlib mozilla glut SDL"
+ ESTIMATE=2714
 FRESHMEAT="blender"
     SHORT="blender:  a (now) free 3d modeler"
 cat << EOF
