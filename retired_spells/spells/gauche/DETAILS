@@ -1,10 +1,10 @@
-   VERSION=( "0.7.3" "0.7.2" "0.7.1" "0.7" "0.6.8" )
+   VERSION=( "0.7.4.1" "0.7.3" "0.7.2" "0.7.1" "0.7" "0.6.8" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.sourceforge.net/projects/pipeworks"
        URL="$SOURCEFORGE_URL"
     SOURCE="gauche/Gauche-$VERSION.tgz"
-  ESTIMATE="377"
+  ESTIMATE="389"
  FRESHMEAT="gauche"
      SHORT="Gauche is an R5RS Scheme implementation that aims to be a handy tool for daily work"
 cat << EOF
