@@ -9,9 +9,9 @@ ATTRIBUTE="gnome|x11"
    OPT[1]="ffmpeg:--with-avcodec::Use FFMPEG libavcodec for DV video decoding instead of libdv"
 #FRESHMEAT=""
     SHORT="Kino is a non-linear DV editor for GNU/Linux."
-cat << EOF
+LONG="
 Kino is a non-linear DV editor for GNU/Linux. It features excellent
 integration with IEEE-1394 for capture, VTR control, and recording back
 to the camera. It captures video to disk in RawDV and AVI format, in both
 type-1 DV and type-2 DV (separate audio stream) encodings.
-EOF
+"
