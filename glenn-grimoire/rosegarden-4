@@ -20,7 +20,7 @@ beta quality, following two years of sustained active development.
 "
 
 build() {
-(
+
   sed -i "s:dtd/kdex\\.dtd:/usr/share/apps/ksgmltools2/customization/dtd/kdex\\.dtd:" ./gui/docs/en/index.docbook
 
   ./configure --with-xinerama \
@@ -29,5 +29,5 @@ build() {
   prepare_install             &&
   make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

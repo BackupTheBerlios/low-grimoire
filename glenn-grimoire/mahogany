@@ -16,7 +16,7 @@ support for all of them) and full MIME support.
 "
 
 build() {
-(
+
   cd /usr/src/sorcery.cvs/$SPELL/M	&&
 
   ./configure --prefix=/usr		\
@@ -26,7 +26,7 @@ build() {
   prepare_install			&&
   make    install			
   
-) > $C_FIFO 2>&1
+
 
 }
 

@@ -12,7 +12,7 @@ smake is a highly portable make program with automake features.
 "
 
 build() {
-(
+
   
   #sed -i -e "30s:opt/schily:usr:" DEFAULTS/Defaults.linux &&
   make                      &&
@@ -20,5 +20,5 @@ build() {
   make INS_BASE=/usr install
   
   
-) > $C_FIFO 2>&1}
+}
 

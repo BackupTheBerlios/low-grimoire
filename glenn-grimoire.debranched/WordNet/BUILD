@@ -1,4 +1,3 @@
-(
   TK=$(echo -n $(augur version tk) | cut -d . --f=1,2)
   TCL=$(echo -n $(augur version tcl) | cut -d . --f=1,2)
 
@@ -9,5 +8,3 @@
   sed -i "s:local/WordNet-2.0/bin:bin:" src/include/wnconsts.h &&
   prepare_install             &&
   make SrcWorld               
-
-) > $C_FIFO 2>&1

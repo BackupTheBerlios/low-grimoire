@@ -15,13 +15,9 @@ out more about Gtk+ at http://www.gtk.org.
 "
 
 build() {
-(
-  
   perl  Makefile.PL  &&
   make               &&
   prepare_install    &&
   make    install
-
-) > $C_FIFO 2>&1
 }
 

@@ -16,11 +16,11 @@ also shows number of logins for each username and may show idle status.
 "
 
 build() {
-(
+
   sed -i "s:/usr/bin/gcc:gcc:" configure &&
   make                                   &&
   prepare_install                        &&
   make install                           
   
-) > $C_FIFO 2>&1}
+}
 

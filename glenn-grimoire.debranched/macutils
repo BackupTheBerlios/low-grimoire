@@ -55,7 +55,7 @@ macunpack, hexbin, macsave, macstream, binhex, tomac, frommac.
 "
 
 build() {
-(
+
 
   CF="-DTYPES_H -DDIRENT_H -DTERMIOS_H -DNODOT -DAPPLEDOUBLE"
 
@@ -72,6 +72,6 @@ build() {
   install  -o  root  -g  root -m 644  man/macutil.1    /usr/man/man1  &&
   install  -o  root  -g  root -m 644  man/tomac.1      /usr/man/man1
 
-) > $C_FIFO 2>&1
+
 }
 

@@ -14,11 +14,11 @@ This plugin monitors the SNORT alert file (/var/log/snort/alert).
 "
 
 build() {
-(
+
   make                                   &&
   prepare_install                        &&
   mkdir -p /usr/lib/gkrellm2/plugins     &&
   install -c -m 755 gkrellm-snort.so /usr/lib/gkrellm2/plugins
 
-) > $C_FIFO 2>&1}
+}
 

@@ -17,7 +17,6 @@ Descent 2 for linux.
 "
 
 build() {
-(
   unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
   ./configure --prefix=/usr              \
               --bindir=/usr/games        \
@@ -30,6 +29,5 @@ build() {
   make install                           &&
   mkdir -p /usr/share/$SPELL             &&
   cp -R "${SOURCE[1]}"/* /usr/share/$SPELL
-
-) > $C_FIFO 2>&1}
+}
 

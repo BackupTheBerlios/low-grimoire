@@ -13,7 +13,7 @@ omniORB is a robust high performance CORBA ORB for C++ and Python.
 "
 
 build() {
-(
+
   
   sed -i "s:#platform = i586_linux_2.0_glibc2.1:platform = i586_linux_2.0_glibc2.1:" config/config.mk &&
   sed -i "s:#PYTHON = /usr/local/bin/python:PYTHON = python:"       mk/platforms/i586_linux_2.0_glibc2.1.mk &&
@@ -30,5 +30,5 @@ build() {
   cp -R include /usr                            &&
   cp -R idl /usr
 
-) > $C_FIFO 2>&1}
+}
 

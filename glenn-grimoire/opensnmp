@@ -15,7 +15,7 @@ designed to match the architecture of the SNMPv3 RFCs (IETF\'s RFCs
 "
 
 build() {
-(
+
 
   ./configure --prefix=/usr   \
               $OPTS           &&
@@ -23,5 +23,5 @@ build() {
   prepare_install             &&
   make    install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -12,11 +12,9 @@ dvd+rw-tools masters the DVD media, both +RW/+R and -R[W].
 "
 
 build() {
-(
   sed -i "s:/local::" Makefile.m4 &&
   make                            &&
   prepare_install                 &&
   make install
-
-) > $C_FIFO 2>&1}
+}
 

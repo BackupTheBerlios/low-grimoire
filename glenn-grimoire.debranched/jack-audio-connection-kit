@@ -25,7 +25,7 @@ clients, and low latency operation.
 "
 
 build() {
-(
+
   ./configure --enable-posix-shm  \
 	      --enable-optimize   \
 	      --enable-timestamps \
@@ -35,5 +35,5 @@ build() {
   prepare_install             &&
   make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

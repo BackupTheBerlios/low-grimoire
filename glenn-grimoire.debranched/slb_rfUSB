@@ -13,7 +13,7 @@ Driver for the Reflex USB (Schlumberger Sema) reader for Linux.
 "
 
 build() {
-(
+
   
   sed -i "s:local/pcsc:pcsc:" Makefile  &&
   make                                  &&
@@ -21,5 +21,5 @@ build() {
   mkdir -p /usr/pcsc/drivers            &&
   make install
   
-) > $C_FIFO 2>&1}
+}
 

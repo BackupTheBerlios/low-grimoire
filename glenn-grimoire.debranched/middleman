@@ -11,7 +11,7 @@ Middleman filtering proxy server.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr  \
               $OPTS          &&
@@ -23,6 +23,6 @@ build() {
   mkdir -p /usr/share/$SPELL &&
   cp scripts/* /usr/share/$SPELL
 
-) > $C_FIFO 2>&1
+
 }
 

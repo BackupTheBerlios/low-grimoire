@@ -15,7 +15,7 @@ packages.
 "
 
 build() {
-(
+
   cd src
   
   sed -i "s:usr/local:usr:" makefile
@@ -26,5 +26,5 @@ build() {
 
   cd ..
 
-) > $C_FIFO 2>&1}
+}
 

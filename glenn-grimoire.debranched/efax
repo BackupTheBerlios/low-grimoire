@@ -16,10 +16,8 @@ one user put it ``EFAX is a nice simple program for single user systems.''
 "
 
 build() {
-(
   make                        &&
   prepare_install             &&
   make    install
-  
-) > $C_FIFO 2>&1}
+}
 

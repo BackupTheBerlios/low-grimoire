@@ -22,7 +22,7 @@ with the addition of Ruby and Perl shortly thereafter.
 "
 
 build() {
-(
+
   # only need this for $VERSION < 0.5
   # ./autogen.sh
   
@@ -32,5 +32,5 @@ build() {
   prepare_install                        &&
   make install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -16,7 +16,7 @@ HPUX.
 "
 
 build() {
-(
+
   
   sed -i "s:/doc:/doc/pcsc-lite:" doc/Makefile.in
   sed -i "s:/doc:/doc/pcsc-lite:" doc/Makefile.am
@@ -26,5 +26,5 @@ build() {
   default_build
   cp DRIVERS README SECURITY /usr/doc/pcsc-lite
   
-) > $C_FIFO 2>&1}
+}
 

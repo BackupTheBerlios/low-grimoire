@@ -15,7 +15,7 @@ and load ring tones depending on the phone you have.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               --enable-security          \
@@ -25,5 +25,5 @@ build() {
   make install                           &&
   make install-docs
 
-) > $C_FIFO 2>&1}
+}
 

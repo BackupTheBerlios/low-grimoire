@@ -14,7 +14,7 @@ Kaptain is a universal graphical front-end for command line programs.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               --with-xinerama            \
@@ -23,5 +23,5 @@ build() {
   prepare_install                        &&
   make install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -13,7 +13,7 @@ intended for creation of Bayesian Filtering Programs.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               $OPTS                      &&
@@ -25,5 +25,5 @@ build() {
   mkdir -p /usr/share/$SPELL             &&
   cp -R tests /usr/share/$SPELL
 
-) > $C_FIFO 2>&1}
+}
 

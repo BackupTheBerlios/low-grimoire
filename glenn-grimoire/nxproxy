@@ -13,9 +13,9 @@ X11 proxy which has support for compression.
 "
 
 build() {
-(
+
   sed -i "s:../nxcomp:/usr/include/nx:" Makefile.in
   default_build            
 
-) > $C_FIFO 2>&1}
+}
 

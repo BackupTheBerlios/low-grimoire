@@ -19,7 +19,7 @@ GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
 "
 
 build() {
-(
+
   INCLUDEDIR=/usr/include/glt
   local -a SUBDIRS=("fonts" "glt" "glui" "glutm" "math" "mesh" "misc" "node" "unifont")
 
@@ -40,7 +40,7 @@ build() {
   cd /usr/share              &&
   unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" )
   
-) > $C_FIFO 2>&1}
+}
 
 pre_build() {
 default_pre_build

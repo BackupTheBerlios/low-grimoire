@@ -17,8 +17,6 @@ for formal verification techniques, and applied to other research areas.
 "
 
 build() {
-(
-  
   make -C cudd-2.3.0.1                    &&
   cd nusmv                                &&
   sed -i "s:/include:/include/NuSMV:" Makefile.in &&
@@ -33,5 +31,5 @@ build() {
 #  prepare_install                        &&
 #  make install
 
-) > $C_FIFO 2>&1}
+}
 

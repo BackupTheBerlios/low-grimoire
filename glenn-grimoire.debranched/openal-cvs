@@ -7,7 +7,7 @@ unset URL SOURCE
 #FRESHMEAT=""
 
 build() {
-(
+
   cd  linux                          &&
   ./autogen.sh                       &&
   ./configure  --build=$BUILD        \
@@ -23,7 +23,7 @@ build() {
   cp doc/{EXT_vorbis,LOKI*,openal.texi,sample.openalrc} \
      ../docs/*ml /usr/doc/$BSPELL
   
-) > $C_FIFO 2>&1
+
 
 }
 

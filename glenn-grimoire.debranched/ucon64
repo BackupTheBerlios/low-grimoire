@@ -41,7 +41,7 @@ Its main features are:
 "
 
 build() {
-(
+
 
   cd src                      &&
   ./configure --prefix=/usr   \
@@ -64,5 +64,5 @@ build() {
   chmod +r *                  &&
   popd
 
-) > $C_FIFO 2>&1}
+}
 

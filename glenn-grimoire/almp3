@@ -15,7 +15,6 @@ LINUX...) and actively mantained.
 "
 
 build() {
-(
   sed -i "s/#TARGET=LINUX_STATIC/TARGET=LINUX_STATIC/" Makefile
 
   make                        &&
@@ -23,5 +22,5 @@ build() {
   install  -o root -g root -m 644  lib/linux/libalmp3.a /usr/lib &&
   cp include/* /usr/include/
 
-) > $C_FIFO 2>&1}
+}
 

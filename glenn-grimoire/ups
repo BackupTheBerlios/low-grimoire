@@ -16,7 +16,7 @@ provide conditional debugging and can also be built as a seperate program.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               --enable-math              \
@@ -30,5 +30,5 @@ build() {
   install -o root -g root -m 755 tkups /usr/bin
   # might should install med that comes with it
 
-) > $C_FIFO 2>&1}
+}
 

@@ -7,7 +7,7 @@ unset URL SOURCE
 #FRESHMEAT=""
 
 build() {
-(
+
   ./configure --prefix=/usr		\
 	      --with-modules=dynamic    \
                $OPTS                    &&
@@ -16,7 +16,7 @@ build() {
   make    install			&&
   make realclean
   
-) > $C_FIFO 2>&1
+
 
 }
 

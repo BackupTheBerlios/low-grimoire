@@ -12,7 +12,7 @@ Library for reading matroska files, a video wrapper format like avi.
 "
 
 build() {
-(
+
   cd make/linux                &&
   make                         &&
   prepare_install              &&
@@ -20,5 +20,5 @@ build() {
   mkdir -p /usr/share/$SPELL   &&
   cp -r ../../test /usr/share/$SPELL
 
-) > $C_FIFO 2>&1}
+}
 

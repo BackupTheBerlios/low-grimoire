@@ -16,7 +16,7 @@ to save/restore your game at any time, and more.
 "
 
 build() {
-(
+
 
   cd  src
 
@@ -29,6 +29,6 @@ build() {
   prepare_install                       &&
   make    install
 
-) > $C_FIFO 2>&1
+
 }
 

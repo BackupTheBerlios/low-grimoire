@@ -15,7 +15,7 @@ Python, PHP and PERL.
 "
 
 build() {
-(
+
 
   ./configure --prefix=/usr    \
               --with-xinerama  \
@@ -26,5 +26,5 @@ build() {
   prepare_install             &&
   make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

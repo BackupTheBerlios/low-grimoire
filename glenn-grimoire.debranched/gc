@@ -17,7 +17,7 @@ accessed.
 "
 
 build() {
-(
+
 
   ./configure --prefix=/usr   \
 	      --enable-cplusplus \
@@ -27,5 +27,5 @@ build() {
   prepare_install             &&
   make    install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -12,7 +12,7 @@ GtkMathView is a C++ rendering engine for MathML documents.
 "
 
 build() {
-(
+
   if [ "$VERSION" == "0.4.2" ]; then
     sed -i "s:T1_Get_no_fonts:T1_GetNoFonts:" src/T1_FontManager.cc
   fi
@@ -24,5 +24,5 @@ build() {
   prepare_install               &&
   make    install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -20,10 +20,10 @@ button will lock the screen and starts your screen saver.
 "
 
 build() {
-(
+
   make                                   &&
   prepare_install                        &&
   make install                           
   
-) > $C_FIFO 2>&1}
+}
 

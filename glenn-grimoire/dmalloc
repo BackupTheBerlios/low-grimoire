@@ -17,7 +17,6 @@ reporting, and general logging of statistics.
 "
 
 build() {
-(
   if [ $VERSION == '5.2.4' ]; then
     ln -s docs/dmalloc.info .
   fi
@@ -32,6 +31,5 @@ build() {
   make install                           &&
   make installinfo                       &&
   make installdocs
-
-) > $C_FIFO 2>&1}
+}
 

@@ -18,7 +18,7 @@ short.
 "
 
 build() {
-(
+
   #export QTDIR=/usr
   
   #sed -i "s/\\\$QTDIR/\\/usr\\/include\\/qt/" configure
@@ -34,6 +34,6 @@ build() {
   prepare_install             &&
   make    install
 
-) > $C_FIFO 2>&1
+
 }
 

@@ -19,7 +19,7 @@ http://www.topology.org/linux/logrotate.html
 "
 
 build() {
-(
+
   sed -i "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" Makefile
 
   make               &&
@@ -35,6 +35,6 @@ build() {
   install -m 755 examples/logrotate.cron /etc/cron.daily/logrotate &&
   touch /var/lib/logrotate.status
 
-) > $C_FIFO 2>&1
+
 }
 

@@ -19,7 +19,7 @@ available through a simple S-Lang interface.
 "
 
 build() {
-(
+
 
   default_build
 #  ./configure --with-xinerama \
@@ -28,5 +28,5 @@ build() {
 #  prepare_install             &&
 #  make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

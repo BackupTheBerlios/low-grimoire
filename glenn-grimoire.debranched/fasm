@@ -17,7 +17,7 @@ support and does multiple quick passes to optimize the code for size.
 "
 
 build() {
-(
+
   cd source/Linux             &&
   ../../fasm fasm.asm fasm    &&
   chmod +x fasm               &&
@@ -26,5 +26,5 @@ build() {
   mkdir -p /usr/share/fasm                        &&
   cp -R ../../examples  /usr/share/fasm/
 
-) > $C_FIFO 2>&1}
+}
 

@@ -7,7 +7,7 @@ ATTRIBUTE="cvs server"
  ESTIMATE="763"
 
 build() {
-(
+
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
                $OPTS
@@ -17,7 +17,7 @@ build() {
   make    install			&&
   make distclean
   
-) > $C_FIFO 2>&1
+
 
 }
 

@@ -14,11 +14,11 @@ GKrellm plugin to see the three most cpu intensive processes.
 "
 
 build() {
-(
+
   make                                   &&
   prepare_install                        &&
   mkdir -p /usr/lib/gkrellm2/plugins     &&
   install -c -m 755 gkrelltop2.so /usr/lib/gkrellm2/plugins
   
-) > $C_FIFO 2>&1}
+}
 

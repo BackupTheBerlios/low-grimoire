@@ -22,7 +22,7 @@ ROM/disk images.
 
 
 build() {
-(
+
 
 if [ "$VERSION" != "0.97.5" ] ; then
     configure --prefix=/usr            \
@@ -40,7 +40,7 @@ else
     cp -r Documentation /usr/doc/$SPELL
 fi
 
-) > $C_FIFO 2>&1
+
 
 }
 

@@ -23,7 +23,7 @@ movies. This library comes with those freely redistributable tools:
 "
 
 build() {
-(
+
   sed -i -e "10i #include <math.h>" Lib/swf.h &&
   sed -i -e "6i CPP=g++" Player/Makefile      &&
   sed -i -e "10s:CC:CPP:" Player/Makefile     &&
@@ -40,5 +40,5 @@ build() {
   install -o root -g root -m 644 Plugin/npflash.so /usr/share/$SPELL &&
   install -o root -g root -m 644 Test/ScreenSaver.swf /usr/share/$SPELL
 
-) > $C_FIFO 2>&1}
+}
 

@@ -12,11 +12,11 @@ The fastest and most POSIX 1003.1 conformant tar implementation.
 "
 
 build() {
-(
+
   
   make                      &&
   prepare_install           &&
   make install
   
-) > $C_FIFO 2>&1}
+}
 

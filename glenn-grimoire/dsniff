@@ -19,7 +19,6 @@ redirected SSH and HTTPS sessions by exploiting weak bindings in ad-hoc PKI.
 "
 
 build() {
-(
   sedit "s/dtd\\/kdex.dtd/\\/usr\\/share\\/apps\\/ksgmltools2\\/customization\\/dtd\\/kdex\\.dtd/" ./gui/docs/en/index.docbook
 
   ./configure --with-xinerama \
@@ -27,6 +26,5 @@ build() {
   make                        &&
   prepare_install             &&
   make    install  prefix=/usr
-
-) > $C_FIFO 2>&1}
+}
 

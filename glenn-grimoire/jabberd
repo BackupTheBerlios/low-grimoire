@@ -13,7 +13,7 @@ Jabberd 2.0 server
 "
 
 build() {
-(
+
   #OPTS="--enable-debug --enable-storage=\"pgsql db fs\" --enable-authreg=\"anon pipe pgsql pam ldap db\""
   #echo $OPTS >> myconfig
   #default_build
@@ -32,5 +32,5 @@ build() {
   mkdir -p /usr/share/jabberd &&
   cp tools/* /usr/share/jabberd
 
-) > $C_FIFO 2>&1}
+}
 

@@ -13,12 +13,12 @@ Pari is an advanced solver for applied number theory.
 "
 
 build() {
-(
+
   ./Configure --prefix=/usr   \
               $OPTS           &&
   make gp                     &&
   prepare_install             &&
   make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

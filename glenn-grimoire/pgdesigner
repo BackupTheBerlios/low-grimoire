@@ -15,7 +15,7 @@ for basic datamodeling.
 "
 
 build() {
-(
+
 
   aclocal                     &&
   autoconf                    &&
@@ -26,5 +26,5 @@ build() {
   prepare_install             &&
   make    install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -1,4 +1,3 @@
-(
   if [ "$VERSION" == "0.48b" ]; then
     patch  -p0  <  $SCRIPT_DIR/smslink-0.48b.patch
   fi
@@ -23,5 +22,3 @@
   mkdir -p /usr/share/$SPELL/server      &&
   cp -R varia /usr/share/$SPELL          &&
   cp server/{gsmaccess,gsmcaps,gsmdbtab,gsmdevices} /usr/share/$SPELL/server
-
-) > $C_FIFO 2>&1

@@ -17,11 +17,11 @@ details of the Ticke
 "
 
 build() {
-(
+
   sed -i "s:-C::" Makefile               &&
   make                                   &&
   prepare_install                        &&
   make install                           
   
-) > $C_FIFO 2>&1}
+}
 

@@ -28,7 +28,7 @@ based upon the HOLLYWOOD 1.0.4 branch of Gimp.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr                  \
               --enable-precision=float $OPTS &&
@@ -36,5 +36,5 @@ build() {
   prepare_install                            &&
   make    install                           
   
-) > $C_FIFO 2>&1}
+}
 

@@ -24,7 +24,7 @@ quality that doesn't require very high bandwidth.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               --disable-mozilla          \
@@ -33,5 +33,5 @@ build() {
   prepare_install                        &&
   make install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -12,12 +12,12 @@ The id3v2 tagger is a GNU/Linux command-line editor for ID3v1/v2 tags.
 "
 
 build() {
-(
+
 
   make clean                  &&
   make                        &&
   prepare_install             &&
   install  -o root -g root -m 755  id3v2  /usr/bin  
 
-) > $C_FIFO 2>&1}
+}
 

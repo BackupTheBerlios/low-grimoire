@@ -17,10 +17,10 @@ track time spend on any business -- not just tee brewing.)
 "
 
 build() {
-(
+
   make                                   &&
   prepare_install                        &&
   make install                           
   
-) > $C_FIFO 2>&1}
+}
 

@@ -13,7 +13,7 @@ giFT's gnutella support.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
               $OPTS                      &&
@@ -23,5 +23,5 @@ build() {
   mkdir -p /usr/doc/$SPELL               &&
   cp README INSTALL NEWS TODO /usr/doc/$SPELL
 
-) > $C_FIFO 2>&1}
+}
 

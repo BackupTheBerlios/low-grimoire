@@ -42,7 +42,7 @@ is provided in  /usr/local/share/emu10k1/README
 "
 
 build() {
-(
+
 
 #  cd dbgemu                                  &&
 #  make                                       &&
@@ -58,5 +58,5 @@ build() {
 #  mkdir -p /usr/doc/emu-tools/dbgemu         &&
 #  cp dbgemu/README /usr/doc/emu-tools/dbgemu
 
-) > $C_FIFO 2>&1}
+}
 

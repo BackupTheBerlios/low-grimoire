@@ -11,13 +11,9 @@ The Gnome2 module allows a perl developer to use Gnome's Wnck libraries.
 "
 
 build() {
-(
-  
   perl  Makefile.PL  &&
   make               &&
   prepare_install    &&
   make    install
-
-) > $C_FIFO 2>&1
 }
 

@@ -12,7 +12,7 @@ The GNU oSIP library is an implementation of SIP - rfc3261.
 "
 
 build() {
-(
+
   
   ./configure --prefix=/usr              \
 	      --enable-gpref             \
@@ -22,5 +22,5 @@ build() {
   prepare_install                        &&
   make install
 
-) > $C_FIFO 2>&1}
+}
 

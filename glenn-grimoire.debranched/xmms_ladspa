@@ -19,11 +19,11 @@ includes all the GPL software at plugin.org.uk maintained by Steve Harris.
 "
 
 build() {
-(
+
 
   make                        &&
   prepare_install             &&
   install  -o root -g root -m 755  ladspa.so  /usr/lib/xmms/Effect  
 
-) > $C_FIFO 2>&1}
+}
 

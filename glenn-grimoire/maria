@@ -14,7 +14,7 @@ modelling formalism. It has been written in C++.
 "
 
 build() {
-(
+
   sed -i "s|<slist>|<backward/slist.h>|" `find`
   sed -i "s|std::slist|slist|" `find`
   sed -i "s|<hash_map>|<backward/hash_map.h>|" `find`
@@ -25,5 +25,5 @@ build() {
   prepare_install             &&
   make    install  PREFIX=/usr
 
-) > $C_FIFO 2>&1}
+}
 

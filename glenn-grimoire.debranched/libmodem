@@ -13,7 +13,7 @@ with regard of kind of modem attached to a line.
 "
 
 build() {
-(
+
   sed -i "s:/var/adm:/var/log:" CONFIG.MAKE         &&
   sed -i "s:CCFLAGS = -Wall -I.:CCFLAGS = -Wall -I. $(CCFLAGS):" CONFIG.MAKE         &&
   make                                   &&
@@ -23,5 +23,5 @@ build() {
   cp README* TODO /usr/doc/$SPELL        &&
   cp etc/modems /etc
 
-) > $C_FIFO 2>&1}
+}
 

@@ -11,13 +11,9 @@ Perl interface to the Video4linux framegrabber interface.
 "
 
 build() {
-(
-  
   perl  Makefile.PL  &&
   make               &&
   prepare_install    &&
   make    install
-
-) > $C_FIFO 2>&1
 }
 

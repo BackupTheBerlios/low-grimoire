@@ -6,7 +6,7 @@ ATTRIBUTE="cvs library"
    ASSUME="off"
 
 build() {
-(
+
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
                $OPTS
@@ -16,7 +16,7 @@ build() {
   make    install			&&
   make distclean
 
-) > $C_FIFO 2>&1
+
 
 }
 

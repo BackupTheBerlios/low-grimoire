@@ -17,7 +17,7 @@ Here some key points about libgdome:
 "
 
 build() {
-(
+
   ./configure --prefix=/usr     \
               --with-html-dir=/usr/doc/$SPELL \
               $OPTS             &&
@@ -25,5 +25,5 @@ build() {
   prepare_install               &&
   make    install
 
-) > $C_FIFO 2>&1}
+}
 

@@ -17,7 +17,7 @@ network apps, TNL will meet your needs.
 "
 
 build() {
-(
+
 
   make                                   &&
   prepare_install                        &&
@@ -27,5 +27,5 @@ build() {
   cp -r tnl/*.h /usr/include/tnl         &&
   cp -r libtomcrypt/*.h /usr/include/libtomcrypt
 
-) > $C_FIFO 2>&1}
+}
 

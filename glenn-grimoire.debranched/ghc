@@ -20,7 +20,7 @@ and a space and time profiler.
 "
 
 build() {
-(
+
 #  export CPPFLAGS="$CPPFLAGS -I/usr/include/gtk-2.0"
 #  export CPPFLAGS="$CPPFLAGS -I/usr/lib/gtk-2.0/include"
 #  export CPPFLAGS="$CPPFLAGS -I/usr/include/glib-2.0"
@@ -46,5 +46,5 @@ build() {
 
 #  dispel "ghc,bin"             &&
 
-) > $C_FIFO 2>&1}
+}
 

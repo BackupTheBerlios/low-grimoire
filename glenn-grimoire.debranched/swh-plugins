@@ -13,7 +13,7 @@ These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
 "
 
 build() {
-(
+
   if [ "$VERSION" == "0.4.2" ]; then
     sed -i "s:fftw3f:fftw3:" configure
   fi
@@ -24,5 +24,5 @@ build() {
   prepare_install             &&
   make    install  prefix=/usr
 
-) > $C_FIFO 2>&1}
+}
 

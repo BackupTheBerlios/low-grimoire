@@ -14,7 +14,7 @@ format, for viewing with a standard web browser.
 "
 
 build() {
-(
+
   ./configure --enable-dns      \
               $OPTS             &&
   make                          &&
@@ -26,5 +26,5 @@ build() {
   cp sample.conf /usr/share/$SPELL &&
   cp country-codes.txt /usr/share/$SPELL
 
-) > $C_FIFO 2>&1}
+}
 

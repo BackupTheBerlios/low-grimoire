@@ -13,10 +13,7 @@ basically reads some URLs, caches them and runs axel to download them.
 "
 
 build() {
-(
-  
   prepare_install                        &&
   ./install --prefix=/usr
-
-) > $C_FIFO 2>&1}
+}
 
