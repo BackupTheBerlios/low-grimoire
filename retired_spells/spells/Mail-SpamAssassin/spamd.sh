@@ -7,7 +7,7 @@ case "$1" in
   start)
 	echo "starting spamd"
 	spamd -d	
-	sleep 3
+	sleep 1
 	echo $spampid > /var/run/spamd.pid
 	;;
   stop)
