@@ -1,0 +1,32 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.2-21" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.osl.iu.edu/research/mtl"
+      URL="http://www.osl.iu.edu/download/research"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="Matrix Template Library"
+LONG="
+The Matrix Template Library (MTL) is a high-performance generic component
+library that provides comprehensive linear algebra functionality for a
+wide variety of matrix formats. 
+
+As with the Standard Template Library (STL), MTL uses a five-fold approach,
+consisting of generic functions, containers, iterators, adaptors, and
+function objects, all developed specifically for high performance numerical
+linear algebra. Within this framework, MTL provides generic algorithms
+corresponding to the mathematical operations that define linear algebra.
+Similarly, the containers, adaptors, and iterators are used to represent
+and to manipulate concrete linear algebra objects such as matrices and
+vectors. 
+"
+
+build() {
+  default_build              &&
+  make clean                 &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r contrib /usr/share/$SPELL
+}
