@@ -34,7 +34,7 @@ Tools for Emu10k1 sound cards.
 * emu-config - A tool for configuring the card (e.g. toggling the
                analog/digital output, selecting recording modes, etc)
 * dbgemu     - debug emu10k1 registers
-* compiler   - use C like laguage to write dsp code for emu10k1
+* compiler   - use C like language to write dsp code for emu10k1
 
 Also, several ".bin" dsp patches will be installed in /usr/local/share/emu10k1/
 you can load these patches using emu-dspmgr. A description of each effect
