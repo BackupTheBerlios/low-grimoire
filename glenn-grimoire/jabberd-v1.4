@@ -1,42 +1,36 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.4.3" "1.4.2" )
+  VERSION=( "1.4.4-beta1" "1.4.3" "1.4.2" )
  CATEGORY="network chat"
 ATTRIBUTE="server"
-SOURCE[0]="$SPELL-$VERSION"
-SOURCE[1]="pth-1.4.0.tar.gz"
+   SOURCE="jabberd-$VERSION"
  HOMEPAGE="http://jabberd.jabberstudio.org"
-   URL[0]="http://jabberd.jabberstudio.org/1.4/dist"
-   URL[1]="ftp://ftp.ossp.org/pkg/lib/pth"
+      URL="http://download.jabberd.org/jabberd14
+           http://jabberd.jabberstudio.org/1.4/dist"
  EPROVIDE="jabberd"
 # Nearly all of these requirements should be OPT[x], AND need to add pth
-      REQ=( "Linux-PAM db postgresql"
-            "openssl:--enable-ssl::enable SSL support" )
-   OPT[0]="openssl:--enable-ssl::enable SSL support"
+      REQ=( "pth expat libidn"
+            "openssl:--enable-ssl::enable SSL support"
+            "postgresql:--with-postgresql::enable support for postgresql backend"
+            "mysql:--with-mysql::enable support for mysql backend" )
+#   OPT[0]="openssl:--enable-ssl::enable SSL support"
+     OPTS="--enable-ipv6 --enable-legacy"
 #FRESHMEAT=""
 DESC="Jabberd 1.4.x server
 Jabberd 1.4.x server
 "
 
 build() {
+  sed -i "s:-lpth:\`pth-config --libs\`:" configure              &&
+  sed -i "s:postgresql/libpq-fe.h:libpq-fe.h:" configure         &&
+  sed -i "s:postgresql/libpq-fe.h:libpq-fe.h:" xdb_sql/xdb_sql.c 
+  
   #OPTS="--enable-debug --enable-storage=\"pgsql db fs\" --enable-authreg=\"anon pipe pgsql pam ldap db\""
   #echo $OPTS >> myconfig
   #default_build
   
-  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
-  mv $(basename ${SOURCE[1]} .tar.gz) jabberd &&
-  ./configure --enable-ipv6   \
-              $OPTS           &&
-  make                        &&
-  prepare_install             &&
-  make install                &&
-  cp jabberd/jabberd /usr/bin &&
+  default_build &&
   mkdir -p /usr/share/$SPELL &&
-  cp generateSSLkey jabber.xml /usr/share/$SPELL &&
-  mkdir -p  /etc/$SPELL      &&
-  cp jabber.xml /etc/$SPELL  &&
-  mkdir -p  /usr/lib/$SPELL  &&
-  cp jsm/jsm.so xdb_file/xdb_file.so pthsock/pthsock_client.so \
-     dnsrv/dnsrv.so dialback/dialback.so /usr/lib/$SPELL &&
-  mkdir -p /var/spool/$SPELL
+  install -o root -g root -m 755 generateSSLkey /usr/share/$SPELL
+  install -o root -g root -m 644 selfsigned.cnf /usr/share/$SPELL
 }
