@@ -1,0 +1,101 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+unset SOURCE URL
+  VERSION=( "0.1" )
+ CATEGORY="profile"
+ATTRIBUTE="profile"
+ HOMEPAGE="glenniii@mail.utexas.edu"
+      REQ="distcc"
+   ASSUME="off"
+# ESTIMATE="134"
+    SHORT="a spell to easily setup distcc"
+     LONG="
+A spell to easily setup distcc.
+After casting, make sure you are satified with the defaults in
+/etc/init.d/distccd.sh. You probably only modify the ACCEPTLIST
+if you are on a different network, if you moddify anything.
+Then check /etc/sorcery/cpref/distcc to make sure it has the options
+you want.  /etc/sorcery/cpref/distcc was created by modifying the
+default cpref.  I recommend that you symlink default to the distcc
+cpref, since most spells cast fine with distcc.  When you try casting
+a spell several times and it still fails you might try setting the
+cpref setting for that spell back to the original default.
+"
+
+build() {
+  prepare_install			&&
+  set -x                                &&
+  groupadd -g 45 distcc                 &&
+  useradd -c "distcc user" -g distcc -u 45 distcc &&
+  mkdir -p /opt/distcc                  &&
+  DISTCC=$(which distcc)                &&
+  for binary in $(ls /opt/gcc/current/bin); do
+    ln -s $DISTCC $binary;
+  done                                  &&
+  ( [ -f /etc/sorcery/cpref/distcc ] ||
+    ( cp /etc/sorcery/cpref/default /etc/sorcery/cpref/distcc &&
+      echo 'export    MAKEFLAGS="-j9"' >> /etc/sorcery/cpref/distcc &&
+      sed -i 's|PATH="|PATH="/opt/distcc|' /etc/sorcery/cpref/distcc )
+  )  &&
+  ( grep -q 'CCACHE_PREFIX=distcc' /etc/sorcery/local.config ||
+    echo 'CCACHE_PREFIX=distcc' >> /etc/sorcery/local.config
+  )  &&
+  mkdir -p /etc/distcc                  &&
+  cat > /etc/distcc/hosts << 'EOT'
+# <dns name|ip>/<limit>[lzo]
+# example: 192.168.0.2/2,lzo
+# the limit is the number of compiles to farm out to the host,
+# the recommended is number of cpus on host + 1
+EOT
+  cat  > /etc/init.d/distccd.sh << 'EOT'
+#!/bin/sh
+
+PID="/var/run/distccd.pid"
+LOGFILE="/var/log/distccd.log"
+ACCEPTLIST="192.168.0.0/24"
+USER="distcc"
+#EXTRA_OPTS="--verbose"
+
+start()  {
+  echo  -n  "Starting distccd..."
+  [ ! -f $LOGFILE ] && touch $LOGFILE && chown $USER:$USER $LOGFILE
+  /usr/bin/distccd $EXTRA_OPTS --daemon --allow $ACCEPTLIST --user $USER --log-f
+ile $LOGFILE -P $PID
+  echo  "done."
+}
+
+stop()  {
+  echo  -n  "Stopping distccd..."
+  [     -f            $PID  ]  &&
+  kill  -15  $(  cat  $PID  )
+  rm    -f            $PID
+  echo  "done."
+}
+
+help()  {
+  echo   "Usage: $0 {start|stop|restart}"
+}
+
+
+case  $1  in
+    start)                       start  ;;
+  restart)  stop  &&  sleep  3;  start  ;;
+     stop)  stop                        ;;
+        *)  help                        ;;
+esac
+
+EOT
+  ln -s /etc/init.d/distccd.sh /etc/rc3.d/S40distccd &&
+  ln -s /etc/init.d/distccd.sh /etc/rc5.d/S40distccd &&
+  ln -s /etc/init.d/distccd.sh /etc/rc6.d/K60distccd &&
+  ln -s /etc/init.d/distccd.sh /etc/rc0.d/K60distccd &&
+  set +x
+}
+
+pre_remove() {
+  rm -r /opt/distcc                &&
+  rm /etc/init.d/distccd.sh        &&
+  rm /etc/rc{0,3,5,6}.d/*distccd   &&
+  userdel distcc                   #&&
+#  groupdel distcc
+}
