@@ -1,0 +1,16 @@
+  VERSION=( "1.0" )
+  CATEGORY="net library"
+  ATTRIBUTE="development"
+  HOMEPAGE="http://www.chiark.greenend.org.uk/~ian/adns"
+  URL="ftp://ftp.chiark.greenend.org.uk/users/ian/adns"
+  FRESHMEAT="adns"
+  ESTIMATE=206
+  SHORT="An advanced alternative, asynchronous resolver"
+
+  cat << EOF
+  adns is a replacement resolver library. Its programming 
+  interface is at once easier to use and more powerful than 
+  the standard libresolv. For example, responses are automatically 
+  decoded into native C formats, and it is possible to launch 
+  many queries and once and deal with the responses asynchronously.
+  EOF
