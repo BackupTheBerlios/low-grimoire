@@ -1,0 +1,11 @@
+   VERSION=( "0.10" "0.05" "0.03" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Gtk2 gnome-vfs"
+     SHORT="The Gnome2 module allows a perl developer to use Gnome's VFS libraries."
+cat << EOF
+The Gnome2 module allows a perl developer to use Gnome's VFS libraries.
+EOF

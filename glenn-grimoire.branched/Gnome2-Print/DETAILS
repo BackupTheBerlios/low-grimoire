@@ -1,0 +1,11 @@
+   VERSION=( "0.61" "0.52" "0.5" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Gnome2 libxml2 libgnomeprintui "
+     SHORT="The Gnome2 module allows a perl developer to use Gnome's Print libraries."
+cat << EOF
+The Gnome2 module allows a perl developer to use Gnome's Print libraries.
+EOF
