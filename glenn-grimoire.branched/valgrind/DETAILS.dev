@@ -2,7 +2,7 @@
  CATEGORY="debugger"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
- HOMEPAGE="http://developer.kde.org/~sewardj"
+ HOMEPAGE="http://valgrind.kde.org/"
       URL="http://developer.kde.org/~sewardj"
 #      REQ=""
 #FRESHMEAT=""
