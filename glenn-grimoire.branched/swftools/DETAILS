@@ -1,4 +1,4 @@
-   VERSION=( "0.4.2" )
+   VERSION=( "0.4.4" "0.4.2" )
   CATEGORY="web graphic"
  ATTRIBUTE="console"
     SOURCE="$SPELL-$VERSION"
