@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "5.1.18" )
+ CATEGORY="development"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace"
+      URL="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable"
+      REQ=( "zlib lesstif"
+            "libpng:::"
+            "fftw:::add fftw support"
+            "netcdf:::enable support for netcdf format" )
+#     OPTS="--with-bundled-t1lib --enable-libhelp"
+     OPTS="--with-bundled-t1lib"
+#     OPTS="$OPTS --enable-grace-home=/usr"
+#FRESHMEAT=""
+DESC="libsvg provides a parser for SVG content in files or buffers.
+libsvg provides a parser for SVG content in files or buffers.
+"

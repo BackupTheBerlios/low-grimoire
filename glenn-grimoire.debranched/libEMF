@@ -1,0 +1,43 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="libemf/$SPELL-$VERSION"
+ HOMEPAGE="http://libemf.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+     OPTS="--enable-editing"
+#FRESHMEAT=""
+DESC="libEMF is a C/C++ library which provides a drawing toolkit based on ECMA-234.
+libEMF is a C/C++ library which provides a drawing toolkit based on
+ECMA-234. The general purpose of this library is to create vector graphics
+files on POSIX systems which can be imported into StarOffice/OpenOffice.
+The Enhanced MetaFile (EMF) is one of the two color vector graphics format
+which is "vectorially" understood by SO/OO.
+"
+
+build() {
+  patch -p0 <<'EOF'
+--- libemf/libemf.h~	2005-03-02 23:08:13.000000000 -0600
++++ libemf/libemf.h	2005-03-02 23:37:11.000000000 -0600
+@@ -21,6 +21,15 @@
+ #ifndef _LIBEMF_H
+ #define _LIBEMF_H 1
+ 
++#include <iostream>
++using std::cerr;
++using std::endl;
++#include <ext/functional>
++
++namespace std {
++  using __gnu_cxx::mem_fun1;
++}
++
+ #include <cmath>
+ #include <vector>
+ #include <map>
+EOF
+  sed -i "s:wine:libEMF/wine:" include/emf.h &&
+  default_build
+}

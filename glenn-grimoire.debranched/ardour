@@ -1,0 +1,77 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9beta27" "0.9beta19" )
+ CATEGORY="audio-editor video-editor"
+ATTRIBUTE="x11 gnome"
+ HOMEPAGE="http://ardour.org"
+   SOURCE="$SPELL-$VERSION.tar.bz2"
+      URL="http://ardour.org/releases"
+      REQ=( "flex bison-alpha alsa-lib jack-audio-connection-kit libart_lgpl gtk+-v1.2 libsamplerate ladspa_sdk " )
+ ESTIMATE="115"
+DESC="Ardour is a digital audio workstation.
+Ardour is a digital audio workstation. You can use it to record, edit and
+mix multi-track audio. Produce your own CD's. Mix video soundtracks.
+Experiment with new ideas about music and sound. Generate sound
+installations for 12 speaker gallery shows.
+
+Ardour capabilities include: multichannel recording, non-linear,
+non-destructive region based editing with unlimited undo/redo, full
+automation support, a mixer whose capabilities rival high end hardware
+consoles, lots of plugins to warp, shift and shape your music, and
+controllable from hardware control surfaces at the same time as it syncs
+to timecode.
+"
+
+patch() {
+  patch -p0 << 'EOF'
+--- libs/ardour/ardour/stateful.h~	2004-11-24 16:32:26.000000000 -0600
++++ libs/ardour/ardour/stateful.h	2004-11-24 16:32:06.000000000 -0600
+@@ -28,6 +28,7 @@
+ class Stateful {
+   public:
+ 	Stateful();
++	virtual ~Stateful();
+ 
+ 	virtual XMLNode& get_state (void) = 0;
+ 	virtual int set_state (const XMLNode&) = 0;
+--- libs/ardour/stateful.cc~	2004-11-24 16:31:30.000000000 -0600
++++ libs/ardour/stateful.cc	2004-11-24 13:26:41.000000000 -0600
+@@ -33,6 +33,9 @@
+ 	_instant_xml = 0;
+ }
+ 
++Stateful::~Stateful ()
++{}
++
+ void
+ Stateful::add_extra_xml (XMLNode& node)
+ {
+--- libs/ardour/ardour/region.h~	2004-11-24 18:00:43.000000000 -0600
++++ libs/ardour/ardour/region.h	2004-11-24 18:14:34.000000000 -0600
+@@ -90,7 +90,7 @@
+ 	Region (const Region&, jack_nframes_t start, jack_nframes_t length, const string& name, layer_t = 0, Flag flags = DefaultFlags);
+ 	Region (const Region&);
+ 	Region (const XMLNode&);
+-	~Region();
++	virtual ~Region();
+ 
+ 	ARDOUR::id_t id() const { return _id; }
+ 
+--- libs/ardour/ardour/audio_track.h~	2004-11-27 12:26:48.000000000 -0600
++++ libs/ardour/ardour/audio_track.h	2004-11-27 12:26:59.000000000 -0600
+@@ -34,7 +34,7 @@
+   public:
+ 	AudioTrack (Session&, string name, Route::Flag f = Route::Flag (0));
+ 	AudioTrack (Session&, const XMLNode&);
+-	~AudioTrack ();
++	virtual ~AudioTrack ();
+ 	
+ 	void set_name (string str, void *src);
+ 
+EOF
+}
+
+build() {
+  if [ "$VERSION" == "0.9beta19" ] ; then patch; fi
+  default_build                    
+}
