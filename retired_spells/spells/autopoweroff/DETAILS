@@ -1,10 +1,10 @@
-   VERSION=( "1.2.0" )
+   VERSION=( "2.0.0" "1.2.0" )
   CATEGORY="shell"
  ATTRIBUTE="console"
   HOMEPAGE="http://autopoweroff.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="autopoweroff/autopoweroff-$VERSION"
-  ESTIMATE="14"
+  ESTIMATE=8
  FRESHMEAT="autopoweroff"
        REQ="Python gnome-libs"
      SHORT=" Autopoweroff is a python script that is started at boot time, and which function is to shutdown the computer at a specific time, but only if some conditions are met"
