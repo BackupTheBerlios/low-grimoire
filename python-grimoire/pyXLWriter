@@ -1,4 +1,4 @@
-   VERSION=( "0.3a1" )
+   VERSION=( "0.4a2" "0.3a1" )
   CATEGORY="development python"
  ATTRIBUTE="library"
     SOURCE="pyxlwriter/$SPELL-$VERSION"
@@ -17,15 +17,10 @@ http://www.cpan.org) to Python. Requires Python 2.3+.
 
 
 build() {
-
-
 #    python setup.py build			&&
     prepare_install                 		&&
     python setup.py install                     &&
     mkdir -p /usr/share/$SPELL                  &&
     cp -R examples tests /usr/share/$SPELL
-
-
-
 }
 
