@@ -5,7 +5,7 @@
   URL="$HOMEPAGE"
   FRESHMEAT="mico"
   OPT="openssl:::for ssl support"
-  ESTIMATE=846
+  ESTIMATE=655
   SHORT="MICO Is COrba"
   cat << EOF
   The acronym MICO expands to MICO Is CORBA. The intention of this project is to 
