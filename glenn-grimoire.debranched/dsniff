@@ -8,7 +8,7 @@ ATTRIBUTE="console"
       URL="http://monkey.org/~dugsong"
       REQ=( "libnet,1.0 libpcap libnids,1.16 db" )
 #   OPT[0]="arts:--with-arts::add arts capability"
-#FRESHMEAT=""
+FRESHMEAT="dsniff"
 DESC="dsniff is a collection of tools for network auditing and penetration testing.
 dsniff is a collection of tools for network auditing and penetration
 testing. dsniff, filesnarf, mailsnarf, msgsnarf, urlsnarf, and webspy

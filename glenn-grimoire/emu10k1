@@ -7,7 +7,7 @@ ATTRIBUTE="console driver"
  HOMEPAGE="http://opensource.creative.com/"
       URL="$SOURCEFORGE_URL"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="emu10k1linuxdriver"
 DESC="Tools for Emu10k1 sound cards.
 Card support
 ------------

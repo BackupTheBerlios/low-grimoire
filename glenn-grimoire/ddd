@@ -11,7 +11,7 @@ SOURCE[1]="$SPELL/$SPELL-${VERSION[2]}-html-manual"
    URL[1]="${URL[0]}"
 #      REQ="gtk+2 libpng gdk-pixbuf"
 #   OPT[0]=":::"
-#FRESHMEAT=""
+FRESHMEAT="ddd"
 DESC="GNU DDD is a graphical front-end for command-line debuggers.
 GNU DDD is a graphical front-end for command-line debuggers such as GDB, 
 DBX, WDB, Ladebug, JDB, XDB, the Perl debugger, or the Python debugger.

@@ -9,7 +9,7 @@ ATTRIBUTE="x11"
       REQ=( "gtk+,v1.2"
             "bluez-libs:::add bluetooth support" )
    OPT[0]="bluez-libs:::add bluetooth support"
-#FRESHMEAT=""
+FRESHMEAT="gnokii"
 DESC="gnokii is a package that allowss you to interact nearly every aspect of your mobile phone.
 With gnokii you can do such things as make data calls, update your
 address book, change calendar entires, send and receive SMS messages

@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.cce.com/efax"
       URL="ftp://ftp.metalab.unc.edu/pub/Linux/apps/serialcomm/fax"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="efax"
 DESC="efax is a small ANSI C/POSIX program that sends and receives faxes using any fax modem (Class 1, 2 or 2.0).
 efax is a small ANSI C/POSIX program that sends and receives faxes using
 any fax modem (Class 1, 2 or 2.0).

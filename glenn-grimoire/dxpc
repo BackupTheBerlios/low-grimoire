@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.vigor.nu/dxpc/"
       URL="http://www.vigor.nu"
       REQ=( "XFree86 lzo" )
-#FRESHMEAT=""
+FRESHMEAT="dxpc"
 DESC="Differential X Protocol Compressor
 dxpc is an X protocol compressor designed to improve the speed of X11
 applications run over low-bandwidth links (such as dialup PPP connections).
