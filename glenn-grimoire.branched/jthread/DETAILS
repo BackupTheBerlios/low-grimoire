@@ -1,0 +1,14 @@
+  VERSION=( "1.0.0" )
+ CATEGORY="networking"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://lumumba.luc.ac.be/jori/jthread/jthread.html"
+      URL="http://lumumba.luc.ac.be/jori"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="The JThread package provides some classes to make use of threads easy on different platforms."
+cat << EOF
+The JThread package provides some classes to make use of threads easy on
+different platforms. The classes are actually rather simple wrappers
+around existing thread implementations.
+EOF
