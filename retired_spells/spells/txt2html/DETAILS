@@ -1,6 +1,6 @@
-   VERSION=( "2.01" )
-  CATEGORY="library"
- ATTRIBUTE="development"
+   VERSION=( "2.20" "2.10" "2.06" "2.05" "2.04" "2.03" "2.02" "2.01" )
+  CATEGORY="utility"
+ ATTRIBUTE="console"
   HOMEPAGE="http://txt2html.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="txt2html/txt2html-$VERSION"
