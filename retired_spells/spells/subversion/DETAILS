@@ -6,7 +6,7 @@
   REQ="httpd neon zlib openssl"
   OPT="db:--with-berkeley-db::db support"
   FRESHMEAT="subversion"
-  ESTIMATE="2553"
+  ESTIMATE=272
   SHORT="Version Control rethought."
 
 cat << EOF
