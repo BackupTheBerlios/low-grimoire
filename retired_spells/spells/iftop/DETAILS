@@ -1,4 +1,4 @@
-   VERSION=( "0.15" "0.14" "0.13" "0.12" )
+   VERSION=( "0.16" "0.15" "0.14" "0.13" "0.12" )
   CATEGORY="network utility"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.ex-parrot.com/~pdw/iftop/"
