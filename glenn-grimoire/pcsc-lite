@@ -1,0 +1,30 @@
+  VERSION=( "1.2.0-rc2" "1.1.1" "1.0.1" )
+ CATEGORY="smartcard security"
+ATTRIBUTE="driver"
+   SOURCE="${SPELL}-$VERSION"
+ HOMEPAGE="http://alioth.debian.org/projects/pcsclite"
+      URL="http://alioth.debian.org/download.php/378"
+      REQ="flex libusb"
+#FRESHMEAT=""
+    SHORT="PC/SC Architecture (smart cards)."
+LONG="
+PC/SC Architecture for most Unix type operating systems. Allows easy
+porting of Windows smartcard software to other operating systems. Supports
+many types of serial, PCMCIA, and USB smartcard readers and cryptographic
+tokens. Tested under Redhat, Suse, Solaris 2.8, Open BSD, OS X v10.1, and
+HPUX.
+"
+
+build() {
+(
+  
+  sed -i "s:/doc:/doc/pcsc-lite:" doc/Makefile.in
+  sed -i "s:/doc:/doc/pcsc-lite:" doc/Makefile.am
+  OPTS="--enable-libusb=/usr --enable-debugatr --enable-runpid=/var/run/pcsc-lite.pid"
+  OPTS="$OPTS --enable-muscledropdir=/usr/pcsc/services/"
+  OPTS="$OPTS --enable-usbdropdir=/usr/pcsc/drivers/"
+  default_build
+  cp DRIVERS README SECURITY /usr/doc/pcsc-lite
+  
+) > $C_FIFO 2>&1}
+

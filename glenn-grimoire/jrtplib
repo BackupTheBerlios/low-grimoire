@@ -1,0 +1,13 @@
+  VERSION=( "2.7" )
+ CATEGORY="networking"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://lumumba.luc.ac.be/jori/jrtplib/jrtplib.html"
+      URL="http://lumumba.luc.ac.be/jori"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="JRTPLIB is an object-oriented RTP library written in C++."
+LONG="
+JRTPLIB is an object-oriented RTP library written in C++.
+"
+

@@ -1,0 +1,2 @@
+/etc/init.d/sockd.sh  stop
+userdel sockd

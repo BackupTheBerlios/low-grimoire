@@ -1,0 +1,15 @@
+  VERSION=( "0.2.1" "0.2.0" "0.1.8" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://gmetadom.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gdome2 libxslt"
+#FRESHMEAT=""
+    SHORT="GMetaDOM is a collection of librares, each library providing a DOM implementation."
+LONG="
+GMetaDOM is a collection of librares, each library providing a DOM
+implementation. Currently available bindings are for C++ (smart pointers)
+and Objective Caml.
+"
+

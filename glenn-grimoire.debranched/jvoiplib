@@ -1,0 +1,27 @@
+  VERSION=( "1.2.0" )
+ CATEGORY="networking telephony"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://lumumba.luc.ac.be/jori/jvoiplib/jvoiplib.html"
+      URL="http://lumumba.luc.ac.be/jori"
+      REQ="jrtplib jthread qt-x11-free"
+#FRESHMEAT=""
+    SHORT="JRTPLIB is an object-oriented RTP library written in C++."
+LONG="
+JRTPLIB is an object-oriented RTP library written in C++.
+"
+
+build() {
+(
+  # NOTE: at a future date try to compile the Qt test tool that comes with it
+  
+  ./configure --prefix=/usr              \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  mkdir -p /usr/doc/$SPELL               &&
+  cp -R doc README* /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

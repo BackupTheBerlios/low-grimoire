@@ -1,0 +1,31 @@
+  VERSION=( "0.9.1" )
+ CATEGORY="documentation"
+ATTRIBUTE="x11"
+SOURCE[0]="$SPELL/$SPELL-$VERSION"
+SOURCE[1]="$SPELL/$SPELL-$VERSION-doc"
+ HOMEPAGE="http://xchm.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="chmlib wxGTK"
+#FRESHMEAT=""
+    SHORT="xCHM is a .chm viewer for *NIX."
+LONG="
+xCHM can show the contents tree if one is available, print the displayed
+page, change fonts faces and size, work with bookmarks, do the usual
+history stunts (forward, back, home), provide a searchable index and seach
+for text in the whole book. The search is a fast B-tree search, based on
+the internal \$FIftiMain file found inside indexed .chm archives, and it
+can be customized to search in content or just the topics' titles.
+"
+
+build() {
+(
+  mkdir -p xchm            &&
+  cd xchm                  &&
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  cd ..                    &&
+  default_build            &&
+  mkdir -p /usr/doc/$SPELL &&
+  cp -r "${SOURCE[1]}/"* /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,30 @@
+  VERSION=( "2.01-10" )
+ CATEGORY="web log"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION-src"
+ HOMEPAGE="http://www.mrunix.net/webalizer/"
+      URL="ftp://ftp.mrunix.net/pub"
+      REQ="gd zlib db libpng"
+#FRESHMEAT=""
+    SHORT="The Webalizer is a fast, free web server log file analysis program."
+LONG="
+The Webalizer is a fast, free web server log file analysis program. It
+produces highly detailed, easily configurable usage reports in HTML
+format, for viewing with a standard web browser.
+"
+
+build() {
+(
+  ./configure --enable-dns      \
+              $OPTS             &&
+  make                          &&
+  prepare_install               &&
+  make    install  prefix=/usr  &&
+  mkdir -p /usr/doc/$SPELL      &&
+  cp DNS.README /usr/doc/$SPELL &&
+  mkdir -p /usr/share/$SPELL    &&
+  cp sample.conf /usr/share/$SPELL &&
+  cp country-codes.txt /usr/share/$SPELL
+
+) > $C_FIFO 2>&1}
+

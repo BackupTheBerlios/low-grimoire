@@ -1,0 +1,24 @@
+  VERSION=( "1.15" )
+ CATEGORY="audio audio-editor"
+ATTRIBUTE="library"
+   SOURCE="${SPELL}_src_$VERSION"
+ HOMEPAGE="http://www.ladspa.org/"
+      URL="http://www.ladspa.org/download"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="The Computer Music Toolkit (CMT) is a collection of LADSPA plugins."
+LONG="
+The Computer Music Toolkit (CMT) is a collection of LADSPA plugins for use
+with software synthesis and recording packages on Linux.
+"
+
+build() {
+(
+  
+  sed -i "s:/usr/local:/usr:" src/makefile   &&
+  make -C src                                &&
+  prepare_install                            &&
+  make -C src   install                           
+  
+) > $C_FIFO 2>&1}
+

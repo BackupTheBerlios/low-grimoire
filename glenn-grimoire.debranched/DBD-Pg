@@ -1,0 +1,32 @@
+   VERSION=( "1.22" "1.21" "1.13" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+  HOMEPAGE="http://gborg.postgresql.org/project/dbdpg/projdisplay.php"
+       URL="ftp://gborg.postgresql.org/pub/dbdpg/stable"
+       REQ="perl"
+     SHORT="DBD-Pg is a PostgreSQL interface for Perl5 using DBI."
+LONG="
+DBD-Pg is a PostgreSQL interface for Perl5 using DBI.
+
+DBI (Database independent interface) is a database access API (Application
+Programming Interface) for the Perl Language. It provides a consistent
+database interface independent of the actual database being used.
+
+PostgreSQL is an ORDBMS (Object oriented Relational Database Management
+System). It runs on a variety of different operating systems and it is
+open-source. 
+"
+
+build() {
+(
+  export POSTGRES_INCLUDE=`pg_config --includedir`
+  export POSTGRES_LIB=`pg_config --libdir`
+
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,23 @@
+   VERSION=( "0.01" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.goof.com/pcg/marc/"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       REQ="perl glib"
+     SHORT="Easily build XS extensions that depend on XS extensions."
+LONG="
+Easily build XS extensions that depend on XS extensions.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,13 @@
+  VERSION=( "1.0" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ="glib bluez-libs"
+#FRESHMEAT=""
+    SHORT="HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)."
+LONG="
+HCIEmu - HCI Emulation for Linux Bluetooth protocol stack (BlueZ)
+"
+

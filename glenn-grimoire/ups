@@ -1,0 +1,34 @@
+  VERSION=( "3.38-beta2" )
+ CATEGORY="development"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.concerto.demon.co.uk/UPS/main.html"
+      URL="$SOURCEFORGE_URL"
+      REQ="XFree86"
+#FRESHMEAT=""
+    SHORT="Ups is a source level C,C++ and Fortran debugger that runs under X11."
+LONG="
+Ups is a source level C,C++ and Fortran debugger that runs under X11.
+Currently supported systems are FreeBSD and GNU/Linux on Intel x86 and
+Solaris on SPARC. On these systems it runs native; it is not a front-end
+to GNU gdb. An ANSI C interpreter is included; this is built in to ups to
+provide conditional debugging and can also be built as a seperate program.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr              \
+              --enable-math              \
+	      --enable-longlong          \
+	      --enable-longdouble        \
+	      --with-xt                  \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  install -o root -g root -m 755 tkups /usr/bin
+  # might should install med that comes with it
+
+) > $C_FIFO 2>&1}
+

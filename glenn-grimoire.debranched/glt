@@ -1,0 +1,52 @@
+  VERSION=( "0.7" ) # 0.8-rc3
+ CATEGORY="graphic development"
+ATTRIBUTE="library"
+SOURCE[0]="$SPELL/$SPELL-core-$VERSION"
+SOURCE[1]="$SPELL/$SPELL-example-$VERSION"
+SOURCE[2]="$SPELL/$SPELL-unifont-$VERSION"
+SOURCE[3]="$SPELL/$SPELL-glui-$VERSION"
+SOURCE[4]="$SPELL/$SPELL-dox-$VERSION"
+ HOMEPAGE="http://www.nigels.com/glt/"
+   URL[0]="$SOURCEFORGE_URL"
+   URL[1]="${URL[0]}"
+   URL[2]="${URL[0]}"
+   URL[3]="${URL[0]}"
+      REQ="XFree86 glut" # change to freeglut later? there should be an EPROVIDE
+#FRESHMEAT=""
+    SHORT="GLT is a C++ class library for programming interactive 3D graphics with OpenGL."
+LONG="
+GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
+"
+
+build() {
+(
+  INCLUDEDIR=/usr/include/glt
+  local -a SUBDIRS=("fonts" "glt" "glui" "glutm" "math" "mesh" "misc" "node" "unifont")
+
+  make                        &&
+  prepare_install             &&
+  install -o root -g root -m 644 lib/libgl* /usr/lib &&
+  ( for SUB in ${SUBDIRS[*]}; do
+    mkdir -p $INCLUDEDIR/$SUB &&
+    install -o root -g root -m 644 src/$SUB/*.h $INCLUDEDIR/$SUB
+  done )
+  mkdir -p /usr/doc/$SPELL   &&
+  cd /usr/doc/$SPELL         &&
+  unpack $( guess_filename "${SOURCE[4]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  cd $BUILD_DIR              &&
+  mkdir -p /usr/share/$SPELL &&
+  install -o root -g root -m 755 bin/* /usr/share/$SPELL  &&
+  install -o root -g root -m 755 src/program/glui/{Makefile,*.cpp} /usr/share/$SPELL  &&
+  cd /usr/share              &&
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" )
+  
+) > $C_FIFO 2>&1}
+
+pre_build() {
+default_pre_build
+unpack ${SOURCE[0]}
+unpack ${SOURCE[1]}
+unpack ${SOURCE[2]}
+unpack ${SOURCE[3]}
+}
+

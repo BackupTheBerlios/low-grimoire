@@ -1,0 +1,103 @@
+  VERSION=("3.10a")
+ CATEGORY="graphic-editor graphic-viewer"
+ATTRIBUTE="x11"
+SOURCE[0]="$SPELL/$SPELL-$VERSION"
+SOURCE[1]="grabpatch"
+SOURCE[2]="vispatch"
+SOURCE[3]="mp-tiff-patch"
+SOURCE[4]="longname.patch"
+SOURCE[5]="xpm.patch"
+SOURCE[6]="deepcolor.patch"
+SOURCE[7]="gifpatch"
+SOURCE[8]="exceed_grab.patch"
+SOURCE[9]="gssafer.patch"
+SOURCE[10]="xv-3.10a.JPEG-patch"
+SOURCE[11]="xv-3.10a.TIFF-patch"
+SOURCE[12]="pdf.patch"
+SOURCE[13]="windowid.patch"
+SOURCE[14]="bmp32.patch"
+ HOMEPAGE="http://www.trilon.com/xv"
+   URL[0]="ftp://ftp.cis.upenn.edu/pub"
+   URL[1]="ftp://ftp.trilon.com/pub"
+   URL[2]="${URL[1]}/$SPELL/patches"
+   URL[3]="${URL[1]}/$SPELL/patches"
+   URL[4]="${URL[1]}/$SPELL/patches"
+   URL[5]="${URL[1]}/$SPELL/patches"
+   URL[6]="${URL[1]}/$SPELL/patches"
+   URL[7]="${URL[1]}/$SPELL/patches"
+   URL[8]="${URL[1]}/$SPELL/patches"
+   URL[9]="${URL[1]}/$SPELL/patches"
+   URL[10]="${URL[0]}/$SPELL"
+   URL[11]="${URL[0]}/$SPELL"
+   URL[12]="${URL[1]}/$SPELL/patches"
+   URL[13]="${URL[1]}/$SPELL/patches"
+   URL[14]="${URL[1]}/$SPELL/patches"
+      REQ="patch jpeg tiff"
+#   OPT[4]="Csound:--with-ladspa::"
+#FRESHMEAT=""
+    SHORT="xv is an interactive image manipulation program for the X Window System."
+LONG="
+xv is an interactive image manipulation program for the X Window System. It
+can operate on images in the GIF, JPEG, TIFF, PBM, PGM, PPM, XPM, X11 bitmap,
+Sun Rasterfile, Targa, RLE, RGB, BMP, PCX, FITS, and PM formats on all known
+types of X displays. It can generate PostScript files, and if you have
+ghostscript (version 2.6 or above) installed on your machine, it can also
+display them.
+
+xv lets you do a large number of things (many of them actually useful),
+including, but not limited to, the following:
+    * display an image in a window on the screen
+    * display an image on the root window, in a variety of styles
+    * grab any rectangular portion of the screen and turn it into an image
+    * arbitrarily stretch, compress, rotate or flip the image
+    * crop or pad images
+    * view files as ASCII text or hexadecimal data
+    * magnify any portion of the image by any amount, up to the size of the
+      screen
+    * determine pixel values and x,y coordinates in the image
+    * adjust image brightness and contrast with a gamma correction function
+    * apply different gamma functions to the Red, Green, and Blue color
+      components, to correct for non-linear color response
+    * adjust global image saturation
+    * perform global hue remapping
+    * perform histogram equalization
+    * run a number of image-processing algorithms on any rectangular portion
+      of the image
+    * edit an image\'s colormap
+    * reduce the number of colors in an image
+    * dither in color and b/w
+    * crop off solid borders automatically
+    * convert image formats
+"
+
+build() {
+(
+  for(( i=1 ; $i < 15; i++)); do
+    if [ "x${SOURCE[$i]}" != "x" ] ; then
+      if [ $i == 4 ] ; then
+        patch -p1 --verbose < $(guess_filename ${SOURCE[$i]})
+      else
+        patch -p0 --verbose < $(guess_filename ${SOURCE[$i]})
+      fi
+    fi
+  done
+
+  sed -i "s/#undef USE_GUNZIP/#define USE_GUNZIP/" config.h
+  sed -i "s:/usr/local/bin/gunzip -q:/bin/gunzip -q:" config.h
+  sed -i "s:/local::" Makefile
+  # for some reason -lX11 is not finding /sr/X11R6/lib/libX11.so eventhough the path is in my ld.so.conf
+  sed -i "s:-lX11:-lX11 -L/usr/X11R6/lib:" Makefile
+  sed -i "s/^JPEGINC/#JPEGINC/" Makefile
+  sed -i "s/JPEGLIB = .*/JPEGLIB = -ljpeg/" Makefile
+  sed -i "s/^\\$\\(JPEGDIR\\)/#\\$\\(JPEGDIR\\)/" Makefile
+  sed -i "s/\\^\\$\\(JPEGLIB\\)/#\\$\\(JPEGLIB\\)/" Makefile
+  sed -i "s/\\tcd \\$\\(JPEGDIR\\).*//" Makefile
+  
+  sed -i "s/extern char \\*sys_errlist\\[\\]/\\/\\/extern char \\*sys_errlist\\[\\]/" xv.h
+
+  make                        &&
+  prepare_install             &&
+  make    install  prefix=/usr
+
+) > $C_FIFO 2>&1}
+

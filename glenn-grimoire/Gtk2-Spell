@@ -1,0 +1,28 @@
+   VERSION=( "1.03" "1.00" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl Gtk2 gtkspell"
+     SHORT="Perl bindings to the 2.x series of the GtkSpell graphical user interface library."
+LONG="
+Perl bindings to the 2.x series of the GtkSpell graphical user interface
+library.  This module allows you to write perl applications that utilize the
+GtkSpell library for mis-spelled word highlighting.
+"
+
+build() {
+(
+  if [ "$VERSION" == "1.00" ]; then
+    sed -i "s:#my %pkgcfg:my %pkgcfg:" Makefile.PL
+  fi
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

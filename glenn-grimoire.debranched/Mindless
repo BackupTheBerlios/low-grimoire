@@ -1,0 +1,26 @@
+  VERSION=( "1.4" "1.3" "1.2" )
+ CATEGORY="game"
+ATTRIBUTE="x11"
+   SOURCE="mindless/mindless-$VERSION"
+ HOMEPAGE="http://mindless.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+      REQ="gtk+ magic_data"
+#   OPT[0]="arts:--with-arts::add arts capability"
+#FRESHMEAT=""
+    SHORT="Mindless Automaton is a virtual tabletop on which you can play card games against other people over a network."
+LONG="
+Mindless Automaton is a virtual tabletop on which you can play card games
+against other people over a network.  It was designed to simulate the
+Magic: The Gathering game, but it can be expanded to simulate other games.
+"
+
+build() {
+(
+
+  make                                                      &&
+  prepare_install                                           &&
+  install  -o root -g root -m 755  mindless        /usr/bin &&
+  install  -o root -g root -m 755  $SCRIPT_DIR/mindless_magic  /usr/bin
+
+) > $C_FIFO 2>&1}
+

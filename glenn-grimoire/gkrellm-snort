@@ -1,0 +1,24 @@
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "0.3" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellm-snort-$VERSION.tgz"
+ HOMEPAGE="http://opentony.free.fr/htdocs/index.php?/gkrellm-snort.html"
+      URL="http://opentony.free.fr/htdocs/upload"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="This plugin monitors the SNORT alert file (/var/log/snort/alert)."
+LONG="
+This plugin monitors the SNORT alert file (/var/log/snort/alert).
+"
+
+build() {
+(
+  make                                   &&
+  prepare_install                        &&
+  mkdir -p /usr/lib/gkrellm2/plugins     &&
+  install -c -m 755 gkrellm-snort.so /usr/lib/gkrellm2/plugins
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,24 @@
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "2.2" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrelltop.$VERSION"
+ HOMEPAGE="http://psychology.rutgers.edu/~zaimi/software.html"
+      URL="http://psychology.rutgers.edu/~zaimi"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="GKrellm plugin to see the three most cpu intensive processes."
+LONG="
+GKrellm plugin to see the three most cpu intensive processes.
+"
+
+build() {
+(
+  make                                   &&
+  prepare_install                        &&
+  mkdir -p /usr/lib/gkrellm2/plugins     &&
+  install -c -m 755 gkrelltop2.so /usr/lib/gkrellm2/plugins
+  
+) > $C_FIFO 2>&1}
+

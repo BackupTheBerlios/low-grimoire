@@ -1,0 +1,33 @@
+inherit DBD-Pg
+VERSION[0]="1.13"
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+  HOMEPAGE="http://search.cpan.org/author/JBAKER/DBD-Pg-1.13"
+       URL="http://search.cpan.org/CPAN/authors/id/J/JB/JBAKER"
+       REQ="perl"
+     SHORT="DBD-Pg is a PostgreSQL interface for Perl5 using DBI."
+LONG="
+DBD-Pg is a PostgreSQL interface for Perl5 using DBI.
+
+DBI (Database independent interface) is a database access API (Application
+Programming Interface) for the Perl Language. It provides a consistent
+database interface independent of the actual database being used.
+
+PostgreSQL is an ORDBMS (Object oriented Relational Database Management
+System). It runs on a variety of different operating systems and it is
+open-source. 
+"
+
+build() {
+(
+  export POSTGRES_INCLUDE=`pg_config --includedir`
+  export POSTGRES_LIB=`pg_config --libdir`
+
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,31 @@
+  VERSION=( "2.0.0" "1.9.6" )
+ CATEGORY="debugger"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://valgrind.kde.org/"
+      URL="http://developer.kde.org/~sewardj"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="Valgrind is a GPL tool to help you find memory-management problems in your programs."
+LONG="
+Valgrind is a GPL tool to help you find memory-management problems in
+your programs. When a program is run under Valgrinds supervision, all
+reads and writes of memory are checked, and calls to malloc/new/free/delete
+are intercepted. As a result, Valgrind can detect problems such as:
+
+    * Use of uninitialised memory
+    * Reading/writing memory after it has been freed
+    * Reading/writing off the end of mallocd blocks
+    * Reading/writing inappropriate areas on the stack
+    * Memory leaks -- where pointers to mallocd blocks are lost forever
+    * Passing of uninitialised and/or unaddressible memory to system calls
+    * Mismatched use of malloc/new/new [] vs free/delete/delete []
+    * Some misuses of the POSIX pthreads API 
+
+Valgrind tracks each byte of memory in the original program with nine
+status bits, one of which tracks addressibility of that byte, while the
+other eight track the validity of the byte. As a result, it can detect the
+use of single uninitialised bits, and does not report spurious errors on
+bitfield operations.
+"
+

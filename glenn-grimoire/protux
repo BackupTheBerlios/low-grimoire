@@ -1,0 +1,39 @@
+  VERSION=( "0.20.1" "0.19.5" "0.19.2" "0.17.9" "0.16.0" "0.15.7" "0.15.6")
+   IGNORE="rc\d+$"
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.nongnu.org/protux"
+      URL="http://savannah.nongnu.org/download"
+      REQ="qt-x11-free libmustux"
+#   OPT[0]="alsa:::to use alsa libraries"
+#FRESHMEAT="zinf"
+    SHORT="Protux aims to be the most practical and one of the most powerful audio tools for Linux."
+LONG="
+Protux aims to be the most practical and one of the most powerful audio
+tools for Linux. Protux will allow you to utilize the power of
+keyboard+mouse combination (with no clicks) to vastly speed up the process
+of audio production. This concept we call \"Jog-Mouse-Board\" or JMB, for
+short.
+"
+
+build() {
+(
+  #export QTDIR=/usr
+  
+  #sed -i "s/\\\$QTDIR/\\/usr\\/include\\/qt/" configure
+  #sed -i "s/\\\\$\\(QTDIR\\)\\/include/\\/usr\\/include\\/qt/" configure
+  #sed -i "s/\\\\$\\(QTDIR\\)\\/lib/\\/usr\\/lib/" configure
+  
+  if [ $VERSION == "0.19.5" ]; then
+      sed -i "s:#include \"MtaRegion.hh\"::" src/Song.hh
+  fi
+  
+  ./configure --prefix=/usr   &&
+  make                        &&
+  prepare_install             &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

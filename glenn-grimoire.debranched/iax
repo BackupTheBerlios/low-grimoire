@@ -1,0 +1,13 @@
+  VERSION=( "0.2.2" "0.2.1" "0.2.0" )
+ CATEGORY="telephony"
+ATTRIBUTE="library"
+   SOURCE="lib$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://linux-support.net/index.php?menu=software_products"
+      URL="ftp://ftp.digium.com/pub"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="An implementation of the Inter-Asterisk eXchange protocol."
+LONG="
+An implementation of the Inter-Asterisk eXchange protocol.
+"
+

@@ -1,0 +1,39 @@
+  VERSION=( "0.7.8" "0.7.7" "0.7.6" )
+ CATEGORY="proxy"
+ATTRIBUTE="client|server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://frox.sourceforge.net"
+      URL="http://frox.sourceforge.net/download"
+      REQ=""
+#   OPT[0]="openssl:--with-openssl=/usr::add ssl support"
+#FRESHMEAT=""
+    SHORT="frox is a transparent ftp proxy."
+LONG="
+This is the homepage of frox. It is a transparent ftp proxy which is
+released under the GPL. It optionally supports caching (either through
+an external http cache (eg. squid), or by maintaining a cache locally),
+and/or running a virus scanner, on downloaded files. It is written with
+security in mind, and in the default setup it runs as a non root user in
+a chroot jail.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr                   \
+              --sysconfdir=/etc               \
+              --enable-http-cache             \
+              --enable-local-cache            \
+              --enable-virus-scan             \
+	      --enable-libiptc                \
+              --enable-transparent-data       \
+              --enable-ccp                    \
+              $OPTS                           &&
+  make                                        &&
+  prepare_install                             &&
+  make install                                &&
+  mkdir -p /usr/doc/$SPELL                    &&
+  cp doc/* /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,29 @@
+  VERSION=( "0.6.0" "0.5.2" "0.5.1" )
+ CATEGORY="telephony"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnokii.org"
+      URL="http://savannah.nongnu.org/download"
+      REQ="gtk+,v1.2"
+   OPT[0]="bluez-libs:::add bluetooth support"
+#FRESHMEAT=""
+    SHORT="gnokii is a package that allowss you to interact nearly every aspect of your mobile phone."
+LONG="
+With gnokii you can do such things as make data calls, update your
+address book, change calendar entires, send and receive SMS messages
+and load ring tones depending on the phone you have.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr              \
+              --enable-security          \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  make install-docs
+
+) > $C_FIFO 2>&1}
+

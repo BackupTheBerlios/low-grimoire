@@ -1,0 +1,28 @@
+   VERSION=( "1.042" "1.030" "1.020" "1.00rc3" "0.26" "0.24" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="glib ExtUtils-PkgConfig"
+     SHORT="This module provides perl access to Glib and GLibs GObject libraries."
+LONG="
+This module provides perl access to Glib and GLibs GObject libraries.
+GLib is a portability and utility library; GObject provides a generic
+type system with inheritance and a powerful signal system.  Together
+these libraries are used as the foundation for many of the libraries
+that make up the Gnome environment, and are used in many unrelated
+projects.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

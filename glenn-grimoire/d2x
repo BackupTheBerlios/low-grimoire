@@ -1,0 +1,35 @@
+  VERSION=( "0.2.5" "0.2.4" )
+ CATEGORY="game"
+ATTRIBUTE="x11"
+SOURCE[0]="$SPELL-$VERSION"
+SOURCE[1]="d2shar10.tar.gz"
+ HOMEPAGE="http://www.icculus.org/d2x"
+   URL[0]="http://www.icculus.org/d2x/src"
+   URL[1]="http://www.icculus.org/d2x/data"
+      REQ="SDL_image nasm"
+   OPT[0]="XFree86:--with-opengl::add opengl support"
+   OPT[1]="svgalib:--with-svga::add svgalib support"
+#   OPT[2]=":--with-ggi::add GGI support"
+#FRESHMEAT=""
+    SHORT="Descent 2 for linux."
+LONG="
+Descent 2 for linux.
+"
+
+build() {
+(
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  ./configure --prefix=/usr              \
+              --bindir=/usr/games        \
+	      --with-sharepath=/usr/share/$BSPELL \
+	      --disable-debug            \
+	      --enable-release           \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  mkdir -p /usr/share/$SPELL             &&
+  cp -R "${SOURCE[1]}"/* /usr/share/$SPELL
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,24 @@
+  VERSION=( "0.6.3" )
+ CATEGORY="library video"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://matroska.org"
+      URL="http://dl.matroska.org/downloads"
+      REQ="libebml"
+#FRESHMEAT=""
+    SHORT="Library for reading matroska files, a video wrapper format like avi."
+LONG="
+Library for reading matroska files, a video wrapper format like avi.
+"
+
+build() {
+(
+  cd make/linux                &&
+  make                         &&
+  prepare_install              &&
+  make    install  prefix=/usr &&
+  mkdir -p /usr/share/$SPELL   &&
+  cp -r ../../test /usr/share/$SPELL
+
+) > $C_FIFO 2>&1}
+

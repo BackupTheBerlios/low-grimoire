@@ -1,0 +1,14 @@
+  VERSION=( "0.1.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.freedesktop.org/Cairo"
+      URL="http://cairographics.org/snapshots
+           http://www.freedesktop.org/Cairo/snapshots"
+      REQ="libxml2"
+#FRESHMEAT=""
+    SHORT="libsvg provides a parser for SVG content in files or buffers."
+LONG="
+libsvg provides a parser for SVG content in files or buffers.
+"
+

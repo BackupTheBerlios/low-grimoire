@@ -1,0 +1,27 @@
+  VERSION=( "0.9.3" )
+ CATEGORY="security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-v$VERSION"
+ HOMEPAGE="http://eckbox.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="svgalib"
+#FRESHMEAT=""
+    SHORT="Eckbox is software that allows a user to remotely shoulder surf on a target computer's monitor."
+LONG="
+Eckbox is software that allows a user to remotely shoulder surf on a target
+computer's monitor (this is known as van Eck Phreaking).  It requires a
+certain amount of hardware that must be made by the user.  Instructions for
+building this hardware is located on eckbox's sourceforge project page at
+http://eckbox.sourceforge.net
+
+*** Read the README also
+"
+
+build() {
+(
+  sed -i "s:/local::" makefile &&
+  default_build                &&
+  cp bw /usr/bin
+
+) > $C_FIFO 2>&1}
+

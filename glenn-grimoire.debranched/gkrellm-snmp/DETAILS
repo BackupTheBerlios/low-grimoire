@@ -1,0 +1,15 @@
+unset OPT  
+  VERSION=( "0.18" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellm_snmp-$VERSION"
+ HOMEPAGE="http://triq.net/gkrellm_snmp.html"
+      URL="http://triq.net/gkrellm"
+      REQ="gkrellm net-snmp"
+FRESHMEAT="gkrellmsnmp"
+    SHORT="GKrellm plugin to monitor your network with snmp."
+stream << EOF
+Say you don't want to be limited to monitor only your box but e.g. your
+router. You can access it's snmp agents values with the gkrellm_snmp
+plugin.
+EOF

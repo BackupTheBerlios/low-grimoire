@@ -1,0 +1,40 @@
+  VERSION=( "0.16" "0.13" )
+ CATEGORY="graphic-editor graphic"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://filmgimp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gtk+ tiff jpeg libpng "
+#FRESHMEAT=""
+    SHORT="Film Gimp is a motion picture editing tool."
+LONG="
+Film Gimp is a motion picture editing tool primarily used for painting and
+retouching of movies. Its application to feature movie productions includes
+the movies Scooby-Doo, Harry Potter, and Stuart Little. Film Gimp is the
+most successful open source tool in feature motion picture work today. Film
+Gimp runs on Linux and SGI Irix. A Windows version is planned for release in
+December 2002, and Macintosh native in 2003.
+
+Film Gimp is a motion picture editing tool primarily used for painting
+and retouching of movies. With sixteen bits per component instead of
+eight, Film Gimp has much more color depth capacity than Gimp.
+Spencer Kimball and Peter Mattis created Gimp originally, releasing the
+first version (0.54) in 1995. Gimp is a widely-used alternative to
+Adobe Photoshop, a popular tool for professional image editing.
+Film Gimp extended Gimp to operate upon a series of images and in
+16-bit linear and floating point color depths. Film Gimp is currently
+based upon the HOLLYWOOD 1.0.4 branch of Gimp.
+
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr                  \
+              --enable-precision=float $OPTS &&
+  make                                       &&
+  prepare_install                            &&
+  make    install                           
+  
+) > $C_FIFO 2>&1}
+

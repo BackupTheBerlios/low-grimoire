@@ -1,0 +1,13 @@
+  VERSION=( "1.8" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="gkernel/$SPELL-$VERSION"
+ HOMEPAGE="http://sourceforge.net/projects/gkernel"
+      URL="$SOURCEFORGE_URL"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="ethtool is used for querying settings of an ethernet device and  changing them."
+LONG="
+ethtool is used for querying settings of an ethernet device and  changing them.
+"
+

@@ -1,0 +1,25 @@
+  VERSION=( "None" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL"
+ HOMEPAGE="http://www.whatsis.com/pstack/"
+      URL="http://www.whatsis.com/"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="pstack dumps a stack trace for a process, given the pid of that process."
+LONG="
+pstack dumps a stack trace for a process, given the pid of that process.
+If the process named is part of a thread group, then all the threads in
+the group are traced. See the man page for more information.
+"
+
+build() {
+(
+
+  sed -i "s:/local::" Makefile &&
+  make                         &&
+  prepare_install              &&
+  make    install
+
+) > $C_FIFO 2>&1}
+

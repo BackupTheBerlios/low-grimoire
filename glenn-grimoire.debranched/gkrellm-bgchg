@@ -1,0 +1,26 @@
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "0.1.0" "0.0.9" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellmbgchg2-$VERSION"
+ HOMEPAGE="http://www.bender-suhl.de/stefan/english/comp/gkrellmbgchg.html"
+      URL="http://www.bender-suhl.de/stefan/comp/sources"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="GKrellMBgChg is a plugin for GKrellM, which periodically updates the desktops background image."
+LONG="
+GKrellMBgChg is a plugin for GKrellM, which periodically updates the
+desktops background image. It is also possible to force an image update
+by clicking on the panel or to "hold" the image with the mouse wheel. 
+"
+
+build() {
+(
+  make                                   &&
+  prepare_install                        &&
+  mkdir -p /usr/lib/gkrellm2/plugins     &&
+  install -c -m 755 gkrellmbgchg.so /usr/lib/gkrellm2/plugins
+
+) > $C_FIFO 2>&1}
+

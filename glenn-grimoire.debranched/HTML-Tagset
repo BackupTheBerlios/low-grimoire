@@ -1,0 +1,23 @@
+   VERSION=( "3.03" )
+  CATEGORY="library"
+ ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.speech.cs.cmu.edu/~sburke"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/S/SB/SBURKE"
+       REQ="perl"
+     SHORT="data tables useful in parsing HTML."
+LONG="
+data tables useful in parsing HTML.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,27 @@
+   VERSION=( "2.4.1" "2.4.0" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://pdl.perl.org"
+       URL="ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/C/CS/CSOE"
+       REQ="perl"
+     SHORT="The perlDL project aims to turn perl into an efficient numerical language for scientific computing."
+LONG="
+The perlDL project aims to turn perl into an efficient numerical language for
+scientific computing. The PDL module gives standard perl the ability to
+COMPACTLY store and SPEEDILY manipulate the large N-dimensional data sets which
+are the bread and butter of scientific computing. e.g. \$a=\$b+\$c can add two
+2048x2048 images in only a fraction of a second.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,40 @@
+   VERSION=( "3.6.5" )
+  CATEGORY="log"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL/${SPELL}_$VERSION.orig"
+  HOMEPAGE="http://packages.debian.org/unstable/admin/logrotate.html"
+       URL="ftp://ftp.debian.org/debian/pool/main/l"
+       REQ="gzip popt"
+     SHORT="Rotates, compresses, removes and mails system log files."
+LONG="
+The logrotate utility is designed to simplify the administration of
+log files on a system which generates a lot of log files.  Logrotate
+allows for the automatic rotation compression, removal and mailing of
+log files.  Logrotate can be set to handle a log file daily, weekly,
+monthly or when the log file gets to a certain size.  Normally,
+logrotate runs as a daily cron job.
+
+Check out this site for some good examples:
+http://www.topology.org/linux/logrotate.html
+"
+
+build() {
+(
+  sed -i "s:CFLAGS += -g:CFLAGS += -g ${CFLAGS}:" Makefile
+
+  make               &&
+  prepare_install    &&
+  make    install    &&
+  mkdir -p /etc/logrotate.d  &&
+  mkdir -p /etc/cron.daily   &&
+  mkdir -p /var/lib          &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -R examples /usr/share/$SPELL &&
+  cp -R test /usr/share/$SPELL &&
+  install -m 644 examples/logrotate-default /etc/logrotate.conf    &&
+  install -m 755 examples/logrotate.cron /etc/cron.daily/logrotate &&
+  touch /var/lib/logrotate.status
+
+) > $C_FIFO 2>&1
+}
+

@@ -1,0 +1,8 @@
+if  !  grep  -q  "SOCKD_BOOT="  $SPELL_CONFIG;  then
+
+  if    query  "Invoke sockd during boot?" y
+  then  echo   "SOCKD_BOOT=y"  >>  $SPELL_CONFIG
+  else  echo   "SOCKD_BOOT=n"  >>  $SPELL_CONFIG
+  fi
+
+fi

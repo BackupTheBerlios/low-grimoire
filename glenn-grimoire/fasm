@@ -1,0 +1,30 @@
+  VERSION=( "1.50" "1.48" "1.47" "1.46" )
+ CATEGORY="assembler"
+ATTRIBUTE="console"
+#   SOURCE="$SPELL/$SPELL-$VERSION"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://flatassembler.net/"
+#      URL="$SOURCEFORGE_URL"
+      URL="http://flatassembler.net"
+FRESHMEAT="fasm"
+    SHORT="The flat assembler is a fast and efficient self-assembling 80x86 assembler."
+LONG="
+The flat assembler is a fast and efficient self-assembling 80x86 assembler
+for DOS, Windows and Linux. It supports all 8086-80486/Pentium instructions
+with MMX, SSE, SSE2 and 3DNow! extensions, can produce output in binary, 
+MZ, PE or COFF format. Has the advanced but easy to use macroinstruction
+support and does multiple quick passes to optimize the code for size.
+"
+
+build() {
+(
+  cd source/Linux             &&
+  ../../fasm fasm.asm fasm    &&
+  chmod +x fasm               &&
+  prepare_install             &&
+  install  -o root -g root -m 755  fasm  /usr/bin &&
+  mkdir -p /usr/share/fasm                        &&
+  cp -R ../../examples  /usr/share/fasm/
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,427 @@
+diff -ru ../gkrellm_snmp-0.18.old/Makefile ./Makefile
+--- ../gkrellm_snmp-0.18.old/Makefile	2001-04-03 08:25:07.000000000 -0500
++++ ./Makefile	2004-03-13 23:43:43.000000000 -0600
+@@ -1,9 +1,10 @@
+ # Makefile for a GKrellM SNMP monitor plugin
+ 
+ # Linux
+-GTK_CONFIG = gtk-config
++##GTK_CONFIG = gtk-config
++GTK_CONFIG = pkg-config gtk+-2.0 --cflags
+ IMLIB_CONFIG = imlib-config
+-SYSLIB = -lsnmp
++SYSLIB = -lnetsnmp
+ # we need lib crypto if libsnmp has privacy support.
+ SYSLIB += -lcrypto -L/usr/local/ssl/lib -L/usr/ssl/lib
+ 
+@@ -13,19 +14,19 @@
+ #SYSLIB = -lsnmp
+ #PLUGIN_DIR = /usr/X11R6/libexec/gkrellm/plugins/
+ 
+-USER_PLUGIN_DIR = $(HOME)/.gkrellm/plugins
+-PLUGIN_DIR = /usr/share/gkrellm/plugins
++USER_PLUGIN_DIR = $(HOME)/.gkrellm2/plugins
++PLUGIN_DIR = /usr/lib/gkrellm2/plugins
+ GKRELLM_INCLUDE = -I/usr/local/include
+ 
+ GTK_INCLUDE = `$(GTK_CONFIG) --cflags`
+ GTK_LIB = `$(GTK_CONFIG) --libs`
+ 
+-IMLIB_INCLUDE = `$(IMLIB_CONFIG) --cflags-gdk`
+-IMLIB_LIB = `$(IMLIB_CONFIG) --libs-gdk`
++#IMLIB_INCLUDE = `$(IMLIB_CONFIG) --cflags-gdk`
++#IMLIB_LIB = `$(IMLIB_CONFIG) --libs-gdk`
+ 
+ 
+-FLAGS = -Wall -fPIC $(GTK_INCLUDE) $(IMLIB_INCLUDE) $(GKRELLM_INCLUDE)
+-LIBS = $(GTK_LIB) $(IMLIB_LIB) $(SYSLIB)
++FLAGS = -Wall -fPIC $(GTK_INCLUDE) $(GKRELLM_INCLUDE)
++LIBS = $(GTK_LIB) $(SYSLIB)
+ LFLAGS = -shared
+ 
+ CC = gcc $(CFLAGS) $(FLAGS)
+Only in .: gkrellm_snmp-0.18-bigpatch.patch
+diff -ru ../gkrellm_snmp-0.18.old/gkrellm_snmp.c ./gkrellm_snmp.c
+--- ../gkrellm_snmp-0.18.old/gkrellm_snmp.c	2001-07-27 15:06:41.000000000 -0500
++++ ./gkrellm_snmp.c	2004-03-13 23:40:45.000000000 -0600
+@@ -1,4 +1,4 @@
+-/* SNMP reader plugin for GKrellM 
++/* SNMP reader plugin for GKrellM
+ |  Copyright (C) 2000,2001  Christian W. Zuckschwerdt <zany@triq.net>
+ |
+ |  Author:  Christian W. Zuckschwerdt  <zany@triq.net>  http://triq.net/
+@@ -33,29 +33,88 @@
+ #include <stdio.h>
+ #include <sys/types.h>
+ 
+-#include <ucd-snmp/asn1.h>
+-#include <ucd-snmp/mib.h>
+-#include <ucd-snmp/parse.h>
+-
+-#include <ucd-snmp/snmp.h>
+-#include <ucd-snmp/snmp_api.h>
+-#include <ucd-snmp/snmp_client.h>
+-#include <ucd-snmp/snmp_impl.h> /* special ASN types */
++#include <net-snmp/net-snmp-config.h>
++#include <net-snmp/net-snmp-includes.h>
+ #ifdef DEBUG_SNMP
+-#include <ucd-snmp/snmp_debug.h>
++#include <net-snmp/snmp_debug.h>
+ #endif /* DEBUG_SNMP */
+ 
+ #include <sys/time.h>
+ 
+ 
+-#include <gkrellm/gkrellm.h>
++#include <gkrellm2/gkrellm.h>
+ 
+ 
+ #define SNMP_PLUGIN_MAJOR_VERSION 0
+-#define SNMP_PLUGIN_MINOR_VERSION 17
+-
++#define SNMP_PLUGIN_MINOR_VERSION 19
+ #define PLUGIN_CONFIG_KEYWORD   "snmp_monitor"
+ 
++/* gkrellm 2 defines */
++
++  /* Structure name changes */
++#define TextStyle           GkrellmTextstyle
++#define Decal               GkrellmDecal
++#define Label               GkrellmLabel
++#define Margin              GkrellmMargin
++#define Style               GkrellmStyle
++#define Krell               GkrellmKrell
++#define Panel               GkrellmPanel
++#define ChartConfig         GkrellmChartconfig
++#define ChartLayer          GkrellmChartlayer
++#define Chart               GkrellmChart
++#define ChartData           GkrellmChartdata
++#define DecalButton         GkrellmDecalbutton
++#define Launcher            GkrellmLauncher
++#define AlertDecal          GkrellmAlertdecal
++#define Alert               GkrellmAlert
++#define gkrellm_system(c)   g_spawn_command_line_async(c, NULL)
++
++#define	gkrellm_configure_panel gkrellm_panel_configure
++#define	gkrellm_destroy_panel   gkrellm_panel_destroy
++#define	gkrellm_draw_layers     gkrellm_draw_panel_layers
++#define	gkrellm_draw_layers_force gkrellm_draw_panel_layers_force
++
++/* The GKrellM functions which previously related to Imlib images and now
++  |  relate to piximages are renamed:
++  */
++#define gkrellm_chart_bg_image_override gkrellm_chart_bg_piximage_override
++#define gkrellm_panel_bg_image_override gkrellm_panel_bg_piximage_override
++#define gkrellm_load_image              gkrellm_load_piximage
++#define gkrellm_set_image_border        gkrellm_set_gkrellmrc_piximage_border
++#define gkrellm_get_gkrellmrc_image_border gkrellm_get_gkrellmrc_piximage_border
++#define gkrellm_bg_chart_image          gkrellm_bg_chart_piximage
++#define gkrellm_bg_grid_image           gkrellm_bg_grid_piximage
++#define gkrellm_bg_panel_image          gkrellm_bg_panel_piximage
++#define gkrellm_bg_meter_image          gkrellm_bg_meter_piximage
++#define gkrellm_krell_panel_image       gkrellm_krell_panel_piximage
++#define gkrellm_krell_meter_image       gkrellm_krell_meter_piximage
++#define gkrellm_krell_slider_image      gkrellm_krell_slider_piximage
++#define gkrellm_krell_mini_image        gkrellm_krell_mini_piximage
++#define gkrellm_get_decal_alarm_image   gkrellm_get_decal_alarm_piximage
++#define gkrellm_get_decal_warn_image    gkrellm_get_decal_warn_piximage
++
++
++/* Several gkrellm_ functions are wrappers around gtk widget functions to
++  |  provide a higher level interface for creating the config pages.
++  |  These name changes better identify this functionality:
++  */
++#define	gkrellm_create_tab          gkrellm_gtk_notebook_page
++#define	gkrellm_create_framed_tab   gkrellm_gtk_framed_notebook_page
++#define gkrellm_launcher_table_new  gkrellm_gtk_launcher_table_new
++#define	gkrellm_entry_get_text      gkrellm_gtk_entry_get_text
++#define	gkrellm_spin_button         gkrellm_gtk_spin_button
++#define	gkrellm_check_button        gkrellm_gtk_check_button
++#define	gkrellm_check_button_connected gkrellm_gtk_check_button_connected
++#define	gkrellm_button_connected    gkrellm_gtk_button_connected
++#define	gkrellm_scrolled_vbox       gkrellm_gtk_scrolled_vbox
++#define	gkrellm_framed_vbox         gkrellm_gtk_framed_vbox
++#define	gkrellm_framed_vbox_end     gkrellm_gtk_framed_vbox_end
++#define	gkrellm_scrolled_text       gkrellm_gtk_scrolled_text_view
++#define	gkrellm_add_info_text       gkrellm_gtk_text_view_append_strings
++#define	gkrellm_add_info_text_string gkrellm_gtk_text_view_append
++#define gkrellm_config_launcher	    gkrellm_gtk_config_launcher
++
++static GkrellmMonitor *monitor;
+ 
+ typedef struct Reader Reader;
+ 
+@@ -277,7 +336,8 @@
+       if (response->errstat == SNMP_ERR_NOERROR){
+         /* just render all vars */
+         for(vars = response->variables; vars; vars = vars->next_variable) {
+-	    sprint_variable(textbuf, vars->name, vars->name_length, vars);
++	    snprint_variable(textbuf, 1023, vars->name, vars->name_length, vars);
++	    textbuf[1023] = '\0';
+ 	    if (result) {
+ 	        tmp = result;
+ 		result = g_strdup_printf("%s\n%s\n", tmp, textbuf);
+@@ -375,7 +435,7 @@
+     u_long time = 0;
+     Reader *reader = NULL;
+ 
+-    if (op == RECEIVED_MESSAGE) {
++    if (op == NETSNMP_CALLBACK_OP_RECEIVED_MESSAGE) {
+ 
+         if (pdu->errstat == SNMP_ERR_NOERROR) {
+ 
+@@ -415,7 +475,7 @@
+         }
+ 
+ 
+-    } else if (op == TIMED_OUT){
++    } else if (op == NETSNMP_CALLBACK_OP_TIMED_OUT){
+         error = g_strdup_printf("Error! SNMP Timeout.");
+     }
+     /* we use session's callback magic to pass back data */
+@@ -601,7 +661,7 @@
+ 		    text = reader->old_error;
+ 		    reader->old_error = g_strdup(reader->error);
+ 		    g_free(text);
+-		    reader->panel->textstyle = gkrellm_panel_alt_textstyle(DEFAULT_STYLE);
++		    reader->panel->textstyle = gkrellm_panel_alt_textstyle(DEFAULT_STYLE_ID);
+ 		    text = render_error(reader);
+ 		    gtk_tooltips_set_tip(reader->tooltip, reader->panel->drawing_area, text, "");
+ 		    gtk_tooltips_enable(reader->tooltip);
+@@ -627,7 +687,7 @@
+ 		    reader->old_sample_n = reader->sample_n;
+ 		    reader->old_sample_time = reader->sample_time;
+ 		}
+-		reader->panel->textstyle = gkrellm_panel_textstyle(DEFAULT_STYLE);
++		reader->panel->textstyle = gkrellm_panel_textstyle(DEFAULT_STYLE_ID);
+ 	    }
+ 
+ 	    /* back up the old sample */
+@@ -635,7 +695,7 @@
+ 	    reader->old_sample_time = reader->sample_time;
+ 
+ 	} else {
+-	    reader->panel->textstyle = gkrellm_panel_alt_textstyle(DEFAULT_STYLE);
++	    reader->panel->textstyle = gkrellm_panel_alt_textstyle(DEFAULT_STYLE_ID);
+ 	    gtk_tooltips_disable(reader->tooltip);
+ 	    //	i = -1;
+ 	}
+@@ -643,14 +703,15 @@
+ 	//      gkrellm_update_krell(panel, k, i);
+ 
+ 	/* Bill mentioned this change for upcoming 0.10.0 */
+-#if (VERSION_MAJOR <= 0)&&(VERSION_MINOR <= 9)
++#if (GKRELLM_VERSION_MAJOR <= 0)&&(GKRELLM_VERSION_MINOR <= 9)
+ 	clock_style_id = CLOCK_STYLE;
+ #else
+ 	clock_style_id = gkrellm_lookup_meter_style_id(CLOCK_STYLE_NAME);
+ #endif
+ 
+-	gkrellm_draw_panel_label( reader->panel,
+-				  gkrellm_bg_panel_image(clock_style_id) );
++	/*gkrellm_draw_panel_label( reader->panel,
++				  gkrellm_bg_panel_image(clock_style_id) );*/
++	gkrellm_draw_panel_label( reader->panel );
+ 	gkrellm_draw_layers(reader->panel);
+     }
+ 
+@@ -680,7 +741,6 @@
+     Style           *style;
+     //    GdkImlibImage   *krell_image;
+     gchar *text;
+-
+     if (first_create)
+         reader->panel = gkrellm_panel_new0();
+     else
+@@ -689,8 +749,8 @@
+     /* Create a krell.  A Krell structure is allocated and linked into
+     |  the list of krells pointed to by panel->krell.
+     */
+-    style = gkrellm_meter_style(DEFAULT_STYLE);
+-    style->label_position = LABEL_CENTER;
++    style = gkrellm_meter_style(DEFAULT_STYLE_ID);
++    /* #style->label_position = LABEL_CENTER; */
+     //    krell_image = gkrellm_krell_meter_image(DEFAULT_STYLE);
+     //    k = gkrellm_create_krell(panel, krell_image, style);
+     //    k->full_scale = 30;
+@@ -698,8 +758,9 @@
+     /* Configure panel calculates the panel height needed for the "Plugin" label.
+     |  and the krell.
+     */
+-    reader->panel->textstyle = gkrellm_meter_textstyle(DEFAULT_STYLE);
++    reader->panel->textstyle = gkrellm_meter_textstyle(DEFAULT_STYLE_ID);
+     gkrellm_configure_panel(reader->panel, "SNMP", style);
++
+     //    gkrellm_configure_panel(reader->panel, "SNMP", style);
+ 
+     //    reader->panel->textstyle = gkrellm_panel_alt_textstyle(DEFAULT_STYLE);
+@@ -708,9 +769,10 @@
+     /* Build the configured panel with a background image and pack it into
+     |  the vbox assigned to this monitor.
+     */
+-    gkrellm_create_panel(vbox, reader->panel, gkrellm_bg_meter_image(DEFAULT_STYLE));
+-    gkrellm_monitor_height_adjust(reader->panel->h);
+-
++    /*gkrellm_create_panel(vbox, reader->panel, gkrellm_bg_meter_image(DEFAULT_STYLE));*/
++    /* gkrellm_panel_create(vbox, reader->panel, gkrellm_bg_meter_image(DEFAULT_STYLE_ID)); */
++    gkrellm_panel_create(vbox, monitor, reader->panel);
++    /* gkrellm_monitor_height_adjust(reader->panel->h); */
+     if (first_create) {
+         gtk_signal_connect(GTK_OBJECT (reader->panel->drawing_area),
+ 			   "expose_event",
+@@ -757,7 +819,6 @@
+ create_plugin(GtkWidget *vbox, gint first_create)
+ {
+   Reader *reader;
+-
+   main_vbox = vbox;
+ 
+   for (reader = readers; reader ; reader = reader->next) {
+@@ -818,16 +879,19 @@
+   gchar   proto[CFG_BUFSIZE], bufl[CFG_BUFSIZE];
+   gchar   bufc[CFG_BUFSIZE], bufp[CFG_BUFSIZE];
+   gchar   bufo[CFG_BUFSIZE], bufu[CFG_BUFSIZE];
++  gchar   bufpr[CFG_BUFSIZE], bufpeer[CFG_BUFSIZE];
+   gint    n;
+ 
+-  reader = g_new0(Reader, 1); 
++  reader = g_new0(Reader, 1);
+ 
+-  n = sscanf(arg, "%s %[^:]://%[^@]@%[^:]:%d/%s %s %d %d %d %d",
+-	     bufl, proto, bufc, bufp, &reader->port, bufo, bufu,
++  n = sscanf(arg, "%s %[^:]://%[^@]@%[^:]:%[^:]:%d/%s %s %d %d %d %d",
++	     bufl, proto, bufc, bufpr, bufpeer, &reader->port, bufo, bufu,
+ 	     &reader->delay, &reader->delta,
+ 	     &reader->divisor, &reader->scale);
+   if (n >= 6)
+     {
++      g_snprintf(bufp, CFG_BUFSIZE, "%s:%s", bufpr, bufpeer);
++      bufp[CFG_BUFSIZE-1] = '\0';
+       if (g_strcasecmp(proto, "snmp") == 0) {
+ 	gkrellm_dup_string(&reader->label, bufl);
+ 	gkrellm_dup_string(&reader->community, bufc);
+@@ -845,22 +909,19 @@
+ //FIXME:
+ 	    printf("error parsing oid\n");
+ 	}
+-
+ 	if (n > 7) {
+ 	    gkrellm_dup_string(&reader->unit, bufu);
+ 	} else {
+ 	    gkrellm_dup_string(&reader->unit, "");
+ 	}
+-
+ 	g_strdelimit(reader->label, "_", ' ');
+ 	g_strdelimit(reader->unit, "_", ' ');
+-
+ 	// reader->old_sample = "SNMP"; // be nice.
+       }
+ 
+       if (!readers)
+ 	  readers = reader;
+-      else { 
++      else {
+  	  for (nreader = readers; nreader->next ; nreader = nreader->next);
+ 	  nreader->next = reader;
+       }
+@@ -886,6 +947,7 @@
+   for (row = 0; row < GTK_CLIST(reader_clist)->rows; ++row)
+     {
+       gint i;
++      gchar peername[MAXHOSTNAMELEN+1];
+       i = 0;
+       reader = g_new0(Reader, 1);
+ 
+@@ -893,6 +955,11 @@
+       gkrellm_dup_string(&reader->label, name);
+ 
+       gtk_clist_get_text(GTK_CLIST(reader_clist), row, i++, &name);
++      if (strncasecmp(name, "tcp:", 4) && strncasecmp(name, "udp:", 4))
++        {
++          g_snprintf(peername, MAXHOSTNAMELEN, "udp:%s", name);
++          name = peername;
++        }
+       gkrellm_dup_string(&reader->peer, name);
+ 
+       gtk_clist_get_text(GTK_CLIST(reader_clist), row, i++, &name);
+@@ -930,7 +997,7 @@
+ 
+       if (!readers)
+           readers = reader;
+-      else { 
++      else {
+ 	  for (nreader = readers; nreader->next ; nreader = nreader->next);
+ 	  nreader->next = reader;
+       }
+@@ -1071,8 +1138,10 @@
+   /* validate we have input */
+   if (!*(buf[1]) || !*(buf[2]) || !*(buf[3]) || !*(buf[4]))
+     {
+-      gkrellm_config_message_window("Entry Error",
++ /*      gkrellm_config_message_window("Entry Error",
+ 				    "Peer, Port, Community and OID must be entered.", widget);
++ */
++ 	gkrellm_config_message_dialog("Entry Error","Peer, Port, Community and OID must be entered.");
+       return;
+     }
+   if (selected_row >= 0)
+@@ -1349,29 +1418,31 @@
+ 
+ 
+ /* --- Info tab */
+-        vbox = gkrellm_create_tab(tabs, "Info");
++ /*        vbox = gkrellm_create_tab(tabs, "Info");
+         scrolled = gtk_scrolled_window_new(NULL, NULL);
+         gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled),
+                         GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+         gtk_box_pack_start(GTK_BOX(vbox), scrolled, TRUE, TRUE, 0);
+-        text = gtk_text_new(NULL, NULL);
+-        gtk_text_insert(GTK_TEXT(text), NULL, NULL, NULL, plugin_info_text, -1);
+-        gtk_text_set_editable(GTK_TEXT(text), FALSE);
++        /* text = gtk_text_view_new(NULL, NULL); */
++ /*	text = gtk_text_view_new();
++        /* gtk_text_insert(GTK_TEXT(text), NULL, NULL, NULL, plugin_info_text, -1);*/
++ /*	gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (text)),plugin_info_text, -1);
++        gtk_text_view_set_editable(GTK_TEXT_VIEW(text), FALSE);
+         gtk_container_add(GTK_CONTAINER(scrolled), text);
+ 
+ /* --- about text */
+ 
+-	text = gtk_label_new(plugin_about_text); 
++ /*	text = gtk_label_new(plugin_about_text);
+ 
+ 	gtk_notebook_append_page(GTK_NOTEBOOK(tabs), text,
+ 				 gtk_label_new("About"));
+-
++ */
+ }
+ 
+ 
+ 
+ 
+-static Monitor  plugin_mon  =
++static GkrellmMonitor  plugin_mon  =
+         {
+         "SNMP",                /* Name, for config tab.        */
+         0,                     /* Id,  0 if a plugin           */
+@@ -1393,9 +1464,10 @@
+         NULL                   /* path if a plugin, filled in by GKrellM   */
+         };
+ 
+-Monitor *
+-init_plugin(void)
++GkrellmMonitor *
++gkrellm_init_plugin(void)
+ {
++
+     readers = NULL;
+ 
+ #ifdef DEBUG_SNMP
+@@ -1404,6 +1476,6 @@
+ #endif /* DEBUG_SNMP */
+ 
+     init_mib();
+-    
++    monitor = &plugin_mon;
+     return &plugin_mon;
+ }

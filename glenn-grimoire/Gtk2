@@ -1,0 +1,27 @@
+   VERSION=( "1.042" "1.030" "1.022" "1.021" "1.00rc3" "0.26" "0.24" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="gtk+ Glib"
+     SHORT="Perl bindings to the 2.x series of the Gtk+ graphical user interface library."
+LONG="
+Perl bindings to the 2.x series of the Gtk+ graphical user interface
+library. This module allows you to write graphical user interfaces in a
+perlish and object-oriented way, freeing you from the casting and memory
+management in C, yet remaining very close in spirit to original API.  Find
+out more about Gtk+ at http://www.gtk.org.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

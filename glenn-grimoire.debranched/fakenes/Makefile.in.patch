@@ -1,0 +1,20 @@
+--- src/Makefile.in	2003-10-19 15:00:45.000000000 -0500
++++ src/Makefile.in.new	2003-10-19 15:00:40.000000000 -0500
+@@ -40,14 +40,12 @@
+ 
+ install : ${BINARY} ${DATAFILE}
+ 
+-	${MKDIR} ${HOME}/bin
++	${MKDIR} @prefix@/share/fakenes
+ 
+-	${MKDIR} ${HOME}/.fakenes
+ 
++	${INSTALL} -m 0755 ${BINARY} @prefix@/bin
+ 
+-	${INSTALL} -m 0755 ${BINARY} ${HOME}/bin
+-
+-	${INSTALL} -m 0644 ${DATAFILE} ${HOME}/.fakenes
++	${INSTALL} -m 0644 ${DATAFILE} @prefix@/share/fakenes
+ 
+ 
+ .SUFFIXES : .c

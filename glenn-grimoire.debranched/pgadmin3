@@ -1,0 +1,13 @@
+  VERSION=( "1.0.2" "1.0.1" "1.0.0" "0.1.1" )
+ CATEGORY="db"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/release/src/$SPELL-$VERSION"
+ HOMEPAGE="http://pgadmin.postgresql.org/"
+      URL="$POSTGRESQL_URL"
+      REQ="wxGTK postgresql"
+#FRESHMEAT=""
+    SHORT="pgAdmin3 is a comprehensive PostgreSQL database design and management system."
+LONG="
+pgAdmin3 is a comprehensive PostgreSQL database design and management system.
+"
+

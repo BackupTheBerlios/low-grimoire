@@ -1,0 +1,28 @@
+  VERSION=( "0.4.2" "0.3.0" )
+ CATEGORY="ladspa-plugin"
+ATTRIBUTE="other"
+   SOURCE="$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://plugin.org.uk"
+      URL="http://plugin.org.uk/releases"
+      REQ="ladspa_sdk fftw"
+#FRESHMEAT=""
+    SHORT="These are audio plugins for LADSPA, the Linux Audio Developers Plugin API."
+LONG="
+Set of LADSPA pluggins by Steve Harris.
+These are audio plugins for LADSPA, the Linux Audio Developers Plugin API.
+"
+
+build() {
+(
+  if [ "$VERSION" == "0.4.2" ]; then
+    sed -i "s:fftw3f:fftw3:" configure
+  fi
+  
+  ./configure --prefix=/usr   \
+              $OPTS           &&
+  make                        &&
+  prepare_install             &&
+  make    install  prefix=/usr
+
+) > $C_FIFO 2>&1}
+

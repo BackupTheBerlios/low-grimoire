@@ -1,0 +1,37 @@
+  VERSION=( "2.1.2" )
+ CATEGORY="debugging"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://nusmv.irst.itc.it"
+      URL="http://nusmv.irst.itc.it/distrib"
+      REQ="ext"
+#   OPT[0]="chaff:::powerful SAT solver"
+#FRESHMEAT=""
+    SHORT="NuSMV is a reimplementation and extension of SMV, the first model checker based on BDDs."
+LONG="
+NuSMV is a reimplementation and extension of SMV, the first model checker
+based on BDDs. NuSMV has been designed to be an open architecture for
+model checking, which can be reliably used for the verification of
+industrial designs, as a core for custom verification tools, as a testbed
+for formal verification techniques, and applied to other research areas.
+"
+
+build() {
+(
+  
+  make -C cudd-2.3.0.1                    &&
+  cd nusmv                                &&
+  sed -i "s:/include:/include/NuSMV:" Makefile.in &&
+  default_build                           &&
+  cp -r examples contrib /usr/share/nusmv &&
+  mkdir -p /usr/doc/$SPELL                &&
+  cp -r doc/* /usr/doc/$SPELL
+  
+#  ./configure --prefix=/usr              \
+#              $OPTS                      &&
+#  make                                   &&
+#  prepare_install                        &&
+#  make install
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,54 @@
+unset SOURCE URL
+  VERSION=( "cvs" )
+ATTRIBUTE="cvs server"
+      REQ="cvs autoconf automake giftd db zlib"
+  PROVIDE="gift-openft"
+   ASSUME="off"
+ ESTIMATE="763"
+
+build() {
+(
+  ./autogen.sh --build=$BUILD		\
+               --prefix=/usr		\
+               $OPTS
+
+  make					&&
+  prepare_install			&&
+  make    install			&&
+  make distclean
+  
+) > $C_FIFO 2>&1
+
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=':pserver:anonymous@cvs.sf.net:/cvsroot/gift'
+  MODULE=OpenFT
+  export CVS_RSH=ssh
+  
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2"
+  fi
+  
+  if [ -a $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -a $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+mkdir -p $SOURCE_CACHE/$BSPELL/$VERSION &&
+tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2" "$SPELL-$VERSION-$BRANCH"
+}
+

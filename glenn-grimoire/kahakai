@@ -1,0 +1,36 @@
+  VERSION=( "0.6.2" "0.6.1" "0.6" "0.5.1" "0.5" "0.4.1" "0.3" "0.2.2" "0.2.1" "0.2" "0.1" )
+ CATEGORY="window-manager"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://kahakai.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="imlib2 swig XFree86 boost"
+   OPT[0]="ruby:::add ruby bindings"
+   OPT[1]="Python:::add python bindings"
+#FRESHMEAT=""
+    SHORT="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager."
+LONG="
+Kahakai is a fork of the Waimea window manager, with the intent to create
+a language agnostic scriptable window manager, while maintaining the
+original features of Waimea, and extending upon them. Kahakai is
+pronounced with the \'ca\' in car, the \'ha\' in hard, and \'ki\' from kite.
+
+By \"language agnostic\", we mean that the scripts which control actions in
+the window manager are not language specific, they can be written in any
+language supported by SWIG. For starters, we plan on supporting Python
+with the addition of Ruby and Perl shortly thereafter.
+"
+
+build() {
+(
+  # only need this for $VERSION < 0.5
+  # ./autogen.sh
+  
+  ./configure --prefix=/usr              \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install
+
+) > $C_FIFO 2>&1}
+

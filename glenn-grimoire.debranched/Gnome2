@@ -1,0 +1,23 @@
+   VERSION=( "0.90" "0.36" "0.26" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="libgnomeui Gnome2-VFS"
+     SHORT="The Gnome2 module allows a perl developer to use the Gnome libraries."
+LONG="
+The Gnome2 module allows a perl developer to use the Gnome libraries.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

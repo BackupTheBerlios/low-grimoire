@@ -1,0 +1,57 @@
+inherit waimea
+unset SOURCE URL
+  VERSION=( "cvs" )
+ATTRIBUTE="cvs window-manager"
+ HOMEPAGE="http://www.freedesktop.org/Software/waimea"
+      REQ="cvs autoconf automake expat cairo"
+   OPT[0]="libpng:::add png support"
+   OPT[1]="libsvg-cairo:::add svg support"
+#   OPT[2]="xcursor:::add png support"
+   PROVIDE="waimea"
+   ASSUME="off"
+ ESTIMATE="134"
+
+build() {
+  ./autogen.sh --build=$BUILD		\
+               --prefix=/usr		\
+               $OPTS
+  
+  make					&&
+  prepare_install			&&
+  make    install			&&
+  make distclean
+  
+
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=":pserver:anoncvs@cvs.waimea.org:/cvs/$SPELL"
+  MODULE=$SPELL
+  export CVS_RSH=ssh
+  
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2"
+  fi
+  
+  if [ -a $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -a $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+mkdir -p $SOURCE_CACHE/$BSPELL/$VERSION &&
+tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2" "$SPELL-$VERSION-$BRANCH"
+}
+

@@ -1,0 +1,23 @@
+   VERSION=( "0.04" "0.02" "0.01" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://gtk2-perl.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Gnome2 libwnck"
+     SHORT="The Gnome2 module allows a perl developer to use Gnome's Wnck libraries."
+LONG="
+The Gnome2 module allows a perl developer to use Gnome's Wnck libraries.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

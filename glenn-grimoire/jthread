@@ -1,0 +1,28 @@
+  VERSION=( "1.0.0" )
+ CATEGORY="networking"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://lumumba.luc.ac.be/jori/jthread/jthread.html"
+      URL="http://lumumba.luc.ac.be/jori"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="The JThread package provides some classes to make use of threads easy on different platforms."
+LONG="
+The JThread package provides some classes to make use of threads easy on
+different platforms. The classes are actually rather simple wrappers
+around existing thread implementations.
+"
+
+build() {
+(
+  sed -i "s#all:.*#all:#" doc/Makefile.in &&
+  ./configure --prefix=/usr              \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  mkdir -p /usr/doc/$SPELL               &&
+  cp doc/*.pdf README* /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

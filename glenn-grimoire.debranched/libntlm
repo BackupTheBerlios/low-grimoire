@@ -1,0 +1,17 @@
+  VERSION=( "0.3.2" "0.3.1" )
+ CATEGORY="library proxy"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://josefsson.org/libntlm"
+      URL="http://josefsson.org/libntlm/releases"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="libntlm is a library that implement Microsoft's NTLM authentication."
+LONG="
+libntlm is a library that implement Microsoft's NTLM authentication.
+However, the packaging of the library lacked certain things (shared
+library, autoconf macro for use in other applications, installed script
+to indicate how to use it) so this page distributes an improved version
+of the library.
+"
+

@@ -1,0 +1,25 @@
+  VERSION=("0.1.4" "0.1.3")
+ CATEGORY="security"
+ATTRIBUTE="server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.cryptnet.net/fsp/cks/"
+      URL="http://www.cryptnet.net/fsp"
+      REQ="postgresql"
+   OPT[0]="tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap"
+#FRESHMEAT=""
+    SHORT="CryptNET keyserver."
+LONG="
+CryptNET keyserver.
+"
+
+build() {
+(
+
+  default_build                             &&
+  mkdir -p /usr/doc/$SPELL                  &&
+  cp -R doc INSTALL README /usr/doc/$SPELL  &&
+  mkdir -p /usr/share/$SPELL                &&
+  cp -R cks.sql cks.conf html /usr/share/$SPELL
+
+) > $C_FIFO 2>&1}
+

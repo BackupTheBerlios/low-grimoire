@@ -1,0 +1,22 @@
+diff -uNr libggigcp-0.8.2/gcp/Makefile.am libggigcp-0.8.2-hotfix/gcp/Makefile.am
+--- libggigcp-0.8.2/gcp/Makefile.am	Mon Dec 16 20:56:41 2002
++++ libggigcp-0.8.2-hotfix/gcp/Makefile.am	Sat Jan  4 00:30:18 2003
+@@ -1,5 +1,5 @@
+ INCLUDES = -DBUILDING_LIBGCP  -I$(top_srcdir)/include $(extra_includes)
+-libggigcp_la_LIBADD = -lggi -lgg
++libggigcp_la_LIBADD = -lggi -lgg -lm
+ 
+ lib_LTLIBRARIES = libggigcp.la
+ 
+diff -uNr libggigcp-0.8.2/gcp/Makefile.in libggigcp-0.8.2-hotfix/gcp/Makefile.in
+--- libggigcp-0.8.2/gcp/Makefile.in	Tue Dec 17 22:59:50 2002
++++ libggigcp-0.8.2-hotfix/gcp/Makefile.in	Sat Jan  4 00:09:50 2003
+@@ -96,7 +96,7 @@
+ static_libdir = @static_libdir@
+ static_sysconfdir = @static_sysconfdir@
+ INCLUDES = -DBUILDING_LIBGCP  -I$(top_srcdir)/include $(extra_includes)
+-libggigcp_la_LIBADD = -lggi -lgg
++libggigcp_la_LIBADD = -lggi -lgg -lm
+ 
+ lib_LTLIBRARIES = libggigcp.la
+ 

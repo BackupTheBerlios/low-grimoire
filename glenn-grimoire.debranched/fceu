@@ -1,0 +1,46 @@
+   VERSION=( "0.98.7" "0.98.5" "0.97.5" )
+  CATEGORY="game emulator"
+ ATTRIBUTE="console x11"
+    SOURCE="$SPELL-$VERSION.src"
+#  HOMEPAGE="http://xodnizel.net/fceultra"
+  HOMEPAGE="http://fceultra.sourceforge.net"
+       URL="http://fceultra.sourceforge.net/releases"
+#       REQ="SDL gtk+,v1.2"
+       REQ="SDL"
+   OPT[0]="XFree86:--with-opengl::use opengl"
+#   OPT[1]="gtk+:--with-gtk::add gtk gui" # not functioning atm
+  ESTIMATE="16"
+# FRESHMEAT=""
+     SHORT="FCE Ultra is a NES(Nintendo Entertainment System) emulator."
+LONG="
+FCE Ultra is a NES(Nintendo Entertainment System) and Famicom(Family
+Computer) emulator for a variety of different platforms, based on Bero's
+FCE. Game compatibility is very high, provided you provide non-corrupt
+ROM/disk images.
+"
+
+
+
+build() {
+(
+
+if [ "$VERSION" != "0.97.5" ] ; then
+    configure --prefix=/usr            \
+              $OPTS                    &&
+    make                               &&
+    prepare_install                    &&
+    make install                       &&
+    mkdir -p /usr/doc/$SPELL           &&
+    cp -r Documentation /usr/doc/$SPELL
+else
+    make -f Makefile.unixsdl.gtk		  &&
+    prepare_install                 		  &&
+    install  -o root -g root -m 755 fceu /usr/bin &&
+    mkdir -p /usr/doc/$SPELL                      &&
+    cp -r Documentation /usr/doc/$SPELL
+fi
+
+) > $C_FIFO 2>&1
+
+}
+

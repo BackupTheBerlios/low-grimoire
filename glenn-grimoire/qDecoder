@@ -1,0 +1,28 @@
+  VERSION=( "7.0.1" )
+ CATEGORY="web"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.Z"
+ HOMEPAGE="http://www.openbird.com/solutions/qdecoder/"
+      URL="ftp://ftp.openbird.com/pub"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="A Free Ansi C Library to facilitate the creation of CGI softwares using the C/C++ programming language."
+LONG="
+A Free Ansi C Library to facilitate the creation of CGI softwares using
+the C/C++ programming language. Documentations, examples and source codes
+are included.
+"
+
+build() {
+(
+
+  default_build                       &&
+  mkdir -p /usr/doc/$SPELL            &&
+  cp -R rfc REFERENCE /usr/doc/$SPELL &&
+  mkdir -p /usr/share/$SPELL          &&
+  cp -R examples/Makefile examples/*.c /usr/share/$SPELL &&
+  mkdir -p /usr/share/$SPELL/qValue-1.0.2 &&
+  cp -R contrib/qValue-1.0.2/{Makefile,README,ex*,qV*.c} /usr/share/$SPELL/qValue-1.0.2
+
+) > $C_FIFO 2>&1}
+

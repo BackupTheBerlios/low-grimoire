@@ -1,0 +1,14 @@
+  VERSION=( "none" )
+ CATEGORY="plugin"
+ATTRIBUTE="library broken"
+   SOURCE=""
+ HOMEPAGE="http://gift-opennap.berlios.de"
+      URL="http://download.berlios.de"
+      REQ="giftd"
+#FRESHMEAT=""
+    SHORT="giFT-OpenNap is a giFT plugin for OpenNap."
+LONG="
+giFT-OpenNap is a giFT plugin for OpenNap, i.e. with this plugin,
+you will be able to acess the various OpenNap networks.
+"
+

@@ -1,0 +1,23 @@
+  VERSION=( "3.81" "3.80" "3.73" "3.72" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.terminatorx.cx"
+      URL="http://www.terminatorx.cx/dist"
+      REQ="gtk+ libxml2"
+   OPT[0]="audiofile:::audiofile support"
+   OPT[1]="mad:::mad for mp3 support"
+   OPT[2]="sox:--enable-sox::for enhanced file support"
+   OPT[3]="mpg123:--enable-mpg123::for mp3 support"
+   OPT[4]="vorbis-tools:--enable-ogg123::for ogg support"
+   OPT[5]="ladspa_sdk:--with-ladspa::for ladspa plugins"
+#FRESHMEAT=""
+    SHORT="Realtime audio syntesizer"
+LONG="
+TerminatorX is a realtime audio synthesizer that allows you to \"scratch\"
+on digitally sampled audio data (*.wav, *.au, *.mp3, etc.) the way
+hiphop-DJs scratch on vinyl records. It features multiple turntables,
+realtime effects (buit-in as well as LADSPA plugin effects), a sequencer
+and an easy-to-use gtk+ GUI.
+"
+

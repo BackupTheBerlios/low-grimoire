@@ -1,0 +1,22 @@
+  VERSION="1.15.3"
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/${SPELL}_$VERSION"
+ HOMEPAGE="http://astyle.sourceforge.net/"
+      URL="$SOURCEFORGE_URL"
+    SHORT="A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java Source Codes"
+LONG="
+A Free, Fast and Small Automatic Indentation Filter for C , C++ , Java
+Source Codes
+"
+
+build() {
+(
+  make                          &&
+  prepare_install               &&
+  mkdir -p /usr/doc/$SPELL/     &&
+  cp -p *.html /usr/doc/$SPELL/ &&
+  install  -o root -g root -m 755  astyle  /usr/bin  
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,23 @@
+   VERSION=( "0.51" )
+  CATEGORY="network security"
+ ATTRIBUTE="perl console"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-0.51"
+       URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/C/CH/CHAMAS"
+       REQ="perl openssl"
+     SHORT="OpenSSL glue that provides LWP https support."
+LONG="
+OpenSSL glue that provides LWP https support.
+"
+
+build() {
+(
+  
+  echo | perl Makefile.PL &&
+  make                    &&
+  prepare_install         &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

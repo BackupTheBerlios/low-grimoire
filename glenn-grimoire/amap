@@ -1,0 +1,31 @@
+  VERSION=( "4.5" "4.0" )
+ CATEGORY="security network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.thc.org"
+      URL="http://www.thc.org/releases"
+#      REQ=""
+   OPT[0]="openssl:::add SSL support"
+#FRESHMEAT=""
+    SHORT="Amap is a next-generation scanning tool."
+LONG="
+Amap is a next-generation scanning tool, which identifies applications and
+services even if they are not listening on the default port by creating a
+bogus-communication and analyzing the responses.
+"
+
+build() {
+(
+  sed -i -e "171s:\$PREFIX:\"$PREFIX\":" configure &&
+  sed -i -e "36s:AMAP_PREFIX\"/bin\":\"etc/amap\":" amap.h &&
+  ./configure --prefix=/usr &&
+  make                      &&
+  prepare_install           &&
+  install -o root -g root -m 644 amap /usr/bin        &&
+  install -o root -g root -m 644 amapcrap /usr/bin    &&
+  mkdir -p /etc/$SPELL                                &&
+  install -o root -g root -m 644 appdefs* /etc/$SPELL &&
+  install -o root -g root -m 644 amap.1 /usr/share/man/man1
+  
+) > $C_FIFO 2>&1}
+

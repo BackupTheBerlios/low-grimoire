@@ -1,0 +1,14 @@
+  VERSION=( "4.0.3" "4.0.1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="omniorb/$SPELL-$VERSION"
+ HOMEPAGE="http://omniorb.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="bison flex"
+   OPT[0]="openssl:--with-openssl=/usr::add ssl support"
+#FRESHMEAT=""
+    SHORT="omniORB is a robust high performance CORBA ORB for C++ and Python."
+LONG="
+omniORB is a robust high performance CORBA ORB for C++ and Python.
+"
+

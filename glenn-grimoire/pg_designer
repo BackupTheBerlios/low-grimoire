@@ -1,0 +1,27 @@
+  VERSION=( "None" )
+ CATEGORY="db development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL"
+ HOMEPAGE="http://gborg.postgresql.org/project/pgdesigner/projdisplay.php"
+      URL="ftp://gborg.postgresql.org/pub/pgdesigner/stable"
+      REQ="postgresql gtk+"
+#FRESHMEAT=""
+    SHORT="Pg_designer creates maintenance programs for Postgresql databases."
+LONG="
+Pg_designer creates maintenance programs for Postgresql databases. A
+program capable of adding, querying, changing or deleting entries, as
+well as a makefile for the generated program is created. The program uses
+gtk and libpq, as well as requiring a working Postgresql database.
+"
+
+build() {
+(
+
+  make                        &&
+  prepare_install             &&
+  install  -o root -g root -m 755 pg_designer /usr/bin &&
+  mkdir -p /usr/doc/$SPELL    &&
+  install  -o root -g root -m 755 README /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

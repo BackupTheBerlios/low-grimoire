@@ -1,0 +1,44 @@
+  VERSION=( "0.4.10" )
+ CATEGORY="graphic"
+ATTRIBUTE="library|x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.swift-tools.net/Flash"
+      URL="http://www.swift-tools.net/Flash"
+      REQ="XFree86"
+#FRESHMEAT=""
+    SHORT="GPL implementation of flash(TM)."
+LONG="
+GPL Flash (TM) library is a set of source codes that allow to play Flash
+(TM) movies. The core of the library is a graphic renderer that is
+portable is to be re-used in applications that need to play Flash(TM)
+movies. This library comes with those freely redistributable tools:
+
+# Netscape plugin. Although Macromedia plugin is freely available, it is
+  not freely redistributable. The GPL Plugin is also not compatible with
+  all Flash(TM) versions.
+# Standalone player. To quickly play movies without to start Netscape. Can
+  play movies on root window (suitable for xscreensaver).
+# KDE screen saver. Cool screen saver that allows to play Flash(TM) movies
+  as a KDE screen saver.
+"
+
+build() {
+(
+  sed -i -e "10i #include <math.h>" Lib/swf.h &&
+  sed -i -e "6i CPP=g++" Player/Makefile      &&
+  sed -i -e "10s:CC:CPP:" Player/Makefile     &&
+  make -C Zlib                                &&
+  make -C Jpeg                                &&
+  make -C Lib                                 &&
+  make -C Plugin                              &&
+  make -C Player                              &&
+  prepare_install                             &&
+  install -o root -g root -m 644 Lib/flash.h /usr/include  &&
+  install -o root -g root -m 644 Lib/libflash.a /usr/lib   &&
+  install -o root -g root -m 644 Player/swfplayer /usr/bin &&
+  mkdir /usr/share/$SPELL                                  &&
+  install -o root -g root -m 644 Plugin/npflash.so /usr/share/$SPELL &&
+  install -o root -g root -m 644 Test/ScreenSaver.swf /usr/share/$SPELL
+
+) > $C_FIFO 2>&1}
+

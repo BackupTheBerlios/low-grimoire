@@ -1,0 +1,136 @@
+diff -rubB ./client/Makefile ../smslink-0.48b.1/client/Makefile
+--- ./client/Makefile	2000-03-01 08:50:20.000000000 -0600
++++ ../smslink-0.48b.1/client/Makefile	2003-07-29 13:35:46.000000000 -0500
+@@ -23,7 +23,7 @@
+ #DEBUG = -DINCL_DEBUG_CODE
+ 
+ DEFINES = -D$(PLATFORM) $(DEBUG)
+-PREFIX = /usr/local
++PREFIX = /usr
+ BINDIR = $(PREFIX)/bin
+ MANDIR = $(PREFIX)/man
+ 
+diff -rubB ./client/sendsms.c ../smslink-0.48b.1/client/sendsms.c
+--- ./client/sendsms.c	2000-03-01 07:45:54.000000000 -0600
++++ ../smslink-0.48b.1/client/sendsms.c	2003-07-29 13:08:02.000000000 -0500
+@@ -54,6 +54,7 @@
+ #ifdef SOLARIS
+ #  include <sys/filio.h>
+ #endif
++#include <errno.h>
+ 
+ /*--------------------------------------Personal includes */
+ #include "sendsms.h"
+@@ -73,17 +74,17 @@
+ /**********               FUNCTIONS                ********/
+ /*========================================================*/
+ void syserr (char *msg)
+-{
++{/*
+   extern int errno, sys_nerr;
+ #ifdef LINUX_LC6
+   extern const char *const sys_errlist[];
+ #else
+   extern char * sys_errlist[];
+-#endif                                /* #ifdef LINUX_LC6 */
++#endif */                               /* #ifdef LINUX_LC6 */
+ 
+   fprintf (stderr, "ERROR %s", msg);
+-  if (errno > 0 && errno < sys_nerr)
+-    fprintf (stderr, " (%d ; %s)\n", errno, sys_errlist[errno]);
++  if (errno > 0 /* && errno < sys_nerr */ )
++    fprintf (stderr, " (%d ; %s)\n", errno, strerror(errno));
+   else
+     fprintf (stderr, "\n");
+   exit (1);
+diff -rubB ./server/Makefile ../smslink-0.48b.1/server/Makefile
+--- ./server/Makefile	2000-05-24 05:42:12.000000000 -0500
++++ ../smslink-0.48b.1/server/Makefile	2003-07-29 13:36:09.000000000 -0500
+@@ -10,7 +10,7 @@
+ LEX = flex -I
+ YACC = bison
+ 
+-PREFIX = /usr/local
++PREFIX = /usr
+ BINDIR = $(PREFIX)/bin
+ MANDIR = $(PREFIX)/man
+ 
+diff -rubB ./server/accessctrl.c ../smslink-0.48b.1/server/accessctrl.c
+--- ./server/accessctrl.c	2000-05-20 03:19:45.000000000 -0500
++++ ../smslink-0.48b.1/server/accessctrl.c	2003-07-29 13:20:30.000000000 -0500
+@@ -227,7 +227,7 @@
+     if (netmask < 32)
+       nomask = (pow (2, netmask) - 1);
+     else
+-      nomask = (unsigned long) 4294967295;
++      nomask = 4294967295UL;
+ 
+     /* now create entry in the list */
+     acl_list_insert (list, action, netorip, htonl (nomask));
+diff -rubB ./server/server.y ../smslink-0.48b.1/server/server.y
+--- ./server/server.y	2000-05-22 13:24:56.000000000 -0500
++++ ../smslink-0.48b.1/server/server.y	2003-07-29 13:22:49.000000000 -0500
+@@ -796,7 +796,7 @@
+     cursor = gsm_acl.head;
+     /* convert mask value */
+     nomask = ntohl (cursor->nomask);
+-    if (nomask < (unsigned long) 4294967295) {
++    if (nomask < 4294967295UL) {
+       nomask++;
+       power = (log (nomask) / log (2));
+       netmask = (32 - power);
+@@ -813,7 +813,7 @@
+       cursor = cursor->next;
+       /* convert mask value */
+       nomask = ntohl (cursor->nomask);
+-      if (nomask < (unsigned long) 4294967295) {
++      if (nomask < 4294967295UL) {
+ 	nomask++;
+ 	power = (log (nomask) / log (2));
+ 	netmask = (32 - power);
+@@ -1243,7 +1243,7 @@
+   if ((ptr = strstr (scratch, "+CMGS:")) == NULL) {
+   }
+   ptr += 6;                        /* jumps to next space */
+-  cmsgid = strtok (ptr, " \t\n\r");
++  cmsgid = (char *) strtok (ptr, " \t\n\r");
+   msgid = atoi (cmsgid);
+     
+   /*----------------------------------Close communication */
+diff -rubB ./server/sms_serv.c ../smslink-0.48b.1/server/sms_serv.c
+--- ./server/sms_serv.c	2000-05-23 10:02:38.000000000 -0500
++++ ../smslink-0.48b.1/server/sms_serv.c	2003-07-29 13:10:45.000000000 -0500
+@@ -114,7 +114,6 @@
+ int ngsmdevs = 0;                /* # defined GSM devices */
+ 
+ /* for flex input */
+-char myinput[];
+ char *myinputptr;              /* current pos. in myinput */
+ char *myinputlim;                   /* ptr to end of data */
+ 
+diff -rubB ./server/stuff.c ../smslink-0.48b.1/server/stuff.c
+--- ./server/stuff.c	2000-04-10 04:46:10.000000000 -0500
++++ ../smslink-0.48b.1/server/stuff.c	2003-07-29 13:12:41.000000000 -0500
+@@ -258,17 +258,17 @@
+ /*#################### Error Handling ####################*/
+ /*========================================================*/
+ void syserr (char *msg)
+-{
++{/*
+   extern int errno, sys_nerr;
+ #ifdef LINUX_LC6
+   extern const char *const sys_errlist[];
+ #else
+   extern char * sys_errlist[];
+-#endif                                /* #ifdef LINUX_LC6 */
++#endif */                              /* #ifdef LINUX_LC6 */
+ 
+   fprintf (stderr, "ERROR %s", msg);
+-  if (errno > 0 && errno < sys_nerr)
+-    fprintf (stderr, " (%d ; %s)\n", errno, sys_errlist[errno]);
++  if (errno > 0 /* && errno < sys_nerr */ )
++    fprintf (stderr, " (%d ; %s)\n", errno, strerror(errno));
+   else
+     fprintf (stderr, "\n");
+   exit (1);
+Only in .: smslink-0.48b.patch

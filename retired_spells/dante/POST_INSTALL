@@ -1,0 +1,36 @@
+prompt (){
+	RESPONSE=""
+	echo -e -n "${QUERY_COLOR}$1 [$2] ${DEFAULT_COLOR}"
+	read -t 10 RESPONSE
+	RESPONSE=${RESPONSE:=$2}
+}
+
+(
+  DAEMON="sockd"
+  cp -p example/sockd.conf /etc/sockd.conf
+  cp -p example/socks.conf /etc/socks.conf
+  
+  cp $SCRIPT_DIR/$DAEMON.sh /etc/init.d
+
+  START="S50$DAEMON"
+  STOP="K50$DAEMON"
+
+  case  $SOCKD_BOOT  in
+    y|Y|j|J)
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc0.d/$STOP
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc1.d/$STOP
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc2.d/$STOP
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc6.d/$STOP
+
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc3.d/$START
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc4.d/$START
+      ln  -sf  ../init.d/$DAEMON.sh  /etc/rc5.d/$START
+      ;;
+          *)  true  ;;
+  esac
+
+  if query "Would you like create a user for $DAEMON for security?" y ; then
+    groupadd $DAEMON
+    useradd -c "Dante $DAEMON user" -g $DAEMON -d "/usr/sbin" -s "/bin/false" $DAEMON
+  fi
+)

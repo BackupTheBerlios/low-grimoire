@@ -1,0 +1,24 @@
+   VERSION=( "0.202" "0.104" "0.103" "0.102" "0.101" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="gtk2-perl/$SPELL-$VERSION"
+  HOMEPAGE="http://www.goof.com/pcg/marc/"
+#       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl glib"
+     SHORT="Easily build XS extensions that depend on XS extensions."
+LONG="
+Easily build XS extensions that depend on XS extensions.
+"
+
+build() {
+(
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

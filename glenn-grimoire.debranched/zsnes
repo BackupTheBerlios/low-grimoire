@@ -1,0 +1,34 @@
+  VERSION=("136")
+ CATEGORY="game emulator"
+ATTRIBUTE="x11"
+ HOMEPAGE="http://www.zsnes.com"
+   SOURCE="zsnes/zsnes${VERSION}src.tar.gz"
+      URL="$SOURCEFORGE_URL"
+      REQ="SDL"
+ ESTIMATE="115"
+FRESHMEAT="zsnes"
+    SHORT="ZSNES is an SNES emulator for i386 machines running Linux, DOS, or Windows"
+LONG="
+ZSNES is an SNES emulator for i386 machines running Linux, DOS, or Windows. It allows 
+you to play most SNES games on your PC. It also adds several enhancements not present 
+in the original SNES such as filters to improve image quality, savestates to be able 
+to save/restore your game at any time, and more.
+"
+
+build() {
+(
+
+  cd  src
+
+  ./configure  --build=$BUILD         \
+               --prefix=/usr          \
+               --sysconfdir=/etc      \
+               --localstatedir=/var   \
+               $OPTS                    &&
+  make                                  &&
+  prepare_install                       &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

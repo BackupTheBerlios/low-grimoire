@@ -1,0 +1,27 @@
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "0.5.1" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellstock/gkrellstock-$VERSION"
+ HOMEPAGE="http://gkrellstock.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gkrellm Finance-Quote"
+#FRESHMEAT=""
+    SHORT="This Plugin gives easy monitoring of stock tickers."
+LONG="
+This Plugin gives easy monitoring of stock tickers from different markets
+like USA, Europe, Asia, Canada and Australia. Perl script to fetch quote
+details from Yahoo Finance using Finance::Quote perl module. ToolTip gives
+details of the Ticke
+"
+
+build() {
+(
+  sed -i "s:-C::" Makefile               &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           
+  
+) > $C_FIFO 2>&1}
+

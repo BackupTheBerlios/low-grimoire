@@ -1,0 +1,13 @@
+  VERSION=( "1.5" "1.2" )
+ CATEGORY="network"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ="bluez-libs"
+#FRESHMEAT=""
+    SHORT="Bluetooth something or other (not sure what it is)."
+LONG="
+Bluetooth something or other (not sure what it is).
+"
+

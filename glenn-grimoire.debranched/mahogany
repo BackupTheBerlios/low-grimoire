@@ -1,0 +1,50 @@
+  VERSION=( "0.66" "0.65" "0.64" )
+ CATEGORY="email"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://mahogany.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="wxGTK openssl latex2html"
+   OPT[0]="Python:--with-python=dynamic::add support for python"
+#FRESHMEAT=""
+    SHORT="Mahogany is an OpenSource cross-platform mail and news client."
+LONG="
+Mahogany is an OpenSource cross-platform mail and news client. It is
+available for X11/Unix and MS Win32 platforms, supporting a wide range of
+protocols and standards, including SMTP, POP3, IMAP, NNTP (including SSL
+support for all of them) and full MIME support.
+"
+
+build() {
+(
+  cd /usr/src/sorcery.cvs/$SPELL/M	&&
+
+  ./configure --prefix=/usr		\
+	      --with-modules=dynamic    \
+               $OPTS                    &&
+  make					&&
+  prepare_install			&&
+  make    install			
+  
+) > $C_FIFO 2>&1
+
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=':pserver:anonymous@cvs.sourceforge.net:/cvsroot/mahogany'
+
+  mkdir -p /usr/src/sorcery.cvs/$SPELL/
+  cd /usr/src/sorcery.cvs/$SPELL/
+
+  if ( true ); then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/M ]; then
+          CVSCOMMAND="update -dP"
+      else
+          CVSCOMMAND="checkout M"
+      fi
+
+      cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  fi
+}
+

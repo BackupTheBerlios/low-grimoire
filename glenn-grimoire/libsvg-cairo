@@ -1,0 +1,15 @@
+  VERSION=( "0.1.4" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.freedesktop.org/Cairo"
+      URL="http://cairographics.org/snapshots
+           http://www.freedesktop.org/Cairo/snapshots"
+      REQ="cairo libsvg"
+#FRESHMEAT=""
+    SHORT="libsvg-cairo provides the ability to render SVG content from files or buffers using cairo."
+LONG="
+libsvg-cairo provides the ability to render SVG content from files or
+buffers. All rendering is performed using the cairo rendering library.
+"
+

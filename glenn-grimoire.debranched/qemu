@@ -1,0 +1,36 @@
+  VERSION=( "0.5.5" )
+ CATEGORY="emulator"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://fabrice.bellard.free.fr/qemu"
+      URL="http://fabrice.bellard.free.fr"
+      REQ="SDL"
+#   OPT[4]="Csound:--with-ladspa::"
+#FRESHMEAT=""
+    SHORT="QEMU is a FAST! processor emulator using dynamic translation to achieve good emulation speed."
+LONG="
+QEMU is a FAST! processor emulator using dynamic translation to achieve
+good emulation speed. 
+
+QEMU has two operating modes:
+*Full system emulation. In this mode, QEMU emulates a full system (for
+example a PC), including a processor and various peripherials. It can be
+used to launch different Operating Systems without rebooting the PC or to
+debug system code. 
+*User mode emulation (Linux host only). In this mode, QEMU can launch Linux
+processes compiled for one CPU on another CPU. It can be used to launch the
+Wine Windows API emulator (http://www.winehq.org) or to ease
+cross-compilation and cross-debugging. 
+"
+
+build() {
+(
+  sed -i "s:/share/doc/qemu:/doc/qemu:" configure &&
+  ./configure --prefix=/usr   \
+              $OPTS           &&
+  make                        &&
+  prepare_install             &&
+  make    install  prefix=/usr
+
+) > $C_FIFO 2>&1}
+

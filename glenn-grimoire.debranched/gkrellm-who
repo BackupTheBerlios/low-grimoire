@@ -1,0 +1,26 @@
+# This spell converted by cantripify.sh
+unset OPT  
+  VERSION=( "0.2.8" )
+ CATEGORY="gkrellm-plugin"
+ATTRIBUTE="concurrent x11"
+   SOURCE="gkrellmwho2_$VERSION.orig.tar.gz"
+ HOMEPAGE="http://shisha.spb.ru/projects/GkrellmWHO2"
+      URL="http://shisha.spb.ru/debian"
+      REQ="gkrellm"
+#FRESHMEAT=""
+    SHORT="This plugin displays currently logged in users in the scrolling line."
+LONG="
+This plugin displays currently logged in users in the scrolling line. It
+also shows number of logins for each username and may show idle status.
+
+"
+
+build() {
+(
+  sed -i "s:/usr/bin/gcc:gcc:" configure &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           
+  
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,42 @@
+  VERSION=("0.1.3")
+ CATEGORY="disk"
+ATTRIBUTE="console|gnome|x11 client|server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://surprise.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+   OPT[0]="readline:::add readline capability"
+   OPT[1]="gtk+,v1.2:::make the guiclient (desirable)"
+#   OPT[2]=":--with-doc-html=yes --with-doc-txt=yes::make documentation"
+ ESTIMATE="1429"
+#FRESHMEAT=""
+    SHORT="Partition Surprise is a GPL partition managing software for Linux."
+LONG="
+Partition Surprise is a GPL partition managing software for Linux.
+Partition resizes, moves and conversions is implemented. Limited support
+of operations on mounted ext2-filesystem included as well.
+"
+
+build() {
+(
+  sed -i "s/#define	STRIDE_LENGTH  8/#define	STRIDE_LENGTH  8\\n#define ext2fs_sb ext2_super_block/" ./src/libsurprise/fs/ext2/mkfs.c
+  
+  ./configure --prefix=/usr   \
+              $OPTS           &&
+  make                        &&
+  prepare_install             &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+
+configure() {
+default_configure
+if  !  grep  -q  "BUILD_DOCUMENTATION"  $SPELL_CONFIG; then
+  if    query  "Build Documentation ? " y
+  then  echo  "BUILD_DOCUMENTATION=true"   >>  $SPELL_CONFIG
+  else  echo  "BUILD_DOCUMENTATION=false"  >>  $SPELL_CONFIG
+  fi
+fi
+}
+

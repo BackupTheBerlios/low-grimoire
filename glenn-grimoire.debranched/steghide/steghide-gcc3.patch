@@ -1,0 +1,1467 @@
+diff -ur steghide-0.4.6b-orig/src/arg.cc steghide-0.4.6b/src/arg.cc
+--- steghide-0.4.6b-orig/src/arg.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/arg.cc	Mon Oct 14 19:10:11 2002
+@@ -18,6 +18,7 @@
+  *
+  */
+ 
++#include <string>
+ #include "arg.h"
+ 
+ template<class T> Arg<T>::Arg (void)
+diff -ur steghide-0.4.6b-orig/src/arg.h steghide-0.4.6b/src/arg.h
+--- steghide-0.4.6b-orig/src/arg.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/arg.h	Mon Oct 14 19:32:59 2002
+@@ -46,7 +46,7 @@
+ typedef Arg<unsigned int> ArgUInt ;
+ typedef Arg<Verbosity> ArgVerbosity ;
+ typedef Arg<bool> ArgBool ;
+-typedef Arg<string> ArgString ;
++typedef Arg<std::string> ArgString ;
+ typedef Arg<DMTDINFO> ArgDMTDINFO ;
+ 
+ #endif /* ndef SH_ARG_H */
+diff -ur steghide-0.4.6b-orig/src/arguments.cc steghide-0.4.6b/src/arguments.cc
+--- steghide-0.4.6b-orig/src/arguments.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/arguments.cc	Mon Oct 14 19:11:52 2002
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include <iostream>
++#include <string>
+ 
+ #include <libintl.h>
+ #define _(S) gettext (S)
+@@ -53,15 +54,15 @@
+ 		command.setValue (SHOWHELP) ;
+ 		return ;
+ 	}
+-	else if (string (argv[1]) == "embed" || string (argv[1]) == "--embed") {
++	else if (std::string (argv[1]) == "embed" || std::string (argv[1]) == "--embed") {
+ 		command.setValue (EMBED) ;
+ 		setDefaults () ;
+ 	}
+-	else if (string (argv[1]) == "extract" || string (argv[1]) == "--extract") {
++	else if (std::string (argv[1]) == "extract" || std::string (argv[1]) == "--extract") {
+ 		command.setValue (EXTRACT) ;
+ 		setDefaults () ;
+ 	}
+-	else if (string (argv[1]) == "version" || string (argv[1]) == "--version") {
++	else if (std::string (argv[1]) == "version" || std::string (argv[1]) == "--version") {
+ 		command.setValue (SHOWVERSION) ;
+ 		if (argc > 2) {
+ 			Warning w (_("you cannot use arguments with the \"version\" command")) ;
+@@ -69,7 +70,7 @@
+ 		}
+ 		return ;
+ 	}
+-	else if (string (argv[1]) == "license" || string (argv[1]) == "--license") {
++	else if (std::string (argv[1]) == "license" || std::string (argv[1]) == "--license") {
+ 		command.setValue (SHOWLICENSE) ;
+ 		if (argc > 2) {
+ 			Warning w (_("you cannot use arguments with the \"license\" command")) ;
+@@ -77,7 +78,7 @@
+ 		}
+ 		return ;
+ 	}
+-	else if (string (argv[1]) == "help" || string (argv[1]) == "--help") {
++	else if (std::string (argv[1]) == "help" || std::string (argv[1]) == "--help") {
+ 		command.setValue (SHOWHELP) ;
+ 		if (argc > 2) {
+ 			Warning w (_("you cannot use arguments with the \"help\" command")) ;
+@@ -86,7 +87,7 @@
+ 		return ;
+ 	}
+ #ifdef DEBUG
+-	else if (string (argv[1]) == "test") {
++	else if (std::string (argv[1]) == "test") {
+ 		steghide_test_all () ;
+ 		exit (EXIT_SUCCESS) ;
+ 	}
+@@ -97,7 +98,7 @@
+ 
+ 	// parse rest of arguments
+ 	for (int i = 2; i < argc; i++) {
+-		if (string (argv[i]) == "-d" || string (argv[i]) == "--distribution") {
++		if (std::string (argv[i]) == "-d" || std::string (argv[i]) == "--distribution") {
+ 			unsigned int tmp = 0 ;
+ 
+ 			if (command.getValue() != EMBED) {
+@@ -112,7 +113,7 @@
+ 				throw SteghideError (_("the argument \"%s\" is incomplete. type \"%s --help\" for help."), argv[i - 1], PROGNAME) ;
+ 			}
+ 
+-			if (string (argv[i]) == "cnsti") {
++			if (std::string (argv[i]) == "cnsti") {
+ 				dmtd.setValue (DMTD_CNSTI) ;
+ 				
+ 				if ((i + 1 < argc) && (argv[i + 1][0] != '-')) {
+@@ -127,7 +128,7 @@
+ 					dmtdinfo.setValue (di) ;	
+ 				}
+ 			}
+-			else if (string (argv[i]) == "prndi") {
++			else if (std::string (argv[i]) == "prndi") {
+ 				dmtd.setValue (DMTD_PRNDI) ;
+ 				
+ 				if ((i + 1 < argc) && (argv[i + 1][0] != '-')) {
+@@ -147,7 +148,7 @@
+ 			}
+ 		}
+ 
+-		else if (string (argv[i]) == "-e" || string (argv[i]) == "--encryption") {
++		else if (std::string (argv[i]) == "-e" || std::string (argv[i]) == "--encryption") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("the argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -159,7 +160,7 @@
+ 			encryption.setValue (true) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-E" || string (argv[i]) == "--noencryption") {
++		else if (std::string (argv[i]) == "-E" || std::string (argv[i]) == "--noencryption") {
+ 			if (command.getValue () != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -171,7 +172,7 @@
+ 			encryption.setValue (false) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-h" || string (argv[i]) == "--sthdrencryption") {
++		else if (std::string (argv[i]) == "-h" || std::string (argv[i]) == "--sthdrencryption") {
+ 			if (sthdrencryption.is_set()) {
+ 				throw SteghideError (_("the stego header encryption argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -179,7 +180,7 @@
+ 			sthdrencryption.setValue (true) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-H" || string (argv[i]) == "--nosthdrencryption") {
++		else if (std::string (argv[i]) == "-H" || std::string (argv[i]) == "--nosthdrencryption") {
+ 			if (sthdrencryption.is_set()) {
+ 				throw SteghideError (_("the stego header encryption argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -187,7 +188,7 @@
+ 			sthdrencryption.setValue (false) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-k" || string (argv[i]) == "--checksum") {
++		else if (std::string (argv[i]) == "-k" || std::string (argv[i]) == "--checksum") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -199,7 +200,7 @@
+ 			checksum.setValue (true) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-K" || string (argv[i]) == "--nochecksum") {
++		else if (std::string (argv[i]) == "-K" || std::string (argv[i]) == "--nochecksum") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -211,7 +212,7 @@
+ 			checksum.setValue (false) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-n" || string (argv[i]) == "--embedplainname") {
++		else if (std::string (argv[i]) == "-n" || std::string (argv[i]) == "--embedplainname") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -223,7 +224,7 @@
+ 			embedplnfn.setValue (true) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-N" || string (argv[i]) == "--notembedplainname") {
++		else if (std::string (argv[i]) == "-N" || std::string (argv[i]) == "--notembedplainname") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -235,7 +236,7 @@
+ 			embedplnfn.setValue (false) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-c" || string (argv[i]) == "--compatibility") {
++		else if (std::string (argv[i]) == "-c" || std::string (argv[i]) == "--compatibility") {
+ 			if (compatibility.is_set()) {
+ 				throw SteghideError (_("the compatibility argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -243,7 +244,7 @@
+ 			compatibility.setValue (true) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-p" || string (argv[i]) == "--passphrase") {
++		else if (std::string (argv[i]) == "-p" || std::string (argv[i]) == "--passphrase") {
+ 			if (passphrase.is_set()) {
+ 				throw SteghideError (_("the passphrase argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -263,7 +264,7 @@
+ 			}
+ 		}
+ 
+-		else if (string (argv[i]) == "-cf" || string (argv[i]) == "--coverfile") {
++		else if (std::string (argv[i]) == "-cf" || std::string (argv[i]) == "--coverfile") {
+ 			if (command.getValue() != EMBED) {
+ 				throw SteghideError (_("argument \"%s\" can only be used with the \"embed\" command. type \"%s --help\" for help."), argv[i], PROGNAME) ;
+ 			}
+@@ -276,7 +277,7 @@
+ 				throw SteghideError (_("the \"%s\" argument must be followed by the cover file name. type \"%s --help\" for help."), argv[i - 1], PROGNAME) ;
+ 			}
+ 
+-			if (string (argv[i]) == "-") {
++			if (std::string (argv[i]) == "-") {
+ 				cvrfn.setValue ("") ;
+ 			}
+ 			else {
+@@ -284,7 +285,7 @@
+ 			}
+ 		}
+ 
+-		else if (string (argv[i]) == "-sf" || string (argv[i]) == "--stegofile") {
++		else if (std::string (argv[i]) == "-sf" || std::string (argv[i]) == "--stegofile") {
+ 			if (stgfn.is_set()) {
+ 				throw SteghideError (_("the stego file name argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -293,7 +294,7 @@
+ 				throw SteghideError (_("the \"%s\" argument must be followed by the stego file name. type \"%s --help\" for help."), argv[i - 1], PROGNAME) ;
+ 			}
+ 
+-			if (string (argv[i]) == "-") {
++			if (std::string (argv[i]) == "-") {
+ 				stgfn.setValue ("") ;
+ 			}
+ 			else {
+@@ -301,7 +302,7 @@
+ 			}
+ 		}
+ 
+-		else if (string (argv[i]) == "-pf" || string (argv[i]) == "--plainfile") {
++		else if (std::string (argv[i]) == "-pf" || std::string (argv[i]) == "--plainfile") {
+ 			if (plnfn.is_set()) {
+ 				throw SteghideError (_("the plain file name argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -310,7 +311,7 @@
+ 				throw SteghideError (_("the \"%s\" argument must be followed by the plain file name. type \"%s --help\" for help."), argv[i - 1], PROGNAME) ;
+ 			}
+ 
+-			if (string (argv[i]) == "-") {
++			if (std::string (argv[i]) == "-") {
+ 				plnfn.setValue ("") ;
+ 			}
+ 			else {
+@@ -318,7 +319,7 @@
+ 			}
+ 		}
+ 
+-		else if (string (argv[i]) == "-f" || string (argv[i]) == "--force") {
++		else if (std::string (argv[i]) == "-f" || std::string (argv[i]) == "--force") {
+ 			if (force.is_set()) {
+ 				throw SteghideError (_("the force argument can be used only once. type \"%s --help\" for help."), PROGNAME) ;
+ 			}
+@@ -326,7 +327,7 @@
+ 			force.setValue (true);
+ 		}
+ 
+-		else if (string (argv[i]) == "-q" || string (argv[i]) == "--quiet") {
++		else if (std::string (argv[i]) == "-q" || std::string (argv[i]) == "--quiet") {
+ 			if (verbosity.is_set()) {
+ 				throw SteghideError (_("the \"%s\" argument cannot be used here because the verbosity has already been set."), argv[i]) ;
+ 			}
+@@ -334,7 +335,7 @@
+ 			verbosity.setValue (QUIET) ;
+ 		}
+ 
+-		else if (string (argv[i]) == "-v" || string (argv[i]) == "--verbose") {
++		else if (std::string (argv[i]) == "-v" || std::string (argv[i]) == "--verbose") {
+ 			if (verbosity.is_set()) {
+ 				throw SteghideError (_("the \"%s\" argument cannot be used here because the verbosity has already been set."), argv[i]) ;
+ 			}
+diff -ur steghide-0.4.6b-orig/src/aufile.cc steghide-0.4.6b/src/aufile.cc
+--- steghide-0.4.6b-orig/src/aufile.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/aufile.cc	Mon Oct 14 19:13:23 2002
+@@ -51,12 +51,12 @@
+ {
+ }
+ 
+-vector<unsigned char> AuFile::getData (void)
++std::vector<unsigned char> AuFile::getData (void)
+ {
+ 	return data ;
+ }
+ 
+-void AuFile::setData (vector<unsigned char> d)
++void AuFile::setData (std::vector<unsigned char> d)
+ {
+ 	data = d ;
+ }
+@@ -236,7 +236,7 @@
+ void AuFile::writedata (void)
+ {
+ 	try {
+-		for (vector<unsigned char>::iterator i = data.begin() ; i != data.end() ; i++) {
++		for (std::vector<unsigned char>::iterator i = data.begin() ; i != data.end() ; i++) {
+ 			getBinIO()->write8 (*i) ;
+ 		}
+ 	}
+diff -ur steghide-0.4.6b-orig/src/aufile.h steghide-0.4.6b/src/aufile.h
+--- steghide-0.4.6b-orig/src/aufile.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/aufile.h	Mon Oct 14 19:35:31 2002
+@@ -50,16 +50,16 @@
+ 		unsigned long	channels ;
+ 	} AuHeader ;
+ 
+-	vector<unsigned char> getData (void) ;
+-	void setData (vector<unsigned char> d) ;
++	std::vector<unsigned char> getData (void) ;
++	void setData (std::vector<unsigned char> d) ;
+ 
+ 	private:
+ 	static const int HeaderSize = 24 ;
+ 
+ 	AuHeader header ;
+ 	unsigned long len_infofield ;
+-	vector<unsigned char> infofield ;
+-	vector<unsigned char> data ;
++	std::vector<unsigned char> infofield ;
++	std::vector<unsigned char> data ;
+ 
+ 	void readheaders (void) ;
+ 	void readdata (void) ;
+diff -ur steghide-0.4.6b-orig/src/binaryio.cc steghide-0.4.6b/src/binaryio.cc
+--- steghide-0.4.6b-orig/src/binaryio.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/binaryio.cc	Mon Oct 14 19:14:12 2002
+@@ -37,7 +37,7 @@
+ 	set_open (false) ;
+ }
+ 
+-BinaryIO::BinaryIO (string fn, MODE m)
++BinaryIO::BinaryIO (std::string fn, MODE m)
+ {
+ 	BinaryIO () ;
+ 	open (fn, m) ;
+@@ -60,12 +60,12 @@
+ 	stream = s ;
+ }
+ 
+-string BinaryIO::getName (void)
++std::string BinaryIO::getName (void)
+ {
+ 	return filename ;
+ }
+ 
+-void BinaryIO::setName (string fn)
++void BinaryIO::setName (std::string fn)
+ {
+ 	filename = fn ;
+ }
+@@ -95,7 +95,7 @@
+ 	mode = m ;
+ }
+ 
+-void BinaryIO::open (string fn, MODE m)
++void BinaryIO::open (std::string fn, MODE m)
+ {
+ 	if (fn == "") {
+ 		switch (m) {
+@@ -243,9 +243,9 @@
+ 	return ((bytes[0] << 24) | (bytes[1] << 16) | (bytes[2] << 8) | bytes[3]) ;
+ }
+ 
+-string BinaryIO::readstring (unsigned int len)
++std::string BinaryIO::readstring (unsigned int len)
+ {
+-	ostringstream ost ;
++	std::ostringstream ost ;
+ 	for (unsigned int i = 0 ; i < len ; i++) {
+ 		ost << read8() ;
+ 	}
+@@ -310,7 +310,7 @@
+ 	}
+ }
+ 
+-void BinaryIO::writestring (string s)
++void BinaryIO::writestring (std::string s)
+ {
+ 	if (fputs (s.c_str(), getStream()) == EOF) {
+ 		throw BinaryOutputError (getName()) ;
+diff -ur steghide-0.4.6b-orig/src/binaryio.h steghide-0.4.6b/src/binaryio.h
+--- steghide-0.4.6b-orig/src/binaryio.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/binaryio.h	Mon Oct 14 19:34:56 2002
+@@ -29,15 +29,15 @@
+ 	enum MODE { READ, WRITE } ;
+ 
+ 	BinaryIO (void) ;
+-	BinaryIO (string fn, MODE m) ;
++	BinaryIO (std::string fn, MODE m) ;
+ 	~BinaryIO (void) ;
+ 
+-	string getName (void) ;
++	std::string getName (void) ;
+ 	bool is_open (void) ;
+ 	bool is_std (void) ;
+ 	bool eof (void) ;
+ 
+-	void open (string fn, MODE m) ;	
++	void open (std::string fn, MODE m) ;	
+ 	void close (void) ;
+ 
+ 	unsigned char read8 (void) ;
+@@ -45,25 +45,25 @@
+ 	unsigned int read16_be (void) ;
+ 	unsigned long read32_le (void) ;
+ 	unsigned long read32_be (void) ;
+-	string readstring (unsigned int len) ;
++	std::string readstring (unsigned int len) ;
+ 
+ 	void write8 (unsigned char val) ;
+ 	void write16_le (unsigned int val) ;
+ 	void write16_be (unsigned int val) ;
+ 	void write32_le (unsigned long val) ;
+ 	void write32_be (unsigned long val) ;
+-	void writestring (string s) ;
++	void writestring (std::string s) ;
+ 
+ 	protected:
+ 	void setStream (FILE *s) ;
+ 	FILE *getStream (void) ;
+-	void setName (string fn) ;
++	void setName (std::string fn) ;
+ 	void set_open (bool fo) ;
+ 	MODE getMode (void) ;
+ 	void setMode (BinaryIO::MODE m) ;
+ 
+ 	private:
+-	string filename ;
++	std::string filename ;
+ 	FILE *stream ;
+ 	bool fileopen ;
+ 	MODE mode ;
+diff -ur steghide-0.4.6b-orig/src/bmpfile.cc steghide-0.4.6b/src/bmpfile.cc
+--- steghide-0.4.6b-orig/src/bmpfile.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/bmpfile.cc	Mon Oct 14 19:15:38 2002
+@@ -21,6 +21,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <assert.h>
++#include <vector>
+ 
+ #include <libintl.h>
+ #define _(S) gettext (S)
+@@ -305,7 +306,7 @@
+ 			bmi_win.ncolors = bmi_win.bmih.biClrUsed ;
+ 		}
+ 
+-		bmi_win.colors = vector<RGBQUAD> (bmi_win.ncolors) ;
++		bmi_win.colors = std::vector<RGBQUAD> (bmi_win.ncolors) ;
+ 		for (unsigned int i = 0 ; i < bmi_win.ncolors ; i++) {
+ 			bmi_win.colors[i].rgbBlue = getBinIO()->read8() ;
+ 			bmi_win.colors[i].rgbGreen = getBinIO()->read8() ;
+@@ -371,7 +372,7 @@
+ 			}
+ 		}
+ 
+-		bmi_os2.colors = vector<RGBTRIPLE> (bmi_os2.ncolors) ;
++		bmi_os2.colors = std::vector<RGBTRIPLE> (bmi_os2.ncolors) ;
+ 		for (unsigned int i = 0 ; i < bmi_os2.ncolors ; i++) {
+ 			bmi_os2.colors[i].rgbtBlue = getBinIO()->read8() ;
+ 			bmi_os2.colors[i].rgbtGreen = getBinIO()->read8() ;
+@@ -550,7 +551,7 @@
+ 			paddinglength = 4 - (linelength % 4) ;
+ 		}
+ 
+-		bitmap = vector<vector<unsigned char> > (height) ;
++		bitmap = std::vector<std::vector<unsigned char> > (height) ;
+ 		for (long line = height - 1 ; line >= 0 ; line--) {
+ 			for (long posinline = 0 ; posinline < linelength ; posinline++) {
+ 				bitmap[line].push_back (getBinIO()->read8()) ;
+@@ -622,7 +623,7 @@
+ 			}
+ 		}
+ 
+-		for (vector<unsigned char>::iterator i = atend.begin() ; i != atend.end() ; i++) {
++		for (std::vector<unsigned char>::iterator i = atend.begin() ; i != atend.end() ; i++) {
+ 			getBinIO()->write8 (*i) ;
+ 		}
+ 	}
+diff -ur steghide-0.4.6b-orig/src/bmpfile.h steghide-0.4.6b/src/bmpfile.h
+--- steghide-0.4.6b-orig/src/bmpfile.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/bmpfile.h	Mon Oct 14 19:35:55 2002
+@@ -93,13 +93,13 @@
+ 	typedef struct struct_BMPINFO_WIN {
+ 		BITMAPINFOHEADER	bmih ;
+ 		unsigned int		ncolors ;
+-		vector<RGBQUAD>		colors ;
++		std::vector<RGBQUAD>		colors ;
+ 	} BMPINFO_WIN ;
+ 
+ 	typedef struct struct_BMPINFO_OS2 {
+ 		BITMAPCOREHEADER	bmch ;
+ 		unsigned int		ncolors ;
+-		vector<RGBTRIPLE>	colors ;
++		std::vector<RGBTRIPLE>	colors ;
+ 	} BMPINFO_OS2 ;
+ 
+ 	private:
+@@ -115,9 +115,9 @@
+ 	BITMAPFILEHEADER bmfh ;
+ 	BMPINFO_WIN	bmi_win ;
+ 	BMPINFO_OS2	bmi_os2 ;
+-	vector<vector <unsigned char> > bitmap ;
++	std::vector<std::vector <unsigned char> > bitmap ;
+ 	/// contains bytes that are appended at the end of the bitmap data (some image editors apparently do this)
+-	vector<unsigned char> atend ;
++	std::vector<unsigned char> atend ;
+ 
+ 	void readheaders () ;
+ 	void bmpwin_readheaders () ;
+diff -ur steghide-0.4.6b-orig/src/bufmanag.cc steghide-0.4.6b/src/bufmanag.cc
+--- steghide-0.4.6b-orig/src/bufmanag.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/bufmanag.cc	Mon Oct 14 19:04:10 2002
+@@ -20,7 +20,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <string.h>
++#include <string>
+ #include <assert.h>
+ 
+ #include "bufmanag.h"
+diff -ur steghide-0.4.6b-orig/src/cvrstgfile.cc steghide-0.4.6b/src/cvrstgfile.cc
+--- steghide-0.4.6b-orig/src/cvrstgfile.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/cvrstgfile.cc	Mon Oct 14 19:16:22 2002
+@@ -20,7 +20,8 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <string.h>
++#include <string>
++#include <vector>
+ #include <assert.h>
+ 
+ #include <libintl.h>
+@@ -106,7 +107,7 @@
+ }
+ 
+ /* 'creates' a stego file from a cover file */
+-void CvrStgFile::transform (string stgfn)
++void CvrStgFile::transform (std::string stgfn)
+ {
+ 	delete getBinIO() ;
+ 	setBinIO (new BinaryIO (stgfn, BinaryIO::WRITE)) ;
+@@ -144,7 +145,7 @@
+ 	return retval ;
+ }
+ 
+-CvrStgFile* CvrStgFile::readfile (string fn)
++CvrStgFile* CvrStgFile::readfile (std::string fn)
+ {
+ 	BinaryIO *BinIO = new BinaryIO (fn, BinaryIO::READ) ;
+ 
+diff -ur steghide-0.4.6b-orig/src/cvrstgfile.h steghide-0.4.6b/src/cvrstgfile.h
+--- steghide-0.4.6b-orig/src/cvrstgfile.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/cvrstgfile.h	Mon Oct 14 19:32:40 2002
+@@ -34,9 +34,9 @@
+ 
+ 	virtual void read (BinaryIO *io) ;
+ 	virtual void write (void) ;
+-	void transform (string fn) ;
++	void transform (std::string fn) ;
+ 
+-	static CvrStgFile *readfile (string fn) ;
++	static CvrStgFile *readfile (std::string fn) ;
+ 
+ 	protected:
+ 	void setBinIO (BinaryIO *io) ;
+@@ -48,7 +48,7 @@
+ 	BinaryIO *BinIO ;
+ } ;
+ 
+-CvrStgFile *cvrstg_readfile (string filename) ;
++CvrStgFile *cvrstg_readfile (std::string filename) ;
+ 
+ /* constants that indicate the cover file format */
+ #define FF_UNKNOWN	0
+diff -ur steghide-0.4.6b-orig/src/error.cc steghide-0.4.6b/src/error.cc
+--- steghide-0.4.6b-orig/src/error.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/error.cc	Mon Oct 14 19:16:59 2002
+@@ -37,7 +37,7 @@
+ {
+ }
+ 
+-SteghideError::SteghideError(string msg)
++SteghideError::SteghideError(std::string msg)
+ 	: MessageBase(msg)
+ {
+ }
+@@ -53,13 +53,13 @@
+ 
+ void SteghideError::printMessage (void)
+ {
+-	cerr << PROGNAME << ": " << getMessage() << endl ;
++	std::cerr << PROGNAME << ": " << getMessage() << std::endl ;
+ }
+ 
+ //
+ // class BinaryInputError
+ //
+-BinaryInputError::BinaryInputError (string fn, FILE* s)
++BinaryInputError::BinaryInputError (std::string fn, FILE* s)
+ 	: SteghideError()
+ {
+ 	if (feof (s)) {
+@@ -97,7 +97,7 @@
+ //
+ // class BinaryOutputError
+ //
+-BinaryOutputError::BinaryOutputError (string fn)
++BinaryOutputError::BinaryOutputError (std::string fn)
+ 	: SteghideError()
+ {
+ 	if (fn == "") {
+@@ -142,12 +142,12 @@
+ {
+ 	va_list ap ;
+ 	va_start (ap, msgfmt) ;
+-	string auxmsg = vcompose (msgfmt, ap) ;
++	std::string auxmsg = vcompose (msgfmt, ap) ;
+ 	va_end (ap) ;
+ 
+-	string mainmsg ;
++	std::string mainmsg ;
+ 	if (io->is_std()) {
+-		mainmsg = string (_("corrupt jpeg file on standard input:")) ;
++		mainmsg = std::string (_("corrupt jpeg file on standard input:")) ;
+ 	}
+ 	else {
+ 		mainmsg = compose (_("corrupt jpeg file \"%s\":"), io->getName().c_str()) ;
+diff -ur steghide-0.4.6b-orig/src/error.h steghide-0.4.6b/src/error.h
+--- steghide-0.4.6b-orig/src/error.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/error.h	Mon Oct 14 19:33:48 2002
+@@ -30,7 +30,7 @@
+ class SteghideError : public MessageBase {
+ 	public:
+ 	SteghideError (void) ;
+-	SteghideError (string msg) ;
++	SteghideError (std::string msg) ;
+ 	SteghideError (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;	
+@@ -40,7 +40,7 @@
+ 	public:
+ 	enum TYPE { FILE_ERR, FILE_EOF, STDIN_ERR, STDIN_EOF } ;
+ 
+-	BinaryInputError (string fn, FILE* s) ;
++	BinaryInputError (std::string fn, FILE* s) ;
+ 
+ 	TYPE getType (void) ;
+ 
+@@ -55,7 +55,7 @@
+ 	public:
+ 	enum TYPE { FILE_ERR, STDOUT_ERR } ;
+ 
+-	BinaryOutputError (string fn) ;
++	BinaryOutputError (std::string fn) ;
+ 
+ 	TYPE getType (void) ;
+ 
+diff -ur steghide-0.4.6b-orig/src/hash.cc steghide-0.4.6b/src/hash.cc
+--- steghide-0.4.6b-orig/src/hash.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/hash.cc	Mon Oct 14 19:03:44 2002
+@@ -18,7 +18,7 @@
+  *
+  */
+ 
+-#include <string.h>
++#include <string>
+ 
+ #include <mhash.h>
+ #include <libintl.h>
+diff -ur steghide-0.4.6b-orig/src/jpegbase.cc steghide-0.4.6b/src/jpegbase.cc
+--- steghide-0.4.6b-orig/src/jpegbase.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegbase.cc	Mon Oct 14 19:17:27 2002
+@@ -19,6 +19,8 @@
+  */
+ 
+ #include <assert.h>
++#include <vector>
++#include <string>
+ 
+ #include "binaryio.h"
+ #include "jpegbase.h"
+@@ -176,17 +178,17 @@
+ 
+ JpegContainer::~JpegContainer ()
+ {
+-	for (vector<JpegObject*>::iterator i = jpegobjs.begin() ; i != jpegobjs.end() ; i++) {
++	for (std::vector<JpegObject*>::iterator i = jpegobjs.begin() ; i != jpegobjs.end() ; i++) {
+ 		delete (*i) ;
+ 	}
+ }
+ 
+-vector<JpegObject*> JpegContainer::getJpegObjects ()
++std::vector<JpegObject*> JpegContainer::getJpegObjects ()
+ {
+ 	return jpegobjs ;
+ }
+ 
+-vector<CvrStgObject*> JpegContainer::getCvrStgObjects ()
++std::vector<CvrStgObject*> JpegContainer::getCvrStgObjects ()
+ {
+ 	return cvrstgobjs ;
+ }
+@@ -213,7 +215,7 @@
+ void JpegContainer::write (BinaryIO *io)
+ {
+ 	// writing is only done here, not in derived classes
+-	for (vector<JpegObject*>::iterator i = jpegobjs.begin() ; i != jpegobjs.end() ; i++) {
++	for (std::vector<JpegObject*>::iterator i = jpegobjs.begin() ; i != jpegobjs.end() ; i++) {
+ 		(*i)->write (io) ;
+ 	}
+ }
+@@ -222,7 +224,7 @@
+ {
+ 	unsigned long sum = 0 ;
+ 
+-	for (vector<CvrStgObject*>::const_iterator i = cvrstgobjs.begin() ; i != cvrstgobjs.end() ; i++) {
++	for (std::vector<CvrStgObject*>::const_iterator i = cvrstgobjs.begin() ; i != cvrstgobjs.end() ; i++) {
+ 		sum += (*i)->getCapacity() ;
+ 	}
+ 
+@@ -245,7 +247,7 @@
+ CvrStgObject *JpegContainer::calcCvrStgObject (unsigned long *pos) const
+ {
+ 	unsigned long curCapacity = 0 ;
+-	vector<CvrStgObject*>::const_iterator i = cvrstgobjs.begin() ;
++	std::vector<CvrStgObject*>::const_iterator i = cvrstgobjs.begin() ;
+ 
+ 	curCapacity = (*i)->getCapacity() ;
+ 	while (*pos >= curCapacity) {
+diff -ur steghide-0.4.6b-orig/src/jpegbase.h steghide-0.4.6b/src/jpegbase.h
+--- steghide-0.4.6b-orig/src/jpegbase.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegbase.h	Mon Oct 14 19:36:25 2002
+@@ -237,15 +237,15 @@
+ 
+ 	/**
+ 	 * get all objects of this container
+-	 * \return a vector containing all JpegObjects of this container
++	 * \return a std::vector containing all JpegObjects of this container
+ 	 **/
+-	vector<JpegObject*> getJpegObjects (void) ;
++	std::vector<JpegObject*> getJpegObjects (void) ;
+ 
+ 	/**
+ 	 * get all objects that can hold embedded data of this container
+-	 * \return a vector containing all CvrStgObjects of this container
++	 * \return a std::vector containing all CvrStgObjects of this container
+ 	 **/
+-	vector<CvrStgObject*> getCvrStgObjects (void) ;
++	std::vector<CvrStgObject*> getCvrStgObjects (void) ;
+ 
+ 	void read (BinaryIO *io) ;
+ 	void write (BinaryIO *io) ;
+@@ -259,13 +259,13 @@
+ 	 * appends a JpegObject
+ 	 * \param o the jpeg object to append
+ 	 *
+-	 * This function appends o to the vector jpegobjs and if o is a CvrStgObject
+-	 * also appends it to the vector cvrstgobjs.
++	 * This function appends o to the std::vector jpegobjs and if o is a CvrStgObject
++	 * also appends it to the std::vector cvrstgobjs.
+ 	 **/
+ 	void appendObj (JpegObject *o) ;
+ 
+ 	/**
+-	 * clears the vector of jpeg objects and the vector of cvrstg objects
++	 * clears the std::vector of jpeg objects and the std::vector of cvrstg objects
+ 	 **/
+ 	void clearObjs (void) ;
+ 
+@@ -276,13 +276,13 @@
+ 	 * contains all JpegObjects in this JpegContainer
+ 	 * (in the same order as they appeared in the original file)
+ 	 **/
+-	vector<JpegObject*> jpegobjs ;
++	std::vector<JpegObject*> jpegobjs ;
+ 
+ 	/**
+ 	 * contains all CvrStgObjects in this JpegContainer
+ 	 * (in the same order as they appeared in the original file)
+ 	 **/
+-	vector<CvrStgObject*> cvrstgobjs ;
++	std::vector<CvrStgObject*> cvrstgobjs ;
+ } ;
+ 
+ #endif // ndef SH_JPEGBASE_H
+diff -ur steghide-0.4.6b-orig/src/jpegentropycoded.cc steghide-0.4.6b/src/jpegentropycoded.cc
+--- steghide-0.4.6b-orig/src/jpegentropycoded.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegentropycoded.cc	Mon Oct 14 19:18:09 2002
+@@ -19,6 +19,8 @@
+  */
+ 
+ #include <assert.h>
++#include <string>
++#include <vector>
+ 
+ #include <libintl.h>
+ #define _(S) gettext (S)
+@@ -74,17 +76,17 @@
+ {
+ }
+ 
+-vector<vector <unsigned long> > JpegEntropyCoded::getFreqs ()
++std::vector<std::vector <unsigned long> > JpegEntropyCoded::getFreqs ()
+ {
+-	vector<vector<unsigned long> > freq ;
++	std::vector<std::vector<unsigned long> > freq ;
+ 
+ 	JpegScan *p_scan = (JpegScan *) getParent() ;
+ 	JpegScanHeader *p_scanhdr = (JpegScanHeader *) p_scan->getScanHeader() ;
+ 	JpegFrame *p_frame = (JpegFrame *) p_scan->getParent() ;
+ 	JpegFrameHeader *p_framehdr = (JpegFrameHeader *) p_frame->getFrameHeader() ;
+ 
+-	vector<unsigned int> dataunits ;
+-	vector<unsigned int> htdestspec ;
++	std::vector<unsigned int> dataunits ;
++	std::vector<unsigned int> htdestspec ;
+ 	unsigned int maxdestspec = 0 ;
+ 	for (unsigned int comp = 0 ; comp < p_framehdr->getNumComponents() ; comp++) {
+ 		dataunits.push_back (p_framehdr->getHorizSampling (comp) * p_framehdr->getVertSampling (comp)) ;
+@@ -95,7 +97,7 @@
+ 	}
+ 
+ 	for (unsigned int destspec = 0 ; destspec <= maxdestspec ; destspec++) {
+-		freq.push_back (vector<unsigned long> (257)) ;
++		freq.push_back (std::vector<unsigned long> (257)) ;
+ 		freq[destspec][256] = 1 ;
+ 	}
+ 
+@@ -151,7 +153,7 @@
+ 	JpegFrameHeader *p_framehdr = (JpegFrameHeader *) p_frame->getFrameHeader() ;
+ 
+ 	unsigned long unitstart = 0 ;
+-	vector<int> prediction ;
++	std::vector<int> prediction ;
+ 	for (unsigned int comp = 0 ; comp < p_framehdr->getNumComponents() ; comp++) {
+ 		prediction.push_back (0) ;
+ 	}
+@@ -228,10 +230,10 @@
+ 	JpegFrame *p_frame = (JpegFrame *) p_scan->getParent() ;
+ 	JpegFrameHeader *p_framehdr = (JpegFrameHeader *) p_frame->getFrameHeader() ;
+ 
+-	vector<int> prediction ;
+-	vector<JpegHuffmanTable*> DCTables ;
+-	vector<JpegHuffmanTable*> ACTables ;
+-	vector<unsigned int> dataunits ;
++	std::vector<int> prediction ;
++	std::vector<JpegHuffmanTable*> DCTables ;
++	std::vector<JpegHuffmanTable*> ACTables ;
++	std::vector<unsigned int> dataunits ;
+ 	for (unsigned int comp = 0 ; comp < p_framehdr->getNumComponents() ; comp++) {
+ 		prediction.push_back (0) ;
+ 		DCTables.push_back (p_frame->getDCTable (p_scanhdr->getDCDestSpec (comp))) ;
+diff -ur steghide-0.4.6b-orig/src/jpegentropycoded.h steghide-0.4.6b/src/jpegentropycoded.h
+--- steghide-0.4.6b-orig/src/jpegentropycoded.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegentropycoded.h	Mon Oct 14 19:37:05 2002
+@@ -21,6 +21,8 @@
+ #ifndef SH_JPEGENTROPYCODED_H
+ #define SH_JPEGENTROPYCODED_H
+ 
++#include <vector>
++
+ #include "binaryio.h"
+ #include "cvrstgobject.h"
+ #include "jpegbase.h"
+@@ -51,7 +53,7 @@
+ 	 * of the value v in the part of the entropy coded segment that is encoded using
+ 	 * the AC table with destination specifier d.
+ 	 **/
+-	vector<vector<unsigned long> > getFreqs (void) ;
++	std::vector<std::vector<unsigned long> > getFreqs (void) ;
+ 
+ 	JpegMarker getTerminatingMarker (void) ;
+ 
+@@ -108,7 +110,7 @@
+ 	void writebits (BinaryIO *io, unsigned long v, unsigned int n) ;
+ 
+ 	// contains the DCT coefficients; for i % 64 == 0 we have a DC, else an AC coefficient in dctcoeffs[i]
+-	vector<int> dctcoeffs ;
++	std::vector<int> dctcoeffs ;
+ 	/// contains (the rest of) a byte read in readbit
+ 	unsigned char readbyte ;
+ 	/// the number of (original jpeg) bits in readbyte
+diff -ur steghide-0.4.6b-orig/src/jpegframe.cc steghide-0.4.6b/src/jpegframe.cc
+--- steghide-0.4.6b-orig/src/jpegframe.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegframe.cc	Mon Oct 14 19:19:08 2002
+@@ -19,6 +19,8 @@
+  */
+ 
+ #include <limits.h>
++#include <string>
++#include <vector>
+ 
+ #include <libintl.h>
+ #define _(S) gettext (S)
+@@ -34,16 +36,16 @@
+ 	: JpegContainer()
+ {
+ 	framehdr = NULL ;
+-	ACTables = vector<JpegHuffmanTable*> (4) ;
+-	DCTables = vector<JpegHuffmanTable*> (4) ;
++	ACTables = std::vector<JpegHuffmanTable*> (4) ;
++	DCTables = std::vector<JpegHuffmanTable*> (4) ;
+ }
+ 
+ JpegFrame::JpegFrame (BinaryIO *io)
+ 	: JpegContainer()
+ {
+ 	framehdr = NULL ;
+-	ACTables = vector<JpegHuffmanTable*> (4) ;
+-	DCTables = vector<JpegHuffmanTable*> (4) ;
++	ACTables = std::vector<JpegHuffmanTable*> (4) ;
++	DCTables = std::vector<JpegHuffmanTable*> (4) ;
+ 
+ 	read (io) ;
+ }
+@@ -164,24 +166,24 @@
+ 	JpegContainer::write (io) ;
+ }
+ 
+-void JpegFrame::recalcACTables (vector<vector <unsigned long> > freqs)
++void JpegFrame::recalcACTables (std::vector<std::vector <unsigned long> > freqs)
+ {
+-	for (vector<JpegHuffmanTable*>::iterator ht = ACTables.begin() ; ht != ACTables.end() ; ht++) {	
++	for (std::vector<JpegHuffmanTable*>::iterator ht = ACTables.begin() ; ht != ACTables.end() ; ht++) {	
+ 		if (*ht != NULL) {
+-			vector<unsigned int> codesize = calcCodeSize (freqs[(*ht)->getDestId()]) ;
+-			vector<unsigned int> bits = calcBits (codesize) ;
+-			vector<unsigned int> huffval = calcHuffVal (codesize) ;
++			std::vector<unsigned int> codesize = calcCodeSize (freqs[(*ht)->getDestId()]) ;
++			std::vector<unsigned int> bits = calcBits (codesize) ;
++			std::vector<unsigned int> huffval = calcHuffVal (codesize) ;
+ 
+ 			(*ht)->reset (bits, huffval) ;
+ 		}
+ 	}
+ }
+ 
+-vector<unsigned int> JpegFrame::calcCodeSize (vector<unsigned long> freq)
++std::vector<unsigned int> JpegFrame::calcCodeSize (std::vector<unsigned long> freq)
+ {
+-	vector<unsigned int> codesize(257) ;
+-	vector<long int> others(257) ;
+-	for (vector<long int>::iterator j = others.begin() ; j != others.end() ; j++) {
++	std::vector<unsigned int> codesize(257) ;
++	std::vector<long int> others(257) ;
++	for (std::vector<long int>::iterator j = others.begin() ; j != others.end() ; j++) {
+ 		*j = -1 ;
+ 	}
+ 
+@@ -230,9 +232,9 @@
+ 	return codesize ;
+ }
+ 
+-vector<unsigned int> JpegFrame::calcBits (vector<unsigned int> codesize)
++std::vector<unsigned int> JpegFrame::calcBits (std::vector<unsigned int> codesize)
+ {
+-	vector<unsigned int> bits (33) ;
++	std::vector<unsigned int> bits (33) ;
+ 
+ 	for (unsigned int i = 0 ; i < 257 ; i++) {
+ 		if (codesize[i] > 0) {
+@@ -275,9 +277,9 @@
+ 	return bits ;
+ }
+ 
+-vector<unsigned int> JpegFrame::calcHuffVal (vector<unsigned int> codesize)
++std::vector<unsigned int> JpegFrame::calcHuffVal (std::vector<unsigned int> codesize)
+ {
+-	vector<unsigned int> huffval ;
++	std::vector<unsigned int> huffval ;
+ 	for (unsigned int i = 1 ; i <= 32 ; i++) {
+ 		for (unsigned j = 0 ; j <= 255 ; j++) {
+ 			if (codesize[j] == i) {
+diff -ur steghide-0.4.6b-orig/src/jpegframe.h steghide-0.4.6b/src/jpegframe.h
+--- steghide-0.4.6b-orig/src/jpegframe.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegframe.h	Mon Oct 14 19:38:25 2002
+@@ -21,6 +21,8 @@
+ #ifndef SH_JPEGFRAME_H
+ #define SH_JPEGFRAME_H
+ 
++#include <vector>
++
+ #include "binaryio.h"
+ #include "jpegbase.h"
+ #include "jpegframehdr.h"
+@@ -65,15 +67,15 @@
+ 	void addHuffmanTable (JpegHuffmanTable *ht) ;
+ 
+ 	private:
+-	void recalcACTables (vector<vector <unsigned long> > freqs) ;
+-	vector<unsigned int> calcCodeSize (vector<unsigned long> freq) ;
+-	vector<unsigned int> calcBits (vector<unsigned int> codesize) ;
+-	vector<unsigned int> calcHuffVal (vector<unsigned int> codesize) ;
++	void recalcACTables (std::vector<std::vector <unsigned long> > freqs) ;
++	std::vector<unsigned int> calcCodeSize (std::vector<unsigned long> freq) ;
++	std::vector<unsigned int> calcBits (std::vector<unsigned int> codesize) ;
++	std::vector<unsigned int> calcHuffVal (std::vector<unsigned int> codesize) ;
+ 
+ 	JpegFrameHeader *framehdr ;
+ 	JpegScan *scan ;
+-	vector<JpegHuffmanTable*> DCTables ;
+-	vector<JpegHuffmanTable*> ACTables ;
++	std::vector<JpegHuffmanTable*> DCTables ;
++	std::vector<JpegHuffmanTable*> ACTables ;
+ } ;
+ 
+ #endif // ndef SH_JEPGFRAME_H
+diff -ur steghide-0.4.6b-orig/src/jpeghufftable.cc steghide-0.4.6b/src/jpeghufftable.cc
+--- steghide-0.4.6b-orig/src/jpeghufftable.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpeghufftable.cc	Mon Oct 14 19:23:21 2002
+@@ -28,7 +28,7 @@
+ #include "jpegbase.h"
+ #include "jpeghufftable.h"
+ 
+-JpegHuffmanTable::JpegHuffmanTable (unsigned int lr = UINT_MAX)
++JpegHuffmanTable::JpegHuffmanTable (unsigned int lr)
+ 	: JpegSegment (JpegElement::MarkerDHT)
+ {
+ 	tableclass = 0xFF ;
+@@ -36,7 +36,7 @@
+ 	lengthremaining = lr ;
+ }
+ 
+-JpegHuffmanTable::JpegHuffmanTable (BinaryIO *io, unsigned int lr = UINT_MAX)
++JpegHuffmanTable::JpegHuffmanTable (BinaryIO *io, unsigned int lr)
+ 	: JpegSegment (JpegElement::MarkerDHT)
+ {
+ 	tableclass = 0xFF ;
+@@ -81,7 +81,7 @@
+ 	return tabledestid ;
+ }
+ 
+-void JpegHuffmanTable::reset (vector<unsigned int> b, vector<unsigned int> hv)
++void JpegHuffmanTable::reset (std::vector<unsigned int> b, std::vector<unsigned int> hv)
+ {
+ 	assert (b.size() == 16) ;
+ 
+@@ -236,7 +236,7 @@
+ 	for (unsigned int l = 1 ; l <= Len_bits ; l++) {
+ 		io->write8 ((unsigned char) getBits(l)) ;
+ 	}
+-	vector<unsigned int>::iterator p = huffval.begin() ;
++	std::vector<unsigned int>::iterator p = huffval.begin() ;
+ 	for (unsigned int l = 1 ; l <= Len_bits ; l++) {
+ 		for (unsigned int j = 0 ; j < getBits (l) ; j++) {
+ 			io->write8 (*p) ;
+diff -ur steghide-0.4.6b-orig/src/jpeghufftable.h steghide-0.4.6b/src/jpeghufftable.h
+--- steghide-0.4.6b-orig/src/jpeghufftable.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpeghufftable.h	Mon Oct 14 19:36:48 2002
+@@ -78,7 +78,7 @@
+ 	 * \param b the bits array (going from 0 to 15)
+ 	 * \param hv the huffval array (starting at 0)
+ 	 **/
+-	void reset (vector<unsigned int> b, vector<unsigned int> hv) ;
++	void reset (std::vector<unsigned int> b, std::vector<unsigned int> hv) ;
+ 
+ 	/**
+ 	 * get the number of codes with length l
+@@ -179,22 +179,22 @@
+ 
+ 	unsigned char tableclass ;
+ 	unsigned char tabledestid ;
+-	vector<unsigned int> bits ;
+-	vector<unsigned int> huffval ;
++	std::vector<unsigned int> bits ;
++	std::vector<unsigned int> huffval ;
+ 	/// contains a list of code lengths
+-	vector<unsigned int> huffsize ;
++	std::vector<unsigned int> huffsize ;
+ 	/// contains the codes corresponding to the code lengths in huffsize 
+-	vector<unsigned int> huffcode ;
++	std::vector<unsigned int> huffcode ;
+ 	/// mincode[l] contains the smallest code value for the length l
+-	vector<int> mincode ;
++	std::vector<int> mincode ;
+ 	/// maxcode[l] contains the largest code value for the length l
+-	vector<int> maxcode ;
++	std::vector<int> maxcode ;
+ 	/// valptr[l] contains the index to the start of the list of values in huffval which are decoded by code word of length l
+-	vector<int> valptr ;
++	std::vector<int> valptr ;
+ 	/// ehuffsize[v] contains the size of the huffman code representing the value v
+-	vector<unsigned int> ehuffsize ;
++	std::vector<unsigned int> ehuffsize ;
+ 	/// ehuffcode[v] contains the huffman code representing the value v
+-	vector<unsigned int> ehuffcode ;
++	std::vector<unsigned int> ehuffcode ;
+ } ;
+ 
+ #endif // ndef SH_JPEGHUFFTABLE_H
+diff -ur steghide-0.4.6b-orig/src/jpegjfifapp0.h steghide-0.4.6b/src/jpegjfifapp0.h
+--- steghide-0.4.6b-orig/src/jpegjfifapp0.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegjfifapp0.h	Mon Oct 14 19:38:53 2002
+@@ -50,7 +50,7 @@
+ 	void write (BinaryIO *io) ;
+ 
+ 	private:
+-	string identifier ;	
++	std::string identifier ;	
+ 	unsigned int version ;
+ 	unsigned char units ;
+ 	unsigned int Xdensity ;
+diff -ur steghide-0.4.6b-orig/src/jpegscan.cc steghide-0.4.6b/src/jpegscan.cc
+--- steghide-0.4.6b-orig/src/jpegscan.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegscan.cc	Mon Oct 14 19:25:32 2002
+@@ -20,6 +20,7 @@
+ 
+ #include <vector>
+ #include <limits.h>
++#include <string>
+ 
+ #include <libintl.h>
+ #define _(S) gettext (S)
+@@ -141,11 +142,11 @@
+ 	}
+ }
+ 
+-vector<vector <unsigned long> > JpegScan::getFreqs ()
++std::vector<std::vector <unsigned long> > JpegScan::getFreqs ()
+ {
+-	vector<vector <unsigned long> > freqs = ECSegs[0]->getFreqs() ;
+-	for (vector<JpegEntropyCoded*>::iterator i = ECSegs.begin() + 1 ; i != ECSegs.end() ; i++) {
+-		vector<vector <unsigned long> > addfreqs = (*i)->getFreqs() ;
++	std::vector<std::vector <unsigned long> > freqs = ECSegs[0]->getFreqs() ;
++	for (std::vector<JpegEntropyCoded*>::iterator i = ECSegs.begin() + 1 ; i != ECSegs.end() ; i++) {
++		std::vector<std::vector <unsigned long> > addfreqs = (*i)->getFreqs() ;
+ 		for (unsigned int j = 0 ; j < addfreqs.size() ; j++) {
+ 			for (unsigned int k = 0 ; k < 256 ; k++) {
+ 				// don't touch freqs[j][256], must remain 1
+diff -ur steghide-0.4.6b-orig/src/jpegscan.h steghide-0.4.6b/src/jpegscan.h
+--- steghide-0.4.6b-orig/src/jpegscan.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegscan.h	Mon Oct 14 19:38:06 2002
+@@ -44,11 +44,11 @@
+ 
+ 	JpegMarker getTerminatingMarker (void) ;
+ 	JpegScanHeader *getScanHeader (void) ;
+-	vector<vector <unsigned long> > getFreqs (void) ;
++	std::vector<std::vector <unsigned long> > getFreqs (void) ;
+ 
+ 	private:
+ 	JpegScanHeader *scanhdr ;
+-	vector<JpegEntropyCoded*> ECSegs ;
++	std::vector<JpegEntropyCoded*> ECSegs ;
+ 	JpegMarker termmarker ;
+ } ;
+ 
+diff -ur steghide-0.4.6b-orig/src/jpegunusedseg.cc steghide-0.4.6b/src/jpegunusedseg.cc
+--- steghide-0.4.6b-orig/src/jpegunusedseg.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegunusedseg.cc	Mon Oct 14 19:25:55 2002
+@@ -19,6 +19,7 @@
+  */
+ 
+ #include <vector>
++#include <string>
+ 
+ #include "binaryio.h"
+ #include "jpegbase.h"
+@@ -56,7 +57,7 @@
+ void JpegUnusedSegment::write (BinaryIO *io)
+ {
+ 	JpegSegment::write (io) ;
+-	for (vector<unsigned char>::iterator i = data.begin() ; i != data.end() ; i++) {
++	for (std::vector<unsigned char>::iterator i = data.begin() ; i != data.end() ; i++) {
+ 		io->write8 (*i) ;
+ 	}
+ }
+diff -ur steghide-0.4.6b-orig/src/jpegunusedseg.h steghide-0.4.6b/src/jpegunusedseg.h
+--- steghide-0.4.6b-orig/src/jpegunusedseg.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/jpegunusedseg.h	Mon Oct 14 19:39:10 2002
+@@ -41,7 +41,7 @@
+ 	void write (BinaryIO *io) ;
+ 
+ 	private:
+-	vector<unsigned char> data ;
++	std::vector<unsigned char> data ;
+ } ;
+ 
+ #endif //ndef SH_JPEGUNSUPSEG_H
+diff -ur steghide-0.4.6b-orig/src/main.cc steghide-0.4.6b/src/main.cc
+--- steghide-0.4.6b-orig/src/main.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/main.cc	Mon Oct 14 19:44:01 2002
+@@ -84,8 +84,8 @@
+ static void version (void) ;
+ static void usage (void) ;
+ static void license (void) ;
+-static void embedfile (string cvrfilename, string stgfilename, string plnfilename) ;
+-static void extractfile (string stgfilename, string plnfilename) ;
++static void embedfile (std::string cvrfilename, std::string stgfilename, std::string plnfilename) ;
++static void extractfile (std::string stgfilename, std::string plnfilename) ;
+ static void cleanup (void) ;
+ 
+ int main (int argc, char *argv[])
+@@ -334,7 +334,7 @@
+ }
+ 
+ /* calls functions to embed plain data in cover data and save as stego data */
+-static void embedfile (string cvrfilename, string stgfilename, string plnfilename)
++static void embedfile (std::string cvrfilename, std::string stgfilename, std::string plnfilename)
+ {
+ 	CvrStgFile *cvrstgfile = NULL ;
+ 	PLNFILE *plnfile = NULL ;
+@@ -372,7 +372,7 @@
+ }
+ 
+ /* calls functions to extract (and save) plain data from stego data */
+-static void extractfile (string stgfilename, string plnfilename)
++static void extractfile (std::string stgfilename, std::string plnfilename)
+ {
+ 	PLNFILE *plnfile = NULL ;
+ 	unsigned long firstplnpos = 0 ;
+diff -ur steghide-0.4.6b-orig/src/msg.cc steghide-0.4.6b/src/msg.cc
+--- steghide-0.4.6b-orig/src/msg.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/msg.cc	Mon Oct 14 19:26:58 2002
+@@ -22,6 +22,7 @@
+ #include <cstdarg>
+ #include <cstdio>
+ #include <iostream>
++#include <string>
+ 
+ #include <termios.h>
+ 
+@@ -41,7 +42,7 @@
+ 	setMessage (_("__no_message_defined__")) ;
+ }
+ 
+-MessageBase::MessageBase (string msg)
++MessageBase::MessageBase (std::string msg)
+ {
+ 	setMessage (msg) ;
+ }
+@@ -58,12 +59,12 @@
+ {
+ }
+ 
+-string MessageBase::getMessage ()
++std::string MessageBase::getMessage ()
+ {
+ 	return message ;
+ }
+ 
+-void MessageBase::setMessage (string msg)
++void MessageBase::setMessage (std::string msg)
+ {
+ 	message = msg ;
+ }
+@@ -76,20 +77,20 @@
+ 	va_end (ap) ;
+ }
+ 
+-string MessageBase::compose (const char *msgfmt, ...)
++std::string MessageBase::compose (const char *msgfmt, ...)
+ {
+ 	va_list ap ;
+ 	va_start (ap, msgfmt) ;
+-	string retval = vcompose (msgfmt, ap) ;
++	std::string retval = vcompose (msgfmt, ap) ;
+ 	va_end (ap) ;
+ 	return retval ;
+ }
+ 
+-string MessageBase::vcompose (const char *msgfmt, va_list ap)
++std::string MessageBase::vcompose (const char *msgfmt, va_list ap)
+ {
+ 	char *str = new char[MsgMaxSize] ;
+ 	vsnprintf (str, MsgMaxSize, msgfmt, ap) ;
+-	return string (str) ;
++	return std::string (str) ;
+ }
+ 
+ //
+@@ -109,7 +110,7 @@
+ 	if (args->verbosity.getValue() == NORMAL ||
+ 		args->verbosity.getValue() == VERBOSE) {
+ 
+-		cerr << getMessage() << endl ;
++		std::cerr << getMessage() << std::endl ;
+ 	}
+ }
+ 
+@@ -128,7 +129,7 @@
+ void VerboseMessage::printMessage ()
+ {
+ 	if (args->verbosity.getValue() == VERBOSE) {
+-		cerr << getMessage() << endl ;
++		std::cerr << getMessage() << std::endl ;
+ 	}
+ }
+ 
+@@ -149,7 +150,7 @@
+ 	if (args->verbosity.getValue() == NORMAL ||
+ 		args->verbosity.getValue() == VERBOSE) {
+ 
+-		cerr << PROGNAME << _(": warning: ") << getMessage() << endl ;
++		std::cerr << PROGNAME << _(": warning: ") << getMessage() << std::endl ;
+ 	}
+ }
+ 
+@@ -167,7 +168,7 @@
+ 
+ void CriticalWarning::printMessage ()
+ {
+-	cerr << PROGNAME << _(": warning: ") << getMessage() << endl ;
++	std::cerr << PROGNAME << _(": warning: ") << getMessage() << std::endl ;
+ }
+ 
+ //
+@@ -176,22 +177,22 @@
+ Question::Question (void)
+ 	: MessageBase()
+ {
+-	yeschar = string (_("y")) ;
+-	nochar = string (_("n")) ;
++	yeschar = std::string (_("y")) ;
++	nochar = std::string (_("n")) ;
+ }
+ 
+-Question::Question (string msg)
++Question::Question (std::string msg)
+ 	: MessageBase (msg)
+ {
+-	yeschar = string (_("y")) ;
+-	nochar = string (_("n")) ;
++	yeschar = std::string (_("y")) ;
++	nochar = std::string (_("n")) ;
+ }
+ 
+ Question::Question (const char *msgfmt, ...)
+ 	: MessageBase()
+ {
+-	yeschar = string (_("y")) ;
+-	nochar = string (_("n")) ;
++	yeschar = std::string (_("y")) ;
++	nochar = std::string (_("n")) ;
+ 
+ 	va_list ap ;
+ 	va_start (ap, msgfmt) ;
+@@ -203,7 +204,7 @@
+ {
+ 	assert (!stdin_isused()) ;
+ 
+-	cerr << getMessage() << " (" << yeschar << "/" << nochar << ") " ;
++	std::cerr << getMessage() << " (" << yeschar << "/" << nochar << ") " ;
+ }
+ 
+ bool Question::getAnswer ()
+@@ -212,11 +213,11 @@
+ 
+ 	struct termios oldattr = termios_singlekey_on () ;
+ 	char input[2] ;
+-	input[0] = cin.get() ;
++	input[0] = std::cin.get() ;
+ 	input[1] = '\0' ;
+-	bool retval = (string (input) == yeschar) ;
++	bool retval = (std::string (input) == yeschar) ;
+ 	termios_reset (oldattr) ;
+ 
+-	cerr << endl ;
++	std::cerr << std::endl ;
+ 	return retval ;
+ }
+diff -ur steghide-0.4.6b-orig/src/msg.h steghide-0.4.6b/src/msg.h
+--- steghide-0.4.6b-orig/src/msg.h	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/msg.h	Mon Oct 14 19:33:31 2002
+@@ -27,29 +27,29 @@
+ class MessageBase {
+ 	public:
+ 	MessageBase (void) ;
+-	MessageBase (string msg) ;
++	MessageBase (std::string msg) ;
+ 	MessageBase (const char *msgfmt, ...) ;
+ 	virtual ~MessageBase (void) ;
+ 
+-	string getMessage (void) ;
+-	void setMessage (string msg) ;
++	std::string getMessage (void) ;
++	void setMessage (std::string msg) ;
+ 	void setMessage (const char *msgfmt, ...) ;
+ 	virtual void printMessage (void) = 0 ;
+ 
+ 	protected:
+ 	static const unsigned int MsgMaxSize = 512 ;
+ 
+-	string compose (const char *msgfmt, ...) ;
+-	string vcompose (const char *msgfmt, va_list ap) ;
++	std::string compose (const char *msgfmt, ...) ;
++	std::string vcompose (const char *msgfmt, va_list ap) ;
+ 
+ 	private:
+-	string message ;
++	std::string message ;
+ } ;
+ 
+ class Message : public MessageBase {
+ 	public:
+ 	Message (void) : MessageBase() {} ;
+-	Message (string msg) : MessageBase (msg) {} ;
++	Message (std::string msg) : MessageBase (msg) {} ;
+ 	Message (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;
+@@ -58,7 +58,7 @@
+ class VerboseMessage : public MessageBase {
+ 	public:
+ 	VerboseMessage (void) : MessageBase() {} ;
+-	VerboseMessage (string msg) : MessageBase (msg) {} ;
++	VerboseMessage (std::string msg) : MessageBase (msg) {} ;
+ 	VerboseMessage (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;
+@@ -67,7 +67,7 @@
+ class Warning : public MessageBase {
+ 	public:
+ 	Warning (void) : MessageBase() {} ;
+-	Warning (string msg) : MessageBase (msg) {} ;
++	Warning (std::string msg) : MessageBase (msg) {} ;
+ 	Warning (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;
+@@ -76,7 +76,7 @@
+ class CriticalWarning : public MessageBase {
+ 	public:
+ 	CriticalWarning (void) : MessageBase() {} ;
+-	CriticalWarning (string msg) : MessageBase (msg) {} ;
++	CriticalWarning (std::string msg) : MessageBase (msg) {} ;
+ 	CriticalWarning (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;
+@@ -85,15 +85,15 @@
+ class Question : public MessageBase {
+ 	public:
+ 	Question (void) ;
+-	Question (string msg) ;
++	Question (std::string msg) ;
+ 	Question (const char *msgfmt, ...) ;
+ 
+ 	void printMessage (void) ;
+ 	bool getAnswer (void) ;
+ 
+ 	private:
+-	string yeschar ;
+-	string nochar ;
++	std::string yeschar ;
++	std::string nochar ;
+ } ;
+ 
+ #endif	/* ndef SH_MSG_H */
+diff -ur steghide-0.4.6b-orig/src/wavfile.cc steghide-0.4.6b/src/wavfile.cc
+--- steghide-0.4.6b-orig/src/wavfile.cc	Tue May 14 07:48:06 2002
++++ steghide-0.4.6b/src/wavfile.cc	Mon Oct 14 19:04:19 2002
+@@ -20,7 +20,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <string.h>
++#include <string>
+ #include <assert.h>
+ 
+ #include <libintl.h>

@@ -1,0 +1,19 @@
+  VERSION=( "2.2.5a" "2.2.4" "2.2.3" )
+ CATEGORY="telephony"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-${VERSION}.src"
+ HOMEPAGE="http://www.cvine.freeserve.co.uk/efax-gtk"
+      URL="http://www.cvine.freeserve.co.uk"
+      REQ="gtkmm libsigc++ gettext ghostscript"
+#   OPT[0]="arts:--with-arts::add arts capability"
+FRESHMEAT="efax-gtk"
+    SHORT="This program is a Gtk+/Gtkmm front end for the efax program for receiving and sending faxes with a fax modem."
+LONG="
+This program is a Gtk+/Gtkmm front end for the efax program for
+receiving and sending faxes with a fax modem.  The efax-gtk distribution
+now also compiles and installs a patched version of efax-0.9a-001114, so
+you do not need to separately build and install efax.
+"
+
+# add BUILD which installs efax-gtk-socket-client
+

@@ -1,0 +1,33 @@
+   VERSION=( "0.2.4a" "0.2.4" "0.2.3c" "0.2.3a" "0.2.2" )
+  CATEGORY="network"
+ ATTRIBUTE="x11"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://airsnort.shmoo.com"
+       URL="$SOURCEFORGE_URL"
+       REQ="gtk+,v1.2 libpcap"
+     SHORT="AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys."
+LONG="
+AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
+AirSnort operates by passively monitoring transmissions, computing the
+encryption key when enough packets have been gathered. 
+
+802.11b, using the Wired Equivalent Protocol (WEP), is crippled with
+numerous security flaws. Most damning of these is the weakness described
+in \" Weaknesses in the Key Scheduling Algorithm of RC4 \" by Scott Fluhrer,
+Itsik Mantin and Adi Shamir. Adam Stubblefield was the first to implement
+this attack, but he has not made his software public. AirSnort, along with
+WEPCrack, which was released about the same time as AirSnort, are the
+first publicly available implementaions of this attack.
+"
+
+build() {
+(
+
+  ./autogen.sh                \
+              $OPTS           &&
+  make                        &&
+  prepare_install             &&
+  make    install  prefix=/usr
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,38 @@
+  VERSION=( "1.0a" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.lintux.cx/axel.html"
+      URL="http://www.lintux.cx/downloads"
+   OPT[0]="gettext:--i18n=1::add internationalization"
+      REQ="curl"
+#FRESHMEAT=""
+    SHORT="download accelerator using libcurl."
+LONG="
+Axel does the same thing any other accelerator does: 
+it opens more than one HTTP/FTP connection per download 
+and each connection transfers its own, separate, part of 
+the file. It may sound weird, but it works very well 
+in practice. For example, some FTP sites limit the speed of 
+each connection, therefore opening more than one connection 
+at a time multiplies the allowable bandwidth.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr      \
+              --etcdir=/etc      \
+              $OPTS              &&
+  make                           &&
+  prepare_install                &&
+  make install                   &&
+  mkdir -p /usr/share/$SPELL     &&
+  cp axelrc.example /usr/share/$SPELL &&
+  if [ -n $( augur installed Python ) ]; then
+    cd gui/kapt
+    make install
+  fi
+
+) > $C_FIFO 2>&1}
+

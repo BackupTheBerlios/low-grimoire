@@ -1,0 +1,23 @@
+   VERSION=( "3.36" "3.35" "3.28" )
+  CATEGORY="library"
+ ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://gisle.aas.no"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/G/GA/GAAS"
+       REQ="perl HTML-Tagset"
+     SHORT="HTML parser class."
+LONG="
+HTML parser class.
+"
+
+build() {
+(
+  sed -i "s:\"no\":\"yes\":" Makefile.PL
+  echo | perl Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+

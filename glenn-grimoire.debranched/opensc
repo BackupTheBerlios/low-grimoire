@@ -1,0 +1,23 @@
+  VERSION=( "0.8.1" )
+ CATEGORY="smartcard"
+ATTRIBUTE="console library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.opensc.org"
+      URL="http://www.opensc.org/files/"
+      REQ="pcsc-lite libxslt openssl readline flex"
+   OPT[0]="openct:--with-openct=/usr::add openct support"
+   OPT[1]="openldap:--enable-ldap --disable-ldap-ssl::for LDAP support"
+   OPT[2]="Linux-PAM:--with-pam::add PAM support"
+#   OPT[3]="osfsia:--with-ladspa::for ladspa plugins"
+#FRESHMEAT=""
+    SHORT="Many smart card related tools."
+LONG="
+libopensc is a library for accessing smart card devices using PC/SC Lite
+middleware package. It is also the core library of the OpenSC project.
+Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any
+ISO 7816-4 compatible smart card. Encryption and decryption using private
+keys on the smart card is at the moment possible only with PKCS #15
+compatible cards, such as the FINEID (Finnish electronic ID card) card
+manufactured by Setec.
+"
+

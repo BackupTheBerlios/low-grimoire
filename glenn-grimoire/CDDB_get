@@ -1,0 +1,24 @@
+  VERSION=( "2.2" "2.11" "2.10" )
+ CATEGORY="editor"
+ATTRIBUTE="console"
+   SOURCE="cddb/$SPELL-$VERSION.tar.gz"
+      URL="http://armin.emx.at"
+ HOMEPAGE="http://armin.emx.at/cddb/"
+      REQ="perl"
+    SHORT="CDDB_get gets the CDDB info for an audio cd."
+LONG="
+CDDB_get gets the CDDB info for an audio cd.
+You can connect to CDDB directly, with http or http through a proxy.
+There is OS autodetection for: cdrom device, endiness and cdrom ioctl values. 
+"
+
+build() {
+(
+
+  perl Makefile.PL            &&
+  make                        &&
+  prepare_install             &&
+  make    install
+
+) > $C_FIFO 2>&1}
+

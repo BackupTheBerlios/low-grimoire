@@ -1,0 +1,16 @@
+  VERSION=( "2.0" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="kde|x11"
+   SOURCE="$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://www.cogsci.princeton.edu/~wn"
+      URL="ftp://ftp.cogsci.princeton.edu/pub/wordnet"
+      REQ="tk"
+#FRESHMEAT=""
+    SHORT="WordNet® is an online lexical reference system."
+LONG="
+WordNet® is an online lexical reference system whose design is inspired
+by current psycholinguistic theories of human lexical memory. English
+nouns, verbs, adjectives and adverbs are organized into synonym sets,
+each representing one underlying lexical concept. Different relations
+link the synonym sets.
+"

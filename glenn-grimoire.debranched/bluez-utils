@@ -1,0 +1,26 @@
+  VERSION=( "2.6" "2.4" "2.3" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ="bluez-libs"
+#FRESHMEAT=""
+    SHORT="Bluetooth Utils."
+LONG="
+Bluetooth Utils.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr              \
+              --sysconfdir=/etc          \
+              --enable-pcmcia            \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,25 @@
+  VERSION=( "0.99.33" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://libcwd.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gcc doxygen graphviz"
+#FRESHMEAT=""
+    SHORT="Libcwd is a thread-safe, full-featured debugging support library for C++ developers."
+LONG="
+Libcwd is a thread-safe, full-featured debugging support library for C++
+developers.  It includes ostream-based debug output with custom debug
+channels and devices, powerful memory allocation debugging support, as well
+as run-time support for printing source file:line number information and
+demangled type names.
+"
+
+build() {
+(
+  default_build                           &&
+  mkdir -p /usr/share/$BSPELL             &&
+  cp -R example-project cutee /usr/share/$BSPELL
+
+) > $C_FIFO 2>&1}
+

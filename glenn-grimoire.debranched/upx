@@ -1,0 +1,41 @@
+   VERSION=( "1.24")
+  CATEGORY="archive"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION-src"
+  HOMEPAGE="http://upx.sourceforge.net/"
+       URL="http://upx.sourceforge.net/download"
+       REQ="ucl"
+  ESTIMATE=41
+ FRESHMEAT="upx"
+     SHORT="UPX is a versatile executable packer."
+LONG="
+    UPX is a versatile executable packer with the following features:
+        * excellent compression ratio: typically compresses better than
+	  WinZip/zip/gzip, use UPX to decrease the size of your
+	  distribution !
+        * very fast decompression: ~10 MB/sec on an ancient Pentium 133,
+	  ~200 MB/sec on an Athlon XP 2000+.
+        * no memory overhead for your compressed executables because of
+	  in-place decompression.
+        * safe: you can list, test and unpack your executables. Also, a
+	  checksum of both the compressed and uncompressed file is
+	  maintained internally.
+        * universal: UPX can pack a number of executable formats:
+              o atari/tos
+              o djgpp2/coff
+              o dos/com
+              o dos/exe
+              o dos/sys
+              o linux/386
+              o rtm32/pe
+              o tmt/adam
+              o watcom/le (supporting DOS4G, PMODE/W, DOS32a and CauseWay)
+              o win32/pe
+        * portable: UPX is written in portable endian-neutral C++
+        * extendable: because of the class layout it\'s very easy to add
+	  new executable formats or new compression algorithms
+        * free: UPX is distibuted with full source code under the GNU
+	  General Public License, and may be used freely even with
+	  commercial programs.
+"
+

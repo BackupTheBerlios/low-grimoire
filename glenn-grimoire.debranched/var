@@ -1,0 +1,17 @@
+  VERSION=( "1.0.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/var"
+      URL="ftp://ftp.ossp.org/pkg/lib"
+#      REQ=""
+   OPT[0]="ex:--with-ex::add ex exception handling support"
+   OPT[1]="dmalloc:--with-dmalloc::add malloc debugging support"
+#FRESHMEAT=""
+    SHORT="OSSP var is a flexible, full-featured and fast variable construct expansion library."
+LONG="
+OSSP var is a flexible, full-featured and fast variable construct
+expansion library. It supports a configurable variable construct syntax
+very similar to the style found in many scripting languages.
+"
+

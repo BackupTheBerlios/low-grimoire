@@ -1,0 +1,53 @@
+inherit mahogany
+unset URL SOURCE
+  VERSION=( "cvs" )
+      REQ="cvs autoconf automake"
+  PROVIDE="mahogany"
+   ASSUME="off"
+#FRESHMEAT=""
+
+build() {
+(
+  ./configure --prefix=/usr		\
+	      --with-modules=dynamic    \
+               $OPTS                    &&
+  make					&&
+  prepare_install			&&
+  make    install			&&
+  make realclean
+  
+) > $C_FIFO 2>&1
+
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=':pserver:anonymous@cvs.sourceforge.net:/cvsroot/mahogany'
+  MODULE=M
+  export CVS_RSH=ssh
+  
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2"
+  fi
+  
+  if [ -a $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -a $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+mkdir -p $SOURCE_CACHE/$BSPELL/$VERSION &&
+tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$BSPELL/$VERSION/$BSPELL.tar.bz2" "$SPELL-$VERSION-$BRANCH"
+}
+

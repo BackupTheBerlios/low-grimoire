@@ -1,0 +1,29 @@
+  VERSION=( "1.1" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ="bluez-sdp"
+#FRESHMEAT=""
+    SHORT="Bluetooth Personal Area Networking (PAN)."
+LONG="
+Bluetooth Personal Area Networking (PAN)
+	pand - PAN profile daemon.
+	dund - LAN access profile daemon.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr              \
+              --enable-test              \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  cp tools/pantest.8 /usr/man/man8       &&
+  cp tools/pantest /usr/bin
+
+) > $C_FIFO 2>&1}
+

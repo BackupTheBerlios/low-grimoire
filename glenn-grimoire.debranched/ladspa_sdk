@@ -1,0 +1,30 @@
+  VERSION=("1.12")
+ CATEGORY="audio "
+ATTRIBUTE="driver"
+   SOURCE="${SPELL}_$VERSION"
+ HOMEPAGE="http://www.ladspa.org/"
+      URL="http://www.ladspa.org/download"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="LADSPA provides a standard way for plugin audio processors to be used with a wide range of audio synthesis and recording packages."
+LONG="
+Many audio synthesis and recording packages are in use or in development
+on Linux. These work in many different ways. LADSPA provides a standard way
+for plugin audio processors to be used with a wide range of these
+packages.
+"
+
+build() {
+(
+  cd src
+  
+  sed -i "s:usr/local:usr:" makefile
+
+  make                   
+  prepare_install        &&
+  make  install
+
+  cd ..
+
+) > $C_FIFO 2>&1}
+

@@ -1,0 +1,38 @@
+--- Makefile.orig	2003-07-29 14:01:50.000000000 -0500
++++ Makefile	2003-07-29 14:03:58.000000000 -0500
+@@ -7,7 +7,7 @@
+ SASR	= -DSASR
+ ######### Define SASR if >> is a signed arithmetic shift (-1 >> 1 == -1)
+ 
+-MULHACK = -DUSE_FLOAT_MUL
++#MULHACK = -DUSE_FLOAT_MUL
+ ######### Define this if your host multiplies floats faster than integers,
+ ######### e.g. on a SPARCstation.
+ 
+@@ -71,7 +71,7 @@
+ # Leave INSTALL_ROOT empty (or just don't execute "make install") to
+ # not install gsm and toast outside of this directory.
+ 
+-INSTALL_ROOT	=
++INSTALL_ROOT	= /usr
+ 
+ # Where do you want to install the gsm library, header file, and manpages?
+ #
+@@ -80,7 +80,7 @@
+ 
+ GSM_INSTALL_ROOT = $(INSTALL_ROOT)
+ GSM_INSTALL_LIB = $(GSM_INSTALL_ROOT)/lib
+-GSM_INSTALL_INC = $(GSM_INSTALL_ROOT)/inc
++GSM_INSTALL_INC = $(GSM_INSTALL_ROOT)/include
+ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/man/man3
+ 
+ 
+@@ -100,7 +100,7 @@
+ BASENAME 	= basename
+ AR		= ar
+ ARFLAGS		= cr
+-RMFLAGS		=
++RMFLAGS		= -f
+ FIND		= find
+ COMPRESS 	= compress
+ COMPRESSFLAGS 	= 

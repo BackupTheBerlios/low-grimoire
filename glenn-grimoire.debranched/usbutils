@@ -1,0 +1,14 @@
+  VERSION=( "0.11" "0.10" )
+ CATEGORY="utility"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.linux-usb.org/introduction.html"
+      URL="http://wwwbode.cs.tum.edu/Par/arch/usb/download"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="This package is intended to be for USB what Martin Mares' pciutils is for PCI."
+LONG="
+This package is intended to be for USB what Martin Mares' pciutils is for
+PCI.
+"
+

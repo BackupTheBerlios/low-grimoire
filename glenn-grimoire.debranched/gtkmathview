@@ -1,0 +1,28 @@
+  VERSION=( "0.4.2" "0.4.1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://helm.cs.unibo.it/mml-widget/"
+      URL="http://helm.cs.unibo.it/mml-widget/sources"
+      REQ="gmetadom t1lib"
+#FRESHMEAT=""
+    SHORT="GtkMathView is a C++ rendering engine for MathML documents."
+LONG="
+GtkMathView is a C++ rendering engine for MathML documents.
+"
+
+build() {
+(
+  if [ "$VERSION" == "0.4.2" ]; then
+    sed -i "s:T1_Get_no_fonts:T1_GetNoFonts:" src/T1_FontManager.cc
+  fi
+  
+  ./configure --prefix=/usr     \
+              --with-html-dir=/usr/doc/$SPELL \
+              $OPTS             &&
+  make                          &&
+  prepare_install               &&
+  make    install
+
+) > $C_FIFO 2>&1}
+

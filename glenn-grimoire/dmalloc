@@ -1,0 +1,37 @@
+  VERSION=( "5.3.0" "5.2.4" "5.2.1" "5.1.0" )
+ CATEGORY="debugger"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dmalloc.com"
+      URL="$SOURCEFORGE_URL"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="The debug memory allocation or dmalloc library."
+LONG="
+The debug memory allocation or dmalloc library has been designed as a
+drop in replacement for the system\'s malloc, realloc, calloc, free and
+other memory management routines while providing powerful debugging
+facilities configurable at runtime. These facilities include such things
+as memory-leak tracking, fence-post write detection, file/line number
+reporting, and general logging of statistics.
+"
+
+build() {
+(
+  if [ $VERSION == '5.2.4' ]; then
+    ln -s docs/dmalloc.info .
+  fi
+  
+  ./configure --prefix=/usr              \
+              --enable-cxx               \
+	      --enable-threads           \
+	      --enable-shlib             \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  make installinfo                       &&
+  make installdocs
+
+) > $C_FIFO 2>&1}
+

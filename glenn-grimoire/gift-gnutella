@@ -1,0 +1,27 @@
+  VERSION=( "0.0.9.2" "0.0.9.1" "0.0.8" "0.0.3" )
+ CATEGORY="file-transfer"
+ATTRIBUTE="library"
+   SOURCE="gift/$SPELL-$VERSION"
+ HOMEPAGE="http://www.giftproject.org"
+      URL="$SOURCEFORGE_URL"
+    SHORT="giFT's gnutella support."
+      REQ="giftd"
+ ESTIMATE="763"
+FRESHMEAT="giFT"
+LONG="
+giFT's gnutella support.
+"
+
+build() {
+(
+  
+  ./configure --prefix=/usr              \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install                           &&
+  mkdir -p /usr/doc/$SPELL               &&
+  cp README INSTALL NEWS TODO /usr/doc/$SPELL
+
+) > $C_FIFO 2>&1}
+

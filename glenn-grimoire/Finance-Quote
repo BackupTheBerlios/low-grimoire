@@ -1,0 +1,30 @@
+   VERSION=( "1.08" "1.07" )
+  CATEGORY="development financial"
+ ATTRIBUTE="perl library"
+    SOURCE="finance-quote/$SPELL-$VERSION"
+  HOMEPAGE="http://finance-quote.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="perl HTML-TableExtract"
+     SHORT="Finance::Quote is a perl module which can be used to obtain financial information from a variety of sources"
+LONG="
+Finance::Quote is a perl module which can be used to obtain information
+from a variety of sources, including markets in Australia, USA, Canada,
+Europe, and a number of managed funds.
+"
+
+build() {
+(
+  #~ would like to use the below to have CPAN do all the work, but the
+  #~ problem is in the VERSION, it would have to be dynamic.  I think
+  #~ it would be too slow to have CPAN find it. (man CPAN)
+  #~ perl -e 'use CPAN; CPAN::Shell->i("/Finance-Quote/");'
+  #~ perl -e 'use CPAN; CPAN::Shell->install("Finance::Quote");'
+  
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
+
+) > $C_FIFO 2>&1
+}
+
