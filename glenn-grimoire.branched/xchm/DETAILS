@@ -5,7 +5,7 @@ SOURCE[0]="$SPELL/$SPELL-$VERSION"
 SOURCE[1]="$SPELL/$SPELL-$VERSION-doc"
  HOMEPAGE="http://xchm.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ="libchm wxGTK"
+      REQ="chmlib wxGTK"
 #FRESHMEAT=""
     SHORT="xCHM is a .chm viewer for *NIX."
 stream << EOF
