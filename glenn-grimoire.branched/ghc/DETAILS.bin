@@ -1,0 +1,19 @@
+   VERSION=( "6.0.1-i386-unknown-linux" )
+  CATEGORY="compiler"
+ ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.haskell.org/ghc/download_ghc_601.html"
+       URL="http://www.haskell.org/ghc/dist/6.0.1"
+       REQ="readline ncurses"
+# FRESHMEAT="ethereal"
+     SHORT="Glascow Haskell Compiler (binary)"
+cat << EOF
+The Glasgow Haskell Compiler is a robust, fully-featured, optimising
+compiler and interactive environment for Haskell 98, GHC compiles Haskell
+to either native code or C.  It implements numerous experimental language
+extensions to Haskell 98; for example: concurrency, a foreign language
+interface, multi-parameter type classes, scoped type variables,
+existential and universal quantification, unboxed types, exceptions, weak
+pointers, and so on.  GHC comes with a generational garbage collector,
+and a space and time profiler.
+EOF

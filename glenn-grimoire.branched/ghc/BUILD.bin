@@ -1,0 +1,14 @@
+(
+  # ctype_b hack to get around the fact that its not in glibc
+  echo "void __ctype_b(void) {}" > ctype_b.c
+  gcc -c ctype_b.c
+  
+  ./configure --prefix=/usr    \
+	      $OPTS            &&
+  make                         &&
+  prepare_install              &&
+  make    install              &&
+  ar -ra RtsFlags.o /usr/lib/ghc-6.0.1/libHSrts.a ctype_b.o &&
+  ar -s /usr/lib/ghc-6.0.1/libHSrts.a
+
+) > $C_FIFO 2>&1
