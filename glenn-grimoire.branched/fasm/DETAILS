@@ -1,9 +1,11 @@
-  VERSION=( "1.47" "1.46" )
+  VERSION=( "1.48" "1.47" "1.46" )
  CATEGORY="assembler"
 ATTRIBUTE="console"
-   SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://fasm.sourceforge.net/"
-      URL="$SOURCEFORGE_URL"
+#   SOURCE="$SPELL/$SPELL-$VERSION"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://flatassembler.net/"
+#      URL="$SOURCEFORGE_URL"
+      URL="http://flatassembler.net"
 FRESHMEAT="fasm"
     SHORT="The flat assembler is a fast and efficient self-assembling 80x86 assembler."
 cat << EOF

@@ -1,19 +1,12 @@
-  VERSION=("0.17.9" "0.16.0" "0.15.7" "0.15.6")
+  VERSION=( "0.19.2" "0.17.9" "0.16.0" "0.15.7" "0.15.6")
    IGNORE="rc\d+$"
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.nongnu.org/protux"
       URL="http://savannah.nongnu.org/download"
-      REQ="qt-x11-free"
-   OPT[0]="fftw:::to use FFTW libraries"
-
-#   OPT[0]="libvorbis:::to play oggvorbis files"
-#   OPT[1]="freetype1:::to enable use of truetype fonts"
-#   OPT[2]="ORBit:::to enable a remote Cobra interface"
-#   OPT[3]="nasm:::to enable assembly optimizations"
-#   OPT[4]="esound::--disable-esd:to enable esd output"
-#   OPT[5]="arts::--disable-arts:to enable arts output"
+      REQ="qt-x11-free libmustux"
+#   OPT[0]="alsa:::to use alsa libraries"
 #FRESHMEAT="zinf"
     SHORT="Protux aims to be the most practical and one of the most powerful audio tools for Linux."
 cat << EOF
