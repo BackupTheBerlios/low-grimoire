@@ -1,12 +1,12 @@
-   VERSION=( "0.32" "0.31" "0.30" "0.29" "0.28" "0.27" "0.26" )
+   VERSION=( "0.33" "0.27" "0.26" )
   CATEGORY="library"
  ATTRIBUTE="x11 development"
   HOMEPAGE="http://netdragon.sourceforge.net"
        URL="$SOURCEFORGE_URL"
        OPT="xmms:::for xmms support"
     SOURCE="netdragon/superkaramba-$VERSION"
-       REQ="kdelibs qt-x11-free Python"
-  ESTIMATE=485
+       REQ="kdelibs libart_lgpl qt-x11-free Python"
+  ESTIMATE=135
  FRESHMEAT="SuperKaramba"
      SHORT="SuperKaramba is a tool that allows anyone to easily create and run little interactive widgets on a KDE"
 cat << EOF
