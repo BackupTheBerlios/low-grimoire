@@ -1,0 +1,15 @@
+  VERSION=( "0.94" )
+ CATEGORY="bootloader"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/grub"
+      URL="ftp://alpha.gnu.org/gnu"
+#      REQ=""
+   OPT[0]="ncurses::--without-curses:add curses support"
+#FRESHMEAT=""
+    SHORT="GNU GRUB is a Multiboot boot loader."
+cat << EOF
+GNU GRUB is a Multiboot boot loader. It was derived from GRUB, GRand
+Unified Bootloader, which was originally designed and implemented by Erich
+Stefan Boleyn. 
+EOF

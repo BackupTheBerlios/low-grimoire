@@ -1,0 +1,41 @@
+(
+  
+  ./configure --prefix=/usr              \
+              --with-binutils=/bin       \
+              --enable-diskless          \
+	      --enable-pci-direct        \
+	      --enable-3c509             \
+	      --enable-3c529             \
+	      --enable-3c595             \
+	      --enable-3c90x             \
+	      --enable-cs89x0            \
+	      --enable-davicom           \
+	      --enable-depca             \
+	      --enable-eepro             \
+	      --enable-eepro100          \
+	      --enable-epic100           \
+	      --enable-3c507             \
+	      --enable-exos205           \
+	      --enable-ni5210            \
+	      --enable-lance             \
+	      --enable-ne2100            \
+	      --enable-ni6510            \
+	      --enable-natsemi           \
+	      --enable-ni5010            \
+	      --enable-3c503             \
+	      --enable-ne                \
+	      --enable-ns8390            \
+	      --enable-wd                \
+	      --enable-otulip            \
+	      --enable-rtl8139           \
+	      --enable-sis900            \
+	      --enable-sk-g16            \
+	      --enable-smc9000           \
+	      --enable-tiara             \
+	      --enable-tulip             \
+              $OPTS                      &&
+  make                                   &&
+  prepare_install                        &&
+  make install
+
+) > $C_FIFO 2>&1
