@@ -1,8 +1,9 @@
-   VERSION=( "0.54" )
+   VERSION=( "0.60" "0.54" )
   CATEGORY="net email"
  ATTRIBUTE="console"
   HOMEPAGE="http://clamav.elektrapro.com"
        URL="http://clamav.elektrapro.com/stable"
+  ESTIMATE="475"
  FRESHMEAT="clamav"
      SHORT="An anti-virus utility for Unix"
 cat << EOF
