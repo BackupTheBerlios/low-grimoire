@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "0.6.1" )
+  CATEGORY="graphic-viewer"
+ ATTRIBUTE="x11"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://bbbm.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ=("gtk+")
+# FRESHMEAT="libtorrent"
+  ESTIMATE="200"
+      DESC="bbbm is a Blackbox backgound manager.
+bbbm is a Blackbox backgound manager.
+"
+
+build() {
+    cd src                       &&
+    make                         &&
+    prepare_install              &&
+    make install BINDIR=/usr/bin &&
+    cd ..
+}
