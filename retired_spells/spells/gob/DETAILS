@@ -5,6 +5,7 @@
        URL="http://ftp.5z.com/pub"
     SOURCE="gob/gob2-$VERSION"
        REQ="glib flex"
+  ESTIMATE="122"
  FRESHMEAT="GOB"
      SHORT="GTK Object Builder (GOB) is a simple preprocessor for easily creating GTK objects. It reads a class description file with inline C code and produces .c and .h object files for you."
 

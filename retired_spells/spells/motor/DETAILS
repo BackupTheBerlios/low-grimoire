@@ -5,6 +5,7 @@
        URL="http://konst.org.ua/download"
        OPT="gettext::--disable-nls:to enable nls"
        REQ="ncurses"
+  ESTIMATE="320"
  FRESHMEAT="motor"
      SHORT="Motor is a text-mode integrated programming environment for Linux"
 

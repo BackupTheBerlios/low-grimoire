@@ -4,7 +4,8 @@
   HOMEPAGE="http://www.gnu.org/software/kawa"
        URL="ftp://ftp.gnu.org/pub/gnu/kawa"
        REQ="j2sdk"
- FRESHMEAT=""
+  ESTIMATE="465"
+ FRESHMEAT="kawa"
      SHORT="The Kawa Scheme System is a full Scheme implementation, completely written in Java"
 
 cat << EOF
