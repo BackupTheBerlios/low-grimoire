@@ -8,7 +8,7 @@
      SHORT="Q is a powerful and extensible functional programming 
 language based on the term rewriting calculus."
 
-stream << EOF
+LONG="
 Q is useful for scientific programming and other advanced applications, 
 and also as a sophisticated kind of desktop calculator. 
-EOF
+"

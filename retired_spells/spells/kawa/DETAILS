@@ -8,7 +8,7 @@
  FRESHMEAT="kawa"
      SHORT="The Kawa Scheme System is a full Scheme implementation, completely written in Java"
 
-stream << EOF
+LONG="
 The Kawa Scheme System is a full Scheme implementation, completely written in Java. 
 Scheme functions and files are automatically compiled into Java byte-codes. Kawa 
 does some optimizations, and the compiled code runs at a reasonable speed. It 
@@ -16,4 +16,4 @@ provides the usual read-eval-print loop, as well as batch modes. The Kawa
 compilation framework is also useful for implementing other languages on top 
 of JVM. There is active development of XQuery (the XML query language), and less 
 active development of Emacs Lisp, Common Lisp, and EcmaScript.
-EOF
+"

@@ -10,10 +10,10 @@
   ESTIMATE="9"
  FRESHMEAT="flexbackup"
      SHORT="flexbackup is a configurable and easy to use Perl-based backup tool"
-stream << EOF
+LONG="
 flexbackup is a configurable and easy to use Perl-based backup tool, 
 that can backup local files as well as remote machines (using ssh). 
 It allows the backup itself to be made with afio, cpio, tar, dump, 
 star, or pax. It can work with tape drives, or can easily archive 
 to on-disk files
-EOF
+"

@@ -7,6 +7,6 @@
   ESTIMATE="5"
      SHORT="Amrita is an html/xhtml template library for Ruby"
 
-stream << EOF
+LONG="
 Amrita is an html/xhtml template library for Ruby. It makes html documents from a template and model data
-EOF
+"

@@ -7,6 +7,6 @@
   FRESHMEAT="rscheme"
   ESTIMATE=4925
   SHORT="An object-oriented, extended Scheme implementation."
-  stream << EOF
+  LONG="
   RScheme is an object-oriented, extended Scheme
-  EOF
+  "

@@ -7,8 +7,8 @@
  FRESHMEAT="Qvwm"
   ESTIMATE="187"
      SHORT="Windows 95 like window manager for the X Window System"
-stream << EOF
+LONG="
 Qvwm is a Windows 95 like window manager for the X Window System. 
 It allows Windows 95/NT users to use the X Window System without a hassle 
 and X Window System users to use Windows 95 without a hassle
-EOF
+"

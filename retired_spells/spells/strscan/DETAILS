@@ -6,6 +6,6 @@
        REQ="ruby"
      SHORT="strscan is a library for fast scanning"
 
-stream << EOF
+LONG="
 strscan is a library for fast scanning
-EOF
+"

@@ -9,8 +9,8 @@
  FRESHMEAT="mod_ruby"
      SHORT="Embeds Ruby into the Apache Webserver"
 
-stream << EOF
+LONG="
 mod_ruby embeds the Ruby interpreter into the Apache Web server, 
 allowing Ruby CGI scripts to be executed natively. These scripts 
 will start up much faster than without mod_ruby.
-EOF
+"

@@ -7,8 +7,8 @@
   ESTIMATE=14
      SHORT="eRuby interprets a Ruby code embedded text file"
 
-stream << EOF
+LONG="
 eRuby interprets a Ruby code embedded text file. For example, eRuby
 enables you to embed a Ruby code to a HTML file
-EOF
+"
 

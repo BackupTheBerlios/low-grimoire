@@ -8,6 +8,6 @@
  FRESHMEAT="iftop"
      SHORT="iftop provides real-time bandwidth usage information on a specified interface, listed by host pairs"
 
-stream << EOF
+LONG="
 iftop provides real-time bandwidth usage information on a specified interface, listed by host pairs.
-EOF
+"

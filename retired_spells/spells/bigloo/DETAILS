@@ -9,11 +9,11 @@
     OPT[0]="j2sdk:--jvm=yes:--jvm=no:to build ssl and crypto applications"
     OPT[1]="emacs:::to build emacs interface"
      SHORT="Bigloo is an implementation of the Scheme programming language"
-stream << EOF
+LONG="
 Bigloo is an implementation of the Scheme programming language. 
 It relies on an optimizing compiler from Scheme to C. 
 Bigloo enables connections between Scheme code and C code. 
 It proposes many extensions to Scheme such as a regular parser 
 compiler, an lalr parser compiler, pattern matching, an 
 object layer, etc.
-EOF
+"

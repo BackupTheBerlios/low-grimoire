@@ -7,9 +7,9 @@
   ESTIMATE=117
      SHORT="Net::DNS is a Perl interface to the DNS resolver"
 
-stream << EOF
+LONG="
 Net::DNS is a DNS resolver implemented in Perl.  It allows the
 programmer to perform nearly any type of DNS query from a Perl
 script.  For details and examples, please read the Net::DNS manual
 page.
-EOF
+"

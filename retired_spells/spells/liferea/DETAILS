@@ -8,6 +8,6 @@
   REQ="libxml2 gtk+ gtkhtml libgtkhtml"
   ESTIMATE=125
   SHORT="A FeedReader clone for GNU/Linux."
-  stream << EOF
+  LONG="
   Liferea (Linux Feed Reader) is an RSS/RDF feed
-  EOF
+  "

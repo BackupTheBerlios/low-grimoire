@@ -9,9 +9,9 @@
   ESTIMATE="488"
  FRESHMEAT="iguana"
      SHORT="Iguana is an interpreted, interactive, computation-oriented scripting language"
-stream << EOF
+LONG="
 Iguana is an interpreted, interactive, computation-oriented scripting language 
 that combines high-level data structures with a very simple syntax. Iguana's 
 basic power can be extended with your own modules written in C or C++. Iguana 
 is also adaptable as an extension language for existing applications.
-EOF
+"

@@ -9,9 +9,9 @@
   ESTIMATE=135
   SHORT="manage /etc/rc.d symbolic links"
 
-  stream << EOF
+  LONG="
   chkconfig is a tool to simplify management of the symbolic links in /etc/rc.d 
   under Linux. This version is based on the latest release of chkconfig from 
   RedHat-7.2, adding an autoconf-style configure script, to simplify porting to 
   other distributions/platforms.
-  EOF
+  "

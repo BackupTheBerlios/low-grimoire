@@ -7,9 +7,9 @@
   ESTIMATE="108"
  FRESHMEAT="noexec"
      SHORT="noexec is a package for preventing a process from exec'ing another process."
-stream << EOF
+LONG="
 noexec is a package for preventing a process from exec'ing 
 another process. It can be a useful security measure to prevent 
 a user from escaping to a shell. It may be able to prevent some 
 kinds of CGI exploits
-EOF
+"

@@ -6,8 +6,8 @@
        REQ="ruby"
      SHORT="small utility collection"
 
-stream << EOF
+LONG="
 A small utility collection for ruby. It includes :aliasing.rb,bench.rb,
 bug.rb,const.rb,d.rb,must.rb,protect.rb,rbparams.rb,rubyloader.rb,timer.rb
 and version.rb
-EOF
+"

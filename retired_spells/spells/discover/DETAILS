@@ -6,9 +6,9 @@
  FRESHMEAT="Discover"
        REQ="curl expat"
      SHORT="Discover is a cross-platform hardware detection system that uses system-dependent modules (selected at build time) for detecting the hardware on a system."
-stream << EOF
+LONG="
 Discover is a cross-platform hardware detection system that uses 
 system-dependent modules (selected at build time) for detecting 
 the hardware on a system. It also provides system-independent 
 interfaces for querying XML data sources about this hardware.
-EOF
+"

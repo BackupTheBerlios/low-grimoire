@@ -5,8 +5,8 @@
        URL="http://hes.iki.fi/bchunk"
  FRESHMEAT="bchunk"
      SHORT="bchunk, an Unix version of the BinChunker utility, converts CD images in the raw BIN/CUE format"
-stream << EOF
+LONG="
 bchunk, an Unix version of the BinChunker utility, converts CD images in the raw BIN/CUE format 
 to a set of tracks in ISO 9660 format, which can be then written on a CD-R using cdrecord. Audio 
 tracks are written in CDR (native CD audio) or WAV format.
-EOF
+"

@@ -9,8 +9,8 @@ ATTRIBUTE="x11"
  ESTIMATE=2714
 FRESHMEAT="blender"
     SHORT="blender:  a (now) free 3d modeler"
-stream << EOF
+LONG="
 BF (Blender Foundation) Blender is the recently-freed 3d modeler for
 multiple operating systems.  It has bunches of features and a confusing
 interface (those are always good).
-EOF
+"

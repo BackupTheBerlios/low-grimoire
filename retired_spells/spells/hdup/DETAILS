@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 FRESHMEAT="hdup"  
  ESTIMATE=18 
    SHORT="hdup is used to back up a filesystem."
-stream << EOF
+LONG="
 hdup is used to back up a filesystem. Features include 
 encryption of the archive (with mcrypt), compression 
 of the archive (bzip/gzip/none), the ability to transfer 
@@ -15,5 +15,5 @@ the archive to a remote host or restoring from a remote
 host (with ssh), the ability to split up archives, 
 and no obscure archive format (it is a normal compressed 
 tar file).
-EOF
+"
 

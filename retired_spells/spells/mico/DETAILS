@@ -7,10 +7,10 @@
   OPT="openssl:::for ssl support"
   ESTIMATE=655
   SHORT="MICO Is COrba"
-  stream << EOF
+  LONG="
   The acronym MICO expands to MICO Is CORBA. The intention of this project is to 
   provide a freely available and fully compliant implementation of the CORBA 2.2 
   standard. MICO has become quite popular as an OpenSource project and is widely 
   used for different purposes (see our success stories). Our goal is to keep MICO 
   compliant to the latest CORBA standard.
-  EOF
+  "

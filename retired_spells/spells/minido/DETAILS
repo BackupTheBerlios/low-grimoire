@@ -8,8 +8,8 @@
  FRESHMEAT="minido"
      SHORT="minido is a simple, generic, multi-user, database-free todo list manager and tracking system"
 
-stream << EOF
+LONG="
 minido is a simple, generic, multi-user, database-free todo list 
 manager and tracking system. Its interface is generated from a 
 simple data description file in XML
-EOF
+"

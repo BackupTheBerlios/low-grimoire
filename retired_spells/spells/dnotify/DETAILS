@@ -7,12 +7,12 @@
 # FRESHMEAT="lkl"
      SHORT="$SPELL is a simple program that makes it possible to execute a command every time the contents of a specific directory change in linux"
 
-stream << EOF
+LONG="
 dnotify is a simple program that makes it possible to execute a command every time the 
 contents of a specific directory change in linux. It is run from the command line and 
 takes two arguments: one or more directories to monitor and a command to execute whenever 
 a directory has changed. Options control what events to trigger on: 
 when a file was read in the directory, when one was created, deleted and so on. 
-EOF
+"
 
 

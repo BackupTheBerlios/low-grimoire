@@ -6,8 +6,8 @@
        REQ="perl"
   ESTIMATE="13"
      SHORT="Perl extension to automagiclly configure perl scripts"
-stream << EOF
+LONG="
 ExtUtils::configPL - Perl extension to automagiclly configure perl scripts
 This module is used to add configuration information to a perl script, and
 is meant to be used with the C<ExtUtils::MakeMaker> module.
-EOF
+"

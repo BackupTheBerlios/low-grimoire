@@ -6,7 +6,7 @@
     SOURCE="libart-$VERSION"
  FRESHMEAT="libart"
      SHORT="Libart is a library for high-performance 2D graphics. It supports a very powerful imaging model, basically the same as SVG and the Java 2D API"
-stream << EOF
+LONG="
 Libart is a library for high-performance 2D graphics. It 
 supports a very powerful imaging model, basically the same 
 as SVG and the Java 2D API. It includes all PostScript imaging 
@@ -15,4 +15,4 @@ is also highly tuned for incremental rendering. It contains data
 structures and algorithms suited to rapid, precise computation of 
 Region of Interest, and a two-phase rendering pipeline optimized 
 for interactive display.
-EOF
+"

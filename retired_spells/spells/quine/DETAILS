@@ -6,7 +6,7 @@
   ESTIMATE=30
 # FRESHMEAT=""
      SHORT="Quine is a kit which allows you to write your own quines"
-stream << EOF
+LONG="
 Programs which print their own source code are called quines. 
 Quine is a kit which allows you to write your own quines.
-EOF
+"

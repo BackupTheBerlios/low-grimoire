@@ -6,7 +6,7 @@
        REQ="perl"
   ESTIMATE="26"
      SHORT="This module attempts make using HTML templates simple and natural"
-stream << EOF
+LONG="
 This module attempts make using HTML templates simple and natural.  It
 extends standard HTML with a few new HTML-esque tags 
-EOF
+"

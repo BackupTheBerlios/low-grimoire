@@ -7,8 +7,8 @@
        REQ="waimea gtk+"
      SHORT="A gui based program to configure Waimea"
 
-stream << EOF
+LONG="
 waiconfig is a Waimea configuration program that configures Waimea 
 menus and the waimearc, based on fluxconf.
-EOF
+"
 

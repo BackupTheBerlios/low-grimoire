@@ -8,7 +8,7 @@
   FRESHMEAT="apollon"
   ESTIMATE=563
   SHORT="A P2P client for Linux which supports Kazaa, Gnutlella, and OpenFT."
-  stream << EOF
+  LONG="
   Apollon is the filesharing client you were waiting for! It uses giFT/openFT as a 
   filesharing protocol, and the GUI is very user-friendly and intuitive. 
-  EOF
+  "

@@ -7,9 +7,9 @@
 #    OPT[0]="Linux-PAM:::"
  FRESHMEAT="secure delete"
      SHORT="A set of utilities for secure delete"
-stream << EOF
+LONG="
 Secure Delete is a set of three utilities to perform 
 the following: secure deletion of files, secure overwriting 
 of the unused diskspace on the harddisk, and secure overwriting 
 and cleaning of the swap filesystem.
-EOF
+"

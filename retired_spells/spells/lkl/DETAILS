@@ -8,10 +8,10 @@
  FRESHMEAT="lkl"
      SHORT="$SPELL is a userspace keylogger"
 
-stream << EOF
+LONG="
 LKL is a userspace keylogger that runs under Linux on the x86 architechture. 
 LKL sniffs and logs everything that passes through the hardware keyboard port 
 (0x60). It translates keycodes to ASCII with a keymap file.
-EOF
+"
 
 
