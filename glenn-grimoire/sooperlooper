@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.93" )
+ CATEGORY="ladspa-plugin"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://essej.net/sooperlooper"
+      URL="http://essej.net"
+      REQ="ladspa_sdk"
+#FRESHMEAT=""
+    SHORT="SooperLooper is a looping sampler ladspa plugin"
+LONG="
+SooperLooper is a looping sampler very much like the Gibson/Oberheim
+Echoplex Digital Pro (EDP). In fact, it is a downright emulation of an
+EDP, with some additional features and a silly name. I figured that the
+EDP feature-set is powerful, proven, and popular -- so why not implement
+it as a LADSPA plugin we can all use?
+"
+
+build() {
+  sed -i "s|/local||" Makefile &&
+  make                         &&
+  prepare_install              &&
+  make install
+}
