@@ -1,0 +1,14 @@
+   VERSION=( "0.37" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.net-dns.org"
+       URL="http://www.net-dns.org/download"
+       REQ="perl"
+     SHORT="Net::DNS is a Perl interface to the DNS resolver"
+
+cat << EOF
+Net::DNS is a DNS resolver implemented in Perl.  It allows the
+programmer to perform nearly any type of DNS query from a Perl
+script.  For details and examples, please read the Net::DNS manual
+page.
+EOF
