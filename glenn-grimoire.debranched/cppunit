@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.10.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://cppunit.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="CppUnit is a C++ unit testing framework.
+CppUnit is a C++ unit testing framework. It started its life as a port of
+JUnit to C++ by Michael Feathers.
+"
+
