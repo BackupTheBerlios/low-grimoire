@@ -1,0 +1,13 @@
+   VERSION=( "1.1" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://search.cpan.org/author/PEASE/ExtUtils-configPL-1.1"
+       URL="http://search.cpan.org/CPAN/authors/id/P/PE/PEASE"
+       REQ="perl"
+  ESTIMATE="13"
+     SHORT="Perl extension to automagiclly configure perl scripts"
+cat << EOF
+ExtUtils::configPL - Perl extension to automagiclly configure perl scripts
+This module is used to add configuration information to a perl script, and
+is meant to be used with the C<ExtUtils::MakeMaker> module.
+EOF
