@@ -14,7 +14,8 @@ ATTRIBUTE="server library"
    OPT[0]="doxygen:::make documentation with dOxygen"
    OPT[1]="libsndfile:::to build the jackrec example client"
    OPT[2]="libcap:--enable-capabilities::to have realtime support (Note requires a kernel patch)"
-#   OPT[3]="fltk:::to build an example client"
+#   OPT[3]="portaudio:::for portaudio api support"
+#   OPT[4]="fltk:::to build an example client"
 #FRESHMEAT=""
 DESC="JACK is a low-latency audio server.
 JACK is a low-latency audio server, written primarily for the GNU/Linux
