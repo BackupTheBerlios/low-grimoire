@@ -1,6 +1,7 @@
+unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
       REQ="cvs autoconf automake"
-EPROVIDES="giftd"
+ EPROVIDE="giftd"
    ASSUME="off"
  ESTIMATE="763"
