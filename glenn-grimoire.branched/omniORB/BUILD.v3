@@ -1,0 +1,18 @@
+(
+  
+  sed -i "s:#platform = i586_linux_2.0_glibc2.1:platform = i586_linux_2.0_glibc2.1:" config/config.mk &&
+  sed -i "s:#PYTHON = /usr/local/bin/python:PYTHON = python:"       mk/platforms/i586_linux_2.0_glibc2.1.mk &&
+  sed -i "s:CXX = /usr/bin/g++:CXX = g++:"                    mk/platforms/i586_linux_2.0_glibc2.1.mk &&
+  sed -i "s:CC           = /usr/bin/gcc:CC           = gcc:"  mk/platforms/i586_linux_2.0_glibc2.1.mk &&
+  cd src                                        &&
+  make export                                   &&
+  prepare_install                               &&
+  cd ..                                         &&
+  cp -R bin/i586_linux_2.0_glibc2.1/* /usr/bin  &&
+  cp -R lib/i586_linux_2.0_glibc2.1/* /usr/lib  &&
+  cp -R lib/python/* /usr/lib/python2.2         &&
+  cp -R man /usr                                &&
+  cp -R include /usr                            &&
+  cp -R idl /usr
+
+) > $C_FIFO 2>&1

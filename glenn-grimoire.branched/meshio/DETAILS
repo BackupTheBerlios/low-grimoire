@@ -1,0 +1,14 @@
+  VERSION=( "0.2.0" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.3dwm.org"
+      URL="http://www.3dwm.org/download"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="MeshIO is a simple C++ library for the loading of 3D model files."
+cat << EOF
+MeshIO is a simple C++ library for the loading of 3D model files.
+Currently, MeshIO only supports plain .3DS files as well as its native
+.RAW format. MeshIO will undergo a major redesign in the future.
+EOF
