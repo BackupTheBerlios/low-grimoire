@@ -1,4 +1,4 @@
-   VERSION=( "1.23" "1.21" "1.20" "1.19" "1.15" "1.10" "1.09" )
+   VERSION=( "1.24" "1.23" "1.21" "1.20" "1.19" "1.15" "1.10" "1.09" )
   CATEGORY="window-manager"
  ATTRIBUTE="x11"
   HOMEPAGE="http://www.nickgravgaard.com/windowlab"
@@ -8,7 +8,7 @@
   ESTIMATE=14
      SHORT="WindowLab is a small and simple window manager of novel design"
 stream << EOF
-It's click-to-focus, shares its window depth policy with the Amiga, 
+Windowlab has click-to-focus, shares its window depth policy with the Amiga, 
 and has a window resizing/reshaping method similar to that of 8½ from 
 Plan 9. WindowLab maintains the illusion of direct manipulation by 
 constraining the mouse pointer when appropriate, ie when a window 
