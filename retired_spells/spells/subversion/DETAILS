@@ -8,7 +8,7 @@
   REQ="neon zlib openssl"
   OPT="db:--with-berkeley-db::db support"
   FRESHMEAT="subversion"
-  #ESTIMATE=
+  ESTIMATE="2553"
   SHORT="Version Control rethought."
 
 cat << EOF
