@@ -1,4 +1,4 @@
-  VERSION=( "0.6.4" )
+  VERSION=( "0.6.5" "0.6.4" )
  CATEGORY="library"
 ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"

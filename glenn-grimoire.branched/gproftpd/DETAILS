@@ -1,4 +1,4 @@
-  VERSION=( "8.1.4" )
+  VERSION=( "8.1.6" "8.1.4" )
  CATEGORY="ftp"
 ATTRIBUTE="gnome|x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
