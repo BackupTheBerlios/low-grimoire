@@ -1,0 +1,11 @@
+depends  "arts"                &&
+depends  "docbook-sgml"        &&
+depends  "pcre"                &&
+depends  "libxslt"             &&
+depends  "tiff"                &&
+
+optional_depends  "openssl"  "--with-ssl-dir=/usr"  "--without-ssl" \
+                  "for openssl support" &&
+optional_depends  "cups"     ""  "--disable-cups"  "for cups support"  
+
+#add fam module and optional depends

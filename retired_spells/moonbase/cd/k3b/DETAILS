@@ -1,0 +1,16 @@
+          MODULE=k3b
+         VERSION=0.8.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+        WEB_SITE=http://k3b.sourceforge.net/
+         ENTERED=20020602
+         UPDATED=20030323
+           SHORT="K3b is a KDE frontend to cd recording programs."
+      MAINTAINER="JacksonJE@health.missouri.edu"
+
+cat << EOF
+K3b is a GUI frontend to the cd recording programs cdrdao and cdrecord. It's 
+aim is to provide a very user friendly interface to all the tasks that come 
+with cd recording.
+EOF

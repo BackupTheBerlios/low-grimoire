@@ -1,0 +1,16 @@
+          MODULE=xine-lib
+         VERSION=1-beta12
+        #VERSION=1-beta11
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/xine/$SOURCE
+        WEB_SITE=http://xinehq.de/
+         ENTERED=20010927
+         UPDATED=20030512
+           SHORT="xine is a free video player."
+cat << EOF
+xine is a free video player which plays mpeg-2 and mpeg-1 video, DVDs 
+(unlocked/unencrypted only), video CDs, SVCDs, and AVI files (using
+Win32 codecs) with synchronized audio and video, and optionally
+fullscreen using the Xv extensions in Xfree86 4.x.
+EOF

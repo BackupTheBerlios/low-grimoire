@@ -1,0 +1,17 @@
+MODULE=wastesedge
+VERSION=0.3.3
+SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+SOURCE_URL[0]=http://freesoftware.fsf.org/download/adonthell/src/$SOURCE
+WEB_SITE=http://adonthell.linuxgames.com
+ENTERED=20020917
+UPDATED=20020917
+SHORT="A treatise on the small settlement"
+cat << EOF
+DESCRIPTION:
+As a loyal servant of the elven Lady Silverhair, you arrive at the remote trading post of Waste's Edge, where she is engaged in negotiations with the dwarish merchant Bjarn Fingolson. But not all is well at Waste's Edge, and soon you are confronted with circumstances that are about to destroy your mistress' high reputation. And none but you can avert this ...
+
+Remember, this game is a demo of what we can do so far. There is no fighting or collecting items yet (this will appear in future releases) so you must solve this quest by exploring the Redwyne Inn where everyone is staying and talking to the people you meet there.
+
+To play wastesedge : adonthell wastesegde
+EOF

@@ -1,0 +1,37 @@
+*** Makefile	Wed Feb 20 13:44:24 2002
+--- /tmp/Makefile	Sun Mar 31 20:31:39 2002
+***************
+*** 110,125 ****
+  Makeconf:
+  	./configure
+  
+! install: installbin
+  
+! installbin: rdesktop rdp-srvr
+  	mkdir -p $(BINDIR)
+  	cp rdesktop $(BINDIR)
+! 	cp rdp-srvr $(BINDIR)
+  	strip $(BINDIR)/rdesktop
+! 	strip $(BINDIR)/rdp-srvr
+  	chmod 755 $(BINDIR)/rdesktop
+! 	chmod 755 $(BINDIR)/rdp-srvr
+  
+  installman: rdesktop.1
+  	mkdir -p $(MANDIR)/man1
+--- 110,125 ----
+  Makeconf:
+  	./configure
+  
+! install: installbin installman
+  
+! installbin: rdesktop
+  	mkdir -p $(BINDIR)
+  	cp rdesktop $(BINDIR)
+! #	cp rdp-srvr $(BINDIR)
+  	strip $(BINDIR)/rdesktop
+! #	strip $(BINDIR)/rdp-srvr
+  	chmod 755 $(BINDIR)/rdesktop
+! #	chmod 755 $(BINDIR)/rdp-srvr
+  
+  installman: rdesktop.1
+  	mkdir -p $(MANDIR)/man1

@@ -1,0 +1,16 @@
+if  !  grep  -q  CONFIGURED  $MODULE_CONFIG;  then
+
+  message  "${MESSAGE_COLOR}\n MAKEDEV may (re-)create the devices" \
+           "in /dev \n This procedure will also fix any incorrect"  \
+           "permissons.\n No exisiting devices will be deleted."    \
+           "\n${DEFAULT_COLOR}"
+
+  if    query  "Do you want to run MAKEDEV on /dev directory?" n
+  then
+      echo 'RUN_MAKEDEV="y"' >>  $MODULE_CONFIG
+  else
+      echo 'RUN_MAKEDEV="n"' >>  $MODULE_CONFIG
+  fi
+
+  echo  'CONFIGURED="y"'  >>  $MODULE_CONFIG
+fi

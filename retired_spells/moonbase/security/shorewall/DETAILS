@@ -1,0 +1,17 @@
+          MODULE=shorewall
+         VERSION=1.4.4
+        #VERSION=1.4.3a
+          SOURCE=$MODULE-$VERSION.tgz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+   SOURCE_URL[1]=http://www.shorewall.net/pub/$MODULE/$SOURCE
+        WEB_SITE=http://www.shorewall.net
+         ENTERED=20021106
+         UPDATED=20030524
+           SHORT="A Netfilter (iptables) based firewall."
+
+cat << EOF
+The Shoreline Firewall, more commonly known as "Shorewall", is a Netfilter
+(iptables) based firewall that can be used on a dedicated firewall system,
+a multi-function gateway/router/server or on a standalone GNU/Linux system.
+EOF

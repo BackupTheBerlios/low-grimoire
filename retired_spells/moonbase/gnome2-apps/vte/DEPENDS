@@ -1,0 +1,2 @@
+depends libgnomeui &&
+optional_depends "pygtk2" "" "" "enable gtk python support"

@@ -1,0 +1,9 @@
+depends  kdelibs3  &&
+
+optional_depends  "cdrdao"        ""  ""  "for burning cds"         &&
+optional_depends  "cdrtools"      ""  ""  "for iso creation"        &&
+optional_depends  "mpg123"        ""  ""  "for audio playback"      &&
+optional_depends  "bladeenc"      ""  ""  "for mp3 encoding"        &&
+optional_depends  "lame"          ""  ""  "for mp3 encoding"        &&
+optional_depends  "vorbis-tools"  ""  ""  "for ogg encoding"        &&
+optional_depends  "normalize"     ""  ""  "to normalize track" 

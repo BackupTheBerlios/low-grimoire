@@ -1,0 +1,22 @@
+          MODULE=pcmcia-cs
+         VERSION=3.2.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+	 SOURCE2=$MODULE-3.2.1-orinoco-patch.diff
+         SOURCE3=$MODULE-$VERSION-Configure.patch
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+  SOURCE2_URL[0]=http://airsnort.shmoo.com/$SOURCE2
+  SOURCE3_URL[0]=$PATCH_URL/$SOURCE3
+        WEB_SITE=http://pcmcia-cs.sourceforge.net
+         ENTERED=20011014
+         UPDATED=20030410
+           SHORT="pcmcia-cs is the pcmcia support package."
+cat << EOF
+Card Services for Linux is a complete PCMCIA or PC Card support
+package. It includes a set of loadable kernel modules that implement
+a version of the Card Services applications program interface, a set
+of client drivers for specific cards, and a card manager daemon that
+can respond to card insertion and removal events, loading and
+unloading drivers on demand. It supports hot swapping of most card
+types, so cards can be safely inserted and ejected at any time.
+EOF

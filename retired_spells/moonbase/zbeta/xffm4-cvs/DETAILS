@@ -1,0 +1,15 @@
+          MODULE=xffm4-cvs
+         VERSION=beta
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/xffm
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xffm
+      MAINTAINER=csm@moongroup.com
+        WEB_SITE=http://www.xfce.org
+	 ENTERED=20021227
+	 UPDATED=`date -u +%Y%m%d`
+	   SHORT="XFce 4 file manager"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This module provides
+xffm (xfce file manager).
+
+EOF

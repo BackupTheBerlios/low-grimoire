@@ -1,0 +1,13 @@
+--- gkrellm-volume-2.0/Makefile.orig	2002-08-28 00:27:59.000000000 -0400
++++ gkrellm-volume-2.0/Makefile	2002-08-28 00:28:33.000000000 -0400
+@@ -2,8 +2,8 @@
+ 
+ GTK_CONFIG = pkg-config gtk+-2.0
+ 
+-PLUGIN_DIR ?= /usr/local/lib/gkrellm2/plugins
+-GKRELLM_INCLUDE = -I/usr/local/include
++PLUGIN_DIR ?= /usr/lib/gkrellm2/plugins
++GKRELLM_INCLUDE = -I/usr/include
+ 
+ GTK_CFLAGS = `$(GTK_CONFIG) --cflags` 
+ GTK_LIB = `$(GTK_CONFIG) --libs`

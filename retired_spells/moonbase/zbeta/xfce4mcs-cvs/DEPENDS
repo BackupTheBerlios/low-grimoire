@@ -1,0 +1,2 @@
+depends libxfce4mcs-cvs &&
+depends libxfce4gui-cvs

@@ -1,0 +1,14 @@
+            MODULE=libmrproject
+	 VERSION=0.9.1
+	  SOURCE=$MODULE-$VERSION.tar.gz
+ SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+    SOURCE_URL[0]=ftp://ftp.codefactory.se/pub/software/mrproject/source/$SOURCE
+         WEB_SITE=http://mrproject.codefactory.se
+	  ENTERED=20020811
+	  UPDATED=20030224
+	    SHORT="A Gnome2 based project tool"
+	MAINTAINER=nhudson@speakeasy.net
+cat << EOF
+MrProject is a Gnome2 based project management system
+EOF 
+	   

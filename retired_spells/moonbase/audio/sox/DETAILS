@@ -1,0 +1,16 @@
+           MODULE=sox
+         VERSION=12.17.4
+          SOURCE=$MODULE-$VERSION.tar.gz
+	  SOURCE2=$MODULE-$VERSION-ln.patch
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+   SOURCE2_URL[0]=$PATCH_URL/$SOURCE2
+        WEB_SITE=http://sox.sourceforge.net
+         ENTERED=20010922
+         UPDATED=20030325
+           SHORT="SOX is the Swiss Army knife of sound processing tools."
+cat << EOF
+SOX is the Swiss Army knife of sound processing tools. It converts
+audio files among various standard audio file formats and can apply
+different effects and filters to the audio data.
+EOF

@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# named           This shell script takes care of starting and stopping
+#                 named (BIND DNS server).
+#
+# chkconfig: 345 45 55
+# processname: named
+# description: named (BIND) is a Domain Name Server (DNS) \
+# that is used to resolve host names to IP addresses.
+# probe: true
+# config: /var/named/named.conf
+
+ARGS="-u bind"
+
+. /lib/lsb/init-functions
+

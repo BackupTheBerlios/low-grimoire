@@ -1,0 +1,4 @@
+depends  mozilla &&
+depends  gnome-vfs &&
+depends  libglade &&
+depends  libxml

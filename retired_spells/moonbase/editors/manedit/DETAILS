@@ -1,0 +1,20 @@
+           MODULE=manedit
+         VERSION=0.5.8
+#         VERSION=0.5.6
+          SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=manedit-makefile.patch
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=ftp://wolfpack.twu.net/users/wolfpack/$SOURCE
+  SOURCE2_URL[0]=$PATCH_URL/$SOURCE2
+        WEB_SITE=http://wolfpack.twu.net/ManEdit/
+         ENTERED=20011128
+         UPDATED=20030201
+           SHORT="manedit is a gtk+ manual page editor"
+cat << EOF
+The ManEdit UNIX Manual Page Editor is an editor specifically
+tailored for UNIX manual pages. It has a preview viewer, uses the
+manual page XML format for easy editing, and comes with a tutorial
+and reference guide. It uses the GTK+ widget set and features syntax
+highlighting, a complete drag and drop system for easy viewing and
+editing, a crash recovery system, and sample manual page templates.
+EOF

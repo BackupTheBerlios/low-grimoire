@@ -1,0 +1,17 @@
+           MODULE=ruby-gconf
+         VERSION=0.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/ruby-gnome/$SOURCE
+        WEB_SITE=http://ruby-gnome.sourceforge.net
+         ENTERED=20020508
+         UPDATED=20020508
+      MAINTAINER=nhudson@speakeasy.net
+           SHORT="Ruby-GConf is bindings for Ruby to GConf"
+cat << EOF
+Ruby-GNOME is a set of Ruby language bindings for the GNOME development
+environment. At the moment, the most mature of these is the Ruby-GTK
+library, but bindings for libgnome, libgnomeui, gdk-pixbuf, gdk-imlib,
+libglade, libpanel-applet and GConf are in various stages of
+development.
+EOF

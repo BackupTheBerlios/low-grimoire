@@ -1,0 +1,13 @@
+           MODULE=net-rhythmbox
+         VERSION=0.4.6
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+SOURCE_URL[0]=http://web.verbum.org/net-rhythmbox/$SOURCE
+        WEB_SITE=http://web.verbum.org/net-rhythmbox
+         ENTERED=20030210
+         UPDATED=20030413
+   MAINTAINER=nhudson2367@earthlink.net
+           SHORT="Rhythmbox is clone of the iTunes plyer"
+cat << EOF
+Rhythmbox which takes its inspiration from Apple's iTunes application, an application that lets you do everything from importing your audio cd's into mp3 or Ogg Vorbis format, and play these music files and other music files you have. Play your music with an assortment of visualization plugins and burn new audio cd's from your music files. It is a one-stop shopping application for all your music needs.
+EOF

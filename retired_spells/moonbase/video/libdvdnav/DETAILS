@@ -1,0 +1,12 @@
+          MODULE=libdvdnav
+         VERSION=0.1.9
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/dvd/$SOURCE
+        WEB_SITE=http://dvd.sourceforge.net/
+         ENTERED=20020518
+         UPDATED=20030529
+           SHORT="This module is of xine-dvdnav"
+cat << EOF
+This module is of xine-dvdnav
+EOF

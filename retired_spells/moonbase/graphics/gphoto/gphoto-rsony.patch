@@ -1,0 +1,10 @@
+--- gphoto-0.4.3/sony/dscf55/rsony.c.orig	Tue Sep  5 15:30:00 2000
++++ gphoto-0.4.3/sony/dscf55/rsony.c	Tue Sep  5 15:30:27 2000
+@@ -811,6 +811,7 @@
+ 			image->image = (char*)malloc(sizeof(char)*size);
+ 			image->image_size = size;
+ 			image->image_info_size = 0;
++                        strcpy(image->image_type, "jpg");
+ 			fread(image->image, sizeof(char), size, fp);
+ 		}
+ 		else

@@ -1,0 +1,5 @@
+lsmod | grep -q NVdriver && rmmod NVdriver || {
+   echo "Your previous NVidia kernel module is busy,"
+   echo "do not forget to 'rmmod NVdriver' before"
+   echo "re-starting X windows"
+}

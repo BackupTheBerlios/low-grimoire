@@ -1,0 +1,15 @@
+message " Warning:"
+message " We have had various problems with the latest version of\n" \
+	"libxml2, mostly in the way xml2-config was reporting the\n" \
+	"wrong location for the include files.\n"
+message " A fix was made to correct xml2-config to report the\n"     \
+	"correct location, however some new versions of\n"           \
+	"applications seem to be trying to work around the bug\n"    \
+	"themselves.\n"
+message " This is yet again making xml2-config report the wrong\n"   \
+	"location of the include files.\n"
+message " My previous fix has been removed.  If you have any more\n" \
+	"problems with other modules not installing because of\n"    \
+	"libxml2, please visit the #lunar channel on\n"              \
+	"irc.openprojects.org or e-mail me at rodzilla@r0dzilla.net\n"
+message " Thanks,\n rodzilla\n"

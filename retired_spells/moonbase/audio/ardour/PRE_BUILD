@@ -1,0 +1,9 @@
+default_pre_build                 &&
+
+if [ ! -f /usr/share/ardour-pixmaps/arrow.xpm  ]; then
+  cd      /usr/share                
+  mkdir   /usr/share/ardour-pixmaps 
+fi
+cd      /usr/share/ardour-pixmaps &&
+unpack  $SOURCE2
+

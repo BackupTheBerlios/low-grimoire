@@ -1,0 +1,2 @@
+depends metamail  &&
+depends mailx

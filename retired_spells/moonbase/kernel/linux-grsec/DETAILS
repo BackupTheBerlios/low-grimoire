@@ -1,0 +1,27 @@
+           MODULE=linux-grsec
+          VERSION=2.4.20
+           SOURCE=linux-$VERSION.tar.bz2
+          SOURCE2=linux-grsec-2.4.20-lunar-patchset-rc3.1.tar.bz2
+ SOURCE_DIRECTORY=$BUILD_DIRECTORY/linux-$VERSION
+    SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v2.4/$SOURCE
+    SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v2.4/$SOURCE
+   SOURCE2_URL[0]=http://dk.lunar-linux.org/lunar/patches/$SOURCE2
+      SOURCE2_MD5="269663f78ad50d163c4fd61de86be7f9"
+          WEBSITE=http://www.kernel.org
+          ENTERED=20030227
+          UPDATED=200300517
+      KEEP_SOURCE="on"
+            SHORT="The Linux kernel, the core of the GNU/Linux OS, with the lunar patch set"
+cat << EOF
+This is the same as the linux module but with a fixed patche set with all
+the main patches and with these additional patches:
+ 
+ grsecurity
+ gcc 3.1 machine types to the kernel
+ cryptoapi (International kernel patch www.kerneli.org)
+ cpufreq
+ 
+
+Features are enabled or disabled by the standard kernel configuration tools,
+i.e. "make menuconfig" or "make config" or "make xconfig".
+EOF

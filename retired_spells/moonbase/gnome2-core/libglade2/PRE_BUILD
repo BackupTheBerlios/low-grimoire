@@ -1,0 +1,19 @@
+if module_installed Python; then
+   if ! grep -q "^Python\:expat\:on" $DEPENDS_STATUS; then
+
+      message libglade2 requires an expat-enabled Python
+
+      rm -f /var/lock/installing.$MODULE
+      
+      if ! module_installed expat &&
+	 ! module_held expat   
+      then lin expat || exit 1
+      fi
+      remove_depends Python
+      lin -c Python || exit 1
+      
+      echo $$ > /var/lock/installing.$MODULE 
+   fi
+fi
+
+default_pre_build

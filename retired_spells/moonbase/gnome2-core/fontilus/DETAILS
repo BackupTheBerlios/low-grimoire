@@ -1,0 +1,14 @@
+           MODULE=fontilus
+         VERSION=0.4
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MODULE/$VERSION/$SOURCE
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20021217
+         UPDATED=20030215
+           SHORT="Fontilus is a set of tools for managing fonts on
+fontconfig based GNOME desktops"
+cat << EOF
+Fontilus is a set of tools for managing fonts on fontconfig based GNOME
+desktops, such as GNOME 2.2 and Red Hat 8.0.
+EOF

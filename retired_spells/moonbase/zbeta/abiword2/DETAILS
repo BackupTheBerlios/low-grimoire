@@ -1,0 +1,16 @@
+          MODULE=abiword2
+             MOD=abiword
+         VERSION=1.99.1
+        #VERSION=1.9.1
+          SOURCE=$MOD-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MOD-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MOD/$SOURCE
+        WEB_SITE=http://www.abisource.org
+       MAINTANER=nhudson2367@earthlink.net
+         ENTERED=20011224
+         UPDATED=20030623
+           SHORT="abiword is a word processor"
+cat << EOF
+Abiword is a free word processing program similar to Microsoft Word.
+It is suitable for typing papers, letter, reports, memos and so forth.
+EOF

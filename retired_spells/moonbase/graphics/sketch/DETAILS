@@ -1,0 +1,15 @@
+           MODULE=sketch
+         VERSION=0.6.13
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+        WEB_SITE=http://sketch.sourceforge.net/index.html
+         ENTERED=20020420
+         UPDATED=20020420
+      MAINTAINER="jacksonje@health.missouri.edu"
+           SHORT="Sketch is a vector drawing application."
+cat << EOF
+Sketch is a Free Software interactive vector drawing appliction. Known to run 
+on GNU/Linux and other UNIX-compatible systems, it is a flexible and powerful 
+tool for illustrations, diagrams and other purposes.
+EOF

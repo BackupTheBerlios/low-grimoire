@@ -1,0 +1,9 @@
+depends xfce4-cvs        &&
+depends xfwm4-cvs        &&
+depends xfdesktop-cvs    &&
+depends xfce4utils-cvs   &&
+optional_depends "xfce4iconbox-cvs"  "" "" "to show minimized applications" &&
+optional_depends "xffm4-cvs"         "" "" "for managing your files"        &&
+optional_depends "xfprint-cvs"       "" "" "for handling print jobs"        &&
+optional_depends "xfgtk2-engine-cvs" "" "" "as a nice gtk2 engine"          &&
+optional_depends "xfce4-extras-cvs"  "" "" "for more eyecandy"

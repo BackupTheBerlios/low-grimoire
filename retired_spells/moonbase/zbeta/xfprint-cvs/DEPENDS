@@ -1,0 +1,3 @@
+depends xfce4mcs-cvs  &&
+depends a2ps
+

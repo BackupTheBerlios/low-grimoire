@@ -1,0 +1,11 @@
+if  !  grep  -q  CONFIGURED  $MODULE_CONFIG;  then
+
+ if    query  "Install server only? " n; then
+    COREOPTS="$COREOPTS --disable-gtk --without-x"
+  else
+    COREOPTS="$COREOPTS --enable-gtk --with-x"
+  fi
+
+  echo  'CONFIGURED="y"'  >>  $MODULE_CONFIG
+  echo  'COREOPTS='\"$COREOPTS\"    >>  $MODULE_CONFIG
+fi

@@ -1,0 +1,4 @@
+depends  libungif  &&
+depends  libmng    &&
+depends  libpng    &&
+depends  uudeview

@@ -1,0 +1,16 @@
+          MODULE=xfce4-extras-cvs
+         VERSION=beta
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce4-extras
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xfce4-extras
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+         ENTERED=20030425
+         UPDATED=`date -u +%Y%m%d`
+           SHORT="Extra utilities for XFce 4"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This module provides
+additional programs and utilities that are not part of the main ditribution. 
+They may be less stable or not entirely feature-complete. 
+
+EOF

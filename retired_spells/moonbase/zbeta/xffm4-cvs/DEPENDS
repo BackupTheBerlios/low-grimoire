@@ -1,0 +1,4 @@
+depends dbh            &&
+depends xfce4mcs-cvs   &&
+depends xfprint-cvs
+

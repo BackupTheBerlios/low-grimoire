@@ -1,0 +1,22 @@
+          MODULE=linux-vanilla
+             PKG=linux
+         VERSION=2.4.21
+          SOURCE=$PKG-$VERSION.tar.bz2
+   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v2.4/$SOURCE
+   SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v2.4/$SOURCE
+   	SOURCE_MD5=f51e12efa18bb828cf57d9d4a81b2fb1
+        WEB_SITE=http://www.kernel.org
+         ENTERED=20020720
+         UPDATED=20030613
+           SHORT="The Linux kernel is the core of a Linux GNU Operating System."
+cat << EOF
+This is a plane jane vanilla kernel with no additional patches included.
+
+Linux is a clone of the Unix kernel, written from scratch by Linus
+Torvalds with assistance from a loosely-knit team of hackers across the
+Net. It aims towards POSIX and Single UNIX Specification compliance. It
+has all the features you would expect in a modern fully-fledged Unix
+kernel, including true multitasking, virtual memory, shared libraries,
+demand loading, shared copy-on-write executables, proper memory
+management, and TCP/IP networking.
+EOF

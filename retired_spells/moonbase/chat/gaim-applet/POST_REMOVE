@@ -1,0 +1,3 @@
+TEMP=`grep  -v  "/usr/lib/gaim"  <  /etc/ld.so.conf`
+echo  -e  "$TEMP"                >  /etc/ld.so.conf
+ldconfig

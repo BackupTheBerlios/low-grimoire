@@ -1,0 +1,2 @@
+# Rebuilding Docbook and Scrollkeeper Entries
+/usr/sbin/rebuild-docbook-catalog

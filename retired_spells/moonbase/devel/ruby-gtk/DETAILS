@@ -1,0 +1,18 @@
+          MODULE=ruby-gtk
+         VERSION=0.30
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/ruby-gnome/$SOURCE
+        WEB_SITE=http://ruby-gnome.sourceforge.net/
+         ENTERED=20020508
+         UPDATED=20020902
+      MAINTAINER=kazami@ntlworld.com
+           SHORT="GUI programming using ruby syntax"
+cat << EOF
+From the website:    
+* GTK+ is a rich, powerful and modern GUI toolkit.
+* GTK+ objects are represented naturally in Ruby as simple Ruby objects.
+You can do natural GUI programming and take advantage of the beauty of Ruby's syntax.
+* The signal handling mechanism maps into Ruby blocks very well.
+This makes using signal handlers very easy and natural in Ruby.
+EOF

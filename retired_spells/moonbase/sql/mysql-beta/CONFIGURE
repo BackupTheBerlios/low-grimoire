@@ -1,0 +1,27 @@
+if  !  grep  -q  CONFIGURED  $MODULE_CONFIG;  then
+
+ if    query  "Install client only? " n; then
+    OPTS="$OPTS --without-server"
+  else
+    if  query  "Enable InnoDB Support? " y; then
+      OPTS="$OPTS --with-innodb"
+    else
+      OPTS="$OPTS --without-innodb"
+    fi
+
+    if  query  "Enable BDB Support? " n; then
+      OPTS="$OPTS --with-berkeley-db"
+    fi
+
+    if  query  "Enable RAID Support? " n; then
+      OPTS="$OPTS --with-raid"
+    fi
+
+    if  query  "Disable ISAM Support? " n; then
+      OPTS="$OPTS --without-isam"
+    fi
+  fi
+
+  echo  'CONFIGURED="y"'  >>  $MODULE_CONFIG
+  echo  'OPTS='\"$OPTS\"    >>  $MODULE_CONFIG
+fi

@@ -1,0 +1,2 @@
+depends xfce4mcs-cvs &&
+depends libxml2

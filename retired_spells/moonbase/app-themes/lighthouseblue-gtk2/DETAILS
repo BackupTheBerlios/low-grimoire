@@ -1,0 +1,12 @@
+          MODULE=lighthouseblue-gtk2
+         VERSION=0.5.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+   SOURCE_URL[0]=$SFORGE_URL/lighthouseblue/$SOURCE
+        WEB_SITE=http://lighthouseblue.sourceforge.net/gtk/index.html
+         ENTERED=20021122
+         UPDATED=20021122
+           SHORT="A gtk+2 theme based on RedHat's blue curve theme"
+cat << EOF
+The theme engine is based on the Redhat 8.0 Bluecurve theme. It features a nondistracting clean look with neutral yet warmish colours taking into account UI usability issues.
+EOF

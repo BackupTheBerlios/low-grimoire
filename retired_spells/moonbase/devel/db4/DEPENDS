@@ -1,0 +1,8 @@
+optional_depends  "tcl-tk"                             \
+                  "--with-tcl=/usr/lib"                \
+                  ""                                   \
+                  "to build the tcl api"              &&
+optional_depends  "j2sdk"                              \
+                  "--enable-java"                      \
+                  ""                                   \
+                  "to build the java api"

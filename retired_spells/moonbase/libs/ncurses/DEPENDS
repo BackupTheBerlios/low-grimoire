@@ -1,0 +1,5 @@
+depends gawk &&
+depends sed  &&
+
+grep -q "with-gpm" $MODULE_CONFIG && depends gpm
+true

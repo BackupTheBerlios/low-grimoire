@@ -1,0 +1,3 @@
+depends  dctc       &&
+depends  gnome-libs &&
+depends  gtk+-2

@@ -1,0 +1,4 @@
+depends gnome-python2 &&
+depends PyXML         &&
+depends egenix-mx     && 
+depends bsddb3        

@@ -1,0 +1,2 @@
+depends  libdvdnav   &&
+depends  xine-ui

@@ -1,0 +1,2 @@
+depends  qt3  &&
+optional_depends  "espgs"  ""  ""   "for use of eps images" 

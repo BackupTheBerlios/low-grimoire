@@ -1,0 +1,19 @@
+          MODULE=kexchange3
+         VERSION=0.2.2
+          SOURCE=kexchange-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kexchange-$VERSION
+   SOURCE_URL[0]=http://ftp.kde.com/Financial_Investment/Currency_Tools/KExchange/$SOURCE
+        WEB_SITE=http://www.favorin.com/kexchange
+         ENTERED=20020412
+         UPDATED=20021023
+           SHORT="Currency Converter for KDE"
+cat << EOF
+KExchange is a currency converter for over 70 currencies using up to date 
+exchange rates from the Internet.
+KExchange retrieves up to date currency exchange rates from PACIFIC Exchange 
+Rate Service. You may convert between 70+ currencies. KExchange may also be 
+used as an euro converter.
+KExchange can refresh exchange rates automaticly on startup or it may use 
+locally stored data. This way KExchange may be used online or offline.
+EOF
+

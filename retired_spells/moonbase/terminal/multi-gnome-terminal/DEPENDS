@@ -1,0 +1,2 @@
+depends  libglade   &&
+optional_depends "doxygen" "" "" "to help with documentation (optional requires qt3)"

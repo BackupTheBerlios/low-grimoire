@@ -1,0 +1,14 @@
+          MODULE=pixieplus
+         VERSION=0.5.4
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://www.mosfet.org/pixie/$SOURCE
+        WEB_SITE=http://www.mosfet.org/pixie/
+         ENTERED=20020601
+         UPDATED=20030320
+           SHORT="Pixie is an image viewer for kde3.1"
+cat << EOF
+Pixie is designed to allow you to efficently browse, manage, and view large 
+numbers of images as well as do basic editing such as adjust contrast, 
+brightness, scale, and apply effects. 
+EOF

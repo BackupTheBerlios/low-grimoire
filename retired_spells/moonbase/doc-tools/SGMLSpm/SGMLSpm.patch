@@ -1,0 +1,24 @@
+--- SGMLSpm/Makefile.orig	2002-06-29 17:21:07.000000000 -0400
++++ SGMLSpm/Makefile	2002-06-29 17:22:55.000000000 -0400
+@@ -16,10 +16,10 @@
+ PERL = /usr/bin/perl
+ 
+ # Where do you want the sgmlspl executable script to be installed?
+-BINDIR = /usr/local/bin
++BINDIR = /usr/bin
+ 
+ # Where do you put local perl5 libaries?
+-PERL5DIR = /usr/local/lib/perl5
++PERL5DIR = /usr/lib/perl5/5.8.0
+ MODULEDIR = ${PERL5DIR}/SGMLS
+
+ # Where do you want to put sgmlspl specifications?
+@@ -29,7 +29,7 @@
+ # do you intend to put it?  'make html' will create two
+ # subdirectories, ${HTMLDIR}/SGMLSpm and ${HTMLDIR}/sgmlspl, and place
+ # its files there.
+-HTMLDIR = /usr/local/lib/www/docs
++HTMLDIR = /usr/share/doc/SGMLSpm
+ 
+ 
+ #note

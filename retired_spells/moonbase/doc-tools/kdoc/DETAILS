@@ -1,0 +1,19 @@
+           MODULE=kdoc
+         VERSION=2.2.2
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$KDE_URL/Attic/$VERSION/src/$SOURCE
+   SOURCE_URL[1]=ftp://ftp.kde.org/pub/kde/Attic/$VERSION/src/$SOURCE
+        WEB_SITE=http://www.kde.org
+         ENTERED=20010922
+         UPDATED=20020512
+           SHORT="kdoc creates cross-referenced docs for c++ and COBRA IDL libraries."
+cat << EOF
+KDOC creates cross-referenced documentation for C++ and CORBA IDL
+libraries directly from the source. Documentation can be embedded in
+special doc comments in the source.
+Also included:
+qt2kdoc:        Generates cross-reference index to link kdoc output with 
+                Qt documentation.
+makekdedoc:     Generates documentation for the KDE libraries.
+EOF

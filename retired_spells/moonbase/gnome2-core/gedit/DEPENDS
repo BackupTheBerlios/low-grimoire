@@ -1,0 +1,4 @@
+depends eel		&&
+depends libgnomeprintui &&
+depends libgtkhtml      &&
+depends scrollkeeper 

@@ -1,0 +1,13 @@
+           MODULE=gnome-vfs-extras
+         VERSION=0.99.10
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MODULE/0.99/$SOURCE
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20030114
+         UPDATED=20030212
+           SHORT="gnome-vfs-extras is a file system abstraction library 
+for GNOME"
+cat << EOF
+Gnome-VFS-Extras is a file system abstraction library for GNOME
+EOF

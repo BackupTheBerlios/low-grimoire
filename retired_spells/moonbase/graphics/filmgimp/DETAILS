@@ -1,0 +1,13 @@
+           MODULE=filmgimp
+         VERSION=0.5
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+        WEB_SITE=http://filmgimp.sourceforge.net
+	MAINTAINER=nhudson@speakeasy.net
+         ENTERED=20021006
+         UPDATED=20021006
+           SHORT="Film Editor for gimp"
+cat << EOF
+Filmgimp is a motion picture editing tool primarily used for painting and retouching of movies. Its application to feature movie productions includes the movies Scooby-Doo, Harry Potter, and Stuart Little. Film Gimp is the most successful open source tool in feature motion picture work today.
+EOF

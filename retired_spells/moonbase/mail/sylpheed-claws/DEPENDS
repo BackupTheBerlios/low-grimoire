@@ -1,0 +1,29 @@
+depends gtk+  &&
+
+optional_depends  "compface"    ""  ""  "for X-Face support"               &&
+optional_depends  "gdk-pixbuf"  ""  ""  "for built-in image view support"  &&
+
+optional_depends  "openssl"              \
+                  "--enable-ssl"         \
+                  ""                     \
+                  "for pop3s and imaps"  &&
+
+optional_depends  "gpgme-0.3.x"  \
+                  "--enable-gpgme --with-gpgme-prefix=/opt/lunar/gpgme-0.3.x" \
+                  ""                     \
+                  "for encrypted email"  &&
+
+optional_depends  "jpilot"               \
+                  "--enable-jpilot"      \
+                  ""                     \
+                  "for palm pilot connects"  &&
+
+optional_depends  "openldap"             \
+                  "--enable-ldap"        \
+                  ""                     \
+                  "to view ldap directories"  &&
+
+optional_depends  "aspell"		\
+		  "--enable-pspell --with-pspell-prefix=/usr"     \
+		  ""                    \
+		  "for spell checking"

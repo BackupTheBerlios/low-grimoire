@@ -1,0 +1,13 @@
+          MODULE=scalable-gorilla
+         VERSION=1.0
+          SOURCE=ICON-ScalableGorilla.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/ScalableGorilla
+   SOURCE_URL[0]=$GNOME_URL/teams/art.gnome.org/themes/icon/$SOURCE
+        WEB_SITE=http://art.gnome.org
+         ENTERED=20030211
+         UPDATED=20030211
+           SHORT="Scalable Gorilla Icon Theme for Gnome 2.2"
+      MAINTAINER=nhudson2367@earthlink.net
+cat << EOF
+Scalable Gorilla Icon Theme for Gnome 2.2
+EOF

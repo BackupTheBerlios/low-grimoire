@@ -1,0 +1,12 @@
+--- gphoto-0.4.3/src/callbacks.c.dir	Thu Jan  4 11:28:40 2001
++++ gphoto-0.4.3/src/callbacks.c	Thu Jan  4 12:02:27 2001
+@@ -433,6 +433,9 @@
+ 		}
+ 	 } else
+ 		node->imlibimage = gdk_imlib_load_image(fileName);
++	if (!node->imlibimage)
++		/* Ignore things like directories, unreadable files */
++		return;
+ 	w = node->imlibimage->rgb_width;
+         h = node->imlibimage->rgb_height;
+         gdk_imlib_render(node->imlibimage, w, h);

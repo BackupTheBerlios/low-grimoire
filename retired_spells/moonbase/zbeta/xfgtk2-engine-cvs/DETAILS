@@ -1,0 +1,14 @@
+          MODULE=xfgtk2-engine-cvs
+         VERSION=beta
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/gtk-xfce-engine-2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtk-xfce-engine-2
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+	 ENTERED=20021223
+	 UPDATED=`date -u +%Y%m%d`
+	   SHORT="Theme engine for gtk2"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This is a gtk2 theme 
+engine that looks nice with XFce 4.
+EOF

@@ -1,0 +1,29 @@
+          MODULE=linux-stable
+             PKG=linux
+         VERSION=2.4.20
+          SOURCE=$PKG-$VERSION.tar.bz2
+         SOURCE2=kernel_24_ptrace.patch
+	 SOURCE3=linux-2.4.20-nethashfix.patch
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/linux-$VERSION
+   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v2.4/$SOURCE
+   SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v2.4/$SOURCE
+  SOURCE2_URL[0]=$PATCH_URL/$SOURCE2
+  SOURCE3_URL[0]=$PATCH_URL/$SOURCE3
+     SOURCE2_MD5=30cf627b48fa04245cbb50d8ffec7f4c
+     SOURCE3_MD5=2ae41d0b59f834249242de8e0949d61e
+        WEB_SITE=http://www.kernel.org
+        KEEP_SOURCE=on
+	 ENTERED=20020720
+         UPDATED=20030517
+           SHORT="The Linux kernel is the core of a Linux GNU Operating System."
+cat << EOF
+This is the Linus-tree Linux kernel with only critical patches included.
+
+Linux is a clone of the Unix kernel, written from scratch by Linus
+Torvalds with assistance from a loosely-knit team of hackers across the
+Net. It aims towards POSIX and Single UNIX Specification compliance. It
+has all the features you would expect in a modern fully-fledged Unix
+kernel, including true multitasking, virtual memory, shared libraries,
+demand loading, shared copy-on-write executables, proper memory
+management, and TCP/IP networking.
+EOF

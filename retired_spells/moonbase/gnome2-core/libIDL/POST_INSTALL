@@ -1,0 +1,3 @@
+if ! [[ `grep gnome/2 /etc/ld.so.conf` ]]; then
+   echo /opt/lunar/gnome/2/lib >> /etc/ld.so.conf
+fi

@@ -1,0 +1,5 @@
+depends  glade       &&
+depends  Guppi       && 
+depends  g-wrap      &&
+depends  gtkhtml     &&
+depends  libghttp

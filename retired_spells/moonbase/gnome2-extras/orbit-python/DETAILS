@@ -1,0 +1,14 @@
+          MODULE=orbit-python
+          MOD=pyorbit
+         VERSION=1.99.4
+          SOURCE=$MOD-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MOD-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MOD/1.99/$SOURCE
+   SOURCE_URL[1]=ftp://ftp.gnome.org/pub/GNOME/sources/$MOD/1.99/$SOURCE
+        WEB_SITE=www.gnome.org
+         ENTERED=20021114
+         UPDATED=20030325
+           SHORT="Orbit2 binding for python"
+cat << EOF
+Orbit2 bindings for python
+EOF

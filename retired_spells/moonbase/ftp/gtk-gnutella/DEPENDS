@@ -1,0 +1,2 @@
+depends gtk+ &&
+optional_depends "gtk+-2" "--enable-gtk2" "" "to build a slower, gtk+-2 client"

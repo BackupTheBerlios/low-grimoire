@@ -1,0 +1,30 @@
+--- gphoto-0.4.3/photopc/olympus.c.retry	Mon Jun  5 21:51:52 2000
++++ gphoto-0.4.3/photopc/olympus.c	Mon Jun  5 23:19:51 2000
+@@ -79,14 +79,20 @@ struct Image *oly_get_picture (int picNu
+ 	int pid;
+ 	struct Image *im = NULL;
+ 
+-	if (picNum != 0) {
+-		if (oly_open_camera() == 0)
+-			return(im);
+-	}
++	do {
++		if (picNum != 0) {
++			if (oly_open_camera() == 0)
++				return(im);
++		}
+ 
+-        eph_setint(iob, 4, (long)picNum);
+-        eph_getint(iob, 0x0d, &thumbLength);
+-        eph_getint(iob, 0x0c, &picLength);
++        	eph_setint(iob, 4, (long)picNum);
++        	eph_getint(iob, 0x0d, &thumbLength);
++        	eph_getint(iob, 0x0c, &picLength);
++		if (thumbLength == 0 || picLength == 0)
++			oly_close_camera();
++		else
++			break;
++	} while (1);
+ 
+ 	if (thumbnail)
+ 		Size = thumbLength;

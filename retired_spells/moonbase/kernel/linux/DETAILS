@@ -1,0 +1,53 @@
+         MODULE=linux
+        VERSION=2.4.20
+   PATCHVERSION=r1.2
+         SOURCE=linux-$VERSION.tar.bz2
+        SOURCE2=$MODULE-$VERSION-lunar-patch-set-$PATCHVERSION.tar.bz2
+  SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/v2.4/$SOURCE
+  SOURCE_URL[1]=http://www.kernel.org/pub/linux/kernel/v2.4/$SOURCE
+ SOURCE2_URL[0]=$PATCH_URL/$SOURCE2
+        WEBSITE=http://www.kernel.org
+        ENTERED=20020818
+        UPDATED=20030517
+    KEEP_SOURCE="on"
+          SHORT="The Linux kernel, the core of the GNU/Linux OS, with the lunar patch set"
+cat << EOF
+The lunar patch set enables the sysadmin to add some desirable features like:
+
+XFS support (enabled by default)
+fixes APM SMP crashes
+ipconntack.h
+P3m-cache
+pcmcia-smc91c92_cs
+adds cpuid entries amd msr entries
+devfs-zip
+rivafb
+rpc-accounting-nfs
+smp-race-nfs
+radeon FB fixes
+scsi-in2000
+scsi-t128
+ide-driver-null
+getcwd-err
+mmap
+ext3 fixes
+paraport-serial-pci
+titan-serial
+VIA chipset vt8235 fixes
+xfs-sysctl
+firewire patch
+pdc202xx
+3c574_cs
+ptrace patch
+ipv4 routing hash patch
+
+The aggressive patch set adds:
+
+adds gcc 3.1 machine types to the kernel
+swab64
+preemptible kernel support
+low-latency
+
+Features are enabled or disabled by the standard kernel configuration tools,
+i.e. "make menuconfig" or "make config" or "make xconfig".
+EOF

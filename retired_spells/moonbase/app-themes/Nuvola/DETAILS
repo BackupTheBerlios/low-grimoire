@@ -1,0 +1,13 @@
+          MODULE=Nuvola
+         VERSION=0.0.5
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/librsvg/$SOURCE
+        WEB_SITE=http://librsvg.sourceforge.net
+         ENTERED=20030526
+         UPDATED=20030526
+           SHORT="Nuvola svg theme for Gnome 2"
+      MAINTAINER=nhudson2367@earthlink.net
+cat << EOF
+Nuvola SVG Themes for Gnome 2
+EOF

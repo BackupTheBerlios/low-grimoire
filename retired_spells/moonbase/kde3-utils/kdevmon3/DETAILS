@@ -1,0 +1,14 @@
+          MODULE=kdevmon3
+         VERSION=0.4.6
+          SOURCE=kdevmon-$VERSION-4.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kdevmon-$VERSION
+   SOURCE_URL[0]=http://www.informatik.uni-oldenburg.de/~bigboss/kdevmon/$SOURCE
+        WEB_SITE=http://www.informatik.uni-oldenburg.de/~bigboss/kdevmon/index.html
+         ENTERED=20020609
+         UPDATED=20020902
+           SHORT="Kdevmon is a utility for KDE that monitors the throughput of a network device."
+      MAINTAINER="jason@xorit.net"
+
+cat << EOF
+Kdevmon is a utility for KDE that monitors the throughput of a network device. It docks in Kicker (the panel of KDE 3) and shows the current network traffic as a diagram. There also is a resizable main window that provides a larger traffic diagram and displays the current net speed in bits per second. Middle-clicking on the dock window or on the main window offers you an overview of the amount of incoming/outgoing bits and the current and the maximum bit rate.
+EOF

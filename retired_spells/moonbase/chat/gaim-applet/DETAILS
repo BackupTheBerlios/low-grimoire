@@ -1,0 +1,15 @@
+           MODULE=gaim-applet
+         VERSION=0.59.6
+       # VERSION=0.59.4
+          SOURCE=gaim-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gaim-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/gaim/$SOURCE
+        WEB_SITE=http://gaim.sourceforge.net
+         ENTERED=20020313
+         UPDATED=20021107
+           SHORT="gaim-applet is a Gnome panel applet version of gaim"
+cat << EOF
+gaim-applet, like gaim, is an instant messanger client used primarly for the AIM protocol
+but has plugin support for icq, irc, yahoo, and jabber all at once
+in one interface.  gaim-applet has the added ability to run in a gnome panel as a gnome applet.
+EOF

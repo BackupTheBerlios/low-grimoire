@@ -1,0 +1,4 @@
+optional_depends "xmms" \
+ "" \
+ "" \
+ "install xmms to build xmms plugin?"

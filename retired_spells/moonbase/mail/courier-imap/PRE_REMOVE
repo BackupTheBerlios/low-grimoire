@@ -1,0 +1,6 @@
+if  [  -x  /etc/init.d/imapd  ]; then
+           /etc/init.d/imapd  stop
+fi
+
+chkconfig --del imapd
+

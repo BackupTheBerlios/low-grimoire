@@ -1,0 +1,8 @@
+depends gtk+-2    &&
+depends jpeg      &&
+depends tiff      &&
+depends libungif  &&
+depends libpng    &&
+depends pcre      &&
+
+optional_depends "imlib"  ""  ""  "for image dialog support"

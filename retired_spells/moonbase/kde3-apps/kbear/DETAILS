@@ -1,0 +1,12 @@
+          MODULE=kbear
+         VERSION=2.1
+          SOURCE=$MODULE-$VERSION-1.src.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/sourceforge/$MODULE/$SOURCE
+        WEB_SITE=http://kbear.sourceforge.net
+         ENTERED=20020602
+         UPDATED=20030323
+           SHORT="A Graphical FTP Client for KDE"
+cat << EOF
+A Graphical FTP Client for KDE
+EOF

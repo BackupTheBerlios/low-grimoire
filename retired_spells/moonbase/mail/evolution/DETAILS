@@ -1,0 +1,25 @@
+          MODULE=evolution
+           MAJOR=1.4
+         VERSION=1.4.0
+       DBVERSION=3.1.17
+          SOURCE=$MODULE-$VERSION.tar.bz2
+         SOURCE2=db-$DBVERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MODULE/$MAJOR/$SOURCE
+  SOURCE2_URL[0]=http://www.sleepycat.com/update/snapshot/$SOURCE2
+        WEB_SITE=http://www.ximian.com/products/ximian_evolution
+         ENTERED=20011109
+         UPDATED=20030609
+           SHORT="Ximian Evolution is an information management solution."
+cat << EOF
+Ximian Evolution^(TM) is the premiere personal and workgroup
+information management solution for Linux and UNIX-based systems.  The
+software seamlessly integrates email, calendaring, meeting scheduling,
+contact management and online task lists in one powerful, fast, and easy
+to use application.  Ximian Evolution also delivers a comprehensive set
+of features that help you keep your work organized and your projects on
+track.  Automatic email indexing keeps your information at your
+fingertips. The unique Ximian vFolders^(TM) are virtual folders you use
+to create and save powerful contextual views of your email messages.
+EOF
+

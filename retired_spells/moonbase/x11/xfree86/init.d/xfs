@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#
+# chkconfig: 5 60 40
+# description: The X font server
+# processname: /usr/X11/bin/xfs
+# config: /etc/X11/fs/config
+#
+
+ARGS="-daemon -user nobody -config /etc/X11/fs/config"
+
+[ -d /tmp/.font-unix ] && rm -rf /tmp/.font-unix
+
+. /lib/lsb/init-functions
+

@@ -1,0 +1,2 @@
+conflicts gkrellm2  &&
+conflicts gkrellmd2

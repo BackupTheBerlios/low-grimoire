@@ -1,0 +1,14 @@
+
+if [ -e /etc/init.d/modutils.sh ]; then
+  rm -f /etc/rcS.d/S20modutils.sh
+fi
+
+mkdir -p /etc/modules.d
+touch /etc/modules
+touch /etc/modules.conf
+
+message  "    Customize /etc/modules.conf
+    Execute depmod.
+    List all modules that should load
+    during boot in /etc/modules"
+

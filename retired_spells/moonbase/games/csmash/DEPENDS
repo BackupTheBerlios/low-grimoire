@@ -1,0 +1,4 @@
+depends  zlib       &&
+depends  glut       &&
+depends  SDL_mixer  &&
+depends  libvorbis

@@ -1,0 +1,12 @@
+if  !  grep  -q  CONFIGURED  $MODULE_CONFIG;  then
+
+  if    query  "Build tk support? (Only say n if you do not have a X server)" y
+      then BUILDTK="y"
+      else BUILDTK="n"
+  fi
+
+   echo  'CONFIGURED="y"'  >>  $MODULE_CONFIG
+   echo  'BUILDTK='\"$BUILDTK\"    >>  $MODULE_CONFIG
+fi
+
+

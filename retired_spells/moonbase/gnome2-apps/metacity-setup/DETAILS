@@ -1,0 +1,14 @@
+          MODULE=metacity-setup
+         VERSION=0.7.1
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/metacity-setup/metacity-setup-0.7.1.tar.gz
+        WEB_SITE=http://sourceforge.net/projects/metacity-setup/
+         ENTERED=20020917
+         UPDATED=20020917
+           SHORT="A setup application for Metacity"
+cat << EOF
+  metacity-setup is simply a much easier way to configure Metacity then having
+  to use gconftool or gconf-editor. It allows you to change themes, focus
+  settings, the number of workspaces, etc..
+EOF

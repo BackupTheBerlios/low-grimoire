@@ -1,0 +1,17 @@
+           MODULE=ruby-gnome
+         VERSION=0.28
+          SOURCE=$MODULE-all-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-all-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+        WEB_SITE=http://ruby-gnome.sourceforge.net
+         ENTERED=20020508
+         UPDATED=20020601
+      MAINTAINER=nhudson@speakeasy.net
+           SHORT="Ruby-Gnome is bindings for Ruby to Gnome"
+cat << EOF
+Ruby-GNOME is a set of Ruby language bindings for the GNOME development
+environment. At the moment, the most mature of these is the Ruby-GTK
+library, but bindings for libgnome, libgnomeui, gdk-pixbuf, gdk-imlib,
+libglade, libpanel-applet and GConf are in various stages of
+development.
+EOF

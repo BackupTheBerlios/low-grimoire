@@ -1,0 +1,6 @@
+depends  gtkmm      &&
+depends  libxslt    &&
+depends  openssl    &&
+depends  popt       &&
+depends  imlib      &&
+depends  libfwbuilder

@@ -1,0 +1,15 @@
+           MODULE=magicdev
+         VERSION=0.3.6.123456789
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+SOURCE_URL[0]=http://hadess.net/files/$SOURCE
+        WEB_SITE=http://www.hadess.net/files
+         ENTERED=20021223
+         UPDATED=20021223
+           SHORT="Magicdev is an automount/autoplay package for CD's 
+and floppy's under linux"
+cat << EOF
+Magicdev is an automount/autoplay package for CD's and floppy's under 
+linux. Currently it is limited to detecting floppys, audio CD's and 
+CD-ROMs (not VCD's etc).
+EOF

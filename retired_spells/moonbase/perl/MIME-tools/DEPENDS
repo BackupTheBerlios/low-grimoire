@@ -1,0 +1,3 @@
+depends  perl &&
+depends  MailTools &&
+depends  IO-stringy

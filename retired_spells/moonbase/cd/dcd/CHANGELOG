@@ -1,0 +1,23 @@
+Chuck Busby:15feb2002
+
+* Changed UPDATED from hard date to $DATE
+
+* Checked BUILD and DETAILS for <tab> : found none
+
+* Cast dcd and tested.  Works ok
+
+* Checked dependencies: none
+
+* Emailed current maintainer alerting of new update.  
+  Asked if would like to pass the torch.
+
+* Went to Home Depot for washers.
+
+* Upon returning I got response from Kyle that he will not
+  relenquish maintainership.  He also intends to reject this 
+  spell.  I am moving it to init-failed where it can rot...
+
+  Additionally I will reject the changes.
+  /devices/cdroms/cdrom0 is not my music playing CD.
+  It is my DVD/CDRW CD.  Naturally I can not over-write
+  it with a symbolic link in the devfs directory.

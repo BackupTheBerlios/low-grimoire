@@ -1,0 +1,2 @@
+conflicts wu-ftpd &&
+conflicts vsftpd

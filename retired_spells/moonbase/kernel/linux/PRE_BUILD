@@ -1,0 +1,37 @@
+cd       /usr/src
+rm  -rf  linux-$VERSION
+rm  -f   linux
+
+unpack  $SOURCE
+
+ln  -s     linux-$VERSION  linux
+
+if  [  -f   $CONFIG_CACHE/.config  ];  then
+  cp        $CONFIG_CACHE/.config  /usr/src/linux
+fi
+
+cd /usr/src/linux
+mkdir patches
+bzcat $SOURCE_CACHE/$SOURCE2 | tar -xf - -C patches
+
+if [ "`arch`" == "alpha" ]; then
+    patch -p1 < patches/alpha/00_alpha-cia.patch
+fi
+
+for pat in patches/main/*
+do
+    patch -p1 < $pat
+done
+
+if [ "$CONFIG_AGGRESSIVE" == "y" ]; then
+   for pat in patches/aggressive/*
+   do
+       patch -p1 < $pat
+   done
+fi
+
+rm -rf patches
+chown -R root:root /usr/src/linux-$VERSION
+
+true
+

@@ -1,0 +1,13 @@
+          MODULE=arson3
+         VERSION=0.9.7
+     KDE_VERSION=3
+          SOURCE=arson-$VERSION-kde$KDE_VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/arson-$VERSION-kde$KDE_VERSION
+   SOURCE_URL[0]=$SFORGE_URL/arson/$SOURCE
+        WEB_SITE=http://arson.sourceforge.net
+         ENTERED=20020628
+         UPDATED=20030121
+           SHORT="arson is a KDE frontend to various CD burning, and ripping tools."
+cat << EOF
+arson is a KDE frontend to various CD burning, and ripping tools. 
+EOF

@@ -1,0 +1,15 @@
+          MODULE=cmatrix
+         VERSION=1.2a
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://www.asty.org/cmatrix/dist/$SOURCE
+        WEB_SITE=http://www.asty.org/cmatrix
+         ENTERED=20020402
+         UPDATED=20020402
+           SHORT="Ncurses-based 'Matrix' scrolling lines"
+cat << EOF
+CMatrix is a program that produces the cool scrolling lines from 'The Matrix' 
+movie. It is written in ncurses under Linux, and should compile on other OSes 
+with few modifications.  
+EOF
+

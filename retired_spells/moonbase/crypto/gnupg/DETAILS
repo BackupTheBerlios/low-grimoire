@@ -1,0 +1,21 @@
+          MODULE=gnupg
+         VERSION=1.2.2
+#        VERSION=1.2.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_MD5="4e1b357b22e1d45d14d340ce03d39b63"
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=ftp://ftp.gnupg.org/gcrypt/$MODULE/$SOURCE
+        WEB_SITE=http://www.gnupg.org
+         ENTERED=20010922
+         UPDATED=20021026
+           FUZZY=off
+           SHORT="gnupg is a tool for secure secure communication and data storage."
+cat << EOF
+GnuPG (the GNU Privacy Guard) is GNU's tool for secure communication and
+data storage. It can be used to encrypt data and to create digital
+signatures. It includes an advanced key management facility and is
+compliant with the proposed OpenPGP Internet standard as described in
+RFC2440. As such, it is meant to be compatible with PGP from NAI, Inc.
+Because it does not use any patented algorithms, it can be used without
+any restrictions.
+EOF

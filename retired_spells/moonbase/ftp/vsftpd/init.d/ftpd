@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# ftp	ProFTP ftp server
+#
+# chkconfig: 2345 80 20
+# description: ftp daemon
+# processname: vsftpd
+# config:      /etc/vsftpd.conf
+# pidfile:     /var/run/vsftpd.pid
+
+
+usage () {
+	echo "Usage: $0 {start|stop|reload|probe|restart|status}"
+}
+
+. /lib/lsb/init-functions
+

@@ -1,0 +1,44 @@
+cd       /usr/src
+rm  -rf  linux-$VERSION
+rm  -f   linux
+
+unpack  $SOURCE
+
+ln  -s     linux-$VERSION  linux
+
+if  [  -f   $CONFIG_CACHE/.config  ];  then
+  cp        $CONFIG_CACHE/.config  /usr/src/linux
+fi
+
+cd /usr/src/linux
+mkdir patches
+bzcat $SOURCE_CACHE/$SOURCE2 | tar -xf - -C patches
+
+if [ "`arch`" == "alpha" ]; then
+    patch_it patches/alpha/00_alpha-cia.patch 1
+fi
+
+for pat in patches/main/*
+do
+    patch_it $pat 1
+done
+
+if [ "$CONFIG_CRYPTOAPI" == "y" ]; then
+   for pat in patches/crypto-api/*
+   do
+       patch_it $pat 1
+   done
+fi
+
+if [ "$CONFIG_CPUFREQ" == "y" ]; then
+   for pat in patches/cpufreq/*
+   do
+       patch_it $pat 1
+   done
+fi
+
+rm -rf patches
+chown -R root:root /usr/src/linux-$VERSION
+
+true
+

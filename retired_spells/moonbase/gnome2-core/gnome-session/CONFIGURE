@@ -1,0 +1,7 @@
+if  ! grep  "FADE"  $MODULE_CONFIG; then
+  if  query  "Patch for fade-to-grey when you log out (maybe slow)?" y; then
+    echo  "FADE=y"  >>  $MODULE_CONFIG
+  else 
+    echo  "FADE=n"  >>  $MODULE_CONFIG
+  fi
+fi

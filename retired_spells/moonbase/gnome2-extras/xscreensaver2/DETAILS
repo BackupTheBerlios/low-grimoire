@@ -1,0 +1,17 @@
+          MODULE=xscreensaver2
+         VERSION=4.10
+        #VERSION=4.09
+          SOURCE=xscreensaver-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xscreensaver-$VERSION
+   SOURCE_URL[0]=http://www.jwz.org/xscreensaver/$SOURCE
+   SOURCE_URL[1]=http://packetstorm.widexs.nl/UNIX/admin/$SOURCE
+        WEB_SITE=http://www.jwz.org/xscreensaver
+         ENTERED=20020715
+         UPDATED=20030529
+           SHORT="XScreenSaver is a modular screen saver and locker for the X Windows."
+cat << EOF
+XScreenSaver is a modular screen saver and locker for the X Window
+System. It is highly customizable and allows the use of any program that
+can draw on the root window as a display mode. More than 120 display
+modes are included in this package.  This compiles with the gtk+2 backends.
+EOF

@@ -1,0 +1,14 @@
+          MODULE=xfce4-cvs
+         VERSION=beta
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/xfce4
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xfce4
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+         ENTERED=20021223
+         UPDATED=`date -u +%Y%m%d`
+           SHORT="XFce 4 panel"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This module provides
+the XFce 4 panel.
+EOF

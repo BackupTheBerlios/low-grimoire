@@ -1,0 +1,13 @@
+          MODULE=emu10k1
+         VERSION=v0.19a
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/emu10k1/$SOURCE
+        WEB_SITE=http://opensource.creative.com/
+         ENTERED=20020804
+         UPDATED=20020804
+      MAINTAINER=csm@moongroup.com
+           SHORT="Driver for the SBLive!"
+cat << EOF
+Driver for the SBLive!
+EOF

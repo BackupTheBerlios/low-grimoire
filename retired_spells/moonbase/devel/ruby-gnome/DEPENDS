@@ -1,0 +1,6 @@
+depends  ruby &&
+depends  gnome-libs &&
+optional_depends  "glade" \
+                  ""      \
+                  ""      \
+                  "for glade binding support"

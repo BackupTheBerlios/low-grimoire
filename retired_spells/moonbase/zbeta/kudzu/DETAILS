@@ -1,0 +1,14 @@
+           MODULE=kudzu
+         VERSION=0.99.48
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://lunar-linux.org/lunar/mirrors/$SOURCE
+        WEB_SITE=unknown
+         ENTERED=20020331
+         UPDATED=20020331
+      MAINTAINER=csm@moongroup.com
+           SHORT="a hardware probing tool run at system boot time"
+cat << EOF
+Kudzu is a hardware probing tool run at system boot time to determine
+what hardware has been added or removed from the system.
+EOF

@@ -1,0 +1,14 @@
+          MODULE=at
+         VERSION=3.1.8
+    EXTRAVERSION=11
+          SOURCE=at_$VERSION-$EXTRAVERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=ftp://ftp.debian.org/debian/pool/main/a/at/$SOURCE
+        WEB_SITE=unknown
+         ENTERED=20011011
+         UPDATED=20020903
+           SHORT="at/batch is a periodic scheduler."
+cat << EOF
+at contains at and batch which are daemons that allow processes to be
+schedule to run at a later date or when system load permits.
+EOF

@@ -1,0 +1,14 @@
+           MODULE=gnome-vfs-sftp
+         VERSION=0.1.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://www.math.uwaterloo.ca/~bghovinen/$SOURCE
+        WEB_SITE=http://www.math.uwaterloo.ca/~bghovinen/
+         ENTERED=20030114
+         UPDATED=20030114
+           SHORT="gnome-vfs-sftp is a nautilus adder that will let you browse 
+           sftp connections"
+cat << EOF
+gnome-vfs-sftp is a nautilus adder that will let you browse
+sftp connections
+EOF

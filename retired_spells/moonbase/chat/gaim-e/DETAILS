@@ -1,0 +1,15 @@
+          MODULE=gaim-e
+         VERSION=0.64
+	VERSION2=0.9.8
+       	  SOURCE=gaim-$VERSION.tar.gz
+         SOURCE2=gaim-e-$VERSION2.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gaim-$VERSION
+      SOURCE_URL=$SFORGE_URL/gaim/$SOURCE
+     SOURCE2_URL=$SFORGE_URL/gaim-e/$SOURCE2
+        WEB_SITE=http://gaim-e.sourceforge.net/
+         ENTERED=20030622
+         UPDATED=20030622
+           SHORT="See gaim"
+cat << EOF
+
+EOF

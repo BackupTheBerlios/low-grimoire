@@ -1,0 +1,2 @@
+depends   pcmcia-cs  &&
+depends   gkrellm

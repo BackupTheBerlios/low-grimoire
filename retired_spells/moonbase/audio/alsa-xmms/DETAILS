@@ -1,0 +1,12 @@
+          MODULE=alsa-xmms
+         VERSION=0.9.11
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://freesoftware.fsf.org/download/$MODULE/$SOURCE
+        WEB_SITE=http://freesoftware.fsf.org/download
+         ENTERED=20020611
+         UPDATED=20030511
+           SHORT="A XMMS ALSA plugin."
+cat << EOF
+A XMMS ALSA plugin.
+EOF

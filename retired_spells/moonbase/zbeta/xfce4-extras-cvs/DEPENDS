@@ -1,0 +1,2 @@
+depends xfce4-cvs &&
+optional_depends alsa-lib "--with-sound=alsa" "" "to use alsa for \"volume control\" panel plugin"

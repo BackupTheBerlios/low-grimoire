@@ -1,0 +1,5 @@
+depends  popt  &&
+depends  perl  &&
+depends  ORBit &&
+depends  bison &&
+depends  libxml

@@ -1,0 +1,2 @@
+export  KDEDIR=/opt/lunar/kde/3
+export  PATH=/opt/lunar/kde/3/bin:$PATH

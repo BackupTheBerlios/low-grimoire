@@ -1,0 +1,7 @@
+depends     jack                    &&
+depends     gtk+                    &&
+depends     gdbm                    &&
+depends     ladspa_sdk              &&
+depends     libsndfile		    &&
+optional_depends  "alsa-utils" "" "" "for ALSA sound drivers and utils"
+

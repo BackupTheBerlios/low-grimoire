@@ -1,0 +1,20 @@
+           MODULE=mc-advanced
+         VERSION=4.1.35-A12pre1
+          SOURCE=mc-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/mc-4.1.35-A12
+   SOURCE_URL[0]=ftp://esp-team.scene.hu/esp-team/linux/$SOURCE
+        WEB_SITE=http://banki1.banki.hu/~arpi/f-linux.html
+         ENTERED=20020405
+         UPDATED=20020512
+      MAINTAINER=kongar@tsrsb.org.tr
+           SHORT="mc-advanced is a bugfixed and enhanced version of GNU/mc 4.1.35"
+cat << EOF
+This is a bugfixed and enhanced version of the Midnight Commander 4.1.35.
+FTP is nearly rewritten, many small bugs are fixed, and some interesting 
+features added, for example:
+- Better syntax hilighting in editor
+- Allow file/dirsize to be > 2GB
+- FTP supports FXP (direct server-to-server connection)
+- FTP transfers without copying to TEMP
+- Fixed ZIPfs, added ESP support.
+EOF

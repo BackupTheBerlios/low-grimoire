@@ -1,0 +1,12 @@
+           MODULE=gtk-thinice-theme2
+         VERSION=2.0.2
+          SOURCE=gtk-thinice-engine-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gtk-thinice-engine-$VERSION
+   SOURCE_URL[0]=http://thinice.sourceforge.net/$SOURCE
+        WEB_SITE=http://thinice.sourceforge.net
+         ENTERED=20020729
+         UPDATED=20030204
+           SHORT="ThinIce is a theme engine for GTK+."
+cat << EOF
+ThinIce is a theme engine for GTK+.
+EOF

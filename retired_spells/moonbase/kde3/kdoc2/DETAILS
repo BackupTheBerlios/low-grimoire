@@ -1,0 +1,14 @@
+          MODULE=kdoc2
+         VERSION=2.0a54
+          SOURCE=kdoc-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/kdoc-$VERSION
+   SOURCE_URL[0]=$KDE_URL/stable/3.0.1/src/$SOURCE
+        WEB_SITE=http://www.kde.org/
+         ENTERED=20020523
+         UPDATED=20020523
+           SHORT="kdoc contains documentation generation utilities."
+      MAINTAINER="JacksonJE@health.missouri.edu"
+
+cat << EOF
+kdoc contains documentation generation utilities.
+EOF

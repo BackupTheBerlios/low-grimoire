@@ -1,0 +1,18 @@
+          MODULE=screem
+         VERSION=0.6.0
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+        WEB_SITE=http://www.screem.org/
+         ENTERED=20020608
+         UPDATED=20030213
+           SHORT="Screem is a website development environment."
+      MAINTAINER=csm@moongroup.com
+cat << EOF
+ Screem is a website development environment. Its purpose is to increase 
+productivity when constructing a web site by providing quick access to 
+commonly used features of web sites (such as tables). It is written for use 
+with the GNOME  desktop environment.  Unlike most other website/html
+editors screem does not provide a WYSIWYG display of the page, but instead 
+just gives you the raw html source code in its editor window. 
+EOF

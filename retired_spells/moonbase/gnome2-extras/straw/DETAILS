@@ -1,0 +1,15 @@
+           MODULE=straw
+         VERSION=0.14
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+SOURCE_URL[0]=http://savannah.nongnu.org/download/straw/straw.pkg/0.14/$SOURCE
+        WEB_SITE=http://www.nongnu.org/straw
+         ENTERED=20021223
+         UPDATED=20021223
+           SHORT=" Straw is a desktop news aggregator for the GNOME
+environment."
+cat << EOF
+ Straw is a desktop news aggregator for the GNOME environment. Its aim
+is to be a faster, easier and more accessible way to read news and blogs
+than the traditional browser.
+EOF

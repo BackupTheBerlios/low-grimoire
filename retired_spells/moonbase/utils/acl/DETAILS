@@ -1,0 +1,14 @@
+          MODULE=acl
+         VERSION=2.0.9
+          SOURCE=$MODULE-$VERSION.src.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=ftp://oss.sgi.com/projects/xfs/download/Release-1.1/cmd_tars/$SOURCE
+        WEB_SITE=http://oss.sgi.com/projects/xfs/
+      LICENSE[0]=http://www.gnu.org/copyleft/gpl.html
+         ENTERED=20020531
+         UPDATED=20020820
+      MAINTAINER=jacksonje@health.missouri.edu
+           SHORT="acl is the access control list for XFS"
+cat << EOF
+acl is the access control list for XFS
+EOF

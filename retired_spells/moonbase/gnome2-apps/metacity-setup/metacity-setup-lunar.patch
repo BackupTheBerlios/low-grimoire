@@ -1,0 +1,902 @@
+--- src/callbacks.c.old	2002-09-19 22:13:29.000000000 -0400
++++ src/callbacks.c	2002-09-19 23:48:36.000000000 -0400
+@@ -24,18 +24,18 @@
+   gtk_object_set_data (GTK_OBJECT (component), name, widget)
+ 
+ #ifdef PACKAGE_DATA_DIR
+-const gchar *package_data_dir = PACKAGE_DATA_DIR;
++const gchar    *package_data_dir = PACKAGE_DATA_DIR;
+ #else
+-const gchar *package_data_dir = "";
++const gchar    *package_data_dir = "";
+ #endif
+-const gchar *theme_sub_dir = "/themes";
++const gchar    *theme_sub_dir = "/themes";
+ 
+ /* These are here because glade is screwy with the widget trees */
+-GtkWidget *install_theme_picker_cheat;
+-GtkWidget *treeview1_cheat;
+-GtkWidget *install_dialog_cheat;
+-GtkWidget *refresh_button_cheat;
+-gchar *metacity_version = "2.3";
++GtkWidget      *install_theme_picker_cheat;
++GtkWidget      *treeview1_cheat;
++GtkWidget      *install_dialog_cheat;
++GtkWidget      *refresh_button_cheat;
++gchar          *metacity_version = "2.3";
+ 
+ enum
+ {
+@@ -51,7 +51,7 @@
+ enum
+ { NAME_COL };
+ 
+-static gint n_drop_types = sizeof (drop_types) / sizeof (GtkTargetEntry);
++static gint     n_drop_types = sizeof (drop_types) / sizeof (GtkTargetEntry);
+ 
+ static void
+ transfer_cancel_cb (GtkWidget * dlg, gchar * path)
+@@ -64,79 +64,56 @@
+ static void
+ transfer_done_cb (GtkWidget * dlg, gchar * path)
+ {
+-	gchar *answer;
++	gchar          *answer;
++
+ 	answer = gnome_vfs_get_file_mime_type (path);
+ 	if (g_ascii_strcasecmp (answer, "application/x-bzip-compressed-tar") == 0)
+-	{
+-		int status;
+-		gchar *command;
+-		/* this should be something more clever and nonblocking */
+-		if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)			
+-			command =
+-				g_strdup_printf
+-				("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.metacity/themes\"'",
+-				 path, g_get_home_dir ());
+-		else
+-			command =
+-				g_strdup_printf
+-				("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
+-				 path, g_get_home_dir ());
+-		if (g_spawn_command_line_sync
+-		    (command, NULL, NULL, &status, NULL) && status == 0)
+-			gnome_vfs_unlink (path);
+-		g_free (command);
+-	}
+-	
++		{
++			int             status;
++			gchar          *command;
++
++		 /* this should be something more clever and nonblocking */
++			if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)
++				command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.metacity/themes\"'", path, g_get_home_dir ());
++			else
++				command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'", path, g_get_home_dir ());
++			if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0)
++				gnome_vfs_unlink (path);
++			g_free (command);
++		}
++
+ 	if (g_ascii_strcasecmp (answer, "application/x-compressed-tar") == 0)
+-	{
+-		int status;
+-		gchar *command;
+-
+-		/* this should be something more clever and nonblocking */
+-		if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)			
+-			command =
+-				g_strdup_printf
+-				("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.metacity/themes\"'",
+-				 path, g_get_home_dir ());
+-		else
+-			command =
+-				g_strdup_printf
+-				("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'",
+-				 path, g_get_home_dir ());
+-		if (g_spawn_command_line_sync
+-		    (command, NULL, NULL, &status, NULL) && status == 0)
+-			gnome_vfs_unlink (path);
+-		g_free (command);
+-	}
++		{
++			int             status;
++			gchar          *command;
++
++		 /* this should be something more clever and nonblocking */
++			if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)
++				command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.metacity/themes\"'", path, g_get_home_dir ());
++			else
++				command = g_strdup_printf ("sh -c 'gzip -d -c < \"%s\" | tar xf - -C \"%s/.themes\"'", path, g_get_home_dir ());
++			if (g_spawn_command_line_sync (command, NULL, NULL, &status, NULL) && status == 0)
++				gnome_vfs_unlink (path);
++			g_free (command);
++		}
+ 	g_free (path);
+ 	gtk_widget_destroy (dlg);
+-	on_refresh_button_clicked (GTK_BUTTON (refresh_button_cheat),
+-				   NULL);	
++	on_refresh_button_clicked (GTK_BUTTON (refresh_button_cheat), NULL);
+ }
+ 
+ void
+ changeFontLabel (GtkLabel * label)
+ {
+-	if (gconf_client_get_bool (gconf_client_get_default (),
+-				   "/apps/metacity/general/titlebar_uses_system_font",
+-				   NULL))
+-	{
+-		gtk_label_set_text (label,
+-				    gconf_client_get_string
+-				    (gconf_client_get_default (),
+-				     "/desktop/gnome/interface/font_name",
+-				     NULL));
+-		gtk_widget_show (GTK_WIDGET (label));
+-	}
++	if (gconf_client_get_bool (gconf_client_get_default (), "/apps/metacity/general/titlebar_uses_system_font", NULL))
++		{
++			gtk_label_set_text (label, gconf_client_get_string (gconf_client_get_default (), "/desktop/gnome/interface/font_name", NULL));
++			gtk_widget_show (GTK_WIDGET (label));
++		}
+ 	else
+-	{
+-		gtk_label_set_text (label,
+-				    gconf_client_get_string
+-				    (gconf_client_get_default (),
+-				     "/apps/metacity/general/titlebar_font",
+-				     NULL));
+-		gtk_widget_show (GTK_WIDGET (label));
+-	}
++		{
++			gtk_label_set_text (label, gconf_client_get_string (gconf_client_get_default (), "/apps/metacity/general/titlebar_font", NULL));
++			gtk_widget_show (GTK_WIDGET (label));
++		}
+ }
+ 
+ void
+@@ -144,34 +121,25 @@
+ {
+ 	gnome_vfs_init ();
+ 	gtk_spin_button_set_value (GTK_SPIN_BUTTON
+-				   (lookup_widget
+-				    (widget, "workspaceSpinner")),
+-				   gconf_client_get_int
+-				   (gconf_client_get_default (),
+-				    "/apps/metacity/general/num_workspaces",
+-				    NULL));
+-	gtk_drag_dest_set (widget, GTK_DEST_DEFAULT_ALL,
+-			   drop_types, n_drop_types,
+-			   GDK_ACTION_COPY | GDK_ACTION_LINK |
+-			   GDK_ACTION_MOVE);
+-	install_theme_picker_cheat =
+-		lookup_widget (widget, "install_theme_picker");
++														 (lookup_widget (widget, "workspaceSpinner")), gconf_client_get_int (gconf_client_get_default (), "/apps/metacity/general/num_workspaces", NULL));
++	gtk_drag_dest_set (widget, GTK_DEST_DEFAULT_ALL, drop_types, n_drop_types, GDK_ACTION_COPY | GDK_ACTION_LINK | GDK_ACTION_MOVE);
++	install_theme_picker_cheat = lookup_widget (widget, "install_theme_picker");
+ 	treeview1_cheat = lookup_widget (widget, "treeview1");
+ 	install_dialog_cheat = lookup_widget (widget, "install_dialog");
+ 	refresh_button_cheat = lookup_widget (widget, "refresh_button");
+ 	if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)
+-	{
+-		if (g_file_test (g_build_filename (g_get_home_dir (), ".metacity", NULL), G_FILE_TEST_IS_DIR))
+ 		{
+-			if (!g_file_test (g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), G_FILE_TEST_IS_DIR))
+-				mkdir ( g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), 0744);
++			if (g_file_test (g_build_filename (g_get_home_dir (), ".metacity", NULL), G_FILE_TEST_IS_DIR))
++				{
++					if (!g_file_test (g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), G_FILE_TEST_IS_DIR))
++						mkdir (g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), 0744);
++				}
++			else
++				{
++					mkdir (g_build_filename (g_get_home_dir (), ".metacity", NULL), 0744);
++					mkdir (g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), 0744);
++				}
+ 		}
+-		else
+-		{
+-			mkdir ( g_build_filename (g_get_home_dir (), ".metacity", NULL), 0744);
+-			mkdir ( g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL), 0744);
+-		}
+-	}
+ }
+ 
+ void
+@@ -181,120 +149,99 @@
+ 	enum
+ 	{ NAME_COL };
+ 
+-	GtkListStore *themeList = gtk_list_store_new (1, G_TYPE_STRING);
++	GtkListStore   *themeList = gtk_list_store_new (1, G_TYPE_STRING);
+ 	GtkCellRenderer *renderer;
+ 	GtkTreeViewColumn *column;
+-	GtkTreeIter iter;
+-	GtkTreePath *path;
+-	gint i;
+-	gchar *possibleThemeDirs[4];
+-	gint good_num = -1;
+-	gchar *test_string;
+-	gchar *meta_city_theme_dir =
+-		(gchar *) malloc (strlen (package_data_dir) +
+-				  strlen (theme_sub_dir) + 1);
+-	const gchar *filename;
+-	GPtrArray *themeNameHolder = g_ptr_array_new ();
++	GtkTreeIter     iter;
++	GtkTreePath    *path;
++	gint            i;
++	gchar          *possibleThemeDirs[4];
++	gint            good_num = -1;
++	gchar          *test_string;
++	gchar          *meta_city_theme_dir = (gchar *) malloc (strlen (package_data_dir) + strlen (theme_sub_dir) + 1);
++	const gchar    *filename;
++	GPtrArray      *themeNameHolder = g_ptr_array_new ();
++
+ 	if (g_ascii_strcasecmp (metacity_version, "2.3") == 0)
+-	{
+-		possibleThemeDirs[0] = g_build_filename (g_get_home_dir(), ".metacity", "themes", NULL);
+-		possibleThemeDirs[1] = "/usr/share/metacity/themes";
+-		possibleThemeDirs[2] = "/usr/local/share/metacity/themes";
+-	}
++		{
++			possibleThemeDirs[0] = g_build_filename (g_get_home_dir (), ".metacity", "themes", NULL);
++			possibleThemeDirs[1] = "/opt/lunar/gnome/2/share/metacity/themes";
++			possibleThemeDirs[2] = "/usr/share/metacity/themes";
++		}
+ 	else
+-	{
+-		possibleThemeDirs[0] = g_build_filename (g_get_home_dir(), ".themes", NULL);
+-		possibleThemeDirs[1] = "/usr/share/themes";
+-		possibleThemeDirs[2] = "/usr/local/share/themes";
+-	}
+-	possibleThemeDirs[3] = meta_city_theme_dir;
+-		
+-	test_string = gconf_client_get_string (gconf_client_get_default (),
+-					       "/apps/metacity/general/theme",
+-					       NULL);
+-
+-	sprintf (meta_city_theme_dir, "%s%s", package_data_dir,
+-		 theme_sub_dir);
+-	
++		{
++			possibleThemeDirs[0] = g_build_filename (g_get_home_dir (), ".themes", NULL);
++			possibleThemeDirs[1] = "/opt/lunar/gnome/2/share/themes";
++			possibleThemeDirs[2] = "/usr/share/themes";
++		}
++
++	test_string = gconf_client_get_string (gconf_client_get_default (), "/apps/metacity/general/theme", NULL);
++
++	sprintf (meta_city_theme_dir, "%s%s", package_data_dir, theme_sub_dir);
++
++	possibleThemeDirs[3] = NULL;
++
+ /* Search the paths that metacity-setup will search for themes in for directories 
+ 	and place all found themes in a single pointer array */
+-	
++
+ 	for (i = 0; i < 5; i++)
+-	{
+-		if (g_file_test (possibleThemeDirs[i], G_FILE_TEST_IS_DIR))
+ 		{
+-			GDir *themeDirectory =
+-				g_dir_open (possibleThemeDirs[i], 0, NULL);
++			if (g_file_test (possibleThemeDirs[i], G_FILE_TEST_IS_DIR))
++				{
++					GDir           *themeDirectory = g_dir_open (possibleThemeDirs[i], 0, NULL);
++
++					while ((filename = g_dir_read_name (themeDirectory)) != NULL)
++						{
++							if (g_file_test (g_build_filename (possibleThemeDirs[i], filename, NULL), G_FILE_TEST_IS_DIR)
++									&& (g_file_test (g_build_filename (possibleThemeDirs[i], filename, "/metacity-1/metacity-theme-1.xml", NULL), G_FILE_TEST_IS_REGULAR)))
++								{
++									g_ptr_array_add (themeNameHolder, g_strdup (filename));
++								}
++						}
++					g_dir_close (themeDirectory);
++				}
++		}
++
++ /*  Now place all of the found theme dirs from and fill a gtk_list_store with them */
+ 
+-			while ((filename =
+-				g_dir_read_name (themeDirectory)) != NULL)
+-				if (g_file_test
+-				    (g_build_filename
+-				     (possibleThemeDirs[i], filename, NULL),
+-						G_FILE_TEST_IS_DIR) &&
+-					(g_file_test
+-						(g_build_filename
+-							(possibleThemeDirs[i], filename, "metacity-theme-1.xml", NULL),
+-						G_FILE_TEST_IS_REGULAR)))
+-					{
+-						g_ptr_array_add (themeNameHolder,
+-							 g_strdup (filename));
+-					}
+-			g_dir_close (themeDirectory);
+-		}
+-	}
+-
+-	/*  Now place all of the found theme dirs from and fill a gtk_list_store with them */
+-	
+-	
+ 	for (i = 0; i < themeNameHolder->len; i++)
+-	{
+-		gtk_list_store_append (themeList, &iter);
+-		gtk_list_store_set (GTK_LIST_STORE (themeList), &iter,
+-				    NAME_COL,
+-				    g_ptr_array_index (themeNameHolder, i),
+-				    -1);
+-		
+-		/* Here we are trying to find the current theme so that, when metacity-setup starts,
+-		it doesn't default back to Atlanta, but keeps the current appearence.  This is done
+-		by checking each found dir and checking it against the current one (gotten from gconf)
+-		If the current theme is found, it's index is placed in good_num, which is used later to
+-		actuallly select the item that is already being displayed */
+-		
+-		if (  g_ascii_strcasecmp (test_string, g_ptr_array_index (themeNameHolder, i)) == 0)
+-		{	
+-			good_num = i;
+-		}
+-	}
+-	gtk_tree_view_set_model (GTK_TREE_VIEW (widget),
+-				 GTK_TREE_MODEL (themeList));
++		{
++			gtk_list_store_append (themeList, &iter);
++			gtk_list_store_set (GTK_LIST_STORE (themeList), &iter, NAME_COL, g_ptr_array_index (themeNameHolder, i), -1);
++
++		 /* Here we are trying to find the current theme so that, when metacity-setup starts,
++		    it doesn't default back to Atlanta, but keeps the current appearence.  This is done
++		    by checking each found dir and checking it against the current one (gotten from gconf)
++		    If the current theme is found, it's index is placed in good_num, which is used later to
++		    actuallly select the item that is already being displayed */
++
++			if (g_ascii_strcasecmp (test_string, g_ptr_array_index (themeNameHolder, i)) == 0)
++				{
++					good_num = i;
++				}
++		}
++	gtk_tree_view_set_model (GTK_TREE_VIEW (widget), GTK_TREE_MODEL (themeList));
+ 
+ 	renderer = gtk_cell_renderer_text_new ();
+-	column = gtk_tree_view_column_new_with_attributes ("Installed Themes",
+-							   renderer,
+-							   "text", NAME_COL,
+-							   NULL);
+-
+-	/*	This checks to see if columns are already defined, and removes them if they are.  This is done
+-	so that, when the list is refreshed, multiple columns are not created */
+-	
++	column = gtk_tree_view_column_new_with_attributes ("Installed Themes", renderer, "text", NAME_COL, NULL);
++
++ /*  This checks to see if columns are already defined, and removes them if they are.  This is done
++    so that, when the list is refreshed, multiple columns are not created */
++
+ 	if (gtk_tree_view_get_column (GTK_TREE_VIEW (widget), 0))
+-		gtk_tree_view_remove_column (GTK_TREE_VIEW (widget),
+-					     gtk_tree_view_get_column
+-					     (GTK_TREE_VIEW (widget), 0));
+-		
++		gtk_tree_view_remove_column (GTK_TREE_VIEW (widget), gtk_tree_view_get_column (GTK_TREE_VIEW (widget), 0));
++
+ 	gtk_tree_view_append_column (GTK_TREE_VIEW (widget), column);
+-	
+-	/*	This here actually selects the currently defined theme to maintain a smooth appearence,
+-	assuming that the current theme was found in the list of themes, which would make i == something
+-	other than -1 */
++
++ /*  This here actually selects the currently defined theme to maintain a smooth appearence,
++    assuming that the current theme was found in the list of themes, which would make i == something
++    other than -1 */
+ 
+ 	path = gtk_tree_path_new ();
+ 	gtk_tree_path_append_index (path, good_num);
+-	
++
+ 	if (good_num != -1)
+-		gtk_tree_view_set_cursor (GTK_TREE_VIEW (widget),
+-					  path, NAME_COL, FALSE);
++		gtk_tree_view_set_cursor (GTK_TREE_VIEW (widget), path, NAME_COL, FALSE);
+ }
+ 
+ /*	The next three functions are all simple callbacks from the focus-selector pull-down-menu that
+@@ -302,52 +249,34 @@
+ is also shown.  This is because the option is hidden by default to keep the dialog looking as clean as
+ possible, and the option does nothing if focus-select is set to click */
+ 
+-
+ void
+ on_mouse1_activate (GtkMenuItem * menuitem, gpointer user_data)
+ {
+-	gconf_client_set_string (gconf_client_get_default (),
+-				 "/apps/metacity/general/focus_mode",
+-				 "mouse", NULL);
+-	gtk_widget_show (lookup_widget
+-			 (GTK_WIDGET (menuitem), "autoRaiseCheck"));
++	gconf_client_set_string (gconf_client_get_default (), "/apps/metacity/general/focus_mode", "mouse", NULL);
++	gtk_widget_show (lookup_widget (GTK_WIDGET (menuitem), "autoRaiseCheck"));
+ }
+ 
+-
+ void
+ on_sloppy1_activate (GtkMenuItem * menuitem, gpointer user_data)
+ {
+-	gconf_client_set_string (gconf_client_get_default (),
+-				 "/apps/metacity/general/focus_mode",
+-				 "sloppy", NULL);
+-	gtk_widget_show (lookup_widget
+-			 (GTK_WIDGET (menuitem), "autoRaiseCheck"));
++	gconf_client_set_string (gconf_client_get_default (), "/apps/metacity/general/focus_mode", "sloppy", NULL);
++	gtk_widget_show (lookup_widget (GTK_WIDGET (menuitem), "autoRaiseCheck"));
+ }
+ 
+ void
+ on_click1_activate (GtkMenuItem * menuitem, gpointer user_data)
+ {
+-	gconf_client_set_string (gconf_client_get_default (),
+-				 "/apps/metacity/general/focus_mode",
+-				 "click", NULL);
+-	gtk_widget_hide (lookup_widget
+-			 (GTK_WIDGET (menuitem), "autoRaiseCheck"));
+-	gconf_client_set_bool (gconf_client_get_default (),
+-			       "/apps/metacity/general/auto_raise", FALSE,
+-			       NULL);
+-	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON
+-				      (lookup_widget
+-				       (GTK_WIDGET (menuitem),
+-					"autoRaiseCheck")), FALSE);
++	gconf_client_set_string (gconf_client_get_default (), "/apps/metacity/general/focus_mode", "click", NULL);
++	gtk_widget_hide (lookup_widget (GTK_WIDGET (menuitem), "autoRaiseCheck"));
++	gconf_client_set_bool (gconf_client_get_default (), "/apps/metacity/general/auto_raise", FALSE, NULL);
++	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (lookup_widget (GTK_WIDGET (menuitem), "autoRaiseCheck")), FALSE);
+ }
+ 
+-
+ void
+ on_helpButton_clicked (GtkButton * button, gpointer user_data)
+ {
+-	GtkWidget *aboutWindow;
+-	const gchar *authors_array[] =
+-		{ "Peter Snyder <plastercast@plastercast.tzo.com>",
++	GtkWidget      *aboutWindow;
++	const gchar    *authors_array[] = { "Peter Snyder <plastercast@plastercast.tzo.com>",
+ 		"",
+ 		"Thanks to:",
+ 		"	Jens Knutson <jensknutson@yahoo.com> for the UI help",
+@@ -359,21 +288,15 @@
+ 		"	Bastien Nocera <hadess@hadess.net>",
+ 		"	Nail <nail@gella.com.ru>",
+ 		"	David Abilleira <david@abilleira.com>",
+-		NULL};
+-	const gchar *translator = _("");
+-	GdkPixbuf *logo = create_pixbuf ("metacity-setup-icon.png");
+-	aboutWindow = gnome_about_new (_("Metacity-Config"),
+-						  "0.7.1",
+-						  "2002, Peter Snyder",
+-						  _("Send bugs to plastercast@plastercast.tzo.com"),
+-						  authors_array,
+-						  NULL,
+-						  translator,
+-						  logo);
++		NULL
++	};
++	const gchar    *translator = _("");
++	GdkPixbuf      *logo = create_pixbuf ("metacity-setup-icon.png");
++
++	aboutWindow = gnome_about_new (_("Metacity-Config"), "0.7.1", "2002, Peter Snyder", _("Send bugs to plastercast@plastercast.tzo.com"), authors_array, NULL, translator, logo);
+ 	gtk_widget_show (aboutWindow);
+ }
+ 
+-
+ void
+ on_closeButton_clicked (GtkButton * button, gpointer user_data)
+ {
+@@ -383,34 +306,28 @@
+ void
+ on_treeview1_cursor_changed (GtkTreeView * treeview, gpointer user_data)
+ {
+-	GtkTreeIter iter;
+-	GtkTreeModel *model;
++	GtkTreeIter     iter;
++	GtkTreeModel   *model;
+ 	GtkTreeSelection *selectedTheme;
+-	gchar *themeName;
++	gchar          *themeName;
++
+ 	selectedTheme = gtk_tree_view_get_selection (treeview);
+ 	if (gtk_tree_selection_get_selected (selectedTheme, &model, &iter))
+-	{
+-		gtk_tree_model_get (model, &iter, NAME_COL, &themeName, -1);
+-	}
+-	gconf_client_set_string (gconf_client_get_default (),
+-				 "/apps/metacity/general/theme",
+-				 themeName, NULL);
++		{
++			gtk_tree_model_get (model, &iter, NAME_COL, &themeName, -1);
++		}
++	gconf_client_set_string (gconf_client_get_default (), "/apps/metacity/general/theme", themeName, NULL);
+ }
+ 
+ void
+-on_workspaceSpinner_value_changed (GtkSpinButton * spinbutton,
+-				   gpointer user_data)
++on_workspaceSpinner_value_changed (GtkSpinButton * spinbutton, gpointer user_data)
+ {
+-	/* Here we simply update gconf everytime the number of workspaces is changed.  
+-	Nothing too complicated :-) */
+-	
++ /* Here we simply update gconf everytime the number of workspaces is changed.  
++    Nothing too complicated :-) */
++
+ 	gconf_client_set_int (gconf_client_get_default (),
+-			      "/apps/metacity/general/num_workspaces",
+-			      gtk_spin_button_get_value_as_int
+-			      (GTK_SPIN_BUTTON
+-			       (lookup_widget
+-				(GTK_WIDGET (spinbutton),
+-				 "workspaceSpinner"))), NULL);
++												"/apps/metacity/general/num_workspaces",
++												gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (lookup_widget (GTK_WIDGET (spinbutton), "workspaceSpinner"))), NULL);
+ }
+ 
+ void
+@@ -419,155 +336,107 @@
+ 	gtk_main_quit ();
+ }
+ 
+-
+ void
+ on_defaultFontSizeCheck_realize (GtkWidget * widget, gpointer user_data)
+ {
+-	/* Here, as metacity-setup dialog is being created, we check to see if metacity is set to
+-	use system default fonts, or user specified ones.  We then set the "Use default font"
+-	toggle button to reflect the current setting */
+-	
+-	if (gconf_client_get_bool (gconf_client_get_default (),
+-				   "/apps/metacity/general/titlebar_uses_system_font",
+-				   NULL))
+-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget),
+-					      TRUE);
++ /* Here, as metacity-setup dialog is being created, we check to see if metacity is set to
++    use system default fonts, or user specified ones.  We then set the "Use default font"
++    toggle button to reflect the current setting */
++
++	if (gconf_client_get_bool (gconf_client_get_default (), "/apps/metacity/general/titlebar_uses_system_font", NULL))
++		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), TRUE);
+ 	else
+-		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget),
+-					      FALSE);
++		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (widget), FALSE);
+ }
+ 
+ void
+-on_defaultFontSizeCheck_toggled (GtkToggleButton * togglebutton,
+-				 gpointer user_data)
++on_defaultFontSizeCheck_toggled (GtkToggleButton * togglebutton, gpointer user_data)
+ {
+-	/* If it the Default Font Size button is changing from checked to not checked, we disable 
+-	the font picker button from the user as it no longer has any use, tell metacity to use the
+-	system font for the titlebar, and call update the label displaying the current font */
+-	
++ /* If it the Default Font Size button is changing from checked to not checked, we disable 
++    the font picker button from the user as it no longer has any use, tell metacity to use the
++    system font for the titlebar, and call update the label displaying the current font */
++
+ 	if (gtk_toggle_button_get_active (togglebutton))
+-	{
+-		gtk_widget_set_sensitive (lookup_widget
+-					  (GTK_WIDGET (togglebutton),
+-					   "fontpicker1"), FALSE);
+-		gconf_client_set_bool (gconf_client_get_default (),
+-				       "/apps/metacity/general/titlebar_uses_system_font",
+-				       TRUE, NULL);
+-		changeFontLabel (GTK_LABEL
+-				 (lookup_widget
+-				  (GTK_WIDGET (togglebutton),
+-				   "currentFont")));
+-	}
+-	
+-	/* If it the Default Font Size button is changing from unchecked to checked, we re-enable 
+-	the font picker button from the user as it is meaningfull again, tell metacity to use the
+-	user selected font for the titlebar, and call update the label displaying the current font */
+-	
++		{
++			gtk_widget_set_sensitive (lookup_widget (GTK_WIDGET (togglebutton), "fontpicker1"), FALSE);
++			gconf_client_set_bool (gconf_client_get_default (), "/apps/metacity/general/titlebar_uses_system_font", TRUE, NULL);
++			changeFontLabel (GTK_LABEL (lookup_widget (GTK_WIDGET (togglebutton), "currentFont")));
++		}
++
++ /* If it the Default Font Size button is changing from unchecked to checked, we re-enable 
++    the font picker button from the user as it is meaningfull again, tell metacity to use the
++    user selected font for the titlebar, and call update the label displaying the current font */
++
+ 	else
+-	{
+-		gtk_widget_set_sensitive (lookup_widget
+-					  (GTK_WIDGET (togglebutton),
+-					   "fontpicker1"), TRUE);
+-		gconf_client_set_bool (gconf_client_get_default (),
+-				       "/apps/metacity/general/titlebar_uses_system_font",
+-				       FALSE, NULL);
+-		changeFontLabel (GTK_LABEL
+-				 (lookup_widget
+-				  (GTK_WIDGET (togglebutton),
+-				   "currentFont")));
+-	}
++		{
++			gtk_widget_set_sensitive (lookup_widget (GTK_WIDGET (togglebutton), "fontpicker1"), TRUE);
++			gconf_client_set_bool (gconf_client_get_default (), "/apps/metacity/general/titlebar_uses_system_font", FALSE, NULL);
++			changeFontLabel (GTK_LABEL (lookup_widget (GTK_WIDGET (togglebutton), "currentFont")));
++		}
+ }
+ 
+ void
+ on_autoRaiseCheck_toggled (GtkToggleButton * togglebutton, gpointer user_data)
+ {
+-	/* If the Auto Raise option is selected (or not), we change gconf to reflect it */
+-	
++ /* If the Auto Raise option is selected (or not), we change gconf to reflect it */
++
+ 	if (gtk_toggle_button_get_active (togglebutton))
+-	{
+-		gconf_client_set_bool (gconf_client_get_default (),
+-				       "/apps/metacity/general/auto_raise",
+-				       TRUE, NULL);
+-	}
++		{
++			gconf_client_set_bool (gconf_client_get_default (), "/apps/metacity/general/auto_raise", TRUE, NULL);
++		}
+ 	else
+-	{
+-		gconf_client_set_bool (gconf_client_get_default (),
+-				       "/apps/metacity/general/auto_raise",
+-				       FALSE, NULL);
+-	}
++		{
++			gconf_client_set_bool (gconf_client_get_default (), "/apps/metacity/general/auto_raise", FALSE, NULL);
++		}
+ }
+ 
+ void
+ on_metacity_setup_dialog_drag_data_received (GtkWidget * widget,
+-					     GdkDragContext * drag_context,
+-					     gint x,
+-					     gint y,
+-					     GtkSelectionData *
+-					     selection_data, guint info,
+-					     guint time, gpointer user_data)
++																						 GdkDragContext * drag_context, gint x, gint y, GtkSelectionData * selection_data, guint info, guint time, gpointer user_data)
+ {
+-	GList *uris;
+-	gchar *filename;
++	GList          *uris;
++	gchar          *filename;
++
+ 	if (!(info == TARGET_URI_LIST || info == TARGET_NS_URL))
+ 		return;
+ 
+ 	uris = gnome_vfs_uri_list_parse (selection_data->data);
+ 	if (uris == NULL)
+-	{
+-		g_print ("uris was NULL\n");
+-		return;
+-	}
+-	filename =
+-		gnome_vfs_uri_to_string (uris->data, GNOME_VFS_URI_HIDE_NONE);
+-	if (strncmp (filename, "http://", 7)
+-	    && strncmp (filename, "ftp://", 6))
+-	{
+-		g_free (filename);
+-		filename =
+-			gnome_vfs_uri_to_string (uris->data,
+-						 GNOME_VFS_URI_HIDE_TOPLEVEL_METHOD);
+-	}
++		{
++			g_print ("uris was NULL\n");
++			return;
++		}
++	filename = gnome_vfs_uri_to_string (uris->data, GNOME_VFS_URI_HIDE_NONE);
++	if (strncmp (filename, "http://", 7) && strncmp (filename, "ftp://", 6))
++		{
++			g_free (filename);
++			filename = gnome_vfs_uri_to_string (uris->data, GNOME_VFS_URI_HIDE_TOPLEVEL_METHOD);
++		}
+ 	gnome_vfs_uri_list_unref (uris);
+-	gnome_file_entry_set_filename (GNOME_FILE_ENTRY (lookup_widget
+-							 (widget,
+-							  "install_theme_picker")),
+-				       filename);
++	gnome_file_entry_set_filename (GNOME_FILE_ENTRY (lookup_widget (widget, "install_theme_picker")), filename);
+ 	g_free (filename);
+ 	gtk_widget_show (lookup_widget (widget, "install_dialog"));
+ }
+ 
+ gboolean
+-on_metacity_setup_dialog_drag_motion (GtkWidget * widget,
+-				      GdkDragContext * drag_context,
+-				      gint x,
+-				      gint y, guint time, gpointer user_data)
++on_metacity_setup_dialog_drag_motion (GtkWidget * widget, GdkDragContext * drag_context, gint x, gint y, guint time, gpointer user_data)
+ {
+ 	return FALSE;
+ }
+ 
+ void
+-on_metacity_setup_dialog_drag_leave (GtkWidget * widget,
+-				     GdkDragContext * drag_context,
+-				     guint time, gpointer user_data)
++on_metacity_setup_dialog_drag_leave (GtkWidget * widget, GdkDragContext * drag_context, guint time, gpointer user_data)
+ {
+ 	gtk_widget_queue_draw (widget);
+ }
+ 
+-
+ void
+-on_fontpicker1_clicked (GnomeFontPicker * gnomefontpicker,
+-			gchar * arg1, gpointer user_data)
++on_fontpicker1_clicked (GnomeFontPicker * gnomefontpicker, gchar * arg1, gpointer user_data)
+ {
+-	gconf_client_set_string (gconf_client_get_default (),
+-				 "/apps/metacity/general/titlebar_font",
+-				 gnome_font_picker_get_font_name
+-				 (gnomefontpicker), NULL);
+-	changeFontLabel (GTK_LABEL
+-			 (lookup_widget
+-			  (GTK_WIDGET (gnomefontpicker), "currentFont")));
++	gconf_client_set_string (gconf_client_get_default (), "/apps/metacity/general/titlebar_font", gnome_font_picker_get_font_name (gnomefontpicker), NULL);
++	changeFontLabel (GTK_LABEL (lookup_widget (GTK_WIDGET (gnomefontpicker), "currentFont")));
+ }
+ 
+-
+ void
+ on_currentFont_realize (GtkWidget * widget, gpointer user_data)
+ {
+@@ -577,70 +446,57 @@
+ void
+ on_autoRaiseCheck_realize (GtkWidget * widget, gpointer user_data)
+ {
+-	gchar *test = gconf_client_get_string (gconf_client_get_default (),
+-					       "/apps/metacity/general/focus_mode",
+-					       NULL);
++	gchar          *test = gconf_client_get_string (gconf_client_get_default (),
++																									"/apps/metacity/general/focus_mode",
++																									NULL);
++
+ 	if (g_ascii_strcasecmp (test, "click") == 0)
+ 		gtk_widget_hide (widget);
+ }
+ 
+ void
+-on_install_dialog_response (GtkDialog * dialog,
+-			    gint response_id, gpointer user_data)
++on_install_dialog_response (GtkDialog * dialog, gint response_id, gpointer user_data)
+ {
+-	GtkWidget *dlg;
+-	gchar *filename, *path, *base;
+-	GList *src, *target;
+-	GnomeVFSURI *src_uri;
+-	const gchar *raw;
++	GtkWidget      *dlg;
++	gchar          *filename, *path, *base;
++	GList          *src, *target;
++	GnomeVFSURI    *src_uri;
++	const gchar    *raw;
+ 
+ 	if (response_id == 0)
+-	{
+-		raw = gtk_entry_get_text (GTK_ENTRY
+-					  (gnome_file_entry_gtk_entry
+-					   (GNOME_FILE_ENTRY
+-					    (install_theme_picker_cheat))));
+-
+-		if (raw == NULL || strlen (raw) <= 0)
+-			return;
+-
+-		if (strncmp (raw, "http://", 7) && strncmp (raw, "ftp://", 6)
+-		    && *raw != '/')
+-			filename =
+-				gnome_file_entry_get_full_path
+-				(GNOME_FILE_ENTRY
+-				 (install_theme_picker_cheat), TRUE);
+-		else
+-			filename = g_strdup (raw);
+-		if (filename == NULL)
+-			return;
++		{
++			raw = gtk_entry_get_text (GTK_ENTRY (gnome_file_entry_gtk_entry (GNOME_FILE_ENTRY (install_theme_picker_cheat))));
+ 
+-		gtk_widget_hide (GTK_WIDGET (dialog));
++			if (raw == NULL || strlen (raw) <= 0)
++				return;
+ 
+-		src_uri = gnome_vfs_uri_new (filename);
+-		base = gnome_vfs_uri_extract_short_name (src_uri);
+-		src = g_list_append (NULL, src_uri);
+-		path = g_build_filename (g_get_home_dir (), ".metacity",
+-					 "themes", base, NULL);
+-		target = g_list_append (NULL, gnome_vfs_uri_new (path));
+-
+-		dlg = file_transfer_dialog_new ();
+-		file_transfer_dialog_wrap_async_xfer (FILE_TRANSFER_DIALOG
+-						      (dlg), src, target,
+-						      GNOME_VFS_XFER_RECURSIVE,
+-						      GNOME_VFS_XFER_ERROR_MODE_QUERY,
+-						      GNOME_VFS_XFER_OVERWRITE_MODE_QUERY,
+-						      GNOME_VFS_PRIORITY_DEFAULT);
+-		gnome_vfs_uri_list_unref (src);
+-		gnome_vfs_uri_list_unref (target);
+-		g_free (base);
+-		g_free (filename);
+-		g_signal_connect (G_OBJECT (dlg), "cancel",
+-				  G_CALLBACK (transfer_cancel_cb), path);
+-		g_signal_connect (G_OBJECT (dlg), "done",
+-				  G_CALLBACK (transfer_done_cb), path);
+-		gtk_widget_show (dlg);
+-	}
++			if (strncmp (raw, "http://", 7) && strncmp (raw, "ftp://", 6) && *raw != '/')
++				filename = gnome_file_entry_get_full_path (GNOME_FILE_ENTRY (install_theme_picker_cheat), TRUE);
++			else
++				filename = g_strdup (raw);
++			if (filename == NULL)
++				return;
++
++			gtk_widget_hide (GTK_WIDGET (dialog));
++
++			src_uri = gnome_vfs_uri_new (filename);
++			base = gnome_vfs_uri_extract_short_name (src_uri);
++			src = g_list_append (NULL, src_uri);
++			path = g_build_filename (g_get_home_dir (), ".metacity", "themes", base, NULL);
++			target = g_list_append (NULL, gnome_vfs_uri_new (path));
++
++			dlg = file_transfer_dialog_new ();
++			file_transfer_dialog_wrap_async_xfer (FILE_TRANSFER_DIALOG
++																						(dlg), src, target,
++																						GNOME_VFS_XFER_RECURSIVE, GNOME_VFS_XFER_ERROR_MODE_QUERY, GNOME_VFS_XFER_OVERWRITE_MODE_QUERY, GNOME_VFS_PRIORITY_DEFAULT);
++			gnome_vfs_uri_list_unref (src);
++			gnome_vfs_uri_list_unref (target);
++			g_free (base);
++			g_free (filename);
++			g_signal_connect (G_OBJECT (dlg), "cancel", G_CALLBACK (transfer_cancel_cb), path);
++			g_signal_connect (G_OBJECT (dlg), "done", G_CALLBACK (transfer_done_cb), path);
++			gtk_widget_show (dlg);
++		}
+ 	else
+ 		gtk_widget_hide (GTK_WIDGET (dialog));
+ }
+@@ -648,8 +504,9 @@
+ void
+ on_theme_folder_button_clicked (GtkButton * button, gpointer user_data)
+ {
+-	gchar *path, *command;
+-	GnomeVFSURI *uri;
++	gchar          *path, *command;
++	GnomeVFSURI    *uri;
++
+ 	if (metacity_version == "2.3")
+ 		path = g_strdup_printf ("%s/.metacity/themes", g_get_home_dir ());
+ 	else
+@@ -657,10 +514,10 @@
+ 	uri = gnome_vfs_uri_new (path);
+ 
+ 	if (!gnome_vfs_uri_exists (uri))
+-	{
+-		/* Create the directory */
+-		gnome_vfs_make_directory_for_uri (uri, 0775);
+-	}
++		{
++		 /* Create the directory */
++			gnome_vfs_make_directory_for_uri (uri, 0775);
++		}
+ 	gnome_vfs_uri_unref (uri);
+ 
+ 	command = g_strdup_printf ("nautilus --no-desktop %s", path);
+@@ -687,7 +544,7 @@
+ {
+ 	if (GTK_WIDGET (button) == lookup_widget (GTK_WIDGET (button), "version_button1"))
+ 		metacity_version = "2.3";
+-	else 
++	else
+ 		metacity_version = "2.4";
+ 	on_treeview1_realize (treeview1_cheat, user_data);
+-}
+\ No newline at end of file
++}

@@ -1,0 +1,16 @@
+          MODULE=libxfce4util-cvs
+         VERSION=beta
+         SOURCE=libxfce4util-$VERSION.tar.bz2
+     SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/libxfce4util
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+	 ENTERED=20021223
+	 UPDATED=`date -u +%Y%m%d`
+	   SHORT="Utility library required for XFce 4"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This is a library
+required by all other xfce4 modules. It provides several useful non-gui
+functions and some header files that make the build process of xfce 4 modules
+a bit more consistent (i18n, debugging, ...).
+EOF

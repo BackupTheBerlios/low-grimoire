@@ -1,0 +1,10 @@
+# Enable Xinerama-friendly window placement
+if  ! grep -q "XINERAMA" $MODULE_CONFIG; then
+  if query  "Enable Xinerama support?" y; then
+    echo "XINERAMA=y" >> $MODULE_CONFIG
+  else
+    echo "XINERAMA=n" >> $MODULE_CONFIG
+  fi
+fi
+
+

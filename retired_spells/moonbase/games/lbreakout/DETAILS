@@ -1,0 +1,17 @@
+          MODULE=lbreakout
+         VERSION=010315
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://ftp1.sourceforge.net/lgames/$SOURCE
+        WEB_SITE=http://lgames.sourceforge.net/index.php?project=LBreakout
+         ENTERED=20020429
+         UPDATED=20020429
+      MAINTAINER="jacksonje@health.missouri.edu"
+           SHORT="LBreakout is a brick breaking game."
+cat << EOF
+LBreakout is a nice breakout-style arcade game in the manner of Arkanoid.
+30 levels are waiting for you to be cleared and loads of power-ups will help 
+you with that task: extra balls, energy balls, extra lifes, weapons, glue, 
+bonus floors, paddle expansion and extra score. And, of course, there are some 
+maluses you should try to avoid like paddle freeze or paddle shrinkage.
+EOF

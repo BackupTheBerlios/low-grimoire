@@ -1,0 +1,2 @@
+depends gkrellm &&
+depends lm_sensors

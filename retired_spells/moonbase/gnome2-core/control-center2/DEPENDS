@@ -1,0 +1,4 @@
+depends gnome-desktop &&   
+#depends xscreensaver2 &&
+depends metacity 
+

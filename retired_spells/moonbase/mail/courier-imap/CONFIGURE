@@ -1,0 +1,9 @@
+if  ! grep -q "IMAP_BOOT"  $MODULE_CONFIG; then
+
+  if  query  "Invoke courier-imap at boot?" n; then
+    echo  "IMAP_BOOT=y"  >>  $MODULE_CONFIG
+  else
+    echo  "IMAP_BOOT=n"  >>  $MODULE_CONFIG
+  fi
+
+fi

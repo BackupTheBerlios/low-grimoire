@@ -1,0 +1,29 @@
+cp $SOURCE_DIRECTORY/mozilla-$VERSION-lunar/mozilla-lunar-bookmarks.html /usr/lib/mozilla-$VERSION/defaults/profile/bookmarks.html
+cp $SOURCE_DIRECTORY/mozilla-$VERSION-lunar/mozilla-lunar-bookmarks.html /usr/lib/mozilla-$VERSION/defaults/profile/US/bookmarks.html
+
+# Ugly, eeek, explains need for chrooted installs
+if [ "-d /usr/lib/mozilla-$VERSION/plugins" ] ; then
+  mv /usr/lib/mozilla-$VERSION/plugins/libnullplugin.so /usr/lib/mozilla-$VERSION
+  rm -Rf /usr/lib/mozilla-$VERSION/plugins
+fi
+ 
+# Symlink
+cd /usr/lib
+rm -Rf /usr/lib/mozilla
+ln -sf "mozilla-$VERSION" mozilla
+
+cd /usr/lib/mozilla-$VERSION
+mkdir -p /opt/lunar/plugins
+ln -sf /opt/lunar/plugins plugins
+
+export LD_LIBRARY_PATH="/usr/lib/mozilla-$VERSION:/usr/lib/mozilla-$VERSION/plugins:/usr/lib/mozilla-$VERSION/components"
+export MOZILLA_FIVE_HOME="/usr/lib/mozilla-$VERSION"
+ldconfig
+
+echo "skin,install,select,classic/1.0" >> chrome/installed-chrome.txt
+echo "locale,install,select,en-US" >> chrome/installed-chrome.txt
+
+./regxpcom
+./regchrome
+
+ln -sf /usr/lib/j2sdk1.4.1/jre/plugin/i386/mozilla/javaplugin_oji.so /usr/lib/mozilla/plugins/javaplugin_oji.so 

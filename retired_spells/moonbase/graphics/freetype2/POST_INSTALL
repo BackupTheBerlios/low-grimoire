@@ -1,0 +1,4 @@
+if module_installed pango; then
+  rm -f $BOOST_LOCK
+  lin -c pango
+fi

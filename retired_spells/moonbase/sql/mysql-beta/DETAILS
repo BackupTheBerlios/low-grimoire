@@ -1,0 +1,18 @@
+          MODULE=mysql-beta
+            BASE=mysql
+         VERSION=4.0.8-gamma
+#         VERSION=4.0.4-beta
+          SOURCE=$BASE-$VERSION.tar.gz
+      SOURCE_MD5="18746d03162b3da8529e2c57919c29a5"
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$BASE-$VERSION
+   SOURCE_URL[0]=http://mysql.fastmirror.com/Downloads/MySQL-4.0/$SOURCE
+        WEB_SITE=http://www.mysql.com
+         ENTERED=20021003
+         UPDATED=20021003
+           FUZZY=off
+           SHORT="MySQL is a widely used and fast SQL database server."
+cat << EOF
+MySQL is a widely used and fast SQL database server. It is a
+client/server implementation that consists of a server daemon (mysqld)
+and many different client programs/libraries.
+EOF

@@ -1,0 +1,12 @@
+          MODULE=xine-dvdnav
+         VERSION=0.9.13
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/dvd/$SOURCE
+        WEB_SITE=http://dvd.sourceforge.net/
+         ENTERED=20010927
+         UPDATED=20020814
+           SHORT="xine-dvdnav is a plugin for xine to give DVD support."
+cat << EOF
+plugin for xine to give DVD support
+EOF

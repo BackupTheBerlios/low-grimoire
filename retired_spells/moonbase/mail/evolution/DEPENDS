@@ -1,0 +1,34 @@
+depends  gtkhtml3       &&
+depends  libgnomeprint  &&
+depends  libgnomeui     &&
+
+optional_depends  "gnupg"       ""  ""  "for encrypted mail support"  &&
+optional_depends  "gnome-spell" ""  ""  "For spellcheck support"      &&
+
+optional_depends  "openssl"                                           \
+                  "--enable-openssl=yes                               \
+		  --with-openssl-includes=/usr/include/openssl        \
+		  --with-openssl-libs=/usr/lib"                       \
+		  "--enable-openssl=no"                               \
+		  "for SSL support"                                   &&
+		  
+optional_depends  "pilot-link" "--enable-pilotlinktest"               \
+                  ""                                                  \
+                  "for Palm support"                                  &&
+
+optional_depends  "gnome-pilot" "--enable-pilot-conduits=yes"         \
+                  ""                                                  \
+                  "for Palm Pilot support"                            &&
+                  
+optional_depends  "mozilla"                                           \
+                  "--with-nspr-includes=/usr/include/mozilla/nspr     \
+                   --with-nspr-libs=/usr/lib/mozilla                  \
+                   --with-nss-includes=/usr/include/mozilla           \
+                   --with-nss-libs=/usr/lib/mozilla"                  \
+                  ""                                                  \
+                  "for mozilla support"
+
+#optional_depends  "openldap"             \
+#                  "--with-openldap=yes"  \
+#                  ""                     \
+#                  "for LDAP support"

@@ -1,0 +1,35 @@
+          MODULE=mosfet-liquid
+         VERSION=0.9.6-pre4
+          SOURCE=${MODULE}${VERSION}.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}0.9.6pre4
+   SOURCE_URL[0]=http://www.mosfet.org/$SOURCE
+        WEB_SITE=http://www.mosfet.org/liquid.html
+         ENTERED=20020523
+         UPDATED=20030323
+           SHORT="mosfet-liquid is an interface style for KDE3."
+      MAINTAINER="JacksonJE@health.missouri.edu"
+
+cat << EOF
+* First style to use my translucent menu code, (well, actually my MegaGradient 
+was first but there was never an official release of that), and was the first 
+style to alphablend widgets.
+
+* Fast and efficent alphablending of widgets. Many widgets now utilize a full 
+alpha channel with negligable impact on performance or memory consumption.
+
+* High performance. No scaling is required, and caching (thus memory usage) is 
+kept to a minimum. Custom tile drawing and blending code is used for maximum 
+speed. I wanted to create a style engine that both looked cool and is usable 
+on an everyday basis by people doing stuff like compiling all day. I've even 
+gotten emails from a couple users using it over remote X terminals and the 
+report good speed results! :)
+
+* Colors are fully configurable. This is really cool with this style. It also 
+handles custom colors like KCalc's correctly. Check out the screenshots.
+
+* Mouse Hover is supported for Pushbuttons, ComboBoxes, RadioButtons, 
+CheckBoxes, and ScrollBars. This doesn't use the crappy "draw a box around the 
+widget" mouse hover, either, but makes the widget appear to light up.
+
+* Automagically themes the KDE panel. 
+EOF

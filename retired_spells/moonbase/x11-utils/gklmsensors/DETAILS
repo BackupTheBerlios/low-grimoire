@@ -1,0 +1,13 @@
+           MODULE=gklmsensors
+         VERSION=0.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+   SOURCE_URL[0]=$SFORGE_URL/$MODULE/$SOURCE
+      MAINTAINER=nhudson@speakeasy.net
+        WEB_SITE=http://$MODULE.sourceforge.net
+           SHORT="a sensor plugin for gkrellm"
+         ENTERED=20020731
+         UPDATED=20020731
+cat << EOF
+Its a System Sensor plugin for gkrellm
+EOF

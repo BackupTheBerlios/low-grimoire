@@ -1,0 +1,7 @@
+if  ! grep -q "SHADOW"  $MODULE_CONFIG; then
+  if  query  "Patch for menu shadowing (may cause problems)?" y; then
+    echo  "SHADOW=y"  >> $MODULE_CONFIG
+  else 
+    echo  "SHADOW=n"  >> $MODULE_CONFIG
+  fi
+fi

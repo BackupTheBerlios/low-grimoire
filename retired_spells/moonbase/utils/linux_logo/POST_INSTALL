@@ -1,0 +1,3 @@
+message "\n${MESSAGE_COLOR}You can add something like \"linux_logo -L10"\
+        "> /etc/issue\" \nto the bootmisc.sh init file to get an ansi displayed"\
+	"at your login prompt. \nUse issue.net for network logins.${DEFAULT_COLOR}\n"

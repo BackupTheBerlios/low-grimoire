@@ -1,0 +1,13 @@
+          MODULE=ksplashml
+         VERSION=0.95.2
+          SOURCE=$MODULE-$VERSION.tgz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://www.shadowcom.net/Software/ksplash-ml/$SOURCE
+        WEB_SITE=http://www.shadowcom.net/Software/ksplash-ml/
+         ENTERED=20020629
+         UPDATED=20020902
+           SHORT="KSplash/ML offers a highly configurable splash screen for KDE desktops."
+
+cat << EOF
+KSplash/ML offers a highly configurable splash screen for KDE desktops. Unlike the standard KDE Splash Screen (KSplash), this program offers multiple appearances, and now supports a highly customizable theming engine.
+EOF

@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# hotplug This scripts starts hotpluggable subsystems.
+#
+# chkconfig: 2345 01 99
+# description:	Starts and stops each hotpluggable subsystem. \
+#		On startup, may simulate hotplug events for devices \
+#		that were present at boot time, before filesystems \
+#		used by /sbin/hotplug became available.
+#
+#
+
+start () {
+	for RC in /etc/hotplug/*.rc ; do
+	    $RC start
+	done
+	touch /var/lock/hotplug
+}
+
+stop () {
+	for RC in /etc/hotplug/*.rc ; do
+            $RC stop
+        done
+        rm -f /var/lock/hotplug
+}
+
+restart () {
+	for RC in /etc/hotplug/*.rc ; do
+           $RC restart
+        done
+}
+
+status () {
+	for RC in /etc/hotplug/*.rc ; do
+	  $RC status
+	done
+}
+
+
+case "$1" in
+    start|stop|restart|status|install|uninstall)
+    ;;
+    *)
+         echo $"Usage: $0 {start|stop|restart|status}"
+	 exit 1
+    ;;
+esac
+
+. /lib/lsb/init-functions
+
+	 

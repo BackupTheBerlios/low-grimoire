@@ -1,0 +1,12 @@
+    MODULE=xfce4-cvs-profile
+   VERSION=beta
+  WEB_SITE=http://www.xfce.org
+MAINTAINER=jasper@moongroup.com
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE
+   ENTERED=20021223
+   UPDATED=20030324
+     SHORT="XFce 4 is a lightweight desktop environment based on GTK2."
+cat << EOF
+XFce 4 is a lightweight desktop environment based on GTK2. This is a snapshot
+of the CVS development tree. Don't use it on production systems.
+EOF

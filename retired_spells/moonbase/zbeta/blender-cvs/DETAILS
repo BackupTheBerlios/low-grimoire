@@ -1,0 +1,13 @@
+          MODULE=blender-cvs
+         VERSION=2.26
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.blender.org:/cvsroot/bf-blender:blender
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/blender
+        WEB_SITE=http://www.blender3d.org/
+         ENTERED=20030215
+         UPDATED=20030215
+           SHORT="3D editor for modeling, animation, and rendering."
+cat << EOF
+3D tool does everything from modeling, animation, rendering,
+and post-production to interactive creation and playback.
+EOF

@@ -1,0 +1,12 @@
+          MODULE=libgphoto2
+         VERSION=2.1.1
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/gphoto/$SOURCE
+        WEB_SITE=http://gphoto.sourceforge.net/
+         ENTERED=20030108
+         UPDATED=20030108
+           SHORT="the libraries for gphoto"
+cat << EOF
+libgphoto2 is the core library designed to allow access to digital camera by external programs.
+EOF

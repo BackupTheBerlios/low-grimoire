@@ -1,0 +1,4 @@
+depends  glade       &&
+depends  libgtop     &&
+depends  gnome-core  &&
+depends  guile

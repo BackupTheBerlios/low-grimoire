@@ -1,0 +1,5 @@
+depends  chkconfig  &&
+depends  modutils   &&
+depends  pciutils   &&
+depends  hwdata     &&
+depends  newt       

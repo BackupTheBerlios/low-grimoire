@@ -1,0 +1,12 @@
+          MODULE=docbook-dtd-xml
+         VERSION=4.1.2
+          SOURCE=docbookx412.tgz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/docbookx412
+   SOURCE_URL[0]=http://scrollkeeper.sourceforge.net/data/$SOURCE
+        WEB_SITE=http://www.oasis-open.org
+         ENTERED=20020515
+         UPDATED=20021124
+           SHORT="XML Parser for Docbook-DTD"
+cat << EOF
+Docbook-dtd-xml is the XML parser for docbook-dtd
+EOF

@@ -1,0 +1,40 @@
+depends  unzip       &&
+depends  w32codec    &&
+
+optional_depends  "libdvdread"     \
+		  ""               \
+		  ""               \
+		  "To read DVDs'"                      &&
+
+optional_depends  "SDL"            \
+                  "--enable-sdl"   \
+                  ""               \
+                  "to use SDL to output video signal"  &&
+
+optional_depends  "alsa-utils"     \
+                  ""               \
+                  ""               \
+                  "for ALSA sound support"             &&
+
+optional_depends  "MPlayer-qt"     \
+                  ""               \
+		  ""               \
+		  "for QuickTime support"              &&
+
+optional_depends  "MPlayer-rm"     \
+                  ""               \
+		  ""               \
+		  "For RealMedia support"              &&
+
+case  $GUI  in
+  y|Y|j|J)  depends  libpng          &&
+            depends  gtk+            &&
+	    depends  MPlayer-skins
+            ;;
+        *)
+            optional_depends  "libpng"         \
+                              "--enable-png"   \
+                              "--disable-png"  \
+                              "to display portable network graphics files"
+            ;;
+esac

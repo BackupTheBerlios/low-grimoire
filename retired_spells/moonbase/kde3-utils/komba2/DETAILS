@@ -1,0 +1,13 @@
+          MODULE=komba2
+         VERSION=0.7.3
+          SOURCE=${MODULE}_KDE3-${VERSION}beta.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://zeus.fh-brandenburg.de/~schwanz/files/$SOURCE
+        WEB_SITE=http://zeus.fh-brandenburg.de/~schwanz/php/komba.php3
+         ENTERED=20021023
+         UPDATED=20021023
+           SHORT="komba is an smb browser for kde3"
+
+cat << EOF
+komba is an smb browser for kde3
+EOF

@@ -1,0 +1,6 @@
+#list bash commands here to perform after install
+if `grep -q GTK2=y /etc/lunar/local/depends/wxGTK`; then
+  message "Your copy of wxGTK was built with GTK2 support."
+  message "This is not fully supported in audacity."
+  message "If you have problems please try gtk+ for wxGTK."
+fi

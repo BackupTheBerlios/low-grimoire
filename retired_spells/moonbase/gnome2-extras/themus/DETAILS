@@ -1,0 +1,14 @@
+           MODULE=themus
+         VERSION=0.1.5
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MODULE/0.1/$SOURCE
+        WEB_SITE=http://www.gnome.org
+         ENTERED=20021217
+         UPDATED=20030506
+           SHORT="Themus is a VFS application that will let you view
+themes in Nautilus"
+cat << EOF
+Themus is a VFS application that will let you view
+themes in Nautilus
+EOF

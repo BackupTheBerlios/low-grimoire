@@ -1,0 +1,33 @@
+cd $SOURCE_DIRECTORY
+CATALOGDIR="/usr/share/sgml/openjade-1.3"
+centralized="/etc/sgml/catalog"
+
+if ! [ -e "$centralized" ]; then
+     echo "Creating $centralized!" 
+     mkdir -p /etc/sgml
+     touch $centralized
+fi                                             &&
+
+/usr/bin/install-catalog --add $centralized $CATALOGDIR/dsssl/catalog       &&
+/usr/bin/install-catalog --add $centralized $CATALOGDIR/pubtext/catalog     &&
+/usr/bin/install-catalog --add $centralized $CATALOGDIR/contrib/catalog     &&
+/usr/bin/install-catalog --add $centralized $CATALOGDIR/unicode/catalog     &&
+
+message "Testing openjade install!"            &&
+export SGML_CATALOG_FILES=/usr/share/sgml/docbook/sgml-dtd-4.1/catalog      &&
+
+pwd
+mkdir testkit                                  &&
+( 
+  cd testkit                                   &&
+  wget http://docbook.sourceforge.net/release/dsssl/current/doc/testdata/jtest.sgm &&
+  wget http://docbook.sourceforge.net/release/dsssl/current/doc/testdata/jtest.dsl &&
+
+  /usr/bin/jade -t rtf -d jtest.dsl jtest.sgm  &&
+
+  if [ -e jtest.rtf ]; then
+    message ""
+    message "Openjade install is good!"
+  fi
+)
+

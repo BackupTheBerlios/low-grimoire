@@ -1,0 +1,16 @@
+          MODULE=xfdesktop-cvs
+         VERSION=beta
+          SOURCE=$MODULE-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/xfdesktop
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/xfdesktop
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+         ENTERED=20021223
+         UPDATED=`date -u +%Y%m%d`
+           SHORT="Utilities for XFce 4"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. These are utilities
+that provide very useful functionality to XFce 4, like a background image,
+mouse settings, a taskbar and a root menu.
+
+EOF

@@ -1,0 +1,12 @@
+          MODULE=man2html
+         VERSION=3.0.1
+	  SOURCE=$MODULE$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE$VERSION
+   SOURCE_URL[0]=http://www.oac.uci.edu/indiv/ehood/tar/$SOURCE
+        WEB_SITE=http://www.oac.uci.edu/indiv/ehood/man2html.html
+         ENTERED=20020707
+         UPDATED=20020707
+           SHORT="convert UNIX nroff(1) manual pages to HTML format"
+cat << EOF
+The man2html filter reads formatted nroff text from standard input (stdin) and writes a HTML document to standard output (stdout).
+EOF

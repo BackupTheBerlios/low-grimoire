@@ -1,0 +1,5 @@
+depends  bc    &&
+depends  glut  &&
+depends  zlib  &&
+depends  libglade2 
+

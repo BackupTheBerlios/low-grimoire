@@ -1,0 +1,5 @@
+depends  gtk+-2    &&
+depends  libglade2 &&
+depends  fribidi   &&
+optional_depends  "gucharmap" "" "" "enable character map for abiword" 
+

@@ -1,0 +1,15 @@
+          MODULE=module-init-tools
+         VERSION=0.9.11a
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$KERNEL_URL/pub/linux/kernel/people/rusty/modules/$SOURCE
+   SOURCE_URL[1]=ftp://ftp.kernel.org/pub/linux/kernel/people/rusty/modules/$SOURCE
+        WEB_SITE=http://www.kernel.org/
+         ENTERED=20030410
+         UPDATED=20030410
+           SHORT="module-init-tools contains utilities essential for a modular Linux 2.5 kernel."
+cat << EOF
+This package contains utilities that are intended to make a
+Linux modular kernel manageable for all users, administrators and
+distribution maintainers.
+EOF

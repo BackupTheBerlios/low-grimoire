@@ -1,0 +1,5 @@
+depends  gtk+-2 &&
+depends  libart_lgpl &&
+depends  aalib &&
+optional_depends "gimp-print" "" "--disable-print" "For gnome print support" &&
+optional_depends "gnome-desktop" "--enable-gnome-desktop" "" "For Gnome2 Support"

@@ -1,0 +1,4 @@
+depends     guile         &&
+depends     libglade      &&
+depends     ladspa_sdk
+

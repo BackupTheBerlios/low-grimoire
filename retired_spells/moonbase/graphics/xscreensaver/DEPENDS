@@ -1,0 +1,6 @@
+depends  glut	 &&
+depends  bc	    &&
+optional_depends "libxml" 	\
+	"--with-xml" 		\
+	"" 			\
+	"to enable brief screensaver descriptions"

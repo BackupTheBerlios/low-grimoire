@@ -1,0 +1,24 @@
+          MODULE=gkpccard
+         VERSION=0.5
+          SOURCE=gkPCcard_r0.5.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/gkPCcard_r0.5
+   SOURCE_URL[0]=http://www.peuchert.de/projects/gkPCcard/$SOURCE
+        WEB_SITE=http://www.peuchert.de/projects/gkPCcard/
+         ENTERED=20020720
+         UPDATED=20020720
+           SHORT="gkPCcard is a PCMCIA card monitor plugin for GKrellM."
+cat << EOF
+
+gkPCcard is a PCMCIA card monitor plugin for GKrellM. I made this
+plugin 'cause there was no feature in GKrellM that provided this, but
+I wanted to see which cards are inserted in the slots of my laptop.
+
+    * Displays the name of the card that is inserted
+    * Shows an image for each socket indicating whether a card is inserted
+    * Supports theming.
+    * Includes animation.
+    * Right-clicking the plugin opens a popup where you can execute commands on the inserted cards.
+    * PCcard schemes are supported. You can choose on from the popup.
+
+
+EOF

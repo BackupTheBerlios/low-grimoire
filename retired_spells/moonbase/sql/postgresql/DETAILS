@@ -1,0 +1,18 @@
+          MODULE=postgresql
+         VERSION=7.3.3
+        #VERSION=7.3.2
+          SOURCE=$MODULE-$VERSION.tar.gz
+      SOURCE_MD5=60e1efa3a0f34dae06e017f72cd2dcc9  
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=ftp://ftp.us.postgresql.org/v${VERSION}/$SOURCE
+        WEB_SITE=http://www.postgresql.org
+         ENTERED=20011113
+         UPDATED=20030531
+           FUZZY=off
+           SHORT="postgresql is a sophisticated Object-Relational DBMS"
+      MAINTAINER=nhudson2367@earthlink.net
+cat << EOF
+PostgreSQL is a sophsticated Object-Relational DBMS, supporting almost
+all SQL constructs, including subselects, trasactions and user defined
+types and functions.
+EOF

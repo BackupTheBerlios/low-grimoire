@@ -1,0 +1,4 @@
+depends  espgs        &&
+depends  freetype2    &&
+depends  gnome-libs   &&
+depends  gdk-pixbuf

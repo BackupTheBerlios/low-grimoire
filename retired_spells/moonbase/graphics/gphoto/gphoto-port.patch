@@ -1,0 +1,18 @@
+--- gphoto-0.4.3/src/callbacks.c.port	Wed Jan  3 12:37:56 2001
++++ gphoto-0.4.3/src/callbacks.c	Wed Jan  3 12:38:13 2001
+@@ -696,7 +696,6 @@
+ 	camera_selected = gtk_entry_get_text(
+ 		GTK_ENTRY(GTK_COMBO(combo)->entry));
+ 	strcpy(camera_model, camera_selected);
+-	set_camera(camera_model);
+ 
+ 	if (GTK_WIDGET_STATE(port0) == GTK_STATE_ACTIVE) {
+ 		sprintf(tempstring, "%s0", serial_port_prefix);
+@@ -734,6 +733,7 @@
+ 		save_config ();
+ 	}
+ 	close(sd);
++	set_camera(camera_model);
+ 	gtk_widget_destroy(dialog);
+ }
+ 

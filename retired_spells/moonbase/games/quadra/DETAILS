@@ -1,0 +1,32 @@
+           MODULE=quadra
+         VERSION=1.1.8
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$SFORGE_URL/quadra/$SOURCE
+        WEB_SITE=http://quadra.sourceforge.net
+         ENTERED=20020314
+         UPDATED=20020314
+      MAINTAINER=kazami@ntlworld.com
+           SHORT="An addictive action puzzle game with single player and multiplayer capabilities."
+cat << EOF
+From the Linux Game Tome's Quadra page:
+
+Quadra An open source, TCP/IP multiplayer Tetris-like game.
+
+Quadra Features:
+
+* Addictive puzzle game and competitive, action-packed multiplayer game all-in-one!
+* Incredibly smooth gameplay
+* Recursive line clearing allowing blocks to combine in violent chain reactions that will send your opponents crying back to their moms!
+* Block shadow to help you drop blocks with precision
+* 10 levels with colorful background images and matching sound effects
+* Integrated CD music player
+* Worldwide highscore table with recordings of your best performances
+* Fully configurable multiplayer mode with team play
+* Keep an eye on your opponents with the remote watch windows
+* Chat window
+* Powerful and flexible user interface
+* TCP/IP support for internet or LAN multiplayer games
+* Server administration tools to keep everything under control
+* Cheat-free, lag-free and just plain free internet play 
+EOF

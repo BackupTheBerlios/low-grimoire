@@ -1,0 +1,147 @@
+diff -ur cracklib-2.7.orig/Makefile cracklib-2.7/Makefile
+--- cracklib-2.7.orig/Makefile	Wed Dec 31 12:33:53 1997
++++ cracklib-2.7/Makefile	Fri Mar 15 11:33:01 2002
+@@ -9,12 +9,12 @@
+ ###
+ # set this to the absolute path (less extn) of compressed dict.
+ 
+-DICTPATH="/usr/local/lib/pw_dict"
++DICTPATH="/usr/share/dict/pw_dict"
+ 
+ ###
+ # Set this to the path of one or more files continaing wordlists.
+ 
+-SRCDICTS=/usr/dict/words
++SRCDICTS=/usr/share/dict/word.list
+ 
+ ###
+ # If you have installed the cracklib-dicts directory, use this
+@@ -37,6 +37,6 @@
+ 
+ install: all
+ 	@echo 'if "sort" dies from lack of space, see "util/mkdict"'
+-	util/mkdict $(SRCDICTS) | util/packer $(DICTPATH)
++	util/mkdict $(SRCDICTS) | LD_LIBRARY_PATH=cracklib util/packer $(DICTPATH)
+ 	touch installed
+ ###	@echo 'now go install passwd/passwd where you want it'
+diff -ur cracklib-2.7.orig/cracklib/Makefile cracklib,2.7/cracklib/Makefile
+--- cracklib-2.7.orig/cracklib/Makefile	Mon Dec 15 00:49:21 1997
++++ cracklib-2.7/cracklib/Makefile	Thu Mar 14 17:12:48 2002
+@@ -6,13 +6,13 @@
+ # and upwards.
+ ###
+ 
+-LIB=	libcrack.a
++LIB=	libcrack.so
+ OBJ=	fascist.o packlib.o rules.o stringlib.o
+-CFLAGS= -O -I../cracklib -DIN_CRACKLIB
++CFLAGS= -O3 -I../cracklib -DIN_CRACKLIB -fPIC
++LDFLAGS=-L.
+ 
+ $(LIB):	$(OBJ)
+-	ar rv $(LIB) $?
+-	-ranlib $(LIB)
++	gcc -shared -Wl,-soname,libcrack.so -o $@ $(OBJ)
+ 
+ clean:
+ 	-rm -f $(OBJ) $(LIB) *~
+diff -ur cracklib-2.7.orig/cracklib/fascist.c cracklib,2.7/cracklib/fascist.c
+--- cracklib-2.7.orig/cracklib/fascist.c	Wed Dec 31 12:26:46 1997
++++ cracklib-2.7/cracklib/fascist.c	Fri Mar 15 10:23:42 2002
+@@ -11,6 +11,9 @@
+ #include "packer.h"
+ #include <sys/types.h>
+ #include <pwd.h>
++#include <stdlib.h>
++#include <string.h>
++
+ 
+ #define ISSKIP(x) (isspace(x) || ispunct(x))
+ 
+@@ -659,7 +662,7 @@
+ 	return ("it does not contain enough DIFFERENT characters");
+     }
+ 
+-    strcpy(password, Lowercase(password));
++    strcpy(password, (char *)Lowercase(password));
+ 
+     Trim(password);
+ 
+@@ -722,7 +725,7 @@
+ 	}
+     }
+ 
+-    strcpy(password, Reverse(password));
++    strcpy(password, (char *)Reverse(password));
+ 
+     for (i = 0; r_destructors[i]; i++)
+     {
+diff -ur cracklib-2.7.orig/cracklib/packlib.c cracklib,2.7/cracklib/packlib.c
+--- cracklib-2.7.orig/cracklib/packlib.c	Fri Jul  9 23:22:58 1993
++++ cracklib-2.7/cracklib/packlib.c	Fri Mar 15 10:24:37 2002
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include "packer.h"
++#include <string.h>
+ 
+ static char vers_id[] = "packlib.c : v2.3p2 Alec Muffett 18 May 1993";
+ 
+diff -ur cracklib-2.7.orig/cracklib/rules.c cracklib,2.7/cracklib/rules.c
+--- cracklib-2.7.orig/cracklib/rules.c	Fri Jul  9 23:22:59 1993
++++ cracklib-2.7/cracklib/rules.c	Fri Mar 15 10:25:28 2002
+@@ -8,6 +8,8 @@
+ 
+ static char vers_id[] = "rules.c : v5.0p3 Alec Muffett 20 May 1993";
+ 
++#include <string.h>
++
+ #ifndef IN_CRACKLIB
+ 
+ #include "crack.h"
+diff -ur cracklib-2.7.orig/cracklib/stringlib.c cracklib,2.7/cracklib/stringlib.c
+--- cracklib-2.7.orig/cracklib/stringlib.c	Fri Jul  9 23:23:02 1993
++++ cracklib-2.7/cracklib/stringlib.c	Fri Mar 15 10:24:13 2002
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include "packer.h"
++#include <string.h>
+ 
+ static char vers_id[] = "stringlib.c : v2.3p2 Alec Muffett 18 May 1993";
+ 
+diff -ur cracklib-2.7.orig/util/Makefile cracklib,2.7/util/Makefile
+--- cracklib-2.7.orig/util/Makefile	Mon Dec 15 00:49:34 1997
++++ cracklib-2.7/util/Makefile	Thu Mar 14 17:42:02 2002
+@@ -15,24 +15,25 @@
+ #CFLAGS= -O -I../cracklib '-DCRACKLIB_DICTPATH="$(DICTPATH)"' -Bstatic
+ 
+ CFLAGS= -O -I../cracklib '-DCRACKLIB_DICTPATH="$(DICTPATH)"'
+-LIBS=	../cracklib/libcrack.a
++LIBS= -L../cracklib -lcrack
++LIB= ../cracklib/libcrack.so
+ 
+ all:	packer unpacker testnum teststr testlib
+ 	touch all
+ 
+-packer: packer.o $(LIBS)
++packer: packer.o $(LIB)
+ 	cc $(CFLAGS) -o $@ $@.o $(LIBS)
+ 
+-unpacker: unpacker.o $(LIBS)
++unpacker: unpacker.o $(LIB)
+ 	cc $(CFLAGS) -o $@ $@.o $(LIBS)
+ 
+-testnum: testnum.o $(LIBS)
++testnum: testnum.o $(LIB)
+ 	cc $(CFLAGS) -o $@ $@.o $(LIBS)
+ 
+-teststr: teststr.o $(LIBS)
++teststr: teststr.o $(LIB)
+ 	cc $(CFLAGS) -o $@ $@.o $(LIBS)
+ 
+-testlib: testlib.o $(LIBS)
++testlib: testlib.o $(LIB)
+ 	cc $(CFLAGS) -o $@ $@.o $(LIBS)
+ 
+ clean:

@@ -1,0 +1,7 @@
+if  !  grep  -q  "VIA4X"  $MODULE_CONFIG;  then
+  if    query "Enable AGP 4x mode on VIA chipsets, which might cause instability?" n
+  then  echo  "VIA4X=y"  >>  $MODULE_CONFIG
+  else  echo  "VIA4X=n"  >>  $MODULE_CONFIG
+  fi
+fi
+

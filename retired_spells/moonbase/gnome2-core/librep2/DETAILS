@@ -1,0 +1,15 @@
+           MODULE=librep2
+         VERSION=0.16.1
+          SOURCE=librep-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/librep-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/desktop/2.0/2.0.3/sources/$SOURCE
+SOURCE_URL[1]=ftp://ftp.gnome.org/pub/GNOME/desktop/2.0/2.0.3/sources/$SOURCE
+        WEB_SITE=http://www.dcs.warwick.ac.uk/~john/sw/librep.html
+         ENTERED=20020714
+         UPDATED=20021127
+           SHORT="librep is a shared library implementing a Lisp dialect."
+cat << EOF
+librep is a shared library implementing a Lisp dialect that is lightweight, 
+reasonably fast, and highly extensible. It contains an interpreter, byte-code
+compiler and virtual machine.
+EOF

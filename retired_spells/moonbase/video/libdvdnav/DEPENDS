@@ -1,0 +1,3 @@
+depends  xmms  &&
+depends  smpeg &&
+depends  libdvdread

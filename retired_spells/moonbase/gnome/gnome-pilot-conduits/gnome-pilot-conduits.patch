@@ -1,0 +1,23 @@
+? gnome-pilot-conduits.patch
+Index: mal-conduit/mal/client/unix/malsync.c
+===================================================================
+RCS file: /cvs/gnome/gnome-pilot-conduits/mal-conduit/mal/client/unix/malsync.c,v
+retrieving revision 1.8
+diff -u -r1.8 malsync.c
+--- mal-conduit/mal/client/unix/malsync.c	25 Apr 2002 16:43:54 -0000	1.8
++++ mal-conduit/mal/client/unix/malsync.c	14 May 2002 17:36:00 -0000
+@@ -1409,12 +1409,12 @@
+     signal(SIGSEGV, SigHandler);
+ #endif
+     
+-    if (!(sd = pi_socket(PI_AF_SLP, PI_SOCK_STREAM, PI_PF_PADP))) {
++    if (!(sd = pi_socket(PI_AF_PILOT, PI_SOCK_STREAM, PI_PF_DLP))) {
+         perror("pi_socket");
+         exit(1);
+     }
+     
+-    addr.pi_family = PI_AF_SLP;
++    addr.pi_family = PI_AF_PILOT;
+     strcpy(addr.pi_device, device);
+     
+     ret = pi_bind(sd, (struct sockaddr*)&addr, sizeof(addr));

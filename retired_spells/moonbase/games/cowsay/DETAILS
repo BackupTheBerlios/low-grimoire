@@ -1,0 +1,16 @@
+          MODULE=cowsay
+         VERSION=3.03
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://www.nog.net/~tony/warez/$SOURCE
+        WEB_SITE=http://www.nog.net/~tony/warez/cowsay.shtml
+         ENTERED=20020221
+         UPDATED=20020221
+           SHORT="A Configurable Speaking/Thinking Cow"
+cat << EOF
+Cowsay is basically a text filter. Send some text into it, and you get 
+a cow saying your text. Very easy to use, I would hope. All you need is 
+a working installation of Perl 5. And if you think a talking cow isn't 
+enough, cows can think too. All you have to do is run cowthink.
+EOF
+

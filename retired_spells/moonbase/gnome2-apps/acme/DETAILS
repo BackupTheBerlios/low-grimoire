@@ -1,0 +1,12 @@
+           MODULE=acme
+         VERSION=2.0.4
+          SOURCE=$MODULE-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=$GNOME_URL/sources/$MODULE/2.0/$SOURCE
+        WEB_SITE=http://developer.gnome.org/projects/gap/
+         ENTERED=20021112
+         UPDATED=20030526
+           SHORT="Acme"
+cat << EOF
+Acme
+EOF

@@ -1,0 +1,4 @@
+depends     Python  &&
+depends     perl    &&
+depends     CPAN    &&
+depends     slang

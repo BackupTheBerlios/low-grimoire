@@ -1,0 +1,16 @@
+           MODULE=gimp-freetype
+         VERSION=0.3
+          SOURCE=$MODULE-$VERSION.tar.gz
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+   SOURCE_URL[0]=http://freetype.gimp.org/$SOURCE
+        WEB_SITE=http://freetype.gimp.org
+         ENTERED=20021101
+         UPDATED=20021101
+           SHORT="Font Support for Gimp"
+cat << EOF
+The goal of this project is to get superb font support into
+The GIMP. As a first step, we develop a plug-in for Gimp-1.2
+based on the freetype2 library. Later (most probably for 
+Gimp-2.0) this might become a tool or a pluggable module.
+
+EOF

@@ -1,0 +1,13 @@
+          MODULE=xmms-arts
+         VERSION=0.4
+          SOURCE=xmmsarts-$VERSION.tar.bz2
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/${MODULE}-$VERSION
+   SOURCE_URL[0]=http://stukach.com/hosted/m.i.a/xmmsarts/$SOURCE
+        WEB_SITE=
+      MAINTAINER="kc8apf@kc8apf.net"
+         ENTERED=20020425
+         UPDATED=20020512
+           SHORT="Adds a aRts output plugin to XMMS"
+cat << EOF
+xmms-arts is an additional output plugin to XMMS for the KDE aRts sound server.
+EOF

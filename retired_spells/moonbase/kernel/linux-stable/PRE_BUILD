@@ -1,0 +1,15 @@
+cd       /usr/src
+rm  -rf  linux-$VERSION linux
+
+unpack  $SOURCE
+
+ln  -s     linux-$VERSION  linux
+
+if  [  -f   $CONFIG_CACHE/.config  ];  then
+  cp        $CONFIG_CACHE/.config  /usr/src/linux
+fi
+
+chown -R root.root /usr/src/linux-$VERSION
+cd /usr/src/linux-$VERSION
+sedit 's/EXTRAVERSION =/EXTRAVERSION = -stable/g' Makefile
+

@@ -1,0 +1,13 @@
+if  !  grep  -q  "GTK2"  $MODULE_CONFIG;  then
+  if    query  "Enable Gtk+ 2x support?" y
+  then  echo   "GTK2=y"  >>  $MODULE_CONFIG
+  else  echo   "GTK2=n"  >>  $MODULE_CONFIG
+  fi
+fi
+if  !  grep  -q  "UNICODE"  $MODULE_CONFIG;  then
+  if    query  "Enable Unicode support?" y
+  then  echo   "UNICODE=y"  >>  $MODULE_CONFIG
+  else  echo   "UNICODE=n"  >>  $MODULE_CONFIG
+  fi
+fi
+

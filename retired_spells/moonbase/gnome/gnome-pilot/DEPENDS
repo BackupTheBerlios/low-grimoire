@@ -1,0 +1,4 @@
+depends gob            &&
+depends control-center &&
+depends libglade       &&
+depends pilot-link

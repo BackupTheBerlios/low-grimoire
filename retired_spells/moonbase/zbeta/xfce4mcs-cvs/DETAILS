@@ -1,0 +1,16 @@
+          MODULE=xfce4mcs-cvs
+         VERSION=beta
+	  SOURCE=xfce-mcs-manager-$VERSION.tar.bz2
+      SOURCE_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/xfce-mcs-manager 
+         SOURCE2=xfce-mcs-plugins-$VERSION.tar.bz2
+     SOURCE2_URL=cvs://:pserver:anonymous@cvs.xfce.sourceforge.net:/cvsroot/xfce:xfce-devel/xfce-mcs-plugins
+SOURCE_DIRECTORY=$BUILD_DIRECTORY/$MODULE-$VERSION
+      MAINTAINER=jasper@moongroup.com
+        WEB_SITE=http://www.xfce.org
+         ENTERED=20030111
+         UPDATED=`date -u +%Y%m%d`
+           SHORT="XFce 4 settings manager"
+cat << EOF
+XFce 4 is a lightweight dektop environment based on GTK2. This module provides
+the settings manager.
+EOF
