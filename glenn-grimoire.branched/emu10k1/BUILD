@@ -4,7 +4,6 @@
 #  make                                       &&
 #  cd ..                                      &&
 
-#  make                                       &&
   make                                       &&
   make tools                                 &&
   prepare_install                            &&

@@ -1,8 +1,7 @@
 (
   
-  cd cudd-2.3.0.1                         &&
-  make                                    &&
-  cd ../nusmv                             &&
+  make -C cudd-2.3.0.1                    &&
+  cd nusmv                                &&
   sed -i "s:/include:/include/NuSMV:" Makefile.in &&
   default_build                           &&
   cp -r examples contrib /usr/share/nusmv &&

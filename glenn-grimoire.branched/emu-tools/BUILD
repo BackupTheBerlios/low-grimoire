@@ -1,8 +1,6 @@
 (
 
-  cd dbgemu                                  &&
-  make                                       &&
-  cd ..                                      &&
+  make -C dbgemu                             &&
   make                                       &&
   prepare_install                            &&
   make    install  prefix=/usr               &&
