@@ -2,7 +2,7 @@
   CATEGORY="development"
  ATTRIBUTE="perl library"
     SOURCE="$SPELL-$VERSION"
-  HOMEPAGE="http://www.goof.com/pcg/marc/"
+  HOMEPAGE="http://gtk2-perl.sourceforge.netp"
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
        REQ="perl gtk+ Glib"
      SHORT="Perl bindings to the 2.x series of the Gtk+ graphical user interface library."
