@@ -1,11 +1,9 @@
-  VERSION=( "0.24.2" )
-  DIRECTORY_VERSION=( "4807" )
+  VERSION=( "0.35.1" "0.24.2" )
   CATEGORY="development"
   ATTRIBUTE="console"
   HOMEPAGE="http://subversion.tigris.org"
-  URL="http://subversion.tigris.org/files/documents/15"
-  SOURCE="$DIRECTORY_VERSION/subversion-$VERSION"
-  REQ="neon zlib openssl"
+  URL="http://subversion.tigris.org/tarballs"
+  REQ="httpd neon zlib openssl"
   OPT="db:--with-berkeley-db::db support"
   FRESHMEAT="subversion"
   ESTIMATE="2553"
