@@ -1,0 +1,24 @@
+  VERSION="2004-02-17"
+ CATEGORY="library"
+ATTRIBUTE="new"
+SOURCE="netclasses-$VERSION.tar.gz"
+ HOMEPAGE="http://aeruder.gnustep.us/netclasses/index.php"
+URL="http://aeruder.gnustep.us/files/netclasses"
+FRESHMEAT="netclasses"
+ESTIMATE="22"
+REQ="gnustep"
+    SHORT="netclasses is the GNUstep Net Classes package"
+LONG="
+Netclasses is a small framework of asynchronous Objective-C networking
+classes that work under both the Cocoa and the GNUstep frameworks. It also
+features a very simple yet powerful IRC interface which powers both TalkSoup
+and iTonamaton.
+"
+
+build() {
+
+. /usr/GNUstep/System/Makefiles/GNUstep.sh &&
+make					   &&
+prepare_install				   &&
+make install
+}

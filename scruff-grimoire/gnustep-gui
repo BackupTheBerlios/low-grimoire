@@ -1,0 +1,28 @@
+inherit gnustep
+unset OPT ASSUME build
+  VERSION="0.9.2"
+SOURCE="gnustep-gui-$VERSION.tar.gz"
+FRESHMEAT="gnustep"
+      REQ="gnustep-base"
+ ESTIMATE="263"
+    SHORT="GNU OpenStep API"
+LONG="
+GNUstep is a set of general-purpose Objective-C libraries based on the
+OpenStep standard developed by NeXT (now Apple) Inc. The libraries consist
+of everything from foundation classes, such as dictionaries and arrays, to
+GUI interface classes such as windows, sliders, buttons, etc.
+"
+
+build() {
+if [ -z $(echo "$GCC_LANGUAGES" | grep "objc") ]
+	then
+	echo "You must put objc into GCC_LANGUAGES in your cpref and cast"
+	echo "gcc before casting this package."
+	fi &&
+! [ -z $(echo "$GCC_LANGUAGES" | grep "objc") ] &&
+. /usr/GNUstep/System/Makefiles/GNUstep.sh &&
+./configure	&&
+make		&&
+prepare_install	&&
+make install
+}

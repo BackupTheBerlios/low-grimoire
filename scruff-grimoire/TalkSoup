@@ -1,0 +1,25 @@
+  VERSION="2004-01-13"
+ CATEGORY="chat"
+ATTRIBUTE="new"
+SOURCE="TalkSoup-$VERSION.tar.gz"
+ HOMEPAGE="http://aeruder.gnustep.us/netclasses/index.php"
+URL="http://aeruder.gnustep.us/files/talksoup"
+FRESHMEAT="talksoup"
+ESTIMATE="237"
+REQ="gnustep netclasses"
+    SHORT="GNUstep IRC client"
+LONG="
+TalkSoup is an IRC client using either the GNUstep frameworks or the Mac OS
+X frameworks. It has a minimalistic feel and is by far one of the most
+extensible designs in existence. With its very modular design, one can load
+bundles/plugins to extend the IRC client to be as fully featured as one
+desires.
+"
+
+build() {
+
+. /usr/GNUstep/System/Makefiles/GNUstep.sh &&
+make					   &&
+prepare_install				   &&
+make install
+}

@@ -1,0 +1,31 @@
+  VERSION="release"
+ CATEGORY="library"
+ATTRIBUTE="new concurrent"
+ASSUME="off"
+ HOMEPAGE="http://www.gnustep.org"
+   URL="http://ftp.gnustep.org/pub/gnustep/core"
+FRESHMEAT="gnustep"
+    OPT[0]="WindowMaker:::for a GNUStep GUI"
+    OPT[1]="libxml2:::for XML support (recommended)"
+    OPT[2]="openssl:::for https support"
+    OPT[3]="tiff:::for tiff support"
+    OPT[4]="jpeg:::for jpeg support"
+    OPT[5]="libpng:::for png support"
+    OPT[6]="gdb:::to debug GNUstep apps"
+    OPT[7]="teTeX:::to generate the GNUstep docs"
+    OPT[8]="libungif:::for gif support"
+    OPT[9]="libart_lgpl:::for 2D graphics support"
+   OPT[10]="freetype:::for font support"
+   OPT[11]="audiofile:::for audio support"
+       REQ="gmp zlib gnustep-back"
+    SHORT="gnustep is the GNU OpenStep API"
+LONG="
+GNUstep is a set of general-purpose Objective-C libraries based on the
+OpenStep standard developed by NeXT (now Apple) Inc. The libraries consist
+of everything from foundation classes, such as dictionaries and arrays, to
+GUI interface classes such as windows, sliders, buttons, etc.
+"
+
+build(){
+echo "$SPELL installed"
+}

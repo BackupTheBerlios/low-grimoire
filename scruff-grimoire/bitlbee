@@ -1,0 +1,38 @@
+  VERSION=( "0.83" "0.80" "0.74" "0.73")
+ CATEGORY="chat"
+ATTRIBUTE="client|server"
+   SOURCE="bitlbee-$VERSION"
+      URL="http://get.bitlbee.org/src"
+ HOMEPAGE="http://www.bitlbee.org/main.php/intro.html"
+   OPT[0]="epic4:::to use as a front-end to bitlbee"
+   OPT[1]="ircii:::to use as a front-end to bitlbee"
+   OPT[2]="irssi:::to use as a front-end to bitlbee"
+   OPT[3]="xchat:::to use as a front-end to bitlbee"
+      REQ="glib-v1.2"
+ ESTIMATE="108"
+FRESHMEAT="bitlbee"
+    SHORT="BitlBee: An IRC to other chat networks gateway"
+     LONG="
+BitlBee emulates an IRC server. Everything that is said on this server
+is forwarded to users on the MSN/ICQ/Jabber/Yahoo! networks, and
+responses are also returned. 
+"
+
+build() {
+
+(
+  ./configure  --prefix=/usr         &&
+  make                               &&
+  echo "Sorcerer Specific follows"   &&
+  cd utils                           &&
+  echo "Compiling bitlbeed.c"        &&
+  gcc bitlbeed.c -o bitlbeed         &&
+  cd ..                              &&
+  echo "End Sorcerer Specific"       &&
+  prepare_install                    &&
+  make    install		     &&
+  install -p -m 0755 -o root -g 0 utils/bitlbeed /usr/sbin
+
+) > $C_FIFO 2>&1
+
+}

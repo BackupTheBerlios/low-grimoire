@@ -1,0 +1,25 @@
+inherit gnustep
+unset VERSION OPT REQ ASSUME build
+  VERSION="0.9.2"
+SOURCE="gnustep-back-$VERSION.tar.gz"
+FRESHMEAT="gnustep"
+      REQ="gnustep-gui"
+ ESTIMATE="84"
+    SHORT="gnustep-back is part of the GNU OpenStep API"
+LONG="
+gnustep-back is the back-end of GNUstep.
+"
+
+build() {
+if [ -z $(echo "$GCC_LANGUAGES" | grep "objc") ]
+	then
+	echo "You must put objc into GCC_LANGUAGES in your cpref and cast"
+	echo "gcc before casting this package."
+	fi &&
+! [ -z $(echo "$GCC_LANGUAGES" | grep "objc") ] &&
+. /usr/GNUstep/System/Makefiles/GNUstep.sh &&
+./configure	&&
+make		&&
+prepare_install	&&
+make install
+}

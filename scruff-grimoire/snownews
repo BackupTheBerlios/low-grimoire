@@ -1,0 +1,25 @@
+   VERSION=( "1.5.3" )
+  CATEGORY="news"
+ ATTRIBUTE="console new"
+    SOURCE="download/snownews-$VERSION"
+  HOMEPAGE="http://home.kcore.de/~kiza/software/snownews"
+       URL="http://home.kcore.de/~kiza/software/snownews"
+       REQ="ncurses libxml2"
+     SHORT="snownews is an rss reader."
+LONG="
+Snownews is a text mode RSS/RDF newsreader. It supports all versions of RSS
+natively and supports other formats via plugins.
+
+The program depends on ncurses for the user interface and uses libxml2 for
+XML parsing. ncurses must be at least version 5.0. It should work with any
+version of libxml2. 
+"
+
+build() {
+
+./configure  --prefix=/usr         &&
+make             CXX=g++           &&
+prepare_install                    &&
+make    install  CXX=g++
+
+}

@@ -1,0 +1,24 @@
+  VERSION="1.9"
+ CATEGORY="library"
+ATTRIBUTE="new"
+SOURCE="ffcall-$VERSION"
+ HOMEPAGE="http://www.haible.de/bruno/packages-ffcall.html"
+   URL="http://www.haible.de/bruno/gnu"
+FRESHMEAT="ffcall"
+ ESTIMATE="120"
+    SHORT="ffcall is a foreign function call interface"
+LONG="
+ffcall is a collection of four libraries which can be used to build foreign
+function call interfaces in embedded interpreters.
+"
+
+build() {
+
+
+configure	--prefix=/usr			\
+		--bindir=/usr/bin		\
+		--sysconfdir=/etc/ffcall	&&
+make		&&
+prepare_install	&&
+make install
+}
