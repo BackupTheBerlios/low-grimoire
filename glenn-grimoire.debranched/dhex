@@ -1,0 +1,36 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.54" )
+ CATEGORY="development editor"
+ATTRIBUTE="console"
+ HOMEPAGE="http://dettus.dyndns.org/dhex"
+   SOURCE="$SPELL/${SPELL}_$VERSION"
+      URL="http://dettus.dyndns.org"
+      REQ=( "ncurses" )
+ ESTIMATE="115"
+DESC="DHEX is just another Hexeditor with a Diff-mode for ncurses. It makes heavy use of colors and is themeable.
+DHEX is just another Hexeditor with a Diff-mode for ncurses. It makes heavy use of colors and is themeable.
+"
+
+build() {
+
+  patch -p0 << 'EOF'
+--- Makefile~   2004-11-10 22:46:12.000000000 -0600
++++ Makefile    2004-11-10 22:46:53.000000000 -0600
+@@ -1,7 +1,7 @@
+ CC=gcc
+-#CFLAGS=-DLINUX=1 -O3 -Wall -I/homes/tdettbar/local/include
++CFLAGS=-DLINUX=1 -O3 -Wall -I/homes/tdettbar/local/include
+ #CFLAGS=-DHPUX=1 -O3 -Wall -I/homes/tdettbar/local/include
+-CFLAGS=-DFREEBSD=1 -O3 -Wall -I/homes/tdettbar/local/include
++#CFLAGS=-DFREEBSD=1 -O3 -Wall -I/homes/tdettbar/local/include
+ #CFLAGS=-DSOLARIS=1 -O3 -Wall -I/homes/tdettbar/local/include
+ #CFLAGS=-DIRIX=1 -O3 -Wall -I/homes/tdettbar/local/include
+ LDFLAGS=-L/homes/tdettbar/local/lib
+EOF
+
+  make                                  &&
+  prepare_install                       &&
+  install -o root -g root -m 755 $SPELL /usr/bin
+
+}

@@ -1,0 +1,28 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.22" )
+ CATEGORY="development editor"
+ATTRIBUTE="console"
+ HOMEPAGE="http://bedlinux.tripod.com"
+   SOURCE="$SPELL-$VERSION.src.tar.gz"
+      URL="http://bedlinux.tripod.com/download"
+      REQ=( "ncurses" )
+ ESTIMATE="115"
+DESC="Menu driven binary editor.
+Menu driven binary editor. Dataformats are ascii, unsigned and signed
+integers, float, bitflags, bitfields, labels, ebcdic and time_t. Different
+sizes and byte ordenings are possible. Datatypes can be used in structures.
+Other dataformats, filters and procedures can be defined in plugins.
+Contains copy, past, undo, redo, search, replace, marks, record/play and
+context sensitive help.
+"
+
+build() {
+
+  ./configure --prefix=/usr             \
+              $OPTS                     &&
+  make dep all                          &&
+  prepare_install                       &&
+  make    install
+
+}

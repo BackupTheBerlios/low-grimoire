@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.11" )
+ CATEGORY="development editor"
+ATTRIBUTE="console"
+ HOMEPAGE="http://shed.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "ncurses" )
+ ESTIMATE="115"
+DESC="shed is an easy to use hex editor written for unix/linux using ncurses, with a friendly pico-style interface.
+shed is an easy to use hex editor written for unix/linux using ncurses, with a friendly pico-style interface.
+"
