@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.0" "0.8.2" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="ggi/$SPELL-$VERSION.src"
+ HOMEPAGE="http://www.ggi-project.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "libgii" )
+#FRESHMEAT=""
+DESC="LibGGIGCP is a generic color and palette management extension.
+LibGGIGCP is a generic color and palette management extension. It supports
+conversion between different color spaces such as RGBA, YUV, HSV and CMYK.
+Furthermore it supports a generic color-blending, which can also be used
+for transluency effects.
+"
