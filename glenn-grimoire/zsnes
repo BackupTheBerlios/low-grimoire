@@ -1,12 +1,13 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=("136")
+  VERSION=( "142" "141" "136" )
  CATEGORY="game emulator"
 ATTRIBUTE="x11"
  HOMEPAGE="http://www.zsnes.com"
    SOURCE="zsnes/zsnes${VERSION}src.tar.gz"
       URL="$SOURCEFORGE_URL"
       REQ=( "SDL" )
+     OPTS="--with-opengl-prefix=/usr/X11R6"
  ESTIMATE="115"
 FRESHMEAT="zsnes"
 DESC="ZSNES is an SNES emulator for i386 machines running Linux, DOS, or Windows
