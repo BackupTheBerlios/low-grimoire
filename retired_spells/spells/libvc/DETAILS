@@ -1,11 +1,11 @@
-   VERSION=( "002" )
+   VERSION=( "003" "002" )
   CATEGORY="library"
  ATTRIBUTE="development"
   HOMEPAGE="http://rolo.sf.net/"
        URL="$SOURCEFORGE_URL"
     SOURCE="rolo/libvc-$VERSION.tar.bz2"
        REQ="flex bison grep"
-  ESTIMATE="145"
+  ESTIMATE="158"
  FRESHMEAT="libvc"
      SHORT="Libvc is a vCard library which was written using 'flex' and 'bison'"
 
