@@ -1,0 +1,18 @@
+  VERSION=( "0.1.12" )
+  CATEGORY="net"
+  ATTRIBUTE="x11"
+  HOMEPAGE="http://cheops-ng.sourceforge.net"
+  URL="$SOURCEFORGE_URL"
+  SOURCE="cheops-ng/cheops-ng-$VERSION"
+  FRESHMEAT="cheops-ng"
+  REQ="adns gnome-libs gtk+ libxml nmap"
+  ESTIMATE=
+  SHORT="A network management tool."
+  cat << EOF
+  Cheops-ng is a network management tool for mapping 
+  and monitoring your network. It has host/network discovery functionality 
+  and OS detection,and does a port scan of each computer to tell what 
+  services are running. It can probe FTP, HTTP, ssh, email (port 25), 
+  news, IMAP, and VNC to see what version and type of server is 
+  running on those ports.
+  EOF
