@@ -8,6 +8,6 @@ ATTRIBUTE="server"
       REQ="openssl Linux-PAM db postgresql"
 #FRESHMEAT=""
     SHORT="Jabberd 2.0 server"
-cat << EOF
+stream << EOF
 Jabberd 2.0 server
 EOF

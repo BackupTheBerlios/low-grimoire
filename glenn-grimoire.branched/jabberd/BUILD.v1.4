@@ -10,13 +10,13 @@
   make                        &&
   prepare_install             &&
   make install                &&
-  mkdir -p /usr/share/$SPELL  &&
-  cp generateSSLkey jabber.xml /usr/share/jabberd,$VERSION &&
-  mkdir -p  /etc/$SPELL       &&
-  cp jabber.xml /etc/$SPELL   &&
-  mkdir -p  /usr/lib/$SPELL   &&
+  mkdir -p /usr/share/$BSPELL &&
+  cp generateSSLkey jabber.xml /usr/share/$BSPELL &&
+  mkdir -p  /etc/$BSPELL      &&
+  cp jabber.xml /etc/$BSPELL  &&
+  mkdir -p  /usr/lib/$BSPELL  &&
   cp jsm/jsm.so xdb_file/xdb_file.so pthsock/pthsock_client.so \
-     dnsrv/dnsrv.so dialback/dialback.so /usr/lib/$SPELL &&
-  mkdir -p /var/spool/$SPELL
+     dnsrv/dnsrv.so dialback/dialback.so /usr/lib/$BSPELL &&
+  mkdir -p /var/spool/$BSPELL
 
 ) > $C_FIFO 2>&1
