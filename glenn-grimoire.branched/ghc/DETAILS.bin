@@ -1,9 +1,9 @@
-   VERSION=( "6.0.1-i386-unknown-linux" )
+   VERSION=( "6.0.1" )
   CATEGORY="compiler"
  ATTRIBUTE="console"
-    SOURCE="$SPELL-$VERSION"
-  HOMEPAGE="http://www.haskell.org/ghc/download_ghc_601.html"
-       URL="http://www.haskell.org/ghc/dist/6.0.1"
+    SOURCE="$SPELL-$VERSION-i386-unknown-linux"
+  HOMEPAGE="http://www.haskell.org/ghc"
+       URL="http://www.haskell.org/ghc/dist/$VERSION"
        REQ="readline ncurses"
 # FRESHMEAT="ethereal"
      SHORT="Glascow Haskell Compiler (binary)"
