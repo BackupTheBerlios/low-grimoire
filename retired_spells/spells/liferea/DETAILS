@@ -6,7 +6,7 @@
   SOURCE="$SPELL/$SPELL-$VERSION"
   FRESHMEAT="liferea"
   REQ="libxml2 gtk+ gtkhtml libgtkhtml"
-  ESTIMATE=233
+  ESTIMATE=68
   SHORT="A FeedReader clone for GNU/Linux."
   cat << EOF
   Liferea (Linux Feed Reader) is an RSS/RDF feed
