@@ -1,0 +1,12 @@
+  VERSION=( "1.5" )
+ CATEGORY="network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ="bluez-libs"
+#FRESHMEAT=""
+    SHORT="HCIDump - HCI packet analyzer."
+cat << EOF
+HCIDump - HCI packet analyzer.
+EOF

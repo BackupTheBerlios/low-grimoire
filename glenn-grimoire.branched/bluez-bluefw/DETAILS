@@ -1,0 +1,12 @@
+  VERSION=( "0.9" )
+ CATEGORY="utility"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bluez.sourceforge.net"
+      URL="http://bluez.sourceforge.net/download"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="Bluetooth device FirmWare loader."
+cat << EOF
+Bluetooth device FirmWare loader.
+EOF
