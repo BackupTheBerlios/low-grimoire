@@ -6,7 +6,7 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://libtorrent.rakshasa.no/"
        URL="http://libtorrent.rakshasa.no/downloads"
-       REQ=("libtorrent curl")
+       REQ=("libtorrent curl ncurses")
  FRESHMEAT="libtorrent"
   ESTIMATE="200"
       DESC="rtorrent is a client written for libtorrent.
