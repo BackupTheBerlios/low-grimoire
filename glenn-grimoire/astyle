@@ -12,6 +12,7 @@ Source Codes
 "
 
 build() {
+  sed -i "s:-O2:-O2 -fpermissive:" Makefile &&
   make                          &&
   prepare_install               &&
   mkdir -p /usr/doc/$SPELL/     &&
