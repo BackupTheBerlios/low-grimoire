@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://kbs.cs.tu-berlin.de/~jutta/toast.html"
       URL="ftp://ftp.gnophone.com/pub/gnophone"
 #      REQ=""
-#FRESHMEAT=""
+FRESHMEAT="gsm"
 DESC="GSM 06.10 compresses frames of 160 13-bit samples into 260 bits.
 GSM 06.10 compresses frames of 160 13-bit samples (8 kHz sampling
 rate, i.e. a frame rate of 50 Hz) into 260 bits; for compatibility

@@ -10,7 +10,7 @@ ATTRIBUTE="console"
       REQ=( ""
             "ncurses::--without-curses:add curses support" )
    OPT[0]="ncurses::--without-curses:add curses support"
-#FRESHMEAT=""
+FRESHMEAT="gnugrub"
 DESC="GNU GRUB is a Multiboot boot loader.
 GNU GRUB is a Multiboot boot loader. It was derived from GRUB, GRand
 Unified Bootloader, which was originally designed and implemented by Erich
