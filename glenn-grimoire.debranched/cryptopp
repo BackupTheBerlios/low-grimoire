@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "521" )
+ CATEGORY="encryption"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL$VERSION.zip"
+ HOMEPAGE="http://www.cryptopp.com"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="Crypto++ Library is a free C++ class library of cryptographic schemes.
+Crypto++ Library is a free C++ class library of cryptographic schemes.
+"
+
+build() {
+  sed -i "s: -g::" GNUmakefile      &&
+  echo -e "\nlibcryptopp.so: \$(LIBOBJS)\n\t\$(CXX) -shared -Wl,-soname,\$@.5.2.1 -o \$@ \$(LIBOBJS)\n" >> GNUmakefile &&
+  make all libcryptopp.so           &&
+  prepare_install                   &&
+  mv cryptest.exe /usr/bin/cryptest &&
+  mv libcryptopp.* /usr/lib         &&
+  mkdir -p /usr/include/$SPELL      &&
+  cp *h /usr/include/$SPELL
+}

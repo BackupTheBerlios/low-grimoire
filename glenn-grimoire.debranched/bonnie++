@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+
+  VERSION=( "1.03a" )
+ CATEGORY="file-system disk"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.coker.com.au/bonnie++"
+      URL="http://www.coker.com.au"
+#      REQ=( "" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="Bonnie++ is a benchmark suite that is aimed at performing a number of simple tests of hard drive and file system performance.
+Bonnie++ is a benchmark suite that is aimed at performing a number of
+simple tests of hard drive and file system performance.
+"
+
+build() {
+  default_build &&
+  mkdir -p /usr/doc/$SPELL &&
+  cp readme.html /usr/doc/$SPELL
+}
