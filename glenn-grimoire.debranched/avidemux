@@ -1,14 +1,15 @@
-   VERSION=( "2.0.24" )
+   VERSION=( "2.0.28" )
   CATEGORY="video-editor"
  ATTRIBUTE="library x11"
-    SOURCE="avidemux-$VERSION"
-      URL="http://fixounet.free.fr/avidemux/"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+#       URL="http://fixounet.free.fr/avidemux/"
+       URL="http://download.berlios.de"
   HOMEPAGE="http://fixounet.free.fr/avidemux/"
        REQ="gtk+ glib mad,lib libxml2 nasm"
-    OPT[0]="XviD::For Alternate Mpeg-4 Encoding"
-    OPT[1]="lame::For MP3 Encoding"
-    OPT[2]="a52dec::For AC3 Decoding"
-    OPT[3]="libvorbis::For Ogg Vorbis encoding/decoding"
+    OPT[0]="XviD:::For Alternate Mpeg-4 Encoding"
+    OPT[1]="lame:::For MP3 Encoding"
+    OPT[2]="a52dec:::For AC3 Decoding"
+    OPT[3]="libvorbis:::For Ogg Vorbis encoding/decoding"
   ESTIMATE="1466"
  FRESHMEAT="avidemux"
      SHORT="A graphical video editor supporting many formats"
@@ -16,3 +17,8 @@ LONG="
 A graphical video editor supporting many formats
 "
 
+build(){
+    # need to run aclocal cause it is distributed needing 1.8, but 1.9.x is the newest
+    aclocal && automake && autoconf &&
+    default_build
+}
