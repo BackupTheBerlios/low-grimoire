@@ -6,7 +6,7 @@
        OPT="xmms:::for xmms support"
     SOURCE="netdragon/superkaramba-$VERSION"
        REQ="kde,libs libart_lgpl qt-x11-free Python"
-  ESTIMATE=135
+  ESTIMATE=485
  FRESHMEAT="SuperKaramba"
      SHORT="SuperKaramba is a tool that allows anyone to easily create and run little interactive widgets on a KDE"
 stream << EOF
