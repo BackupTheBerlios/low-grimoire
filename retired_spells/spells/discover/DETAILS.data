@@ -8,7 +8,7 @@
        REQ=""
        OPT=""
      SHORT="discover,data provides hardware information data for discover"
-cat << EOF
+stream << EOF
 Discover,data package provides hardware information data for discover.
 Discover is a cross-platform hardware detection system that uses 
 system-dependent modules (selected at build time) for detecting 

@@ -6,6 +6,6 @@
        REQ="DBI perl postgresql"
   ESTIMATE="26"
      SHORT="Pg extension for DBD"
-cat << EOF
+stream << EOF
 Pg extension for DBD
 EOF

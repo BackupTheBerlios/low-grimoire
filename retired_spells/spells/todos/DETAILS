@@ -8,7 +8,7 @@
  FRESHMEAT="todos"
      SHORT="todos is a simple, generic, multi-user, database-free todo list manager and tracking system"
 
-cat << EOF
+stream << EOF
 todos is a simple, generic, multi-user, database-free todo list manager 
 and tracking system. Its interface is generated from a simple data 
 description file in XML

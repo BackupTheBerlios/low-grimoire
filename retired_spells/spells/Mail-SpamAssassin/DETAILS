@@ -8,7 +8,7 @@
  FRESHMEAT="spamassassin"
      SHORT="SpamAssassin is a mail filter that uses a wide range of heuristic tests on mail headers and body text to identify spam"
 
-cat << EOF
+stream << EOF
 SpamAssassin is a mail filter that uses a wide range of heuristic tests on mail headers and 
 body text to identify spam. Once identified, the mail can then be optionally tagged as spam 
 for later filtering. It provides a command line tool to perform filtering, a client-server 

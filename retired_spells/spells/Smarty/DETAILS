@@ -7,7 +7,7 @@
   ESTIMATE=5
  FRESHMEAT="Smarty PHP template engine"
      SHORT="Smarty is a template engine for PHP"
-cat << EOF
+stream << EOF
 Smarty is a template engine for PHP. Many other template engines for 
 PHP provide basic variable substitution and dynamic block functionality. 
 Smarty takes a step further to be a "smart" template engine, adding features 

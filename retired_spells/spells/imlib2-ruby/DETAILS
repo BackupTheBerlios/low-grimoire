@@ -7,6 +7,6 @@
        REQ="imlib2 ruby"
   ESTIMATE="2"
      SHORT="Extension for ruby to imlib2"
-cat << EOF
+stream << EOF
 An extension for ruby to access imlib2 to do some image processing
 EOF

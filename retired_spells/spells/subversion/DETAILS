@@ -9,7 +9,7 @@
   ESTIMATE=279
   SHORT="Version Control rethought."
 
-cat << EOF
+stream << EOF
   The goal of the Subversion project is to build a
   version control system that is a compelling
   replacement for CVS in the open source community.

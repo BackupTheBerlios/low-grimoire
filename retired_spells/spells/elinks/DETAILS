@@ -10,7 +10,7 @@
   ESTIMATE="382"
  FRESHMEAT="elinks"
      SHORT="ELinks is an enhanced version of Links, a Lynx-like text Web browser with support for tables, frames, background downloads, etc"
-cat << EOF
+stream << EOF
 ELinks is an enhanced version of Links, a Lynx-like text Web browser with support for 
 tables, frames, background downloads, etc. It has a menu-fashioned user interface and 
 is smaller and more lightweight than Lynx. ELinks adds many valuable features, like 

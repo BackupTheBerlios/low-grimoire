@@ -7,7 +7,7 @@
   ESTIMATE="389"
  FRESHMEAT="gauche"
      SHORT="Gauche is an R5RS Scheme implementation that aims to be a handy tool for daily work"
-cat << EOF
+stream << EOF
 Gauche is an R5RS Scheme implementation that aims to be a handy tool 
 for daily work. Quick startup, a built-in system interface, and native 
 multilingual support are some of its goals. It has an OO system similar 

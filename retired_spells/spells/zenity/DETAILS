@@ -7,7 +7,7 @@
   ESTIMATE=6
  FRESHMEAT="zenity"
      SHORT="Zenity is a tool that allows you to display Gtk+ dialog boxes from the command line and through shell scripts"
-cat << EOF
+stream << EOF
 Zenity is a tool that allows you to display Gtk+ dialog boxes from 
 the command line and through shell scripts. It is similar to gdialog,
 but is intended to be saner. It comes from the same family as dialog, 

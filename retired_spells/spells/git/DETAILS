@@ -7,7 +7,7 @@
  FRESHMEAT="GNU Interactive Tools"
        REQ="texi2html"
      SHORT="GIT is a set of interactive tools. It contains an extensible file system browser, an ascii/hex file viewer, a process viewer/killer and some other related utilities and shell scripts"
-cat << EOF
+stream << EOF
 GIT is a set of interactive tools. It contains an extensible file system 
 browser, an ascii/hex file viewer, a process viewer/killer and some other 
 related utilities and shell scripts. It can be used to increase the speed 

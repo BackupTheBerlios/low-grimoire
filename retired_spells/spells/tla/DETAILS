@@ -7,7 +7,7 @@
  FRESHMEAT="arch revision control system - tla branch"
      SHORT="arch is a modern replacement for CVS, specifically designed for the distributed development needs of open source projects"
 
-cat << EOF
+stream << EOF
 arch is a modern replacement for CVS, specifically designed for the 
 distributed development needs of open source projects. It has uniquely 
 good support for development on branches (especially good merging tools), 

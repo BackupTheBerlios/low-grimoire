@@ -5,7 +5,7 @@
        URL="http://loci.cs.utk.edu/lors/distributions"
  FRESHMEAT="lors"
      SHORT="A BitTorrent like tool"
-cat << EOF
+stream << EOF
 LoRS tools is a suite of utilities useful for storage, transfer, 
 and retrieval of large datasets in the National Logistical 
 Networking Testbed (NLNT), which currently holds nearly 20TB of 

@@ -5,7 +5,7 @@
        URL="http://search.cpan.org/CPAN/authors/id/W/WR/WRW"
        REQ="perl"
      SHORT="Number::Format is a library for formatting numbers"
-cat << EOF
+stream << EOF
 Number::Format is a library for formatting numbers.  Functions are
 provided for converting numbers to strings in a variety of ways, and to
 convert strings that contain numbers back into numeric form.  The output

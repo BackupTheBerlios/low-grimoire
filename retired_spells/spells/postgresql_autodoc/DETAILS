@@ -8,7 +8,7 @@
  FRESHMEAT="Postgresql AutoDoc"
   ESTIMATE=8
      SHORT="Utility to output the schema of a database in XML"
-cat << EOF
+stream << EOF
 Postgresql AutoDoc has the ability to output XML, which can be 
 loaded into Dia to create a UML diagram of the database 
 (complete with table relations and descriptive information), 

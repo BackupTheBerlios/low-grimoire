@@ -9,7 +9,7 @@
  FRESHMEAT="motor"
      SHORT="Motor is a text-mode integrated programming environment for Linux"
 
-cat << EOF
+stream << EOF
 Motor is a text-mode integrated programming environment for Linux. It consists of 
 an editor with syntax highlighting, a project manager, a makefile generator, gcc, 
 ctags, gdb, autoconf/automake and grep front-ends. CVS integration is also provided. 

@@ -7,7 +7,7 @@
        REQ="ghostscript ImageMagick ruby"
      SHORT="interface between the Ruby programming language and the ImageMagick"
 
-cat << EOF
+stream << EOF
 RMagick is an interface between the Ruby programming 
 language and the ImageMagickTM image processing library
 EOF

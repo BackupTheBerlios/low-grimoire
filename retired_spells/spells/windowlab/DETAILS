@@ -7,7 +7,7 @@
  FRESHMEAT="WindowLab"
   ESTIMATE=14
      SHORT="WindowLab is a small and simple window manager of novel design"
-cat << EOF
+stream << EOF
 It's click-to-focus, shares its window depth policy with the Amiga, 
 and has a window resizing/reshaping method similar to that of 8½ from 
 Plan 9. WindowLab maintains the illusion of direct manipulation by 

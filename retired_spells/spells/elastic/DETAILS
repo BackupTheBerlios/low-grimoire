@@ -7,7 +7,7 @@
  FRESHMEAT="elastiC"
      SHORT="elastiC is a high-level object-oriented interpreted language."
 
-cat << EOF
+stream << EOF
 elastiC has been strongly influenced by C, Smalltalk, Scheme and Python 
 and tries to merge the best characteristics of all these languages, 
 while still coherently maintaining its unique personality.

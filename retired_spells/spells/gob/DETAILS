@@ -9,7 +9,7 @@
  FRESHMEAT="GOB"
      SHORT="GTK Object Builder (GOB) is a simple preprocessor for easily creating GTK objects. It reads a class description file with inline C code and produces .c and .h object files for you."
 
-cat << EOF
+stream << EOF
 GTK Object Builder (GOB) is a simple preprocessor for easily creating GTK objects. It reads a class 
 description file with inline C code and produces .c and .h object files for you. It allows you to 
 easily use all of the features of the GTK object system and avoids typos by reducing the amount of 

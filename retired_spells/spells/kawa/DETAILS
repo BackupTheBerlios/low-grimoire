@@ -8,7 +8,7 @@
  FRESHMEAT="kawa"
      SHORT="The Kawa Scheme System is a full Scheme implementation, completely written in Java"
 
-cat << EOF
+stream << EOF
 The Kawa Scheme System is a full Scheme implementation, completely written in Java. 
 Scheme functions and files are automatically compiled into Java byte-codes. Kawa 
 does some optimizations, and the compiled code runs at a reasonable speed. It 

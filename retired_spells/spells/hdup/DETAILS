@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 FRESHMEAT="hdup"  
  ESTIMATE="18" 
    SHORT="hdup is used to back up a filesystem."
-cat << EOF
+stream << EOF
 hdup is used to back up a filesystem. Features include 
 encryption of the archive (with mcrypt), compression 
 of the archive (bzip/gzip/none), the ability to transfer 

@@ -8,7 +8,7 @@
   ESTIMATE=5
  FRESHMEAT="DBG DEBUGGER AND PROFILER"
      SHORT="DBG is a PHP debugger and profiler"
-cat << EOF
+stream << EOF
 DBG is a PHP debugger and profiler. It makes it much 
 easier to discover the origins of problems and bugs in 
 PHP scripts. It's equipped with the ability to backtrace 

@@ -9,7 +9,7 @@
   ESTIMATE=6
      SHORT="glark offers grep-like searching of text files, with very powerful, complex regular expressions"
 
-cat << EOF
+stream << EOF
 glark offers grep-like searching of text files, with very powerful, complex regular expressions 
 (e.g., "/foo\w+/ and /bar[^\d]*baz$/ within 4 lines of each other"). It also highlights the 
 matches, displays context (preceding and succeeding lines), does case-insensitive matches, and 
