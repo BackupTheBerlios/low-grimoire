@@ -1,0 +1,14 @@
+  VERSION=( "0.1" )
+ CATEGORY="math development"
+ATTRIBUTE="gnome|x11"
+   SOURCE="$SPELL/$SPELL-$VERSION-src"
+ HOMEPAGE="http://ghexcalc.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="gettext bison libgnomeui"
+#FRESHMEAT=""
+    SHORT="HexCalc is a simple calculator similar to GNOME calculator."
+cat << EOF
+HexCalc is a simple calculator similar to GNOME calculator. It can do
+calculations in hexadecimal, octal, binary, and non-floating point decimal.
+It uses a 32bit signed integer. It is a helpful little coder utility. 
+EOF
