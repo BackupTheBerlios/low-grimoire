@@ -1,0 +1,17 @@
+   VERSION=( "7.4.8" )
+  CATEGORY="window-manager"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://larswm.fnurt.net"
+       URL="http://home.earthlink.net/~lab1701"
+    SOURCE="larswm/larswm-$VERSION.tar.gz"
+  ESTIMATE=49
+ FRESHMEAT="larswm"
+     SHORT="larswm is a rewrite of 9wm that adds additional features"
+
+stream << EOF
+larswm is a rewrite of 9wm that adds automatic tiling, 
+virtual desktops and many more features to make it a 
+highly productive user environment. Despite the high 
+level of automation, it uses very little CPU time 
+and memory while running.
+EOF
