@@ -1,0 +1,14 @@
+  VERSION=( "0.4.1" "0.4.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://sourceforge.net/projects/libavc1394"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="libavc1394 is a programming interface for the 1394 Trade Association AV/C (Audio/Video Control) Digital Interface Command Set."
+cat << EOF
+libavc1394 is a programming interface for the 1394 Trade Association
+AV/C (Audio/Video Control) Digital Interface Command Set. It is intended
+for use with GNU/Linux IEEE-1394 (http://linux1394.sourceforge.net/).
+EOF
