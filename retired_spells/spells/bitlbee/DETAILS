@@ -1,0 +1,17 @@
+  VERSION="0.73"
+ CATEGORY="chat"
+ATTRIBUTE="client|server"
+   SOURCE="bitlbee-$VERSION"
+      URL="http://www.lintux.cx/downloads"
+ HOMEPAGE="http://www.lintux.cx/bitlbee.html"
+   OPT[0]="epic4:::to use as a front-end to bitlbee"
+   OPT[1]="ircii:::to use as a front-end to bitlbee"
+   OPT[2]="irssi:::to use as a front-end to bitlbee"
+   OPT[3]="xchat:::to use as a front-end to bitlbee"
+FRESHMEAT="bitlbee"
+    SHORT="BitlBee: An IRC to other chat networks gateway"
+cat << EOF
+BitlBee emulates an IRC server. Everything that is said on this server
+is forwarded to users on the MSN/ICQ/Jabber/Yahoo! networks, and
+responses are also returned. 
+EOF
