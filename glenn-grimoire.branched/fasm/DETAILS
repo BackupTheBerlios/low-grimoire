@@ -1,4 +1,4 @@
-  VERSION=( "1.48" "1.47" "1.46" )
+  VERSION=( "1.50" "1.48" "1.47" "1.46" )
  CATEGORY="assembler"
 ATTRIBUTE="console"
 #   SOURCE="$SPELL/$SPELL-$VERSION"
