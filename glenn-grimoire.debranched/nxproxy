@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.3.2-1" )
  CATEGORY="proxy"
-ATTRIBUTE="x11 client|server"
+ATTRIBUTE="x11 client server"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.nomachine.com/sources.php"
       URL="http://www.nomachine.com/download/nxsources"

@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "2.0.1" "2.0" "1.9.1" "1.8.1" )
   CATEGORY="proxy web"
- ATTRIBUTE="client|server"
+ ATTRIBUTE="client server"
     SOURCE="middle-man/$SPELL-$VERSION"
   HOMEPAGE="http://middle-man.sourceforge.net"
        URL="$SOURCEFORGE_URL"
