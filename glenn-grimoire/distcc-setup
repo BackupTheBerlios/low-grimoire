@@ -59,8 +59,7 @@ USER="distcc"
 start()  {
   echo  -n  "Starting distccd..."
   [ ! -f $LOGFILE ] && touch $LOGFILE && chown $USER:$USER $LOGFILE
-  /usr/bin/distccd $EXTRA_OPTS --daemon --allow $ACCEPTLIST --user $USER --log-f
-ile $LOGFILE -P $PID
+  /usr/bin/distccd $EXTRA_OPTS --daemon --allow $ACCEPTLIST --user $USER --log-file $LOGFILE -P $PID
   echo  "done."
 }
 
@@ -85,6 +84,7 @@ case  $1  in
 esac
 
 EOT
+  chmod +x /etc/init.d/distccd.sh                    &&
   ln -s /etc/init.d/distccd.sh /etc/rc3.d/S40distccd &&
   ln -s /etc/init.d/distccd.sh /etc/rc5.d/S40distccd &&
   ln -s /etc/init.d/distccd.sh /etc/rc6.d/K60distccd &&
