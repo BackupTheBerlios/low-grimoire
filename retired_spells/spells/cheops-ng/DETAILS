@@ -6,7 +6,7 @@
   SOURCE="cheops-ng/cheops-ng-$VERSION"
   FRESHMEAT="cheops-ng"
   REQ="adns gnome-libs gtk+ libxml nmap"
-  ESTIMATE=
+  ESTIMATE=172
   SHORT="A network management tool."
   cat << EOF
   Cheops-ng is a network management tool for mapping 
