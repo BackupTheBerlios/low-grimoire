@@ -1,4 +1,4 @@
-   VERSION=( "0.1.0beta4" )
+   VERSION=( "0.1.1" "0.1.0beta4" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://web.tiscali.it/no-redirect-tiscali/iguana.lang/index.html"
