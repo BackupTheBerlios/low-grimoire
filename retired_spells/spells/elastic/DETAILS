@@ -1,0 +1,13 @@
+   VERSION=( "0.0.35" )
+  CATEGORY="intepreter"
+ ATTRIBUTE="client console"
+  HOMEPAGE="http://www.elasticworld.org/"
+       URL="http://www.elasticworld.org/"
+     SHORT="elastiC is a portable high-level object-oriented interpreted 
+language with a C like syntax."
+
+cat << EOF
+elastiC has been strongly influenced by C, Smalltalk, Scheme and Python 
+and tries to merge the best characteristics of all these languages, 
+while still coherently maintaining its unique personality.
+EOF
