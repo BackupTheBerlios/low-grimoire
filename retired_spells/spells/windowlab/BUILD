@@ -1,5 +1,5 @@
-cd $BUILD_DIR				&&
-tar xf $( guess_filename $SOURCE )      &&
+#cd $BUILD_DIR				&&
+#tar xf $( guess_filename $SOURCE )      &&
 cd windowlab-$VERSION 
 
 (
