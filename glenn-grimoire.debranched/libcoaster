@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1pre1" )
+ CATEGORY="development cd"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.coaster-burn.org/libcoaster"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+      URL="http://www.coaster-burn.org/files"
+      REQ=( "libburn GConf gtk+" )
+ ESTIMATE="115"
+DESC="Libcoaster is a library designed with the goal of central preferences control on burners.
+Libcoaster is a library designed with one goal. Central preferences control
+on burners. What this means is, one setting for all applications that use
+libcoaster. This allows the user to get what is needed done, done in a timely
+manner. No more having to reconfigure preferences for an application that
+uses a burner. Also, libcoaster brings uniformity to the desktop with
+shared capplets and logging capabilities. Libcoaster, however, is not a
+wrapper library for libburn. Libburn is required only to poll devices and
+their capabilities.
+"

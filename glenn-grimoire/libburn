@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="development cd"
+ATTRIBUTE="library"
+ HOMEPAGE="http://icculus.org/burn"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+      URL="http://icculus.org/burn/releases"
+      REQ=( "cdparanoia" )
+ ESTIMATE="115"
+DESC="Libburn is an open-source library for reading, mastering and writing optical discs. 
+Libburn is an open-source library for reading, mastering and writing optical discs. 
+"

@@ -1,0 +1,31 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.5-rc6a" )
+ CATEGORY="development interpreter"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.mozilla.org/js/spidermonkey"
+   SOURCE="js-$VERSION"
+      URL="http://ftp.mozilla.org/pub/mozilla.org/js"
+#      REQ=( "" )
+  PROVIDE="javascript"
+ ESTIMATE="115"
+DESC="SpiderMonkey is the code-name for the Mozilla\\'s C implementation of JavaScript.
+SpiderMonkey is the code-name for the Mozilla\\'s C implementation of
+JavaScript.
+"
+
+group_docs() {
+  mkdir -p doc            &&
+  cp src/README.html doc/README.js.html
+}
+
+build() {
+  # Fixme options for perlconnect and liveconnect, and try ot make jsd (debugger)
+  make -C src -f Makefile.ref                                     &&
+  prepare_install                                                 &&
+  group_docs                                                      &&
+  install -o root -g root -m 755 src/Linux*/{js,jscpucfg} /usr/bin &&
+  install -o root -g root -m 755 src/Linux*/libjs.{so,a} /usr/lib &&
+  install -o root -g root -m 644 -d /usr/include/js               &&
+  install -o root -g root -m 644 src/*.h src/Linux*/jsautocfg.h /usr/include/js
+}

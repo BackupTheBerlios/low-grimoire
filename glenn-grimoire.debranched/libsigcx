@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6.4" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://libsigcx.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "libsigc++-v1.2" )
+ ESTIMATE="115"
+DESC="libSigC++ Extras is a library consisting of new features built on top of libSigC++.
+libSigC++ Extras is a library consisting of new features built on top of
+libSigC++ and features that formerly were in libSigC++ and were removed
+from it. The focus is on multi-threading; libSigCX provides type-safe
+cross-thread signal/slot support.
+"

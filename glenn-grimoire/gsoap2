@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.7" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.cs.fsu.edu/~engelen/soapselect.html"
+   SOURCE="$SPELL/gsoap-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="The gSOAP Web services development toolkit offers an XML to C/C++ language binding.
+The gSOAP Web services development toolkit offers an XML to C/C++ language
+binding to ease the development of SOAP/XML Web services in C and C/C++.
+"

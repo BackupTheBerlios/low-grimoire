@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3beta1" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://ming.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=""
+#FRESHMEAT=""
+DESC="Ming is a C library for generating SWF ("Flash") format movies.
+Ming is a C library for generating SWF ("Flash") format movies, plus a set
+of wrappers for using the library from C++ and popular scripting languages
+like PHP, Perl, Python, and Ruby.
+"
+
+build(){
+  # make opts for lang hooks
+  make all static &&
+  cp libming.so libming.so.0.3beta1 &&
+  prepare_install &&
+  make install    
+}

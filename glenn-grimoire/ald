@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.7" )
+ CATEGORY="development debugger"
+ATTRIBUTE="console"
+ HOMEPAGE="http://ald.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+   OPT[0]="readline:--enable-readline::enable readline support"
+   OPT[1]="gtk+:--enable-gtk::enable gtk gui"
+     OPTS="--enable-assert"
+ ESTIMATE="115"
+DESC="The Assembly Language Debugger is a tool for debugging executable programs at the assembly level.
+The Assembly Language Debugger is a tool for debugging executable programs
+at the assembly level.
+"
