@@ -1,0 +1,18 @@
+ VERSION=( "2.2002.10.17" )
+  CATEGORY="data"
+ ATTRIBUTE="concurrent data"
+  HOMEPAGE="http://hackers.progeny.com/discover"
+       URL="http://archive.progeny.com"
+    SOURCE="progeny/discover/discover-data-$VERSION"
+ FRESHMEAT="Discover"
+       REQ=""
+       OPT=""
+     SHORT="discover,data provides hardware information data for discover"
+cat << EOF
+Discover,data package provides hardware information data for discover.
+Discover is a cross-platform hardware detection system that uses 
+system-dependent modules (selected at build time) for detecting 
+the hardware on a system. It also provides system-independent 
+interfaces for querying XML data sources about this hardware.
+EOF
+

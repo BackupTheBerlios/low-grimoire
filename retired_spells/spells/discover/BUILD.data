@@ -1,0 +1,7 @@
+  sed -i "s:/usr/local:/usr:" Makefile
+  sed -i "34,35d" Makefile
+
+  make						&&
+  prepare_install				&&
+  make install					
+
