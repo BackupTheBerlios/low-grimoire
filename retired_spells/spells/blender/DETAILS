@@ -1,0 +1,15 @@
+  VERSION="2.27"
+ CATEGORY="graphic-editor"
+ATTRIBUTE="x11"
+   SOURCE="source/blender-$VERSION"
+      URL="http://download.blender.org"
+ HOMEPAGE="http://www.blender.org"
+   OPT[0]="libogg:::for ogg support"
+      REQ="egenix-mx-base xfree86 openal openssl Python jpeg libpng zlib mozilla glut SDL"
+FRESHMEAT="blender"
+    SHORT="blender:  a (now) free 3d modeler"
+cat << EOF
+BF (Blender Foundation) Blender is the recently-freed 3d modeler for
+multiple operating systems.  It has bunches of features and a confusing
+interface (those are always good).
+EOF
