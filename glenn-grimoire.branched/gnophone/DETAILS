@@ -1,0 +1,24 @@
+  VERSION=( "0.2.4" )
+ CATEGORY="telephony"
+ATTRIBUTE="gnome|x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnophone.com"
+      URL="ftp://ftp.gnophone.com/pub"
+      REQ="gtk+,v1.2 iax gsm imlib"
+   OPT[0]="esound::--disable-esd:add esd support"
+# requires old mozilla, not sure which version
+#   OPT[1]="mozilla::--disable-mozilla:add built in mozilla browser"
+#FRESHMEAT=""
+    SHORT="Gnophone is an internet telephone that allows you to make calls to other GnoPhone users or to an Asterisk PBX Gateway."
+stream << EOF
+Gnophone is an open source internet telephone that allows you to make
+calls to other GnoPhone users or to an Asterisk PBX Gateway. It supports
+a fully featured web interface allowing you to participate in various
+discussion groups. It also supports the full rate GSM codec for great
+quality that doesn't require very high bandwidth.
+
+    * GnoPhone has a web based directory server
+    * Web based discussion groups
+    * Provides simulated full-duplex on half-duplex sound cards
+    * GnoPhone interfaces with the Asterisk Open Source PBX 
+EOF
