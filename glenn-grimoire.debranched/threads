@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.6" )
+ CATEGORY="development threads"
+ATTRIBUTE="library"
+ HOMEPAGE="http://threads.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="C++ threads class that relies on no underlying C code.
+The aim of this library, is to provide the programmer with an easy to use
+class, that can be further inherited to provide a rich set of threaded
+functionality rarely seen in a linux environment. Full C++ is provided,
+without any wrapping around underlying C code, which gives more compact
+and faster objects. 
+"

@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "124" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+ HOMEPAGE="http://math.nist.gov/tnt"
+   SOURCE="$SPELL/$SPELL$VERSION.zip"
+      URL="http://math.nist.gov"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="The Template Numerical Toolkit (TNT) is a collection of interfaces and reference implementations of numerical objects useful for scientific computing in C++.
+The Template Numerical Toolkit (TNT) is a collection of interfaces and
+reference implementations of numerical objects useful for scientific
+computing in C++.
+"
+
+build() {
+  prepare_install              &&
+  mkdir -p /usr/include/$SPELL &&
+  cp * /usr/include/$SPELL
+}

@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="development threads"
+ATTRIBUTE="library"
+ HOMEPAGE="http://await.sourceforge.net"
+   SOURCE="$SPELL"
+      URL="http://await.sourceforge.net"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="Await && Locks is a library that contains easy-to-use thread synchronization tools for C++.
+Await && Locks is a library that contains easy-to-use thread
+synchronization tools for C++. It helps to write understandable and robust
+multithreaded programs. Features: simplicity, expressiveness, platform
+independence, deadlock detection.
+"
+
+build() {
+  ./buildall.sh    &&
+  prepare_install  &&
+  install -o root -g root out/lib* /usr/lib &&
+  cp -R inc/* /usr/include
+}

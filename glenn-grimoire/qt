@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "002" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.risc.uni-linz.ac.at/software/rt++"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://www.risc.uni-linz.ac.at/software/rt++/ftp"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="QuickThreads is a toolkit for building threads packages.
+QuickThreads is a toolkit for building threads packages.  It is my hope
+that you'll find it easier to use QuickThreads normally than to take it
+and modify the raw cswap code to fit your application.  The idea behind
+QuickThreads is that it should make it easy for you to write & retarget
+threads packages.
+"
+
+build() {
+  ./config iX86   &&
+  make            &&
+  prepare_install &&
+  install -o root -g root -m 644 qt.h qtmd.h /usr/include &&
+  install -o root -g root -m 644 libqt.a /usr/lib
+}

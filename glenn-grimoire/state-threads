@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.5.1" )
+ CATEGORY="development threads"
+ATTRIBUTE="library"
+ HOMEPAGE="http://state-threads.sourceforge.net"
+   SOURCE="$SPELL/st-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="The State Threads Library is a small threads application library.
+The State Threads Library is a small application library which provides a
+foundation for writing fast and highly scalable Internet applications
+(such as web servers, proxy servers, mail transfer agents, and so on) on
+UNIX-like platforms.
+"
+
+build() {
+  make linux-optimized  &&
+  prepare_install       &&
+  install -o root -g root obj/libst.so.1.5.1 /usr/lib &&
+  ln -s /usr/lib/libst.so.1.5.1 /usr/lib/libst.so     &&
+  ln -s /usr/lib/libst.so.1.5.1 /usr/lib/libst.so.1   &&
+  install -o root -g root obj/st.h /usr/include
+}

@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.3.1" )
+ CATEGORY="development threads"
+ATTRIBUTE="library"
+ HOMEPAGE="http://zthread.sourceforge.net"
+   SOURCE="zthread/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "glibc" )
+ ESTIMATE="115"
+DESC="A platform-independent, multi-threading and synchronization library for C++.
+A platform-independent, multi-threading and synchronization library for C++.
+"

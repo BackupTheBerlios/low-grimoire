@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.1" )
+ CATEGORY="archive security"
+ATTRIBUTE="console gnome"
+ HOMEPAGE="http://sourceforge.net/projects/zipcracker"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "esound gnome-libs zlib" )
+#   OPT[0]="pvm:::add pvm message passing support"
+ ESTIMATE="115"
+DESC="ZipCracker is a program to help users recover files from password protected zip archives.
+ZipCracker is a program to help users recover files from password protected
+zip archives. It has a easy to use Gnome User interface.
+"

@@ -1,0 +1,47 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.0" )
+ CATEGORY="development math"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.netlib.org/clapack"
+   SOURCE="$SPELL/$SPELL.tgz"
+      URL="http://www.netlib.org
+	   http://netlib.bell-labs.com/netlib"
+      REQ=( "libf2c" )
+#   OPT[0]="atlas:::use atlas BLAS library"
+ EPROVIDE="lapack"
+ ESTIMATE="115"
+DESC="C version of LAPACK (Linear Algebra PACKage).
+C version of LAPACK (Linear Algebra PACKage).
+"
+
+build() {
+  cat > make.inc <<'EOF'
+SHELL = /bin/sh
+PLAT =
+CC        = gcc
+#CFLAGS    = -funroll-all-loops -O3
+LOADER    = gcc
+#LOADOPTS  = $(CFLAGS) -Wl,--export-dynamic
+LOADOPTS  = $(CFLAGS)
+NOOPT     = 
+DRVCFLAGS = $(CFLAGS)
+F2CCFLAGS = $(CFLAGS)
+ARCH     = ar
+ARCHFLAGS= cr
+RANLIB   = ranlib
+BLASLIB      = ../../libblas$(PLAT).a
+LAPACKLIB    = libclapack$(PLAT).a
+#F2CLIB       = -lF77.a -lI77.a
+F2CLIB       = -lf2c
+TMGLIB       = libtmg$(PLAT).a
+EIGSRCLIB    = libeigsrc$(PLAT).a
+LINSRCLIB    = liblinsrc$(PLAT).a
+EOF
+  make blaslib lib    &&
+  prepare_install     &&
+  install -o root -g root -m 644 clapack.h BLAS/SRC/blaswrap.h /usr/include &&
+  install -o root -g root -m 644 libclapack.a libtmg.a libblas.a /usr/lib   &&
+  mkdir -p /usr/include/blaswrap                                            &&
+  install -o root -g root -m 644 BLAS/WRAP/* /usr/include/blaswrap
+}

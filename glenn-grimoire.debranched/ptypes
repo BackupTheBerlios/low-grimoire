@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.melikyan.com/ptypes"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="PTypes (C++ Portable Types Library) is a simple alternative to the STL that includes multithreading and networking.
+PTypes (C++ Portable Types Library) is a simple alternative to the STL that
+includes multithreading and networking. It defines dynamic strings,
+variants, character sets, lists and other basic data types along with
+portable thread and synchronization objects, IP sockets and named pipes.
+Its main \`target audience\' is developers of complex network daemons, robots
+or non-visual client/server applications of any kind. 
+"
+
+build() {
+  make                     &&
+  prepare_install          &&
+  make PREFIX=/usr install
+}
