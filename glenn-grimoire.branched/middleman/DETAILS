@@ -1,0 +1,11 @@
+   VERSION=( "1.8.1" )
+  CATEGORY="proxy web"
+ ATTRIBUTE="client|server"
+    SOURCE="middle-man/$SPELL-$VERSION"
+  HOMEPAGE="http://middle-man.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="zlib Linux-PAM pcre"
+     SHORT="Middleman filtering proxy server."
+cat << EOF
+Middleman filtering proxy server.
+EOF
