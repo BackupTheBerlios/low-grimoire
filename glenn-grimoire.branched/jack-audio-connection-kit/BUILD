@@ -1,5 +1,8 @@
 (
-  ./configure --with-html-dir=/usr/doc/$SPELL \
+  ./configure --enable-posix-shm  \
+	      --enable-optimize   \
+	      --enable-timestamps \
+	      --with-html-dir=/usr/doc/$SPELL \
               $OPTS           &&
   make                        &&
   prepare_install             &&
