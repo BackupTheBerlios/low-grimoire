@@ -1,0 +1,4 @@
+unpack ${SOURCE[0]}
+unpack ${SOURCE[1]}
+unpack ${SOURCE[2]}
+unpack ${SOURCE[3]}

@@ -1,0 +1,19 @@
+  VERSION=( "0.7" ) # 0.8-rc3
+ CATEGORY="graphic development"
+ATTRIBUTE="library"
+SOURCE[0]="$SPELL/$SPELL-core-$VERSION"
+SOURCE[1]="$SPELL/$SPELL-example-$VERSION"
+SOURCE[2]="$SPELL/$SPELL-unifont-$VERSION"
+SOURCE[3]="$SPELL/$SPELL-glui-$VERSION"
+SOURCE[4]="$SPELL/$SPELL-dox-$VERSION"
+ HOMEPAGE="http://www.nigels.com/glt/"
+   URL[0]="$SOURCEFORGE_URL"
+   URL[1]="${URL[0]}"
+   URL[2]="${URL[0]}"
+   URL[3]="${URL[0]}"
+      REQ="XFree86 glut" # change to freeglut later? there should be an EPROVIDE
+#FRESHMEAT=""
+    SHORT="GLT is a C++ class library for programming interactive 3D graphics with OpenGL."
+cat << EOF
+GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
+EOF
