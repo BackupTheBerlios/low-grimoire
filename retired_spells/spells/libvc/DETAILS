@@ -5,6 +5,7 @@
        URL="$SOURCEFORGE_URL"
     SOURCE="rolo/libvc-$VERSION.tar.bz2"
        REQ="flex bison grep"
+  ESTIMATE="145"
  FRESHMEAT="libvc"
      SHORT="Libvc is a vCard library which was written using 'flex' and 'bison'"
 
