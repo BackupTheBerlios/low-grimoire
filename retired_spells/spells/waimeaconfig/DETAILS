@@ -1,8 +1,9 @@
-   VERSION=( "0.0.3a" )
+   VERSION=( "0.0.3" )
   CATEGORY="x11"
  ATTRIBUTE="x11"
-  HOMEPAGE="http://teixeira.homelinux.org/"
-       URL="http://teixeira.homelinux.org"
+  HOMEPAGE="http://waimeaconfig.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="waimeaconfig/waimeaconf-$VERSION"
        REQ="waimea gtk+"
      SHORT="A gui based program to configure Waimea"
 
