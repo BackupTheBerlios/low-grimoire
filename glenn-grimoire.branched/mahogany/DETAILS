@@ -1,6 +1,6 @@
   VERSION=( "cvs" "0.64" )
  CATEGORY="email"
-ATTRIBUTE="gtk|x11"
+ATTRIBUTE="x11"
 #   SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://mahogany.sourceforge.net"
 #      URL="$SOURCEFORGE_URL"
