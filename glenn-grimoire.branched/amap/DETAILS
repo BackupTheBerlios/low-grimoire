@@ -1,0 +1,15 @@
+  VERSION=( "4.5" "4.0" )
+ CATEGORY="security network"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.thc.org"
+      URL="http://www.thc.org/releases"
+#      REQ=""
+   OPT[0]="openssl:::add SSL support"
+#FRESHMEAT=""
+    SHORT="Amap is a next-generation scanning tool."
+cat << EOF
+Amap is a next-generation scanning tool, which identifies applications and
+services even if they are not listening on the default port by creating a
+bogus-communication and analyzing the responses.
+EOF

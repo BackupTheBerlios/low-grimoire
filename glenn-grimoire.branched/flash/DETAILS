@@ -1,0 +1,23 @@
+  VERSION=( "0.4.10" )
+ CATEGORY="graphic"
+ATTRIBUTE="library|x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.swift-tools.net/Flash"
+      URL="http://www.swift-tools.net/Flash"
+      REQ="XFree86"
+#FRESHMEAT=""
+    SHORT="GPL implementation of flash(TM)."
+cat << EOF
+GPL Flash (TM) library is a set of source codes that allow to play Flash
+(TM) movies. The core of the library is a graphic renderer that is
+portable is to be re-used in applications that need to play Flash(TM)
+movies. This library comes with those freely redistributable tools:
+
+# Netscape plugin. Although Macromedia plugin is freely available, it is
+  not freely redistributable. The GPL Plugin is also not compatible with
+  all Flash(TM) versions.
+# Standalone player. To quickly play movies without to start Netscape. Can
+  play movies on root window (suitable for xscreensaver).
+# KDE screen saver. Cool screen saver that allows to play Flash(TM) movies
+  as a KDE screen saver.
+EOF
