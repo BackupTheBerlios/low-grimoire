@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7" )
+ CATEGORY="development"
+ATTRIBUTE="x11"
+ HOMEPAGE="http://www.freedesktop.org/Software/wininfo"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="http://freedesktop.org/Software"
+      REQ=( "gtk+" )
+ ESTIMATE="115"
+DESC="X Window Information is a window information utility for developers.
+X Window Information is a window information utility for developers of
+applications, toolkits, and window managers. X Window Information follows
+your pointer providing information about the windows below.
+"
+
