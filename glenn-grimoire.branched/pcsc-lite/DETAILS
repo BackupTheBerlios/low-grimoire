@@ -1,5 +1,5 @@
   VERSION=( "1.2.0-rc2" "1.1.1" "1.0.1" )
- CATEGORY="smart-card security"
+ CATEGORY="smartcard security"
 ATTRIBUTE="driver"
    SOURCE="${SPELL}-$VERSION"
  HOMEPAGE="http://alioth.debian.org/projects/pcsclite"
