@@ -1,0 +1,13 @@
+  VERSION=("0.1.4" "0.1.3")
+ CATEGORY="security"
+ATTRIBUTE="server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.cryptnet.net/fsp/cks/"
+      URL="http://www.cryptnet.net/fsp"
+      REQ="postgresql"
+   OPT[0]="tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap"
+#FRESHMEAT=""
+    SHORT="CryptNET keyserver."
+cat << EOF
+CryptNET keyserver.
+EOF
