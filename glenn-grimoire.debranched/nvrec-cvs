@@ -1,0 +1,155 @@
+ CATEGORY="video-recorder"
+ATTRIBUTE="console x11"
+ HOMEPAGE="http://nvrec.sourceforge.net"
+DESC="nvrec aims to be a high quality, generic capture core.
+nvrec aims to be a high quality, generic capture core. At the moment it
+supports v4l1 and v4l2 devices as video sources, and oss as an audio
+source. It can output to quicktime (in RTjpeg, YUV2, or RAW format, and
+most ffmpeg formats), AVI (in DivX format), NuppelVideo format, MPEG-1,
+and streaming multicast/unsicast.
+"
+### inherit nvrec
+unset SOURCE URL
+   VERSION=( "cvs" )
+ ATTRIBUTE="cvs $ATTRIBUTE"
+       REQ=( "ffmpeg-cvs" )
+#   OPT[0]="nasm::--disable-mmx:for MMX support"
+     OPTS="--enable-debug"
+ EPROVIDE="nvrec"
+   ASSUME="off"
+  ESTIMATE="193"
+
+build()  {
+  patch -p1 <<'EOF'
+diff -ru nvrec.orig/Makefile.am nvrec/Makefile.am
+--- nvrec.orig/Makefile.am	2005-02-07 13:48:44.000000000 -0600
++++ nvrec/Makefile.am	2005-02-07 14:17:01.000000000 -0600
+@@ -12,7 +12,7 @@
+ 
+ #nvrec core library
+ noinst_LIBRARIES = libnvrec_cores.a libconvert.a
+-libnvrec_cores_a_SOURCES = nvrec_core.c audio_core_common.c alsa_core.c oss_core.c gen_audio_core.c v4l1_core.c v4l2_core.c v4lgen_core.c v4l2_radio_core.c v4l1_radio_core.c nvrec.h tick.h deint_fieldbob_mmx.h audio_core_common.h utils.c
++libnvrec_cores_a_SOURCES = nvrec_core.c audio_core_common.c alsa_core.c oss_core.c gen_audio_core.c v4l1_core.c v4l2_core.c v4lgen_core.c v4l2_radio_core.c v4l1_radio_core.c nvrec.h tick.h deint_fieldbob_mmx.h audio_core_common.h
+ libconvert_a_SOURCES = convert.c convert.h
+ libconvert_a_CFLAGS = @FFMPEG_CFLAGS@
+ 
+@@ -31,7 +31,7 @@
+ if HAVE_LIBDIVX4LINUX
+ divx4dir	= ${bindir}
+ divx4_PROGRAMS	= divx4rec
+-divx4rec_SOURCES = nvrec.c nvrec.h utils.c
++divx4rec_SOURCES = nvrec.c nvrec.h
+ divx4rec_CFLAGS = -DDIVX4
+ divx4rec_LDADD	= libnvrec_cores.a cpu_features/libcpu_features.a divx4/libdivx4file_core.a avilib/libavilib.a -ldl @DIVX4LINUX_LIBS@ @CONV_LIBS@ @ALSA_LIBS@
+ endif
+@@ -48,7 +48,7 @@
+ # nuppelrec
+ nuppeldir	=${bindir}
+ nuppel_PROGRAMS	= nuppelrec
+-nuppelrec_SOURCES	= nvrec.c nvrec.h utils.c
++nuppelrec_SOURCES	= nvrec.c nvrec.h
+ nuppelrec_CFLAGS	= -DNUV
+ nuppelrec_LDADD    = libnvrec_cores.a cpu_features/libcpu_features.a nuv/libnuvfile_core.a @CONV_LIBS@ @ALSA_LIBS@
+ 
+diff -ru nvrec.orig/configure.ac nvrec/configure.ac
+--- nvrec.orig/configure.ac	2005-02-07 13:48:44.000000000 -0600
++++ nvrec/configure.ac	2005-02-07 14:17:01.000000000 -0600
+@@ -207,11 +207,11 @@
+         ln -s ffmpegfile_core-046-release.c ffmpegfile_core.c
+         AC_MSG_RESULT(yes - 0.4.6-release)
+       else
+-        if test -f /usr/lib/libavformat/libavformat.a ; then
++        if test -f /usr/lib/libavformat.so ; then
+           HAVE_CONVERT=yes
+           HAVE_LIBFFMPEG=yes
+           FFMPEG_CFLAGS="-I/usr/include/ffmpeg"
+-          FFMPEG_LIBS="-Xlinker -E /usr/lib/libavformat/libavformat.a /usr/lib/libavcodec/libavcodec.a -lm -lz -ldl"
++          FFMPEG_LIBS="-Xlinker -E /usr/lib/libavformat.so /usr/lib/libavcodec.so -lm -lz -ldl"
+           rm -f ffmpegfile_core.c
+           ln -s ffmpegfile_core-046-release.c ffmpegfile_core.c
+           AC_MSG_RESULT(yes - 0.4.6-release)
+diff -ru nvrec.orig/divxfile_core.cpp nvrec/divxfile_core.cpp
+--- nvrec.orig/divxfile_core.cpp	2005-02-07 13:48:44.000000000 -0600
++++ nvrec/divxfile_core.cpp	2005-02-07 14:17:00.000000000 -0600
+@@ -396,15 +396,16 @@
+ }
+ 
+ struct file_core_t divxfile_core = {
+-	file_core_init: divxfile_core_init,
+-	file_core_close: divxfile_core_close,
+-	file_core_nullvideo: divxfile_core_nullvideo,
+-	file_core_fastvideo: divxfile_core_video,
+-	file_core_video: divxfile_core_video,
+-	file_core_audio: divxfile_core_audio,
+-	file_core_sync: divxfile_core_sync,
+-	file_core_format: divxfile_core_format,
+-	file_core_overrides: NULL,
+-	file_core_usage: divxfile_core_usage,
+-	priv: NULL
++	divxfile_core_init,
++	NULL,
++	divxfile_core_close,
++	divxfile_core_nullvideo,
++	divxfile_core_video,
++	divxfile_core_video,
++	divxfile_core_audio,
++	divxfile_core_sync,
++	divxfile_core_format,
++	NULL,
++	divxfile_core_usage,
++	NULL
+ };
+ --- nvrec.orig/v4lgen_core.c	2005-02-07 13:48:44.000000000 -0600
++++ nvrec/v4lgen_core.c	2005-02-07 14:17:00.000000000 -0600
+@@ -217,7 +217,7 @@
+ 
+     }
+     /* Radio devices */
+-    if (strcmp(inp, "radio") == 0) {
++    if (inp && strcmp(inp, "radio") == 0) {
+ 	DPRINT("Radio device\n");
+ 	return v4l1_radio_core.cap_core_init(args, pfmt);
+ 
+EOF
+
+./bootstrap                      &&
+./configure  --prefix=/usr       \
+             $OPTS               &&
+make                             &&
+prepare_install                  &&
+make    install                  &&
+make    distclean                &&
+cp etc/nvrec.conf /etc
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=":pserver:anonymous@cvs.sourceforge.net:/cvsroot/$EPROVIDE"
+  MODULE=$EPROVIDE
+  export CVS_RSH=ssh
+  
+  cd $BUILD_DIR/..
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2"
+  fi
+  
+  if [ -d $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z9 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -d $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+  mkdir -p $SOURCE_CACHE/$SPELL/$VERSION &&
+  tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2" "$SPELL-$VERSION"
+}
