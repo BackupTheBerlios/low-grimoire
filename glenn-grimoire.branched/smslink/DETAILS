@@ -1,13 +1,13 @@
-  VERSION=( "0.48b" "0.46" )
+  VERSION=( "0.55b-2" "0.48b" "0.46" )
  CATEGORY="telephony"
 ATTRIBUTE="client|server"
    SOURCE="$SPELL-$VERSION"
- HOMEPAGE="http://www.styx.demon.co.uk"
-      URL="http://www.styx.demon.co.uk/archive"
+ HOMEPAGE="http://smslink.sourceforge.net"
+      URL="http://smslink.sourceforge.net/archive"
 #      REQ=""
+#   OPT[0]="mysql:::to use mysql as a backend"
 #FRESHMEAT=""
-    SHORT="libmodem is a library that allow you to use your modems transparently with regard of kind of modem attached to a line."
+    SHORT="This program implements a client/server gateway to the SMS protocol."
 cat << EOF
-libmodem is a library that allow you to use your modems transparently
-with regard of kind of modem attached to a line.
+This program implements a client/server gateway to the SMS protocol.
 EOF
