@@ -4,7 +4,7 @@
   HOMEPAGE="http://cvs.gnome.org/[..]/rview.cgi?cvsroot=/cvs/gnome&dir=zenity"
        URL="http://ftp.acc.umu.se/pub/GNOME/sources/zenity/$VERSION"
        REQ="GConf popt scrollkeeper intltool gtk+ libglade libgnomecanvas"
-  ESTIMATE=112
+  ESTIMATE=6
  FRESHMEAT="zenity"
      SHORT="Zenity is a tool that allows you to display Gtk+ dialog boxes from the command line and through shell scripts"
 cat << EOF
