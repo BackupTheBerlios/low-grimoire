@@ -6,12 +6,12 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.quiss.org/swftools"
        URL="http://www.quiss.org/swftools"
-   OPTS[0]="avifile:::For AVI2SWF converter"
-   OPTS[1]="jpeg:::For JPEG2SWF converter"
-   OPTS[2]="t1lib:::For PDF2SWF"
-#   OPTS[3]="xpdf:::For PDF2SWF"
-#   OPTS[4]="libpng:::For PNG2SWF converter"
-#   OPTS[5]="lame:::For WAV2SWF converter"
+    OPT[0]="avifile:::For AVI2SWF converter"
+    OPT[1]="jpeg:::For JPEG2SWF converter"
+    OPT[2]="t1lib:::For PDF2SWF"
+#    OPT[3]="xpdf:::For PDF2SWF"
+#    OPT[4]="libpng:::For PNG2SWF converter"
+#    OPT[5]="lame:::For WAV2SWF converter"
 DESC="SWF Tools is a collection of SWF manipulation and generation utilities
  SWF Tools is a collection of SWF manipulation and generation utilities
  written by Rainer Bo\"hme and Matthias Kramm. It is released under the GPL.
