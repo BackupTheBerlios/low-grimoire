@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.3.0" "1.2.0" )
- CATEGORY="networking telephony"
+ CATEGORY="network telephony"
 ATTRIBUTE="library"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://research.edm.luc.ac.be/jori/jvoiplib/jvoiplib.html"
