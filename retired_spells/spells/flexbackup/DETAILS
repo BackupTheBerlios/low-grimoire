@@ -1,4 +1,4 @@
-   VERSION=( "1.2.0" "1.1.8" "1.1.7" "1.1.6" "1.0.5" "1.0.4" )
+   VERSION=( "1.2.1" "1.2.0" "1.1.8" "1.1.7" "1.1.6" "1.0.5" "1.0.4" )
   CATEGORY="utility"
  ATTRIBUTE="console"
   HOMEPAGE="http://flexbackup.sourceforge.net"
@@ -7,7 +7,7 @@
     OPT[0]="cpio:::for cpio backup"
     OPT[1]="afio:::for afio support"
     OPT[2]="zip:::for zip archives"
-  ESTIMATE="8"
+  ESTIMATE="9"
  FRESHMEAT="flexbackup"
      SHORT="flexbackup is a configurable and easy to use Perl-based backup tool"
 cat << EOF
