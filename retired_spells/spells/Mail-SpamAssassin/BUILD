@@ -20,8 +20,8 @@
     cp -r sql     /usr/doc/$BSPELL                                         &&
     cp -r tools   /usr/doc/$BSPELL 
 
-    install -D -m755 $SCRIPT_DIR/spamd.sh /etc/init.d/spamd.sh 
-    install -D -m644 $SCRIPT_DIR/spamd.conf.d /etc/spamd.conf 
+    install -D -m 755 $SCRIPT_DIR/spamd.sh /etc/init.d/spamd.sh 
+    install -D -m 644 $SCRIPT_DIR/spamd.conf.d /etc/spamd.conf 
    
 ) > $C_FIFO 2>&1
 
