@@ -1,0 +1,23 @@
+  VERSION=( "0.11.5" "0.11.3" "0.11.2" "0.11.1" )
+ CATEGORY="file-transfer"
+ATTRIBUTE="server"
+   SOURCE="gift/$SPELL-$VERSION"
+ HOMEPAGE="http://www.giftproject.org"
+      URL="$SOURCEFORGE_URL"
+    SHORT="giFT: Internet File Transfer"
+      REQ=""
+   OPT[0]="perl:--enable-perl::enable perl support"
+   OPT[1]="libvorbis:::add vorbis file detection"
+   OPT[2]="ImageMagick:::add vorbis file detection"
+   OPT[3]="file:--enable-libmagic::add file detection"
+EPROVIDES="giftd"
+ ESTIMATE="763"
+FRESHMEAT="giFT"
+cat << EOF
+giFT is a modular daemon capable of abstracting the communication 
+between the end user and specific filesharing protocols (peer-to-peer 
+or otherwise). The giFT project differs from many other similar projects
+in that it is a distribution of a standalone (platform-independent)
+daemon, a library for client/frontend development, and our own homegrown
+network OpenFT.
+EOF

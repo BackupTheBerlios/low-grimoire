@@ -1,0 +1,16 @@
+  CVSSERVER=':pserver:anonymous@cvs.gift.sf.net:/cvsroot/gift'
+  MODULE=giFT
+  export CVS_RSH=ssh
+  
+  mkdir -p /usr/src/sorcery.cvs/$SPELL/ &&
+  cd /usr/src/sorcery.cvs/$SPELL/ &&
+
+  if ( true ); then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/$MODULE ]; then
+          CVSCOMMAND="update -dP"
+      else
+          CVSCOMMAND="checkout $MODULE"
+      fi
+
+      cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  fi
