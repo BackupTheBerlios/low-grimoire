@@ -8,8 +8,8 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm net-snmp"
 FRESHMEAT="gkrellmsnmp"
     SHORT="GKrellm plugin to monitor your network with snmp."
-stream << EOF
+LONG="
 Say you don't want to be limited to monitor only your box but e.g. your
 router. You can access it's snmp agents values with the gkrellm_snmp
 plugin.
-EOF
+"
