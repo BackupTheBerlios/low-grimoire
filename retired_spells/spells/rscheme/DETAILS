@@ -1,5 +1,5 @@
   VERSION=( "0.7.3.2" )
-  CATEGORY="intepreter"
+  CATEGORY="interpreter"
   ATTRIBUTE="console"
   HOMEPAGE="http://www.rscheme.org"
   URL="$SOURCEFORGE_URL"
