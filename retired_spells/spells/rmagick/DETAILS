@@ -1,0 +1,13 @@
+   VERSION=( "1.2.1" )
+  CATEGORY="library"
+ ATTRIBUTE="x11 development"
+  HOMEPAGE="http://home.nc.rr.com/rmagick"
+       URL="http://home.nc.rr.com"
+    SOURCE="rmagick/RMagick-$VERSION"
+       REQ="ruby ImageMagick"
+     SHORT="interface between the Ruby programming language and the ImageMagick"
+
+cat << EOF
+RMagick is an interface between the Ruby programming 
+language and the ImageMagickTM image processing library
+EOF
