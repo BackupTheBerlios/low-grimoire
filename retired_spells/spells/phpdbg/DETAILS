@@ -5,7 +5,7 @@
        URL="$SOURCEFORGE_URL"
     SOURCE="dbg2/dbg-$VERSION-src.tar.gz"
        REQ="php"
-  ESTIMATE="4"
+  ESTIMATE=5
  FRESHMEAT="DBG DEBUGGER AND PROFILER"
      SHORT="DBG is a PHP debugger and profiler"
 cat << EOF
