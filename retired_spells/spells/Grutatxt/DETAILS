@@ -4,6 +4,7 @@
   HOMEPAGE="http://www.triptico.com/software/grutatxt.html"
        URL="http://www.triptico.org/download"
        REQ="perl"
+  ESTIMATE="11"
  FRESHMEAT="grutatxt"
      SHORT="Grutatxt is a plain text to HTML (and other formats) converter"
 cat << EOF
