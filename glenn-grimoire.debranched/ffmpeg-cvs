@@ -1,0 +1,88 @@
+inherit ffmpeg
+unset SOURCE URL
+   VERSION=( "cvs" )
+ ATTRIBUTE="cvs console"
+       REQ=( ""
+             "nasm::--disable-mmx:for MMX support"
+             "a52dec:--enable-a52bin:--disable-a52:for a52 support"
+             "libvorbis:--enable-vorbis::to decode ogg/vorbis streams"
+             "lame:--enable-mp3lame::to enable mp3 encoding via lame"
+             "libdts:--enable-dts::to enable dts encoding via libdts"
+             "faad2:--enable-faadbin::to enable faad2 encoding"
+             "faac:--enable-faac::to enable faac encoding via libfaac"
+             "SDL:::for output through SDL" )
+# ffmpeg 1.0 is incompatibile with MPlayer 1.0pre1
+#   "MPlayer:--enable-shared-pp:--disable-pp:for post processing"
+   OPT[0]="nasm::--disable-mmx:for MMX support"
+   OPT[1]="a52dec:--enable-a52bin:--disable-a52:for a52 support"
+   OPT[2]="libvorbis:--enable-vorbis::to decode ogg/vorbis streams"
+   OPT[3]="lame:--enable-mp3lame::to enable mp3 encoding via lame"
+   OPT[4]="libdts:--enable-dts::add dts support"
+   OPT[5]="faad2:--enable-faadbin::to enable faad2 encoding"
+   OPT[6]="faac:--enable-faac::add faac support"
+#   OPT[7]="MPlayer:--enable-pp::add pp support"
+#   OPT[8]="::--disable-risky:build proprietary codecs"
+ EPROVIDE="ffmpeg"
+   ASSUME="off"
+  ESTIMATE="193"
+
+build()  {
+export    CFLAGS="$( echo  $CFLAGS    |  sed  s/-funroll-loops// )"
+export  CXXFLAGS="$( echo  $CXXFLAGS  |  sed  s/-funroll-loops// )"
+
+ if  !  grep      "flags"  <  /proc/cpuinfo  |
+       grep  -q  "mmx"
+then  OPTS="$OPTS  --disable-mmx"
+fi
+
+# ffmpeg 1.0 is incompatibile with MPlayer 1.0pre1
+# thus we have --disable-pp until they work together again.
+
+./configure  --prefix=/usr       \
+             --enable-gpl        \
+             --enable-shared     \
+             --enable-pp         \
+             --disable-strip     \
+             $OPTS               &&
+make                             &&
+prepare_install                  &&
+make    install                  &&
+make distclean                   &&
+cp libavcodec/dsputil.h /usr/include/ffmpeg
+  
+if    [  !  -f               /etc/ffserver.conf  ]
+then  cp  doc/ffserver.conf  /etc/ffserver.conf
+fi
+}
+
+pre_build() {
+default_pre_build
+  CVSSERVER=":pserver:anonymous@mplayerhq.hu:/cvsroot/$EPROVIDE"
+  MODULE=$EPROVIDE
+  export CVS_RSH=ssh
+  
+  cd $BUILD_DIR/..
+  rmdir $BUILD_DIR
+  
+  if [ -f $SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2 ]; then
+    unpack "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2"
+  fi
+  
+  if [ -d $BUILD_DIR ]; then
+      CVSCOMMAND="update -dP"
+  else
+      CVSCOMMAND="checkout $MODULE"
+  fi
+  
+  cvs -z9 -d $CVSSERVER $CVSCOMMAND
+  
+  if ! [ -d $BUILD_DIR ]; then
+    mv $MODULE $BUILD_DIR
+  fi
+}
+
+post_install() {
+default_post_install
+  mkdir -p $SOURCE_CACHE/$SPELL/$VERSION &&
+  tar -C "$SOURCE_DIR" -cjf "$SOURCE_CACHE/$SPELL/$VERSION/$SPELL.tar.bz2" "$SPELL-$VERSION"
+}
