@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.6.1" )
+  VERSION=( "1.7.0" "1.6.1" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION-src"
@@ -15,9 +15,11 @@ detailled docs and a tool to convert your system fonts to a Flash movie.
 "
 
 build() {
-  sed -i "s|YACC = @YACC@|YACC = @YACC@ -d|" src/sswf/Makefile.in &&
-  sed -i 's|am_sswf_OBJECTS = .*|am_sswf_OBJECTS = sswf_grammar.\$(OBJEXT) sswf_lexical.\$(OBJEXT) sswf.\$(OBJEXT) sswf_memory.\$(OBJEXT) sswf_node.\$(OBJEXT) sswf_save.\$(OBJEXT)|' src/sswf/Makefile.in &&
-  sed -i "87,88d" src/sswf/Makefile.in &&
-  sed -i 's|-release PACKAGE_VERSION|-release @PACKAGE_VERSION@|' src/lib/Makefile.in &&
+  if [ $VERSION == "1.6.1" ]; then
+    sed -i "s|YACC = @YACC@|YACC = @YACC@ -d|" src/sswf/Makefile.in &&
+    sed -i 's|am_sswf_OBJECTS = .*|am_sswf_OBJECTS = sswf_grammar.\$(OBJEXT) sswf_lexical.\$(OBJEXT) sswf.\$(OBJEXT) sswf_memory.\$(OBJEXT) sswf_node.\$(OBJEXT) sswf_save.\$(OBJEXT)|' src/sswf/Makefile.in &&
+    sed -i "87,88d" src/sswf/Makefile.in &&
+    sed -i 's|-release PACKAGE_VERSION|-release @PACKAGE_VERSION@|' src/lib/Makefile.in
+  fi
   default_build
 }
