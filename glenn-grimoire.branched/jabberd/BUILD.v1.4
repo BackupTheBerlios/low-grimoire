@@ -1,0 +1,22 @@
+(
+  #OPTS="--enable-debug --enable-storage=\"pgsql db fs\" --enable-authreg=\"anon pipe pgsql pam ldap db\""
+  #echo $OPTS >> myconfig
+  #default_build
+  
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  mv $(basename ${SOURCE[1]} .tar.gz) jabberd &&
+  ./configure --enable-ipv6   \
+              $OPTS           &&
+  make                        &&
+  prepare_install             &&
+  make install                &&
+  mkdir -p /usr/share/$SPELL  &&
+  cp generateSSLkey jabber.xml /usr/share/jabberd,$VERSION &&
+  mkdir -p  /etc/$SPELL       &&
+  cp jabber.xml /etc/$SPELL   &&
+  mkdir -p  /usr/lib/$SPELL   &&
+  cp jsm/jsm.so xdb_file/xdb_file.so pthsock/pthsock_client.so \
+     dnsrv/dnsrv.so dialback/dialback.so /usr/lib/$SPELL &&
+  mkdir -p /var/spool/$SPELL
+
+) > $C_FIFO 2>&1

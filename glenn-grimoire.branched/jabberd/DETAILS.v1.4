@@ -1,0 +1,16 @@
+  VERSION=( "1.4.3" "1.4.2" )
+ CATEGORY="network chat"
+ATTRIBUTE="server"
+SOURCE[0]="$SPELL-$VERSION"
+SOURCE[1]="pth-1.4.0.tar.gz"
+ HOMEPAGE="http://jabberd.jabberstudio.org"
+   URL[0]="http://jabberd.jabberstudio.org/1.4/dist"
+   URL[1]="ftp://ftp.ossp.org/pkg/lib/pth"
+# Nearly all of these requirements should be OPT[x], AND need to add pth
+      REQ="Linux-PAM db postgresql"
+   OPT[0]="openssl:--enable-ssl::enable SSL support"
+#FRESHMEAT=""
+    SHORT="Jabberd 1.4.x server"
+cat << EOF
+Jabberd 1.4.x server
+EOF
