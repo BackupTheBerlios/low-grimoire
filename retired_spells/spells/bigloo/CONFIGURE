@@ -1,0 +1,8 @@
+if  !  grep  -q  "FULL_BEE"  $SPELL_CONFIG;  then
+  if    query  "Install full bee ?" n
+  then  echo  'OPTS="$OPTS --bee=full"'  >>  $SPELL_CONFIG
+  else  echo  'OPTS="$OPTS --bee=partial"'   >>  $SPELL_CONFIG
+  fi
+fi
+
+

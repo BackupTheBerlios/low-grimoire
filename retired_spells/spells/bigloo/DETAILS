@@ -1,0 +1,17 @@
+   VERSION=( "2.5c" )
+  CATEGORY="intepreter"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www-sop.inria.fr/mimosa/fp/Bigloo/bigloo.html"
+    SOURCE="Bigloo/bigloo$VERSION"
+       URL="ftp://ftp-sop.inria.fr/mimosa/fp"
+ FRESHMEAT="bigloo"
+    OPT[0]="j2sdk:--jvm=yes:--jvm=no:to build ssl and crypto applications"
+    OPT[1]="emacs:::to build emacs interface"
+     SHORT="Bigloo is an implementation of the Scheme programming language"
+cat << EOF
+An implementation of the Scheme programming language. 
+It relies on an optimizing compiler from Scheme to C. 
+Bigloo enables connections between Scheme code and C code. I
+t proposes many extensions to Scheme such as a regular parser 
+compiler, an lalr parser compiler, pattern matching, an object layer, etc.
+EOF
