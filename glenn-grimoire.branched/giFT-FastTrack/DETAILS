@@ -4,7 +4,7 @@ ATTRIBUTE="library"
    SOURCE="gift-fasttrack/$SPELL-$VERSION"
  HOMEPAGE="http://gift-fasttrack.berlios.de"
       URL="http://download.berlios.de"
-      REQ="gift"
+      REQ="giftd"
     SHORT="giFT-FastTrack is a FastTrack plugin for giFT."
 cat << EOF
 giFT-FastTrack is a plugin for giFT (http://giftproject.org) which enables

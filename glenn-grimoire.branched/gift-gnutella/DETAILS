@@ -5,7 +5,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.giftproject.org"
       URL="$SOURCEFORGE_URL"
     SHORT="giFT's gnutella support."
-      REQ="gift"
+      REQ="giftd"
  ESTIMATE="763"
 FRESHMEAT="giFT"
 cat << EOF

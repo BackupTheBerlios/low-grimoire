@@ -9,8 +9,6 @@
   prepare_install			&&
   make    install			&&
   make distclean
-
-
-
+  
 ) > $C_FIFO 2>&1
 

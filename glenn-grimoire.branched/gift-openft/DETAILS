@@ -5,7 +5,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.giftproject.org"
       URL="$SOURCEFORGE_URL"
     SHORT="giFT's OpenFT library"
-      REQ="gift db zlib"
+      REQ="giftd db zlib"
  ESTIMATE="763"
 FRESHMEAT="giFT"
 cat << EOF

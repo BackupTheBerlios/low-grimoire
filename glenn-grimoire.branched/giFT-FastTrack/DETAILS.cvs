@@ -1,4 +1,4 @@
   VERSION=( "cvs" )
 ATTRIBUTE="cvs library"
-      REQ="cvs autoconf automake libtool gift"
+      REQ="cvs autoconf automake libtool giftd"
    ASSUME="off"

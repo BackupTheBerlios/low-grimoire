@@ -1,5 +1,5 @@
   VERSION=( "cvs" )
 ATTRIBUTE="cvs server"
-      REQ="cvs autoconf automake gift"
+      REQ="cvs autoconf automake giftd"
    ASSUME="off"
  ESTIMATE="763"
