@@ -9,7 +9,7 @@
        REQ=( "SDL XFree86" )
 #   OPT[0]="XFree86:--with-opengl::use opengl"
   ESTIMATE="16"
-# FRESHMEAT=""
+FRESHMEAT="stella"
 DESC="Stella is a multi-platform Atari 2600 VCS emulator.
 Stella is a multi-platform Atari 2600 VCS emulator.
 "
