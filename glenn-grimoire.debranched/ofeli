@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.0-0" )
+ CATEGORY="library development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://ofeli.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=""
+#   OPT[0]="metis:::add metis support"
+#FRESHMEAT=""
+    SHORT="An Object Finite Element Library"
+LONG="
+OFELI (Object Finite Element LIbrary) is an object oriented library of
+C++ classes for development of finite element codes. Its main features
+are : 
+ Various storage schemes of matrices (dense, sparse, skyline, tridiagonal).
+ Direct methods and preconditioned iterative strategies for the solution
+   of linear systems of equations.
+ Shape functions of most "popular" finite elements
+ Element arrays of most popular problems (Heat Transfer, Fluid Flow,
+   Solid Mechanics, Electromagnetics, ...).
+"
