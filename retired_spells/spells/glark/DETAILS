@@ -6,7 +6,7 @@
     SOURCE="glark/glark-$VERSION"
        REQ="ruby"
  FRESHMEAT="glark"
-  ESTIMATE= 6
+  ESTIMATE=6
      SHORT="glark offers grep-like searching of text files, with very powerful, complex regular expressions"
 
 cat << EOF
