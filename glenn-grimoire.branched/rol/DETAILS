@@ -1,0 +1,15 @@
+  VERSION=( "0.3.0" )
+ CATEGORY="web"
+ATTRIBUTE="gnome|x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://unknown-days.com/rol"
+      URL="http://unknown-days.com"
+      REQ="gtkmm GConf libxml"
+#FRESHMEAT=""
+    SHORT="Rol is a simple application for reading RSS or RDF feeds such as those produced by many news sites or weblogs."
+cat << EOF
+Rol is a simple application for reading RSS or RDF feeds such as those
+produced by many news sites or weblogs. It is not intended to do anything
+more than display the headlines and allow you to choose which to read in
+your web browser.
+EOF

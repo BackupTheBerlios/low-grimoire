@@ -1,0 +1,14 @@
+  VERSION=( "0.3" "0.2" "0.1" )
+ CATEGORY="archive"
+ATTRIBUTE="console"
+   SOURCE="parchive/$SPELL-$VERSION"
+ HOMEPAGE="http://parchive.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="A tool to apply the data-recovery capability concepts of RAID-like systems to the posting & recovery of multi-part archives on Usenet."
+cat << EOF
+Providing a tool to apply the data-recovery capability concepts of
+RAID-like systems to the posting & recovery of multi-part archives on
+Usenet.
+EOF
