@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8.5" )
+ CATEGORY="video television"
+ATTRIBUTE="driver"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://rivatv.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="linux XFree86"
+     OPTS="--enable-agp --enable-software-conversion"
+#FRESHMEAT=""
+    SHORT="Linux drivers for nVidia cards with video-in"
+LONG="
+The RivaTV project is dedicated to producing linux drivers for nVidia
+based graphics boards with video-in feature. The term "RivaTV" is used
+to refer to the entire driver set. 
+"
