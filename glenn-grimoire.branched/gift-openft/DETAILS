@@ -1,0 +1,13 @@
+  VERSION=( "0.1.0.5" "0.1.0.4" )
+ CATEGORY="file-transfer"
+ATTRIBUTE="library"
+   SOURCE="gift/$SPELL-$VERSION"
+ HOMEPAGE="http://www.giftproject.org"
+      URL="$SOURCEFORGE_URL"
+    SHORT="giFT's OpenFT library"
+      REQ="gift db zlib"
+ ESTIMATE="763"
+FRESHMEAT="giFT"
+cat << EOF
+giFT's OpenFT library.
+EOF

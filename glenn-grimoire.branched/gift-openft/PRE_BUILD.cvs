@@ -1,5 +1,5 @@
   CVSSERVER=':pserver:anonymous@cvs.gift.sf.net:/cvsroot/gift'
-  MODULE=giFT
+  MODULE=OpenFT
 
   mkdir -p /usr/src/sorcery.cvs/$SPELL/
   cd /usr/src/sorcery.cvs/$SPELL/

@@ -1,0 +1,5 @@
+  VERSION=( "cvs" )
+ATTRIBUTE="cvs server"
+      REQ="cvs autoconf automake gift db zlib"
+   ASSUME="off"
+ ESTIMATE="763"

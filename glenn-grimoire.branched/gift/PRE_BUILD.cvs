@@ -1,13 +1,14 @@
   CVSSERVER=':pserver:anonymous@cvs.gift.sf.net:/cvsroot/gift'
+  MODULE=giFT
 
   mkdir -p /usr/src/sorcery.cvs/$SPELL/
   cd /usr/src/sorcery.cvs/$SPELL/
 
   if ( true ); then
-      if [ -a /usr/src/sorcery.cvs/$SPELL/giFT ]; then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/$MODULE ]; then
           CVSCOMMAND="update -dP"
       else
-          CVSCOMMAND="checkout giFT"
+          CVSCOMMAND="checkout $MODULE"
       fi
 
       cvs -z4 -d $CVSSERVER $CVSCOMMAND
