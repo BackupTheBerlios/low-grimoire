@@ -1,4 +1,4 @@
-   VERSION=( "2.0" "1.9.1" "1.8.1" )
+   VERSION=( "2.0.1" "2.0" "1.9.1" "1.8.1" )
   CATEGORY="proxy web"
  ATTRIBUTE="client|server"
     SOURCE="middle-man/$SPELL-$VERSION"
