@@ -1,4 +1,4 @@
-   VERSION=( "1.022" "1.021" "1.00rc3" "0.26" "0.24" )
+   VERSION=( "1.030" "1.022" "1.021" "1.00rc3" "0.26" "0.24" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
     SOURCE="gtk2-perl/$SPELL-$VERSION"

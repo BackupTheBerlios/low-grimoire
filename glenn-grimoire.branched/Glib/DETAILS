@@ -1,10 +1,10 @@
-   VERSION=( "1.020" "1.00rc3" "0.26" "0.24" )
+   VERSION=( "1.030" "1.020" "1.00rc3" "0.26" "0.24" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ="perl glib ExtUtils-PkgConfig"
+       REQ="glib ExtUtils-PkgConfig"
      SHORT="This module provides perl access to Glib and GLibs GObject libraries."
 cat << EOF
 This module provides perl access to Glib and GLibs GObject libraries.
