@@ -1,0 +1,15 @@
+  VERSION=( "2.3" "2.2" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/index.html"
+      URL="ftp://ftp.berlios.de/pub"
+      REQ=""
+FRESHMEAT="calltree"
+    SHORT="calltree - static call tree generator for C programs."
+cat << EOF
+calltree - static call tree generator for C programs
+The calltree command parses  a  collection  of  input  files
+(assuming  C  syntax) and builds a graph that represents the
+static call structure of these files.
+EOF
