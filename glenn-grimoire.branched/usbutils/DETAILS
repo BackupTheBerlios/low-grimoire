@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="This package is intended to be for USB what Martin Mares' pciutils is for PCI."
-cat << EOF
+stream << EOF
 This package is intended to be for USB what Martin Mares' pciutils is for
 PCI.
 EOF

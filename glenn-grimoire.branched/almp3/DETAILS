@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="allegro"
 #FRESHMEAT=""
     SHORT="AllegroMP3 is an Allegro wrapper for the mpglib MP3 decoder."
-cat << EOF
+stream << EOF
 AllegroMP3 is an Allegro wrapper for the mpglib MP3 decoder.
 This lib lets you play MP3s and convert MP3s to Allegro SAMPLEs amongst a
 lot of other capabilites. It is also portable (DJGPP, MingW32, MSVC,

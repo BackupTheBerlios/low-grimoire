@@ -8,7 +8,7 @@ SOURCE[1]="$SPELL/$SPELL-$VERSION-doc"
       REQ="libchm wxGTK"
 #FRESHMEAT=""
     SHORT="xCHM is a .chm viewer for *NIX."
-cat << EOF
+stream << EOF
 xCHM can show the contents tree if one is available, print the displayed
 page, change fonts faces and size, work with bookmarks, do the usual
 history stunts (forward, back, home), provide a searchable index and seach

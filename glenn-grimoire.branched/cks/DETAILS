@@ -8,6 +8,6 @@ ATTRIBUTE="server"
    OPT[0]="tcp_wrappers:--with-libwrap::Link with the TCP Wrapper libwrap"
 #FRESHMEAT=""
     SHORT="CryptNET keyserver."
-cat << EOF
+stream << EOF
 CryptNET keyserver.
 EOF

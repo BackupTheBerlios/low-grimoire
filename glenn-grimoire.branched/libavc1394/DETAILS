@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="libavc1394 is a programming interface for the 1394 Trade Association AV/C (Audio/Video Control) Digital Interface Command Set."
-cat << EOF
+stream << EOF
 libavc1394 is a programming interface for the 1394 Trade Association
 AV/C (Audio/Video Control) Digital Interface Command Set. It is intended
 for use with GNU/Linux IEEE-1394 (http://linux1394.sourceforge.net/).

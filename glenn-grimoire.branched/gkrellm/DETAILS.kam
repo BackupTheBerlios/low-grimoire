@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm wget"
 #FRESHMEAT=""
     SHORT="Keeping tabs on a webcam is only one of GKrellKam's uses."
-cat << EOF
+stream << EOF
 Keeping tabs on a webcam is only one of GKrellKam's uses, however. Each
 panel can be associated with an image URL, a local image filename, a list
 of image filenames and URLs, or a script that will be called to get a fresh

@@ -7,7 +7,7 @@ ATTRIBUTE="server library"
       REQ="glib,v1.2 libxml2"
 FRESHMEAT="asd"
     SHORT="ASD will eventually be a full featured drop-in replacement for Esound."
-cat << EOF
+stream << EOF
 ASD will eventually be a full featured drop-in replacement for Esound.
  ASD will implement all features of Esound, plus:
     * Capture/full-duplex facility (DONE)

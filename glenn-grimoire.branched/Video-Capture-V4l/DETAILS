@@ -6,6 +6,6 @@
        URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
        REQ="perl"
      SHORT="Perl interface to the Video4linux framegrabber interface."
-cat << EOF
+stream << EOF
 Perl interface to the Video4linux framegrabber interface.
 EOF

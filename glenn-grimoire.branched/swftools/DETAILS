@@ -11,7 +11,7 @@
 #   OPTS[4]="libpng:::For PNG2SWF converter"
 #   OPTS[5]="lame:::For WAV2SWF converter"
      SHORT="SWF Tools is a collection of SWF manipulation and generation utilities"
-cat << EOF
+stream << EOF
  SWF Tools is a collection of SWF manipulation and generation utilities
  written by Rainer Bo"hme and Matthias Kramm. It is released under the GPL.
 Included are:

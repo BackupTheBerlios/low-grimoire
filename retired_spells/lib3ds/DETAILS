@@ -8,7 +8,7 @@ ATTRIBUTE="library"
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
     SHORT="The 3D Studio File Format Library is an overall software library for managing 3D-Studio Release 3 and 4 \".3DS\" files."
-cat << EOF
+stream << EOF
 The 3D Studio File Format Library is an overall software library for
 managing 3D-Studio Release 3 and 4 \".3DS\" files. It is a free alternative
 to Autodesk's 3DS File Toolkit for managing 3DS files. It started out in

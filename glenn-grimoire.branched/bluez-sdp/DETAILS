@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ="bluez-libs"
 #FRESHMEAT=""
     SHORT="Bluetooth something or other (not sure what it is)."
-cat << EOF
+stream << EOF
 Bluetooth something or other (not sure what it is).
 EOF

@@ -11,7 +11,7 @@ ATTRIBUTE="x11"
    OPT[3]="xmms:::add xmms support"
 #FRESHMEAT=""
     SHORT="LogJam is a client for LiveJournal."
-cat << EOF
+stream << EOF
 LogJam is a client for LiveJournal.  It lets you post, edit old
 entries, manage your friends, and whatever other useful
 LiveJournal-related features we can think of.

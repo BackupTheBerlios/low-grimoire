@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ=""
 #FRESHMEAT=""
     SHORT="A tool to apply the data-recovery capability concepts of RAID-like systems to the posting & recovery of multi-part archives on Usenet."
-cat << EOF
+stream << EOF
 Providing a tool to apply the data-recovery capability concepts of
 RAID-like systems to the posting & recovery of multi-part archives on
 Usenet.

@@ -5,7 +5,7 @@
        URL="http://hottemax.uni-muenster.de/~grover/files"
     OPT[0]="gpgme:::to use pgp with juen"
      SHORT="juju is a smart decoder for uu-, base64-, binhex- or xxencoded data."
-cat << EOF
+stream << EOF
 juju is a smart decoder for uu-, 
 base64-, binhex- or xxencoded data.
 juen is also included.

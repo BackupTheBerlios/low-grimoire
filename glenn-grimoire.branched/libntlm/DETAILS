@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="libntlm is a library that implement Microsoft's NTLM authentication."
-cat << EOF
+stream << EOF
 libntlm is a library that implement Microsoft's NTLM authentication.
 However, the packaging of the library lacked certain things (shared
 library, autoconf macro for use in other applications, installed script

@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="The Bayesian Probability Filtering Library ( BPFL ) is a C++ library intended for creation of Bayesian Filtering Programs."
-cat << EOF
+stream << EOF
 The Bayesian Probability Filtering Library ( BPFL ) is a C++ library
 intended for creation of Bayesian Filtering Programs.
 EOF

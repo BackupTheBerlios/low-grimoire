@@ -6,6 +6,6 @@
        URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/G/GA/GAAS"
        REQ="perl"
      SHORT="Uniform Resource Identifiers (absolute and relative)."
-cat << EOF
+stream << EOF
 Uniform Resource Identifiers (absolute and relative).
 EOF

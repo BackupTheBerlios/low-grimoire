@@ -8,7 +8,7 @@ ATTRIBUTE="console"
 #   OPT[0]="arts:--with-arts::add arts capability"
 #FRESHMEAT=""
     SHORT="dsniff is a collection of tools for network auditing and penetration testing."
-cat << EOF
+stream << EOF
 dsniff is a collection of tools for network auditing and penetration
 testing. dsniff, filesnarf, mailsnarf, msgsnarf, urlsnarf, and webspy
 passively monitor a network for interesting data (passwords, e-mail, files,

@@ -8,7 +8,7 @@ ATTRIBUTE="console"
    OPT[0]="ncurses::--without-curses:add curses support"
 #FRESHMEAT=""
     SHORT="GNU GRUB is a Multiboot boot loader."
-cat << EOF
+stream << EOF
 GNU GRUB is a Multiboot boot loader. It was derived from GRUB, GRand
 Unified Bootloader, which was originally designed and implemented by Erich
 Stefan Boleyn. 

@@ -13,7 +13,7 @@ ATTRIBUTE="x11"
    OPT[5]="ladspa_sdk:--with-ladspa::for ladspa plugins"
 #FRESHMEAT=""
     SHORT="Realtime audio syntesizer"
-cat << EOF
+stream << EOF
 TerminatorX is a realtime audio synthesizer that allows you to "scratch"
 on digitally sampled audio data (*.wav, *.au, *.mp3, etc.) the way
 hiphop-DJs scratch on vinyl records. It features multiple turntables,

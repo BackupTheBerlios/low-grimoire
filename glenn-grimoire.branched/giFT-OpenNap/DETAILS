@@ -7,7 +7,7 @@ ATTRIBUTE="library broken"
       REQ="giftd"
 #FRESHMEAT=""
     SHORT="giFT-OpenNap is a giFT plugin for OpenNap."
-cat << EOF
+stream << EOF
 giFT-OpenNap is a giFT plugin for OpenNap, i.e. with this plugin,
 you will be able to acess the various OpenNap networks.
 EOF

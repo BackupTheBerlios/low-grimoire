@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="GSM 06.10 compresses frames of 160 13-bit samples into 260 bits."
-cat << EOF
+stream << EOF
 GSM 06.10 compresses frames of 160 13-bit samples (8 kHz sampling
 rate, i.e. a frame rate of 50 Hz) into 260 bits; for compatibility
 with typical UNIX applications, our implementation turns frames of 160

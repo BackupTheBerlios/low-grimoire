@@ -7,6 +7,6 @@ ATTRIBUTE="server"
       REQ="db"
 #FRESHMEAT=""
     SHORT="PGP Public Key Server."
-cat << EOF
+stream << EOF
 PGP Public Key Server.
 EOF

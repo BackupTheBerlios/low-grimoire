@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Tools for Emu10k1 sound cards."
-cat << EOF
+stream << EOF
 Tools for Emu10k1 sound cards.
 * as10k1     - a dsp assembler for the emu10k1
 * emu-dspmgr - A tool for configuring the cards dsp patch management system

@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="libmodem is a library that allow you to use your modems transparently with regard of kind of modem attached to a line."
-cat << EOF
+stream << EOF
 libmodem is a library that allow you to use your modems transparently
 with regard of kind of modem attached to a line.
 EOF

@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="pork is an ncurses-based AOL instant messenger client."
-cat << EOF
+stream << EOF
 pork is an ncurses-based AOL instant messenger client. It uses the
 OSCAR protocol (the one the windows client uses) to access AIM. Pork
 features Perl scripting; an online help system; the ability to

@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm giftd"
 #FRESHMEAT=""
     SHORT="GKrellM giFT monitors your active giFT transfers and their progress."
-cat << EOF
+stream << EOF
 GKrellM giFT monitors your active giFT transfers and their progress. 
 Each transfer is displayed in a panel showing the filename and the
 percentage of transmitted bytes.  There's also a chart showing the

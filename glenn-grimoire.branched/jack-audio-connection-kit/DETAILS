@@ -11,7 +11,7 @@ ATTRIBUTE="server library"
 #   OPT[3]="fltk:::to build an example client"
 #FRESHMEAT=""
     SHORT="JACK is a low-latency audio server."
-cat << EOF
+stream << EOF
 JACK is a low-latency audio server, written primarily for the GNU/Linux
 operating system. It can connect a number of different applications to an
 audio device, as well as allowing them to share audio between themselves.

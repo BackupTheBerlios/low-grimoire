@@ -9,7 +9,7 @@ ATTRIBUTE="console"
 #   OPT[1]="libdes:::add DES support"
 #FRESHMEAT=""
     SHORT="The best parallized login hacker is available."
-cat << EOF
+stream << EOF
 A new version of THC-Hydra, the best parallized login hacker is available:
 for Samba, FTP, POP3, IMAP, Telnet, HTTP Auth, LDAP, NNTP, MySQL, VNC,
 ICQ, Socks5, PCNFS, Cisco and more. Includes SSL support and is part of

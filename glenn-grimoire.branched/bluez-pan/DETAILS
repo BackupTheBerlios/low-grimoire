@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ="bluez-sdp"
 #FRESHMEAT=""
     SHORT="Bluetooth Personal Area Networking (PAN)."
-cat << EOF
+stream << EOF
 Bluetooth Personal Area Networking (PAN)
 	pand - PAN profile daemon.
 	dund - LAN access profile daemon.

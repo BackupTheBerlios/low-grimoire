@@ -11,7 +11,7 @@ ATTRIBUTE="console library"
 #   OPT[3]="osfsia:--with-ladspa::for ladspa plugins"
 #FRESHMEAT=""
     SHORT="Many smart card related tools."
-cat << EOF
+stream << EOF
 libopensc is a library for accessing smart card devices using PC/SC Lite
 middleware package. It is also the core library of the OpenSC project.
 Basic functionality (e.g. SELECT FILE, READ BINARY) should work on any

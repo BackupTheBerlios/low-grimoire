@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="Library for reading ebml files (binary ML)."
-cat << EOF
+stream << EOF
 Library for reading ebml files (binary ML).
 EOF

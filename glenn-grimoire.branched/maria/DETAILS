@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="flex bison"
 #FRESHMEAT=""
     SHORT="Maria is a reachability analyzer for concurrent systems that uses Algebraic System Nets."
-cat << EOF
+stream << EOF
 Maria is a reachability analyzer for concurrent systems that uses
 Algebraic System Nets (a high-level variant of Petri nets) as its
 modelling formalism. It has been written in C++.

@@ -8,6 +8,6 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="This plugin monitors the SNORT alert file (/var/log/snort/alert)."
-cat << EOF
+stream << EOF
 This plugin monitors the SNORT alert file (/var/log/snort/alert).
 EOF

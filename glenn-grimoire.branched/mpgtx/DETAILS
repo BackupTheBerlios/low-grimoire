@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="mpgtx a command line MPEG audio/video/system file toolbox."
-cat << EOF
+stream << EOF
 mpgtx a command line MPEG audio/video/system file toolbox.
 mpgtx was designed with the good old Unix philosophy in mind : do few but
 do it well and provide end user an austary yet powerfull command line

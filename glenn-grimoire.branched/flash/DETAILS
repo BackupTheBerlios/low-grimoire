@@ -7,7 +7,7 @@ ATTRIBUTE="library|x11"
       REQ="XFree86"
 #FRESHMEAT=""
     SHORT="GPL implementation of flash(TM)."
-cat << EOF
+stream << EOF
 GPL Flash (TM) library is a set of source codes that allow to play Flash
 (TM) movies. The core of the library is a graphic renderer that is
 portable is to be re-used in applications that need to play Flash(TM)

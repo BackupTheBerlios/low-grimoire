@@ -7,6 +7,6 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="smake is a highly portable make program with automake features."
-cat << EOF
+stream << EOF
 smake is a highly portable make program with automake features.
 EOF

@@ -10,7 +10,7 @@ ATTRIBUTE="console client"
       REQ="giftd"
 #FRESHMEAT=""
     SHORT="giFTcurs is an ncurses front end to giFT."
-cat << EOF
+stream << EOF
 YOU MUST HAVE giFT\!  this is technically not a requirement (in the spell)
 giFTcurs is an ncurses front end to giFT.
 EOF

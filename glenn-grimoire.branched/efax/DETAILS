@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="efax is a small ANSI C/POSIX program that sends and receives faxes using any fax modem (Class 1, 2 or 2.0)."
-cat << EOF
+stream << EOF
 efax is a small ANSI C/POSIX program that sends and receives faxes using
 any fax modem (Class 1, 2 or 2.0).
 

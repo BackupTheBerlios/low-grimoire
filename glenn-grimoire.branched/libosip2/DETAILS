@@ -7,6 +7,6 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="The GNU oSIP library (version 2) is an implementation of SIP - rfc3261."
-cat << EOF
+stream << EOF
 The GNU oSIP library (version 2) is an implementation of SIP - rfc3261.
 EOF

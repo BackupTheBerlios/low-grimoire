@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ="ncurses"
 #FRESHMEAT=""
     SHORT="wavemon is a ncurses-based monitoring application for wireless network devices."
-cat << EOF
+stream << EOF
 wavemon is a ncurses-based monitoring application for wireless network
 devices. It currently works under Linux with devices that are supported by
 the wireless extensions by Jean Tourrilhes (included in Kernel 2.4 and

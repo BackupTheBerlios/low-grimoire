@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
       REQ="allegro zlib"
 #FRESHMEAT=""
     SHORT="FakeNES is a portable, Open Source NES emulator."
-cat << EOF
+stream << EOF
 FakeNES is a portable, Open Source NES emulator which is written mostly
 in C, using the excellent Allegro library for cross-platform capabilities.
 EOF

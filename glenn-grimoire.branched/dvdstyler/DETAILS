@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
       REQ="mpgtx mjpegtools dvdauthor wxGTK"
 #FRESHMEAT=""
     SHORT="DVDStyler is a crossplatform GUI frontend to the dvd authoring and recording programs dvdauthor and dvdrecord."
-cat << EOF
+stream << EOF
 DVDStyler is a crossplatform GUI frontend to the dvd authoring and
 recording programs dvdauthor and dvdrecord.
 EOF

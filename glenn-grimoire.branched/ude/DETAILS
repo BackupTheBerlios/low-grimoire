@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
       REQ="XFree86"
 #FRESHMEAT=""
     SHORT="The UDE-Project is creating a new WM."
-cat << EOF
+stream << EOF
 The UDE-Project is creating a new WM which will be a complete GUI in
 future. The project does not use any special GUI-Libraries such as QT
 or GTK+. We just use the standard Xlibs (also to make UDE faster). UDE

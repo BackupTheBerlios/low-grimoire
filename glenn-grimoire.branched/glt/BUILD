@@ -19,6 +19,4 @@
   cd /usr/share              &&
   unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" )
   
-  #make    install  prefix=/usr
-
 ) > $C_FIFO 2>&1

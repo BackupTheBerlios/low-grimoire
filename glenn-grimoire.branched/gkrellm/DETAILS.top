@@ -8,6 +8,6 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="GKrellm plugin to see the three most cpu intensive processes."
-cat << EOF
+stream << EOF
 GKrellm plugin to see the three most cpu intensive processes.
 EOF

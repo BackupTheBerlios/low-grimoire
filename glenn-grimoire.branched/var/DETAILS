@@ -9,7 +9,7 @@ ATTRIBUTE="library"
    OPT[1]="dmalloc:--with-dmalloc::add malloc debugging support"
 #FRESHMEAT=""
     SHORT="OSSP var is a flexible, full-featured and fast variable construct expansion library."
-cat << EOF
+stream << EOF
 OSSP var is a flexible, full-featured and fast variable construct
 expansion library. It supports a configurable variable construct syntax
 very similar to the style found in many scripting languages.

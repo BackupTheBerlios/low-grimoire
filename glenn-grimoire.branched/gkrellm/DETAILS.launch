@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="GKrellMLaunch plugin which allows one-click access to frequently used applications from GKrellM."
-cat << EOF
+stream << EOF
 GKrellMLaunch plugin which allows one-click access to frequently used
 applications from GKrellM.
 EOF

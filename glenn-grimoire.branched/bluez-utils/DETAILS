@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ="bluez-libs"
 #FRESHMEAT=""
     SHORT="Bluetooth Utils."
-cat << EOF
+stream << EOF
 Bluetooth Utils.
 EOF

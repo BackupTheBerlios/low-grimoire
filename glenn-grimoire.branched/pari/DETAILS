@@ -8,6 +8,6 @@ ATTRIBUTE="console"
 #   OPT[0]=":::"
 #FRESHMEAT=""
     SHORT="Pari is an advanced solver for applied number theory."
-cat << EOF
+stream << EOF
 Pari is an advanced solver for applied number theory.
 EOF

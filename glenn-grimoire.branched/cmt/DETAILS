@@ -7,7 +7,7 @@ ATTRIBUTE="library"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="The Computer Music Toolkit (CMT) is a collection of LADSPA plugins."
-cat << EOF
+stream << EOF
 The Computer Music Toolkit (CMT) is a collection of LADSPA plugins for use
 with software synthesis and recording packages on Linux.
 EOF

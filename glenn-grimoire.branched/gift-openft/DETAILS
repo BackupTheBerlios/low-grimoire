@@ -8,6 +8,6 @@ ATTRIBUTE="library"
       REQ="giftd db zlib"
  ESTIMATE="763"
 FRESHMEAT="giFT"
-cat << EOF
+stream << EOF
 giFT's OpenFT library.
 EOF

@@ -10,6 +10,6 @@ ATTRIBUTE="library"
    OPT[1]="jpeg:::jpeg support"
    OPT[2]="libpng:::png support"
     SHORT="libmustux is a library needed by protux"
-cat << EOF
+stream << EOF
 libmustux is a library needed by protux
 EOF

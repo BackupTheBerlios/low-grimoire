@@ -7,6 +7,6 @@ ATTRIBUTE="console"
       REQ=""
 #FRESHMEAT=""
     SHORT="Bluetooth device FirmWare loader."
-cat << EOF
+stream << EOF
 Bluetooth device FirmWare loader.
 EOF

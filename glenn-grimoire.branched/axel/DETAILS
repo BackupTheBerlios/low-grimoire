@@ -8,7 +8,7 @@ ATTRIBUTE="console"
       REQ="curl"
 #FRESHMEAT=""
     SHORT="download accelerator using libcurl."
-cat << EOF
+stream << EOF
 Axel does the same thing any other accelerator does: 
 it opens more than one HTTP/FTP connection per download 
 and each connection transfers its own, separate, part of 

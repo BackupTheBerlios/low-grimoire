@@ -12,7 +12,7 @@ ATTRIBUTE="library"
 #   OPT[2]="pcre:--with-pcre::add OSSP pcre regex support"
 #FRESHMEAT=""
     SHORT="OSSP fsl offers the syslog(3) API otherwise provided by the Standard C Library (libc)."
-cat << EOF
+stream << EOF
 OSSP fsl offers the syslog(3) API otherwise provided by the Standard C
 Library (libc). Instead of writing to the syslogd(8) process, it uses the
 powerful OSSP l2 logging capabilities.

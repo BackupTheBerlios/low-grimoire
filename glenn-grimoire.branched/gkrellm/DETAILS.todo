@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="GKrellm plugin to track tasks and to-do items."
-cat << EOF
+stream << EOF
 I have written a plugin for GKrellM, the purpose of which is to track
 tasks and to-do items. The plugin also supports deadline reminder alarms,
 tracking of time spent on individual tasks, and task-diary (sort of)

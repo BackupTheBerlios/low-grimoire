@@ -7,7 +7,7 @@ ATTRIBUTE="console"
       REQ="gettext mhash libmcrypt"
 #FRESHMEAT=""
     SHORT="Steghide is a steganography program which embeds a secret message in a cover file"
-cat << EOF
+stream << EOF
 Steghide is a steganography program which embeds a secret message in a
 cover file by replacing some of the least significant bits of the cover
 file with bits of the secret message. After that, the secret message is

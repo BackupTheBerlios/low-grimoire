@@ -7,7 +7,7 @@ ATTRIBUTE="console"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="pstack dumps a stack trace for a process, given the pid of that process."
-cat << EOF
+stream << EOF
 pstack dumps a stack trace for a process, given the pid of that process.
 If the process named is part of a thread group, then all the threads in
 the group are traced. See the man page for more information.

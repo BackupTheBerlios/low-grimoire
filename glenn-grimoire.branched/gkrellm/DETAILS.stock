@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm Finance-Quote"
 #FRESHMEAT=""
     SHORT="This Plugin gives easy monitoring of stock tickers."
-cat << EOF
+stream << EOF
 This Plugin gives easy monitoring of stock tickers from different markets
 like USA, Europe, Asia, Canada and Australia. Perl script to fetch quote
 details from Yahoo Finance using Finance::Quote perl module. ToolTip gives

@@ -9,7 +9,7 @@ ATTRIBUTE="x11"
    OPT[1]="svgalib:::add svgalib support"
 #FRESHMEAT=""
     SHORT="Synaesthesia is a program that gives a graphical accompanyment to music."
-cat << EOF
+stream << EOF
 Synaesthesia is a program that gives a graphical accompanyment to music.
 Anyone can make some pretty piece of graphics that flashes in time to the
 music, Synaesthesia manages a wee bit more sophistication.

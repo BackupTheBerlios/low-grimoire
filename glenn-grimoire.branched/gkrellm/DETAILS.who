@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="This plugin displays currently logged in users in the scrolling line."
-cat << EOF
+stream << EOF
 This plugin displays currently logged in users in the scrolling line. It
 also shows number of logins for each username and may show idle status.
 

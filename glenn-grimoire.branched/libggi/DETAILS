@@ -10,7 +10,7 @@ ATTRIBUTE="library"
 #   OPT[2]="aalib:::add support for output through aalib"
 #FRESHMEAT=""
     SHORT="LibGGI, the dynamic GGI (General Graphics Interface) library is a flexible drawing library."
-cat << EOF
+stream << EOF
 GGI aims at unifying the way applications access the user display by
 defining a generic abstraction of the notion of graphic display. 
 

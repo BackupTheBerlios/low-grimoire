@@ -8,7 +8,7 @@ ATTRIBUTE="library"
    OPT[0]="libnet,1.0::--disable-libnet:include code requiring libnet"
 #FRESHMEAT=""
     SHORT="Libnids is an implementation of an E-component of Network Intrusion Detection System."
-cat << EOF
+stream << EOF
 Libnids is an implementation of an E-component of Network Intrusion
 Detection System. It emulates the IP stack of Linux 2.0.x. Libnids offers
 IP defragmentation, TCP stream assembly and TCP port scan detection.

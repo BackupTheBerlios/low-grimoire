@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm"
 #FRESHMEAT=""
     SHORT="gkrellm-xkb is a plugin for displaying and switching keybord layouts."
-cat << EOF
+stream << EOF
 gkrellm-xkb is a plugin for gkrellm that displays a small country flag
 indicating the currently-active national keyboard layout and two small
 CapsLock/NumLock indicators. It also has a popup menu to switch between

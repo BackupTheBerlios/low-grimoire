@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="gcc doxygen graphviz"
 #FRESHMEAT=""
     SHORT="Libcwd is a thread-safe, full-featured debugging support library for C++ developers."
-cat << EOF
+stream << EOF
 Libcwd is a thread-safe, full-featured debugging support library for C++
 developers.  It includes ostream-based debug output with custom debug
 channels and devices, powerful memory allocation debugging support, as well

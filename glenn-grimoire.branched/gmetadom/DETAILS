@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="gdome2 libxslt"
 #FRESHMEAT=""
     SHORT="GMetaDOM is a collection of librares, each library providing a DOM implementation."
-cat << EOF
+stream << EOF
 GMetaDOM is a collection of librares, each library providing a DOM
 implementation. Currently available bindings are for C++ (smart pointers)
 and Objective Caml.

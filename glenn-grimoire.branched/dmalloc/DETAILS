@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ=""
 #FRESHMEAT=""
     SHORT="The debug memory allocation or dmalloc library."
-cat << EOF
+stream << EOF
 The debug memory allocation or dmalloc library has been designed as a
 drop in replacement for the system\'s malloc, realloc, calloc, free and
 other memory management routines while providing powerful debugging

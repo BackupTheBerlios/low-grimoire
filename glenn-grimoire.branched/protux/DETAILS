@@ -1,4 +1,4 @@
-  VERSION=( "0.19.5" "0.19.2" "0.17.9" "0.16.0" "0.15.7" "0.15.6")
+  VERSION=( "0.20.1" "0.19.5" "0.19.2" "0.17.9" "0.16.0" "0.15.7" "0.15.6")
    IGNORE="rc\d+$"
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
@@ -9,7 +9,7 @@ ATTRIBUTE="x11"
 #   OPT[0]="alsa:::to use alsa libraries"
 #FRESHMEAT="zinf"
     SHORT="Protux aims to be the most practical and one of the most powerful audio tools for Linux."
-cat << EOF
+stream << EOF
 Protux aims to be the most practical and one of the most powerful audio
 tools for Linux. Protux will allow you to utilize the power of
 keyboard+mouse combination (with no clicks) to vastly speed up the process

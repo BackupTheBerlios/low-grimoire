@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="gettext bison "
 #FRESHMEAT=""
     SHORT="gsmlib is a library to access GSM mobile phones through GSM modems."
-cat << EOF
+stream << EOF
 This distribution contains a library to access GSM mobile phones through
 GSM modems. Features include:
 

@@ -11,7 +11,7 @@ ATTRIBUTE="console|gnome|x11 client|server"
  ESTIMATE="1429"
 #FRESHMEAT=""
     SHORT="Partition Surprise is a GPL partition managing software for Linux."
-cat << EOF
+stream << EOF
 Partition Surprise is a GPL partition managing software for Linux.
 Partition resizes, moves and conversions is implemented. Limited support
 of operations on mounted ext2-filesystem included as well.

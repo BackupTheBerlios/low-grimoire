@@ -7,7 +7,7 @@ ATTRIBUTE="library"
       REQ="libsmi openssl db"
 #FRESHMEAT=""
     SHORT="openSNMP is a multi-threaded SNMPv3 engine."
-cat << EOF
+stream << EOF
 openSNMP is a multi-threaded SNMPv3 engine. This project supports the
 Simple Network Management Protocol version 3. In particular, it is
 designed to match the architecture of the SNMPv3 RFCs (IETF\'s RFCs

@@ -7,7 +7,7 @@ ATTRIBUTE="console driver"
 #      REQ=""
 #FRESHMEAT=""
     SHORT="Tools for Emu10k1 sound cards."
-cat << EOF
+stream << EOF
 Card support
 ------------
 - Creative Sound Blaster Live! (all models)

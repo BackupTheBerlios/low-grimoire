@@ -7,7 +7,7 @@ ATTRIBUTE="driver"
       REQ="pcsc-lite"
 #FRESHMEAT=""
     SHORT="Driver for the Reflex USB (Schlumberger Sema) reader for Linux."
-cat << EOF
+stream << EOF
 Driver for the Reflex USB (Schlumberger Sema) reader for Linux.
 (based on SCM SCR 301 USB reader driver for Linux)
 EOF

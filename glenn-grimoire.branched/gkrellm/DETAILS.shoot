@@ -8,7 +8,7 @@ ATTRIBUTE="concurrent x11"
       REQ="gkrellm ImageMagick"
 #FRESHMEAT=""
     SHORT="This Plugin gives easy access to Screen Lock and Screen Shoot facility."
-cat << EOF
+stream << EOF
 This Plugin gives easy access to Screen Lock and Screen Shoot facility.
 For Screen capture this uses ImageMagick. Displays animation(Screen Saver
 like) along with 'Lock' and 'Shoot' button to be clicked on. With Screen

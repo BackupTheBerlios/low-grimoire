@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
       REQ="XFree86"
 #FRESHMEAT=""
     SHORT="Ups is a source level C,C++ and Fortran debugger that runs under X11."
-cat << EOF
+stream << EOF
 Ups is a source level C,C++ and Fortran debugger that runs under X11.
 Currently supported systems are FreeBSD and GNU/Linux on Intel x86 and
 Solaris on SPARC. On these systems it runs native; it is not a front-end
