@@ -1,4 +1,4 @@
-  VERSION="0.73"
+  VERSION=( "0.80" "0.74" "0.73")
  CATEGORY="chat"
 ATTRIBUTE="client|server"
    SOURCE="bitlbee-$VERSION"
