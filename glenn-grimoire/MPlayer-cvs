@@ -71,6 +71,34 @@ build() {
   
   unset  CFLAGS  CXXFLAGS
   
+  patch -p0 <<'EOF'
+--- TOOLS/subrip.c~	2005-02-14 17:42:20.000000000 -0600
++++ TOOLS/subrip.c	2005-02-14 17:42:37.000000000 -0600
+@@ -72,6 +72,7 @@
+   int spu_changed;
+ } spudec_handle_t;
+ 
++int identify=0;
+ int use_gui;
+ int gtkMessageBox;
+ int verbose=1;
+EOF
+
+  patch -p0 <<'EOF'
+--- TOOLS/vivodump.c~	2005-02-14 18:21:04.000000000 -0600
++++ TOOLS/vivodump.c	2005-02-14 18:21:35.000000000 -0600
+@@ -9,6 +9,9 @@
+ 
+ #include "libmpdemux/muxer.h"
+ 
++void gtkMessageBox( int type,char * str ){}
++int use_gui=0;
++
+ char *info_name;
+ char *info_artist;
+ char *info_genre;
+EOF
+  
   ./configure  --prefix=/usr                      \
                --enable-gui                       \
                --confdir=/etc/mplayer             \
@@ -83,8 +111,10 @@ build() {
                --disable-shared-pp                \
                $OPTS                              &&
   make                                            &&
+  make -C TOOLS                                   &&
   prepare_install                                 &&
   make    install  prefix=/usr                    &&
+  cp -r   TOOLS/* /usr/share/mplayer/             &&
   make clean                                      &&
   install_conf
 
@@ -109,7 +139,7 @@ default_pre_build
       CVSCOMMAND="checkout $MODULE"
   fi
   
-  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  cvs -z9 -d $CVSSERVER $CVSCOMMAND
   
   if ! [ -d $BUILD_DIR ]; then
     mv $MODULE $BUILD_DIR
