@@ -32,13 +32,15 @@ clients, and low latency operation.
 
 build() {
 
-  ./configure --enable-posix-shm  \
-	      --enable-optimize   \
+  # --enable-optimize -- this causes illegal instruction
+  ./configure --prefix=/usr       \
+	      --enable-posix-shm  \
+	      --disable-optimize  \
 	      --enable-timestamps \
 	      --with-html-dir=/usr/doc/$SPELL \
               $OPTS           &&
   make                        &&
   prepare_install             &&
-  make    install  prefix=/usr
+  make    install
 
 }
