@@ -1,0 +1,70 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.1" )
+ CATEGORY="development math"
+ATTRIBUTE="console x11 library teTeX"
+ HOMEPAGE="http://www.r-project.org"
+   SOURCE="src/base/R-2/$SPELL-$VERSION"
+      URL="http://cran.us.r-project.org
+           http://cran.au.r-project.org
+	   http://cran.at.r-project.org
+	   http://cran.br.r-project.org
+	   http://www.termix.ufv.br/CRAN
+	   http://lmq.esalq.usp.br/CRAN
+	   http://cran.stat.sfu.ca
+	   http://probability.ca/cran
+	   http://cran.dk.r-project.org
+	   http://cran.fr.r-project.org
+	   http://cran.univ-lyon1.fr
+	   http://mirror.internet.tp/cran
+	   http://cran.r-mirror.de
+	   http://umfragen.sowi.uni-mainz.de/CRAN
+	   http://cran.hu.r-project.org
+	   http://microarrays.unife.it/CRAN
+	   ftp://ftp.u-aizu.ac.jp/pub/lang/R/CRAN
+	   http://cran.md.tsukuba.ac.jp
+	   http://r.meteo.uni.wroc.pl
+	   http://cran.pt.r-project.org
+	   http://www.fastmirrors.org/cran
+	   http://www.wsection.com/cran
+	   http://cran.za.r-project.org
+	   http://cran.es.r-project.org
+	   http://cran.ch.r-project.org
+	   http://www.imsv.unibe.ch/cran
+	   http://cran.csie.ntu.edu.tw
+	   http://cran.uk.r-project.org
+	   http://www.sourcekeg.co.uk/cran
+	   http://cran.stat.ucla.edu
+	   http://www.bioconductor.org/CRAN
+	   http://www.ibiblio.org/pub/languages/R/CRAN
+	   http://lib.stat.cmu.edu/R/CRAN"
+#      URL="$R_URL"
+      REQ=( "f2c libf2c" )
+   OPT[0]="zlib:--with-zlib::zlib support"
+   OPT[1]="bzip2:--with-bzlib::bzip support"
+   OPT[2]="jpeg::--without-jpeglib:jpeg support"
+   OPT[3]="libpng::--without-libpng:png support"
+   OPT[4]="readline::--without-readline:readline support"
+   OPT[5]="gnome-libs:--with-gnome::gnome support"
+   OPT[6]="tk::--without-tcltk:tktcl support"
+   OPT[7]="pcre:--with-pcre::system pcre library"
+#   OPT[8]="blas:--with-blas::blas library"
+#   OPT[9]="lapack:--with-lapack::lapack library"
+ ESTIMATE="115"
+DESC="R is a language and environment for statistical computing and graphics.
+R is a language and environment for statistical computing and graphics. It
+is a GNU project which is similar to the S language and environment which
+was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies)
+by John Chambers and colleagues. R can be considered as a different
+implementation of S. There are some important differences, but much code
+written for S runs unaltered under R. 
+"
+
+build() {
+  ./configure --prefix=/usr \
+	      --enable-R-shlib \
+	      $OPTS   &&
+  make                &&
+  prepare_install     &&
+  make install
+}

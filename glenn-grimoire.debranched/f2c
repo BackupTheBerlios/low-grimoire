@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "20031025" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+ HOMEPAGE="http://www.netlib.org/f2c"
+   SOURCE="$SPELL/src.tar"
+      URL="ftp://netlib.bell-labs.com/netlib"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="f2c translates fortran to c.
+f2c translates fortran to c.
+"
+
+build() {
+  for I in $(ls *gz); do
+    gzip -d -f $I;
+  done                &&
+  make -f makefile.u  &&
+  prepare_install     &&
+  install -o root -g root -m 755 xsum f2c /usr/bin
+}
