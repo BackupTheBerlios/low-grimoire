@@ -2,7 +2,7 @@
  CATEGORY="development"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
- HOMEPAGE="http://www.freedesktop.org/Software/glitz"
+ HOMEPAGE="http://www.freedesktop.org/Cairo"
       URL="http://cairographics.org/snapshots
            http://www.freedesktop.org/Cairo/snapshots"
 #      REQ=""

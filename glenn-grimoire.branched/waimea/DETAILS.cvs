@@ -1,6 +1,7 @@
 unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs window-manager"
+ HOMEPAGE="http://www.freedesktop.org/Software/waimea"
       REQ="cvs autoconf automake expat cairo"
    OPT[0]="libpng:::add png support"
    OPT[1]="libsvg-cairo:::add svg support"
