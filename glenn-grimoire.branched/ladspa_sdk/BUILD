@@ -1,7 +1,7 @@
 (
   cd src
   
-  sedit "s/usr\\/local/usr/" makefile
+  sed -i "s:usr/local:usr:" makefile
 
   make                   
   prepare_install        &&

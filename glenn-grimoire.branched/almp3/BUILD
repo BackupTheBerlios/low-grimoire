@@ -1,5 +1,5 @@
 (
-  sedit "s/#TARGET=LINUX_STATIC/TARGET=LINUX_STATIC/" makefile
+  sed -i "s/#TARGET=LINUX_STATIC/TARGET=LINUX_STATIC/" Makefile
 
   make                        &&
   prepare_install             &&
