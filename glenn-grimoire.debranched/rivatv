@@ -11,6 +11,6 @@ ATTRIBUTE="driver"
 #FRESHMEAT=""
 DESC="Linux drivers for nVidia cards with video-in
 The RivaTV project is dedicated to producing linux drivers for nVidia
-based graphics boards with video-in feature. The term "RivaTV" is used
+based graphics boards with video-in feature. The term \"RivaTV\" is used
 to refer to the entire driver set. 
 "

@@ -16,7 +16,7 @@ are :
  Various storage schemes of matrices (dense, sparse, skyline, tridiagonal).
  Direct methods and preconditioned iterative strategies for the solution
    of linear systems of equations.
- Shape functions of most "popular" finite elements
+ Shape functions of most \"popular\" finite elements
  Element arrays of most popular problems (Heat Transfer, Fluid Flow,
    Solid Mechanics, Electromagnetics, ...).
 "
