@@ -1,13 +1,14 @@
   CVSSERVER=':pserver:anonymous@cvs.gift-fasttrack.berlios.de:/cvsroot/gift-fasttrack'
+  MODULE=$SPELL
 
   mkdir -p /usr/src/sorcery.cvs/$SPELL/
   cd /usr/src/sorcery.cvs/$SPELL/
 
   if ( true ); then
-      if [ -a /usr/src/sorcery.cvs/$SPELL/giFT-FastTrack ]; then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/$MODULE ]; then
           CVSCOMMAND="update -dP"
       else
-          CVSCOMMAND="checkout giFT-FastTrack"
+          CVSCOMMAND="checkout $MODULE"
       fi
 
       cvs -z4 -d $CVSSERVER $CVSCOMMAND
