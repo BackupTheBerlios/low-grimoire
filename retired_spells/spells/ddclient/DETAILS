@@ -5,7 +5,7 @@
        URL="http://members.rogers.com/ddclient"
     SOURCE="pub/ddclient.tar.gz"
        REQ="perl"
-  ESTIMATE="377"
+  ESTIMATE=5
  FRESHMEAT="ddclient"
      SHORT="ddclient is a Perl client used to update dynamic DNS entries"
 cat << EOF
