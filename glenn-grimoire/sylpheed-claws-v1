@@ -1,0 +1,26 @@
+inherit sylpheed
+   VERSION=( "1.0.1" "0.9.8claws" "0.9.5claws" "0.9.4claws" "0.9.3claws" "0.9.0claws" "0.8.11claws" "0.8.10claws" "0.8.9claws" "0.8.8claws" "0.8.7claws" "0.8.6claws" "0.8.5claws" "0.8.3claws" "0.8.2claws" )
+    IGNORE="theme\|iconset"
+#    SOURCE=( "sylpheed-claws/sylpheed-$VERSION" )
+    SOURCE=( "$SPELL/$SPELL-$VERSION" )
+  HOMEPAGE="http://sylpheed-claws.sourceforge.net"
+  EPROVIDE="sylpheed"
+       URL=( "$SOURCEFORGE_URL" )
+       REQ=( "gdk-pixbuf"
+             "compface::--disable-compface:for compface support"
+             "gpgme:--enable-gpgme::for encrypted email"
+             "openldap:--enable-ldap::for ldap support"
+             "openssl:--enable-ssl::for pop3s and imaps support"
+             "imlib:::for advanced image support"
+             "startup-notification:::for gnome startup notification support"
+             "aspell:--enable-aspell::for spell checking support"
+             "dillo:--enable-dillo-viewer-plugin::Build Dillo plugin for html mail rendering"
+             "Mail-SpamAssassin:--enable-spamassassin-plugin::Build SpamAssassin plugin"
+             "clamav:--enable-clamav-plugin::Build Clam AntiVirus"
+             "gtkmathview:--enable-mathml-viewer-plugin::Build MathML-Viewer plugin" )
+    OPT[4]="aspell:--enable-aspell::for spell checking support"
+    OPT[5]="dillo:--enable-dillo-viewer-plugin::Build Dillo plugin for html mail rendering"
+    OPT[6]="Mail-SpamAssassin:--enable-spamassassin-plugin::Build SpamAssassin plugin"
+    OPT[7]="clamav:--enable-clamav-plugin::Build Clam AntiVirus"
+    OPT[8]="gtkmathview:--enable-mathml-viewer-plugin::Build MathML-Viewer plugin"
+    OPT[9]="openssl:--enable-openssl::Add SSL support"
