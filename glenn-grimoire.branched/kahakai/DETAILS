@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
       URL="$SOURCEFORGE_URL"
       REQ="imlib2 swig,v1.3.17 XFree86"
    OPT[0]="ruby:::add ruby bindings"
-   OPT[1]="python:::add python bindings"
+   OPT[1]="Python:::add python bindings"
 #FRESHMEAT=""
     SHORT="Kahakai is a fork of the Waimea window manager, with the intent to create a language agnostic scriptable window manager."
 cat << EOF
