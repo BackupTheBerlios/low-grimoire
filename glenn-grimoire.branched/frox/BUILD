@@ -11,6 +11,8 @@
               $OPTS                           &&
   make                                        &&
   prepare_install                             &&
-  make install
+  make install                                &&
+  mkdir -p /usr/doc/$SPELL                    &&
+  cp doc/* /usr/doc/$SPELL
 
 ) > $C_FIFO 2>&1
