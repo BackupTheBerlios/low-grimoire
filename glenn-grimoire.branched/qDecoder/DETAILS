@@ -1,0 +1,14 @@
+  VERSION=( "7.0.1" )
+ CATEGORY="web"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.Z"
+ HOMEPAGE="http://www.openbird.com/solutions/qdecoder/"
+      URL="ftp://ftp.openbird.com/pub"
+#      REQ=""
+#FRESHMEAT=""
+    SHORT="A Free Ansi C Library to facilitate the creation of CGI softwares using the C/C++ programming language."
+cat << EOF
+A Free Ansi C Library to facilitate the creation of CGI softwares using
+the C/C++ programming language. Documentations, examples and source codes
+are included.
+EOF
