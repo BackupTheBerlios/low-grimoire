@@ -1,0 +1,15 @@
+  VERSION=( "0.6.9" "0.6.5" )
+ CATEGORY="video-editor"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dvdauthor.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ="libxml2 ImageMagick libdvdread fribidi freetype"
+#FRESHMEAT=""
+    SHORT="A simple set of tools to help you author a DVD."
+cat << EOF
+A simple set of tools to help you author a DVD. The idea is to be able to
+create menus, buttons, chapters, etc, but for now you can just take an
+mpeg stream (as created by mplex -f 8 from mjpegtools 1.6.0) and write it
+to DVD.
+EOF
