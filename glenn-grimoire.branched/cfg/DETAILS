@@ -1,0 +1,18 @@
+  VERSION=( "0.9.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.ossp.org/pkg/lib/cfg"
+      URL="ftp://ftp.ossp.org/pkg/lib"
+#      REQ=""
+   OPT[0]="ex:--with-ex::add ex exception handling support"
+#FRESHMEAT=""
+    SHORT="OSSP cfg is a ISO-C library for parsing arbitrary C/C++-style configuration files."
+cat << EOF
+OSSP cfg is a ISO-C library for parsing arbitrary C/C++-style
+configuration files. A configuration is sequence of directives. Each
+directive consists of zero or more tokens. Each token can be either a
+string or again a complete sequence. This means the configuration syntax
+has a recursive structure and this way allows to create configurations
+with arbitrarily nested sections. 
+EOF
