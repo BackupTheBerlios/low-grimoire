@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "1.3.5" "1.3.4" )
+  CATEGORY="db"
+ ATTRIBUTE="library"
+    SOURCE="sources/$SPELL/${VERSION:0:3}/$SPELL-$VERSION.tar.bz2"
+       URL="$GNOME_URL"
+  HOMEPAGE="http://gtkmm.sourceforge.net"
+       REQ="glibmm libgda"
+  ESTIMATE="1342"
+     DESC="libgdamm is a C++ interface for the libgda library.
+libgdamm is a C++ interface for the libgda library.
+"
