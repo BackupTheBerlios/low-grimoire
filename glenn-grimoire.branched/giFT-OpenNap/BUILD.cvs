@@ -1,0 +1,16 @@
+(
+  cd /usr/src/sorcery.cvs/$SPELL/giFT-OpenNap	&&
+
+  ./autogen.sh --build=$BUILD		\
+               --prefix=/usr		\
+               $OPTS
+
+  make					&&
+  prepare_install			&&
+  make    install			&&
+  make distclean
+
+
+
+) > $C_FIFO 2>&1
+

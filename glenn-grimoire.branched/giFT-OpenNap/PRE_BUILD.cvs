@@ -1,0 +1,14 @@
+  CVSSERVER=':pserver:anonymous@cvs.gift-opennap.berlios.de:/cvsroot/gift-opennap'
+
+  mkdir -p /usr/src/sorcery.cvs/$SPELL/
+  cd /usr/src/sorcery.cvs/$SPELL/
+
+  if ( true ); then
+      if [ -a /usr/src/sorcery.cvs/$SPELL/giFT-OpenNap ]; then
+          CVSCOMMAND="update -dP"
+      else
+          CVSCOMMAND="checkout giFT-OpenNap"
+      fi
+
+      cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  fi
