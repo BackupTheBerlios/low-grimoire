@@ -1,0 +1,17 @@
+   VERSION=( "1.0.4" )
+  CATEGORY="development"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://arch.quackerhead.com/~lord"
+       URL="http://arch.quackerhead.com/~lord/releases/tla"
+  ESTIMATE="2199"
+ FRESHMEAT="arch revision control system - tla branch"
+     SHORT="arch is a modern replacement for CVS, specifically designed for the distributed development needs of open source projects"
+
+cat << EOF
+arch is a modern replacement for CVS, specifically designed for the 
+distributed development needs of open source projects. It has uniquely 
+good support for development on branches (especially good merging tools), 
+distributed repositories (every developer can have branches in their 
+own repository), changeset-oriented project management (arch commits 
+changes to multiple files at once), and, of course, file and directory renaming.
+EOF
