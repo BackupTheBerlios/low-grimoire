@@ -41,8 +41,6 @@ Its main features are:
 "
 
 build() {
-
-
   cd src                      &&
   ./configure --prefix=/usr   \
               $OPTS           &&
@@ -57,12 +55,11 @@ build() {
   pushd `pwd`                 &&
   mkdir -p /usr/share/$SPELL  &&
   cd /usr/share/$SPELL        &&
-  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
-  unpack $( guess_filename "${SOURCE[2]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
-  unpack $( guess_filename "${SOURCE[3]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
+  unpack $( guess_filename "${SOURCE[2]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
+  unpack $( guess_filename "${SOURCE[3]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
   chmod -w *                  &&
   chmod +r *                  &&
   popd
-
 }
 

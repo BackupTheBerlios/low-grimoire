@@ -17,10 +17,10 @@ Descent 2 for linux.
 "
 
 build() {
-  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
   ./configure --prefix=/usr              \
               --bindir=/usr/games        \
-	      --with-sharepath=/usr/share/$BSPELL \
+	      --with-sharepath=/usr/share/$SPELL \
 	      --disable-debug            \
 	      --enable-release           \
               $OPTS                      &&
@@ -28,6 +28,6 @@ build() {
   prepare_install                        &&
   make install                           &&
   mkdir -p /usr/share/$SPELL             &&
-  cp -R "${SOURCE[1]}"/* /usr/share/$SPELL
+  cp -R `echo -n "${SOURCE[1]}" | cut -d. -f1`/* /usr/share/$SPELL
 }
 

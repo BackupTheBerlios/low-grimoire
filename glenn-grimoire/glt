@@ -19,7 +19,6 @@ GLT is a C++ class library for programming interactive 3D graphics with OpenGL.
 "
 
 build() {
-
   INCLUDEDIR=/usr/include/glt
   local -a SUBDIRS=("fonts" "glt" "glui" "glutm" "math" "mesh" "misc" "node" "unifont")
 
@@ -32,21 +31,19 @@ build() {
   done )
   mkdir -p /usr/doc/$SPELL   &&
   cd /usr/doc/$SPELL         &&
-  unpack $( guess_filename "${SOURCE[4]}" "$SOURCE_CACHE/$BSPELL/$VERSION" ) &&
+  unpack $( guess_filename "${SOURCE[4]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
   cd $BUILD_DIR              &&
   mkdir -p /usr/share/$SPELL &&
   install -o root -g root -m 755 bin/* /usr/share/$SPELL  &&
   install -o root -g root -m 755 src/program/glui/{Makefile,*.cpp} /usr/share/$SPELL  &&
   cd /usr/share              &&
-  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$BSPELL/$VERSION" )
-  
+  unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$SPELL/$VERSION" )
 }
 
 pre_build() {
 default_pre_build
-unpack ${SOURCE[0]}
-unpack ${SOURCE[1]}
-unpack ${SOURCE[2]}
-unpack ${SOURCE[3]}
+  unpack ${SOURCE[0]}
+  unpack ${SOURCE[1]}
+  unpack ${SOURCE[2]}
+  unpack ${SOURCE[3]}
 }
-

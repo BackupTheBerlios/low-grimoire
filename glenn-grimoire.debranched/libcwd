@@ -16,10 +16,8 @@ demangled type names.
 "
 
 build() {
-
-  default_build                           &&
-  mkdir -p /usr/share/$BSPELL             &&
-  cp -R example-project cutee /usr/share/$BSPELL
-
+  default_build                          &&
+  mkdir -p /usr/share/$SPELL             &&
+  cp -R example-project cutee /usr/share/$SPELL
 }
 
