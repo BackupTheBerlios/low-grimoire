@@ -4,7 +4,7 @@
   HOMEPAGE="http://www.net-dns.org"
        URL="http://www.net-dns.org/download"
        REQ="perl"
-  ESTIMATE="108"
+  ESTIMATE=119
      SHORT="Net::DNS is a Perl interface to the DNS resolver"
 
 cat << EOF
