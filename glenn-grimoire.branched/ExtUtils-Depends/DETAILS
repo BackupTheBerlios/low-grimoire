@@ -1,0 +1,11 @@
+   VERSION=( "0.101" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.goof.com/pcg/marc/"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       REQ="perl glib"
+     SHORT="Easily build XS extensions that depend on XS extensions."
+cat << EOF
+Easily build XS extensions that depend on XS extensions.
+EOF

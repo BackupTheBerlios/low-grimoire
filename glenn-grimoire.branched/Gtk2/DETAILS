@@ -1,0 +1,15 @@
+   VERSION=( "0.26" "0.24" )
+  CATEGORY="development"
+ ATTRIBUTE="perl library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.goof.com/pcg/marc/"
+       URL="ftp://mirror.csit.fsu.edu/pub/CPAN/authors/id/M/ML/MLEHMANN"
+       REQ="perl gtk+ Glib"
+     SHORT="Perl bindings to the 2.x series of the Gtk+ graphical user interface library."
+cat << EOF
+Perl bindings to the 2.x series of the Gtk+ graphical user interface
+library. This module allows you to write graphical user interfaces in a
+perlish and object-oriented way, freeing you from the casting and memory
+management in C, yet remaining very close in spirit to original API.  Find
+out more about Gtk+ at http://www.gtk.org.
+EOF
