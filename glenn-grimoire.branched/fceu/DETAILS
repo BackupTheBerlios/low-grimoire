@@ -1,11 +1,14 @@
-   VERSION=( "0.97.5" )
+   VERSION=( "0.98.7" "0.98.5" "0.97.5" )
   CATEGORY="game emulator"
  ATTRIBUTE="console x11"
     SOURCE="$SPELL-$VERSION.src"
 #  HOMEPAGE="http://xodnizel.net/fceultra"
   HOMEPAGE="http://fceultra.sourceforge.net"
-       URL="http://fceultra.sourceforge.net/fceultra/downloads"
-       REQ="SDL gtk+,v1.2"
+       URL="http://fceultra.sourceforge.net/releases"
+#       REQ="SDL gtk+,v1.2"
+       REQ="SDL"
+   OPT[0]="XFree86:--with-opengl::use opengl"
+#   OPT[1]="gtk+:--with-gtk::add gtk gui" # not functioning atm
   ESTIMATE="16"
 # FRESHMEAT=""
      SHORT="FCE Ultra is a NES(Nintendo Entertainment System) emulator."
