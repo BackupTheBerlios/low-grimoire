@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.4.2" "0.4.1" )
  CATEGORY="network"
-ATTRIBUTE="library utility"
+ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.all-day-breakfast.com/rosegarden/"
       URL="ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/"
