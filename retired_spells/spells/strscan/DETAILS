@@ -1,0 +1,11 @@
+   VERSION=( "0.6.7" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://i.loveruby.net/en/strscan.html"
+       URL="http://i.loveruby.net/archive/strscan"
+       REQ="ruby"
+     SHORT="strscan is a library for fast scanning"
+
+cat << EOF
+strscan is a library for fast scanning
+EOF
