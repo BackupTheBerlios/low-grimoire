@@ -1,0 +1,19 @@
+  VERSION=( "1.0" )
+ CATEGORY="game"
+ATTRIBUTE="x11"
+   SOURCE="${SPELL}-src.$VERSION"
+ HOMEPAGE="http://dossizola.sourceforge.net"
+      URL="http://dossizola.sourceforge.net/packages/tgz/src"
+      REQ="SDL_image"
+#FRESHMEAT=""
+    SHORT="Do'SSi Zo'la is a board game under GPL licence, using SDL."
+cat << EOF
+Do'SSi Zo'la is a board game under GPL licence, using SDL. You can play
+with two players or you can play on your own against the computer.
+
+The goal of the game is quite simple: block your opponent by destroying
+the fields which surround him without being blocked yourself. Every turn
+of play, each player must first move to some adjacent field and then
+destroy a field of his choice. The first player who cannot move anymore
+loses the game. 
+EOF
