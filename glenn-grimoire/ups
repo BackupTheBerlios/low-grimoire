@@ -4,7 +4,7 @@
  CATEGORY="development"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://www.concerto.demon.co.uk/UPS/main.html"
+ HOMEPAGE="http://ups.sourceforge.net/main.html"
       URL="$SOURCEFORGE_URL"
       REQ=( "XFree86" )
 #FRESHMEAT=""
