@@ -1,4 +1,4 @@
-   VERSION=( "2.6c" "2.6b" "2.6a" "2.5c" )
+   VERSION=( "2.6d" "2.6c" "2.6b" "2.6a" "2.5c" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://www-sop.inria.fr/mimosa/fp/Bigloo/bigloo.html"
