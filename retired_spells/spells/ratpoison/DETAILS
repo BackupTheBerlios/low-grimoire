@@ -5,7 +5,7 @@
        URL="$SOURCEFORGE_URL"
     SOURCE="ratpoison/ratpoison-$VERSION.tar.gz"
 #       REQ="libpcap ncurses"
-  ESTIMATE=35
+  ESTIMATE=44
  FRESHMEAT="ratpoison"
      SHORT="ratpoison is a fat free simple window manager"
 
