@@ -1,0 +1,12 @@
+  VERSION=( "0.6.4" )
+ CATEGORY="library"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://matroska.org"
+      URL="http://dl.matroska.org/downloads"
+      REQ=""
+#FRESHMEAT=""
+    SHORT="Library for reading ebml files (binary ML)."
+cat << EOF
+Library for reading ebml files (binary ML).
+EOF

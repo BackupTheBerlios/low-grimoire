@@ -1,0 +1,13 @@
+  VERSION=( "8.1.4" )
+ CATEGORY="ftp"
+ATTRIBUTE="gnome|x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://mange.dynup.net/linux.html"
+      URL="http://mange.dynup.net/linux"
+      REQ="gtk+ pango gdk-pixbuf gettext"
+#FRESHMEAT=""
+    SHORT="GProftpd is a fast and easy to use GTK+ administration tool for the Proftpd standalone server."
+cat << EOF
+GProftpd is a fast and easy to use GTK+ administration tool for the
+Proftpd standalone server.
+EOF
