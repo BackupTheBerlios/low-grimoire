@@ -4,6 +4,7 @@
   HOMEPAGE="http://smarty.php.net"
        URL="http://smarty.php.net/distributions"
        REQ="php"
+  ESTIMATE="4"
  FRESHMEAT="Smarty PHP template engine"
      SHORT="Smarty is a template engine for PHP"
 cat << EOF
