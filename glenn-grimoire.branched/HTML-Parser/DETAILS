@@ -1,4 +1,4 @@
-   VERSION=( "3.28" )
+   VERSION=( "3.35" "3.28" )
   CATEGORY="library"
  ATTRIBUTE="perl"
     SOURCE="$SPELL-$VERSION"
