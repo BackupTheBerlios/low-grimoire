@@ -30,7 +30,7 @@ build()  {
 export    CFLAGS="$( echo  $CFLAGS    |  sed  s/-funroll-loops// )"
 export  CXXFLAGS="$( echo  $CXXFLAGS  |  sed  s/-funroll-loops// )"
 
- if  !  grep      "flags"  <  /proc/cpuinfo  |
+if  !  grep      "flags"  <  /proc/cpuinfo  |
        grep  -q  "mmx"
 then  OPTS="$OPTS  --disable-mmx"
 fi
@@ -48,7 +48,11 @@ make                             &&
 prepare_install                  &&
 make    install                  &&
 make distclean                   &&
+# needed my mplayer?
 cp libavcodec/dsputil.h /usr/include/ffmpeg
+# needed by nvrec
+cp libavformat/framehook.h /usr/include/ffmpeg
+
   
 if    [  !  -f               /etc/ffserver.conf  ]
 then  cp  doc/ffserver.conf  /etc/ffserver.conf
