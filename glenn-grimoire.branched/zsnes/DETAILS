@@ -1,4 +1,4 @@
-  VERSION="136"
+  VERSION=("136")
  CATEGORY="game emulator"
 ATTRIBUTE="x11"
  HOMEPAGE="http://www.zsnes.com"
