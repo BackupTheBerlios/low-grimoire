@@ -41,11 +41,12 @@ default_pre_build
   
   if [ -d $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
+      cd $BUILD_DIR
   else
       CVSCOMMAND="checkout $MODULE"
   fi
   
-  cvs -z4 -d $CVSSERVER $CVSCOMMAND
+  cvs -z9 -d $CVSSERVER $CVSCOMMAND
   
   if ! [ -d $BUILD_DIR ]; then
     mv $MODULE $BUILD_DIR
