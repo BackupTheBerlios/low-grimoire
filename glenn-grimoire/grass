@@ -1,0 +1,34 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "6.0.0" )
+ CATEGORY="utility"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://grass.baylor.edu"
+      URL="http://grass.baylor.edu/grass60/source"
+      REQ=( "flex bison zlib ncurses XFree86 proj gdal"
+            "jpeg:--with-jpeg::add jpeg support"
+            "tiff:--with-tiff::add tiff support"
+            "libpng:--with-png::add png support"
+            "postgresql:--with-postgres::add postgres support"
+            "mysql:--with-mysql::add mysql support"
+            "unixODBC:--with-odbc::add odbc support"
+#            "gdal:--with-gdal::add gdal support"
+#            "R:::add R statistical language support"
+            "fftw:--with-fftw:--without-fftw:add fftw support"
+            "lapack:--with-lapack::add lapack support"
+#            "blas:--with-bblas::add blas support"
+#            ":--with-opendwg::add opendwg support" # not Free
+            ":--with-glw::add OpenGLw support"
+            "tk:--with-tcltk::add tk/tcl gui support"
+            "lesstif:--with-motif::add motif gui support"
+            "freetype:--with-freetype --with-freetype-includes=/usr/include/freetype2::add freetype support"
+            "readline:--with-readline::add readline support" )
+     OPTS="--with-cxx --enable-shared --with-nls"
+ ESTIMATE="83"
+#FRESHMEAT=""
+     DESC="GRASS is a GIS system used for geospatial data management and analysis, image processing, graphics/maps production, spatial modeling, and visualization.
+GRASS is a Geographic Information System (GIS) system used for geospatial
+data management and analysis, image processing, graphics/maps production,
+spatial modeling, and visualization.
+"
