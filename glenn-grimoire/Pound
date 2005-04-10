@@ -1,0 +1,20 @@
+  VERSION=( "1.8.2" "1.7" )
+ CATEGORY="web security proxy"
+ATTRIBUTE="console client server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.apsis.ch/pound"
+      URL="http://www.apsis.ch/pound"
+      REQ="openssl"
+#FRESHMEAT=""
+DESC="Pound is a reverse proxy, load balancer and HTTPS front-end for Web servers.
+The Pound program is a reverse proxy, load balancer and HTTPS front-end for
+Web server(s). Pound was developed to enable distributing the load among
+several Web-servers and to allow for a convenient SSL wrapper for those Web
+servers that do not offer it natively.
+"
+
+build() {
+    default_build              &&
+    mkdir -p /usr/share/$SPELL &&
+    cp z2* /usr/share/$SPELL
+}
