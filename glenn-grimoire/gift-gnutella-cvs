@@ -13,6 +13,9 @@ build() {
   ./autogen.sh --build=$BUILD		\
                --prefix=/usr		\
                $OPTS
+  automake -a
+  ./configure --prefix=/usr		\
+              $OPTS
 
   make					&&
   prepare_install			&&
@@ -35,6 +38,7 @@ default_pre_build
   
   if [ -d $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
+      cd $BUILD_DIR
   else
       CVSCOMMAND="checkout $MODULE"
   fi

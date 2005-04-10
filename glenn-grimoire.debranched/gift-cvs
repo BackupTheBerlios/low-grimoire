@@ -15,9 +15,9 @@ build() {
   # yuck! do this twice and it works, I think cause automake needs to be run again
   #./autogen.sh --prefix=/usr		\
   #             $OPTS
-  automake
-  ./configure --prefix=/usr		\
-              $OPTS
+#  automake
+#  ./configure --prefix=/usr		\
+#              $OPTS
   
   make					&&
   prepare_install			&&
@@ -40,6 +40,7 @@ default_pre_build
   
   if [ -d $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
+      cd $BUILD_DIR
   else
       CVSCOMMAND="checkout $MODULE"
   fi

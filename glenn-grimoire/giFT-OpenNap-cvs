@@ -34,6 +34,7 @@ default_pre_build
   
   if [ -d $BUILD_DIR ]; then
       CVSCOMMAND="update -dP"
+      cd $BUILD_DIR
   else
       CVSCOMMAND="checkout $MODULE"
   fi
