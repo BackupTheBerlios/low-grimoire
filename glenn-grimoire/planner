@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.13" )
+ CATEGORY="development"
+ATTRIBUTE="gnome"
+ HOMEPAGE="http://www.imendio.com/projects/planner"
+   SOURCE="sources/$SPELL/${VERSION:0:4}/$SPELL-$VERSION"
+      URL="$GNOME_URL"
+      REQ=( "libgnomeui gnome-vfs libgnomeprintui gettext"
+            "libgda:--enable-database=yes::enable database support"
+            "Python pygtk:--enable-python --enable-python-plugin::enable python support"
+            "evolution-data-server:--enable-eds::enable evolution-data-server support" )
+     OPTS="--with-compile-warnings=yes"
+ ESTIMATE="193"
+DESC="A Project Management Application for GNOME.
+Planner is a project planning, scheduling and tracking tool for the GNOME
+Desktop aiming to act as a better replacement than available proprietary
+tools.
+"
