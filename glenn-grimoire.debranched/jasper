@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.701.0" )
+ CATEGORY="development image"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.ece.uvic.ca/~mdadams/jasper"
+   SOURCE="$SPELL-$VERSION.zip"
+      URL="http://www.ece.uvic.ca/~mdadams/jasper/software"
+      REQ=( ""
+            "jpeg::--disable-libjpeg:enable jpeg support"
+            "::--disable-opengl:enable opengl support" )
+ ESTIMATE="115"
+DESC="JasPer is an implementation of the codec specified in the JPEG-2000 Part-1 standard.
+JasPer includes a software-based implementation of the codec specified in
+the JPEG-2000 Part-1 standard.
+"
+
+build() {
+  cd $SPELL-$VERSION &&
+  default_build
+}

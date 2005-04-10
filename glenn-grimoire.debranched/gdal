@@ -1,0 +1,28 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.6" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.gdal.org"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://www.gdal.org/dl
+           http://dl.maptools.org/dl/gdal
+	   ftp://ftp.remotesensing.org/gdal"
+      REQ=( "zlib"
+            "tiff:::add tiff support"
+            "jpeg:::add jpeg support"
+            "libpng:::add png support"
+            "postgresql:::add postgres support"
+            "mysql:::add mysql support"
+            "unixODBC:::add odbc support"
+            "sqlite:::add SQLite support"
+            "netcdf:--with-netcdf::add netcdf support"
+            "cfitsio:--with-cfitsio::add FITS support"
+            "libcsf:--with-pcraster::add PCRaster support"
+            "ogdi:--with-ogdi::add OGDI support"
+            "geos:--with-geos::add GEOS support"
+            "python:::add python support" )
+ ESTIMATE="115"
+DESC="GDAL is a translator library for raster geospatial data formats.
+GDAL is a translator library for raster geospatial data formats.
+"

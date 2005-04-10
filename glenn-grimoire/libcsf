@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0-041111" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://pcraster.geo.uu.nl/csfapi.html"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://pcraster.geo.uu.nl/download/dist"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="C API for reading and writing PCRaster maps.
+C API for reading and writing PCRaster maps.
+"

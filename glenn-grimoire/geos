@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://geos.refractions.net"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://geos.refractions.net"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology Suite (JTS)
+GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology
+Suite (JTS)
+"

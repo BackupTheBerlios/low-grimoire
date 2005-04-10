@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.1.4" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://ogdi.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "proj zlib"
+            "expat:--with-expat:--without-expat:include expat support" )
+ ESTIMATE="115"
+DESC="OGDI is the Open Geographic Datastore Interface.
+OGDI is the Open Geographic Datastore Interface.
+"
+
+build() {
+  export TOPDIR=$BUILD_DIR
+  export LD_LIBRARY_PATH=$TOPDIR/bin/Linux
+  default_build
+}

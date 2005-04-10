@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "4.4.9" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.remotesensing.org/proj"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="ftp://ftp.remotesensing.org/pub"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="PROJ.4 Cartographic Projections library
+PROJ.4 Cartographic Projections library
+"
