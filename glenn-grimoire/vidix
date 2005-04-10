@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.9.1" )
+ CATEGORY="video"
+ATTRIBUTE="library"
+ HOMEPAGE="http://vidix.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+ ESTIMATE="115"
+DESC="This interface was designed and introduced as interface to userspace drivers to provide DGA everywhere where it's possible (unline X11).
+This interface was designed and introduced as interface to userspace
+drivers to provide DGA everywhere where it's possible (unline X11).
+"
+
+# should I build the kernelhelper?

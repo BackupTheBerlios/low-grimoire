@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.11" )
+ CATEGORY="development math"
+ATTRIBUTE="x11 library"
+ HOMEPAGE="http://pigale.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "qt-x11-free" )
+ ESTIMATE="115"
+DESC="We develop a graph editor and a C++ algorithm library essentially concerned with planar graphs. The editor is particularly intended for graph theoretical research.
+We develop a graph editor and a C++ algorithm library essentially concerned
+with planar graphs. The editor is particularly intended for graph
+theoretical research.
+"
+
+build() {
+  sed -i "625iqt_fr.qm:" qt/Makefile.in &&
+  default_build
+}

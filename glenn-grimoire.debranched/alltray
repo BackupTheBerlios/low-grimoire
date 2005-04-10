@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.42" )
+ CATEGORY="utility"
+ATTRIBUTE="x11"
+ HOMEPAGE="http://alltray.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtk+" )
+ ESTIMATE="115"
+DESC="AllTray allows you to dock any application with no native tray icon.
+AllTray allows you to dock any application with no native tray icon.
+"

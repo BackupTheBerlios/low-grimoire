@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.0.8" )
+ CATEGORY="disk"
+ATTRIBUTE="gnome"
+ HOMEPAGE="http://gparted.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "parted gtkmm" )
+ ESTIMATE="115"
+DESC="GParted is a gnome partitioning tool using libparted.
+GParted is a gnome partitioning tool using libparted.
+"
