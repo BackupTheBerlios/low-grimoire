@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.4.0" "1.0.2" "1.0" "0.9.7" )
+  VERSION=( "1.4.1" "1.4.0" "1.0.2" "1.0" "0.9.7" )
  CATEGORY="utility video-editor"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
@@ -10,15 +10,10 @@ ATTRIBUTE="console"
             "libogg:::add ogg support"
             "libvorbis:::add vorbis support"
             "flac:::add flac support"
-            "lzo:::add lzo support"
+            "lzo:--enable-lzo::add lzo support"
             "zlib:::add zlib support"
-            "bzip2:::add bzip2 support" )
-   OPT[0]="libogg:::add ogg support"
-   OPT[1]="libvorbis:::add vorbis support"
-   OPT[2]="flac:::add flac support"
-   OPT[3]="lzo:::add lzo support"
-   OPT[4]="zlib:::add zlib support"
-   OPT[5]="bzip2:::add bzip2 support"
+            "bzip2:--enable-bz2::add bzip2 support"
+            "wxGTK:--enable-gui::make gui" )
 #FRESHMEAT=""
 DESC="MKVtoolnix is a set of tools to create, alter and inspect Matroska files under Linux.
 MKVtoolnix is a set of tools to create, alter and inspect Matroska files
@@ -27,7 +22,6 @@ OGMtools do for the OGM format and then some.
 "
 
 build() {
-  
   patch -p0 << 'EOF'
 --- src/input/r_matroska.cpp~   2004-11-04 12:37:33.000000000 -0600
 +++ src/input/r_matroska.cpp    2004-11-04 11:59:17.000000000 -0600

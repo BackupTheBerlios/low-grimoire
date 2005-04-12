@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
 inherit sylpheed
-   VERSION=( "1.0.1" "0.9.8claws" "0.9.5claws" "0.9.4claws" "0.9.3claws" "0.9.0claws" "0.8.11claws" "0.8.10claws" "0.8.9claws" "0.8.8claws" "0.8.7claws" "0.8.6claws" "0.8.5claws" "0.8.3claws" "0.8.2claws" )
+   VERSION=( "1.0.4" "1.0.1" "0.9.8claws" "0.9.5claws" "0.9.4claws" "0.9.3claws" "0.9.0claws" "0.8.11claws" "0.8.10claws" "0.8.9claws" "0.8.8claws" "0.8.7claws" "0.8.6claws" "0.8.5claws" "0.8.3claws" "0.8.2claws" )
     IGNORE="theme\|iconset"
 #    SOURCE=( "sylpheed-claws/sylpheed-$VERSION" )
     SOURCE=( "$SPELL/$SPELL-$VERSION" )

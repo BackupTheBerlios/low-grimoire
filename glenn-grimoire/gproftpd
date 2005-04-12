@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "8.1.9" "8.1.7" "8.1.6" "8.1.4" )
+  VERSION=( "8.2.2" "8.1.9" "8.1.7" "8.1.6" "8.1.4" )
  CATEGORY="ftp"
 ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
