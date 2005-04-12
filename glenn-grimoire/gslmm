@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://cholm.home.cern.ch/cholm/misc/gslmm"
+      URL="http://cholm.home.cern.ch/cholm/misc"
+      REQ=( "gsl" )
+#FRESHMEAT=""
+DESC="GSLmm is a C++ wrapper class for the GNU Scientific Library.
+GSLmm is a C++ wrapper class for the GNU Scientific Library.
+"

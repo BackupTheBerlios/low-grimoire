@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.38-4" )
+ CATEGORY="audio-editor audio-mixer"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-$VERSION.src.tar.gz"
+ HOMEPAGE="http://crca.ucsd.edu/~msp/software.html"
+      URL="http://crca.ucsd.edu/~msp/Software"
+      REQ=( "tk x11"
+            "alsa-lib:--enable-alsa::enable alsa support"
+            "jack-audio-connection-kit:--enable-jack::enable jack support"
+            "portaudio:--enable-portaudio::enable portaudio support" )
+#FRESHMEAT=""
+DESC="Pd: real-time music and multimedia environment
+Pd: real-time music and multimedia environment
+(see also: http://puredata.org)
+"
+
+build() {
+    cd src                    &&
+    default_build              
+}

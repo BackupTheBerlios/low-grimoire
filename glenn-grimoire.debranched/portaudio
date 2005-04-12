@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "v18_1" )
+ CATEGORY="audio"
+ATTRIBUTE="library"
+   SOURCE="${SPELL}_$VERSION.zip"
+ HOMEPAGE="http://www.portaudio.com"
+      URL="http://www.portaudio.com/archives"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="PortAudio is a free, cross platform, open-source, audio I/O library.
+PortAudio is a free, cross platform, open-source, audio I/O library.
+"
+
+build() {
+    cd "${SPELL}_$VERSION" &&
+    sed -i 's:\r::' config.guess config.sub configure &&
+    chmod +x configure &&
+    mv -i docs .. &&
+    default_build              
+}

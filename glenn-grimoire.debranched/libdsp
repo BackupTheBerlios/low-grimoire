@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "5.0.1" )
+ CATEGORY="audio"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-src-$VERSION"
+ HOMEPAGE="http://libdsp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gmp" )
+#FRESHMEAT=""
+DESC="libDSP is C++ class library of common digital signal processing functions.
+libDSP is C++ class library of common digital signal processing functions.
+"
+
+build() {
+    sed -i '23d' DynThreads/Makefile &&
+    make -C DynThreads 'INCS=-I../Inlines -I.' &&
+    make -C libDSP 'INCS=-I../Inlines -I.' &&
+    prepare_install             &&
+    make -C DynThreads PREFIX=/usr install &&
+    make -C Inlines PREFIX=/usr install &&
+    make -C libDSP PREFIX=/usr install
+}

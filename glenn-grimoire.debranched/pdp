@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.12.4" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://zwizwa.fartit.com/pd/pdp/overview.html"
+      URL="http://zwizwa.fartit.com/pd"
+      REQ=( "pd"
+            ":--enable-v4l::add v4l support"
+            ":--enable-x --enable-glx::add glx support"
+            "libquicktime:--enable-quicktime::enable libquicktime support"
+            "x11:--enable-x --enable-xv::enable X Video support"
+            "SDL:--enable-sdl::enable SDL support"
+            "libpng:--enable-png::enable png support"
+            "gsl:--enable-gsl::enable GNU Scientific Library support" )
+#FRESHMEAT=""
+DESC="PDP is an extension library for Pure Data, aimed at providing video and other media processing fuctionality.
+PDP is an extension library for Pure Data, aimed at providing video and other media processing fuctionality.
+"

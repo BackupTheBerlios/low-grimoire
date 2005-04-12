@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.11.0" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://libecc.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gmp" )
+#FRESHMEAT=""
+DESC="Libecc is an elliptic curve crypto library for C++ developers.
+Libecc is an elliptic curve crypto library for C++ developers.
+"
+
+build() {
+  sed -i "s:EXTRA_HEADERS:libecc_HEADERS:" include/libecc/Makefile.in &&
+  default_build
+}

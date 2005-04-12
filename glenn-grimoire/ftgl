@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://homepages.paradise.net.nz/henryj/code/index.html#FTGL"
+      URL="http://opengl.geek.nz"
+      REQ=( "freetype" )
+#FRESHMEAT=""
+DESC="FTGL is a library to enable developers to use arbitrary fonts in their OpenGL applications.
+FTGL is a free, open source library to enable developers to use arbitrary
+fonts in their OpenGL (www.opengl.org) applications.
+Unlike other OpenGL font libraries FTGL uses standard font file formats so
+doesn't need a preprocessing step to convert the high quality font data
+into a lesser quality, proprietary format.
+"
+
+build() {
+    cd unix                    &&
+    default_build              
+}
