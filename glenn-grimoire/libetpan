@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.36" )
+ CATEGORY="mail"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://libetpan.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( ""
+            "openssl:--with-openssl::add SSL support"
+            "db::--disable-db:enable Berkeley DB" )
+#FRESHMEAT=""
+DESC="libetpan provides a portable, efficient middleware for different kinds of mail access.
+The purpose of this mail library is to provide a portable, efficient
+middleware for different kinds of mail access. When using the drivers
+interface, the interface is the same for all kinds of mail access, remote
+and local mailboxes.
+"

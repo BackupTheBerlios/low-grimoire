@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.2" )
+ CATEGORY="ftp"
+ATTRIBUTE="x11"
+   SOURCE="purify/$SPELL-$VERSION"
+ HOMEPAGE="http://purify.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtk+" )
+#FRESHMEAT=""
+DESC="PureAdmin is a graphical tool used to make the management of PureFTPd a little easier.
+PureAdmin is a graphical tool used to make the management of PureFTPd a
+little easier.
+"

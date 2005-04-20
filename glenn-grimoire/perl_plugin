@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="plugin"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sylpheed-claws.sourceforge.net/plugins.php"
+      URL="http://sylpheed-claws.sourceforge.net/downloads"
+      REQ=( "sylpheed-claws perl" )
+#FRESHMEAT=""
+DESC="Plugin to provide perl support in filters  to sylpheed-claws.
+Plugin to provide perl support in filters to sylpheed-claws.
+"

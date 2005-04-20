@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "20040929" )
+ CATEGORY="theme"
+ATTRIBUTE="data"
+   SOURCE="sylpheed-claws/$SPELL-$VERSION"
+ HOMEPAGE="http://sylpheed-claws.sourceforge.net/plugins.php"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "sylpheed-claws" )
+#FRESHMEAT=""
+DESC="Themes for sylpheed-claws.
+Themes for sylpheed-claws.
+"
+
+build() {
+  prepare_install       &&
+  mkdir -p /usr/share/sylpheed-claws/themes &&
+  mv -i * /usr/share/sylpheed-claws/themes/
+}

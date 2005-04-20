@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7" )
+ CATEGORY="mail plugin"
+ATTRIBUTE="library"
+   SOURCE="sylpheed-claws/$SPELL-$VERSION"
+ HOMEPAGE="http://sylpheed-claws.sourceforge.net/plugins.php"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "sylpheed-claws db" )
+#FRESHMEAT=""
+DESC="Plugin to provide maildir support to sylpheed-claws.
+Plugin to provide maildir support to sylpheed-claws.
+"
