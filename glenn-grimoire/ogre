@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "v1-0-1" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-linux_osx-$VERSION"
+ HOMEPAGE="http://www.ogre3d.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "freetype SDL DevIL zziplib"
+            "OpenEXR:--enable-openexr::add openexr support"
+            "Cg::--disable-cg:add Cg plugin" )
+#FRESHMEAT=""
+DESC="Ogre is an open source real time 3D rendering engine.
+Ogre is an open source real time 3D rendering engine.
+"
+
+build() {
+  mv -i Docs docs &&
+  defaulut_build
+}

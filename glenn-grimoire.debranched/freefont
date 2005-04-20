@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "1.0" )
+  CATEGORY="font"
+ ATTRIBUTE="data"
+  HOMEPAGE="http://www.nongnu.org/freefont"
+    SOURCE="$SPELL/$SPELL-ttf.tar.gz"
+       URL="http://savannah.nongnu.org/download"
+       REQ=( "fontconfig" )
+  ESTIMATE=""
+DESC="Free outline (PostScript Type0, TrueType, OpenType...) fonts covering the ISO 10646/Unicode UCS
+Free outline (PostScript Type0, TrueType, OpenType...) fonts covering the
+ISO 10646/Unicode UCS
+"
+
+build() {
+  unset  DISPLAY
+  prepare_install  &&
+  cp -i sfd/*.ttf /usr/X11R6/lib/X11/fonts/TrueType  &&
+  mkfontdir     /usr/X11R6/lib/X11/fonts/TrueType &&
+  fc-cache     /usr/X11R6/lib/X11/fonts/TrueType
+}

@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.10.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-full-$VERSION"
+ HOMEPAGE="http://cal3d.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "autoconf automake" )
+#FRESHMEAT=""
+DESC="Cal3d is a skeletal based 3d character animation library written in C++ in a platform-/graphic API-independent way.
+Cal3d is a skeletal based 3d character animation library written in C++ in a platform-/graphic API-independent way.
+"
+
+build() {
+  ./autogen.sh &&
+  default_build
+}

@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.2" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION-src.tgz"
+ HOMEPAGE="http://glew.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="The OpenGL Extension Wrangler Library (GLEW) is a cross-platform C/C++ extension loading library.
+The OpenGL Extension Wrangler Library (GLEW) is a cross-platform C/C++
+extension loading library.
+"
+
+build() {
+#  make extensions &&
+  make            &&
+  prepare_install &&
+  make install
+}

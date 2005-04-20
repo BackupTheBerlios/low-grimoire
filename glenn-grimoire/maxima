@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "5.9.1" )
+ CATEGORY="math"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://maxima.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "tk clisp" )
+     OPTS="--enable-clisp"
+#FRESHMEAT=""
+DESC="Maxima is a fairly complete computer algebra system written in lisp with an emphasis on symbolic computation.
+Maxima is a fairly complete computer algebra system written in lisp with an
+emphasis on symbolic computation. It is based on DOE-MACSYMA and licensed
+under the GPL. Its abilities include symbolic integration, 3D plotting, and
+an ODE solver.
+"

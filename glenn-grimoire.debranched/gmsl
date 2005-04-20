@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL.tar.gz"
+ HOMEPAGE="http://gmsl.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "make" )
+#FRESHMEAT=""
+DESC="The GNU Make Standard Library (GMSL) is a collection of functions implemented using native GNU Make functionality.
+The GNU Make Standard Library (GMSL) is a collection of functions
+implemented using native GNU Make functionality that provide list and
+string manipulation, integer arithmetic, associative arrays, stacks, and
+debugging facilities. 
+"
+
+build() {
+  prepare_install
+  mkdir -p /usr/share/$SPELL &&
+  cp README __gmsl gmsl gmsl-tests /usr/share/$SPELL
+}

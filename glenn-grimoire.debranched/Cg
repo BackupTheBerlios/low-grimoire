@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.0501-0700" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION.i386.tar.gz"
+ HOMEPAGE="http://developer.nvidia.com/object/cg_toolkit.html"
+      URL="ftp://download.nvidia.com/developer/cg/Cg_1.3/Linux"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Cg provides a compiler for the Cg language, runtime libraries for CgFX, example applications, and extensive documentation.
+It provides a compiler for the Cg language, runtime libraries for use with
+both leading graphics APIs, runtime libraries for CgFX, example
+applications, and extensive documentation.
+"
+
+build() {
+  mkdir -p doc        &&
+  mv -i local/Cg doc/ &&
+  rmdir local         &&
+  prepare_install     &&
+  cp -ri bin include lib share /usr
+}
