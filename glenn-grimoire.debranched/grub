@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.94" )
+  VERSION=( "0.96" "0.94" )
  CATEGORY="bootloader"
 ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION"

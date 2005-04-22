@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
 unset OPT  
-  VERSION=( "0.2.2" )
+  VERSION=( "0.2.3" "0.2.2" )
  CATEGORY="gkrellm-plugin"
 ATTRIBUTE="concurrent x11"
    SOURCE="gkrellm-gift/gkrellm-giFT-$VERSION"
