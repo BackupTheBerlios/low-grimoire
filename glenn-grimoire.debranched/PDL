@@ -5,7 +5,7 @@
  ATTRIBUTE="perl library"
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://pdl.perl.org"
-       URL="ftp://ftp-mirror.internap.com/pub/CPAN/authors/id/C/CS/CSOE"
+       URL="http://search.cpan.org/CPAN/authors/id/C/CS/CSOE"
        REQ=( "perl" )
 DESC="The perlDL project aims to turn perl into an efficient numerical language for scientific computing.
 The perlDL project aims to turn perl into an efficient numerical language for

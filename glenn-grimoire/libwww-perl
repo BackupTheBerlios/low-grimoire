@@ -5,7 +5,7 @@
  ATTRIBUTE="perl console"
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.linpro.no/lwp"
-       URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/G/GA/GAAS"
+       URL="http://search.cpan.org/CPAN/authors/id/G/GA/GAAS"
        REQ=( "perl URI HTML-Parser"
              "Crypt-SSLeay:::add SSL support" )
     OPT[0]="Crypt-SSLeay:::add SSL support"

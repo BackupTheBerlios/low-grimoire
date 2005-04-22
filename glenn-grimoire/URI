@@ -5,7 +5,7 @@
  ATTRIBUTE="perl"
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://gisle.aas.no"
-       URL="ftp://mirror.telentente.com/pub/CPAN/authors/id/G/GA/GAAS"
+       URL="http://search.cpan.org/CPAN/authors/id/G/GA/GAAS"
        REQ=( "perl" )
 DESC="Uniform Resource Identifiers (absolute and relative).
 Uniform Resource Identifiers (absolute and relative).
