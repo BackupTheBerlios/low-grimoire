@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.9.7" "0.9.6" "0.9.5" "0.9.1" "0.8" )
+  VERSION=( "1.0" "0.9.9" "0.9.7" "0.9.6" "0.9.5" "0.9.1" "0.8" )
  CATEGORY="audio-editor"
 ATTRIBUTE="kde x11"
    SOURCE="rosegarden/$SPELL-$VERSION"
@@ -16,6 +16,7 @@ ATTRIBUTE="kde x11"
    OPT[2]="jack-audio-connection-kit:--with-jack::for connection to JACK the low-latency audio server"
    OPT[3]="ladspa_sdk:--with-ladspa::for ladspa plugins"
 #   OPT[4]="Csound:--with-ladspa::"
+  EPROVIDE="rosegarden"
 #FRESHMEAT=""
 DESC="Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer, notation editor, and general-purpose music composition and editing application for Unix and Linux.
 Rosegarden-4 is an attractive, user-friendly MIDI and audio sequencer,
@@ -26,7 +27,7 @@ beta quality, following two years of sustained active development.
 
 build() {
 
-  sed -i "s:dtd/kdex\\.dtd:/usr/share/apps/ksgmltools2/customization/dtd/kdex\\.dtd:" ./gui/docs/en/index.docbook
+  # sed -i "s:dtd/kdex\\.dtd:/usr/share/apps/ksgmltools2/customization/dtd/kdex\\.dtd:" ./gui/docs/en/index.docbook
 
   ./configure --with-xinerama \
               $OPTS           &&
