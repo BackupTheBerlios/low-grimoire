@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.46" )
+ CATEGORY="i18n"
+ATTRIBUTE="library"
+ HOMEPAGE="http://packages.qa.debian.org/i/iso-codes.html"
+   SOURCE="$SPELL/${SPELL}_$VERSION.orig.tar.gz"
+      URL="http://http.us.debian.org/debian/pool/main/i"
+      REQ=( "gettext" )
+ ESTIMATE="115"
+DESC="This package aims to provide the list of the country and language (and currency) names in one place.
+This package aims to provide the list of the country and language
+(and currency) names in one place, rather than repeated in many
+programs throughout Debian.
+"
+
+build() {
+  default_build &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r notes *py *pl /usr/share/$SPELL
+}

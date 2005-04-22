@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.10.6" )
+ CATEGORY="mobile"
+ATTRIBUTE="client console"
+   SOURCE="openobex/$SPELL-$VERSION"
+ HOMEPAGE="http://triq.net/obex"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "openobex" )
+#FRESHMEAT=""
+DESC="The overall goal of this project is to make an open source implementation of the Object Exchange (OBEX) protocol.
+The overall goal of this project is to make an open source implementation
+of the Object Exchange (OBEX) protocol. OBEX is a session protocol and can
+best be described as a binary HTTP protocol.
+"
