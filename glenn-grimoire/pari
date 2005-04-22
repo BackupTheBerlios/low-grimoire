@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.1.5" "2.1.4" "2.1.3" )
+  VERSION=( "2.1.6" "2.1.5" "2.1.4" "2.1.3" )
  CATEGORY="interpreter math"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"

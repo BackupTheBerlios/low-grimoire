@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.96" "0.93" )
+  VERSION=( "0.98.5" "0.96" "0.93" )
  CATEGORY="development"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"

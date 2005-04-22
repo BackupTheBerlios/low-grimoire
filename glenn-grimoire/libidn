@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.5.9" )
+  VERSION=( "0.5.15" "0.5.9" )
  CATEGORY="development dns"
 ATTRIBUTE="library"
  HOMEPAGE="http://www.gnu.org/software/libidn"
