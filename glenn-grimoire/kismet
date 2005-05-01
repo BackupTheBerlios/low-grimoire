@@ -1,12 +1,12 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "2004-04-R1" "2.8.1" )
+   VERSION=( "2005-04-R1" "2004-04-R1" "2.8.1" )
   CATEGORY="network"
  ATTRIBUTE="console"
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.kismetwireless.net"
        URL="http://www.kismetwireless.net/code"
-       REQ=( "libpcap mktemp ncurses zlib"
+       REQ=( "libpcap mktemp ncurses zlib expat"
              "ImageMagick:::for ImageMagick support" )
     OPT[0]="ImageMagick:::for ImageMagick support"
 #    OPT[1]="ethereal:::for ethereal wiretap"
