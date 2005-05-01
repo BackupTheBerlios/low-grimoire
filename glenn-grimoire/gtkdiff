@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.8.0" )
+ CATEGORY="development"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://home.catv.ne.jp/pp/ginoue/software/gtkdiff/index-e.html"
+      URL="http://home.catv.ne.jp/pp/ginoue/software"
+      REQ=( "gnome-libs" )
+#FRESHMEAT=""
+DESC="gtkdiff is a graphical diff tool.
+gtkdiff is a graphical diff tool. It has diff3 and merge features. It's
+written with GTK+.
+"

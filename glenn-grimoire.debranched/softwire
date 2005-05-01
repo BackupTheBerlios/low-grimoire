@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "4.6.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://softwire.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="SoftWire is a run-time x86 assembler.
+SoftWire is a run-time x86 assembler. This makes it useful for a
+compiler's code generator, a JIT-compiler for scripting languages, or for
+eliminating branches in tight inner loops.
+"
+
+build() {
+  make -f Makefile.gcc OPTIMIZED="1" &&
+  prepare_install     &&
+  install -o root -g root -m 644 libSoftWire.a /usr/lib &&
+  mkdir -p /usr/include/$SPELL &&
+  install -o root -g root -m 644 *.hpp /usr/include/$SPELL
+}

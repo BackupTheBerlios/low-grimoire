@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.58.11" )
+ CATEGORY="utility"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://directory.fsf.org/Software_development/gtkdialog.html"
+      URL="ftp://linux.pte.hu/pub"
+      REQ=( "gtk+" )
+#FRESHMEAT=""
+DESC="gtkdialog is a GUI-creation utility that can be used with an arbitrary interpreter.
+gtkdialog is a GUI-creation utility that can be used with an arbitrary
+interpreter. Developers can describe a graphical user interface in a simple
+XML-like language, and use it with any interpreter that supports either
+files, standard I/O, or environment variables. It can be called as an
+external program from the interpreter or used as a stand-alone framework
+for the application. Stand-alone, bash, and awk examples are provided.
+"
+
+build() {
+  sed -i '10i#include <stdlib.h>' src/actions.c &&
+  default_build
+}

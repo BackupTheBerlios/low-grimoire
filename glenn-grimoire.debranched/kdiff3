@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.88" )
+ CATEGORY="development"
+ATTRIBUTE="kde"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://kdiff3.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "kdelibs" )
+#FRESHMEAT=""
+DESC="KDiff3 is a graphical text difference analyzer for up to 3 input files, provides character-by-character analysis and a text merge tool with integrated editor.
+KDiff3 is a graphical text difference analyzer for up to 3 input files,
+provides character-by-character analysis and a text merge tool with
+integrated editor.
+"
