@@ -1,10 +1,12 @@
-  VERSION=( "1.8.2" "1.7" )
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.8.3" "1.8.2" "1.7" )
  CATEGORY="web security proxy"
 ATTRIBUTE="console client server"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.apsis.ch/pound"
       URL="http://www.apsis.ch/pound"
-      REQ="openssl"
+      REQ=( "openssl" )
 #FRESHMEAT=""
 DESC="Pound is a reverse proxy, load balancer and HTTPS front-end for Web servers.
 The Pound program is a reverse proxy, load balancer and HTTPS front-end for

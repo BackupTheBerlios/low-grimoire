@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.5.0" "0.1.0" )
+  VERSION=( "0.6.4" "0.6.2" "0.5.0" "0.1.0" )
  CATEGORY="smartcard"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
@@ -11,7 +11,7 @@ FRESHMEAT="openct"
 DESC="OpenCT, a middleware framework for smart card terminals.
 It all started with a reader driver library - I wanted to write a
 library to provide a framework for people writing drivers for smart
-card readers. The idea was to provide all the usualy stuff (T=0, T=1,
+card readers. The idea was to provide all the usual stuff (T=0, T=1,
 serial vs USB device handling, etc) in a single place, and reduce
 driver writing to interaction with the device itself.
 "

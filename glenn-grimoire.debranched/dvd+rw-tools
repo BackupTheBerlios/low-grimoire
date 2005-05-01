@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "5.19.4.9.7" )
+  VERSION=( "5.21.4.10.8" "5.19.4.9.7" )
  CATEGORY="dvd"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"

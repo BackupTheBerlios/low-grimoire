@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.8.6" "0.8.5" "0.8.2" "0.8.1" "0.8.0" )
+  VERSION=( "0.8.9" "0.8.6" "0.8.5" "0.8.2" "0.8.1" "0.8.0" )
  CATEGORY="plugin"
 ATTRIBUTE="library"
    SOURCE="gift-fasttrack/$SPELL-$VERSION"
