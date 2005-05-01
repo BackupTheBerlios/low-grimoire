@@ -6,7 +6,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://dvdisaster.berlios.de"
    SOURCE="$SPELL/$SPELL-$VERSION.tbz"
       URL="http://download.berlios.de"
-#      REQ=( "" )
+      REQ=( "gtk+ gettext" )
  ESTIMATE="115"
 DESC="dvdisaster: Additional error correction for CD and DVD media.
 dvdisaster: Additional error correction for CD and DVD media.
