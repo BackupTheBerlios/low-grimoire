@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.0" )
+ CATEGORY="utility"
+ATTRIBUTE="console library"
+   SOURCE="linux-diag/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://linux-diag.sourceforge.net/Sysfsutils.html"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="These are a set of utilites built upon sysfs
+These are a set of utilites built upon sysfs
+"
