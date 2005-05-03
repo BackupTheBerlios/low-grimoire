@@ -4,7 +4,7 @@
  CATEGORY="interpreter math"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
- HOMEPAGE="http://www.gnu.org/software/ddd/"
+ HOMEPAGE="http://pari.math.u-bordeaux.fr"
       URL="ftp://megrez.math.u-bordeaux.fr/pub/pari/unix/"
       REQ=( "readline" )
 #   OPT[0]=":::"
