@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.23" )
+ CATEGORY="terminal-emulator"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://www.nongnu.org/grdesktop"
+      URL="http://savannah.nongnu.org/download"
+      REQ=( "rdesktop libgnomeui" )
+#FRESHMEAT=""
+DESC="grdesktop is a GNOME frontend, for the remote desktop client (rdesktop).
+grdesktop is a GNOME frontend, for the remote desktop client (rdesktop).
+It can save several connections (including their options), and browse the
+network for available terminal servers.
+"

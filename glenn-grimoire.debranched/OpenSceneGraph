@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.7-2" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="openscenegraph/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://www.openscenegraph.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Producer gdal" )
+#FRESHMEAT=""
+DESC="The OpenSceneGraph is an open source high peformance 3D graphics toolkit.
+The OpenSceneGraph is an open source high peformance 3D graphics toolkit,
+used by application developers in fields such as visual simulation, games,
+virtual reality, scientific visualization and modelling.
+"
+
+build() {
+  make            &&
+  prepare_install &&
+  make INST_LOCATION=/usr install
+}

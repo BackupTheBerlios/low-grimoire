@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2003.1" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://www.qhull.org"
+      URL="http://www.qhull.org/download"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram, halfspace intersection about a point, furthest-site Delaunay triangulation, and furthest-site Voronoi diagram.
+Qhull computes the convex hull, Delaunay triangulation, Voronoi diagram,
+halfspace intersection about a point, furthest-site Delaunay triangulation,
+and furthest-site Voronoi diagram.
+"

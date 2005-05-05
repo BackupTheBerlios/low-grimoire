@@ -1,0 +1,43 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.18" )
+ CATEGORY="game"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION-src"
+ HOMEPAGE="http://galaxyhack.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "SDL_image SDL_gfx SDL_mixer boost galaxyhack-data" )
+#FRESHMEAT=""
+DESC="Welcome to the webpage for GalaxyHack: a free (open source) AI script based strategy game. 
+Welcome to the webpage for GalaxyHack: a free (open source) AI script based
+strategy game. 
+"
+
+config() {
+  cat <<'EOF'
+Commander: 
+Base data path: /usr/share/galaxyhack
+Video driver: 
+Fullscreen: 
+Screen resolution: 
+Music: 
+Disable sound: 
+Window transparency: 
+Window borders: 
+Default cap ship pic: 
+Default frigate pic: 
+Default small ship pic: 
+Fleet 1: 
+How green is green: 
+EOF
+}
+
+build() {
+  sed -i '22i#include "GlobalConstants.h"\n' Inlines.h &&
+  sed -i 's:-lboost_filesystem:-lboost_filesystem-gcc:' Makefile &&
+  make            &&
+  prepare_install &&
+  make install INSTALL_BIN_DIR=/usr/games &&
+  mkdir -p /usr/share/$SPELL &&
+  config > /usr/share/$SPELL/settings.dat
+}

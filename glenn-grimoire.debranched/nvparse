@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "5" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="osgnv/$SPELL-$VERSION"
+ HOMEPAGE="http://osgnv.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "glut bison flex" )
+#FRESHMEAT=""
+DESC="NVParse is an OpenGL tool that simplifies the programming of vertex and pixel computations on NVIDIA GPUs.
+NVParse is an OpenGL tool that simplifies the programming of vertex and
+pixel computations on NVIDIA GPUs.
+(This is a modified version of NVIDIA's to work on linux)
+"
+
+build() {
+  sed -i 's:/local::' src/Makefile &&
+  make -C src     &&
+  prepare_install &&
+  make -C src install
+}

@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://sdlconsole.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "SDL"
+            "SDL_image:--enable-sdlimage::for loading images with SDL" )
+#FRESHMEAT=""
+DESC="A Quake-like drop-down console that can be added to any SDL application as an easy to use interface to your program.
+A Quake-like drop-down console that can be added to any SDL application as
+an easy to use interface to your program.
+"

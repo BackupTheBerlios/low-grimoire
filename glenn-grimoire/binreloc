@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.6" "1.5" )
+ CATEGORY="utility"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://autopackage.org/docs/binreloc"
+      URL="ftp://ftp.sunsite.dk/projects/autopackage/tools"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="BinReloc provides an easy-to-use API that uses dynamic linker and kernel magic to find out the full path of your aplication or library.
+BinReloc provides an easy-to-use API that uses dynamic linker and kernel
+magic to find out the full path of your aplication or library.
+"
+
+build() {
+  prepare_install &&
+  mkdir -p /usr/share/$SPELL &&
+  cp *[^4] /usr/share/$SPELL &&
+  mkdir -p /usr/share/aclocal &&
+  cp binreloc.m4 /usr/share/aclocal
+}

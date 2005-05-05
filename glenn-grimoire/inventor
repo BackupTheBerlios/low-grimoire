@@ -1,0 +1,30 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.5-10" )
+ CATEGORY="graphic"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/download/$SPELL-$VERSION.src.tar.gz"
+ HOMEPAGE="http://oss.sgi.com/projects/inventor"
+      URL="ftp://oss.sgi.com/projects"
+      REQ=( "x11 lesstif freetype" )
+#FRESHMEAT=""
+DESC="Open InventorTM is an object-oriented 3D toolkit offering a comprehensive solution to interactive graphics programming problems.
+Open InventorTM is an object-oriented 3D toolkit offering a comprehensive
+solution to interactive graphics programming problems.
+"
+
+patches() {
+  sed -i 's:/usr/bin/::' make/ivcommondefs &&
+  sed -i "s:-L\$(IVLIBDIR):-L`pwd`/lib -L`pwd`/libSoXt:" make/ivcommondefs &&
+  sed -i '121s:additive_expression::' lib/database/src/so/engines/SoCalcParse.y &&
+  sed -i '4c#include <ft2build.h>\n#include FT_FREETYPE_H' libFL/ang/flfreetype.h
+}
+
+build() {
+#  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH":`pwd`/lib:`pwd`/libSoXt
+  export LD_LIBRARY_PATH="$LD_LIBRARY_PATH":`pwd`/lib
+  patches             &&
+  make IVROOT= FREETYPE=1 &&
+  prepare_install &&
+  make install
+}

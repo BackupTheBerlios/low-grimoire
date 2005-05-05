@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2_6_0" )
+ CATEGORY="utility"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-src_$VERSION.tar.gz"
+ HOMEPAGE="http://xml.apache.org/xerces-c"
+      URL="http://www.apache.org/dist/xml"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Xerces-C++ is a validating XML parser written in a portable subset of C++.
+Xerces-C++ is a validating XML parser written in a portable subset of C++.
+"
+
+build() {
+  export XERCESCROOT=`pwd`
+  cd src/xercesc   &&
+  ./runConfigure -P/usr -plinux -cgcc -xg++ -minmem -nsocket -tnative -rpthread &&
+  make             &&
+  cd ../..         &&
+  prepare_install  &&
+  make -C src/xercesc install &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r samples /usr/share/$SPELL
+}

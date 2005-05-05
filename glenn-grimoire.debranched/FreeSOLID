@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.1" )
+ CATEGORY="math graphic"
+ATTRIBUTE="library"
+   SOURCE="freesolid/$SPELL-$VERSION.zip"
+ HOMEPAGE="http://www.win.tue.nl/~gino/solid"
+      URL="$SOURCEFORGE_URL"
+      REQ=( ""
+            "qhull:::for fast convex hull computations" )
+#FRESHMEAT=""
+DESC="FreeSOLID is a library for collision detection of three-dimensional objects undergoing rigid motion and deformation. FreeSOLID is designed to be used in interactive 3D graphics applications.
+FreeSOLID is a library for collision detection of three-dimensional objects
+undergoing rigid motion and deformation. FreeSOLID is designed to be used
+in interactive 3D graphics applications.
+"
+
+build() {
+  cd Free* &&
+  chmod +x configure &&
+  default_build &&
+  cp -r include/3D /usr/include/FreeSOLID
+}

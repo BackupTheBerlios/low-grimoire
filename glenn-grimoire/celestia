@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.2" )
+ CATEGORY="graphic"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://www.shatters.net/celestia"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "zlib jpeg gtkglext libgnomeui" )
+#	    "arts kdelibs:::for kde frontend")
+#	    "gtkglext libgnomeui:::for gnome frontend")
+     OPTS="--with-gnome"
+#FRESHMEAT=""
+DESC="Celestia is real-time 3D space simulation which lets you travel through our solar system and to over 100,000 stars in our neighborhood.
+Celestia is real-time 3D space simulation which lets you travel through our
+solar system and to over 100,000 stars in our neighborhood.
+"
+
+build(){
+  sed -i '108s:NameMap:typename NameMap:' src/celutil/resmanager.h &&
+  sed -i '75s:ResourceHandleMap:typename ResourceHandleMap:' src/celutil/resmanager.h &&
+  default_build
+}

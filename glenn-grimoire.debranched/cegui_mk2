@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="crayzedsgui/$SPELL-$VERSION"
+ HOMEPAGE="http://www.cegui.org.uk"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xerces-c freetype"
+            "DevIL::--without-devil:for image loading via DevIL by OpenGL renderer")
+#FRESHMEAT=""
+DESC="CE's GUI System is a free library providing windowing and widgets for graphics APIs / engines
+Crazy Eddie's GUI System is a free library providing windowing and widgets
+for graphics APIs / engines where such functionality is not natively
+available, or severly lacking. The library is object orientated, written in
+C++, and aimed at game developers
+"

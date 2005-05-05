@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="osgnv/$SPELL-src-$VERSION"
+ HOMEPAGE="http://osgnv.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "OpenSceneGraph nvparse Cg" )
+#FRESHMEAT=""
+DESC="osgNV is a C++ add-on library for OpenSceneGraph that enables your applications to take advantage of the advanced features provided by modern GPUs.
+osgNV is a C++ add-on library for OpenSceneGraph that enables your
+applications to take advantage of the advanced features provided by modern
+GPUs.
+"
+
+build() {
+  make -C src &&
+  prepare_install &&
+  cp src/{osgNV,osgNVCg,osgNVExt,osgNVParse}/Linux32.Opt/*.so /usr/lib &&
+  cp src/osgPlugins/{osgNV,osgNVCg,osgNVExt,osgNVParse}/Linux32.Opt/*.so /usr/lib/osgPlugins &&
+  cp -r include/* /usr/include &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r examples data /usr/share/$SPELL
+}

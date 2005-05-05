@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.0_beta7" )
+ CATEGORY="audio"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://galan.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtkglarea alsa-lib"
+            "libsndfile:::add libsnfile support"
+            "libvorbis:::add vorbis support"
+            "liblrdf:::add support for rdf files"
+#            "fst:::add fst support"
+	    "esound:::add esound support"
+            "jack-audio-connection-kit:::add support for jack connections"
+            "emu10k1:--enable-emu10k1::enable emu10k1 support" )
+     OPTS=""
+#FRESHMEAT=""
+DESC="gAlan is an audio-processing tool that allows for the building of synthesisers, effects chains, mixers, sequencers, drum-machines etc. etc. in a modular fashion.
+gAlan is an audio-processing tool (both on-line and off-line) for X windows
+and Win32. It allows you to build synthesisers, effects chains, mixers,
+sequencers, drum-machines etc. etc. in a modular fashion.
+"

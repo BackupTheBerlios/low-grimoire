@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://terraform.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gnome-print gdk-pixbuf libpng" )
+#FRESHMEAT=""
+DESC="Terraform is an open source interactive height field generation and manipulation program, giving you the ability to generate random terrain and transform it.
+Terraform is an open source interactive height field generation and
+manipulation program, giving you the ability to generate random terrain
+and transform it.
+"

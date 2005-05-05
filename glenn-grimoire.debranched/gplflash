@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.13" )
+ CATEGORY="graphic"
+ATTRIBUTE="library x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://gplflash.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "XFree86 jpeg zlib libmad" )
+#FRESHMEAT=""
+DESC="A GPL Flash decoding library, with player and mozilla-plugin
+A GPL Flash decoding library, with player and mozilla-plugin
+"
+
+build() {
+  if [ -d /usr/lib/mozilla/plugins ]; then
+    OPTS="$OPTS --with-plugin-dir=/usr/lib/mozilla/plugins"
+  fi
+  default_build
+}

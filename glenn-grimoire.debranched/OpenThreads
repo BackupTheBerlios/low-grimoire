@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3" )
+ CATEGORY="development threads"
+ATTRIBUTE="library"
+   SOURCE="openscenegraph/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://openthreads.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="This library is intended to provide a minimal & complete Object-Oriented (OO) thread interface for C++ programmers.
+This library is intended to provide a minimal & complete Object-Oriented
+(OO) thread interface for C++ programmers. It is loosely modeled on the
+Java thread API, and the POSIX Threads standards.
+"
+
+build(){
+  make            &&
+  prepare_install &&
+  make INST_LOCATION=/usr install
+}
