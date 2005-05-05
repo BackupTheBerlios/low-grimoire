@@ -15,3 +15,12 @@ card readers. The idea was to provide all the usual stuff (T=0, T=1,
 serial vs USB device handling, etc) in a single place, and reduce
 driver writing to interaction with the device itself.
 "
+
+build() {
+  default_build &&
+  cp etc/openct.conf /etc/ &&
+  cp etc/init-script /etc/init.d/openct
+  # add rc#.d symlinks
+#  mkdir /var/run/openct
+#  chmod 755 /var/run/openct
+}
