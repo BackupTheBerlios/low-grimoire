@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.3.0_beta7" )
- CATEGORY="audio"
+ CATEGORY="audio audio-editor"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://galan.sourceforge.net"
