@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/gnusound"
+      URL="ftp://ftp.gnu.org/gnu"
+      REQ=( "gtk+-v1.2 gnome-libs"
+            "libsamplerate:--with-libsamplerate::use libsamplerate"
+	    "alsa-lib:::use alsa"
+	    "jack-audio-connection-kit:::use jack"
+	    "ffmpeg:::add ffmpeg support"
+	    "flac:::add flac support"
+	    "lame:::add lame support"
+	    "audiofile:::add audiofile support"
+	    "libsndfile:::add sndfile support"
+	    "libogg libvorbis:::add ogg vorbis support" )
+#            "libgnome:--with-gnome2::use gnome" )
+      OPTS="--without-gnome2"
+#FRESHMEAT=""
+DESC="GNUsound is a multitrack sound editor
+GNUsound is a multitrack sound editor
+"

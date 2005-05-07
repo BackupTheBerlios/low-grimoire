@@ -1,0 +1,28 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dssi.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "liblo libsndfile kdelibs" )
+#FRESHMEAT=""
+DESC="DSSI is an API for audio plugins, with particular application for software synthesis plugins with native user interfaces.
+DSSI is an API for audio plugins, with particular application for software
+synthesis plugins with native user interfaces. DSSI is an open specification
+developed for use in Linux audio applications, although portable to other
+platforms. It may be thought of as LADSPA-for-instruments, or something
+comparable to VSTi.
+"
+
+patches() {
+  sed -i '27i#include <math.h>' examples/trivial_sampler_qt_gui.cpp
+}
+
+build() {
+  patches         &&
+  make QTDIR=/usr QTINCDIR=/usr/include/qt &&
+  prepare_install &&
+  make install PREFIX=/usr
+}

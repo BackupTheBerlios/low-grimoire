@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.0" )
+ CATEGORY="audio"
+ATTRIBUTE="x11"
+   SOURCE="ladcca-$VERSION.tar.gz"
+ HOMEPAGE="http://lash-audio-session-handler.org"
+      URL="http://lash-audio-session-handler.org/download"
+      REQ=( "gtk+ jack-audio-connection-kit alsa-lib libxml2 e2fsprogs"
+            "readline:::enable readline" )
+#FRESHMEAT=""
+DESC="LASH is a session management system for JACK and ALSA audio applications
+LASH is a session management system for JACK and ALSA audio applications.
+"

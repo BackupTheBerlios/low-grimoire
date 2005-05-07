@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.4.3" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.xung.org/jackbeat"
+      URL="http://arb.bash.sh/~rah/software"
+      REQ=( "gtk+ jack-audio-connection-kit ladspa_sdk e2fsprogs gettext"
+            "liblrdf::--disable-lrdf:support RDF files describing LADSPA plugins"
+            "lash::--disable-ladcca:enable audio session handling"
+            "libxml2::--disable-xml:enable saving/loading files"
+            "alsa-lib::--disable-aseq:enable ALSA sequencer support"
+            "libgnome::--disable-gnome:build gnome gui (instead of gtk)" )
+     OPTS="--disable-desktop-inst"
+#FRESHMEAT=""
+DESC="JACK Rack is an effects "rack" for the JACK low latency audio API.
+JACK Rack is an effects "rack" for the JACK low latency audio API. The rack
+can be filled with LADSPA effects plugins and can be controlled using the
+ALSA sequencer.
+"
+
+build() {
+  sed -i '50s:GNOME:GNOMEX:' src/globals.h &&
+  default_build
+}

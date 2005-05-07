@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.3" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://gts.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "glib" )
+#FRESHMEAT=""
+DESC="GTS stands for the GNU Triangulated Surface Library.
+GTS stands for the GNU Triangulated Surface Library.  It is intended to
+provide a set of useful functions to deal with 3D surfaces meshed with
+interconnected triangles.
+"

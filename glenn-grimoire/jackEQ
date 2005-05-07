@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.0" )
+ CATEGORY="audio-mixer"
+ATTRIBUTE="library"
+   SOURCE="jackeq/$SPELL-$VERSION"
+ HOMEPAGE="http://jackeq.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtk+ jack-audio-connection-kit ladspa_sdk libxml2 gettext" )
+#FRESHMEAT=""
+DESC="jackEQ is a tool for routing and manipulating audio from/to multiple input/output sources.
+jackEQ is a tool for routing and manipulating audio from/to multiple input/output sources.
+"

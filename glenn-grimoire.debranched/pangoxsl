@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.6.0.1" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="pangopdf/$SPELL-$VERSION"
+ HOMEPAGE="http://pangopdf.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "pango" )
+#FRESHMEAT=""
+DESC="PangoXSL is a supplementary library that supports some additional PangoAttribute types corresponding to XSL properties.
+PangoXSL is a supplementary library that supports some additional
+PangoAttribute types corresponding to XSL properties.
+"

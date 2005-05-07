@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.4" )
+ CATEGORY="video-player"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.schleef.org/swfdec"
+      URL="http://www.schleef.org/swfdec/download"
+      REQ=( "gtk+ libmad liboil gstreamer libart_lgpl SDL"
+            "mozilla:::build mozilla plugin"
+	    "gdk-pixbuf:::build pixbuf loader"
+	    "gimp:::build gimp plugin" )
+#FRESHMEAT=""
+DESC="Swfdec is a library for rendering Flash® animations and games.
+Swfdec is a library for rendering Flash® animations and games. It was
+originally designed as a basis library for creating Flash plugins for
+GStreamer, but it is a fully standalone library which only use the libart
+library for drawing.
+"
+
+# make query for choice of libart or cairo backend

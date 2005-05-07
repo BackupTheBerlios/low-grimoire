@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.5" )
+ CATEGORY="audio"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://sparked.zadzmo.org/jtrigger"
+      URL="http://sparked.zadzmo.org"
+      REQ=( "jack-audio-connection-kit alsa-lib libsndfile" )
+#FRESHMEAT=""
+DESC="A drum machine/sample player for midi input.
+A drum machine/sample player for midi input.
+"
+
+build() {
+  make &&
+  prepare_install &&
+  cp jtrigger /usr/bin &&
+  mkdir -p /usr/share/$SPELL &&
+  cp *.wav README* newtest /usr/share/$SPELL
+}

@@ -1,0 +1,30 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.2" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL$VERSION"
+ HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra"
+      URL="http://kogs-www.informatik.uni-hamburg.de/~koethe"
+      REQ=( ""
+            "tiff:::support import/export of tiff images"
+            "jpeg:::support import/export of jpeg images"
+            "libpng:::support import/export of libpng images"
+            "zlib:::support compression"
+            "fftw:::support fast Fourier transforms" )
+#FRESHMEAT=""
+DESC="VIGRA stands for \"Vision with Generic Algorithms\".
+VIGRA stands for \"Vision with Generic Algorithms\". It's a novel computer
+vision library that puts its main emphasize on customizable algorithms and
+data structures. By using template techniques similar to those in the C++
+Standard Template Library, you can easily adapt any VIGRA component to the
+needs of your application, without thereby giving up execution speed.
+"
+
+build() {
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  prepare_install           &&
+  make install
+}

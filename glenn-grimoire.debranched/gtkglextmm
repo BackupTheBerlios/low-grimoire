@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.1.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="gtkglext/$SPELL-$VERSION"
+ HOMEPAGE="http://gtkglext.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtkglext" )
+#FRESHMEAT=""
+DESC="gtkglextmm is a C++ wrapper for gtkglext.
+gtkglextmm is a C++ wrapper for gtkglext.
+"
+
+build() {
+  sed -i '21137s:2.4:2.4 atkmm-1.6:' configure &&
+  default_build
+}
