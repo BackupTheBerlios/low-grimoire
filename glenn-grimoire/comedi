@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.70" )
+ CATEGORY="driver"
+ATTRIBUTE="kernel"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.comedi.org"
+      URL="http://www.comedi.org/download"
+      REQ=( "linux" )
+#FRESHMEAT=""
+DESC="Comedi is a collection of drivers for a variety of common data acquisition plug-in boards
+Comedi is a collection of drivers for a variety of common data acquisition
+plug-in boards.  Works with all kernel branches.
+"

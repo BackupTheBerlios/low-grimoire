@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.2pre1" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="lmuse/$SPELL-$VERSION.tar.bz2"
+ HOMEPAGE="http://muse.serverkommune.de"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "qt-x11-free alsa-lib libsndfile libsamplerate jack-audio-connection-kit"
+            "graphviz:::for plots"
+#	    "fst:::vst support"
+            "fluidsynth:::add fluid synth support"
+            "lash:--enable-ladcca::enable lash support" )
+#FRESHMEAT=""
+DESC="MusE is a MIDI/Audio sequencer with recording and editing capabilities.
+MusE is a MIDI/Audio sequencer with recording and editing capabilities.
+"

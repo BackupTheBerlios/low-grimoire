@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.21-pre1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="bastard/${SPELL}_src-$VERSION.tgz"
+ HOMEPAGE="http://bastard.sourceforge.net/libdisasm.html"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="The libdisasm library provides basic disassembly of Intel x86 instructions from a binary stream.
+The libdisasm library provides basic disassembly of Intel x86 instructions
+from a binary stream. The intent is to provide an easy to use disassembler
+which can be called from any application; the disassembly can be produced
+in AT&T syntax and Intel syntax, as well as in an intermediate format which
+includes detailed instruction and operand type information. 
+"
+
+build() {
+  make &&
+  prepare_install &&
+  make install INSTALL_ROOT=/usr
+}

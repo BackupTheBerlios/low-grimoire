@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.0" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://ool.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gsl" )
+#FRESHMEAT=""
+DESC="Implementation of Optimization Methods under the GSL standards.
+Implementation of Optimization Methods under the GSL standards.
+"

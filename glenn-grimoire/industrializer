@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.4" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/psindustrializer-$VERSION"
+ HOMEPAGE="http://industrializer.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtkglext audiofile"
+	    "alsa-lib::--disable-alsa:add alsa support"
+	    "esound::--disable-esd:add esd support" )
+#FRESHMEAT=""
+DESC="Industrializer is a program for generating percussion sounds for musical purposes.
+Industrializer is a program for generating percussion sounds for musical
+purposes. This program is great for generating new techno and industrial
+sounds. It also can produce chimes, bubbles, gongs, hammer hits on
+different materials and so on.
+"
+
+build() {
+  export LDFLAGS="-L/usr/X11R6/lib"
+  default_build
+}

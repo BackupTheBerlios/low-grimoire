@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.11.0" )
+ CATEGORY="database"
+ATTRIBUTE="library"
+   SOURCE="bastard/$SPELL-$VERSION.tar.gz"
+ HOMEPAGE="http://users.footprints.net/~kaz/typhoon.html"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Typhoon is a database management system.
+Typhoon is a database management system.
+"
+
+build() {
+  sed -e '47,51d' -e 's|^:||' -i man/Makefile &&
+  sed -i '75d' util/Makefile.in &&
+  ./configure     &&
+  make            &&
+  prepare_install &&
+  make install PREFIX=/usr DESTGRP=root
+}

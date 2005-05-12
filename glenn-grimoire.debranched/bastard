@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.17" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION.tgz"
+ HOMEPAGE="http://bastard.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "readline ncurses gtk+-v1.2" )
+#FRESHMEAT=""
+DESC="A disassembler -- or, more appropriately, a disassembly environment.
+A disassembler -- or, more appropriately, a disassembly environment. The
+idea is that you have an interpreter, much as you would in Perl or Python,
+which allows you to load files, disassemble them, dump the disassembly,
+write/run macros, and various other operations.
+"
+
+build() {
+  sed -i 's:/usr/local:/usr:' Makefile-config &&
+  sed -i '6i#define _EXT_ASM_LINE_LENGTH 2048' src/asm/ATT/att.c &&
+  make       &&
+  prepare_install &&
+  make install
+}

@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6.5" )
+ CATEGORY="audio-editor"
+ATTRIBUTE="x11"
+   SOURCE="v${VERSION:0:3}/$SPELL-$VERSION"
+ HOMEPAGE="http://beast.gtk.org"
+      URL="http://beast.gtk.org/beast-ftp"
+      REQ=( "gtk+ alsa-lib libogg libvorbis libgnomecanvas guile"
+	    "libmad:::add support for mpeg decoding"
+	    "ladspa_sdk:::add support for ladspa plugins" )
+#FRESHMEAT=""
+DESC="Beast is a powerful music composition and modular synthesis application
+Beast is a powerful music composition and modular synthesis application
+"
