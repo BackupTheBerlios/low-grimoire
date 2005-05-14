@@ -7,7 +7,7 @@ ATTRIBUTE="gnome x11"
  HOMEPAGE="http://www.mews.org.uk/glitter"
       URL="http://www.mews.org.uk"
       REQ=( "gnome-libs ORBit" )
-#FRESHMEAT=""
+FRESHMEAT="glitter"
 DESC="Glitter is an interactive GUI program for extracting binaries from newsgroups.
 Glitter is an interactive GUI program for extracting binaries from
 newsgroups. It provides a powerful mechanism for filtering files to

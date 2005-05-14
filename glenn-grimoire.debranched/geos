@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="http://geos.refractions.net"
 #      REQ=( "" )
  ESTIMATE="115"
+FRESHMEAT="geos"
 DESC="GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology Suite (JTS)
 GEOS (Geometry Engine - Open Source) is a C++ port of the Java Topology
 Suite (JTS)

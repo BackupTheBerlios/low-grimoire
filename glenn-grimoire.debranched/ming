@@ -7,9 +7,9 @@ ATTRIBUTE="library"
  HOMEPAGE="http://ming.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=""
-#FRESHMEAT=""
-DESC="Ming is a C library for generating SWF ("Flash") format movies.
-Ming is a C library for generating SWF ("Flash") format movies, plus a set
+FRESHMEAT="ming"
+DESC="Ming is a C library for generating SWF (\"Flash\") format movies.
+Ming is a C library for generating SWF (\"Flash\") format movies, plus a set
 of wrappers for using the library from C++ and popular scripting languages
 like PHP, Perl, Python, and Ruby.
 "

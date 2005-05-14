@@ -8,6 +8,7 @@ ATTRIBUTE="gnome"
       URL="$SOURCEFORGE_URL"
       REQ=( "parted gtkmm" )
  ESTIMATE="115"
+FRESHMEAT="gparted"
 DESC="GParted is a gnome partitioning tool using libparted.
 GParted is a gnome partitioning tool using libparted.
 "

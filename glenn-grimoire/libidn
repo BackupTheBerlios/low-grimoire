@@ -9,7 +9,7 @@ ATTRIBUTE="library"
            http://josefsson.org/libidn/releases"
 #      REQ=( "" )
  ESTIMATE="115"
-#FRESHMEAT=""
+FRESHMEAT="libidn"
 DESC="GNU Libidn is an implementation of the Stringprep, Punycode and IDNA specifications, used for internationalized domain names.
 GNU Libidn is an implementation of the Stringprep, Punycode and IDNA
 specifications, used for internationalized domain names.

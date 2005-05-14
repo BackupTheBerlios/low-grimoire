@@ -13,7 +13,7 @@ ATTRIBUTE="x11"
 #     OPTS="--with-bundled-t1lib --enable-libhelp"
      OPTS="--with-bundled-t1lib"
 #     OPTS="$OPTS --enable-grace-home=/usr"
-#FRESHMEAT=""
-DESC="libsvg provides a parser for SVG content in files or buffers.
-libsvg provides a parser for SVG content in files or buffers.
+FRESHMEAT="grace"
+DESC="Grace is a WYSIWYG 2D plotting tool for the X Window System and M*tif.
+Grace is a WYSIWYG 2D plotting tool for the X Window System and M*tif.
 "

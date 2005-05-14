@@ -9,7 +9,7 @@ ATTRIBUTE="library"
       REQ=( ""
             "openssl:--with-openssl::add SSL support"
             "db::--disable-db:enable Berkeley DB" )
-#FRESHMEAT=""
+FRESHMEAT="libetpan"
 DESC="libetpan provides a portable, efficient middleware for different kinds of mail access.
 The purpose of this mail library is to provide a portable, efficient
 middleware for different kinds of mail access. When using the drivers

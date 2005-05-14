@@ -9,7 +9,7 @@ ATTRIBUTE="x11"
       REQ=( "gtk+ alsa-lib libogg libvorbis libgnomecanvas guile"
 	    "libmad:::add support for mpeg decoding"
 	    "ladspa_sdk:::add support for ladspa plugins" )
-#FRESHMEAT=""
+FRESHMEAT="beastbse"
 DESC="Beast is a powerful music composition and modular synthesis application
 Beast is a powerful music composition and modular synthesis application
 "

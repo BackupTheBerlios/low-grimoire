@@ -12,6 +12,7 @@ ATTRIBUTE="gnome"
             "evolution-data-server:--enable-eds::enable evolution-data-server support" )
      OPTS="--with-compile-warnings=yes"
  ESTIMATE="193"
+FRESHMEAT="planner"
 DESC="A Project Management Application for GNOME.
 Planner is a project planning, scheduling and tracking tool for the GNOME
 Desktop aiming to act as a better replacement than available proprietary

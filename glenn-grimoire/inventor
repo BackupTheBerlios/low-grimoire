@@ -7,7 +7,7 @@ ATTRIBUTE="x11"
  HOMEPAGE="http://oss.sgi.com/projects/inventor"
       URL="ftp://oss.sgi.com/projects"
       REQ=( "x11 lesstif freetype" )
-#FRESHMEAT=""
+FRESHMEAT="openinventor"
 DESC="Open InventorTM is an object-oriented 3D toolkit offering a comprehensive solution to interactive graphics programming problems.
 Open InventorTM is an object-oriented 3D toolkit offering a comprehensive
 solution to interactive graphics programming problems.

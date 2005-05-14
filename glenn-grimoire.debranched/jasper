@@ -10,6 +10,7 @@ ATTRIBUTE="library"
             "jpeg::--disable-libjpeg:enable jpeg support"
             "::--disable-opengl:enable opengl support" )
  ESTIMATE="115"
+FRESHMEAT="jasper"
 DESC="JasPer is an implementation of the codec specified in the JPEG-2000 Part-1 standard.
 JasPer includes a software-based implementation of the codec specified in
 the JPEG-2000 Part-1 standard.

@@ -9,7 +9,7 @@ ATTRIBUTE="library"
       REQ=( "freetype SDL DevIL zziplib"
             "OpenEXR:--enable-openexr::add openexr support"
             "Cg::--disable-cg:add Cg plugin" )
-#FRESHMEAT=""
+FRESHMEAT="ogre"
 DESC="Ogre is an open source real time 3D rendering engine.
 Ogre is an open source real time 3D rendering engine.
 "

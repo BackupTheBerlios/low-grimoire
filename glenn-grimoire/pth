@@ -11,7 +11,7 @@ ATTRIBUTE="library"
 #   OPT[0]="sfio:--with-sfio::add sfio support"
    OPT[1]="dmalloc:--with-dmalloc::add malloc debugging support"
 #     OPTS="--enable-pthread"
-#FRESHMEAT=""
+FRESHMEAT="gnupth"
      DESC="POSIXs thread library.
 Pth is a very portable POSIX/ANSI-C based library for Unix platforms
 which provides non-preemptive priority-based scheduling for multiple

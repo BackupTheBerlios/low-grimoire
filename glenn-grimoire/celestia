@@ -10,7 +10,7 @@ ATTRIBUTE="gnome"
 #	    "arts kdelibs:::for kde frontend")
 #	    "gtkglext libgnomeui:::for gnome frontend")
      OPTS="--with-gnome"
-#FRESHMEAT=""
+FRESHMEAT="celestia"
 DESC="Celestia is real-time 3D space simulation which lets you travel through our solar system and to over 100,000 stars in our neighborhood.
 Celestia is real-time 3D space simulation which lets you travel through our
 solar system and to over 100,000 stars in our neighborhood.

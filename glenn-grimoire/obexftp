@@ -7,7 +7,7 @@ ATTRIBUTE="client console"
  HOMEPAGE="http://triq.net/obex"
       URL="$SOURCEFORGE_URL"
       REQ=( "openobex" )
-#FRESHMEAT=""
+FRESHMEAT="obexftp"
 DESC="The overall goal of this project is to make an open source implementation of the Object Exchange (OBEX) protocol.
 The overall goal of this project is to make an open source implementation
 of the Object Exchange (OBEX) protocol. OBEX is a session protocol and can

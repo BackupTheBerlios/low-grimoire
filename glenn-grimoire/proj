@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="ftp://ftp.remotesensing.org/pub"
 #      REQ=( "" )
  ESTIMATE="115"
+FRESHMEAT="proj.4"
 DESC="PROJ.4 Cartographic Projections library
 PROJ.4 Cartographic Projections library
 "

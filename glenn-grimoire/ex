@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.ossp.org/pkg/lib/ex"
       URL="ftp://ftp.ossp.org/pkg/lib"
       REQ="libtool"
-#FRESHMEAT=""
+FRESHMEAT="ex"
 DESC="OSSP ex is a small ISO-C++ style exception handling library for use in the ISO-C language.
 OSSP ex is a small ISO-C++ style exception handling library for use in
 the ISO-C language. It allows you to use the paradigm of throwing and

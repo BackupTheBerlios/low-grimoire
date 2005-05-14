@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.openscenegraph.org"
       URL="$SOURCEFORGE_URL"
       REQ=( "Producer gdal" )
-#FRESHMEAT=""
+FRESHMEAT="osg"
 DESC="The OpenSceneGraph is an open source high peformance 3D graphics toolkit.
 The OpenSceneGraph is an open source high peformance 3D graphics toolkit,
 used by application developers in fields such as visual simulation, games,

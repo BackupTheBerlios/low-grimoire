@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://gtkglext.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=( "gtkglext" )
-#FRESHMEAT=""
+FRESHMEAT="gtkglextmm"
 DESC="gtkglextmm is a C++ wrapper for gtkglext.
 gtkglextmm is a C++ wrapper for gtkglext.
 "

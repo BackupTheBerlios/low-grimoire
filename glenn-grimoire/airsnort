@@ -7,6 +7,7 @@
   HOMEPAGE="http://airsnort.shmoo.com"
        URL="$SOURCEFORGE_URL"
        REQ=( "gtk+ libpcap" )
+ FRESHMEAT="airsnort"
 DESC="AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
 AirSnort is a wireless LAN (WLAN) tool which recovers encryption keys.
 AirSnort operates by passively monitoring transmissions, computing the

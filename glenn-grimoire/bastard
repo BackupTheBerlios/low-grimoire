@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://bastard.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=( "readline ncurses gtk+-v1.2" )
-#FRESHMEAT=""
+FRESHMEAT="bastard"
 DESC="A disassembler -- or, more appropriately, a disassembly environment.
 A disassembler -- or, more appropriately, a disassembly environment. The
 idea is that you have an interpreter, much as you would in Perl or Python,

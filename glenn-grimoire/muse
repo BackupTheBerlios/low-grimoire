@@ -11,7 +11,7 @@ ATTRIBUTE="x11"
 #	    "fst:::vst support"
             "fluidsynth:::add fluid synth support"
             "lash:--enable-ladcca::enable lash support" )
-#FRESHMEAT=""
+FRESHMEAT="muse"
 DESC="MusE is a MIDI/Audio sequencer with recording and editing capabilities.
 MusE is a MIDI/Audio sequencer with recording and editing capabilities.
 "

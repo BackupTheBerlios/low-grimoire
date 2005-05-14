@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
 #      REQ=( "" )
  ESTIMATE="115"
+FRESHMEAT="vidix"
 DESC="This interface was designed and introduced as interface to userspace drivers to provide DGA everywhere where it's possible (unline X11).
 This interface was designed and introduced as interface to userspace
 drivers to provide DGA everywhere where it's possible (unline X11).

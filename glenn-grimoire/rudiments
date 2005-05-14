@@ -12,7 +12,7 @@ ATTRIBUTE="library"
    OPT[0]="openssl:::add support for ssl"
    OPT[1]="pcre:::add support for regular expressions"
 #     OPTS="--enable-inlines"
-#FRESHMEAT=""
+FRESHMEAT="rudiments"
 DESC="Rudiments is a C++ library providing base classes for things such as daemons, clients and servers, and wrapper classes.
 Rudiments is an Open Source C++ class library providing base classes for
 things such as daemons, clients and servers, and wrapper classes for the

@@ -7,7 +7,7 @@ ATTRIBUTE="console client server"
  HOMEPAGE="http://www.apsis.ch/pound"
       URL="http://www.apsis.ch/pound"
       REQ=( "openssl" )
-#FRESHMEAT=""
+FRESHMEAT="pound"
 DESC="Pound is a reverse proxy, load balancer and HTTPS front-end for Web servers.
 The Pound program is a reverse proxy, load balancer and HTTPS front-end for
 Web server(s). Pound was developed to enable distributing the load among

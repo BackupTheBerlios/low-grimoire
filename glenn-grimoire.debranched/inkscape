@@ -7,7 +7,7 @@ ATTRIBUTE="console gnome"
  HOMEPAGE="http://www.inkscape.org"
       URL="$SOURCEFORGE_URL"
       REQ=( "zlib gtk+ libxml2 gtkspell libsigc++-v1.2 popt pango gc" )
-#FRESHMEAT=""
+FRESHMEAT="inkscape"
 DESC="Inkscape is an open source SVG editor
 Inkscape is an open source SVG editor with capabilities similar to
 Illustrator, CorelDraw, Visio, etc. Supported SVG features include basic

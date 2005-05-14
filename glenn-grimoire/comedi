@@ -7,7 +7,7 @@ ATTRIBUTE="kernel"
  HOMEPAGE="http://www.comedi.org"
       URL="http://www.comedi.org/download"
       REQ=( "linux" )
-#FRESHMEAT=""
+FRESHMEAT="comedi"
 DESC="Comedi is a collection of drivers for a variety of common data acquisition plug-in boards
 Comedi is a collection of drivers for a variety of common data acquisition
 plug-in boards.  Works with all kernel branches.

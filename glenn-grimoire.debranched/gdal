@@ -23,6 +23,7 @@ ATTRIBUTE="library"
             "geos:--with-geos::add GEOS support"
             "python:::add python support" )
  ESTIMATE="115"
+FRESHMEAT="gdal"
 DESC="GDAL is a translator library for raster geospatial data formats.
 GDAL is a translator library for raster geospatial data formats.
 "

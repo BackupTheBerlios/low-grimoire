@@ -8,6 +8,7 @@ ATTRIBUTE="library"
       URL="ftp://heasarc.gsfc.nasa.gov/software/fitsio/c"
 #      REQ=( "" )
  ESTIMATE="115"
+FRESHMEAT="cfitsio"
 DESC="CFITSIO is a library of C and Fortran subroutines for manipulating data files in FITS data format.
 CFITSIO is a library of C and Fortran subroutines for reading and writing
 data files in FITS (Flexible Image Transport System) data format.
