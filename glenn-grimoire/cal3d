@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://cal3d.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=( "autoconf automake" )
-#FRESHMEAT=""
+FRESHMEAT="cal3d"
 DESC="Cal3d is a skeletal based 3d character animation library written in C++ in a platform-/graphic API-independent way.
 Cal3d is a skeletal based 3d character animation library written in C++ in a platform-/graphic API-independent way.
 "

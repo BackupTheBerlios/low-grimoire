@@ -6,8 +6,8 @@ ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.fodder.org/cksfv"
       URL="http://www.fodder.org"
-#      REQ=""
-#FRESHMEAT=""
+#      REQ=( "" )
+FRESHMEAT="cksfv"
 DESC="cksfv is a program that can use sfv files to verify and create files.
 cksfv is a program that can use sfv files to verify and create files.
 "

@@ -33,7 +33,7 @@ ATTRIBUTE="library"
    OPT[9]="tcl:::add support for tcl"
    OPT[10]="j2sdk:::add support for java"
    OPT[11]="gtk+-v1.2::--disable-gtk:for gtk config tool"
-#FRESHMEAT=""
+FRESHMEAT="sqlrelay"
 DESC="SQL Relay is a persistent database connection pooling, proxying and load balancing system for Unix and Linux.
 SQL Relay is a persistent database connection pooling, proxying and load
 balancing system for Unix and Linux.
