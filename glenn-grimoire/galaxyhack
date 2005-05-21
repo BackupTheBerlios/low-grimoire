@@ -34,7 +34,6 @@ EOF
 
 build() {
   sed -i '22i#include "GlobalConstants.h"\n' Inlines.h &&
-  sed -i 's:-lboost_filesystem:-lboost_filesystem-gcc:' Makefile &&
   make            &&
   prepare_install &&
   make install INSTALL_BIN_DIR=/usr/games &&
