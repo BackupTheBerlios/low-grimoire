@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.2.2" "0.1.4" "0.1.3" )
+  VERSION=( "0.2.3" "0.2.2" "0.1.4" "0.1.3" )
  CATEGORY="security"
 ATTRIBUTE="server"
    SOURCE="$SPELL/$SPELL-$VERSION"
@@ -14,10 +14,15 @@ DESC="CryptNET keyserver.
 CryptNET keyserver.
 "
 
+patches() {
+  sed -i '303s:,config:,ctx->config:' src/cksd.c
+}
+
 build() {
-  default_build                             &&
-  mkdir -p /usr/doc/$SPELL                  &&
-  cp -R doc INSTALL README /usr/doc/$SPELL  &&
-  mkdir -p /usr/share/$SPELL                &&
-  cp -R cks.sql cks.conf html /usr/share/$SPELL
+  patches                                   &&
+  default_build                             
+#  mkdir -p /usr/doc/$SPELL                  &&
+#  cp -R doc INSTALL README /usr/doc/$SPELL  &&
+#  mkdir -p /usr/share/$SPELL                &&
+#  cp -R cks.sql cks.conf html /usr/share/$SPELL
 }
