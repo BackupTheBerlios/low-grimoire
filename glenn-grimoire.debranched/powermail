@@ -1,0 +1,54 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.7" )
+ CATEGORY="network mail"
+ATTRIBUTE="server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.powerdns.com"
+      URL="http://downloads.powerdns.com"
+      REQ=( ""
+	    "libpq++:postgresql --with-pgsql-includes=/usr/include::add postgres support"
+#	    "oracle:oracle::add oracle support"
+	    "mysql:mysqlpdns mysqlplain mysqlsimplepdns --with-mysql=/usr::add mysql support"
+	    "openldap:ldap::add support support"
+	    ":text::add text support" )
+#FRESHMEAT=""
+DESC="PowerMail is a redundant and distributed system for receiving and storing electronic mail.
+PowerMail is a redundant and distributed system for receiving and storing
+electronic mail. Furthermore, incoming email can be forwarded to other
+email addresses. User information can be read from a database or from disk.
+"
+
+fix_opts() {
+  if grep -q 'with-userbases' <<<$1; then
+    echo "$1";
+    return;
+  fi
+  for OPT in $1; do
+    if grep -q '^--' <<<$OPT; then
+      echo -n "$OPT ";
+    else
+      BACKENDS="$BACKENDS $OPT"
+    fi
+  done
+  echo -n "--with-userbases=\"${BACKENDS:1}\""
+}
+
+patches() {
+  if [ "$VERSION" == "1.7" ]; then
+    sed -i '107s:pthread:pthread -lcrypt:' Makefile.in 
+  fi
+}
+
+build() {
+  export CXXFLAGS='-DDLLIMPORT=""'
+  patches                   &&
+  eval \
+  ./configure --prefix=/usr \
+              --sysconfdir=/etc \
+	      --localstatedir=/var \
+              $(fix_opts "$OPTS") &&
+  make                      &&
+  prepare_install           &&
+  make install
+}

@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0" )
+ CATEGORY="network security"
+ATTRIBUTE="server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.honeyd.org"
+      URL="http://www.citi.umich.edu/u/provos"
+      REQ=( "zlib libdnet libpcap libevent ncurses readline"
+            "rrdtool:::for graphing of logs"
+            "python:--with-python::support for python services" )
+#FRESHMEAT=""
+DESC="Honeyd is a small daemon that creates virtual hosts on a network.
+Honeyd is a small daemon that creates virtual hosts on a network. The hosts
+can be configured to run arbitrary services, and their personality can be
+adapted so that they appear to be running certain operating systems.
+"

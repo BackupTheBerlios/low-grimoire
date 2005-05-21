@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.0" )
+ CATEGORY="network security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.synacklabs.net/projects/cutlass"
+      URL="http://www.synacklabs.net/projects"
+      REQ=( "Botan speex"
+            "gtk+::--without-gtk:build with gtk gui" )
+#FRESHMEAT=""
+DESC="Cutlass aims to be a tool that brings encrypted Internet use to the masses.
+Cutlass aims to be a tool that brings encrypted Internet use to the masses.
+"

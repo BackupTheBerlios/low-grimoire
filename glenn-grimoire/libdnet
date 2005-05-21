@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.10" )
+ CATEGORY="development network"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://libdnet.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( ""
+            "check:--with-check=/usr:--without-check:do C unit checking"
+            "Python:--with-python::enable python bindings" )
+#FRESHMEAT=""
+DESC="libdnet provides a simplified, portable interface to several low-level networking routines
+libdnet provides a simplified, portable interface to several low-level networking routines
+"

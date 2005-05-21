@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.0.20040308alpha" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.kyz.uklinux.net/libmspack"
+      URL="http://www.kyz.uklinux.net/downloads"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="A library for Microsoft compression formats.
+A library for Microsoft compression formats.
+"
+
+build(){
+  default_build &&
+  sed -e 's:@param this:@param _this:' -e 's:*this:*_this:' -i /usr/include/mspack.h
+}

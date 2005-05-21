@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "5.0" )
+ CATEGORY="network security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.packetfactory.net/projects/firewalk"
+      URL="http://www.packetfactory.net/firewalk/dist"
+      REQ=( "libdnet libpcap libnet" )
+#FRESHMEAT=""
+DESC="Firewalk is an active reconnaissance network security tool that attempts to determine what layer 4 protocols a  given IP forwarding device will pass.
+Firewalk is an active reconnaissance network security tool that attempts to
+determine what layer 4 protocols a  given IP forwarding device will pass.
+"
+
+build() {
+  sed -i '191s:$:;:' src/firewalk.c &&
+  default_build
+}

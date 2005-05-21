@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.72" )
+ CATEGORY="web"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://bookmarkbridge.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "qt-x11-free libxml2" )
+     OPTS="--with-xinerama"
+#FRESHMEAT=""
+DESC="BookmarkBridge is a utility that allows the user to share bookmarks between all their browsers.
+BookmarkBridge is a small, easy to use, multi-platform, GUI-based utility
+that allows the user to share bookmarks between all their browsers. The
+user runs it periodically to synchronize between the browsers. 
+"

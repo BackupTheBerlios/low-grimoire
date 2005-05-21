@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.140" )
+ CATEGORY="network graphic"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnomepro.com/tsclient"
+      URL="http://www.gnomepro.com"
+      REQ=( "gnome-panel" )
+#FRESHMEAT=""
+DESC="tsclient is a frontend for rdesktop and other remote desktop tools 
+tsclient is a frontend for rdesktop and other remote desktop tools 
+"

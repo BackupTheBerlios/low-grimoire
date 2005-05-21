@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.3" )
+ CATEGORY="web"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.nongnu.org/gnobog"
+      URL="http://ftp.gnu.org/savannah/files"
+      REQ=( "gnome-libs libglade-v0" )
+#FRESHMEAT=""
+DESC="Gnobbog is a bookmark organizer.
+Gnobbog is a bookmark organizer.
+"
+
+build() {
+  export CFLAGS="$CFLAGS -I/usr/include/libglade-1.0"
+  default_build
+}

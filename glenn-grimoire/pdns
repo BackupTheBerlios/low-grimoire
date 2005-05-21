@@ -1,0 +1,65 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.9.17" )
+ CATEGORY="network dns"
+ATTRIBUTE="server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.powerdns.com"
+      URL="http://downloads.powerdns.com/releases"
+      REQ=( ""
+#	    "sqlite:gsqlite --with-sqlite-lib=/usr/lib::add sqlite support"
+	    "libpq++:gpgsql --with-pgsql-includes=/usr/include::add postgres support"
+	    "mysql:gmysql::add mysql support"
+#	    "oracle:oracle::add oracle support"
+#	    "db2:db2::add db2 support"
+	    "tdb:xdb::add tdb support"
+#	    "unixODBC:odbc::add odbc support"
+	    "openldap:ldap::add ldap support"
+	    ":geo::add geo backend support"
+	    ":pipe::add pipe support" )
+      OPTS="--enable-pdns_server --enable-recursor --enable-verbose-logging"
+#      OPTS="--enable-pdns_server --enable-recursor"
+FRESHMEAT="pdns"
+DESC="The PowerDNS Nameserver is a modern, advanced and high performance authoritative-only nameserver.
+The PowerDNS Nameserver is a modern, advanced and high performance
+authoritative-only nameserver. It is written from scratch and conforms to
+all relevant DNS standards documents. Furthermore, PowerDNS interfaces with
+almost any database.
+"
+
+fix_opts() {
+  if grep -q 'with-modules' <<<$1; then
+    echo "$1";
+    return;
+  fi
+  for OPT in $1; do
+    if grep -q '^--' <<<$OPT; then
+      echo -n "$OPT ";
+    else
+      BACKENDS="$BACKENDS $OPT"
+    fi
+  done
+  echo -n "--with-modules=\"\" --with-dynmodules=\"${BACKENDS:1}\""
+}
+
+patches() {
+  if [ "$VERSION" == "2.9.17" ]; then
+# uses older version of sqlite
+#  sed -i 's:sqlite\.:sqlite3.:' configure &&
+#  sed -i 's:lsqlite:lsqlite3:' modules/gsqlitebackend/Makefile.in &&
+#  sed -i 's:sqlite\.h:sqlite3.h:' modules/gsqlitebackend/ssqlite.hh &&
+#  sed -i '12itypedef sqlite3 sqlite;' modules/gsqlitebackend/ssqlite.hh &&
+  sed -i '251s:newest:((int)newest):' pdns/dnsbackend.cc
+  fi
+}
+
+build() {
+  patches                   &&
+  eval \
+  ./configure --prefix=/usr \
+              $(fix_opts "$OPTS") &&
+  make                      &&
+  prepare_install           &&
+  make install              &&
+  install -o root -g root -m 755 pdns/pdns /etc/init.d/pdns
+}

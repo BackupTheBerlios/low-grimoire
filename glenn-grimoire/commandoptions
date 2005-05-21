@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.cs.auc.dk/~olau/commandoptions"
+      URL="http://www.cs.auc.dk/~olau/commandoptions/source"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Commandoptions is a C++ option parsing library.
+Commandoptions is a C++ option parsing library.
+"
+
+build() {
+  prepare_install &&
+  mkdir -p /usr/share/$SPELL &&
+  install -o root -g root -m 644 commandoptions.* test.cpp /usr/share/$SPELL
+}

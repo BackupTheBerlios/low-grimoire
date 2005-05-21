@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "4.0" )
+ CATEGORY="db library"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://gborg.postgresql.org/project/libpqpp"
+      URL="ftp://gborg.postgresql.org/pub/libpqpp/stable
+           http://gborg.postgresql.org/download/libpqpp/stable"
+      REQ=( "postgresql" )
+#FRESHMEAT=""
+DESC="This is the old C++ interface to PostgreSQL.
+This is the C++ interface that has shipped as part of PostgreSQL for many
+releases. There is a newer C++ interface called libpqxx.
+"
+
+build() {
+  make POSTGRES_HOME=/usr &&
+  prepare_install         &&
+  make POSTGRES_HOME=/usr install &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r examples /usr/share/$SPELL
+}

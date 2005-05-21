@@ -1,0 +1,30 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "20050503" )
+ CATEGORY="development debugger"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://reality.sgi.com/davea"
+      URL="http://reality.sgi.com/davea"
+      REQ=( "libelf" )
+#FRESHMEAT=""
+DESC="libdwarf is a library to read DWARF debugging info.
+libdwarf is a library to read DWARF debugging info.
+"
+
+do_dir() {
+  pushd "$1" &&
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  popd
+}
+
+build() {
+  do_dir libdwarf           &&
+  do_dir dwarfdump          &&
+  prepare_install           &&
+  make -C dwarfdump install &&
+  install -o root -g root -m 644 libdwarf/*dwarf.h /usr/include &&
+  install -o root -g root -m 644 libdwarf/libdwarf.a /usr/lib
+}

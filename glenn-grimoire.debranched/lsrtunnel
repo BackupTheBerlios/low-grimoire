@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="network security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.synacklabs.net/projects/lsrtunnel"
+      URL="http://www.synacklabs.net/projects"
+      REQ=( "libpcap libdnet" )
+#FRESHMEAT=""
+DESC="lsrtunnel spoofs connections using source routed packets.
+lsrtunnel spoofs connections using source routed packets.
+"

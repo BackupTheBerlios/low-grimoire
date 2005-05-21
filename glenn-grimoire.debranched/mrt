@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.2.2a" )
+ CATEGORY="network"
+ATTRIBUTE="server console"
+   SOURCE="$SPELL/$SPELL-$VERSION-src"
+ HOMEPAGE="http://www.mrtd.net"
+      URL="ftp://ftp.merit.edu/net-research"
+      REQ=( ""
+	    "gdbm:::add gdbm support"
+	    "db:::add berkeley db support" )
+#FRESHMEAT=""
+DESC="multi-protocol IPv4/IPv6 routing daemons and routing analysis/simulation tools.
+The MRT project is researching new routing software architectures,
+protocols and tools. Software developed to date includes multi-protocol
+IPv4/IPv6 routing daemons and routing analysis/simulation tools.
+"
+
+build() {
+  sed -i '24s:in_pktinfo:in_pktinfo2:' src/lib/kernel/socket.c &&
+  cd src &&
+  default_build
+}

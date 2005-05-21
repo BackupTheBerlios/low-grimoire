@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0-rc1" )
+ CATEGORY="network security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.synacklabs.net/projects/lsrscan"
+      URL="http://www.synacklabs.net/projects"
+      REQ=( "libpcap libdnet" )
+#FRESHMEAT=""
+DESC="lsrscan checks the behaviour of remote hosts to loose source routed packets.
+lsrscan checks the behaviour of remote hosts to loose source routed packets.
+"

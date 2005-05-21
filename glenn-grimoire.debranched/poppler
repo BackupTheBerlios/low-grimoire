@@ -1,0 +1,35 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.1" )
+ CATEGORY="documentation"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://poppler.freedesktop.org"
+      URL="http://poppler.freedesktop.org"
+      REQ=( "freetype"
+            "zlib::--disable-zlib:enable zlib compression"
+            "jpeg::--disable-libjpeg:enable jpeg support"
+            "cairo::--disable-cairo-output:enable cairo backend"
+            "glib::--disable-poppler-glib:build glib wrapper"
+            "qt-x11-free::--disable-poppler-qt:build Qt wrapper" )
+     OPTS="--enable-a4-paper --enable-opi"
+#FRESHMEAT=""
+DESC="gtranslator is an enhanced gettext po file editor for the GNOME desktop environment.
+gtranslator is an enhanced gettext po file editor for the GNOME desktop
+environment. It handles all forms of gettext po files like compiled gettext
+po files (gmo/mo files), compressed po files (po.gz/po.bz2 etc.) and
+features many comfortable everyday usage features likeFind/Replace, Auto
+Translation, Message Translation Learning, Messages Table (for having an
+overview of the translations/messages in the po file), Easy Navigation and
+Editing of translation messages & comments of the translation where
+accurate.
+"
+
+patches() {
+  sed -i '19i#if OPI_SUPPORT\nclass Dict;\n#endif\n' poppler/OutputDev.h 
+}
+
+build() {
+  patches       &&
+  default_build
+}

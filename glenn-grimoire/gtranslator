@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.1.6" )
+ CATEGORY="utility development"
+ATTRIBUTE="library"
+   SOURCE="sources/$SPELL/${VERSION:0:3}/$SPELL-$VERSION"
+ HOMEPAGE="http://gtranslator.sourceforge.net"
+      URL="$GNOME_URL"
+      REQ=( "libgnomeui gtkspell" )
+#FRESHMEAT=""
+DESC="gtranslator is an enhanced gettext po file editor for the GNOME desktop environment.
+gtranslator is an enhanced gettext po file editor for the GNOME desktop
+environment. It handles all forms of gettext po files like compiled gettext
+po files (gmo/mo files), compressed po files (po.gz/po.bz2 etc.) and
+features many comfortable everyday usage features likeFind/Replace, Auto
+Translation, Message Translation Learning, Messages Table (for having an
+overview of the translations/messages in the po file), Easy Navigation and
+Editing of translation messages & comments of the translation where
+accurate.
+"
