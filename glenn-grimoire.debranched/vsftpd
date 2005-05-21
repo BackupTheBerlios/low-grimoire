@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.3" )
+ CATEGORY="ftp"
+ATTRIBUTE="server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://vsftpd.beasts.org"
+      URL="ftp://vsftpd.beasts.org/users/cevans"
+      REQ=( "openssl tcp_wrappers Linux-PAM" )
+#FRESHMEAT=""
+DESC="vsftpd is a secure, high-performance ftp server with ssl support.
+vsftpd is a secure, high-performance ftp server with ssl support.
+"
+
+build() {
+  sed -i 's:undef:define:' builddefs.h &&
+  sed -i 's:local/::' Makefile         &&
+  make                                 &&
+  prepare_install                      &&
+  make install                         &&
+  mkdir -p /usr/share/$SPELL           &&
+  cp -r EXAMPLE README* FAQ  /usr/share/$SPELL
+}
