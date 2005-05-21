@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1" )
+ CATEGORY="video"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://ivancent.altervista.org/auto-transcode"
+      URL="http://ivancent.altervista.org"
+      REQ=( "gtk+" )
+#FRESHMEAT=""
+DESC="auto-transcode is a user-friendly GTK2 GUI for Transcode
+auto-transcode is a user-friendly GTK2 GUI for Transcode
+"
+
+build() {
+  make            &&
+  prepare_install &&
+  make PREFIX=/usr install
+}

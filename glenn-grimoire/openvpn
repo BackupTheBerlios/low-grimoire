@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0" )
+ CATEGORY="network security"
+ATTRIBUTE="server client"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://openvpn.net"
+      URL="http://openvpn.net/release"
+      REQ=( "openssl lzo"
+	    "iproute2:--enable-iproute2::Enable support for iproute2" )
+     OPTS="--enable-password-save "
+#FRESHMEAT=""
+DESC="OpenVPN is a full-featured SSL VPN solution.
+OpenVPN is a full-featured SSL VPN solution which can accomodate a wide
+range of configurations, including remote access, site-to-site VPNs, WiFi
+security, and enterprise-scale remote access solutions with load balancing,
+failover, and fine-grained access-controls.
+"

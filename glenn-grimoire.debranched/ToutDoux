@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.7" )
+ CATEGORY="development"
+ATTRIBUTE="gnome"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/toutdoux/en/index.html"
+      URL="http://www.gnu.org/software/toutdoux/source"
+      REQ=( "getxml gnome-libs gdk-pixbuf"
+            "perl:::with perl support"
+            "gnuprolog:::with prolog support"
+            "postgresql:::with postgres backend support"
+	    "mysql:::with mysql backend support" )
+     OPTS="--enable-manual=no"
+#FRESHMEAT=""
+DESC="ToutDoux is a project manager for GNOME.
+ToutDoux is a project manager for GNOME.  The approach to data manipulation
+is abstract (database free) and It's extensible with plug-ins.
+"

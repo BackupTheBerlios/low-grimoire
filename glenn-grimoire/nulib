@@ -1,0 +1,30 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "203" )
+ CATEGORY="compression"
+ATTRIBUTE="console library"
+   SOURCE="${SPELL}dist-$VERSION"
+ HOMEPAGE="http://www.nulib.com"
+      URL="http://www.nulib.com/downloads"
+      REQ=( "zlib"
+	    "bzip2:--enable-bzip2::enable bzip2 support" )
+#FRESHMEAT=""
+DESC="NuLib is a disk and file archive program.
+NuLib is a disk and file archive program, similar in principle to PKZIP.
+Instead of ZIP archives, it manipulates NuFX archives, which are usually
+identified with ".SHK", ".SDK", or ".BXY".
+"
+
+build() {
+  cd "../nufxlib-$VERSION"
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  cd "../nulib2-$VERSION"   &&
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  prepare_install           &&
+  make -C "../nufxlib-$VERSION" install &&
+  make install
+}

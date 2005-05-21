@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="development"
+ATTRIBUTE="library gnome"
+   SOURCE="numexp/$SPELL-$VERSION"
+ HOMEPAGE="http://numexp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "libgnomeprintui fontconfig gnome-python" )
+#FRESHMEAT=""
+DESC="libnxplot is a 2D vector drawing library.
+libnxplot is a 2D vector drawing library. It has an API very similar to
+libplot, from GNU plotting utilities.
+"

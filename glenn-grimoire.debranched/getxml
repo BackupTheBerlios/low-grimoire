@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.4" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/toutdoux/en/telechargement.html"
+      URL="http://www.gnu.org/software/toutdoux/source"
+      REQ=( "glib-v1.2 libxml" )
+#FRESHMEAT=""
+DESC="getxml is an internationalization tool for XML files.
+getxml is an internationalization tool for XML files.
+"
