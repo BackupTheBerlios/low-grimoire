@@ -6,7 +6,11 @@ ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.inkscape.org"
       URL="$SOURCEFORGE_URL"
-      REQ=( "zlib gtk+ libxml2 gtkspell libsigc++-v1.2 popt pango gc" )
+      REQ=( "zlib libpng freetype gtkmm libxml2 gtkspell popt gc intltool"
+#            "libgnomeprintui:--with-gnome-print::use gnome print font database and spooler frontend"
+            "python:--with-python::use Python for embedded scripting"
+            "perl:::use Perl for embedded scripting" )
+     OPTS="--with-xft"
 FRESHMEAT="inkscape"
 DESC="Inkscape is an open source SVG editor
 Inkscape is an open source SVG editor with capabilities similar to
@@ -14,3 +18,5 @@ Illustrator, CorelDraw, Visio, etc. Supported SVG features include basic
 shapes, paths, text, alpha blending, transforms, gradients, node editing,
 svg-to-png export, grouping, and more.
 "
+
+export LDFLAGS="$LDFLAGS -latkmm-1.6 -lgdkmm-2.4 -lpangomm-1.4"
