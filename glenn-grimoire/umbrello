@@ -1,0 +1,14 @@
+  VERSION=( "1.4.0" "1.2.1" "1.2" )
+ CATEGORY="development"
+ATTRIBUTE="kde|x11"
+   SOURCE="uml/$SPELL-$VERSION"
+ HOMEPAGE="http://uml.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "kdelibs graphviz binutils valgrind" )
+#FRESHMEAT=""
+DESC="Umbrello UML Modeller is a Unified Modelling Language diagram programme for KDE.
+Umbrello UML Modeller is a Unified Modelling Language diagram programme
+for KDE. UML allows you to create diagrams of software and other systems
+in a standard format. Our handbook gives a good introduction to Umbrello
+and UML modelling.
+"
