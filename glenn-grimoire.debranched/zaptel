@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.7" )
+ CATEGORY="telephony kernel"
+ATTRIBUTE="driver linux-24-module linux-26-module"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.asterisk.org"
+      URL="http://www.asterisk.org/html/downloads"
+      REQ=( "linux" )
+#FRESHMEAT=""
+DESC="Zapata Telephony Interface Driver
+Zapata Telephony Interface Driver
+"
+
+build() {
+  make                        &&
+  prepare_install             &&
+  make    install
+}

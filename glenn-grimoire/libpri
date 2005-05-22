@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.7" )
+ CATEGORY="telephony"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.asterisk.org"
+      URL="http://www.asterisk.org/html/downloads"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="libpri is a C implementation of the Primary Rate ISDN specification.
+libpri is a C implementation of the Primary Rate ISDN specification.  It
+was based on the Bellcore specification SR-NWT-002343 for National ISDN.
+As of May 12, 2001, it has been tested work with NI-2, Nortel DMS-100, and
+Lucent 5E Custom protocols on switches from Nortel and Lucent.
+"
+
+build() {
+  make                        &&
+  prepare_install             &&
+  make    install
+}

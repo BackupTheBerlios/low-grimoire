@@ -1,0 +1,32 @@
+  VERSION=( "1.0.7" )
+ CATEGORY="telephony"
+ATTRIBUTE="server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.asterisk.org"
+      URL="http://www.asterisk.org/html/downloads"
+      REQ=( "bison ncurses openssl"
+            "alsa-lib:::add alsa support"
+	    "libpri:::use T1 or E1 interfaces"
+	    "zaptel:::support Digium hardware"
+	    "gtk+-v1.2:::add gtk gui"
+#	    "kdelibs:::add kde gui"
+            "speex:::add speex support"
+            "postgresql:::add postgres support"
+            "mysql:::add mysql support"
+            "sqlite:::add sqlite support"
+            "unixODBC:::add odbc support" )
+#FRESHMEAT=""
+DESC="Asterisk is a complete PBX in software.
+Asterisk is a complete PBX in software. It runs on Linux and provides all
+of the features you would expect from a PBX and more. Asterisk does voice
+over IP in three protocols, and can interoperate with almost all standards-
+based telephony equipment using relatively inexpensive hardware.
+"
+
+build() {
+  sed -i 's:/usr/bin/awk:/bin/awk:' editline/makelist &&
+  make                                   &&
+  prepare_install                        &&
+  make DESTDIR= INSTALL_PREFIX= install
+#  make DESTDIR=$BUILD_DIR/tmp INSTALL_PREFIX=/usr install
+}
