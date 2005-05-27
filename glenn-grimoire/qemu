@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.6.1" "0.5.5" )
+  VERSION=( "0.7.0" "0.6.1" "0.5.5" )
  CATEGORY="emulator"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
