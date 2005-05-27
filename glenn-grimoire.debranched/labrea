@@ -8,6 +8,6 @@ ATTRIBUTE="server"
       URL="$SOURCEFORGE_URL"
       REQ=( "libpcap libdnet" )
 #FRESHMEAT=""
-DESC="Intrusion detection / "sticky" honey pot technology using virtual servers to detect and trap worms, hackers, and other malware.
-Intrusion detection / "sticky" honey pot technology using virtual servers to detect and trap worms, hackers, and other malware.
+DESC="Intrusion detection / \"sticky\" honey pot technology using virtual servers to detect and trap worms, hackers, and other malware.
+Intrusion detection / \"sticky\" honey pot technology using virtual servers to detect and trap worms, hackers, and other malware.
 "

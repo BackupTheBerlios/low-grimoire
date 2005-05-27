@@ -12,7 +12,7 @@ ATTRIBUTE="console library"
 DESC="NuLib is a disk and file archive program.
 NuLib is a disk and file archive program, similar in principle to PKZIP.
 Instead of ZIP archives, it manipulates NuFX archives, which are usually
-identified with ".SHK", ".SDK", or ".BXY".
+identified with \".SHK\", \".SDK\", or \".BXY\".
 "
 
 build() {
