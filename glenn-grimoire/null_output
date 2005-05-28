@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3" )
+ CATEGORY="xmms-plugin audio"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://havardk.xmms.org/plugins/null_output"
+      URL="http://havardk.xmms.org/plugins"
+      REQ=( "xmms" )
+#FRESHMEAT=""
+DESC="Useful for testing and benchmarking. Also useful for streaming LiveIce if you don't have a soundcard.
+Useful for testing and benchmarking. Also useful for streaming LiveIce if
+you don't have a soundcard.
+"

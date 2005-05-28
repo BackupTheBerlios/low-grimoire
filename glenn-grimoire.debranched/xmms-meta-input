@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4" )
+ CATEGORY="xmms-plugin audio"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.corbac.com/page3.html"
+      URL="http://www.corbac.com/Data/Sources"
+      REQ=( "xmms" )
+#FRESHMEAT=""
+DESC="A plugin for XMMS that allows you to write input plugins as Unix programs.
+This is a plugin for XMMS that allows you to write input plugins as Unix
+programs. You write a program that understands the very simple commands on
+its command line and outputs raw sound on its standard output and you're
+done with it.
+"
+
+build() {
+  make &&
+  prepare_install &&
+  make install &&
+  mkdir -p /usr/lib/xmms/Input/Meta &&
+  cp -r Examples/* /usr/lib/xmms/Input/Meta
+}

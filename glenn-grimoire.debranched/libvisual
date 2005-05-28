@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.0" )
+ CATEGORY="graphic development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://libvisual.sourceforge.net/v2"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="Libvisual is an abstraction library that comes between applications and audio visualisation plugins.
+Libvisual is an abstraction library that comes between applications and
+audio visualisation plugins.
+"

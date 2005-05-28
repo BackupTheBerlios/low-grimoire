@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.14" )
+ CATEGORY="xmms-plugin audio"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://xmms-jack.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms jack-audio-connection-kit" )
+#FRESHMEAT=""
+DESC="a jack audio output plugin for XMMS.
+a jack audio output plugin for XMMS.
+"

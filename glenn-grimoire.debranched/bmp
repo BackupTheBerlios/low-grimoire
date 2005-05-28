@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.7" )
+ CATEGORY="audio-player"
+ATTRIBUTE="x11"
+   SOURCE="beepmp/$SPELL-$VERSION"
+ HOMEPAGE="http://beepmp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gtk+ libglade id3lib"
+            "GConf:--enable-gconf::enable GConf support"
+            "gnome-vfs:--enable-gnome-vfs::enable GnomeVFS support"
+            "::--disable-oss:enable oss output plugin"
+            "alsa-lib::--disable-alsa:enable oss output plugin"
+            "esound::--disable-esd:enable esound output plugin"
+            "libogg libvorbis::--disable-vorbis:enable ogg vorbis input plugin" )
+#FRESHMEAT=""
+DESC="BMP Is a versatile and handy multi platform media player
+BMP Is a versatile and handy multi platform media player
+"

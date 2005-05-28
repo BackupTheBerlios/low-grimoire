@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.11" )
+ CATEGORY="xmms-plugin"
+ATTRIBUTE="library"
+   SOURCE="coverviewer/$SPELL-$VERSION"
+ HOMEPAGE="http://coverviewer.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms gdk-pixbuf id3lib" )
+#FRESHMEAT=""
+DESC="CoverViewer is a plugin for XMMS that displays images (Jpeg) contained in the playing directory (for example, cover of the album...)
+CoverViewer is a plugin for XMMS that displays images (Jpeg) contained in
+the playing directory (for example, cover of the album...)
+"

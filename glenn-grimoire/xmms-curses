@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="audio-player"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://xmms-curses.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms ncurses" )
+#FRESHMEAT=""
+DESC="xmms-curses is a simple application for controlling XMMS from the command line.
+xmms-curses is a simple application for controlling XMMS from the command
+line. It is designed to make common, simple tasks fast and easy to do. It
+is operated using arrow keys and standard XMMS keys, to make it easy and
+intuitive to learn.
+"
+
+build() {
+  sed -i 's:/local::' Makefile &&
+  make                        &&
+  prepare_install             &&
+  make install
+}

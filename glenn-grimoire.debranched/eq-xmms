@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6" )
+ CATEGORY="xmms-plugin audio"
+ATTRIBUTE="library"
+   SOURCE="equ/$SPELL-$VERSION"
+ HOMEPAGE="http://equ.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms" )
+#FRESHMEAT=""
+DESC="Graphical real-time audio equalizer plugin for XMMS featuring 10, 15, 25 and 31 bands
+Graphical real-time audio equalizer plugin for XMMS featuring 10, 15, 25
+and 31 bands
+"

@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.1" )
+ CATEGORY="xmms-plugin audio"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.luminal.org/wiki/index.php/IMMS/IMMS"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms sqlite pcre glib"
+            "fftw:::enable spectrum analyzer"
+            "taglib:--with-taglib::enable id3 media tags"
+            "libvorbis:--with-vorbis::enable vorbis support" )
+      OPTS="--with-screensaver"
+#FRESHMEAT=""
+DESC="IMMS is an adaptive playlist framework that tracks your listening patterns and dynamically adapts to your taste. 
+IMMS is an adaptive playlist framework that tracks your listening patterns
+and dynamically adapts to your taste. 
+"

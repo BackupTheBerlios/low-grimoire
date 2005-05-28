@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.0" )
+ CATEGORY="xmms-plugin graphic"
+ATTRIBUTE="library"
+   SOURCE="libvisual/$SPELL-$VERSION"
+ HOMEPAGE="http://libvisual.sourceforge.net/v2"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms libvisual SDL"
+            "libvisual-plugins:::install plugins" )
+#FRESHMEAT=""
+DESC="Libvisual is an xmms plugin for the libvisual audio visualisation framework.
+Libvisual is an xmms plugin for the libvisual audio visualisation
+framework.
+"

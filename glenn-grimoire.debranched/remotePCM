@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="xmms-plugin network"
+ATTRIBUTE="library server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://research.m1stereo.tv/verem/remotePCM"
+      URL="http://research.m1stereo.tv/verem"
+      REQ=( "xmms" )
+#FRESHMEAT=""
+DESC="remotePCM - remote network client sound playing plug-in for XMMS 
+remotePCM - remote network client sound playing plug-in for XMMS 
+"
+
+build() {
+  make &&
+  prepare_install &&
+  install -o root -g root -m 755 install/remotePCMd /usr/bin &&
+  install -o root -g root -m 755 install/libremotePCM.so /usr/lib/xmms/Output
+}

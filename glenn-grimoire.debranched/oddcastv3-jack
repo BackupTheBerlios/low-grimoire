@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.0.3" )
+ CATEGORY="audio network"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.oddsock.org/tools/oddcastv3_jack"
+      URL="http://www.oddsock.org/tools/oddcastv3_jack"
+      REQ=( "jack-audio-connection-kit"
+            "lame:::add mp3 support"
+            "libvorbis:::add vorbis support"
+            "faac:::add AAC support" )
+#FRESHMEAT=""
+DESC="Allows you to hook into any jack output port and broadcast the audio to an icecast or shoutcast server.
+Allows you to hook into any jack output port and broadcast the audio to an
+icecast or shoutcast server.
+"

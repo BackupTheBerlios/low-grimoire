@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.0.8" )
+ CATEGORY="xmms-plugin"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://stud.fbi.fh-darmstadt.de/~glogow"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "xmms"
+            "id3lib::--disable-id3lib:add support for id3 tags" )
+#FRESHMEAT=""
+DESC="The SingIt Lyric Displayer is an XMMS plugin which displays formatted lyrics.
+The SingIt Lyric Displayer is an XMMS plugin which displays formatted
+lyrics, including id3v2xx lyrics. It consists of the displayer and an
+integrated editor which allows one to easily insert time stamps, edit the
+text, and export & strip HTML.
+"
