@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.10.5" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.confluent.org"
+      URL="http://www.confluent.org/download"
+      REQ=( "ocaml" )
+#FRESHMEAT=""
+DESC="Confluence is a language for synchronous reactive system design.
+Confluence is a language for synchronous reactive system design. A
+Confluence program can generate digital logic for an FPGA or ASIC platform,
+or C code for hard real-time software. 
+"
+
+build() {
+  make PREFIX=/usr &&
+  make -C src/ivl &&
+  prepare_install &&
+  make install PREFIX=/usr &&
+  make -C src/ivl install PREFIX=/usr
+}

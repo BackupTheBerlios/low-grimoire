@@ -1,0 +1,46 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.1" )
+ CATEGORY="audio network"
+ATTRIBUTE="console x11"
+   SOURCE="releases/$SPELL-$VERSION"
+ HOMEPAGE="http://muse.dyne.org"
+      URL="ftp://ftp.dyne.org/muse
+           ftp://tekkaman.porgfa.org/dyne.org/muse
+	   http://www.ljudmila.org/~jaromil/muse"
+      REQ=( "libvorbis gettext"
+            "libogg:::enable ogg encoding"
+            "lame:::enable mp3 encoding"
+            "libsndfile:::enable wav/aiff/voc encoding"
+            "jack-audio-connection-kit:--enable-jack::compile with Jack-it support"
+            "gtk+:--enable-gtk2::compile with gtk interface"
+            "ncurses:--enable-ncurses::compile with ncurses interface" )
+     OPTS="--program-transform-name=s:muse:MuSE:"
+#FRESHMEAT=""
+DESC="MuSE provides the free software community with a user friendly but powerful tool for network audio streaming, making life easier for indypendent free speech online radios. 
+MuSE provides the free software community with a user friendly but powerful
+tool for network audio streaming, making life easier for indypendent free
+speech online radios. 
+"
+
+patches() {
+  sed -i "33i#include <errno.h>" src/inchannels.cpp &&
+  sed -e "30i#include <math.h>" \
+      -e "228c\    start = (char*)start + blk;" \
+      -e "230c\    data = (char*)data + blk;" \
+      -e "241c\      data = (char*)data + len;" \
+      -e "242c\      start = (char*)start + len;" \
+      -e "307c\      end = (char*)end + blk;" \
+      -e "309c\      data = (char*)data + blk;" \
+      -e "321c\      data = (char*)data + len;" \
+      -e "322c\      end = (char*)end + len;" -i src/pipe.cpp &&
+  sed -e "14i\ friend int dev_jack_process(jack_nframes_t nframes, void *arg);\n friend void dev_jack_shutdown(void *arg);" \
+      -i src/dev_sound.h
+}
+
+build() {
+  patches &&
+  default_build &&
+  mkdir -p /usr/share/$SPELL &&
+  cp utils/{icecmd,rami} /usr/share/$SPELL
+}

@@ -1,0 +1,31 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "231" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="pl${VERSION}src"
+ HOMEPAGE="http://ploticus.sourceforge.net"
+      URL="http://ploticus.sourceforge.net/download"
+      REQ=( "libpng gd zlib jpeg freetype" )
+#FRESHMEAT=""
+DESC="ploticus is for producing plots, charts, and graphics from data.
+ploticus is for producing plots, charts, and graphics from data.
+"
+
+patches() {
+  sed -i '126,130s:^:# :' src/Makefile &&
+  sed -i '162,166s:^# ::' src/Makefile &&
+  sed -i '193s:local/::' src/Makefile &&
+  sed -i '199s:^# ::' src/Makefile
+}
+
+build() {
+  patches         &&
+  make -C src     &&
+  prepare_install &&
+  make -C src install &&
+  mkdir -p /usr/lib/$SPELL &&
+  cp -r prefabs/* /usr/lib/$SPELL &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r pltestsuite/* /usr/share/$SPELL
+}

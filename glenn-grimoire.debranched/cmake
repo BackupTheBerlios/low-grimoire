@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.6" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.cmake.org"
+      URL="http://www.cmake.org/files/v2.0"
+      REQ=( "curl nucurses" )
+#FRESHMEAT=""
+DESC="Cross platform make system.
+Cross platform make system.
+"

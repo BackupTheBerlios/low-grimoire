@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5.3" )
+ CATEGORY="development"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://qingy.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "DirectFB x11"
+            "Linux-PAM:--enable-pam::enable PAM support"
+            "::--disable-shadow:use shadow for authentication"
+            "gpm:--enable-gpm-lock::enable support for gpm locking" )
+     OPTS="--enable-powerkeys --enable-screen-savers"
+#FRESHMEAT=""
+DESC="qingy is a replacement of getty.
+qingy is a replacement of getty. Written in C, it uses DirectFB to provide
+a fast, nice GUI without the overhead of the X Windows System. It allows
+the user to log in and start the session of his choice (text console, gnome
+, kde, wmaker, ...).
+"
