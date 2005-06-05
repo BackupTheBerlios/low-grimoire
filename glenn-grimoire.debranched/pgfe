@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4" )
+ CATEGORY="development database"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.agstools.com/pgfe"
+      URL="http://www.agstools.com"
+      REQ=( "gtk+-v1.2 postgresql" )
+#FRESHMEAT=""
+DESC="pgfe is a simple postgresql database front end written in gtk.
+pgfe is a simple postgresql database front end written in gtk.
+"
+
+build() {
+  sed -i 's:local/::' Makefile &&
+  make            &&
+  prepare_install &&
+  make install
+}

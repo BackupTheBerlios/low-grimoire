@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5" )
+ CATEGORY="audio-player"
+ATTRIBUTE="gnome"
+   SOURCE="sources/$SPELL/$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://www.imendio.com/projects/jamboree"
+      URL="$GNOME_URL"
+      REQ=( "libgnomeui gstreamer intltool GConf libglade esound perl"
+            "dbus:--enable-dbus=yes:--enable-dbus=no:enable dbus support" )
+#FRESHMEAT=""
+DESC="Jamboree is a music player for GNOME.
+Jamboree is a music player for GNOME. It has a strong \"keep it simple\"
+philosophy and focuses on being small and efficient.  Jamboree manages and
+plays MP3 and OGG music files through the use of GNOME's multimedia
+framework GStreamer. 
+"

@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0-6-28" )
+ CATEGORY="emulator"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION-src.zip"
+ HOMEPAGE="http://bcz.emu-france.com"
+      URL="http://bcz.emu-france.com"
+      REQ=( "SDL" )
+#FRESHMEAT=""
+DESC="Osmose is another Sega Master System emulator.
+Osmose is another Sega Master System emulator.
+"
+
+build() {
+  make            &&
+  prepare_install &&
+  install -o root -g root -m 755 osmose /usr/bin
+}
