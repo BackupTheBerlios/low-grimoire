@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.3" )
+ CATEGORY="development mail"
+ATTRIBUTE="gnome"
+ HOMEPAGE="http://gyrus.gnome.cl"
+   SOURCE="sources/$SPELL/${VERSION:0:3}/$SPELL-$VERSION"
+      URL="$GNOME_URL"
+      REQ=( "gnet libglade GConf libgnomeui" )
+ ESTIMATE="115"
+DESC="This application is a GNOME based tool for the administration of mailboxes in Cyrus-IMAP servers. 
+This application is a GNOME based tool for the administration of mailboxes
+in Cyrus-IMAP servers.  Currently it allows to control user quotas, create
+and remove mailboxes, and to manipulate the Access Control List for each
+mailbox; through a nice GUI. 
+"

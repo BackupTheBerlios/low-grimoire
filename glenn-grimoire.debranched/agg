@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "23" "22" )
+ CATEGORY="development graphic"
+ATTRIBUTE="library"
+ HOMEPAGE="http://antigrain.com"
+   SOURCE="$SPELL$VERSION.tar.gz"
+      URL="http://www.antigrain.com"
+      REQ=( "freetype x11"
+            "expat:::build svg viewer" )
+ ESTIMATE="115"
+DESC="A high quality rendering engine for C++.
+A high quality rendering engine for C++.
+"
+
+build() {
+  bash ./autogen.sh &&
+  make              &&
+  (if grep -q expat <<<$(augur opt.on agg); then
+    make -C svg/X11
+  fi)               &&
+  prepare_install   &&
+  make install      &&
+  (if grep -q expat <<<$(augur opt.on agg); then
+    install -o root -g root -m 755 svg/X11/svg_test /usr/bin
+  fi)               
+}
