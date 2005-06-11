@@ -1,0 +1,20 @@
+   VERSION=( "1.0.5" "1.0.4" "1.0.3" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.modruby.net"
+       URL="http://modruby.net/archive"
+       REQ="ruby"
+  ESTIMATE=14
+DESC="eRuby interprets a Ruby code embedded text file
+
+eRuby interprets a Ruby code embedded text file. For example, eRuby
+enables you to embed a Ruby code to a HTML file
+"
+
+build() {
+
+    ./configure.rb --prefix=/usr      &&
+    make			      &&
+    prepare_install                   &&
+    make install
+}

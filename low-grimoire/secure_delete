@@ -1,0 +1,26 @@
+   VERSION=( "3.1" )
+  CATEGORY="utility"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www.thc.org"
+       URL="http://www.thc.org/releases"
+#  EPROVIDE="mc"
+#    OPT[0]="Linux-PAM:::"
+ FRESHMEAT="secure delete"
+DESC="A set of utilities for secure delete
+
+Secure Delete is a set of three utilities to perform 
+the following: secure deletion of files, secure overwriting 
+of the unused diskspace on the harddisk, and secure overwriting 
+and cleaning of the swap filesystem.
+"
+
+build() {
+  sed -i "s:/local::" Makefile
+  sed -i "s:-O2:$CFLAGS:" Makefile
+  ./configure --prefix=/usr      		\
+              $OPTS 		 		&&
+  make				 		&&
+  prepare_install                		&&
+  make install
+
+}

@@ -1,0 +1,23 @@
+   VERSION=( "1.1.2" "1.1.1" "1.1.0" "1.0.7" "1.0.6" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.modruby.net"
+       URL="http://modruby.net/archive"
+       OPT="eruby:--enable-eruby::to enable eruby"
+       REQ="ruby httpd"
+  ESTIMATE=17
+ FRESHMEAT="mod_ruby"
+DESC="Embeds Ruby into the Apache Webserver
+
+mod_ruby embeds the Ruby interpreter into the Apache Web server, 
+allowing Ruby CGI scripts to be executed natively. These scripts 
+will start up much faster than without mod_ruby.
+"
+
+build() {
+
+    ./configure.rb --with-apxs        &&
+    make			      &&
+    prepare_install                   &&
+    make install
+}

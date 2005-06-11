@@ -1,0 +1,19 @@
+   VERSION=( "2.0.0" )
+  CATEGORY="utility library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.loveruby.net/en/amstd.html"
+       URL="http://www.loveruby.net/archive/amstd"
+       REQ="ruby"
+DESC="small utility collection
+
+A small utility collection for ruby. It includes :aliasing.rb,bench.rb,
+bug.rb,const.rb,d.rb,must.rb,protect.rb,rbparams.rb,rubyloader.rb,timer.rb
+and version.rb
+"
+
+build() {
+    ruby install.rb config --prefix=/usr    &&
+    ruby install.rb setup	      	    &&
+    prepare_install                   &&
+    ruby install.rb install
+}

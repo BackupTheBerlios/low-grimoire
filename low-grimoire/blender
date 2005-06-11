@@ -1,0 +1,30 @@
+  VERSION=( "2.31" "2.30" "2.28" "2.27" )
+ CATEGORY="graphic-editor"
+ATTRIBUTE="x11"
+   SOURCE="source/blender-$VERSION"
+      URL="http://download.blender.org"
+ HOMEPAGE="http://www.blender.org"
+      REQ=( "egenix-mx-base xfree86 openal openssl Python jpeg libpng zlib mozilla glut SDL"
+            "libogg:::for ogg support" )
+ ESTIMATE=2714
+FRESHMEAT="blender"
+DESC="blender:  a (now) free 3d modeler
+
+BF (Blender Foundation) Blender is the recently-freed 3d modeler for
+multiple operating systems.  It has bunches of features and a confusing
+interface (those are always good).
+"
+
+build() {
+
+  ./configure  --build=$BUILD        \
+               --prefix=/usr         \
+               --sysconfdir=/etc     \
+               --localstatedir=/var  \
+               --enable-shared       \
+               $OPTS                 &&
+  make                               &&
+  prepare_install                    &&
+  make    install
+
+}

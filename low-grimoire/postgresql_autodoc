@@ -1,0 +1,18 @@
+   VERSION=( "1.24" "1.23" "1.22" "1.21" "1.20" )
+  CATEGORY="db"
+ ATTRIBUTE="utility x11"
+  HOMEPAGE="http://www.rbt.ca/autodoc"
+       URL="http://www.rbt.ca/autodoc/binaries"
+       REQ=( "DBI DBD-Pg docbook-dtd HTML-Template perl postgresql"
+             "dia:::For outputting results to be used in dia" )
+ FRESHMEAT="Postgresql AutoDoc"
+  ESTIMATE=8
+DESC="Utility to output the schema of a database in XML
+
+Postgresql AutoDoc has the ability to output XML, which can be 
+loaded into Dia to create a UML diagram of the database 
+(complete with table relations and descriptive information), 
+an HTML form for further detailed information, GraphViz .dot output, 
+and Docbook 4.1 style SGML for inclusion with project documentation 
+as an appendix. It works on any 7.x PostgreSQL-based database.
+"

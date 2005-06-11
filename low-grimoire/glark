@@ -1,0 +1,22 @@
+   VERSION=( "1.7.0" "1.6.5" "1.6.4" )
+  CATEGORY="utility"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://glark.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="glark/glark-$VERSION"
+       REQ="ruby"
+ FRESHMEAT="glark"
+  ESTIMATE=6
+DESC="glark offers grep-like searching of text files, with very powerful, complex regular expressions
+
+glark offers grep-like searching of text files, with very powerful, complex regular expressions 
+(e.g., \"/foo\w+/ and /bar[^\d]*baz$/ within 4 lines of each other\"). It also highlights the 
+matches, displays context (preceding and succeeding lines), does case-insensitive matches, and 
+automatic exclusion of non-text files. It supports most options from the GNU version of grep
+"
+
+build() {
+    make			      &&
+    prepare_install                   &&
+    make install
+}

@@ -1,0 +1,40 @@
+  VERSION=( "1.0.1" "1.0.0" "0.36.1" "0.35.1" "0.24.2" )
+  CATEGORY="development"
+  ATTRIBUTE="console"
+  HOMEPAGE="http://subversion.tigris.org"
+  URL="http://subversion.tigris.org/tarballs"
+  REQ="httpd neon zlib openssl"
+  OPT="db:--with-berkeley-db::db support"
+  FRESHMEAT="subversion"
+  ESTIMATE=279
+DESC="Version Control rethought.
+
+  The goal of the Subversion project is to build a
+  version control system that is a compelling
+  replacement for CVS in the open source community.
+"
+
+build() {
+LDFLAGS="-L$BUILD_DIR/$BSPELL/libsvn_client/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_delta/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_fs/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_repos/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_ra_svn/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_ra/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_ra_dav/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_ra_local/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_subr/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_diff/.libs \
+        -L$BUILD_DIR/$BSPELL/libsvn_wc/.libs" \
+
+(
+
+  ./configure --prefix=/usr --with-apr=/usr/bin/apr-config --with-apr-util=/usr/bin/apu-config --with-zlib --with-ssl --with-neon=/usr	&&
+  export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+  make                                                                   &&
+  prepare_install                                                        &&
+  make install     
+  
+) 2>&1 > $C_FIFO
+
+}

@@ -1,0 +1,17 @@
+   VERSION=( "0.6.7" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://i.loveruby.net/en/strscan.html"
+       URL="http://i.loveruby.net/archive/strscan"
+       REQ="ruby"
+DESC="strscan is a library for fast scanning
+
+strscan is a library for fast scanning
+"
+
+build() {
+    ruby install.rb config --prefix=/usr    &&
+    ruby install.rb setup	      	    &&
+    prepare_install                   &&
+    ruby install.rb install
+}

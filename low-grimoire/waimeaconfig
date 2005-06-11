@@ -1,0 +1,12 @@
+   VERSION=( "0.0.3" )
+  CATEGORY="x11"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://waimeaconfig.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="waimeaconfig/waimeaconf-$VERSION"
+       REQ="waimea gtk+"
+DESC="A gui based program to configure Waimea
+
+waiconfig is a Waimea configuration program that configures Waimea 
+menus and the waimearc, based on fluxconf.
+"

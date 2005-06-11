@@ -1,0 +1,14 @@
+   VERSION=( "0.1.0" )
+  CATEGORY="utility security"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www.spine-group.org"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="lkl/lkl-$VERSION"
+  ESTIMATE="70"
+ FRESHMEAT="lkl"
+DESC="$SPELL is a userspace keylogger
+
+LKL is a userspace keylogger that runs under Linux on the x86 architechture. 
+LKL sniffs and logs everything that passes through the hardware keyboard port 
+(0x60). It translates keycodes to ASCII with a keymap file.
+"

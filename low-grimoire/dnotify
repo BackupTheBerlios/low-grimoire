@@ -1,0 +1,15 @@
+   VERSION=( "0.16.0" "0.15.0" "0.14.0" )
+  CATEGORY="utility"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www.student.lu.se/~nbi98oli/dnotify.html"
+       URL="http://www.student.lu.se/~nbi98oli/src"
+  ESTIMATE="70"
+# FRESHMEAT="lkl"
+DESC="$SPELL is a simple program that makes it possible to execute a command every time the contents of a specific directory change in linux
+
+dnotify is a simple program that makes it possible to execute a command every time the 
+contents of a specific directory change in linux. It is run from the command line and 
+takes two arguments: one or more directories to monitor and a command to execute whenever 
+a directory has changed. Options control what events to trigger on: 
+when a file was read in the directory, when one was created, deleted and so on. 
+"

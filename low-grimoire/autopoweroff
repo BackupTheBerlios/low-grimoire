@@ -1,0 +1,29 @@
+   VERSION=( "2.1.0" "2.0.0" "1.2.0" )
+  CATEGORY="shell"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://autopoweroff.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="autopoweroff/autopoweroff-$VERSION"
+  ESTIMATE=8
+ FRESHMEAT="autopoweroff"
+       REQ="Python perl gnome-libs"
+DESC=" Autopoweroff is a python script that is started at boot time, and which function is to shutdown the computer at a specific time, but only if some conditions are met
+
+Autopoweroff is a script that shuts down a computer at a specific time, 
+but only if some conditions are met. It works well on home router/firewalls 
+where the machine can be switched off every night and powered back up in 
+the morning. It can be configured to only shut down the server after any 
+computers which depend on the server for Internet access have been shut down.
+"
+
+build() {
+
+  ./configure  --prefix=/usr              \
+               --sysconfdir=/etc     	  \
+               --localstatedir=/var       \
+	       --enable-install-spreaded  \
+               $OPTS                 &&
+  prepare_install  &&
+  make    install  
+   
+}

@@ -1,0 +1,14 @@
+   VERSION=( "1.1.12" )
+  CATEGORY="window-manager"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://www.qvwm.org"
+       URL="http://www.qvwm.org/archive/qvwm"
+       REQ="imlib"
+ FRESHMEAT="Qvwm"
+  ESTIMATE="187"
+DESC="Windows 95 like window manager for the X Window System
+
+Qvwm is a Windows 95 like window manager for the X Window System. 
+It allows Windows 95/NT users to use the X Window System without a hassle 
+and X Window System users to use Windows 95 without a hassle
+"

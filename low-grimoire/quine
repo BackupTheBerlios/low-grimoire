@@ -1,0 +1,12 @@
+   VERSION=( "1.1.0" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.excessus.demon.co.uk/misc-hacks/#quine"
+       URL="http://www.excessus.demon.co.uk/misc-hacks"
+  ESTIMATE=30
+# FRESHMEAT=""
+DESC="Quine is a kit which allows you to write your own quines
+
+Programs which print their own source code are called quines. 
+Quine is a kit which allows you to write your own quines.
+"

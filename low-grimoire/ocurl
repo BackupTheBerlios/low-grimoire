@@ -1,0 +1,12 @@
+   VERSION=( "0.1.6" "0.15"  "0.14" "0.13" "0.12" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+    SOURCE="ocurl/ocurl-$VERSION"
+  HOMEPAGE="http://curl.haxx.se/libcurl/ocaml/"
+       URL="$SOURCEFORGE_URL"
+       REQ="ocaml curl"
+  ESTIMATE=43
+DESC="o'caml's binding to libcurl
+
+This library provides an interface to curl's easy functions from ocaml.
+"

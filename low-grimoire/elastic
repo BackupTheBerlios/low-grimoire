@@ -1,0 +1,13 @@
+   VERSION=( "0.0.35" )
+  CATEGORY="interpreter"
+ ATTRIBUTE="client console"
+  HOMEPAGE="http://www.elasticworld.org"
+       URL="http://www.elasticworld.org"
+  ESTIMATE="953"
+ FRESHMEAT="elastiC"
+DESC="elastiC is a high-level object-oriented interpreted language.
+
+elastiC has been strongly influenced by C, Smalltalk, Scheme and Python 
+and tries to merge the best characteristics of all these languages, 
+while still coherently maintaining its unique personality.
+"

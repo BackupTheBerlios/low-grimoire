@@ -1,0 +1,18 @@
+  VERSION=( "1.6.31" "1.6.30" "1.6.29" "1.6.28" "1.6.27" "1.6.26" "1.6.25" )
+ CATEGORY="utility"
+ATTRIBUTE="console"
+      URL="http://www.miek.nl/projects/hdup16/previous"
+ HOMEPAGE="http://miek.nl/projects/hdup16/hdup16.html"
+      REQ="bzip2 console-tools gnupg mcrypt openssh"
+FRESHMEAT="hdup"  
+ ESTIMATE=18 
+DESC="hdup is used to back up a filesystem.
+
+hdup is used to back up a filesystem. Features include 
+encryption of the archive (with mcrypt), compression 
+of the archive (bzip/gzip/none), the ability to transfer 
+the archive to a remote host or restoring from a remote 
+host (with ssh), the ability to split up archives, 
+and no obscure archive format (it is a normal compressed 
+tar file).
+"

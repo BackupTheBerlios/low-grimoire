@@ -1,0 +1,18 @@
+   VERSION=( "1.0.2" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.brain-tokyo.jp/research/amrita/index.html"
+       URL="http://www.brain-tokyo.jp/research/amrita"
+       REQ="ruby strscan"
+  ESTIMATE="5"
+DESC="Amrita is an html/xhtml template library for Ruby
+
+Amrita is an html/xhtml template library for Ruby. It makes html documents from a template and model data
+"
+
+build() {
+    sed -i "s:local::" Makefile
+    make		      &&
+    prepare_install           &&
+    make install
+}

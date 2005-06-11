@@ -1,0 +1,17 @@
+   VERSION=( "0.1.3" "0.1.1" "0.1.0beta4" )
+  CATEGORY="interpreter"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://web.tiscali.it/no-redirect-tiscali/iguana.lang/index.html"
+       URL="http://web.tiscali.it/no-redirect-tiscali/iguana.lang"
+    SOURCE="iguana/Iguana-$VERSION.tar.gz"
+       REQ="bison flex"
+       OPT="readline:--with-readline:--without-readline:for readline support"
+  ESTIMATE="488"
+ FRESHMEAT="iguana"
+DESC="Iguana is an interpreted, interactive, computation-oriented scripting language
+
+Iguana is an interpreted, interactive, computation-oriented scripting language 
+that combines high-level data structures with a very simple syntax. Iguana's 
+basic power can be extended with your own modules written in C or C++. Iguana 
+is also adaptable as an extension language for existing applications.
+"

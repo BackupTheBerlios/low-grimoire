@@ -1,0 +1,31 @@
+   VERSION=( "1.24" "1.23" "1.21" "1.20" "1.19" "1.15" "1.10" "1.09" )
+  CATEGORY="window-manager"
+ ATTRIBUTE="x11"
+  HOMEPAGE="http://www.nickgravgaard.com/windowlab"
+       URL="http://www.nickgravgaard.com"
+    SOURCE="windowlab/windowlab-$VERSION.tar"
+ FRESHMEAT="WindowLab"
+  ESTIMATE=14
+DESC="WindowLab is a small and simple window manager of novel design
+
+Windowlab has click-to-focus, shares its window depth policy with the Amiga, 
+and has a window resizing/reshaping method similar to that of 8½ from 
+Plan 9. WindowLab maintains the illusion of direct manipulation by 
+constraining the mouse pointer when appropriate, ie when a window 
+cannot be dragged any further in one direction.
+"
+
+build() {
+#cd $BUILD_DIR				&&
+#tar xf $( guess_filename $SOURCE )      &&
+#cd windowlab-$VERSION 
+
+  sed -i "s:-02:${CFLAGS}:" Makefile
+#  sed -i "s:cp -i menurc.sample $(CFGDIR)/menurc:cp menurc.sample 
+#$(CFGDIR)/menurc: " Makefile
+
+  make             &&
+  prepare_install  &&
+  echo "y" | make    install  
+   
+}

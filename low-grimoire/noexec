@@ -1,0 +1,15 @@
+   VERSION=( "1.1.0" "1.0.0" )
+  CATEGORY="security library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://noexec.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="noexec/noexec-$VERSION"
+  ESTIMATE="108"
+ FRESHMEAT="noexec"
+DESC="noexec is a package for preventing a process from exec'ing another process.
+
+noexec is a package for preventing a process from exec'ing 
+another process. It can be a useful security measure to prevent 
+a user from escaping to a shell. It may be able to prevent some 
+kinds of CGI exploits
+"

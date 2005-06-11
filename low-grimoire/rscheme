@@ -1,0 +1,25 @@
+  VERSION=( "0.7.3.2" )
+  CATEGORY="interpreter"
+  ATTRIBUTE="console"
+  HOMEPAGE="http://www.rscheme.org"
+  URL="$SOURCEFORGE_URL"
+  SOURCE="rscheme/rs-$VERSION"
+  FRESHMEAT="rscheme"
+  ESTIMATE=4925
+DESC="An object-oriented, extended Scheme implementation.
+
+  RScheme is an object-oriented, extended Scheme
+  "
+
+build() {
+
+  make stage1
+  cd src
+  ./configure  --prefix=/usr         \
+               --sysconfdir=/etc     \
+               --localstatedir=/var  \
+               $OPTS                 &&
+  prepare_install  &&
+  make    all  
+   
+}

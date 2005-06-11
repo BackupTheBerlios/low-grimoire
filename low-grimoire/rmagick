@@ -1,0 +1,20 @@
+   VERSION=( "1.2.2" "1.2.1" )
+  CATEGORY="library"
+ ATTRIBUTE="x11 development"
+  HOMEPAGE="http://home.nc.rr.com/rmagick"
+       URL="http://home.nc.rr.com"
+    SOURCE="rmagick/RMagick-$VERSION"
+       REQ="ghostscript ImageMagick ruby"
+DESC="interface between the Ruby programming language and the ImageMagick
+
+RMagick is an interface between the Ruby programming 
+language and the ImageMagickTM image processing library
+"
+
+build() {
+    ./configure --prefix=/usr	            				      &&
+    ruby install.rb config --prefix=/usr --doc-dir=/usr/share/doc/$(BSPELL)   &&
+    ruby install.rb setup	      	    				      &&
+    prepare_install                   					      &&
+    ruby install.rb install
+}

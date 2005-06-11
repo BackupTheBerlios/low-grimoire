@@ -1,0 +1,17 @@
+   VERSION=( "1.4.3" )
+  CATEGORY="network utility"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://sntop.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="sntop/sntop-$VERSION"
+       OPT="fping:::support for fping"
+       REQ="ncurses"
+ FRESHMEAT="sntop"
+DESC="Simple network top (sntop) is a curses-based console utility
+
+Simple network top (sntop) is a curses-based console utility in the spirit of top that 
+polls network hosts at a regular interval to determine their connectivity and displays 
+the results in a pretty format. Advanced features are supported, such as automatic HTML 
+generation of results, secure terminal mode, execution of an external file on connectivity 
+changes, a daemon mode, and user/system configure files.
+"

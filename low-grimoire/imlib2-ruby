@@ -1,0 +1,21 @@
+   VERSION=( "0.4.2" "0.4.1" )
+  CATEGORY="development"
+ ATTRIBUTE="library"
+    SOURCE="download/$SPELL-$VERSION"
+       URL="http://www.pablotron.org"
+  HOMEPAGE="http://www.pablotron.org"
+       REQ="imlib2 ruby"
+  ESTIMATE="2"
+DESC="Extension for ruby to imlib2
+
+An extension for ruby to access imlib2 to do some image processing
+"
+
+build() {
+
+  ruby ./extconf.rb &&
+  make		    &&
+  prepare_install   &&
+  make install
+
+}

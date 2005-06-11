@@ -1,0 +1,22 @@
+   VERSION=( "0.47" "0.46" "0.45_01" "0.45" "0.44" "0.43" "0.42" "0.41" "0.40" "0.38" "0.37" )
+  CATEGORY="library"
+ ATTRIBUTE="development"
+  HOMEPAGE="http://www.net-dns.org"
+       URL="http://www.net-dns.org/download"
+       REQ="perl"
+  ESTIMATE=117
+DESC="Net::DNS is a Perl interface to the DNS resolver
+
+Net::DNS is a DNS resolver implemented in Perl.  It allows the
+programmer to perform nearly any type of DNS query from a Perl
+script.  For details and examples, please read the Net::DNS manual
+page.
+"
+
+build() {
+
+    echo "y" | perl Makefile.PL		      &&
+    make			      &&
+    prepare_install                   &&
+    make install
+}

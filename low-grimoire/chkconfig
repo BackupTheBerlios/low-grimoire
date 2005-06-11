@@ -1,0 +1,36 @@
+  VERSION=( "1.2.24h" )
+  CATEGORY="network library"
+  ATTRIBUTE="server development"
+  HOMEPAGE="http://www.fastcoder.net/~thumper/software/sysadmin/chkconfig"
+  URL="http://www.fastcoder.net/~thumper/downloads/chkconfig"
+  FRESHMEAT="chkconfig"
+  REQ="popt"
+  OPT="xinetd:--with-xinetd-dir=/etc/xinetd.d::xinetd support"
+  ESTIMATE=135
+DESC="manage /etc/rc.d symbolic links
+
+  chkconfig is a tool to simplify management of the symbolic links in /etc/rc.d 
+  under Linux. This version is based on the latest release of chkconfig from 
+  RedHat-7.2, adding an autoconf-style configure script, to simplify porting to 
+  other distributions/platforms.
+  "
+
+build() {
+
+  ./configure  --prefix=/usr                         \
+               --bindir=/usr/bin                     \
+	       --sbindir=/sbin                       \
+	       --datadir=/usr/share                  \
+	       --sysconfdir=/etc                     \
+	       --mandir=/usr/share/man               \
+	       --enable-mandatory-headers            \
+	       --with-init-dir=/etc/init.d           \
+	       --with-rc-dir=/etc                    \
+               --enable-mandatory-headers            \
+	       $OPTS       &&
+	       
+  make                                               &&
+  prepare_install                                    &&
+  make    install
+  
+}

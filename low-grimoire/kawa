@@ -1,0 +1,18 @@
+   VERSION=( "1.7.90" "1.7" "1.7beta2" )
+  CATEGORY="interpreter"
+ ATTRIBUTE="console"
+  HOMEPAGE="http://www.gnu.org/software/kawa"
+       URL="ftp://ftp.gnu.org/pub/gnu/kawa"
+       REQ="j2sdk"
+  ESTIMATE=276
+ FRESHMEAT="kawa"
+DESC="The Kawa Scheme System is a full Scheme implementation, completely written in Java
+
+The Kawa Scheme System is a full Scheme implementation, completely written in Java. 
+Scheme functions and files are automatically compiled into Java byte-codes. Kawa 
+does some optimizations, and the compiled code runs at a reasonable speed. It 
+provides the usual read-eval-print loop, as well as batch modes. The Kawa 
+compilation framework is also useful for implementing other languages on top 
+of JVM. There is active development of XQuery (the XML query language), and less 
+active development of Emacs Lisp, Common Lisp, and EcmaScript.
+"
