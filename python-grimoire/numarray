@@ -1,0 +1,21 @@
+   VERSION=( "0.9" "0.8.2" "0.8.1" "0.8" "0.6.2" "0.6.1" "0.6" "0.4" )
+    IGNORE="0\.5"
+  CATEGORY="utility python"
+ ATTRIBUTE="library"
+    SOURCE="numpy/numarray-$VERSION.tar.gz"
+       URL="$SOURCEFORGE_URL"
+  HOMEPAGE="http://sourceforge.net/projects/numpy"
+       REQ="Python"
+DESC="Numerical Python adds a fast, compact, multidimensional array language facility to Python.
+
+Numarray is a rewrite of Numeric.  It will replace Numeric 
+as soon as possible. At that point Numeric releases will be 
+frozen and support of it by the present maintainers will cease.
+"
+
+build() {
+
+  prepare_install        &&
+  python setup.py install
+
+}

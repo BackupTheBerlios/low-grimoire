@@ -1,0 +1,20 @@
+   VERSION=( "1.2" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.andrewchatham.com/pyogg"
+       URL="http://www.andrewchatham.com/pyogg/download"
+       REQ="Python libvorbis"
+# FRESHMEAT="pyvorbis"
+DESC="Binding for python to the vorbis libraries
+
+Right now you can use these bindings to play ogg/vorbis files with Python, so you can pretty easily write 
+a 5-line ogg player.
+"
+
+build() {
+
+    python config_unix.py --prefix /usr		&&
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install --prefix /usr
+}

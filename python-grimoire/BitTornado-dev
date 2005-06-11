@@ -1,0 +1,3 @@
+inherit BitTornado
+ VERSION=( "0.3.2" )
+  SOURCE="$SPELL-$VERSION"

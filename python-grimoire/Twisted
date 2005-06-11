@@ -1,0 +1,25 @@
+  VERSION=( "1.3.0" "1.1.1" "1.0.6" )
+  CATEGORY="net ftp library python"
+  ATTRIBUTE="development"
+  HOMEPAGE="http://twistedmatrix.com"
+  URL="http://twistedmatrix.com/downloads"
+  FRESHMEAT="twisted"
+  ESTIMATE=586
+DESC="An event-based networking framework for Internet applications.
+
+   Twisted is an event-based framework for Internet applications. 
+   It includes a Web server, an SMTP/POP3 server, a telnet server, 
+   an SSH server, an IRC server, a DNS server, a generic client/server 
+   pair for remote object access, and APIs for creating new protocols. 
+   It supports integration with GTK+, GTK+ 2, Qt, Tkinter, wxPython, 
+   and Win32 event loops. It also supports TCP, SSL, UDP, Unix sockets, 
+   multicast, and serial ports.
+"
+
+build() {
+
+  python setup.py build             &&
+  prepare_install  		    &&
+  python setup.py install  
+   
+}

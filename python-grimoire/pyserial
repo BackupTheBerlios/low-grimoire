@@ -1,0 +1,27 @@
+   VERSION=( "2.1" "2.0" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://pyserial.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="pyserial/pyserial-$VERSION.zip"
+       REQ="Python"
+  ESTIMATE=15
+DESC="pyserial encapsulates the access for the serial port.
+
+This module encapsulates the access for the serial port. 
+It provides backends for Python running on Windows, Linux, 
+BSD (possibly any POSIX compilant system) and Jython. The 
+module named \"serial\" automatically selects the appropriate backend.
+"
+
+build() {
+SP="pyserial-$VERSION"
+
+if [ -f $SP.zip ]; then
+        unzip $SP
+fi 
+cd $SP
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

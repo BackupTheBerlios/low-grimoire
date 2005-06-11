@@ -1,0 +1,23 @@
+   VERSION=( "0.2.1" "0.1.5.5.1" "0.1.5.2" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.divmod.org"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="lupy/Lupy-$VERSION"
+       REQ="Python"
+  ESTIMATE=92
+ FRESHMEAT="lupy"
+DESC="Lupy is a full-text indexer for Python.( A port of lucene )
+
+Lupy is a full-text indexer for Python. It is a port of Jakarta 
+Lucene to Python, and reads, writes, and searches indexes in 
+Lucene binary format. Like Lucene, it is sophisticated, scalable, 
+and Unicode aware.
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

@@ -1,0 +1,29 @@
+   VERSION=( "1.2" "1.1" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+    SOURCE="/pmw/Pmw.$VERSION.tar.gz"
+       URL="$SOURCEFORGE_URL"
+  HOMEPAGE="http://pmw.sourceforge.net"
+       REQ="Python"
+  ESTIMATE=5
+ FRESHMEAT="Pmw"
+DESC="Pmw is a toolkit for building high-level compound widgets in Python using the Tkinter module
+
+It consists of a set of base classes and a library of 
+flexible and extensible megawidgets built on this 
+foundation. These megawidgets include notebooks, 
+comboboxes, selection widgets, paned widgets, scrolled 
+widgets and dialog windows.
+"
+
+build() {
+  prepare_install   &&      
+  mkdir -p /usr/lib/python$( augur version Python | cut -d. -f 1-2 )/site-packages/Pmw 
+  cp -av * /usr/lib/python$( augur version Python | cut -d. -f 1-2 )/site-packages/Pmw 
+
+}
+
+post_remove() {
+rm -rf /usr/lib/python2.2/site-packages/Pmw
+
+}

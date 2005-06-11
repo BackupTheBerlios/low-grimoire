@@ -1,0 +1,27 @@
+   VERSION=( "2.0.1a3" "2.0.0" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://simpleparse.sf.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="simpleparse/SimpleParse-$VERSION"
+       REQ="egenix-mx-base"
+  ESTIMATE=74
+DESC="simpleparse is a BSD-licensed Python package providing a simple parser generator
+
+SimpleParse is a BSD-licensed Python package providing a simple parser 
+generator for use with the mxTextTools text-tagging engine. SimpleParse 
+allows you to generate tagging tables for use with the text-tagging 
+engine directly from your EBNF grammar.
+"
+
+build() {
+SP="SimpleParse-$VERSION"
+
+if [ -f $SP.zip ]; then
+	unzip $SP
+fi 
+cd $SP
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install --prefix /usr
+}

@@ -1,0 +1,21 @@
+   VERSION=( "7.13.2" "7.13.1" "7.12.1" "7.11.1" "7.10.8" "7.10.6" "7.10.5" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://pycurl.sourceforge.net"
+       URL="http://pycurl.sourceforge.net/download"
+       REQ="Python curl"
+  ESTIMATE=18
+ FRESHMEAT="pycurl"
+DESC="PycURL is a Python interface to libcurl
+
+PycURL is a Python interface to libcurl. PycURL can be used to 
+fetch objects identified by a URL from a Python program, similar 
+to the urllib Python module.
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

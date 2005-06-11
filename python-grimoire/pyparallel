@@ -1,0 +1,24 @@
+   VERSION=( "0.1" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://pyserial.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="pyserial/pyparallel-$VERSION.zip"
+       REQ="Python"
+  ESTIMATE=15
+DESC="pyparallel encapsulates the access for the parallel port.
+
+This module encapsulates the access for the parallel port. 
+"
+
+build() {
+SP="pyparallel-$VERSION"
+
+if [ -f $SP.zip ]; then
+        unzip $SP
+fi 
+cd $SP
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

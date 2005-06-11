@@ -1,0 +1,19 @@
+   VERSION=( "3.4b5" "3.4b3" )
+  CATEGORY="web python"
+ ATTRIBUTE="server"
+  HOMEPAGE="http://skunkweb.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="/skunkweb/skunkweb-$VERSION"
+       REQ="Python"
+  ESTIMATE=74
+ FRESHMEAT="SkunkWeb"
+DESC="An extensible, scalable, easy to use Web application server written in Python
+
+SkunkWeb is a scalable, extensible, and easy-to-use Web application server written 
+in Python. It is designed for handling both high-traffic sites and smaller sites. 
+Its features include a powerful component model and an elegant templating language 
+that encourages component-based design, highly configurable caching 
+(on disk and/or in memory) of compiled templates and component output, 
+message catalog support for i18n, and remote component calls. It can be used with 
+Apache via an Apache module, or it can serve HTTP requests directly.
+"

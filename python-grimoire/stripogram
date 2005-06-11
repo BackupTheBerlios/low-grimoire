@@ -1,0 +1,20 @@
+   VERSION=( "1-4" )
+  CATEGORY="python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.zope.org/Members/chrisw/StripOGram"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="squishdot/stripogram-$VERSION.tgz"
+       REQ="Python"
+  ESTIMATE=15
+DESC="stripogram is a library for converting HTML to Plain Text.
+
+This is a library for converting HTML to Plain Text and stripping 
+specified tags from HTML.
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

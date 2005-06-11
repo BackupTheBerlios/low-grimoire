@@ -1,0 +1,27 @@
+   VERSION=( "1.1" "1.0" )
+  CATEGORY="documentation python"
+ ATTRIBUTE="data"
+  HOMEPAGE="http://doclite.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="doclite/doclite-$VERSION"
+       REQ="Python"
+  ESTIMATE="4"
+ FRESHMEAT="DocLite"
+DESC="DocLite is a simple documentation authoring system. It produces multi-page HTML output in a style similar to that found in the Linux HOTWTOs or other DocBook-created documents
+
+DocLite is a simple documentation authoring system. It produces multi-page HTML output 
+in a style similar to that found in the Linux HOTWTOs or other DocBook-created documents. 
+DocLite processes a single XML file into a number of separate HTML pages, and it creates 
+a contents page that contains links to the various topics within each page. The idea is 
+to produce usable documentation with a minimum of hassle.
+"
+
+build() {
+
+    
+    prepare_install                 			&&
+    mkdir -p /usr/doc/doclite				&&
+    install doclite.py /usr/bin				&&
+    install COPYING README VERSION /usr/doc/doclite	&&
+    cp -a $BUILD_DIR/docs	/usr/doc/doclite
+}

@@ -1,0 +1,18 @@
+   VERSION=( "23.1" )
+  CATEGORY="library"
+ ATTRIBUTE="library python"
+    SOURCE="numpy/$SPELL-$VERSION"
+  HOMEPAGE="http://www.pfdubois.com/numpy/"
+       URL="$SOURCEFORGE_URL"
+       REQ="Python"
+DESC="Numeric adds a fast, compact, multidimensional array language facility to Python.
+
+Numerical Python adds a fast, compact, multidimensional array language facility to Python.
+"
+
+build() {
+python  setup.py build     &&
+prepare_install            &&
+python  setup.py install
+
+}

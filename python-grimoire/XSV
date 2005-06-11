@@ -1,0 +1,23 @@
+   VERSION=( "2.10" "2.7" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.ltg.ed.ac.uk/~ht/xsv-status.html"
+       URL="ftp://ftp.cogsci.ed.ac.uk/pub/XSV"
+       REQ="Python"
+  ESTIMATE=103
+DESC="xsv is a python xml validator
+
+XSV (XML Schema Validator) is an open source (GPLed) work-in-progress 
+attempt at a conformant schema-aware processor, as defined by XML Schema 
+Part 1: Structures, May 2, 2001 (REC) version. It has been developed at 
+the Language Technology Group of the Human Communication Research Centre 
+in the Division of Informatics at the University of Edinburgh, with support 
+for one of us (Thompson) from the World Wide Web Consortium. 
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

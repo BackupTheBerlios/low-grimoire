@@ -1,0 +1,22 @@
+   VERSION=( "0.99" "0.98" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="https://sourceforge.net/projects/pexpect"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="/pexpect/pexpect-$VERSION"
+       REQ="Python"
+  ESTIMATE=5
+ FRESHMEAT="pexpect"
+DESC="Pexpect is a Python Expect-like module. It spawns child applications, controls them, and responds to expected patterns in their output
+
+Pexpect is a Python Expect-like module. It spawns child applications,
+controls them, and responds to expected patterns in their output. 
+It can be used for automating interactive applications such as ssh, 
+ftp, passwd, telnet, etc.
+"
+
+build() {
+
+    prepare_install                 		&&
+    python setup.py install
+}

@@ -1,0 +1,20 @@
+   VERSION=( "0.4" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://pylibpcap.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="pylibpcap/pylibpcap-$VERSION"
+       REQ="Python libpcap"
+  ESTIMATE="28"
+# FRESHMEAT=""
+DESC="python module for libpcap
+
+python module for libpcap
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

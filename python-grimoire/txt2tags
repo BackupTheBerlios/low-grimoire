@@ -1,0 +1,25 @@
+   VERSION=( "2.2" "1.7" "1.6" "1.5" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://txt2tags.sourceforge.net"
+       URL="http://txt2tags.sourceforge.net/src"
+       REQ="Python"
+  ESTIMATE=5
+ FRESHMEAT="txt2tags"
+DESC="txt2tags is a format conversion tool written in Python
+
+txt2tags is a format conversion tool written in Python that generates 
+HTML, SGML, LaTeX, man page, MoinMoin, Magic Point, and PageMaker documents 
+from a plain text file with little marks. Different from other conversion tools, 
+it is generic, and not target-specific (as a txt2html tool). This way, you 
+can keep just one source text file and one tool for all your formatting needs
+"
+
+build() {
+
+    
+    prepare_install                 							   &&
+    mkdir -p /usr/doc/txt2tags			
+    mv txt2tags /usr/bin								   &&
+    cp -av * /usr/doc/txt2tags    
+}

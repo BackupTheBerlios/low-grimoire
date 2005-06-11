@@ -1,0 +1,28 @@
+    VERSION=( "0.3.2" "0.3.1" "0.2.3-1" )
+   CATEGORY="development python"
+  ATTRIBUTE="library x11"
+        URL="$SOURCEFORGE_URL"
+     SOURCE="wxglade/$SPELL-$VERSION"
+   HOMEPAGE="http://wxglade.sourceforge.net"
+        REQ="wxPython"
+   ESTIMATE=4
+DESC="wxGlade is a GUI designer for wxPython/wxWindows
+
+wxGlade is a GUI designer written in Python with the popular 
+GUI toolkit wxPython, that helps you create wxWindows/wxPython 
+user interfaces. At the moment it can generate Python, C++ and 
+XRC (wxWindows' XML resources) code.As you can guess by the name, 
+its model is Glade, the famous GTK+/GNOME GUI builder, with which 
+wxGlade shares the philosophy and the look & feel (but not a line of code).
+It is not (and will never be) a full featured IDE, but simply a 
+\"designer\": the generated code does nothing apart from displaying 
+the created widgets. If you are looking for a complete IDE, maybe 
+Boa Constructor or PythonCard is the right tool.
+"
+
+build() {
+  prepare_install                  &&
+  mkdir -p /usr/lib/wxGlade        &&
+  cp -rv * /usr/lib/wxGlade        &&
+  echo -e "#!/bin/sh\npython /usr/lib/wxGlade/wxglade.py" > /usr/bin/wxglade
+}

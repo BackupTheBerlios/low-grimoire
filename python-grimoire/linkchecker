@@ -1,0 +1,26 @@
+   VERSION=( "2.1" "1.12.3" "1.12.2" "1.12.1" "1.12.0" "1.10.3" "1.10.2" "1.9.3" "1.8.19" "1.8.18" "1.5.2" )
+  CATEGORY="net development python"
+ ATTRIBUTE="library utility"
+  HOMEPAGE="http://linkchecker.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="linkchecker/linkchecker-$VERSION"
+       REQ="Python"
+  ESTIMATE=87
+ FRESHMEAT="linkchecker"
+DESC="LinkChecker checks HTML documents for broken links
+
+LinkChecker checks HTML documents for broken links. 
+It features recursion, robots.txt exclusion protocol support, 
+HTTP proxy support, i18n support, multithreading, regular expression 
+filtering rules for links, and user/password checking for authorized 
+pages. Output can be colored or normal text, HTML, SQL, CSV, or a 
+sitemap graph in GML or XML format. Supported link types are HTTP/1.1 
+and 1.0, HTTPS, FTP, mailto:, news:, nntp:, Gopher, Telnet, and local files.
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

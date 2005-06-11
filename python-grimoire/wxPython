@@ -1,0 +1,53 @@
+  VERSION=( "2.4.2.4" "2.4.1.2" "2.4.0.7p1" "2.4.0.7" )
+ CATEGORY="library"
+ATTRIBUTE="development x11"
+      URL="$SOURCEFORGE_URL"
+   SOURCE="wxpython/wxPythonSrc-$VERSION"
+ HOMEPAGE="http://www.wxpython.org"
+      REQ=( "Python swig"
+            "gtk+,v1.2:--enable-gtk::Install wxGTK against gtk+,v1.2"
+            "gtk+:--enable-gtk2::Install wxGTK against gtk+" )
+DESC="wxPython is a GUI toolkit for the Python
+
+wxPython is a GUI toolkit for the Python programming language. 
+It allows Python programmers to create programs with a robust, 
+highly functional graphical user interface, simply and easily. 
+It is implemented as a Python extension module (native code) 
+that wraps the popular wxWindows cross platform GUI library, 
+which is written in C++.
+"
+
+build() {
+  export WPREF="/usr/lib/wxPython"
+#  export  PATH="/opt/bison/1.35/bin:$PATH"
+  if echo $OPTS | grep gtk2 >/dev/null
+                        then
+                            GTK_OPTION="WXPORT=gtk2 UNICODE=1"
+                            OPTS="$OPTS --enable-unicode"
+                        else 
+                            GTK_OPTION="WXPORT=gtk"
+  fi
+
+  OPTS="$OPTS --x-libraries=/usr/X11R6/lib --x-includes=/usr/X11R6/include"
+
+#  mkdir build						       &&
+  cd build						       &&
+  ../configure       --prefix=$WPREF    			\
+		     --enable-rpath=$WXPREF/lib			\
+                     --with-opengl                              \
+		     --enable-geometry 				\
+                     --enable-optimise 				\
+                     --enable-debug_flag 			\
+                     --enable-zipstream       			\
+		     $OPTS
+  		     		    
+  make LDFLAGS_GL="$LDFLAGS,-L/usr/X11R6/lib"                  &&
+
+  prepare_install                                              &&
+
+  make install                                                 &&
+
+  cd $BUILD_DIR/wxPython                                       &&
+  python setup.py WX_CONFIG=/usr/lib/wxPython/bin/wx-config $GTK_OPTION install
+
+}

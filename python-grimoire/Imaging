@@ -1,0 +1,54 @@
+   VERSION=( "1.1.4" )
+  CATEGORY="library python"
+ ATTRIBUTE="development python x11"
+  HOMEPAGE="http://www.pythonware.com/products/pil"
+       URL="http://effbot.org/downloads"
+       REQ=( "Python jpeg zlib"
+#             "freetype:::TrueType/OpenType support"
+             "jpeg:::to provide JPEG support"
+             "zlib:::to provide PNG and ZLib support"
+             "freetype:::to provide TrueType/OpenType font support" )
+  ESTIMATE=165
+ FRESHMEAT="pil"
+DESC="The Python Imaging Library (PIL) adds image processing capabilities to your Python interpreter
+
+The Python Imaging Library (PIL) adds image processing capabilities to your Python 
+interpreter. This library supports many file formats, and provides powerful image 
+processing and graphics capabilities.
+"
+
+build() {
+##(
+##
+##  HEADER_PATH=/usr/include/python-extensions
+##
+##  cd libImaging
+##  ./configure  --prefix=/usr         \
+##               --sysconfdir=/etc     \
+##               --localstatedir=/var  \
+##               $OPTS                 &&
+##  make             		&&
+##  cd ..
+##  python setup.py	build		&&
+##  prepare_install  			&&
+##  mkdir -p	$HEADER_PATH		&&
+##  cp	libImaging/ImConfig.h		\
+##	libImaging/ImPlatform.h		\
+##	libImaging/Imaging.h		\
+##	$HEADER_PATH			&&
+##  python setup.py	install
+##   
+##) > $C_FIFO 2>&1
+
+## patch submitted by ArielMT
+
+sed -i "s:<freetype/freetype.h>:<ft2build.h>\n#include FT_FREETYPE_H:" _imagingft.c  &&
+cd libImaging            &&
+./configure              &&
+make                     &&
+cd ..                    &&
+python setup.py build    &&
+prepare_install          &&
+python setup.py install  &&
+install -o root -g root -m 644 libImaging/*.h /usr/include/python$( augur version Python | cut -d. -f 1-2 )/
+}

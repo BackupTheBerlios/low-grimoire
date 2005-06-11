@@ -1,0 +1,31 @@
+    VERSION=( "2.0.1.04" )
+   CATEGORY="library"
+  ATTRIBUTE="library python x11"
+     SOURCE="pyopengl/$SPELL-$VERSION.zip"
+   HOMEPAGE="http://pyopengl.sourceforge.net"
+        URL="$SOURCEFORGE_URL"
+        REQ="Python glut tcl tk Numeric"
+  FRESHMEAT="pyopengl"
+SOURCEFORGE="pyopengl"
+#   ESTIMATE="785"
+DESC="$SPELL is OpenGL bindings to Python
+
+PyOpenGL is the cross platform Python binding to OpenGL and related APIs.
+The binding is created using the SWIG wrapper generator, and is provided under
+an extremely liberal BSD-style Open-Source licenses.
+
+PyOpenGL includes support for OpenGL v1.0, OpenGL v1.1, GLU, GLUT v3.7, GLE 3,
+WGL 4, and Togl (Tk OpenGL widget).  It also includes supports for dozens of
+extensions (where supported in the underlying implementation).
+
+PyOpenGL is interoperable with a large number of external GUI libraries for
+Python including (Tkinter, wxPython, FxPy, PyGame, and Qt). 
+"
+
+build() {
+cd $BUILD_DIR/PyOpenGL-2.0.1.04     &&
+python setup.py build               &&
+prepare_install                     &&
+python setup.py install -q
+
+}

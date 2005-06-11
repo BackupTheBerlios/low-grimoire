@@ -1,0 +1,22 @@
+   VERSION=( "0.2.4" "0.2" )
+  CATEGORY="mail python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://reverend.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="reverend/Reverend-$VERSION"
+       REQ="Python"
+  ESTIMATE=21
+ FRESHMEAT="Reverend"
+DESC="Reverend is a general purpose Bayesian classifier written in Python
+
+Reverend is a general purpose Bayesian classifier written in Python. 
+It is designed to be easily adapted for your application and is not 
+tied to email
+"
+
+build() {
+
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

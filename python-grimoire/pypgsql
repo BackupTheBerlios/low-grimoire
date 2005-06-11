@@ -1,0 +1,28 @@
+   VERSION=( "2.4" "2.3" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://pypgsql.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+    SOURCE="pypgsql/pyPgSQL-$VERSION"
+       REQ="postgresql Python"
+  ESTIMATE=32
+ FRESHMEAT="pypgsql"
+DESC="pyPgSQL:modules that provide a Python DB-API 2.0 interface to PostgreSQL.
+
+pyPgSQL is a package of two modules that provide a Python 
+DB-API 2.0 compliant interface to PostgreSQL databases. T
+he first module, libpq, exports the PostgreSQL C API to 
+Python. This module is written in C, and can be compiled 
+into Python, or can be dynamically loaded on demand. The 
+second module, PgSQL, provides the DB-API 2.0 compliant 
+interface, and support for various PostgreSQL data types, 
+such as INT8, NUMERIC, MONEY, BOOL, ARRAYS, BYTEA, etc.
+"
+
+build() {
+    
+    sed -i "s:/local::" setup.py
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install
+}

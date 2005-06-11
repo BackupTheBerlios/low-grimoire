@@ -1,0 +1,18 @@
+  VERSION=( "0.17" "0.16" "0.15" )
+ CATEGORY="utility"
+ATTRIBUTE="x11"
+      URL="$SOURCEFORGE_URL"
+   SOURCE="menumaker/MenuMaker-$VERSION"
+ HOMEPAGE="http://menumaker.sourceforge.net"
+      REQ="Python"
+ ESTIMATE="5" 
+DESC="scans through the system for installed programs and generates menu for specified X window manager
+
+A filesharing p2p network.
+"
+
+build() {
+   
+   prepare_install                          &&
+   python setup.py install
+}

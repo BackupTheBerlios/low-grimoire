@@ -1,0 +1,35 @@
+  VERSION=( "3.4.2" "3.3" "3.2.1b" )
+ CATEGORY="file-transfer python"
+ATTRIBUTE="client server python"
+      URL="http://bitconjurer.org/$SPELL"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://bitconjurer.org/BitTorrent/"
+ ESTIMATE=5
+      REQ="wxPython"
+DESC="Swarming downloader.
+
+BitTorrent is a tool for distributing files. It's extremely 
+easy to use - downloads are started by clicking on hyperlinks.
+Whenever more than one person is downloading at once 
+they send pieces of the file(s) to each other, thus relieving 
+the central server's bandwidth burden. Even with many 
+simultaneous downloads, the upload burden on the central server 
+remains quite small, since each new downloader introduces new 
+upload capacity.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
+
+post_install() {
+  if [ -e /etc/mailcap ]
+    then
+      if  !  grep  -q  "bittorrent"  /etc/mailcap
+        then
+        echo  'application/x-bittorrent; /usr/bin/btdownloadgui.py %s; test=test -n "$DISPLAY"'  >>  /etc/mailcap
+      fi
+  fi
+}

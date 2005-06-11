@@ -1,0 +1,28 @@
+   VERSION=( "0.12.7" )
+  CATEGORY="python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://rdiff-backup.stanford.edu"
+       URL="http://rdiff-backup.stanford.edu"
+       REQ="Python librsync"
+  ESTIMATE=74
+DESC="rdiff-backup is a backup utility
+
+rdiff-backup is a backup utility that backs up 
+one directory to another, possibly over a network.
+The target directory ends up a copy of the source directory, 
+but extra reverse diffs are stored in a special subdirectory 
+of that target directory, so you can still recover files lost 
+some time ago.
+"
+
+build() {
+SP="SimpleParse-$VERSION"
+
+if [ -f $SP.zip ]; then
+	unzip $SP
+fi 
+cd $SP
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install --prefix /usr
+}

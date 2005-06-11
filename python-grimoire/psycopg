@@ -1,0 +1,30 @@
+   VERSION=( "1.1.18" "1.1.12" "1.1.11" "1.1.10" "1.1.9" "1.1.8" "1.1.6" "1.1.5.1" "1.1.5" "1.1.4" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://initd.org/software/initd/psycopg"
+       URL="http://initd.org/pub/software/psycopg"
+       REQ="Python egenix-mx-base postgresql"
+  ESTIMATE=13
+ FRESHMEAT="psycopg"
+DESC="psycopg is a PostgreSQL database adapter for Python
+
+psycopg is a PostgreSQL database adapter for the Python 
+programming language. Its main advantages are that it supports 
+the full Python DBAPI 2.0 and it is thread safe at level 2. 
+It was designed for heavily multi-threaded applications that 
+create and destroy lots of cursors and make a conspicuous 
+number of concurrent INSERTs or UPDATEs. 
+"
+
+build() {
+    PYTHON_VERSION=$( augur version Python | cut -d. -f 1-2 )
+     ./configure --with-mxdatetime-includes=/usr/lib/python$PYTHON_VERSION/site-packages/mx/DateTime/mxDateTime \
+                 --with-postgres-includes=/usr/include/postgresql/server				        \
+		 --infodir=/usr/share/info 									\
+		 --prefix=/usr											\
+		 $OPTS &&
+		    
+    make 									    				&&
+    prepare_install 								                		&&
+    make install
+}

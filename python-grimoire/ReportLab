@@ -1,0 +1,26 @@
+   VERSION=( "1_20" "1_19" "1_18" "1_17" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.reportlab.com"
+       URL="http://www.reportlab.com"
+    SOURCE="ftp/ReportLab_$VERSION.tgz"
+       REQ="Python Imaging zlib"
+  ESTIMATE="262"
+DESC="Tools for generating printable PDF documents from any data source
+
+Reportlab solves the problems of high volume, highly personalised document production, 
+from a glossy prospectus tailored to each potential investor that must meet high standards 
+of looks and legality to complex derivatives contracts which irrevocably encrypt the details 
+of each trade in realtime.Reportlab servers can produce pdf documents in any language and 
+writing system, with any number of graphics, text and business rules, all pulled together 
+in seconds, individually different according to the client, the campaign or the law.
+"
+
+build() {
+    cd reportlab
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install                     &&
+    mkdir -p /usr/doc/ReportLab                 &&
+    cp -r docs/*.pdf README /usr/doc/ReportLab
+}

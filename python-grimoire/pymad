@@ -1,0 +1,23 @@
+   VERSION=( "0.5.3" "0.5.2" "0.5.1" "0.4.1" "0.4" )
+  CATEGORY="development python"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://spacepants.org/src/pymad/"
+       URL="http://spacepants.org/src/pymad/download/"
+       REQ="Python libmad"
+  ESTIMATE=17
+DESC="pymad is the Python binding to the MPEG Audio Decoder library
+
+pymad is a Python module that allows Python programs 
+to use the MPEG Audio Decoder library. pymad provides 
+a high-level API, similar to the pyogg module, which 
+makes reading PCM data from MPEG audio streams a piece 
+of cake.
+"
+
+build() {
+
+    python config_unix.py --prefix /usr		&&
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install --prefix /usr
+}
