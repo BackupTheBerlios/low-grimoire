@@ -1,4 +1,4 @@
-   VERSION=( "0.6.0" "0.5.0" "0.4.0" "0.2.14" )
+   VERSION=( "0.6.15" "0.6.0" "0.5.0" "0.4.0" "0.2.14" )
   CATEGORY="development python"
  ATTRIBUTE="console"
   HOMEPAGE="http://ipython.scipy.org/"
@@ -11,7 +11,7 @@ A better version of the python intepreter
 "
 
 build() {
-
-    prepare_install                 		&&
-    python setup.py install
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
 }
