@@ -1,10 +1,11 @@
   VERSION=( "0.3.7" "0.2.0" )
  CATEGORY="file-transfer python"
 ATTRIBUTE="client server python"
-      URL="http://e.scarywater.net/bt/download/"
+      URL="http://download2.bittornado.com/download"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://bittornado.com"
-      REQ="wxPython"
+      REQ=( ""
+            "wxPython:::for gui client" )
  EPROVIDE="BitTorrent"
 DESC="Swarming downloader.
 
