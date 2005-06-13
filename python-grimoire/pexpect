@@ -3,7 +3,7 @@
  ATTRIBUTE="library"
   HOMEPAGE="https://sourceforge.net/projects/pexpect"
        URL="$SOURCEFORGE_URL"
-    SOURCE="/pexpect/pexpect-$VERSION"
+    SOURCE="$SPELL/$SPELL-$VERSION"
        REQ="Python"
   ESTIMATE=5
  FRESHMEAT="pexpect"

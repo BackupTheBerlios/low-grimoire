@@ -1,7 +1,7 @@
    VERSION=( "1.2" "1.1" )
   CATEGORY="development python"
  ATTRIBUTE="library"
-    SOURCE="/pmw/Pmw.$VERSION.tar.gz"
+    SOURCE="pmw/Pmw.$VERSION.tar.gz"
        URL="$SOURCEFORGE_URL"
   HOMEPAGE="http://pmw.sourceforge.net"
        REQ="Python"

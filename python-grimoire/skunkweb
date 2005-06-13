@@ -3,7 +3,7 @@
  ATTRIBUTE="server"
   HOMEPAGE="http://skunkweb.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-    SOURCE="/skunkweb/skunkweb-$VERSION"
+    SOURCE="$SPELL/$SPELL-$VERSION"
        REQ="Python"
   ESTIMATE=74
  FRESHMEAT="SkunkWeb"
