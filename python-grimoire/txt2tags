@@ -2,6 +2,7 @@
   CATEGORY="development python"
  ATTRIBUTE="library"
   HOMEPAGE="http://txt2tags.sourceforge.net"
+    SOURCE="$SPELL-$VERSION"
        URL="http://txt2tags.sourceforge.net/src"
        REQ="Python"
   ESTIMATE=5
@@ -16,8 +17,6 @@ can keep just one source text file and one tool for all your formatting needs
 "
 
 build() {
-
-    
     prepare_install                 							   &&
     mkdir -p /usr/doc/txt2tags			
     mv txt2tags /usr/bin								   &&
