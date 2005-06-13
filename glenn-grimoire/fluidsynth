@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.0.5" )
+  VERSION=( "1.0.6" "1.0.5" )
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"

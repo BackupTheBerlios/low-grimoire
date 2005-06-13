@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.42" )
+  VERSION=( "0.54" "0.42" )
  CATEGORY="utility"
 ATTRIBUTE="x11"
  HOMEPAGE="http://alltray.sourceforge.net"
@@ -11,3 +11,12 @@ ATTRIBUTE="x11"
 DESC="AllTray allows you to dock any application with no native tray icon.
 AllTray allows you to dock any application with no native tray icon.
 "
+
+build() {
+  # due to binreloc funkyness must specify build
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  prepare_install           &&
+  make install
+}
