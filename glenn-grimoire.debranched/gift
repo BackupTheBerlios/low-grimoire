@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.11.7" "0.11.6" "0.11.5" "0.11.3" "0.11.2" "0.11.1" )
+  VERSION=( "0.11.8.1" "0.11.7" "0.11.6" "0.11.5" "0.11.3" "0.11.2" "0.11.1" )
  CATEGORY="file-transfer"
 ATTRIBUTE="server"
    SOURCE="gift/$SPELL-$VERSION"

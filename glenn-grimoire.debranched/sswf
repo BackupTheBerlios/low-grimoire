@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.7.0" "1.6.1" )
+  VERSION=( "1.7.2" "1.7.0" "1.6.1" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION-src"
