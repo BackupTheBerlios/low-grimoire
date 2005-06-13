@@ -1,0 +1,18 @@
+   VERSION=( "0.4.1" )
+  CATEGORY="backup"
+ ATTRIBUTE="library"
+  HOMEPAGE="http://www.nongnu.org/duplicity"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+       URL="http://savannah.nongnu.org/download"
+       REQ="Python librsync gnupg"
+  ESTIMATE=74
+DESC="Duplicity backs directories by producing encrypted tar-format volumes and uploading them to a remote or local file server.
+Duplicity backs directories by producing encrypted tar-format volumes and
+uploading them to a remote or local file server.
+"
+
+build() {
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install --prefix /usr
+}
