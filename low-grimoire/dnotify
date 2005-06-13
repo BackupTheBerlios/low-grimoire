@@ -1,4 +1,4 @@
-   VERSION=( "0.16.0" "0.15.0" "0.14.0" )
+   VERSION=( "0.18.0pre1" "0.16.0" "0.15.0" "0.14.0" )
   CATEGORY="utility"
  ATTRIBUTE="console"
   HOMEPAGE="http://www.student.lu.se/~nbi98oli/dnotify.html"

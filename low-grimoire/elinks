@@ -1,4 +1,4 @@
-   VERSION=( "0.9.1" "0.4.3" "0.4.2" )
+   VERSION=( "0.10.5" "0.9.1" "0.4.3" "0.4.2" )
   CATEGORY="web"
  ATTRIBUTE="client console"
   HOMEPAGE="http://elinks.or.cz/about.html"

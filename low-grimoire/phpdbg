@@ -1,4 +1,4 @@
-   VERSION=( "2.11.23" "2.11.22" )
+   VERSION=( "2.11.32" "2.11.23" "2.11.22" )
   CATEGORY="library"
  ATTRIBUTE="development"
   HOMEPAGE="http://dd.cron.ru/dbg"
