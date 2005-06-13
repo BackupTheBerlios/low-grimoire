@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "0.02" "0.01" )
+   VERSION=( "0.04" "0.02" "0.01" )
   CATEGORY="development"
  ATTRIBUTE="perl library"
     SOURCE="gtk2-perl/$SPELL-$VERSION"
