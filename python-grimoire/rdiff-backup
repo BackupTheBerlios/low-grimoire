@@ -1,8 +1,9 @@
-   VERSION=( "0.12.7" )
+   VERSION=( "0.12.8" "0.12.7" )
   CATEGORY="python"
  ATTRIBUTE="library"
-  HOMEPAGE="http://rdiff-backup.stanford.edu"
-       URL="http://rdiff-backup.stanford.edu"
+  HOMEPAGE="http://www.nongnu.org/rdiff-backup"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+       URL="http://savannah.nongnu.org/download"
        REQ="Python librsync"
   ESTIMATE=74
 DESC="rdiff-backup is a backup utility
