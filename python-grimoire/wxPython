@@ -1,11 +1,11 @@
-  VERSION=( "2.4.2.4" "2.4.1.2" "2.4.0.7p1" "2.4.0.7" )
+  VERSION=( "2.6.1.0" "2.4.2.4" "2.4.1.2" "2.4.0.7p1" "2.4.0.7" )
  CATEGORY="library"
 ATTRIBUTE="development x11"
       URL="$SOURCEFORGE_URL"
-   SOURCE="wxpython/wxPythonSrc-$VERSION"
+   SOURCE="wxpython/wxPython-src-$VERSION"
  HOMEPAGE="http://www.wxpython.org"
       REQ=( "Python swig"
-            "gtk+,v1.2:--enable-gtk::Install wxGTK against gtk+,v1.2"
+            "gtk+-v1.2:--enable-gtk::Install wxGTK against gtk+-v1.2"
             "gtk+:--enable-gtk2::Install wxGTK against gtk+" )
 DESC="wxPython is a GUI toolkit for the Python
 
