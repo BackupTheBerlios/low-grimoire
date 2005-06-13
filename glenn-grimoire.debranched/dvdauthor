@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.6.10" "0.6.9" "0.6.5" )
+  VERSION=( "0.6.11" "0.6.10" "0.6.9" "0.6.5" )
  CATEGORY="video-editor dvd"
 ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION"
@@ -14,15 +14,3 @@ create menus, buttons, chapters, etc, but for now you can just take an
 mpeg stream (as created by mplex -f 8 from mjpegtools 1.6.0) and write it
 to DVD.
 "
-
-build() {
-  default_build                &&
-  mkdir -p /usr/doc/$SPELL     &&
-  cp lib.txt menu.txt /usr/doc/$SPELL
-  
-  #./configure --with-xinerama \
-  #            $OPTS           &&
-  #make                        &&
-  #prepare_install             &&
-  #make    install  prefix=/usr
-}
