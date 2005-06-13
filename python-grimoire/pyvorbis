@@ -1,7 +1,8 @@
-   VERSION=( "1.2" )
+   VERSION=( "1.4" "1.2" )
   CATEGORY="development python"
  ATTRIBUTE="library"
   HOMEPAGE="http://www.andrewchatham.com/pyogg"
+    SOURCE="$SPELL-$VERSION"
        URL="http://www.andrewchatham.com/pyogg/download"
        REQ="Python libvorbis"
 # FRESHMEAT="pyvorbis"

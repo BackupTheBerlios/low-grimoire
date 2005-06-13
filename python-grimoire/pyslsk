@@ -1,4 +1,4 @@
-  VERSION=( "1.2.5" "1.2.4b" "1.2.2" "1.2.1" "1.2.0" )
+  VERSION=( "1.2.7b" "1.2.5" "1.2.4b" "1.2.2" "1.2.1" "1.2.0" )
  CATEGORY="file-share"
 ATTRIBUTE="x11"
       URL="http://www.sensi.org/~ak"

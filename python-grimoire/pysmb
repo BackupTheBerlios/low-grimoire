@@ -1,9 +1,9 @@
-   VERSION=( "0.4.3" )
+   VERSION=( "0.4.4" "0.4.3" )
   CATEGORY="library python"
  ATTRIBUTE="library"
-    SOURCE="url_tgz/pysmb-$VERSION.tar.gz"
-       URL="http://freshmeat.net/redir/pysmb/17671"
-  HOMEPAGE="http://freshmeat.net/redir/pysmb/17671/url_homepage/pysmb"
+    SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
+       URL="http://miketeo.net/projects"
+  HOMEPAGE="http://miketeo.net/projects/pysmb"
        REQ="Python"
  FRESHMEAT="pysmb"
 DESC="pysmb is an experimental SMB/CIFS library written in Python

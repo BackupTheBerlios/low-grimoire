@@ -1,4 +1,4 @@
-   VERSION=( "3.4b5" "3.4b3" )
+   VERSION=( "3.4.0" "3.4b5" "3.4b3" )
   CATEGORY="web python"
  ATTRIBUTE="server"
   HOMEPAGE="http://skunkweb.sourceforge.net"
