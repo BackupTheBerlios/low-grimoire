@@ -14,7 +14,7 @@ libEMF is a C/C++ library which provides a drawing toolkit based on
 ECMA-234. The general purpose of this library is to create vector graphics
 files on POSIX systems which can be imported into StarOffice/OpenOffice.
 The Enhanced MetaFile (EMF) is one of the two color vector graphics format
-which is "vectorially" understood by SO/OO.
+which is \"vectorially\" understood by SO/OO.
 "
 
 build() {
