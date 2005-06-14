@@ -8,13 +8,25 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
       REQ=( "freetype SDL DevIL zziplib"
             "OpenEXR:--enable-openexr::add openexr support"
+            "cegui_mk2:::build gui example"
             "Cg::--disable-cg:add Cg plugin" )
 FRESHMEAT="ogre"
 DESC="Ogre is an open source real time 3D rendering engine.
 Ogre is an open source real time 3D rendering engine.
 "
 
+patch_source() {
+  case "$VERSION" in
+    "v1-0-2")
+      rm -r autom4te.cache &&
+      sed -e '341s:=:!=:' -e '344s:=:!=:' -i aclocal.m4 &&
+      autoconf
+      ;;
+  esac
+}
+
 build() {
+  patch_source    &&
   mv -i Docs docs &&
-  defaulut_build
+  default_build
 }
