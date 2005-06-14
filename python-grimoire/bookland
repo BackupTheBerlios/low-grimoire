@@ -13,6 +13,7 @@ Python program for generating ISBN bar codes.
 "
 
 build() {
+  sed -i 's:/usr/local/bin/python:/usr/bin/env python:' bookland.py &&
   PYVER=$(python -V 2>&1| cut '-d ' -f2 | cut '-d.' -f1-2)
   prepare_install &&
   make BINDIR=/usr/bin OUTGOINGDIR=/usr/lib/python$PYVER/site-packages install
