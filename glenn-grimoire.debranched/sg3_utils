@@ -3,7 +3,7 @@
   VERSION=( "1.15" "1.14" )
  CATEGORY="utility"
 ATTRIBUTE="console library"
-   SOURCE="$SPELL-$VERSION.tar.gz"
+   SOURCE="$SPELL-$VERSION.tar.bz2"
  HOMEPAGE="http://sg.torque.net/sg"
       URL="http://sg.torque.net/sg/p"
 #      REQ=( "" )
