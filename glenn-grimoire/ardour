@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.9beta27" "0.9beta19" )
+  VERSION=( "0.9beta29" "0.9beta27" "0.9beta19" )
  CATEGORY="audio-editor video-editor"
 ATTRIBUTE="x11 gnome"
  HOMEPAGE="http://ardour.org"
