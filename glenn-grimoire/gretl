@@ -1,0 +1,42 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.3" "1.3.0" )
+ CATEGORY="development math"
+ATTRIBUTE="library x11"
+ HOMEPAGE="http://gretl.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "libxslt gnuplot teTeX R"
+            "readline:--with-readline::enable readline support"
+            "gtk+ gtksourceview gdk-pixbuf:--with-gtk2::enable gtk2 support"
+            "gmp:--with-gmp::enable gmp support"
+            "libgnomeui libgnomeprintui GConf:--with-gnome::include gnome support"
+            "libpng gdk-pixbuf:::include png graph support"
+            "flite:--with-audio::include audio graph support (experimental)"
+            ":--with-x-12-arima::include X-12-ARIMA graph support"
+            ":--with-tramo-seats::include TRAMO/SEATS graph support" )
+#            "gtkextra:--with-gtkextra::use gtkextra (gtk 1.2)"
+#            "libole2:--with-libole2::use libole2 (gtk 1.2)"
+#            "R:::use R statistical package"
+     OPTS="--disable-rpath"
+ ESTIMATE="115"
+DESC="Gretl is a cross-platform software package for econometric analysis.
+Is a cross-platform software package for econometric analysis, written in
+the C programming language. It is is free software.
+
+Features
+    * Easy intuitive interface (now in French, Italian, Spanish and Polish
+      as well as English)
+    * A wide variety of least-squares based estimators, including two-stage
+      least squares and nonlinear least squares
+    * Single commands to launch things like augmented Dickey-Fuller test,
+      Chow test for structural stability, Vector Autoregressions, ARMA
+      estimation
+    * Output models as LaTeX files, in tabular or equation format
+    * Integrated scripting language: enter commands either via the gui or
+      via script
+    * Command loop structure for Monte Carlo simulations and iterative
+      estimation procedures
+    * GUI controller for fine-tuning Gnuplot graphs
+    * Link to GNU R for further data analysis
+"
