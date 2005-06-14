@@ -1,0 +1,22 @@
+   VERSION=( "0.6.7" "0.6.6" )
+  CATEGORY="development"
+ ATTRIBUTE="console python"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://www.logilab.org/projects/xmldiff"
+       URL="ftp://ftp.logilab.org/pub"
+       REQ="Python"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="XMLdiff is a diff utility for xml file.
+XMLdiff is a python tool that figures out the differences between two
+similar XML files, in the same way the diff utility does it for text
+files.
+"
+
+build() {
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install                     &&
+    mkdir -p /usr/doc/$SPELL                    &&
+    cp man/* /usr/doc/$SPELL
+}

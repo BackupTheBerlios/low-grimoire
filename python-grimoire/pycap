@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.6" )
+ CATEGORY="network"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pycap.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python libpcap" )
+#FRESHMEAT=""
+DESC="Pycap provides the ability to capture packets from, and inject packets onto, network interfaces. It dissects commonly found structures in network packets such as Ethernet, IP, ARP, TCP, UDP, and ICMP headers. 
+Pycap provides the ability to capture packets from, and inject packets onto, network interfaces. It dissects commonly found structures in network packets such as Ethernet, IP, ARP, TCP, UDP, and ICMP headers. 
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

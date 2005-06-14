@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8.1" )
+ CATEGORY="video audio"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-python.html"
+      URL="http://gstreamer.freedesktop.org/src/gst-python"
+      REQ=( "pygtk gstreamer" )
+#FRESHMEAT=""
+DESC="GStreamer python bindings.
+GStreamer python bindings.
+"

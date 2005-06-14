@@ -1,0 +1,21 @@
+   VERSION=( "2.0.1" "1.4" )
+  CATEGORY="development"
+ ATTRIBUTE="library python"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://pywordnet.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Python WordNet"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="A Python interface to the Wordnet database of word meanings and lexical relationships.
+A Python interface to the Wordnet database of word meanings and lexical
+relationships.
+"
+
+build() {
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install                     &&
+    mkdir -p /usr/doc/$SPELL                    &&
+    cp README.txt /usr/doc/$SPELL
+}

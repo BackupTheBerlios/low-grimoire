@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.13" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.csit.fsu.edu/~mason/?section=projects:personal:pycg"
+      URL="http://graphics.cs.lth.se/pyfx/download"
+      REQ=( "PyOpenGL Imaging Cg swig" )
+#FRESHMEAT=""
+DESC="PyCg (Cg for Python) is a python wrapper for NVIDIA's Cg development software.
+PyCg (Cg for Python) is a python wrapper for NVIDIA's Cg development
+software.
+"
+
+build() {
+  sed -i "32ilibrary_dirs=['/usr/X11R6/lib']," setup.py &&
+  python setup.py build   &&
+  prepare_install         &&
+  python setup.py install
+}

@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.12" )
+ CATEGORY="development graphic"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://repose.cx/pyosd"
+      URL="http://repose.cx"
+      REQ=( "Python xosd" )
+#FRESHMEAT=""
+DESC="PyOSD is a python module for displaying text on your X display.
+PyOSD is a python module for displaying text on your X display, much like
+the \"On Screen Displays\" used on TVs and some monitors.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

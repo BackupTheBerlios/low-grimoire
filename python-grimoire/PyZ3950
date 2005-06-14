@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.04" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.panix.com/~asl2/software/PyZ3950"
+      URL="http://www.panix.com/~asl2/software"
+      REQ=( "ply" )
+#FRESHMEAT=""
+DESC="Python implementations of Z39.50 (ZOOM API), ASN.1, and MARC.
+Python implementations of Z39.50 (ZOOM API), ASN.1, and MARC.
+"
+
+build() {
+  python setup.py build    &&
+  prepare_install          &&
+  python setup.py install
+}

@@ -1,0 +1,18 @@
+   VERSION=( "0.9.5" )
+  CATEGORY="development"
+ ATTRIBUTE="gnome python"
+    SOURCE="sources/$SPELL/${VERSION:0:3}/$SPELL-$VERSION"
+  HOMEPAGE="http://meld.sourceforge.net"
+       URL="$GNOME_URL"
+       REQ="gnome-python"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="Meld is a visual diff and merge tool. It integrates especially well with CVS.
+Meld is a visual diff and merge tool. It integrates especially well with CVS.
+"
+
+build() {
+#    python setup.py build			&&
+    prepare_install                 		&&
+    make prefix=/usr install
+}

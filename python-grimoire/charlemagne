@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.0" )
+ CATEGORY="science"
+ATTRIBUTE="console python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://charlemagne.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Charlemagne is a genetic programming application which aims to be highly configurable and applicable to a broad range of problems.
+Charlemagne is a genetic programming application which aims to be highly
+configurable and applicable to a broad range of problems. It is written in
+Python and Lisp and to some degree is extensible in both languages. It
+features built-in input-output mapping support, but also provides the
+ability to define complex fitness calculators in Lisp or Python.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

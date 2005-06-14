@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pymathml.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="The main goal of this project is to create a system-independent MathML rendering engine in Python.
+The main goal of this project is to create a system-independent MathML
+rendering engine in Python. This engine works with an abstract 'plotter'
+driver class, that can be subclassed for any rendering device needed.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

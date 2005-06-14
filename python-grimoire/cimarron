@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.5" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://developer.berlios.de/projects/cimarron"
+      URL="http://download.berlios.de"
+      REQ=( "Python openssl" )
+#FRESHMEAT=""
+DESC="Cimarrón is an application development framework which uses the MVC pattern as its basis.
+Cimarrón is an application development framework which uses the MVC pattern
+as its basis. Note that while cimarrón provides both View's and some
+Controller's, it does not Provide any Model, leaving the developer the
+posibility to choose it freely.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

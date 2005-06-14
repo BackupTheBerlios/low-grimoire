@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0" )
+ CATEGORY="development datababse"
+ATTRIBUTE="library x11 python"
+   SOURCE="$SPELL-$VERSION.zip"
+ HOMEPAGE="http://www.netpromi.com/mojoview.html"
+      URL="http://www.netpromi.com/files"
+      REQ=( "pygtk" )
+#FRESHMEAT=""
+DESC="A Python package for writing simple PyGTK2 database applications.
+A Python package for writing simple PyGTK2 database applications.
+"
+
+build() {
+  cd "$SPELL-$VERSION" &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r examples /usr/share/$SPELL
+}

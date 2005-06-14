@@ -1,0 +1,18 @@
+   VERSION=( "0.8" )
+  CATEGORY="development"
+ ATTRIBUTE="library python"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://pywn.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Python WordNet"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="A Python interface to the WordNet database.
+A Python interface to the WordNet database.
+"
+
+build() {
+  PYVER=$(python -V 2>&1| cut '-d ' -f2 | cut '-d.' -f1-2)
+  prepare_install                 		&&
+  cp *.py /usr/lib/python$PYVER/site-packages
+}

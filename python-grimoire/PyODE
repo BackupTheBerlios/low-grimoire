@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.0" )
+ CATEGORY="science"
+ATTRIBUTE="library python"
+   SOURCE="pyode/$SPELL-$VERSION"
+ HOMEPAGE="http://pyode.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Pyrex ode" )
+#FRESHMEAT=""
+DESC="PyODE is a set of open-source Python bindings for The Open Dynamics Engine, an open-source physics engine.
+PyODE is a set of open-source Python bindings for The Open Dynamics Engine,
+an open-source physics engine.
+"
+
+build() {
+  sed -i "s:../ode:/usr:" setup.py &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

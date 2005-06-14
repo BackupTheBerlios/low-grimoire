@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0.0" )
+ CATEGORY="web"
+ATTRIBUTE="x11 python"
+   SOURCE="${VERSION:0:3}/$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://pysqlite.org"
+      URL="http://initd.org/pub/software/pysqlite/releases"
+      REQ=( "Python sqlite" )
+#FRESHMEAT=""
+DESC="Python wrapper for sqlite.
+Python wrapper for sqlite.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

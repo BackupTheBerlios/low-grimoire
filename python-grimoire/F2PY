@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.45.241_1926" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://cens.ioc.ee/projects/f2py2e"
+      URL="http://cens.ioc.ee/projects/f2py2e/2.x"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="The purpose of the F2PY project is to provide connection between Python and Fortran languages.
+The purpose of the F2PY --Fortran to Python interface generator-- project
+is to provide connection between Python and Fortran languages.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

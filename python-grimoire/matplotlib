@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.80" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://matplotlib.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Numeric freetype zlib libpng"
+            "pygtk:::build gtk support" )
+#FRESHMEAT=""
+DESC="matplotlib is a python 2D plotting library which produces publication quality figures.
+matplotlib is a python 2D plotting library which produces publication
+quality figures using in a variety of hardcopy formats and interactive GUI
+environments across platforms.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

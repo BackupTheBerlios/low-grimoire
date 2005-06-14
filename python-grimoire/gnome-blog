@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8" )
+ CATEGORY="development web"
+ATTRIBUTE="library python"
+   SOURCE="sources/$SPELL/$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnome.org/~seth/gnome-blog"
+      URL="$GNOME_URL"
+      REQ=( "pygtk GConf" )
+#FRESHMEAT=""
+DESC="Gnome Blog - post entries to your blog right from the gnome panel.
+Gnome Blog - post entries to your blog right from the gnome panel.
+"

@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.02" )
+ CATEGORY="utility"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.mayo.clara.net/pyabidoc.html"
+      URL="http://www.mayo.clara.net"
+      REQ=( "jaxml abiword" )
+#FRESHMEAT=""
+DESC="A Python module to programatically create Abiword documents.
+A Python module to programatically create Abiword documents.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

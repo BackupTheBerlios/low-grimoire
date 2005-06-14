@@ -1,0 +1,40 @@
+   VERSION=( "0.4.5" "0.4.4" "0.4.1" )
+  CATEGORY="development"
+ ATTRIBUTE="library python"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://python-irclib.sourceforge.net"
+       URL="$SOURCEFORGE_URL"
+       REQ="Python"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="python-irclib is a event-driven IRC client framework written in Python, as well as an object-oriented wrapper class
+python-irclib is a event-driven IRC client framework written in Python,
+as well as an object-oriented wrapper class
+The main features of the IRC client framework are:
+ *Abstraction of the IRC protocol.
+ *Handles multiple simultaneous IRC server connections.
+ *Handles server PONGing transparently.
+ *Messages to the IRC server are done by calling methods on an IRC
+  connection object.
+ *Messages from an IRC server triggers events, which can be caught by
+  event handlers.
+ *Reading from and writing to IRC server sockets are normally done by an
+  internal select() loop, but the select()ing may be done by an external
+  main loop.
+ *Functions can be registered to execute at specified times by the
+  event-loop.
+ *Decodes CTCP tagging correctly (hopefully); I haven't seen any other
+  IRC client implementation that handles the CTCP specification subtilties.
+ *A kind of simple, single-server, object-oriented IRC client class that
+  dispatches events to instance methods is included.
+ *DCC connection support.
+"
+
+build() {
+    sed -i "s:\r::" setup.py                    && # 0.4.5 only
+    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install                     &&
+    mkdir -p /usr/share/$SPELL                  &&
+    cp dccreceive dccsend irccat irccat2 servermap testbot.py /usr/share/$SPELL
+}

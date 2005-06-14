@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://monkey.org/~dugsong/pyevent"
+      URL="http://monkey.org/~dugsong"
+      REQ=( "Python libevent" )
+#FRESHMEAT=""
+DESC="Python extension module for libevent
+Python extension module for libevent
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

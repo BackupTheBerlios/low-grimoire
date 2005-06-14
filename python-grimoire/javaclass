@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python java"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.boddie.org.uk/python/javaclass.html"
+      URL="http://www.boddie.org.uk/python/downloads"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Python module to run java bytecode from python.
+The javaclass collection of packages and utilities (also known as
+ClassFile) provides a means of importing Java classes and packages directly
+into Python, without the need for a Java virtual machine, so that the
+classes may be instantiated, accessed, run and manipulated just like Python
+classes, and that the resulting objects and methods can be accessed and
+manipulated just like Python objects and methods. It should be possible to
+run compiled Java programs with the Python interpreter and not notice that
+it isn't the Java virtual machine being used - given sufficient library
+support for the program concerned, of course.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

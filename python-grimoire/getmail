@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "4.3.10" )
+ CATEGORY="development mail"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://pyropus.ca/software/getmail"
+      URL="http://pyropus.ca/software/getmail/old-versions"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="getmail -- a flexible, extensible mail retrieval system
+getmail -- a flexible, extensible mail retrieval system with
+support for POP3, IMAP4, SSL variants of both, maildirs, mboxrd files, 
+external MDAs, arbitrary message filtering, single-user and domain-mailboxes,
+and many other useful features.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

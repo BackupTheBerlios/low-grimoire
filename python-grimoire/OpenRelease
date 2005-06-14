@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.1" )
+ CATEGORY="development"
+ATTRIBUTE="console python"
+   SOURCE="open-release/$SPELL-$VERSION"
+ HOMEPAGE="http://open-release.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="OpenRelease is a complete and extensible packaging and release solution.
+OpenRelease is a complete and extensible packaging and release solution:
+packaging the code, uploading the package to SourceForge, automating the
+release on QRS, and announcing the release on freshmeat and, if
+appropriate, on pypi.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

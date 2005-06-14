@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3" )
+ CATEGORY="development database"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION.zip"
+ HOMEPAGE="http://xml2ddl.berlios.de"
+      URL="http://download.berlios.de"
+      REQ=( "Python"
+            "psycopg:::enable postgres support" )
+#FRESHMEAT=""
+DESC="Xml to DDL is a set of python programs to convert an XML representation of a database into a set of DDL statements.
+Xml to DDL is a set of python programs to convert an XML representation of
+a database into a set of DDL (Data Definition Language) statements. In
+addition it can examine the difference between two XML files and output a
+sequence of ALTER statements.
+"
+
+build() {
+  prepare_install       &&
+  cp -r "$SPELL-$VERSION" /usr/lib/python2.3/site-packages/$SPELL
+}

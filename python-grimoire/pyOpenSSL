@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6" )
+ CATEGORY="development security"
+ATTRIBUTE="library python"
+   SOURCE="pyopenssl/$SPELL-$VERSION"
+ HOMEPAGE="http://pyopenssl.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python openssl" )
+#FRESHMEAT=""
+DESC="Python wrapper around a small subset of the OpenSSL library.
+Python wrapper around a small subset of the OpenSSL library. Includes: SSL
+Context objects, SSL Connection objects, using Python sockets as transport
+layer. The Connection object wraps all the socket methods and can therefore
+be used interchangeably.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

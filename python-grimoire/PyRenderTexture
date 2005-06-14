@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.5" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://graphics.cs.lth.se/pyfx"
+      URL="http://graphics.cs.lth.se/pyfx/download"
+      REQ=( "glew" )
+#FRESHMEAT=""
+DESC="Python wrapper of Mark J Harris' RenderTexture class.
+Python wrapper of Mark J Harris' RenderTexture class.
+"
+
+build() {
+  sed -i "s:-lGLU:-L/usr/X11R6/lib -lGLU:" Makefile &&
+  make PYTHON2_INCLUDE=/usr/include/python2.3 GLEW_PATH=/usr &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

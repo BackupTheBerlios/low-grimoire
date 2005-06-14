@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL"
+ HOMEPAGE="http://www.immunitysec.com/resources-freesoftware.shtml"
+      URL="http://www.immunitysec.com/downloads"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="A Python library that will disassemble X86.
+A Python library that will disassemble X86.
+"
+
+build() {
+  prepare_install       &&
+  cp *py /usr/lib/python2.3/site-packages
+}

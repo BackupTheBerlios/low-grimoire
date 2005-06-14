@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.2" "0.4.1" )
+ CATEGORY="math"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://rpy.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python R" )
+ ESTIMATE="115"
+DESC="RPy is a very simple, yet robust, Python interface to the R Programming Language.
+RPy is a very simple, yet robust, Python interface to the R Programming
+Language. It can manage all kinds of R objects and can execute arbitrary R
+functions (including the graphic functions).
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

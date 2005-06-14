@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.14.0" "0.13.0" )
+ CATEGORY="graphic"
+ATTRIBUTE="python"
+ HOMEPAGE="http://www.scicraft.org"
+   SOURCE="${SPELL}_$VERSION"
+      URL="http://www.scicraft.org/files"
+      REQ=( "PyQt vtk" )
+ ESTIMATE="115"
+DESC="SciCraft is a powerful open source data analysis software with an easy-to-use graphical user interface
+SciCraft is a powerful open source data analysis software with an
+easy-to-use graphical user interface
+"
+
+build() {
+  sed -i '63s:$(HTMLDIR) $(TEXDIR)/scicraft.pdf::' Makefile &&
+  sed -i "109s:, 'doc/manual/tex/scicraft.pdf'::" setup.py &&
+  make compile          &&
+  prepare_install       &&
+  make install
+}

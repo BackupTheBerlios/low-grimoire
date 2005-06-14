@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://graphics.cs.lth.se/pyfx"
+      URL="http://graphics.cs.lth.se/pyfx/download"
+      REQ=( "PyCg PyRenderTexture" )
+#FRESHMEAT=""
+DESC="PyFX is a Python framework which makes it really easy to use graphics effects based on Cg shaders.
+PyFX is a Python framework which makes it really easy to use graphics
+effects based on Cg shaders.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5.2" )
+ CATEGORY="development audio"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dingoskidneys.com/shoutpy"
+      URL="http://dingoskidneys.com"
+      REQ=( "Python boost libshout" )
+#FRESHMEAT=""
+DESC="shoutpy uses Boost.Python to expose libshout 2 to Python, through a separately usable C++ wrapper.
+shoutpy uses Boost.Python to expose libshout 2 to Python, through a separately usable C++ wrapper.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

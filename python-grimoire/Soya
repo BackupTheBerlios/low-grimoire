@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.2" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="soya/$SPELL-$VERSION"
+ HOMEPAGE="http://oomadness.tuxfamily.org/en/soya"
+      URL="http://download.gna.org"
+      REQ=( "PyOpenGL SDL Imaging Pyrex ode freetype" )
+#FRESHMEAT=""
+DESC="Soya 3D is a very high level 3D engine for Python. Soya aims at being to 3D what Python is to programming.
+Soya 3D is a very high level 3D engine for Python. Soya aims at being to
+3D what Python is to programming.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

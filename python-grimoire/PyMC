@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8.4" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="pymc/$SPELL-$VERSION"
+ HOMEPAGE="http://pymc.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "wxPython matplotlib Scipy_core F2PY" )
+#FRESHMEAT=""
+DESC="Monte Carlo methods in Python. General MCMC software, targeted to biometric applications.
+Monte Carlo methods in Python. General MCMC software, targeted to biometric
+applications.
+"
+
+build() {
+  unset LDFLAGS         &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

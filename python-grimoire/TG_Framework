@@ -1,0 +1,34 @@
+   VERSION=( "1.0a1" )
+  CATEGORY="development"
+ ATTRIBUTE="console python"
+    SOURCE="$VERSION/TG%20Framework-$VERSION.tar.gz"
+  HOMEPAGE="http://techgame.net/projects/Framework/wiki"
+       URL="http://techgame.net/projects/Framework/raw/release"
+       REQ="Python"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="Techgame Python Framework.
+Techgame Python Framework.
+"
+
+build() {
+#    python setup.py build			&&
+    prepare_install                 		&&
+    python setup.py install                     
+}
+
+pre_build() {
+    rmdir $BUILD_DIR
+    
+    SOURCE_BALL="$SOURCE_CACHE/$SPELL/$SOURCE"
+    BUILD_DIR=$SPELL
+    
+    mkdir $BUILD_DIR
+    pushd $BUILD_DIR
+    tar -zx --strip-components=1 -f"$SOURCE_BALL"
+    popd
+}
+
+post_install() {
+    rm -r $SOURCE_DIR/$SPELL
+}

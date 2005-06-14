@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.37" )
+ CATEGORY="graphic"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://home.gna.org/pychart"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://download.gna.org/pychart"
+      REQ=( "Python" )
+ ESTIMATE="115"
+DESC="PyChart is a Python library for creating high quality Encapsulated Postscript, PDF, PNG, or SVG charts.
+PyChart is a Python library for creating high quality Encapsulated
+Postscript, PDF, PNG, or SVG charts.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

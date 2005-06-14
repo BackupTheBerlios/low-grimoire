@@ -1,0 +1,34 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1" )
+ CATEGORY="language"
+ATTRIBUTE="x11 python"
+   SOURCE="pythonol/$SPELL-$VERSION-source"
+ HOMEPAGE="http://www.phrozensmoke.com/projects/pythonol"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "pygtk pysqlite" )
+#FRESHMEAT=""
+DESC="Pythoñol is an all-in-one Spanish-English language educational software package.
+Pythoñol is an all-in-one Spanish-English language educational software
+package.
+"
+
+patch_install() {
+  # patch the installer so that its not graphical, and just installs, no questions asked
+  sed -e '198i\\treturn;' -e '1465c\    mybabel.loadInstallData();\n    mybabel.missing_files=0;\n    mybabel.countFiles();\n    mybabel.doInstall();' \
+    -e '570d' -e '573,574d' -e '582d' \
+    -e '674d' -e '689d' -e '692,693d' -e '' \
+    -e '691i\\t\tprint "Error: %s"%iinfo\n\t\tsys.exit(1)' \
+    -i PyInstallShield
+}
+
+build() {
+  patch_install   &&
+  sed -i '13s:=.*:=/usr/bin/:' install-config.txt   &&
+  sed -i '10s:"sqlite":"sqlite3":' sqlite_setup.py &&
+  sed -i 's:EXPAND+FILL:EXPAND|FILL:g' PyInstallShield pyprint.py pyquiz.py pythonol_colors.py pythonolui.py &&
+  make            &&
+  prepare_install &&
+  make install    &&
+  rm -r /usr/share/Pythonol/sqlite*
+}

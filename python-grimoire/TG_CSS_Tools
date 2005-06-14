@@ -1,0 +1,34 @@
+   VERSION=( "1.0a1" )
+  CATEGORY="development"
+ ATTRIBUTE="console python"
+    SOURCE="$VERSION/TG%20CSS%20Tools-$VERSION.tar.gz"
+  HOMEPAGE="http://techgame.net/projects/Framework/wiki/CSSEngine"
+       URL="http://techgame.net/projects/Framework/raw/release"
+       REQ="Python"
+  ESTIMATE="16"
+# FRESHMEAT=""
+DESC="Python utils for using CSS and xml.
+Python utils for using CSS and xml.
+"
+
+build() {
+#    python setup.py build			&&
+    prepare_install                 		&&
+    python setupCSS.py install                     
+}
+
+pre_build() {
+    rmdir $BUILD_DIR
+    
+    SOURCE_BALL="$SOURCE_CACHE/$SPELL/$SOURCE"
+    BUILD_DIR=$SPELL
+    
+    mkdir $BUILD_DIR
+    pushd $BUILD_DIR
+    tar -zx --strip-components=1 -f"$SOURCE_BALL"
+    popd
+}
+
+post_install() {
+    rm -r $SOURCE_DIR/$SPELL
+}

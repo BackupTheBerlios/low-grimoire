@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.8.2" )
+ CATEGORY="development datababse"
+ATTRIBUTE="library python"
+   SOURCE="${SPELL}_Python_$VERSION.zip"
+ HOMEPAGE="http://www.netpromi.com/kirbybase.html"
+      URL="http://www.netpromi.com/files"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="KirbyBase is a simple, flat-file database management system
+KirbyBase is a simple, flat-file database management system
+"
+
+build() {
+  cd "$SPELL-$VERSION" &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r kb* /usr/share/$SPELL
+}

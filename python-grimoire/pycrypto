@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0" )
+ CATEGORY="security"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.amk.ca/python/code/crypto"
+      URL="http://www.amk.ca/files/python/crypto"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="The Toolkit is a collection of cryptographic algorithms and protocols, implemented for use from Python.
+The Toolkit is a collection of cryptographic algorithms and protocols, implemented for use from Python.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

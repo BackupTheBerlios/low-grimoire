@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="web"
+ATTRIBUTE="x11 python"
+   SOURCE="bkm/$SPELL-$VERSION"
+ HOMEPAGE="http://bkm.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "wxPython" )
+#FRESHMEAT=""
+DESC="Python bookmark manager.
+Python bookmark manager.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.3" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pyode.sourceforge.net"
+      URL="http://www.cosc.canterbury.ac.nz/~greg/python"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Pyrex lets you write code that mixes Python and C data types any way you want, and compiles it into a C extension for Python.
+Pyrex lets you write code that mixes Python and C data types any way you
+want, and compiles it into a C extension for Python.
+"
+
+build() {
+  python setup.py build   &&
+  prepare_install         &&
+  python setup.py install
+}

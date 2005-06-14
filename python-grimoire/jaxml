@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.01" )
+ CATEGORY="utility"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.librelogiciel.com/software/jaxml/action_Presentation"
+      URL="http://www.librelogiciel.com/software/jaxml/tarballs"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="JAXML is a Python module which makes the automated generation of XML, XHTML or HTML documents easy.
+JAXML is a Python module which makes the automated generation of XML, XHTML or HTML documents easy.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.10.3" )
+ CATEGORY="network"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://oss.coresecurity.com/projects/pcapy.html"
+      URL="http://oss.coresecurity.com/repo"
+      REQ=( "Python libpcap" )
+#FRESHMEAT=""
+DESC="Pcapy is a Python extension module that interfaces with the libpcap packet capture library.
+Pcapy is a Python extension module that interfaces with the libpcap packet capture library.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

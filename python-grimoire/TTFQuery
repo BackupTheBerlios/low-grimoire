@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.0" )
+ CATEGORY="font"
+ATTRIBUTE="library python"
+   SOURCE="ttfquery/$SPELL-$VERSION"
+ HOMEPAGE="http://ttfquery.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Python module using FontTools to query TTF font files for metadata and font outlines.
+Python module using FontTools to query TTF font files for metadata and font
+outlines in a cross-platform manner. Includes support for scanning for
+installed system TTF files on common platforms.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

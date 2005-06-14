@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5" )
+ CATEGORY="development audio"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dingoskidneys.com/oggpy"
+      URL="http://dingoskidneys.com"
+      REQ=( "pygame boost libogg libvorbis libtheora" )
+#FRESHMEAT=""
+DESC="A Boost.Python wrapper for ogg and vorbis.
+A Boost.Python wrapper for ogg and vorbis.
+"
+
+build() {
+  sed -i '55c\                this->get_data()->packet = (unsigned char*)const_cast<char*>(bytes.c_str());' oggcc.h
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

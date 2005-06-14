@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.56" )
+ CATEGORY="graphic"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://newcenturycomputers.net/projects/gdmodule.html"
+   SOURCE="$SPELL-$VERSION"
+      URL="http://newcenturycomputers.net/projects/download.cgi"
+      REQ=( "Python gd" )
+ ESTIMATE="115"
+DESC="python wrapper for the GD library.
+python wrapper for the GD library.
+"
+
+build() {
+  python Setup.py build &&
+  prepare_install       &&
+  python Setup.py install
+}

@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.65" )
+ CATEGORY="utility"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION.zip"
+ HOMEPAGE="http://www.josephson.org/projects/pyamazon"
+      URL="http://www.josephson.org/projects/pyamazon/files"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="A Python wrapper for the Amazon web API.
+A Python wrapper for the Amazon web API. Allows you to do Amazon searches
+by keyword, ASIN, UPC, author, artist, actor, director, manufacturer, list,
+similar, or best seller.
+"
+
+build() {
+  # add OnDemandAmazonList.py ?
+  cd pyamazon* &&
+  prepare_install &&
+  cp amazon.py /usr/lib/python$(python -V 2>&1| cut -d' ' -f2|cut -d. -f1,2)/site-packages
+}
