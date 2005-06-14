@@ -18,12 +18,22 @@ Contains copy, past, undo, redo, search, replace, marks, record/play and
 context sensitive help.
 "
 
-build() {
+patch_source() {
+  case "$VERSION" in
+    "0.2.23" )
+      sed -i 's:new (\(.\+\))\[\([^]]\+\)\]:new \(\1[\2]\):g' $(find src -maxdepth 1 -type f) $(find plugins/examples -maxdepth 1 -type f) &&
+      sed -i '51c\\t\t\tfiltersfuncs=new (Filter *(*[filtersmaxlen])(int,int,char*,ScreenPart *));' src/filter.cpp &&
+      sed -i '56c\\t\tfuncs=new (ScreenPart *(*[maxlen])(Editor *));' src/typelist.cc &&
+      sed -i '36s:=NULL::' plugins/examples/index2table.cc &&
+      sed -i '46s:=NULL::' plugins/examples/elftables.cc
+  esac
+}
 
+build() {
+  patch_source                          &&
   ./configure --prefix=/usr             \
               $OPTS                     &&
   make dep all                          &&
   prepare_install                       &&
   make    install
-
 }
