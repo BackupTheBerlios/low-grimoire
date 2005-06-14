@@ -1,9 +1,9 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.9.1-pre5" )
+  VERSION=( "0.9.5-pre3" "0.9.1-src" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
-   SOURCE="$SPELL-$VERSION-src"
+   SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.xs4all.nl/~salsaman/lives"
       URL="http://www.xs4all.nl/~salsaman/lives/current"
       REQ=( "MPlayer ImageMagick perl gtk+ jpeg gdk-pixbuf sox transcode mjpegtools"
