@@ -24,6 +24,7 @@ features.
 "
 
 build() {
+  sed -i '420c\\tfor I in $(marcosencoders_DATA); do chmod +x $(DESTDIR)$(marcosencodersdir)/"$$I"; done' lives-plugins/marcos-encoders/Makefile.in &&
   ./configure --prefix=/usr     \
 	      $OPTS             &&
   make                          &&
