@@ -1,9 +1,11 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "5.5.3" "5.3.1" )
   CATEGORY="graphic library science"
- ATTRIBUTE="new console x11"
+ ATTRIBUTE="console x11"
   HOMEPAGE="http://plplot.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-    SOURCE="plplot/plplot-${VERSION}"
+    SOURCE="$SPELL/$SPELL-$VERSION"
        REQ=( "perl libpng jpeg libtool tcl tk gd gtk+"
              "libgnoemui libgnomeprintui:::for GNOME interface to plplot"
              "gnome-python numarray:::for Python interface to plplot"
@@ -36,15 +38,15 @@ quite incomplete.
 "
 
 build() {
-sed  -i 's:/Numeric:/numarray:'  configure
-./configure  --prefix=/usr				\
-             --sysconfdir=/etc          		\
-             FREETYPEINCDIR=/usr/include/freetype2	\
-             --with-freetype-font-dir=/usr/X11R6/lib/X11/fonts/TrueType \
-	     --with-pthreads				\
-	     --with-x					\
-             --with-ltdlsystem				&&
-make					&&
-prepare_install				&&
-make  install
+  sed  -i 's:/Numeric:/numarray:'  configure
+  ./configure  --prefix=/usr				\
+               --sysconfdir=/etc          		\
+               FREETYPEINCDIR=/usr/include/freetype2	\
+               --with-freetype-font-dir=/usr/X11R6/lib/X11/fonts/TrueType \
+	       --with-pthreads				\
+	       --with-x					\
+               --with-ltdlsystem			&&
+  make					&&
+  prepare_install			&&
+  make  install
 }
