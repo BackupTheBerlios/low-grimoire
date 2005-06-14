@@ -38,7 +38,8 @@ TMGLIB       = libtmg$(PLAT).a
 EIGSRCLIB    = libeigsrc$(PLAT).a
 LINSRCLIB    = liblinsrc$(PLAT).a
 EOF
-  make blaslib lib    &&
+#  make blaslib lib    &&
+  make blaslib tmglib lapacklib &&
   prepare_install     &&
   install -o root -g root -m 644 clapack.h BLAS/SRC/blaswrap.h /usr/include &&
   install -o root -g root -m 644 libclapack.a libtmg.a libblas.a /usr/lib   &&
