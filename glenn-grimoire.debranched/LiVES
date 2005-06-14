@@ -29,13 +29,6 @@ build() {
   make                          &&
   prepare_install               &&
   make install                  &&
-  mkdir -p /usr/share/lives     &&
-  pushd `pwd`                   &&
-    cd /usr/share/lives         &&
-    tar zxf $OLDPWD/lives-plugins-$VERSION.tar.gz &&
-    tar zxf $OLDPWD/lives-themes-$VERSION.tar.gz &&
-    chmod -R a+rx plugins themes icons &&
-  popd                                 &&
   cp build-lives-rfx-plugin* /usr/bin/ &&
   chmod a+x /usr/bin/build-lives-rfx-plugin*
 }
