@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.11" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="gnutelephony/$SPELL-$VERSION"
+ HOMEPAGE="http://cplusplus.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( ""
+            "zlib::--without-compression:enable compression"
+            "libxml2::--without-libxml2:enable libxml2 parser"
+            "::--without-nat:enable NAT class interface using netfilter"
+            ":--without-memaudit::enable memaudit" )
+#FRESHMEAT=""
+DESC="GNU Common C++ is a portable and highly optimized class framework for writing C++ applications that need to use threads, sockets, XML parsing, serialization, config files, etc.
+GNU Common C++ is a portable and highly optimized class framework for
+writing C++ applications that need to use threads, sockets, XML parsing,
+serialization, config files, etc.
+"
