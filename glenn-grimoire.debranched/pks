@@ -1,11 +1,12 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.9.4" )
+  VERSION=( "0.9.6" "0.9.4" )
  CATEGORY="security"
 ATTRIBUTE="server"
    SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://www.mit.edu/people/marc/pks/pks.html"
-      URL="http://www.mit.edu/people/marc"
+# HOMEPAGE="http://www.mit.edu/people/marc/pks/pks.html"
+ HOMEPAGE="http://pks.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
       REQ=( "db" )
 FRESHMEAT="pks"
 DESC="PGP Public Key Server.
@@ -13,14 +14,7 @@ PGP Public Key Server.
 "
 
 build() {
-
-  patch -p1 < $SCRIPT_DIR/pks094-patch2    &&
-  rm -r db2-sleepycat                      &&
-  sed -i "s:^	for i.*::" Makefile.in     &&
-  sed -i "s:^LIBDB.*:LIBDB = -static -ldb:" Makefile.in &&
-  ./configure --prefix=/usr                &&
-  make                                     &&
-  prepare_install                          &&
-  make install                             
-
+#  patch -p1 < $SCRIPT_DIR/pks094-patch2    &&
+  sed -i '15s:install::' Makefile.in      &&
+  default_build
 }
