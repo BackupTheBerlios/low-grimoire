@@ -7,7 +7,7 @@ ATTRIBUTE="server"
 # HOMEPAGE="http://www.mit.edu/people/marc/pks/pks.html"
  HOMEPAGE="http://pks.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "db" )
+#      REQ=( "" )
 FRESHMEAT="pks"
 DESC="PGP Public Key Server.
 PGP Public Key Server.
