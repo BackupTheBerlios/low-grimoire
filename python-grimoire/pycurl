@@ -1,4 +1,4 @@
-   VERSION=( "7.13.2" "7.13.1" "7.12.1" "7.11.1" "7.10.8" "7.10.6" "7.10.5" )
+   VERSION=( "7.14.0" "7.13.2" "7.13.1" "7.12.1" "7.11.1" "7.10.8" "7.10.6" "7.10.5" )
   CATEGORY="development python"
  ATTRIBUTE="library"
   HOMEPAGE="http://pycurl.sourceforge.net"
@@ -14,7 +14,6 @@ to the urllib Python module.
 "
 
 build() {
-
     python setup.py build			&&
     prepare_install                 		&&
     python setup.py install
