@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0.1" "0.7.4" )
+ CATEGORY="development"
+ATTRIBUTE="server"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.runtimeaccess.com"
+      URL="http://www.runtimeaccess.com"
+      REQ=( "flex bison"
+            "fuse:::build rtafs" )
+#FRESHMEAT=""
+DESC="RTA gives you run time access to the data in your program.
+RTA gives you run time access to the data in your program.
+It is intended for embedded system developers and can 
+greatly simplify user-interface programs by separating the
+daemon proper from the UI programs.
+"
+
+build() {
+  # needed for rtafs
+  CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=64" &&
+  default_build
+}
