@@ -1,4 +1,4 @@
-   VERSION=( "2.2" "1.7" "1.6" "1.5" )
+   VERSION=( "2.3" "2.2" "1.7" "1.6" "1.5" )
   CATEGORY="development python"
  ATTRIBUTE="library"
   HOMEPAGE="http://txt2tags.sourceforge.net"
