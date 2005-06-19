@@ -1,8 +1,9 @@
    VERSION=( "0.5" )
   CATEGORY="utility"
  ATTRIBUTE="x11"
-  HOMEPAGE="http://michaelo.free.fr/minido"
-       URL="http://michaelo.free.fr/minido/releases"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://opdenacker.org/minido"
+       URL="http://opdenacker.org/minido/releases"
        REQ="glib gtk+ libxml2"
   ESTIMATE="161"
  FRESHMEAT="minido"
