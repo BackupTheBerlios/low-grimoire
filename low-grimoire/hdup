@@ -1,6 +1,7 @@
   VERSION=( "1.6.37" "1.6.31" "1.6.30" "1.6.29" "1.6.28" "1.6.27" "1.6.26" "1.6.25" )
  CATEGORY="utility"
 ATTRIBUTE="console"
+   SOURCE="$SPELL-$VERSION"
       URL="http://www.miek.nl/projects/hdup16/previous"
  HOMEPAGE="http://miek.nl/projects/hdup16/hdup16.html"
       REQ="bzip2 console-tools gnupg mcrypt openssh"
