@@ -1,8 +1,8 @@
-   VERSION=( "2.6d" "2.6c" "2.6b" "2.6a" "2.5c" )
+   VERSION=( "2.6f" "2.6d" "2.6c" "2.6b" "2.6a" "2.5c" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
   HOMEPAGE="http://www-sop.inria.fr/mimosa/fp/Bigloo/bigloo.html"
-    SOURCE="Bigloo/bigloo$VERSION"
+    SOURCE="Bigloo/$SPELL$VERSION"
        URL="ftp://ftp-sop.inria.fr/mimosa/fp"
   ESTIMATE=1268
  FRESHMEAT="bigloo"
