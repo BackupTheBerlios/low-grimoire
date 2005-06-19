@@ -1,8 +1,11 @@
-   VERSION=( "1.2" "1.1" "1.0.6" "1.0.4" )
+   VERSION=( "1.3.3" "1.2" "1.1" "1.0.6" "1.0.4" )
   CATEGORY="development"
  ATTRIBUTE="console"
-  HOMEPAGE="http://arch.quackerhead.com/~lord"
-       URL="http://arch.quackerhead.com/~lord/releases/tla"
+    SOURCE="$SPELL-$VERSION"
+#  HOMEPAGE="http://arch.quackerhead.com/~lord"
+#       URL="http://arch.quackerhead.com/~lord/releases/tla"
+  HOMEPAGE="http://gnuarch.org"
+       URL="ftp://ftp.gnu.org/pub/gnu/gnu-arch"
   ESTIMATE="2224"
  FRESHMEAT="arch revision control system - tla branch"
 DESC="arch is a modern replacement for CVS, specifically designed for the distributed development needs of open source projects
