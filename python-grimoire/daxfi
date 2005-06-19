@@ -1,0 +1,203 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.0" )
+ CATEGORY="networking"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://daxfi.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python iptables" )
+ ESTIMATE="115"
+FRESHMEAT="daxfi"
+DESC="DAXFi is a Python package that helps configure several different kinds of firewalls in a consistent way.
+DAXFi is a Python package that helps configure several different kinds of
+firewalls in a consistent way. The rules are described in XML. It comes
+with a Python package, useful to build other applications and includes some
+useful example programs.
+"
+
+# note this only works for iptables, the other firewall modules don't work
+build() {
+  patch_source                    &&
+  rm modules/daxfi/firewalls/iptables/_iptables_linux_i386.so &&
+  make -C modules/daxfi/firewalls/iptables &&
+  prepare_install                 &&
+  cp daxfid daxfidump daxfictl daxfixmlfile /usr/sbin &&
+  cp -r modules/daxfi /usr/lib/python$(augur version Python| cut -d. -f1-2)/site-packages &&
+  cp -r etc/daxfid/ /etc
+}
+
+patch_source() {
+  patch -p1 <<'EOF'
+diff -ru daxfi-1.0~/daxfid daxfi-1.0/daxfid
+--- daxfi-1.0~/daxfid	2002-12-18 10:53:24.000000000 -0600
++++ daxfi-1.0/daxfid	2005-06-18 22:38:42.000000000 -0500
+@@ -26,7 +26,7 @@
+ 
+ # Import standard modules.
+ import  os, sys, types, commands, \
+-        imp, rexec, ConfigParser, getopt, signal, time, syslog, \
++        imp, ConfigParser, getopt, signal, time, syslog, \
+         fcntl, struct
+ 
+ try:
+@@ -45,7 +45,7 @@
+ 
+ # Some infos.
+ APP_NAME = 'daxfid'
+-VERSION = '0.8'
++VERSION = '0.9'
+ 
+ MY_NAME = 'Davide Alberani'
+ MY_EMAIL = 'alberanid@libero.it'
+@@ -590,46 +590,6 @@
+     return 0
+ 
+ 
+-# --- Restricted environment
+-
+-# Restricted environment for the plug-ins function.
+-daxfidic = {
+-    'XMLRULES_DIR':         XMLRULES_DIR,
+-    'REMOTE_IP':            REMOTE_IP,
+-    'LOCAL_IP':             LOCAL_IP,
+-    'INTERFACE':            INTERFACE,
+-
+-    'processXMLFile':       processXMLFile,
+-    'processRules':         processRules,
+-    'processXMLString':     processXMLString,
+-
+-    'createNewRules':       firewall.createNewRules,
+-
+-    'checkRule':            firewall.checkRule,
+-    'listRules':            firewall.listRules,
+-    'listXMLRules':         firewall.listXMLRules,
+-
+-    'storeData':            storeData,
+-    'loadData':             loadData,
+-
+-    'sl_print_info':        sl_print_info,
+-    'sl_print_warning':     sl_print_warning,
+-    'sl_print_error':       sl_print_error,
+-
+-    'is_daemon':            is_daemon
+-}
+-
+-
+-class DAXFiRE(rexec.RExec):
+-    """Restricted environment handler."""
+-    ok_sys_names = ()
+-
+-    def r_eval(self, code):
+-        return eval(code, daxfidic)
+-
+-
+-daxfi_env = DAXFiRE()
+-
+ # --- Execution
+ 
+ def check_for_persistent(file_name):
+@@ -695,7 +655,7 @@
+                 sl_print_error('I think that run_this in file ' +
+                                 file_name + ' is not a function')
+                 return 0
+-            daxfi_env.r_eval(plugin.run_this.func_code)
++            eval(plugin.run_this.func_code)
+             del plugin.run_this
+         except NameError, strn:
+             sl_print_error(str(strn) +
+diff -ru daxfi-1.0~/modules/daxfi/RuleBuilder.py daxfi-1.0/modules/daxfi/RuleBuilder.py
+--- daxfi-1.0~/modules/daxfi/RuleBuilder.py	2002-12-18 10:53:25.000000000 -0600
++++ daxfi-1.0/modules/daxfi/RuleBuilder.py	2005-06-18 22:38:42.000000000 -0500
+@@ -28,6 +28,7 @@
+ 
+ from xml.sax import make_parser, handler, SAXException
+ from xml.sax.xmlreader import InputSource
++from xml.sax.handler import feature_validation, feature_external_ges
+ 
+ from daxfi._rulesutils import *
+ 
+@@ -326,6 +327,8 @@
+         self.__dh = DAXFiXMLHandler(self.__firewallName)
+         self.__inpsrc = InputSource()
+         self.__parser = make_parser()
++        self.__parser.setFeature(feature_external_ges, 0)
++        self.__parser.setFeature(feature_validation, 0)
+         self.__parser.setContentHandler(self.__dh)
+         self.reset()
+ 
+diff -ru daxfi-1.0~/modules/daxfi/__init__.py daxfi-1.0/modules/daxfi/__init__.py
+--- daxfi-1.0~/modules/daxfi/__init__.py	2002-12-18 10:53:25.000000000 -0600
++++ daxfi-1.0/modules/daxfi/__init__.py	2005-06-18 22:38:42.000000000 -0500
+@@ -70,7 +70,7 @@
+     def _loadFirewall(self, brand=None):
+         """Detect the firewall and import related modules."""
+         from daxfi import firewalls
+-        if type(brand) in (types.StringType, types.UnicodeType):
++        if brand and type(brand) in (types.StringType, types.UnicodeType):
+             brand = [brand]
+         # If not specified, we'll try any known firewall.
+         if not brand:
+diff -ru daxfi-1.0~/modules/daxfi/firewalls/iptables/_iptables.c daxfi-1.0/modules/daxfi/firewalls/iptables/_iptables.c
+--- daxfi-1.0~/modules/daxfi/firewalls/iptables/_iptables.c	2002-12-18 10:53:25.000000000 -0600
++++ daxfi-1.0/modules/daxfi/firewalls/iptables/_iptables.c	2005-06-19 03:20:18.000000000 -0500
+@@ -18,7 +18,7 @@
+ 
+ #include "../common.c"
+ 
+-#include <libiptc/libip4tc.c>
++#include <libiptc/libiptc.h>
+ #include <linux/netfilter_ipv4/ipt_limit.h>
+ #include <linux/netfilter_ipv4/ipt_state.h>
+ #include <linux/netfilter_ipv4/ip_conntrack.h>
+@@ -26,6 +26,20 @@
+ #include <linux/netfilter_ipv4/ipt_REJECT.h>
+ #include <linux/netfilter_ipv4/ip_nat.h>
+ 
++#define STRUCT_ENTRY_TARGET     struct ipt_entry_target
++#define STRUCT_ENTRY            struct ipt_entry
++#define GET_TARGET              ipt_get_target
++#define STANDARD_TARGET         IPT_STANDARD_TARGET
++#define RETURN                  IPT_RETURN
++
++#define IP_PARTS_NATIVE(n)                      \
++(unsigned int)((n)>>24)&0xFF,                   \
++(unsigned int)((n)>>16)&0xFF,                   \
++(unsigned int)((n)>>8)&0xFF,                    \
++(unsigned int)((n)&0xFF)
++
++#define IP_PARTS(n) IP_PARTS_NATIVE(ntohl(n))
++
+ 
+ /* String version of the log priority. */
+ struct ipt_log_names {
+@@ -598,9 +612,10 @@
+ 					snprintf(strnfix, 6,
+ 						"%u", data.spts[0]);
+ 			}
+-			if (strncmp(strnfix, "0", 1) &&
+-					strncmp(strnfix, "! 0", 3)) {
+-				if (strcmp(strnfix, "1:65535"))
++			if (strcmp(strnfix, "0") &&
++					strcmp(strnfix, "! 0")) {
++				if (strcmp(strnfix, "1:65535") &&
++						strcmp(strnfix, "0:65535"))
+ 					addval(xml, "source-port", strnfix);
+ 				has_proto = 1;
+ 			}
+@@ -627,9 +642,10 @@
+ 					snprintf(strnfix, 6,
+ 						"%u", data.dpts[0]);
+ 			}
+-			if (strncmp(strnfix, "0", 1) &&
+-					strncmp(strnfix, "! 0", 3)) {
+-				if (strcmp(strnfix, "1:65535"))
++			if (strcmp(strnfix, "0") &&
++					strcmp(strnfix, "! 0")) {
++				if (strcmp(strnfix, "1:65535") &&
++						strcmp(strnfix, "0:65535"))
+ 					addval(xml,"destination-port",strnfix);
+ 				has_proto = 1;
+ 			}
+EOF
+}
