@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://tautology.org/software/python-modules/sendfile"
+      URL="http://tautology.org/software/python-modules/distfiles"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Python module interface to the FreeBSD sendfile(2) and Linux sendfile(2) system calls.
+Python module interface to the FreeBSD sendfile(2) and Linux sendfile(2)
+system calls.
+sendfile - Direct interface to FreeBSD and Linux sendfile(2), for sending
+file data to a socket directly via the kernel.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
