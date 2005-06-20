@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.7" )
+ CATEGORY="educational"
+ATTRIBUTE="x11"
+ HOMEPAGE="http://www.gnu.org/software/gtypist"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$GNU_URL"
+      REQ=( "emacs" )
+ ESTIMATE="115"
+DESC="GNU Typist (also called gtypist) is a universal typing tutor.
+GNU Typist (also called gtypist) is a universal typing tutor.
+"
