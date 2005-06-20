@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.67" )
+  VERSION=( "0.68" "0.67" )
  CATEGORY="graphic"
 ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
@@ -11,7 +11,7 @@ ATTRIBUTE="library python"
 DESC="Graphite is a Python graphing package.
 Graphite is a Python graphing package currently under development which
 uses either SPING or PIDDLE (http://piddle.sourceforge.net). It produces PS, PDF,
-SVG output, bitmap, TK or wXpython with optional modules.
+SVG output, bitmap, TK or wxPython with optional modules.
 "
 
 build() {
