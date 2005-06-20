@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.7" )
+ CATEGORY="math"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://gnuplot-py.sourceforge.net"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python gnuplot" )
+ ESTIMATE="115"
+DESC="Python pipe-based interface to gnuplot.
+Python pipe-based interface to gnuplot.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
