@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
 unset OPT  
-  VERSION=( "0.1.4" "0.1.3" "0.1.0" "0.0.9" )
+  VERSION=( "0.1.5" "0.1.4" "0.1.3" "0.1.0" "0.0.9" )
  CATEGORY="gkrellm-plugin"
 ATTRIBUTE="concurrent x11"
    SOURCE="gkrellmbgchg2-$VERSION"
@@ -16,10 +16,8 @@ by clicking on the panel or to \"hold\" the image with the mouse wheel.
 "
 
 build() {
-
   make                                   &&
   prepare_install                        &&
   mkdir -p /usr/lib/gkrellm2/plugins     &&
   install -c -m 755 gkrellmbgchg.so /usr/lib/gkrellm2/plugins
-
 }
