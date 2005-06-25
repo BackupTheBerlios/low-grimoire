@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.5" "0.7.4" )
+ CATEGORY="development audio"
+ATTRIBUTE="library"
+   SOURCE="gnutelephony/$SPELL-$VERSION"
+ HOMEPAGE="http://cplusplus.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "commoncpp2" )
+#FRESHMEAT=""
+DESC="The GNU ccAudio library is a portable C++ class framework for processing audio.
+The GNU ccAudio library is a portable C++ class framework that I believe
+to be useful for developing applications that must process audio.
+"
