@@ -1,6 +1,6 @@
   VERSION=( "0.4.0" "0.2.3" )
  CATEGORY="graphic-editor"
-ATTRIBUTE="x11"
+ATTRIBUTE="x11 python"
       URL="$SOURCEFORGE_URL"
    SOURCE="$SPELL/$SPELL-$VERSION.src.zip"
  HOMEPAGE="http://boa-constructor.sourceforge.net"

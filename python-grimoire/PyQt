@@ -1,6 +1,6 @@
   VERSION=( "3.14.1" "3.9" "3.7" "3.6" )
- CATEGORY="library python"
-ATTRIBUTE="development"
+ CATEGORY="development"
+ATTRIBUTE="library python"
  HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt"
       URL="http://www.river-bank.demon.co.uk/download"
    SOURCE="PyQt/PyQt-x11-gpl-$VERSION"
@@ -9,11 +9,10 @@ FRESHMEAT="pyqt"
  ESTIMATE=39
 DESC="Python bindings for the Qt GUI toolkit
 
-  PyQt is a comprehensive set of Python bindings for the Qt GUI toolkit.
-  "
+PyQt is a comprehensive set of Python bindings for the Qt GUI toolkit.
+"
 
 build() {
-
   export LD_LIBRARY_PATH=/usr/lib/python$(augur version Python | cut -d. -f 1-2)/site-packages
   export QTDIR="/usr"
   
