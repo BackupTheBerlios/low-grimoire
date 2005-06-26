@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://dingoskidneys.com/oggpy"
       URL="http://dingoskidneys.com"
-      REQ=( "pygame boost libogg libvorbis libtheora" )
+      REQ=( "pygame boost libvorbis libtheora" )
 #FRESHMEAT=""
 DESC="A Boost.Python wrapper for ogg and vorbis.
 A Boost.Python wrapper for ogg and vorbis.

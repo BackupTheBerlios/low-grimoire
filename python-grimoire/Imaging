@@ -3,8 +3,7 @@
  ATTRIBUTE="development python x11"
   HOMEPAGE="http://www.pythonware.com/products/pil"
        URL="http://effbot.org/downloads"
-       REQ=( "Python jpeg zlib"
-#             "freetype:::TrueType/OpenType support"
+       REQ=( "Python"
              "jpeg:::to provide JPEG support"
              "zlib:::to provide PNG and ZLib support"
              "freetype:::to provide TrueType/OpenType font support" )

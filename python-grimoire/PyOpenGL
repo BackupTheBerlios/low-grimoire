@@ -4,7 +4,7 @@
      SOURCE="pyopengl/$SPELL-$VERSION.tar.gz"
    HOMEPAGE="http://pyopengl.sourceforge.net"
         URL="$SOURCEFORGE_URL"
-        REQ="Python glut tcl tk Numeric"
+        REQ="glut tk Numeric"
   FRESHMEAT="pyopengl"
 SOURCEFORGE="pyopengl"
 #   ESTIMATE="785"

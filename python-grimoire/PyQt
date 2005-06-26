@@ -1,12 +1,12 @@
   VERSION=( "3.14.1" "3.9" "3.7" "3.6" )
-  CATEGORY="library python"
-  ATTRIBUTE="development"
-  HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt"
-  URL="http://www.river-bank.demon.co.uk/download"
-  SOURCE="PyQt/PyQt-x11-gpl-$VERSION"
-  FRESHMEAT="pyqt"
-  REQ="Python qt-x11-free sip"
-  ESTIMATE=39
+ CATEGORY="library python"
+ATTRIBUTE="development"
+ HOMEPAGE="http://www.riverbankcomputing.co.uk/pyqt"
+      URL="http://www.river-bank.demon.co.uk/download"
+   SOURCE="PyQt/PyQt-x11-gpl-$VERSION"
+FRESHMEAT="pyqt"
+      REQ="sip"
+ ESTIMATE=39
 DESC="Python bindings for the Qt GUI toolkit
 
   PyQt is a comprehensive set of Python bindings for the Qt GUI toolkit.

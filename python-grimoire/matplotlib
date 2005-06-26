@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://matplotlib.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "Numeric freetype zlib libpng"
+      REQ=( "Numeric freetype libpng"
             "pygtk:::build gtk support" )
 #FRESHMEAT=""
 DESC="matplotlib is a python 2D plotting library which produces publication quality figures.
