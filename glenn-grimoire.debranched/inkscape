@@ -6,7 +6,7 @@ ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://www.inkscape.org"
       URL="$SOURCEFORGE_URL"
-      REQ=( "zlib libpng freetype gtkmm libxml2 gtkspell popt gc intltool"
+      REQ=( "gtkmm libxml2 gtkspell gc intltool"
 #            "libgnomeprintui:--with-gnome-print::use gnome print font database and spooler frontend"
             "python:--with-python::use Python for embedded scripting"
             "perl:::use Perl for embedded scripting" )

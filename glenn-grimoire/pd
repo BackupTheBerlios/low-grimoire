@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION.src.tar.gz"
  HOMEPAGE="http://crca.ucsd.edu/~msp/software.html"
       URL="http://crca.ucsd.edu/~msp/Software"
-      REQ=( "tk x11"
+      REQ=( "tk"
             "alsa-lib:--enable-alsa::enable alsa support"
             "jack-audio-connection-kit:--enable-jack::enable jack support"
             "portaudio:--enable-portaudio::enable portaudio support" )

@@ -6,7 +6,7 @@ ATTRIBUTE="library"
    SOURCE="pl${VERSION}src"
  HOMEPAGE="http://ploticus.sourceforge.net"
       URL="http://ploticus.sourceforge.net/download"
-      REQ=( "libpng gd zlib jpeg freetype" )
+      REQ=( "gd" )
 #FRESHMEAT=""
 DESC="ploticus is for producing plots, charts, and graphics from data.
 ploticus is for producing plots, charts, and graphics from data.

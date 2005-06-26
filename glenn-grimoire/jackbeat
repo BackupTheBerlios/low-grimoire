@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.xung.org/jackbeat"
       URL="http://www.xung.org/jackbeat/files"
-      REQ=( "gtk+ jack-audio-connection-kit libsndfile libsamplerate libxml2" )
+      REQ=( "gtk+ jack-audio-connection-kit libsamplerate libxml2" )
 #FRESHMEAT=""
 DESC="Jackbeat is an audio sequencer.
 Jackbeat is an audio sequencer.

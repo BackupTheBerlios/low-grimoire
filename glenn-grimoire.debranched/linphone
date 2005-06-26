@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$VERSION/source/$SPELL-$VERSION"
  HOMEPAGE="http://kahakai.sourceforge.net"
       URL="http://simon.morlat.free.fr/download"
-      REQ=( "libosip glib gnome-panel gnome-vfs"
+      REQ=( "libosip glib gnome-panel"
             "nasm:::add video support"
             "alsa:::add alsa support" )
    OPT[0]="nasm:::add video support"

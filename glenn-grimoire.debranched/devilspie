@@ -4,7 +4,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.burtonini.com/blog/computers/devilspie"
       URL="http://www.burtonini.com/computing"
-      REQ="libxml2 gtk+ popt libwnck"
+      REQ="libxml2 popt libwnck"
 #FRESHMEAT=""
 DESC="Devil's Pie can be configured to detect windows as they are created, and match the window to a set of rules.
 A window-matching utility, inspired by Sawfish's \"Matched Windows\" option

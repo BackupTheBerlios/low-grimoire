@@ -6,7 +6,7 @@ ATTRIBUTE="library gnome"
    SOURCE="numexp/$SPELL-$VERSION"
  HOMEPAGE="http://numexp.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "libgnomeprintui fontconfig gnome-python" )
+      REQ=( "libgnomeprintui gnome-python" )
 #FRESHMEAT=""
 DESC="libnxplot is a 2D vector drawing library.
 libnxplot is a 2D vector drawing library. It has an API very similar to

@@ -6,7 +6,7 @@ ATTRIBUTE="gnome"
  HOMEPAGE="http://www.imendio.com/projects/planner"
    SOURCE="sources/$SPELL/${VERSION:0:4}/$SPELL-$VERSION"
       URL="$GNOME_URL"
-      REQ=( "libgnomeui gnome-vfs libgnomeprintui gettext"
+      REQ=( "libgnomeui libgnomeprintui"
             "libgda:--enable-database=yes::enable database support"
             "Python pygtk:--enable-python --enable-python-plugin::enable python support"
             "evolution-data-server:--enable-eds::enable evolution-data-server support" )

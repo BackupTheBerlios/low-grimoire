@@ -6,7 +6,7 @@ ATTRIBUTE="gnome x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://kino.schirmacher.de"
       URL="http://kino.schirmacher.de/filemanager/download/6"
-      REQ=( "libdv libavc1394 XFree86 esound audiofile gnome-libs "
+      REQ=( "libdv libavc1394 XFree86 gnome-libs "
             "libquicktime:--with-quicktime::add quicktime support"
             "ffmpeg:--with-avcodec::Use FFMPEG libavcodec for DV video decoding instead of libdv" )
    OPT[0]="libquicktime:--with-quicktime::add quicktime support"

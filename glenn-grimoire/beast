@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="v${VERSION:0:3}/$SPELL-$VERSION"
  HOMEPAGE="http://beast.gtk.org"
       URL="http://beast.gtk.org/beast-ftp"
-      REQ=( "gtk+ alsa-lib libogg libvorbis libgnomecanvas guile"
+      REQ=( "alsa-lib libvorbis libgnomecanvas guile"
 	    "libmad:::add support for mpeg decoding"
 	    "ladspa_sdk:::add support for ladspa plugins" )
 FRESHMEAT="beastbse"

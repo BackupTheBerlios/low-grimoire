@@ -6,7 +6,7 @@
   HOMEPAGE="http://plplot.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="$SPELL/$SPELL-$VERSION"
-       REQ=( "perl libpng jpeg libtool tcl tk gd gtk+"
+       REQ=( "tk gd gtk+"
              "libgnoemui libgnomeprintui:::for GNOME interface to plplot"
              "gnome-python numarray:::for Python interface to plplot"
              "qhull:--with-qhull::use the Qhull library" )

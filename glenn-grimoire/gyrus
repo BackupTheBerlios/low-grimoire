@@ -6,7 +6,7 @@ ATTRIBUTE="gnome"
  HOMEPAGE="http://gyrus.gnome.cl"
    SOURCE="sources/$SPELL/${VERSION:0:3}/$SPELL-$VERSION"
       URL="$GNOME_URL"
-      REQ=( "gnet libglade GConf libgnomeui" )
+      REQ=( "gnet libgnomeui" )
  ESTIMATE="115"
 DESC="This application is a GNOME based tool for the administration of mailboxes in Cyrus-IMAP servers. 
 This application is a GNOME based tool for the administration of mailboxes

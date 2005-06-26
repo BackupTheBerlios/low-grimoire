@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.5.1" )
+ CATEGORY="documentation"
+ATTRIBUTE="kde"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://research.edm.luc.ac.be/jori/klat/klat.html"
+      URL="http://research.edm.luc.ac.be/jori"
+      REQ="kdelibs"
+FRESHMEAT="klat"
+DESC="Klat is a LaTeX editor for KDE 3.
+Klat is a LaTeX editor for KDE 3. It uses a \'kate\' component as its editor.
+It provides a menu to run programs like \'latex\', \'dvips\', \'pdflatex\' etc.
+This menu can be modified by the user: commands can be added, deleted and
+edited. Shortcut keys can be assigned to the defined commands.
+"

@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.schleef.org/swfdec"
       URL="http://www.schleef.org/swfdec/download"
-      REQ=( "gtk+ libmad liboil gstreamer libart_lgpl SDL"
+      REQ=( "libmad liboil gstreamer SDL"
             "mozilla:::build mozilla plugin"
 	    "gdk-pixbuf:::build pixbuf loader"
 	    "gimp:::build gimp plugin" )

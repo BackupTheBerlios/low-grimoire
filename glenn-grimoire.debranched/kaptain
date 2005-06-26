@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://kaptain.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
-      REQ=( "zlib qt-x11-free "
+      REQ=( "qt-x11-free "
             "libpng:::add png support"
             "jpeg:::add jpeg support" )
    OPT[0]="libpng:::add png support"

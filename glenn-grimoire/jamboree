@@ -6,7 +6,7 @@ ATTRIBUTE="gnome"
    SOURCE="sources/$SPELL/$VERSION/$SPELL-$VERSION"
  HOMEPAGE="http://www.imendio.com/projects/jamboree"
       URL="$GNOME_URL"
-      REQ=( "libgnomeui gstreamer intltool GConf libglade esound perl"
+      REQ=( "gstreamer intltool"
             "dbus:--enable-dbus=yes:--enable-dbus=no:enable dbus support" )
 #FRESHMEAT=""
 DESC="Jamboree is a music player for GNOME.

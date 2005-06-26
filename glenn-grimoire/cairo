@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://cairographics.org"
       URL="http://cairographics.org/snapshots
            http://www.freedesktop.org/Cairo/snapshots"
-      REQ=( "XFree86 libpixman freetype"
+      REQ=( "XFree86 libpixman"
             "libpng::--disable-png:add png backend"
             "glitz::--disable-gl:add OpenGL backend" )
    OPT[0]="libpng::--disable-png:add png backend"

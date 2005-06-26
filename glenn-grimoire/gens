@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
  HOMEPAGE="http://gens.consolemul.com"
    SOURCE="$SPELL/$SPELL-rc3"
       URL="$SOURCEFORGE_URL"
-      REQ=( "gtk+ SDL nasm" )
+      REQ=( "gtk+ SDL" )
  ESTIMATE="115"
 DESC="Sega Genesis emulator.
 Sega Genesis emulator.

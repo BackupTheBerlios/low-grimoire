@@ -6,7 +6,7 @@ ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://etherape.sourceforge.net/"
       URL="$SOURCEFORGE_URL"
-      REQ=( "libgnomeui libglade libpcap" )
+      REQ=( "libgnomeui libpcap" )
 #FRESHMEAT=""
 DESC="EtherApe is a graphical network monitor for Unix modeled after etherman.
 EtherApe is a graphical network monitor for Unix modeled after etherman.

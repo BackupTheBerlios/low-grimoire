@@ -6,7 +6,7 @@ ATTRIBUTE="server library"
    SOURCE="dbmix/$SPELL-$VERSION"
  HOMEPAGE="http://dbmix.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "glib gtk+"
+      REQ=( "gtk+"
             "xmms:::make a plugin for xmms" )
    OPT[0]="xmms:::make a plugin for xmms"
 #FRESHMEAT=""

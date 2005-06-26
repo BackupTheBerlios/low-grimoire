@@ -6,7 +6,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://www.coaster-burn.org/libcoaster"
    SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
       URL="http://www.coaster-burn.org/files"
-      REQ=( "libburn GConf gtk+" )
+      REQ=( "libburn GConf" )
  ESTIMATE="115"
 DESC="Libcoaster is a library designed with the goal of central preferences control on burners.
 Libcoaster is a library designed with one goal. Central preferences control

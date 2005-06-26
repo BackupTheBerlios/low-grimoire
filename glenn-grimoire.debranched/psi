@@ -6,7 +6,7 @@ ATTRIBUTE="kde"
  HOMEPAGE="http://psi.affinix.com"
    SOURCE="$SPELL/$SPELL-$VERSION"
       URL="$SOURCEFORGE_URL"
-      REQ=( "qca zlib" )
+      REQ=( "qca" )
      OPTS="--qtdir=/usr"
  ESTIMATE="115"
 #FRESHMEAT=""

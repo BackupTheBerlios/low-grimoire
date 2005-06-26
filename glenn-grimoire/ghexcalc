@@ -6,7 +6,7 @@ ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION-src"
  HOMEPAGE="http://ghexcalc.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "gettext bison libgnomeui" )
+      REQ=( "bison libgnomeui" )
 #FRESHMEAT=""
 DESC="HexCalc is a simple calculator similar to GNOME calculator.
 HexCalc is a simple calculator similar to GNOME calculator. It can do

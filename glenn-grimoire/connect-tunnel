@@ -6,7 +6,7 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/dist/connect-tunnel/"
        URL="http://search.cpan.org/CPAN/authors/id/B/BO/BOOK"
-       REQ=( "perl libwww-perl" )
+       REQ=( "libwww-perl" )
 DESC="Create CONNECT tunnels through HTTP proxies.
 Create CONNECT tunnels through HTTP proxies.
 "

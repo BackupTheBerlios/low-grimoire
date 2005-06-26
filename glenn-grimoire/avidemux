@@ -7,7 +7,7 @@
 #       URL="http://fixounet.free.fr/avidemux/"
        URL="http://download.berlios.de"
   HOMEPAGE="http://fixounet.free.fr/avidemux/"
-       REQ=( "gtk+ glib mad,lib libxml2 nasm"
+       REQ=( "gtk+ libmad libxml2 nasm"
              "XviD:::For Alternate Mpeg-4 Encoding"
              "lame:::For MP3 Encoding"
              "a52dec:::For AC3 Decoding"

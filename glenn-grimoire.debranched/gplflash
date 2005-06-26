@@ -6,7 +6,7 @@ ATTRIBUTE="library x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://gplflash.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "XFree86 jpeg zlib libmad" )
+      REQ=( "XFree86 jpeg libmad" )
 #FRESHMEAT=""
 DESC="A GPL Flash decoding library, with player and mozilla-plugin
 A GPL Flash decoding library, with player and mozilla-plugin

@@ -6,7 +6,7 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ=( "perl Gtk2 gtkspell" )
+       REQ=( "Gtk2 gtkspell" )
 DESC="Perl bindings to the 2.x series of the GtkSpell graphical user interface library.
 Perl bindings to the 2.x series of the GtkSpell graphical user interface
 library.  This module allows you to write perl applications that utilize the

@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.2.5" "0.2.4" )
+  VERSION=( "0.2.6-pre2" "0.2.5" "0.2.4" )
  CATEGORY="game"
 ATTRIBUTE="x11"
 SOURCE[0]="$SPELL-$VERSION"
@@ -8,18 +8,20 @@ SOURCE[1]="d2shar10.tar.gz"
  HOMEPAGE="http://www.icculus.org/d2x"
    URL[0]="http://www.icculus.org/d2x/src"
    URL[1]="http://www.icculus.org/d2x/data"
-      REQ=( "SDL_image nasm"
+      REQ=( "SDL_image"
             "XFree86:--with-opengl::add opengl support"
-            "svgalib:--with-svga::add svgalib support" )
+            "svgalib:--with-svga::add svgalib support"
+            "libggi:--with-ggi::add GGI support" )
    OPT[0]="XFree86:--with-opengl::add opengl support"
    OPT[1]="svgalib:--with-svga::add svgalib support"
-#   OPT[2]=":--with-ggi::add GGI support"
+   OPT[2]="libggi:--with-ggi::add GGI support"
 #FRESHMEAT=""
 DESC="Descent 2 for linux.
 Descent 2 for linux.
 "
 
 build() {
+  LDFLAGS="-L/usr/X11R6/lib"
   unpack $( guess_filename "${SOURCE[1]}" "$SOURCE_CACHE/$SPELL/$VERSION" ) &&
   ./configure --prefix=/usr              \
               --bindir=/usr/games        \

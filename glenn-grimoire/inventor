@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/download/$SPELL-$VERSION.src.tar.gz"
  HOMEPAGE="http://oss.sgi.com/projects/inventor"
       URL="ftp://oss.sgi.com/projects"
-      REQ=( "x11 lesstif freetype" )
+      REQ=( "lesstif freetype" )
 FRESHMEAT="openinventor"
 DESC="Open InventorTM is an object-oriented 3D toolkit offering a comprehensive solution to interactive graphics programming problems.
 Open InventorTM is an object-oriented 3D toolkit offering a comprehensive

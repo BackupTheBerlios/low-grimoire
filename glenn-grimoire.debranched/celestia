@@ -6,7 +6,7 @@ ATTRIBUTE="gnome"
    SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
  HOMEPAGE="http://www.shatters.net/celestia"
       URL="$SOURCEFORGE_URL"
-      REQ=( "zlib jpeg gtkglext libgnomeui" )
+      REQ=( "gtkglext libgnomeui" )
 #	    "arts kdelibs:::for kde frontend")
 #	    "gtkglext libgnomeui:::for gnome frontend")
      OPTS="--with-gnome"

@@ -6,7 +6,7 @@ ATTRIBUTE="gnome x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://mange.dynup.net/linux.html"
       URL="http://mange.dynup.net/linux"
-      REQ=( "gtk+ pango gdk-pixbuf gettext" )
+      REQ=( "gtk+ gdk-pixbuf gettext" )
 FRESHMEAT="gproftpd"
 DESC="GProftpd is a fast and easy to use GTK+ administration tool for the Proftpd standalone server.
 GProftpd is a fast and easy to use GTK+ administration tool for the

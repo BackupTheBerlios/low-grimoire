@@ -6,7 +6,7 @@ ATTRIBUTE="console library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.opensc.org"
       URL="http://www.opensc.org/files/"
-      REQ=( "pcsc-lite libxslt openssl readline flex"
+      REQ=( "pcsc-lite libxslt openssl readline"
             "openct:--with-openct=/usr::add openct support"
             "openldap:--enable-ldap --disable-ldap-ssl::for LDAP support"
             "Linux-PAM:--with-pam::add PAM support" )

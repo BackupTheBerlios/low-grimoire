@@ -6,7 +6,7 @@ ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://sylpheed-claws.sourceforge.net/plugins.php"
       URL="http://sylpheed-claws.sourceforge.net/downloads"
-      REQ=( "sylpheed-claws perl" )
+      REQ=( "sylpheed-claws" )
 #FRESHMEAT=""
 DESC="Plugin to provide perl support in filters  to sylpheed-claws.
 Plugin to provide perl support in filters to sylpheed-claws.

@@ -6,7 +6,7 @@
     SOURCE="finance-quote/$SPELL-$VERSION"
   HOMEPAGE="http://finance-quote.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ=( "perl HTML-TableExtract" )
+       REQ=( "HTML-TableExtract" )
 DESC="Finance::Quote is a perl module which can be used to obtain financial information from a variety of sources
 Finance::Quote is a perl module which can be used to obtain information
 from a variety of sources, including markets in Australia, USA, Canada,

@@ -6,7 +6,7 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://gisle.aas.no"
        URL="http://search.cpan.org/CPAN/authors/id/G/GA/GAAS"
-       REQ=( "perl HTML-Tagset" )
+       REQ=( "HTML-Tagset" )
 DESC="HTML parser class.
 HTML parser class.
 "

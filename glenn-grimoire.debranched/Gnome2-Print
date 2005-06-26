@@ -6,7 +6,7 @@
     SOURCE="gtk2-perl/$SPELL-$VERSION"
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
-       REQ=( "Gnome2 libxml2 libgnomeprintui " )
+       REQ=( "Gnome2 libgnomeprintui " )
 DESC="The Gnome2 module allows a perl developer to use Gnome's Print libraries.
 The Gnome2 module allows a perl developer to use Gnome's Print libraries.
 "

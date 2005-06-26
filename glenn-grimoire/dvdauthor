@@ -6,7 +6,7 @@ ATTRIBUTE="console"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://dvdauthor.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "libxml2 ImageMagick libdvdread fribidi freetype" )
+      REQ=( "ImageMagick libdvdread fribidi" )
 FRESHMEAT="dvdauthor"
 DESC="A simple set of tools to help you author a DVD.
 A simple set of tools to help you author a DVD. The idea is to be able to
