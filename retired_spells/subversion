@@ -1,12 +1,12 @@
   VERSION=( "1.0.1" "1.0.0" "0.36.1" "0.35.1" "0.24.2" )
-  CATEGORY="development"
-  ATTRIBUTE="console"
-  HOMEPAGE="http://subversion.tigris.org"
-  URL="http://subversion.tigris.org/tarballs"
-  REQ="httpd neon zlib openssl"
-  OPT="db:--with-berkeley-db::db support"
-  FRESHMEAT="subversion"
-  ESTIMATE=279
+ CATEGORY="development"
+ATTRIBUTE="console"
+ HOMEPAGE="http://subversion.tigris.org"
+      URL="http://subversion.tigris.org/tarballs"
+      REQ=( "httpd neon openssl"
+            "db:--with-berkeley-db::db support" )
+FRESHMEAT="subversion"
+ ESTIMATE=279
 DESC="Version Control rethought.
 
   The goal of the Subversion project is to build a

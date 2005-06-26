@@ -3,7 +3,7 @@
  ATTRIBUTE="utility x11"
   HOMEPAGE="http://www.rbt.ca/autodoc"
        URL="http://www.rbt.ca/autodoc/binaries"
-       REQ=( "DBI DBD-Pg docbook-dtd HTML-Template perl postgresql"
+       REQ=( "DBD-Pg docbook-dtd HTML-Template"
              "dia:::For outputting results to be used in dia" )
  FRESHMEAT="Postgresql AutoDoc"
   ESTIMATE=8

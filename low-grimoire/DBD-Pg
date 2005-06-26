@@ -3,7 +3,7 @@
  ATTRIBUTE="perl"
   HOMEPAGE="http://search.cpan.org/~dwheeler/DBD-Pg-$VERSION"
        URL="http://search.cpan.org/CPAN/authors/id/D/DW/DWHEELER"
-       REQ="DBI perl postgresql"
+       REQ="DBI postgresql"
   ESTIMATE="26"
 DESC="Pg extension for DBD
 
@@ -11,9 +11,8 @@ Pg extension for DBD
 "
 
 build() {
-perl  Makefile.PL  &&
-make               &&
-prepare_install    &&
-make    install
-
+  perl  Makefile.PL  &&
+  make               &&
+  prepare_install    &&
+  make    install
 }

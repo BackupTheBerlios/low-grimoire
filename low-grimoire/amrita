@@ -3,7 +3,7 @@
  ATTRIBUTE="development"
   HOMEPAGE="http://www.brain-tokyo.jp/research/amrita/index.html"
        URL="http://www.brain-tokyo.jp/research/amrita"
-       REQ="ruby strscan"
+       REQ="strscan"
   ESTIMATE="5"
 DESC="Amrita is an html/xhtml template library for Ruby
 

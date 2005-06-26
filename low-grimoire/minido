@@ -4,7 +4,7 @@
     SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://opdenacker.org/minido"
        URL="http://opdenacker.org/minido/releases"
-       REQ="glib gtk+ libxml2"
+       REQ="gtk+ libxml2"
   ESTIMATE="161"
  FRESHMEAT="minido"
 DESC="minido is a simple, generic, multi-user, database-free todo list manager and tracking system

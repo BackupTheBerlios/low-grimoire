@@ -6,7 +6,7 @@
     SOURCE="autopoweroff/autopoweroff-$VERSION"
   ESTIMATE=8
  FRESHMEAT="autopoweroff"
-       REQ="Python perl gnome-libs"
+       REQ="Python gnome-libs"
 DESC=" Autopoweroff is a python script that is started at boot time, and which function is to shutdown the computer at a specific time, but only if some conditions are met
 
 Autopoweroff is a script that shuts down a computer at a specific time, 
@@ -17,7 +17,6 @@ computers which depend on the server for Internet access have been shut down.
 "
 
 build() {
-
   ./configure  --prefix=/usr              \
                --sysconfdir=/etc     	  \
                --localstatedir=/var       \
@@ -25,5 +24,4 @@ build() {
                $OPTS                 &&
   prepare_install  &&
   make    install  
-   
 }

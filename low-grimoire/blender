@@ -4,7 +4,7 @@ ATTRIBUTE="x11"
    SOURCE="source/blender-$VERSION"
       URL="http://download.blender.org"
  HOMEPAGE="http://www.blender.org"
-      REQ=( "egenix-mx-base xfree86 openal openssl Python jpeg libpng zlib mozilla glut SDL"
+      REQ=( "egenix-mx-base mozilla xfree86 openal openssl jpeg libpng glut SDL"
             "libogg:::for ogg support" )
  ESTIMATE=2714
 FRESHMEAT="blender"
@@ -16,7 +16,6 @@ interface (those are always good).
 "
 
 build() {
-
   ./configure  --build=$BUILD        \
                --prefix=/usr         \
                --sysconfdir=/etc     \
@@ -26,5 +25,4 @@ build() {
   make                               &&
   prepare_install                    &&
   make    install
-
 }

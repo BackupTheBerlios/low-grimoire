@@ -4,7 +4,7 @@
   HOMEPAGE="http://txt2html.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="txt2html/txt2html-$VERSION"
-       REQ="ExtUtils-configPL perl"
+       REQ="ExtUtils-configPL"
   ESTIMATE=14
  FRESHMEAT="txt2html"
 DESC="Converts plain text to html
