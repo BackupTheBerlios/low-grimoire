@@ -1,6 +1,6 @@
    VERSION=( "0.82" "0.81" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
+  CATEGORY="development"
+ ATTRIBUTE="library python"
   HOMEPAGE="http://www.andrewchatham.com/pyogg"
     SOURCE="$SPELL-$VERSION"
        URL="http://www.andrewchatham.com/pyogg/download"

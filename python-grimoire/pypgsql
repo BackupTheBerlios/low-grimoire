@@ -1,6 +1,6 @@
    VERSION=( "2.4" "2.3" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
+  CATEGORY="development"
+ ATTRIBUTE="library python"
   HOMEPAGE="http://pypgsql.sourceforge.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="pypgsql/pyPgSQL-$VERSION"

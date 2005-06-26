@@ -1,6 +1,6 @@
    VERSION=( "0.5.3" "0.5.2" "0.5.1" "0.4.1" "0.4" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
+  CATEGORY="development"
+ ATTRIBUTE="library python"
   HOMEPAGE="http://spacepants.org/src/pymad/"
        URL="http://spacepants.org/src/pymad/download/"
        REQ="Python libmad"
@@ -15,7 +15,6 @@ of cake.
 "
 
 build() {
-
     python config_unix.py --prefix /usr		&&
     python setup.py build			&&
     prepare_install                 		&&

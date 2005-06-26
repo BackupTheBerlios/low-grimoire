@@ -1,6 +1,6 @@
    VERSION=( "1.4" "1.2" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
+  CATEGORY="development"
+ ATTRIBUTE="library python"
   HOMEPAGE="http://www.andrewchatham.com/pyogg"
     SOURCE="$SPELL-$VERSION"
        URL="http://www.andrewchatham.com/pyogg/download"
@@ -13,7 +13,6 @@ a 5-line ogg player.
 "
 
 build() {
-
     python config_unix.py --prefix /usr		&&
     python setup.py build			&&
     prepare_install                 		&&

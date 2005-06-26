@@ -1,6 +1,6 @@
   VERSION=( "1.2.7b" "1.2.5" "1.2.4b" "1.2.2" "1.2.1" "1.2.0" )
  CATEGORY="file-share"
-ATTRIBUTE="x11"
+ATTRIBUTE="x11 python"
       URL="http://www.sensi.org/~ak"
    SOURCE="pyslsk/pyslsk-$VERSION"
  HOMEPAGE="http://www.sensi.org/~ak/pyslsk/"
@@ -15,6 +15,7 @@ A filesharing p2p network.
 "
 
 build() {
-  prepare_install                          &&
+  python setup.py build                &&
+  prepare_install                      &&
   python setup.py install --prefix=/usr
 }

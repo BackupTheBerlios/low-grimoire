@@ -1,6 +1,6 @@
    VERSION=( "0.4.4" "0.4.3" )
-  CATEGORY="library python"
- ATTRIBUTE="library"
+  CATEGORY="network"
+ ATTRIBUTE="library python"
     SOURCE="$SPELL/$SPELL-$VERSION.tar.gz"
        URL="http://miketeo.net/projects"
   HOMEPAGE="http://miketeo.net/projects/pysmb"
@@ -16,13 +16,10 @@ with Windows 2000 and Windows XP in version 0.3.1 and earlier. Version
 "
 
 build() {
-
   prepare_install        &&
   install nmb.py smb.py /usr/lib/python$(augur version Python | cut -d. -f 1-2)/site-packages/
-
 }
 
 post_remove() {
-rm /usr/lib/python2.2/site-packages/nmb.pyc smb.pyc
-
+  rm /usr/lib/python2.2/site-packages/nmb.pyc smb.pyc
 }

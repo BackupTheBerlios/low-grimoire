@@ -1,6 +1,6 @@
    VERSION=( "2.0.1a3" "2.0.0" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
+  CATEGORY="development"
+ ATTRIBUTE="library python"
   HOMEPAGE="http://simpleparse.sf.net"
        URL="$SOURCEFORGE_URL"
     SOURCE="simpleparse/SimpleParse-$VERSION"
