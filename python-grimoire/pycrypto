@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.amk.ca/python/code/crypto"
       URL="http://www.amk.ca/files/python/crypto"
-      REQ=( "Python gmp" )
+      REQ=( "Python" )
 #FRESHMEAT=""
 DESC="The Toolkit is a collection of cryptographic algorithms and protocols, implemented for use from Python.
 The Toolkit is a collection of cryptographic algorithms and protocols,

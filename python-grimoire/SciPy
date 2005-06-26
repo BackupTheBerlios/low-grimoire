@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.scipy.org"
       URL="http://www.scipy.org/download/scipy/src/packagers"
-      REQ=( "x11 Scipy_core F2PY clapack"
+      REQ=( "Scipy_core F2PY clapack"
             "fftw:::enable fftw support"
             "wxPython:::build wx gui"
             "swig:::for building chaco" )
