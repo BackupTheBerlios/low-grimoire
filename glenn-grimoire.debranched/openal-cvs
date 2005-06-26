@@ -4,7 +4,7 @@ inherit openal
 unset URL SOURCE
   VERSION=( "cvs" )
 ATTRIBUTE="cvs $ATTRIBUTE"
-      REQ=( "cvs autoconf automake" )
+      REQ=( "cvs automake" )
    ASSUME="off"
  EPROVIDE="openal"
 #FRESHMEAT=""

@@ -4,7 +4,7 @@ inherit gift-gnutella
 unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs $ATTRIBUTE"
-      REQ=( "cvs autoconf automake giftd" )
+      REQ=( "cvs automake giftd" )
  EPROVIDE="gift-gnutella"
    ASSUME="off"
  ESTIMATE="763"

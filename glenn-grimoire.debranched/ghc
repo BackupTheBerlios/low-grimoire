@@ -1,12 +1,12 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "6.0.1" )
+   VERSION=( "6.4" "6.0.1" )
   CATEGORY="compiler"
  ATTRIBUTE="console"
     SOURCE="$VERSION/$SPELL-$VERSION-src"
   HOMEPAGE="http://www.haskell.org/ghc"
        URL="http://www.haskell.org/ghc/dist"
-       REQ=( "readline ncurses ghc-bin flex bison glib gtk+ pango"
+       REQ=( "readline ncurses ghc-bin flex bison gtk+"
              "glut:--enable-hopengl::add openGL support" )
     OPT[0]="glut:--enable-hopengl::add openGL support"
 FRESHMEAT="ghc"

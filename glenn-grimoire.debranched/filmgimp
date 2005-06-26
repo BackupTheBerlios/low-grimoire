@@ -6,7 +6,7 @@ ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://filmgimp.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "gtk+ tiff jpeg libpng " )
+      REQ=( "gtk+" )
 #FRESHMEAT=""
 DESC="Film Gimp is a motion picture editing tool.
 Film Gimp is a motion picture editing tool primarily used for painting and

@@ -5,7 +5,7 @@ unset SOURCE URL
   VERSION=( "cvs" )
 ATTRIBUTE="cvs $ATTRIBUTE"
  HOMEPAGE="http://www.freedesktop.org/Software/waimea"
-      REQ=( "cvs autoconf automake expat cairo"
+      REQ=( "cvs automake cairo"
             "libpng:::add png support"
             "libsvg-cairo:::add svg support" )
    OPT[0]="libpng:::add png support"
