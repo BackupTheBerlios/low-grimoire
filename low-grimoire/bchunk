@@ -1,8 +1,9 @@
-   VERSION=( "1.1.1" )
+   VERSION=( "1.2.0" "1.1.1" )
   CATEGORY="utility cd"
  ATTRIBUTE="console"
-  HOMEPAGE="http://hes.iki.fi/bchunk"
-       URL="http://hes.iki.fi/bchunk"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://he.fi/bchunk"
+       URL="http://he.fi"
  FRESHMEAT="bchunk"
 DESC="bchunk, an Unix version of the BinChunker utility, converts CD images in the raw BIN/CUE format
 
@@ -12,11 +13,9 @@ tracks are written in CDR (native CD audio) or WAV format.
 "
 
 build() {
-
   sed -i "s:-Wall -Wstrict-prototypes -O2:$CFLAGS:" Makefile
   sed -i "s:/local::" Makefile
   make             &&
   prepare_install  &&
-  make    install  
-   
+  make    install   
 }
