@@ -1,0 +1,28 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7" )
+ CATEGORY="utility cd"
+ATTRIBUTE="console kernel python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://cdemu.sourceforge.net"
+#      URL="http://robert.private.outertech.com/virtualcd"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "linux Python" )
+#FRESHMEAT=""
+DESC="CDemu is a kernel module designed to simulate a CD drive + CD with just simple cue/bin files.
+CDemu is a kernel module for Linux. It is designed to simulate a CD drive +
+CD with just simple cue/bin files, which are pretty common in the Windows
+world. It includes an user space program to control the kernel module. You
+can use it to watch an SVCD or mount the data track of an bin/cue.
+"
+
+patch_source() {
+  sed -i '60iint cdemu_block_ioctl(struct inode *inode, struct file *file, unsigned cmd, unsigned long arg);\n' cdemu.c
+}
+
+build() {
+  patch_source    &&
+  make            &&
+  prepare_install &&
+  make install
+}
