@@ -1,28 +1,20 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.0.9" "2.0.5" "2.0.2" "2.0.1" )
+  VERSION=( "2.2.0" "2.0.9" "2.0.5" "2.0.2" "2.0.1" )
  CATEGORY="library"
 ATTRIBUTE="library"
    SOURCE="osip/$SPELL-$VERSION"
- HOMEPAGE="http://www.fsf.org/software/osip/osip.html"
+ HOMEPAGE="http://www.gnu.org/software/osip"
       URL="$GNU_URL"
-      REQ=""
+      REQ=( "" )
+     OPTS="--enable-gpref --enable-pthread --enable-md5"
 #FRESHMEAT=""
 DESC="The GNU oSIP library (version 2) is an implementation of SIP - rfc3261.
 The GNU oSIP library (version 2) is an implementation of SIP - rfc3261.
 "
 
 build() {
-
-  
-  ./configure --prefix=/usr              \
-	      --enable-gpref             \
-	      --enable-pthread           \
-              $OPTS                      &&
-  make                                   &&
-  prepare_install                        &&
-  make install                           &&
-  mkdir -p /usr/doc/$SPELL               &&
+  default_build              &&
+  mkdir -p /usr/doc/$SPELL   &&
   cp -R help /usr/doc/$SPELL
-
 }
