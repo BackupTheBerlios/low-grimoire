@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.16" )
+ CATEGORY="network"
+ATTRIBUTE="library"
+   SOURCE="common/common-$VERSION"
+ HOMEPAGE="http://www-mice.cs.ucl.ac.uk/multimedia/software/common"
+      URL="http://www-mice.cs.ucl.ac.uk/multimedia/software"
+#      REQ=( "" )
+     OPTS="--enable-ipv6"
+#FRESHMEAT=""
+DESC="Common Multimedia Library
+Common Multimedia Library implements: Base64 encoding/decoding, Binary tree 
+Random number, HMAC authentication, MD5, DES, RTP, MBus, SAP, SDP
+"
+
+build() {
+  ./configure --prefix=/usr \
+              $OPTS         &&
+  make                      &&
+  prepare_install           &&
+  install -o root -g root -m 644 src/libuclmmbase.a /usr/lib &&
+  mkdir -p /usr/include/$SPELL                               &&
+  install -o root -g root -m 644 src/*.h /usr/include/$SPELL &&
+  mkdir -p /usr/share/$SPELL                                 &&
+  install -o root -g root -m 644 $(find examples|grep '\.c$') /usr/share/$SPELL
+}

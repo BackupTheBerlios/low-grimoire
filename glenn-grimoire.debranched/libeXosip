@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.0" )
+ CATEGORY="telephony"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://savannah.nongnu.org/projects/exosip"
+      URL="http://savannah.nongnu.org/download/exosip"
+      REQ=( "libosip2 ncurses"
+            "uclmmbase:--enable-ucl::add support for ucl"
+            "glib:--enable-glib::compile josua with glib" )
+     OPTS="--enable-josua --enable-tools"
+#FRESHMEAT=""
+DESC="eXosip is a library that hides the complexity of using the SIP protocol for mutlimedia session establishement.
+eXosip is a library that hides the complexity of using the SIP protocol for
+mutlimedia session establishement.
+"
+
+build() {
+  sed -i 's:local/::' josua/Makefile.in miniua/Makefile.in phapi/Makefile.in &&
+  default_build
+}
