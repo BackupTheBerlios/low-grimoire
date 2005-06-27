@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="pyx/$SPELL-$VERSION"
+ HOMEPAGE="http://pyx.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="PyX is a Python package to create encapsulated PostScript figures.
+PyX is a Python package to create encapsulated PostScript figures.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

@@ -1,0 +1,18 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.1.2" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION.tgz"
+ HOMEPAGE="http://christophe.delord.free.fr/en/pylog"
+      URL="http://christophe.delord.free.fr/soft/pylog"
+      REQ=( "TPG" )
+#FRESHMEAT=""
+DESC="PyLog is a first order logic library including a PROLOG engine in Python.
+PyLog is a first order logic library including a PROLOG engine in Python.
+"
+
+build() {
+  prepare_install       &&
+  python install-PyLog-2.1.2.py
+}

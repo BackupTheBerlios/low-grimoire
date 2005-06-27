@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.4.9" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://starship.python.net/~hinsen/ScientificPython"
+      URL="http://starship.python.net/~hinsen"
+      REQ=( "Numeric netcdf" )
+#FRESHMEAT=""
+DESC="ScientificPython is a collection of Python modules that are useful for scientific computing.
+ScientificPython is a collection of Python modules that are useful for
+scientific computing.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

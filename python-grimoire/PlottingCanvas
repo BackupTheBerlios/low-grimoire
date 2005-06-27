@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.5" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.physik.tu-dresden.de/~baecker/python/plot.html"
+      URL="http://www.physik.tu-dresden.de/~baecker/python"
+      REQ=( "wxPython" )
+#FRESHMEAT=""
+DESC="Plotting Module for wxPython.
+Plotting Module for wxPython.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

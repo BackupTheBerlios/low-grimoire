@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6.0.1" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://pygraphlib.sourceforge.net"
+      URL="http://pygraphlib.sourceforge.net/dist"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="pygraphlib - Python Graph Library
+pygraphlib - Python Graph Library
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

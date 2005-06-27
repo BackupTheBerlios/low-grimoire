@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.6.4" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/python2-$SPELL-$VERSION"
+ HOMEPAGE="http://biggles.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python x11 plotutils" )
+#FRESHMEAT=""
+DESC="Biggles is a Python module for creating publication-quality 2D scientific plots.
+Biggles is a Python module for creating publication-quality 2D scientific
+plots.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

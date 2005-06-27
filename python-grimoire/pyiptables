@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1" )
+ CATEGORY="networking"
+ATTRIBUTE="library python"
+ HOMEPAGE="http://www.ailis.de/~k/software/projects/pyiptables"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+      URL="http://www.ailis.de/~k/software/projects"
+      REQ=( "Python" )
+ ESTIMATE="115"
+DESC="Python interface to iptables.
+Python interface to iptables.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
