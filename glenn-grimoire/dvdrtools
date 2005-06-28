@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="dvd"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.nongnu.org/dvdrtools"
+      URL="http://savannah.nongnu.org/download"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="dvdrtools is a fork of cdrtools, with the primary goal of supporting writable DVD drives.
+dvdrtools is a fork of cdrtools, with the primary goal of supporting writable DVD drives.
+"
