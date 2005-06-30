@@ -9,7 +9,7 @@ ATTRIBUTE="server client"
       REQ=( "openssl lzo"
 	    "iproute2:--enable-iproute2::Enable support for iproute2" )
      OPTS="--enable-password-save "
-#FRESHMEAT=""
+FRESHMEAT="openvpn"
 DESC="OpenVPN is a full-featured SSL VPN solution.
 OpenVPN is a full-featured SSL VPN solution which can accomodate a wide
 range of configurations, including remote access, site-to-site VPNs, WiFi

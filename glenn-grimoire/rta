@@ -8,7 +8,7 @@ ATTRIBUTE="server"
       URL="http://www.runtimeaccess.com"
       REQ=( "flex bison"
             "fuse:::build rtafs" )
-#FRESHMEAT=""
+FRESHMEAT="rta"
 DESC="RTA gives you run time access to the data in your program.
 RTA gives you run time access to the data in your program.
 It is intended for embedded system developers and can 

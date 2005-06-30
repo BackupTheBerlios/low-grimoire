@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://gtranslator.sourceforge.net"
       URL="$GNOME_URL"
       REQ=( "libgnomeui gtkspell" )
-#FRESHMEAT=""
+FRESHMEAT="gtranslator"
 DESC="gtranslator is an enhanced gettext po file editor for the GNOME desktop environment.
 gtranslator is an enhanced gettext po file editor for the GNOME desktop
 environment. It handles all forms of gettext po files like compiled gettext

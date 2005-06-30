@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://www.packetfactory.net/projects/firewalk"
       URL="http://www.packetfactory.net/firewalk/dist"
       REQ=( "libdnet libpcap libnet" )
-#FRESHMEAT=""
+FRESHMEAT="firewalk"
 DESC="Firewalk is an active reconnaissance network security tool that attempts to determine what layer 4 protocols a  given IP forwarding device will pass.
 Firewalk is an active reconnaissance network security tool that attempts to
 determine what layer 4 protocols a  given IP forwarding device will pass.

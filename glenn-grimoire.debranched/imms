@@ -11,7 +11,7 @@ ATTRIBUTE="library"
             "taglib:--with-taglib::enable id3 media tags"
             "libvorbis:--with-vorbis::enable vorbis support" )
       OPTS="--with-screensaver"
-#FRESHMEAT=""
+FRESHMEAT="imms"
 DESC="IMMS is an adaptive playlist framework that tracks your listening patterns and dynamically adapts to your taste. 
 IMMS is an adaptive playlist framework that tracks your listening patterns
 and dynamically adapts to your taste. 

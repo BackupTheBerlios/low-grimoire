@@ -7,7 +7,7 @@ ATTRIBUTE="library"
  HOMEPAGE="http://libvisual.sourceforge.net/v2"
       URL="$SOURCEFORGE_URL"
 #      REQ=( "" )
-#FRESHMEAT=""
+FRESHMEAT="libvisual"
 DESC="Libvisual is an abstraction library that comes between applications and audio visualisation plugins.
 Libvisual is an abstraction library that comes between applications and
 audio visualisation plugins.

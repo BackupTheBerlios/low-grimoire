@@ -9,7 +9,7 @@ ATTRIBUTE="server"
       REQ=( "zlib libdnet libpcap libevent ncurses readline"
             "rrdtool:::for graphing of logs"
             "python:--with-python::support for python services" )
-#FRESHMEAT=""
+FRESHMEAT="honeyd"
 DESC="Honeyd is a small daemon that creates virtual hosts on a network.
 Honeyd is a small daemon that creates virtual hosts on a network. The hosts
 can be configured to run arbitrary services, and their personality can be

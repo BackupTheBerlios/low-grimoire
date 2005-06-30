@@ -10,6 +10,7 @@
              "libgnoemui libgnomeprintui:::for GNOME interface to plplot"
              "gnome-python numarray:::for Python interface to plplot"
              "qhull:--with-qhull::use the Qhull library" )
+ FRESHMEAT="plplot"
   ESTIMATE="557"
       DESC="plplot is a scientific plotting package.
 

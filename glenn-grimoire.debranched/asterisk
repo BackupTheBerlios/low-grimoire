@@ -15,7 +15,7 @@ ATTRIBUTE="server"
             "mysql:::add mysql support"
             "sqlite:::add sqlite support"
             "unixODBC:::add odbc support" )
-#FRESHMEAT=""
+FRESHMEAT="asterisk"
 DESC="Asterisk is a complete PBX in software.
 Asterisk is a complete PBX in software. It runs on Linux and provides all
 of the features you would expect from a PBX and more. Asterisk does voice

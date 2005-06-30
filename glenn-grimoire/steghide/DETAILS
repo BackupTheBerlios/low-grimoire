@@ -7,7 +7,7 @@ ATTRIBUTE="console"
  HOMEPAGE="http://steghide.sourceforge.net"
       URL="$SOURCEFORGE_URL"
       REQ=( "gettext mhash libmcrypt" )
-#FRESHMEAT=""
+FRESHMEAT="steghide"
 DESC="Steghide is a steganography program which embeds a secret message in a cover file
 Steghide is a steganography program which embeds a secret message in a
 cover file by replacing some of the least significant bits of the cover

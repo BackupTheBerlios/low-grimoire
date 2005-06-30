@@ -7,6 +7,7 @@
   HOMEPAGE="http://gtk2-perl.sourceforge.net"
        URL="$SOURCEFORGE_URL"
        REQ=( "libgnomeui Gnome2-VFS" )
+ FRESHMEAT="gnome2-perl"
 DESC="The Gnome2 module allows a perl developer to use the Gnome libraries.
 The Gnome2 module allows a perl developer to use the Gnome libraries.
 "
