@@ -1,0 +1,50 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "4.4" "4.2" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$VERSION/$SPELL-$VERSION-LatestRelease"
+ HOMEPAGE="http://public.kitware.com/VTK"
+      URL="http://www.vtk.org/files/release"
+      REQ=( "cmake expat jpeg libpng tiff zlib Python" )
+#            "Python:::build python wrappers" )
+FRESHMEAT="vtk"
+DESC="The Visualization ToolKit (VTK) is a system for 3D computer graphics, image processing, and visualization.
+The Visualization ToolKit (VTK) is an open source, freely available
+software system for 3D computer graphics, image processing, and
+visualization used by thousands of researchers and developers around the
+world. VTK consists of a C++ class library, and several interpreted
+interface layers including Tcl/Tk, Java, and Python.
+"
+
+build() {
+  mkdir build                                &&
+  cd build                                   &&
+  cmake ../VTK                               \
+        -DBUILD_DOCUMENTATION:BOOL=ON        \
+        -DBUILD_EXAMPLES:BOOL=ON             \
+	-DBUILD_SHARED_LIBS:BOOL=ON          \
+	-DCMAKE_BUILD_TYPE:STRING=Release    \
+	-DCMAKE_INSTALL_PREFIX:PATH=/usr     \
+	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON     \
+	-DVTK_USE_SYSTEM_EXPAT:BOOL=ON       \
+	-DVTK_USE_SYSTEM_JPEG:BOOL=ON        \
+	-DVTK_USE_SYSTEM_PNG:BOOL=ON         \
+	-DVTK_USE_SYSTEM_TIFF:BOOL=ON        \
+	-DVTK_USE_SYSTEM_ZLIB:BOOL=ON        \
+	-DSITE:STRING=Sorcerer               \
+	-DVTK_DISABLE_TK_INIT:BOOL=ON        \
+	-DVTK_USE_DISPLAY:BOOL=OFF           \
+	-DVTK_USE_HYBRID:BOOL=ON             \
+	-DVTK_USE_PARALLEL:BOOL=ON           \
+	-DVTK_USE_PATENTED:BOOL=ON           \
+	-DVTK_USE_RENDERING:BOOL=ON          \
+	-DVTK_WRAP_PYTHON:BOOL=ON            \
+	-DX11_X11_INCLUDE_PATH:PATH=/usr/X11R6/include
+  make                                       &&
+  prepare_install                            &&
+  make install                               &&
+  ( cd Wrapping/Python && python setup.py install ) &&
+  mkdir -p /usr/share/$SPELL                 &&
+  cp -r ../VTK/Examples /usr/share/$SPELL
+}
