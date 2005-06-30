@@ -6,7 +6,7 @@ ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.cmake.org"
       URL="http://www.cmake.org/files/v2.0"
-      REQ=( "curl nucurses" )
+      REQ=( "curl ncurses" )
 #FRESHMEAT=""
 DESC="Cross platform make system.
 Cross platform make system.
