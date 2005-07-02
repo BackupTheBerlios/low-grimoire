@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.34" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.lcdf.org/type"
+      URL="http://www.lcdf.org/type"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="The LCDF Typetools package contains several programs for manipulating fonts.
+The LCDF Typetools package contains several programs for manipulating
+PostScript Type 1, Type 1 multiple master, and PostScript-flavored OpenType
+fonts.  LCDF Typetools includes the mmafm and mmpfb programs, which were
+formerly distributed as part of a different package (mminstance).
+"

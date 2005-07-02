@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "370" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="freeimage/$SPELL$VERSION.zip"
+ HOMEPAGE="http://freeimage.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="FreeImage is a library project for developers who would like to support popular graphics image formats.
+FreeImage is a library project for developers who would like to support
+popular graphics image formats (PNG, JPEG, TIFF, BMP and others). Some
+highlights are: extremely simple in use, not limited to the local PC
+(unique FreeImageIO) and Plugin driven!
+"
+
+build() {
+  cd $SPELL     &&
+  make          &&
+  make -f Makefile.fip &&
+  prepare_install      &&
+  make install         &&
+  make -f Makefile.fip install &&
+  cp Source/FreeImage.h Wrapper/FreeImagePlus/FreeImagePlus.h /usr/include
+}

@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.5.2-3" )
+ CATEGORY="development graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-devel-$VERSION"
+ HOMEPAGE="http://www.openrm.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "jpeg" )
+#FRESHMEAT=""
+DESC="2D/3D Scene Graph rendering engine for Linux/Unix/Win32 layered atop OpenGL.
+2D/3D Scene Graph rendering engine for Linux/Unix/Win32 layered atop OpenGL
+. Supports stereoscopy, volume rendering, 2D/3D texture mapping, picking,
+LOD and view-dependent operations, cross-platform text, constant-rate
+rendering and image-based data.
+"
+
+build() {
+  make linux      &&
+  prepare_install &&
+  make INSTALL_DIR=/usr install
+}

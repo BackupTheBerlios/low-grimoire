@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.50-1" )
+ CATEGORY="development"
+ATTRIBUTE="library"
+   SOURCE="qccpack/$SPELL-$VERSION"
+ HOMEPAGE="http://QccPack.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+#      REQ=( "" )
+#FRESHMEAT=""
+DESC="QccPack provides an open-source collection of library routines and utility programs for quantization, compression, and coding of data.
+QccPack provides an open-source collection of library routines and utility
+programs for quantization, compression, and coding of data.
+"
+
+build() {
+  sed -e "s:^QCCPACK =.*:QCCPACK = `pwd`:" \
+      -e 's:^QCCPACK_INSTALL =.*:QCCPACK_INSTALL = /usr:' \
+      -i QccPack.config.linux               &&
+  ln -s QccPack.config.linux QccPack.config &&
+  imake           &&
+  make Makefiles  &&
+  make            &&
+  prepare_install &&
+  make install
+}
