@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION-src"
+ HOMEPAGE="http://pymerase.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Pymerase is a tool intended to generate a python object model, relational database, and an object-relational model connecting the two.
+Pymerase is a tool intended to generate a python object model, relational
+database, and an object-relational model connecting the two. However it has
+been extended to also output webpages and can be easily extended to output
+whatever else you might like.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

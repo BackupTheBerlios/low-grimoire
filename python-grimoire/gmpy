@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "10" )
+ CATEGORY="development math"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-sources-$VERSION.zip"
+ HOMEPAGE="http://gmpy.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python gmp" )
+#FRESHMEAT=""
+DESC="Initially, a new module interfacing GMP 3 to Python 2; later, possibly, other modules for high-precision Python computations.
+Initially, a new module interfacing GMP 3 to Python 2; later, possibly,
+other modules for high-precision Python computations.
+"
+
+build() {
+  cd $SPELL             &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

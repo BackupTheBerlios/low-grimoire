@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.3.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pyparsing.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="pyparsing is a general parsing module for Python.
+pyparsing is a general parsing module for Python. Grammars are implemented
+directly in the client code using parsing objects, instead of externally,
+as with lex/yacc-type tools. Includes simple examples for parsing SQL,
+CORBA IDL, and 4-function math.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

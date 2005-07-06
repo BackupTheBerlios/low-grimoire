@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://dkbza.org/pype.html"
+      URL="http://dkbza.org"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="pype is a Python module to read and work with PE files.
+pype is a Python module to read and work with PE files. Most of the
+information in the PE Header is accessible, as well as all the sections,
+section's information and data.
+"
+
+build() {
+  PYVER=$(augur version Python | cut -d. -f1-2)
+  prepare_install       &&
+  cp pype.py /usr/lib/python${PYVER}/site-packages
+}

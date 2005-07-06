@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.10" )
+ CATEGORY="development graphic"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://dkbza.org/pydot.html"
+      URL="http://dkbza.org/data"
+      REQ=( "pyparsing graphviz" )
+#FRESHMEAT=""
+DESC="An interface for creating both directed and non directed graphs from Python.
+An interface for creating both directed and non directed graphs from Python.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
