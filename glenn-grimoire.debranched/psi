@@ -10,9 +10,8 @@ ATTRIBUTE="kde"
      OPTS="--qtdir=/usr"
  ESTIMATE="115"
 #FRESHMEAT=""
-DESC="QCA aims to provide a straightforward and cross-platform crypto API, using Qt datatypes and conventions.
-QCA aims to provide a straightforward and cross-platform crypto API, using
-Qt datatypes and conventions.
+DESC="Psi is the premiere jabber client.
+Psi is the premiere jabber client.
 "
 
 build() {
