@@ -7,7 +7,7 @@ ATTRIBUTE="server"
  HOMEPAGE="http://vsftpd.beasts.org"
       URL="ftp://vsftpd.beasts.org/users/cevans"
       REQ=( "openssl tcp_wrappers Linux-PAM" )
-#FRESHMEAT=""
+FRESHMEAT="vsftpd"
 DESC="vsftpd is a secure, high-performance ftp server with ssl support.
 vsftpd is a secure, high-performance ftp server with ssl support.
 "
