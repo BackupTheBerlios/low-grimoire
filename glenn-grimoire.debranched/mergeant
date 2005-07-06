@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.60" )
+ CATEGORY="database"
+ATTRIBUTE="gnome"
+   SOURCE="sources/$SPELL/$VERSION/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnome-db.org"
+      URL="$GNOME_URL"
+      REQ=( "libgnomedb-v1.3" )
+#FRESHMEAT=""
+DESC="Mergeant is a program which helps administer a DBMS database using the gnome-db framework.
+Mergeant is a program which helps administer a DBMS database using the gnome-db
+framework (see http://www.gnome.org/gnome-db/ for more information about
+gnome-db). Basically, it memorizes all the structure of the database, and some
+queries, and does the SQL queries instead of the user (not having to type all
+over again those SQL commands, although it is still possible to do so).
+"
