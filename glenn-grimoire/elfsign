@@ -1,0 +1,17 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.2" )
+ CATEGORY="security"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.nologin.org/main.pl?action=codeView&codeId=37"
+      URL="http://www.hick.org/code/skape"
+      REQ=( "openssl" )
+     OPTS="--with-openssl=/usr"
+#FRESHMEAT=""
+DESC="elfsign provides tools and an interface for signing and verifying ELF binary images with certificates.
+elfsign provides tools and an interface for signing and verifying ELF
+binary images with certificates. The functionality is similar to
+Microsoft's Authenticode technology in that binaries can be tagged with an
+owner as well as proof that they have not been modified or tampered with.
+"

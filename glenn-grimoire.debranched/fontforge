@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "20050624" )
+ CATEGORY="development font"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/${SPELL}_full-$VERSION"
+ HOMEPAGE="http://fontforge.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "libuninameslist jpeg tiff libxml2 freetype libungif"
+            "gtk+:--with-gtk:--with-gdraw:use gtk based gui (versus native)" )
+     OPTS="--with-devicetables --with-multilayer"
+#     OPTS="--with-freetype-bytecode --with-freetype-src=" # need freetype source dir?
+#FRESHMEAT=""
+DESC="FontForge allows you to edit outline and bitmap fonts.
+FontForge allows you to edit outline and bitmap fonts. You may create new
+ones or modify old ones. It is also a format converter and can interconvert
+between PostScript (ascii & binary Type1, some Type3, some Type0), TrueType
+, OpenType (Type2), CID, SVG
+"
+
+build() {
+  # export CPPFLAGS="$CPPFLAGS `pkg-config --cflags gtk+ pango`"
+  default_build
+}

@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.nologin.org/main.pl?action=codeView&codeId=49"
+      URL="http://www.klake.org/~jt/misc"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="libdasm is a C-library that tries to provide simple and convenient way to disassemble Intel x86 raw opcode bytes (machine code).
+libdasm is a C-library that tries to provide simple and convenient
+way to disassemble Intel x86 raw opcode bytes (machine code).
+It can parse and print out opcodes in AT&T and Intel syntax.
+"
+
+build() {
+  gcc -Wall $CFLAGS -I. -shared -o libdasm.so libdasm.c
+  (cd pydasm; python setup.py build) &&
+  prepare_install              &&
+  mkdir -p /usr/include/$SPELL &&
+  cp libdasm.h tables.h /usr/include/$SPELL &&
+  cp libdasm.so /usr/lib       &&
+  mkdir -p /usr/share/$SPELL   &&
+  cp -r examples /usr/share/$SPELL &&
+  (cd pydasm; python setup.py install)
+}

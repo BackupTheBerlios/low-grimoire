@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.9.3" )
+ CATEGORY="security development"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://opensource.nailabs.com/privman"
+      URL="http://opensource.nailabs.com/privman/downloads"
+      REQ=( "Linux-PAM bison" )
+#FRESHMEAT=""
+DESC="A library to make privilege Separation easy.
+A library to make privilege Separation easy.
+"
