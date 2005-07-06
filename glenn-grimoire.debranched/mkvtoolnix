@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.4.2" "1.4.1" "1.4.0" "1.0.2" "1.0" "0.9.7" )
+  VERSION=( "1.5.0" "1.4.2" "1.4.1" "1.4.0" "1.0.2" "1.0" "0.9.7" )
  CATEGORY="utility video-editor"
 ATTRIBUTE="console"
    SOURCE="$SPELL-$VERSION"
@@ -20,19 +20,3 @@ MKVtoolnix is a set of tools to create, alter and inspect Matroska files
 under Linux, other Unices and Windows. They do for Matroska what the
 OGMtools do for the OGM format and then some. 
 "
-
-build() {
-  patch -p0 << 'EOF'
---- src/input/r_matroska.cpp~   2004-11-04 12:37:33.000000000 -0600
-+++ src/input/r_matroska.cpp    2004-11-04 11:59:17.000000000 -0600
-@@ -21,6 +21,7 @@
- 
- #include <exception>
- #include <typeinfo>
-+#include <cctype>
- 
- extern "C" {                    // for BITMAPINFOHEADER
- #include "avilib.h"
-EOF
-  default_build
-}

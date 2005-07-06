@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
 # This spell converted by cantripify.sh
 unset OPT  
-  VERSION=( "1.02" )
+  VERSION=( "1.03" "1.02" )
  CATEGORY="gkrellm-plugin"
 ATTRIBUTE="concurrent x11"
    SOURCE="$SPELL-$VERSION"

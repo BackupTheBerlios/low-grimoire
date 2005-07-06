@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.54" "0.42" )
+  VERSION=( "0.60" "0.54" "0.42" )
  CATEGORY="utility"
 ATTRIBUTE="x11"
  HOMEPAGE="http://alltray.sourceforge.net"

@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "2.10.1" )
+   VERSION=( "2.10.2" "2.10.1" )
   CATEGORY="interpreter"
  ATTRIBUTE="gnome"
     SOURCE="sources/$SPELL/${VERSION:0:4}/$SPELL-$VERSION.tar.bz2"
@@ -24,4 +24,5 @@
   ESTIMATE="512"
       DESC="gnome-python-extras provides python bindings for GNOME.
 gnome-python is a set of bindings for
-the GNOME libraries for use with python."
+the GNOME libraries for use with python.
+"

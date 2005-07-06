@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.0.29" "1.0.28" )
+  VERSION=( "1.0.30" "1.0.29" "1.0.28" )
  CATEGORY="network dns"
 ATTRIBUTE="server"
    SOURCE="$SPELL-$VERSION"
