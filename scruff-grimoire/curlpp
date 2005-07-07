@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
 
-  VERSION=( "0.5.0-rc7" "0.5.0-rc5" "0.5.0-rc4" "0.3.2-rc2" "0.3.1" "0.3.0" )
+  VERSION=( "0.5.0" "0.5.0-rc7" "0.5.0-rc5" "0.5.0-rc4" "0.3.2-rc2" "0.3.1" "0.3.0" )
  CATEGORY="library"
 ATTRIBUTE="new library"
    SOURCE="$SPELL-$VERSION"
