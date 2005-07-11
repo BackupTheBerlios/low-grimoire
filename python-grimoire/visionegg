@@ -14,6 +14,7 @@ vision research experiments.
 "
 
 build() {
+  sed  -i '149s:VisionEgg:share/VisionEgg:' setup.py &&
   python setup.py build &&
   prepare_install       &&
   python setup.py install

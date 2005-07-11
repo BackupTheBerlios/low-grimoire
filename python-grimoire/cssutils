@@ -12,7 +12,8 @@ A Python package to parse and build CSS Cascading Style Sheets.
 "
 
 build() {
-    cd ${SPELL}*
+    cd ${SPELL}*                                &&
+    sed -i '/data_files/d' setup.py             &&
     python setup.py build			&&
     prepare_install                 		&&
     python setup.py install                     
