@@ -1,4 +1,6 @@
-   VERSION=( "2.4.5" )
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "2.4.6" "2.4.5" )
   CATEGORY="development"
  ATTRIBUTE="kde python"
     SOURCE="$SPELL/$SPELL-$VERSION"
