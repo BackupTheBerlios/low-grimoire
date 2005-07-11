@@ -13,6 +13,7 @@ Python wrapper for sqlite.
 "
 
 build() {
+  sed -i 's:pysqlite2-doc:share/pysqlite2:' setup.py &&
   python setup.py build &&
   prepare_install       &&
   python setup.py install
