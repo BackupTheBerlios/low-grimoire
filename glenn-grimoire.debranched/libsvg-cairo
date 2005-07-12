@@ -5,8 +5,7 @@
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.freedesktop.org/Cairo"
-      URL="http://cairographics.org/snapshots
-           http://www.freedesktop.org/Cairo/snapshots"
+      URL="http://cairographics.org/snapshots"
       REQ=( "cairo libsvg" )
 #FRESHMEAT=""
 DESC="libsvg-cairo provides the ability to render SVG content from files or buffers using cairo.

@@ -5,8 +5,7 @@
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://www.freedesktop.org/Cairo"
-      URL="http://cairographics.org/snapshots
-           http://www.freedesktop.org/Cairo/snapshots"
+      URL="http://cairographics.org/snapshots"
       REQ=( "libxml2" )
 #FRESHMEAT=""
 DESC="libsvg provides a parser for SVG content in files or buffers.
