@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+         VERSION=( "1.1.17" "1.1.14" "1.1.14-pre1" "1.1.13" )
+        CATEGORY="network"
+       ATTRIBUTE="server"
+          SOURCE="$SPELL-$VERSION"
+             URL="ftp://ftp.inet.no/pub/socks"
+        HOMEPAGE="http://www.inet.no/dante"
+FRESHMEAT="dante"
+DESC="Dante is a SOCKS v4 & v5 server
+Dante - SOCKS v4 & v5 server
+Dante is a circuit-level firewall/proxy that can be used to provide
+convenient and secure network connectivity to a wide range of hosts
+while requiring only the server Dante runs on to have external network
+connectivity.
+"
