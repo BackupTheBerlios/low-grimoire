@@ -1,0 +1,33 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.3.0-pre2" )
+ CATEGORY="development video audio"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pymedia.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python lame faad2 libvorbis libogg" )
+#FRESHMEAT=""
+DESC="Pymedia is a C/C++/Python multimedia module to allow encode/decode/play.
+Pymedia is a C/C++/Python multimedia module to allow
+encode/decode/play multimedia information in mp3,ogg,avi etc.
+formats. Based on ffmpeg with added features and simple Python
+interface. To be used in multimedia apps written in Python.
+"
+
+patch_source() {
+  sed -e "233i                        '/usr/include/lame'," \
+      -e "272s:choice = .*:choice = 'Y':" \
+      -i setup.py &&
+  sed -e '60i\\t\t\t\tunsigned long buffer_size,' \
+      -e '68s:);$:,:' \
+      -e '69i\\t\t\t\t   unsigned long buffer_size);' \
+      -i audio/libavcodec/faad.c
+}
+
+build() {
+  patch_source          &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
