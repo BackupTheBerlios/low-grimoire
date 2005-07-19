@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.1.7" )
+ CATEGORY="video-editor"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://gopchop.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "gettext libmpeg2 gtk+ gdk-pixbuf pango libxml2" )
+#FRESHMEAT=""
+DESC="The gopchop utility is an mpeg video editing tool.
+The gopchop utility is a video editing tool designed to take
+MPEG2-PS files and perform Group-of-Pictures editing
+(\"GOP-accurate editing\"). No re-encoding is performed, which
+drastically improves editing speed.
+"
