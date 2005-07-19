@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.9.17" )
+  VERSION=( "2.9.18" "2.9.17" )
  CATEGORY="network dns"
 ATTRIBUTE="server"
    SOURCE="$SPELL-$VERSION"
@@ -43,13 +43,50 @@ fix_opts() {
 }
 
 patches() {
-  if [ "$VERSION" == "2.9.17" ]; then
-# uses older version of sqlite
-#  sed -i 's:sqlite\.:sqlite3.:' configure &&
-#  sed -i 's:lsqlite:lsqlite3:' modules/gsqlitebackend/Makefile.in &&
-#  sed -i 's:sqlite\.h:sqlite3.h:' modules/gsqlitebackend/ssqlite.hh &&
-#  sed -i '12itypedef sqlite3 sqlite;' modules/gsqlitebackend/ssqlite.hh &&
-  sed -i '251s:newest:((int)newest):' pdns/dnsbackend.cc
+  if [ "$VERSION" == "2.9.18" ]; then
+    patch -p1 <<'EOF'
+diff -ur pdns-2.9.18~/modules/ldapbackend/utils.hh pdns-2.9.18/modules/ldapbackend/utils.hh
+--- pdns-2.9.18~/modules/ldapbackend/utils.hh	2005-04-23 16:40:15.000000000 -0500
++++ pdns-2.9.18/modules/ldapbackend/utils.hh	2005-07-19 13:00:23.000000000 -0500
+@@ -73,7 +73,7 @@
+ }
+ 
+ 
+-inline string ip2ptr4( string ip )
++inline string ip2ptr4( const string& ip )
+ {
+ 	string ptr;
+ 	vector<string> parts;
+@@ -89,7 +89,7 @@
+ }
+ 
+ 
+-inline string ip2ptr6( string ip )
++inline string ip2ptr6( const string& ip )
+ {
+ 	string ptr, part, defstr;
+ 	vector<string> parts;
+@@ -116,4 +116,19 @@
+ 	return ptr + "ip6.arpa";
+ }
+ 
++
++inline string strbind( const string& search, const string& replace, string subject )
++{
++	size_t pos = 0;
++
++
++	while( ( pos = subject.find( search, pos ) ) != string::npos )
++	{
++		subject.replace( pos, search.size(), replace );
++		pos += replace.size();
++	}
++
++	return subject;
++}
++
+ #endif
+EOF
   fi
 }
 
