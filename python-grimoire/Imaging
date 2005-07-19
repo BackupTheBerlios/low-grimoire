@@ -1,6 +1,7 @@
    VERSION=( "1.1.6a0" "1.1.5" "1.1.4" )
   CATEGORY="library python"
  ATTRIBUTE="development python x11"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.pythonware.com/products/pil"
        URL="http://effbot.org/downloads"
        REQ=( "Python"
@@ -36,13 +37,16 @@ build() {
 ##  python setup.py	install
 
 ## patch submitted by ArielMT
+case $VERSION in
+   1.1.6a0) ;;
+   *) sed -i "s:<freetype/freetype.h>:<ft2build.h>\n#include FT_FREETYPE_H:" _imagingft.c  || exit $? ;;
+esac
 
-sed -i "s:<freetype/freetype.h>:<ft2build.h>\n#include FT_FREETYPE_H:" _imagingft.c  &&
-cd libImaging            &&
-./configure              &&
-make                     &&
-cd ..                    &&
-python setup.py build    &&
+#Build and test
+( case $VERSION in
+   1.1.6a0) python setup.py build_ext -i && python selftest.py | grep Failure;  if [ $? == 0 ]; then exit 1; fi ;;
+   *)      ( cd libImaging && ./configure && make )            || exit $? ;;
+esac ) &&
 prepare_install          &&
 python setup.py install  &&
 install -o root -g root -m 644 libImaging/*.h /usr/include/python$( augur version Python | cut -d. -f 1-2 )/
