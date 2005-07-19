@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.7.2pre1" )
+  VERSION=( "0.7.2pre2" "0.7.2pre1" )
  CATEGORY="audio-editor"
 ATTRIBUTE="x11"
    SOURCE="lmuse/$SPELL-$VERSION.tar.bz2"
