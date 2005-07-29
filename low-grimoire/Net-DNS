@@ -1,4 +1,4 @@
-   VERSION=( "0.52" "0.51" "0.47" "0.46" "0.45_01" "0.45" "0.44" "0.43" "0.42" "0.41" "0.40" "0.38" "0.37" )
+   VERSION=( "0.53" "0.52" "0.51" "0.47" "0.46" "0.45_01" "0.45" "0.44" "0.43" "0.42" "0.41" "0.40" "0.38" "0.37" )
   CATEGORY="library"
  ATTRIBUTE="development"
     SOURCE="$SPELL-$VERSION"
@@ -15,8 +15,7 @@ page.
 "
 
 build() {
-
-    echo "y" | perl Makefile.PL		      &&
+    echo "y" | perl Makefile.PL	      &&
     make			      &&
     prepare_install                   &&
     make install
