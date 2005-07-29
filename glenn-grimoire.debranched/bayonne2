@@ -1,0 +1,26 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.6.5" "0.6.0" "0.5.0" "0.4.1" "0.4.0" "0.3.1" )
+ CATEGORY="telephony"
+ATTRIBUTE="console server"
+   SOURCE="gnutelephony/$SPELL-$VERSION"
+ HOMEPAGE="http://www.gnu.org/software/bayonne"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "ccrtp ccaudio2 ccscript3" )
+#    Must have gsm compiled into openh323, which I don't think the current spell allows
+#            "openh323:--enable-openh323 --disable-openh323-codecs::enable h323 support" )
+#FRESHMEAT=""
+DESC="Bayonne is the telecommunications application server of the GNU project
+GNU Bayonne, the telecommunications application server of the GNU project,
+offers free, scalable, media independent software environment for
+development and deployment of telephony solutions for use with current and
+next generation telephone networks.
+"
+
+build() {
+  sed -i 's:\usepackage{isolatin1}:%\usepackage{isolatin1}:' docs/*tex &&
+  sed -e 's:PDFFILES = .*:PDFFILES =:' \
+      -e 's:HTMLFILES = .*:HTMLFILES =:' \
+      -i docs/Makefile.in &&
+  default_build
+}
