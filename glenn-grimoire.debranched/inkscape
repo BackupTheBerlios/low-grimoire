@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.41" "0.39" )
+  VERSION=( "0.42" "0.41" "0.39" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
    SOURCE="$SPELL/$SPELL-$VERSION"
@@ -8,7 +8,7 @@ ATTRIBUTE="console gnome"
       URL="$SOURCEFORGE_URL"
       REQ=( "gtkmm libxml2 gtkspell gc intltool"
 #            "libgnomeprintui:--with-gnome-print::use gnome print font database and spooler frontend"
-            "python:--with-python::use Python for embedded scripting"
+            "Python:--with-python::use Python for embedded scripting"
             "perl:::use Perl for embedded scripting" )
      OPTS="--with-xft"
 FRESHMEAT="inkscape"

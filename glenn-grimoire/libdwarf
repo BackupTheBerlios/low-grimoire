@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "20050714" "20050503" )
+  VERSION=( "20050722" "20050714" "20050503" )
  CATEGORY="development debugger"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"

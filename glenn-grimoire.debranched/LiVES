@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.9.5-pre3" "0.9.1-src" )
+  VERSION=( "0.9.5-pre4" "0.9.5-pre3" "0.9.1-src" )
  CATEGORY="graphic-editor"
 ATTRIBUTE="console gnome"
    SOURCE="$SPELL-$VERSION"
@@ -11,10 +11,6 @@ ATTRIBUTE="console gnome"
             "cdrtools:::add cda2wav support"
             "sswf:::add encode flash support"
             "libdv:::add encode digital video support" )
-    OPT[0]="xmms:::add xmms support"
-    OPT[1]="cdrtools:::add cda2wav support"
-    OPT[2]="sswf:::add encode flash support"
-    OPT[3]="libdv:::add encode digital video support"
 FRESHMEAT="lives"
 DESC="LiVES began as the Linux Video Editing System.
 LiVES began as the Linux Video Editing System. Since it now runs on more

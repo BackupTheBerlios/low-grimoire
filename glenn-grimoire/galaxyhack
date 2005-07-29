@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.47" "1.46" "1.45" "1.42" "1.18" )
+  VERSION=( "1.51" "1.47" "1.46" "1.45" "1.42" "1.18" )
  CATEGORY="game"
 ATTRIBUTE="x11"
    SOURCE="$SPELL/$SPELL-$VERSION-src"

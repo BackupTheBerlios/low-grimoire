@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.5.2" "0.5.1" "0.5.0" "0.4.0" "0.3.0" "0.2.0" "0.1.23" )
+  VERSION=( "0.6.0" "0.5.2" "0.5.1" "0.5.0" "0.4.0" "0.3.0" "0.2.0" "0.1.23" )
  CATEGORY="development"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
@@ -9,8 +9,6 @@ ATTRIBUTE="library"
       REQ=( "XFree86 libpixman"
             "libpng::--disable-png:add png backend"
             "glitz::--disable-gl:add OpenGL backend" )
-   OPT[0]="libpng::--disable-png:add png backend"
-   OPT[1]="glitz::--disable-gl:add OpenGL backend"
 FRESHMEAT="cairo"
 DESC="Cairo is a vector graphics library with cross-device output support.
 Cairo is a vector graphics library with cross-device output support.
