@@ -1,6 +1,7 @@
    VERSION=( "0.6.15" "0.6.0" "0.5.0" "0.4.0" "0.2.14" )
   CATEGORY="development python"
  ATTRIBUTE="console"
+    SOURCE="$SPELL/$SPELL-$VERSION"
   HOMEPAGE="http://ipython.scipy.org/"
        URL="http://ipython.scipy.org/dist"
        REQ="Python"
