@@ -6,21 +6,18 @@ ATTRIBUTE="library"
    SOURCE="omniorb/${SPELL}_$VERSION"
  HOMEPAGE="http://omniorb.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "bison flex python"
+      REQ=( "bison flex Python"
             "openssl:--with-openssl=/usr::add ssl support" )
-   OPT[0]="openssl:--with-openssl=/usr::add ssl support"
 #FRESHMEAT=""
 DESC="omniORB is a robust high performance CORBA ORB for C++ and Python.
 omniORB is a robust high performance CORBA ORB for C++ and Python.
 "
 
 build() {
-
-  
   sed -i "s:#platform = i586_linux_2.0_glibc2.1:platform = i586_linux_2.0_glibc2.1:" config/config.mk &&
-  sed -i "s:#PYTHON = /usr/local/bin/python:PYTHON = python:"       mk/platforms/i586_linux_2.0_glibc2.1.mk &&
-  sed -i "s:CXX = /usr/bin/g++:CXX = g++:"                    mk/platforms/i586_linux_2.0_glibc2.1.mk &&
-  sed -i "s:CC           = /usr/bin/gcc:CC           = gcc:"  mk/platforms/i586_linux_2.0_glibc2.1.mk &&
+  sed -e "s:#PYTHON = /usr/local/bin/python:PYTHON = python:" \
+      -e "s:CXX = /usr/bin/g++:CXX = g++:" \
+      -i "s:CC           = /usr/bin/gcc:CC           = gcc:"  mk/platforms/i586_linux_2.0_glibc2.1.mk &&
   cd src                                        &&
   make export                                   &&
   prepare_install                               &&
@@ -31,5 +28,4 @@ build() {
   cp -R man /usr                                &&
   cp -R include /usr                            &&
   cp -R idl /usr
-
 }
