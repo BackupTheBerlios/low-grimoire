@@ -13,8 +13,9 @@ Python wrapper of Mark J Harris' RenderTexture class.
 "
 
 build() {
+  PYTHON_VER=$(augur version Python|cut -d. -f1-2)
   sed -i "s:-lGLU:-L/usr/X11R6/lib -lGLU:" Makefile &&
-  make PYTHON2_INCLUDE=/usr/include/python2.3 GLEW_PATH=/usr &&
+  make PYTHON2_INCLUDE=/usr/include/python$PYTHON_VER GLEW_PATH=/usr &&
   python setup.py build &&
   prepare_install       &&
   python setup.py install
