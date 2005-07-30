@@ -21,7 +21,7 @@ ATTRIBUTE="library"
             "libcsf:--with-pcraster::add PCRaster support"
             "ogdi:--with-ogdi::add OGDI support"
             "geos:--with-geos::add GEOS support"
-            "python:::add python support" )
+            "Python:::add python support" )
  ESTIMATE="115"
 FRESHMEAT="gdal"
 DESC="GDAL is a translator library for raster geospatial data formats.
