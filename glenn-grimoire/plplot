@@ -7,8 +7,9 @@
        URL="$SOURCEFORGE_URL"
     SOURCE="$SPELL/$SPELL-$VERSION"
        REQ=( "tk gd gtk+"
-             "libgnoemui libgnomeprintui:::for GNOME interface to plplot"
+             "libgnomeui libgnomeprintui:::for GNOME interface to plplot"
              "gnome-python numarray:::for Python interface to plplot"
+             "j2sdk:::for Java interface to plplot"
              "qhull:--with-qhull::use the Qhull library" )
  FRESHMEAT="plplot"
   ESTIMATE="557"
