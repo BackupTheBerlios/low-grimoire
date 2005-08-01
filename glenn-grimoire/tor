@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "0.1.0.12" )
+  CATEGORY="network"
+ ATTRIBUTE="client server library"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://tor.eff.org"
+       URL="http://tor.eff.org/dist"
+       REQ=("openssl")
+# FRESHMEAT=""
+  ESTIMATE="200"
+      DESC="Tor is a toolset for a wide range of organizations and people that want to improve their safety and security on the Internet.
+Tor is a toolset for a wide range of organizations and people that want to
+improve their safety and security on the Internet. Using Tor can help you
+anonymize web browsing and publishing, instant messaging, IRC, SSH, and other
+applications that use the TCP protocol. Tor also provides a platform on which
+software developers can build new applications with built-in anonymity, safety,
+and privacy features.
+"
