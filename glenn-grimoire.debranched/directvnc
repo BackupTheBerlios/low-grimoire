@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "0.7.5" )
+  CATEGORY="terminal-emulator"
+ ATTRIBUTE="x11"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://www.adam-lilienthal.de/directvnc"
+       URL="http://www.adam-lilienthal.de"
+       REQ=("DirectFB")
+# FRESHMEAT=""
+  ESTIMATE="200"
+      DESC="DirectVNC uses the linux framebuffer device through DirectFB which enables it to run on anything that has a framebuffer.
+What makes DirectVNC different from other unix vnc clients is
+that it uses the linux framebuffer device through the DirectFB
+library which enables it to run on anything that has a
+framebuffer without the need for a running X server. This
+includes embedded devices. DirectFB even uses acceleration
+features of certain graphics cards.
+"
