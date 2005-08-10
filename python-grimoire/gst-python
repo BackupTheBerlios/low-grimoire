@@ -11,3 +11,9 @@ ATTRIBUTE="library python"
 DESC="GStreamer python bindings.
 GStreamer python bindings.
 "
+
+build() {
+  default_build &&
+  mkdir -p /usr/share/$SPELL &&
+  cp -r examples /usr/share/$SPELL
+}
