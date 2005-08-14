@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "0.1" )
+  CATEGORY="development audio"
+ ATTRIBUTE="library python"
+    SOURCE="$SPELL-$VERSION"
+  HOMEPAGE="http://www.corpuselectronica.com/software/pyjack"
+       URL="http://www.corpuselectronica.com/files"
+       REQ="Python jack-audio-connection-kit"
+  ESTIMATE=13
+# FRESHMEAT=""
+DESC="This is a Python module for accessing the Jack Audio Server.
+This is a Python module for accessing the Jack Audio Server.
+"
+
+build() {
+    python setup.py build                       &&
+    prepare_install                             &&
+    python setup.py install
+}
