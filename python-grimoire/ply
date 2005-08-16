@@ -1,11 +1,11 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.5" )
+  VERSION=( "1.6" "1.5" )
  CATEGORY="development"
 ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://systems.cs.uchicago.edu/ply"
-      URL="http://systems.cs.uchicago.edu"
+ HOMEPAGE="http://www.dabeaz.com/ply"
+      URL="http://www.dabeaz.com"
       REQ=( "Python" )
 #FRESHMEAT=""
 DESC="PLY is yet another implementation of lex and yacc for Python.
