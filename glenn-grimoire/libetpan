@@ -8,6 +8,8 @@ ATTRIBUTE="library"
       URL="$SOURCEFORGE_URL"
       REQ=( ""
             "openssl:--with-openssl::add SSL support"
+            "gnutls:--with-gnutls::add TLS support"
+            "cyrus-sasl:--with-sasl::add SASL support"
             "db::--disable-db:enable Berkeley DB" )
 FRESHMEAT="libetpan"
 DESC="libetpan provides a portable, efficient middleware for different kinds of mail access.
