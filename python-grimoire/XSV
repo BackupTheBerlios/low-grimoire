@@ -1,6 +1,7 @@
    VERSION=( "2.10" "2.7" )
   CATEGORY="development python"
  ATTRIBUTE="library"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.ltg.ed.ac.uk/~ht/xsv-status.html"
        URL="ftp://ftp.cogsci.ed.ac.uk/pub/XSV"
        REQ="Python"
