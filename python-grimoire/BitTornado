@@ -1,4 +1,4 @@
-  VERSION=( "0.3.7" "0.2.0" )
+  VERSION=( "0.3.13" "0.3.7" "0.2.0" )
  CATEGORY="file-transfer python"
 ATTRIBUTE="client server python"
       URL="http://download2.bittornado.com/download"
