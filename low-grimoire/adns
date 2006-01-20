@@ -1,6 +1,7 @@
   VERSION=( "1.1" "1.0" )
   CATEGORY="perl net library"
   ATTRIBUTE="development"
+  SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.chiark.greenend.org.uk/~ian/adns"
   URL="ftp://ftp.chiark.greenend.org.uk/users/ian/adns"
   FRESHMEAT="adns"
@@ -13,3 +14,14 @@ DESC="An advanced alternative, asynchronous resolver
   decoded into native C formats, and it is possible to launch 
   many queries and once and deal with the responses asynchronously.
   "
+
+patches() {
+  if [ "$VERSION" == "1.1" ]; then
+    sed -i 's:adns_queryflags:parsedomain_flags:g' src/parse.c
+  fi
+}
+
+build() {
+  patches &&
+  default_build
+}
