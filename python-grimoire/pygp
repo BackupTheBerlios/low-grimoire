@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.03" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/${SPELL}.$VERSION.zip"
+ HOMEPAGE="http://pygp.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="The Python Genetic Programming Project implements a Genetic Programming System a la J Koza in Python. 
+The Python Genetic Programming Project implements a Genetic Programming
+System a la J Koza in Python. 
+ "
+
+build() {
+  prepare_install       &&
+  cp -r gp*.py $(python -c 'import sys; print [p for p in sys.path if p.endswith("site-packages")][0]')
+}

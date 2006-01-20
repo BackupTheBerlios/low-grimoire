@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2-rc3" )
+ CATEGORY="development networking"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://xmpppy.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python libxml2 dnspython M2Crypto" )
+#FRESHMEAT=""
+DESC="Library for hanling xmpp with python.
+Library for hanling xmpp with python.
+Written with upcoming jabberd2 release in mind so it will use DISCO for browsing,
+privacy rules sets for invisible presence, SASL for authentication, TLS for security
+and so on...
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

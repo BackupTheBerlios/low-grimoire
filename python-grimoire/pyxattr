@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pyxattr.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python attr" )
+#FRESHMEAT=""
+DESC="pyxattr is an Python extension module wrapper for libattr.
+pyxattr is an Python extension module wrapper for libattr.
+You can use this module to query, list, add and remove extended attributes from
+files and directories.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

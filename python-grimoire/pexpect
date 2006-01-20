@@ -1,22 +1,26 @@
-   VERSION=( "0.999" "0.99" "0.98" )
-  CATEGORY="development python"
- ATTRIBUTE="library"
-  HOMEPAGE="https://sourceforge.net/projects/pexpect"
-       URL="$SOURCEFORGE_URL"
-    SOURCE="$SPELL/$SPELL-$VERSION"
-       REQ="Python"
-  ESTIMATE=5
- FRESHMEAT="pexpect"
-DESC="Pexpect is a Python Expect-like module. It spawns child applications, controls them, and responds to expected patterns in their output
-
-Pexpect is a Python Expect-like module. It spawns child applications,
-controls them, and responds to expected patterns in their output. 
-It can be used for automating interactive applications such as ssh, 
-ftp, passwd, telnet, etc.
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0" )
+ CATEGORY="development"
+ATTRIBUTE="library console python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pexpect.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Pexpect is a Pure Python Expect-like module.
+Pexpect is a Pure Python Expect-like module.
+Pexpect makes Python a better tool for controlling other applications.
+Pexpect is a pure Python module for spawning child applications; controlling them;
+and responding to expected patterns in their output. Pexpect works like Don Libes'
+Expect. Pexpect allows your script to spawn a child application and control it as if a
+human were typing commands.
 "
 
 build() {
-
-    prepare_install                 		&&
-    python setup.py install
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install &&
+  mkdir /usr/share/$SPELL &&
+  cp ANSI.py FSM.py pxssh.py screen.py /usr/share/$SPELL
 }
