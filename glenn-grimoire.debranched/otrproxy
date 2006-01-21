@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.1" )
+ CATEGORY="encryption networking"
+ATTRIBUTE="server"
+ HOMEPAGE="http://www.cypherpunks.ca/otr"
+   SOURCE="otr/$SPELL-$VERSION"
+      URL="http://www.cypherpunks.ca"
+      REQ=( "libotr libgcrypt wxGTK" )
+#    OPT[0]="wxGTK:::compile gui"
+ ESTIMATE="115"
+#FRESHMEAT=""
+DESC="This is a localhost proxy you can use with almost any AIM client in order to participate in Off-the-Record conversations.
+This is a localhost proxy you can use with almost any AIM client in order to
+participate in Off-the-Record conversations.
+"

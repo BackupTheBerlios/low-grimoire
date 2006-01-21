@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.0.0" )
+ CATEGORY="encryption"
+ATTRIBUTE="library"
+ HOMEPAGE="http://www.cypherpunks.ca/otr"
+   SOURCE="otr/$SPELL-$VERSION"
+      URL="http://www.cypherpunks.ca"
+      REQ=( "libgcrypt" )
+ ESTIMATE="115"
+#FRESHMEAT=""
+DESC="This is the portable OTR Messaging Library, as well as the toolkit to help you forge messages.
+This is the portable OTR Messaging Library, as well as the toolkit to help you forge
+messages.
+"
