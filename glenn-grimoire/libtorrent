@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-   VERSION=( "0.6.7" "0.6.6" "0.6.5" "0.6.4" "0.6.3" "0.6.2" "0.6.1" "0.5.5" "0.5.4" "0.5.1" "0.4.5" "0.4.4" )
+   VERSION=( "0.7.6" "0.6.7" "0.6.6" "0.6.5" "0.6.4" "0.6.3" "0.6.2" "0.6.1" "0.5.5" "0.5.4" "0.5.1" "0.4.5" "0.4.4" )
   CATEGORY="file-share development"
  ATTRIBUTE="client server library"
     SOURCE="$SPELL-$VERSION"
