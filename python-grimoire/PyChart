@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.38" "1.37" )
+  VERSION=( "1.39" "1.38" "1.37" )
  CATEGORY="graphic"
 ATTRIBUTE="library python"
  HOMEPAGE="http://home.gna.org/pychart"
