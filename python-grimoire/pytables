@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.1" )
+ CATEGORY="development mail"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pytables.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "numarray" )
+#FRESHMEAT=""
+DESC="The goal of PyTables is to enable the end user to manipulate easily and efficiently large datasets.
+The goal of PyTables is to enable the end user to manipulate easily and
+efficiently large datasets (both homogenous, i.e. arrays, and heterogenous,
+i.e. tables) and numarray (or Numeric) Python objects on a persistent, disk-based
+hierarchical structure.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
