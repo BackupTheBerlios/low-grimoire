@@ -1,8 +1,9 @@
    VERSION=( "0.6.7" )
   CATEGORY="library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL/$SPELL-$VERSION"
   HOMEPAGE="http://i.loveruby.net/en/strscan.html"
-       URL="http://i.loveruby.net/archive/strscan"
+       URL="http://i.loveruby.net/archive"
        REQ="ruby"
 DESC="strscan is a library for fast scanning
 
