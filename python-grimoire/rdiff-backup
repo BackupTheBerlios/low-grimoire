@@ -1,4 +1,4 @@
-   VERSION=( "1.1.2" "0.12.8" "0.12.7" )
+   VERSION=( "1.0.4" "1.1.2" "0.12.8" "0.12.7" )
   CATEGORY="python"
  ATTRIBUTE="library"
   HOMEPAGE="http://www.nongnu.org/rdiff-backup"
