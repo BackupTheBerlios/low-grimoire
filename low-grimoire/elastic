@@ -1,6 +1,7 @@
    VERSION=( "0.0.35" )
   CATEGORY="interpreter"
  ATTRIBUTE="client console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.elasticworld.org"
        URL="http://www.elasticworld.org"
   ESTIMATE="953"

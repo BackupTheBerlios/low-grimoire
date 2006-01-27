@@ -1,6 +1,7 @@
    VERSION=( "1.1" )
   CATEGORY="library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/author/PEASE/ExtUtils-configPL-1.1"
        URL="http://search.cpan.org/CPAN/authors/id/P/PE/PEASE"
        REQ="perl"

@@ -1,6 +1,7 @@
    VERSION=( "3.1" )
   CATEGORY="utility"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.thc.org"
        URL="http://www.thc.org/releases"
 #  EPROVIDE="mc"

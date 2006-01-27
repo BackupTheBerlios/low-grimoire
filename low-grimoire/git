@@ -1,6 +1,7 @@
    VERSION=( "4.3.20" "4.3.18" )
   CATEGORY="editor utility"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.hulubei.net/tudor/git"
        URL="http://www.hulubei.net/tudor/git/download"
   ESTIMATE="150"

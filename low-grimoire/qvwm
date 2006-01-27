@@ -1,6 +1,7 @@
    VERSION=( "1.1.12" )
   CATEGORY="window-manager"
  ATTRIBUTE="x11"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.qvwm.org"
        URL="http://www.qvwm.org/archive/qvwm"
        REQ="imlib"

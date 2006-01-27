@@ -1,6 +1,7 @@
    VERSION=( "2.63" "2.62" "2.60" "2.55" )
   CATEGORY="utility mail"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://au2.spamassassin.org/index.html"
        URL="http://au2.spamassassin.org/released"
        REQ="HTML-Parser Net-DNS"

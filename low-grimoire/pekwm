@@ -1,6 +1,7 @@
   VERSION=( "0.1.3" )
   CATEGORY="window-manager"
   ATTRIBUTE="x11"
+  SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://pekwm.org"
   URL="http://pekwm.org/files/source"
   REQ="x11"

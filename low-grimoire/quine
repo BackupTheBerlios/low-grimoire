@@ -1,6 +1,7 @@
    VERSION=( "1.1.0" )
   CATEGORY="library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.excessus.demon.co.uk/misc-hacks/#quine"
        URL="http://www.excessus.demon.co.uk/misc-hacks"
   ESTIMATE=30

@@ -1,6 +1,7 @@
    VERSION=( "2.6" )
   CATEGORY="library"
  ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/~samtregar/HTML-Template-$VERSION"
        URL="http://search.cpan.org/CPAN/authors/id/S/SA/SAMTREGAR"
        REQ="perl"

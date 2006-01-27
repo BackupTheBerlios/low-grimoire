@@ -1,6 +1,7 @@
    VERSION=( "3.2.4" )
   CATEGORY="editor"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://konst.org.ua/motor"
        URL="http://konst.org.ua/download"
        OPT="gettext::--disable-nls:to enable nls"

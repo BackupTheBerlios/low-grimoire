@@ -1,6 +1,7 @@
    VERSION=( "2.6.0" "2.5.0" )
   CATEGORY="library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://smarty.php.net"
        URL="http://smarty.php.net/distributions"
        REQ="php"

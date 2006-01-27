@@ -1,6 +1,7 @@
    VERSION=( "1.22" )
   CATEGORY="db library"
  ATTRIBUTE="perl"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/~dwheeler/DBD-Pg-$VERSION"
        URL="http://search.cpan.org/CPAN/authors/id/D/DW/DWHEELER"
        REQ="DBI postgresql"

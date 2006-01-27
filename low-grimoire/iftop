@@ -1,6 +1,7 @@
    VERSION=( "0.17pre1" "0.16" "0.15" "0.14" "0.13" "0.12" )
   CATEGORY="network utility"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.ex-parrot.com/~pdw/iftop/"
        URL="http://www.ex-parrot.com/~pdw/iftop/download"
        REQ="libpcap ncurses"

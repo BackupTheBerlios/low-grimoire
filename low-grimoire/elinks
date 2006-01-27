@@ -1,6 +1,7 @@
    VERSION=( "0.10.5" "0.9.1" "0.4.3" "0.4.2" )
   CATEGORY="web"
  ATTRIBUTE="client console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://elinks.or.cz/about.html"
        URL="http://elinks.or.cz/download"
        REQ=( ""

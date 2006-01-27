@@ -1,6 +1,7 @@
    VERSION=( "2.0.0" )
   CATEGORY="utility library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.loveruby.net/en/amstd.html"
        URL="http://www.loveruby.net/archive/amstd"
        REQ="ruby"

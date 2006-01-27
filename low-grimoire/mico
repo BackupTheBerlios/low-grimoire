@@ -1,6 +1,7 @@
   VERSION=( "2.3.11" "2.3.10" )
   CATEGORY="library"
   ATTRIBUTE="development"
+  SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.mico.org"
   URL="$HOMEPAGE"
   FRESHMEAT="mico"

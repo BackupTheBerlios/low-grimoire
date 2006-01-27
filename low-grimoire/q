@@ -1,6 +1,7 @@
    VERSION=( "4.2.3" "4.2" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.musikwissenschaft.uni-mainz.de/~ag/q/"
        URL="http://www.musikwissenschaft.uni-mainz.de/~ag/q/"
  FRESHMEAT="Q"

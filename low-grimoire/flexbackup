@@ -1,6 +1,7 @@
    VERSION=( "1.2.1" "1.2.0" "1.1.8" "1.1.7" "1.1.6" "1.0.5" "1.0.4" )
   CATEGORY="utility"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://flexbackup.sourceforge.net"
        URL="http://flexbackup.sourceforge.net/tarball"
        REQ=( "perl findutils fileutils tar bzip2"

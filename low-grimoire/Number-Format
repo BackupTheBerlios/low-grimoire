@@ -1,6 +1,7 @@
    VERSION=( "1.45" )
   CATEGORY="perl development"
  ATTRIBUTE="library"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://search.cpan.org/author/WRW/Number-Format-$VERSION"
        URL="http://search.cpan.org/CPAN/authors/id/W/WR/WRW"
        REQ="perl"

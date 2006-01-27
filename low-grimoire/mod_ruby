@@ -1,6 +1,7 @@
    VERSION=( "1.2.4" "1.1.2" "1.1.1" "1.1.0" "1.0.7" "1.0.6" )
   CATEGORY="library"
  ATTRIBUTE="development"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.modruby.net"
        URL="http://modruby.net/archive"
        OPT="eruby:--enable-eruby::to enable eruby"

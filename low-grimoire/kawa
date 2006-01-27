@@ -1,6 +1,7 @@
    VERSION=( "1.7.90" "1.7" "1.7beta2" )
   CATEGORY="interpreter"
  ATTRIBUTE="console"
+    SOURCE="$SPELL-$VERSION"
   HOMEPAGE="http://www.gnu.org/software/kawa"
        URL="ftp://ftp.gnu.org/pub/gnu/kawa"
        REQ="j2sdk"
