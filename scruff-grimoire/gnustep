@@ -5,7 +5,7 @@
  CATEGORY="library"
 ATTRIBUTE="new concurrent"
 ASSUME="off"
-SOURCE="$SPELL-$VERSION"
+SOURCE=""
  HOMEPAGE="http://www.gnustep.org"
    URL="http://ftp.gnustep.org/pub/gnustep/core"
 FRESHMEAT="gnustep"
