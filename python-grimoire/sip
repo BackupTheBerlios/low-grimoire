@@ -1,9 +1,9 @@
-   VERSION=( "4.3.1" "4.2.1" "3.10.2" "3.10.1" "3.9" "3.7" "3.6" )
+   VERSION=( "4.3.2" "4.3.1" "4.2.1" "3.10.2" "3.10.1" "3.9" "3.7" "3.6" )
   CATEGORY="development"
  ATTRIBUTE="library python"
   HOMEPAGE="http://www.riverbankcomputing.co.uk/sip"
-       URL="http://www.river-bank.demon.co.uk/download"
-    SOURCE="$SPELL/$SPELL-$VERSION"
+       URL="http://www.riverbankcomputing.com/Downloads"
+    SOURCE="$SPELL${VERSION:0:1}/$SPELL-$VERSION"
        REQ="Python qt-x11-free"
   ESTIMATE=79
  FRESHMEAT="Python-SIP"
