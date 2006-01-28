@@ -1,0 +1,41 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.6.5" )
+ CATEGORY="science library"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://hdf.ncsa.uiuc.edu/HDF5"
+      URL="ftp://ftp.ncsa.uiuc.edu/HDF/HDF5/current/src/"
+      REQ=( ""
+            "zlib:--with-zlib::Add zlib support"
+            "szip:--with-szlib::Add szip support"
+#            "gass:--with-gass::Add gass support" # 
+#            "srb:--with-srb::Add srb support" # 
+            "openssl:--with-ssl::Add ssl support"
+            ":--enable-threadsafe --with-pthread=/lib::make thread-safe" )
+#     OPTS="--enable-cxx --enable-fortran --enable-hdf5v1_4 --enable-stream-vfd "
+     OPTS="--enable-cxx --enable-stream-vfd "
+#FRESHMEAT=""
+DESC="HDF5 is a general purpose library and file format for storing scientific data.
+HDF5 is a general purpose library and file format for storing scientific data.
+HDF5 can store two primary objects: datasets and groups. A dataset is essentially
+a multidimensional array of data elements, and a group is a structure for
+organizing objects in an HDF5 file. Using these two basic objects, one can create
+and store almost any kind of scientific data structure, such as images, arrays of
+vectors, and structured and unstructured grids. You can also mix and match them
+in HDF5 files according to your needs. 
+"
+
+patches() {
+  case "$VERSION" in
+    "1.6.5")
+      sed -i "57itypedef int H5G_obj_t;" src/H5Gpublic.h &&
+      sed -i "346s:size_t:hsize_t:" c++/src/H5FaccProp.cpp
+      ;;
+  esac
+}
+
+build() {
+#  patches &&
+  default_build
+}

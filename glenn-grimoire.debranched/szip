@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "2.0" )
+ CATEGORY="archive"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$VERSION/src/$SPELL-$VERSION"
+ HOMEPAGE="http://hdf.ncsa.uiuc.edu/doc_resource/SZIP"
+      URL="ftp://ftp.ncsa.uiuc.edu/HDF"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="Szip compression software, providing lossless compression of scientific dat.
+Szip compression software, providing lossless compression of scientific dat.
+"
+
+patches() {
+  case "$VERSION" in
+    # newer compilers have a few math functions builtin which confuses the library detection
+    "2.0") sed -i "s:sqrt:log2:" configure ;;
+  esac
+}
+
+build() {
+  patches &&
+  default_build
+}
