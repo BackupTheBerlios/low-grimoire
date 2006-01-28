@@ -8,11 +8,19 @@ ATTRIBUTE="library python"
       URL="$SOURCEFORGE_URL"
       REQ=( "Python" )
 #FRESHMEAT=""
-DESC=" Powerful but easy to use Distributed Object Middleware for Python 
- Powerful but easy to use Distributed Object Middleware for Python 
+DESC="Powerful but easy to use Distributed Object Middleware for Python 
+Powerful but easy to use Distributed Object Middleware for Python 
 "
 
+patch_source() {
+  sed -e 's:#\[install-options\]:\[install-options\]:' \
+      -e 's:#unattended=1:unattended=1:' \
+      -e 's:#install-scripts=/foo/bar:install-scripts=/usr/bin:' \
+      -i setup.cfg
+}
+
 build() {
+  patch_source &&
   python setup.py build &&
   prepare_install       &&
   python setup.py install
