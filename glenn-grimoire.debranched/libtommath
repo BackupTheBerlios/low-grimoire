@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.38" )
+ CATEGORY="math"
+ATTRIBUTE="library"
+   SOURCE="ltm-$VERSION"
+ HOMEPAGE="math.libtomcrypt.org"
+      URL="http://math.libtomcrypt.org/files"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="LibTomMath provides highly optimized and portable routines for a vast majority of integer based number theoretic applications.
+LibTomMath provides highly optimized and portable routines for a vast majority
+of integer based number theoretic applications.
+"
+
+build() {
+  make &&
+  prepare_install &&
+  make INSTALL_GROUP=root install
+}

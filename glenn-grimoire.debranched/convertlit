@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "18" "14" )
+ CATEGORY="archive"
+ATTRIBUTE="console"
+   SOURCE="$SPELL${VERSION}src.zip"
+ HOMEPAGE="http://www.convertlit.com"
+      URL="http://www.convertlit.com"
+      REQ=( "libtommath" )
+#FRESHMEAT=""
+DESC="convertlit converts lit documents to html + images and OEBPS.
+convertlit converts lit documents to html + images and OEBPS.
+"
+
+patch_source() {
+  sed -i "s:../libtommath-0.30/libtommath.a:-ltommath:" "clit$VERSION/Makefile"
+}
+
+build() {
+  patch_source &&
+  make -C lib &&
+  make -C "clit$VERSION" &&
+  prepare_install &&
+  install -o root -g root -m 755 "clit$VERSION/clit" /usr/bin/convertlit
+}
