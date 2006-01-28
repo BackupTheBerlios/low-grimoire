@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+   VERSION=( "0.8.0b1" "0.7.0" )
+  CATEGORY="development"
+ ATTRIBUTE="library server python"
+    SOURCE="$SPELL/$SPELL-$VERSION"
+  HOMEPAGE="http://4suite.org"
+       URL="ftp://ftp.4suite.org/pub"
+       REQ=( "4Suite" )
+  ESTIMATE=13
+# FRESHMEAT=""
+DESC="BisonGen is a parser generator for python.
+BisonGen is a parser generator for python.  It takes a XML file
+(similar to bison/flex files in format).  With this file it
+generates both a C and pure Python parser.
+"
+
+build() {
+    python setup.py build                       &&
+    prepare_install                             &&
+    python setup.py install
+}
