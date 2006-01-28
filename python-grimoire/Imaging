@@ -1,4 +1,4 @@
-   VERSION=( "1.1.6a0" "1.1.5" "1.1.4" )
+   VERSION=( "1.1.6a1-20051211" "1.1.6a0" "1.1.5" "1.1.4" )
   CATEGORY="library python"
  ATTRIBUTE="development python x11"
     SOURCE="$SPELL-$VERSION"

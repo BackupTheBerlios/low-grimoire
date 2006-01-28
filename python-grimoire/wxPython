@@ -1,6 +1,6 @@
-  VERSION=( "2.6.1.0" "2.4.2.4" "2.4.1.2" "2.4.0.7p1" "2.4.0.7" )
+  VERSION=( "2.6.2.1" "2.6.1.0" "2.4.2.4" "2.4.1.2" "2.4.0.7p1" "2.4.0.7" )
  CATEGORY="development"
-ATTRIBUTE="library x11"
+ATTRIBUTE="library x11 python"
       URL="$SOURCEFORGE_URL"
    SOURCE="wxpython/wxPython-src-$VERSION"
  HOMEPAGE="http://www.wxpython.org"

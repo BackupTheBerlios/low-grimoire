@@ -5,7 +5,7 @@
        URL="http://miketeo.net/projects"
   HOMEPAGE="http://miketeo.net/projects/pysmb"
        REQ="Python"
- FRESHMEAT="pysmb"
+# FRESHMEAT=""
 DESC="pysmb is an experimental SMB/CIFS library written in Python
 
 The library has been tested to be able to connect Win 98 SE and Samba 

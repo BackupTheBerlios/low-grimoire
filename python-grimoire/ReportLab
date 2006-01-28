@@ -3,7 +3,7 @@
  ATTRIBUTE="library python"
   HOMEPAGE="http://www.reportlab.com"
        URL="http://www.reportlab.com"
-    SOURCE="ftp/ReportLab_$VERSION.tgz"
+    SOURCE="ftp/${SPELL}_$VERSION.tgz"
        REQ="Imaging"
   ESTIMATE="262"
 DESC="Tools for generating printable PDF documents from any data source

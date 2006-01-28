@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://pytables.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "numarray" )
+      REQ=( "numarray hdf5" )
 #FRESHMEAT=""
 DESC="The goal of PyTables is to enable the end user to manipulate easily and efficiently large datasets.
 The goal of PyTables is to enable the end user to manipulate easily and
