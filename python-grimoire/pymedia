@@ -28,12 +28,7 @@ patch_source() {
     "1.3.5.0")  
       sed -e "222i                        '/usr/include/lame'," \
           -e "260s:choice = .*:choice = 'Y':" \
-          -i setup.py &&
-      sed -i "47,60s:\\$::" sound/sound.cpp &&
-      sed -e '60i\\t\t\t\tunsigned long buffer_size,' \
-          -e '68s:);$:,:' \
-          -e '69i\\t\t\t\t   unsigned long buffer_size);' \
-          -i audio/libavcodec/faad.c;;
+          -i setup.py;;
   esac
 }
 
