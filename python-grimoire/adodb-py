@@ -1,0 +1,24 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "200" "113" )
+ CATEGORY="development database"
+ATTRIBUTE="library python"
+   SOURCE="adodb/${SPELL}${VERSION}.zip"
+ HOMEPAGE="http://adodb.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "Python"
+            "psycopg:::support postgresql"
+#            ":::support mysql"
+#            "mxodbc:::support odbc"
+            "pysqlite:::support sqlite" )
+#FRESHMEAT=""
+DESC="ADOdb-py is a database abstraction library for Python.
+ADOdb-py is a database abstraction library for Python.
+"
+
+build() {
+  cd adodb-$VERSION &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
