@@ -44,8 +44,8 @@ esac
 
 #Build and test
 ( case $VERSION in
-#   1.1.6a0) python setup.py build_ext -i && python selftest.py | grep Failure;  if [ $? == 0 ]; then exit 1; fi ;;
-   1.1.6a0) python setup.py build_ext -i ;;
+#   1.1.6a*) python setup.py build_ext -i && python selftest.py | grep Failure;  if [ $? == 0 ]; then exit 1; fi ;;
+   1.1.6a*) python setup.py build_ext -i ;;
    *)      ( cd libImaging && ./configure && make )            || exit $? ;;
 esac ) &&
 prepare_install          &&
