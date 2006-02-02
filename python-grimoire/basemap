@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.7.2" "0.5.2" "0.5.1" "0.5" )
+  VERSION=( "0.8" "0.7.2" "0.5.2" "0.5.1" "0.5" )
  CATEGORY="development math"
 ATTRIBUTE="library python"
    SOURCE="matplotlib/$SPELL-$VERSION"
