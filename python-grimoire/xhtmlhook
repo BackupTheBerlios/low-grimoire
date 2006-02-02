@@ -1,0 +1,25 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.12" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION.zip"
+ HOMEPAGE="http://www.boddie.org.uk/python/xhtmlhook"
+      URL="http://www.boddie.org.uk/python/downloads"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="The xhtmlhook import hook was written to allow Python source code to be included in XHTML documents.
+The xhtmlhook import hook was written to allow Python source code to be included in XHTML documents.
+"
+
+patch_source() {
+  sed -i "s:raw_input::g" setup.py
+}
+
+build() {
+  cd "$SPELL-$VERSION" &&
+  patch_source &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

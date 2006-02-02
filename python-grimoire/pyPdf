@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.5" )
+ CATEGORY="development documentation"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pybrary.net/pyPdf"
+      URL="http://pybrary.net"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="A Pure-Python PDF library for merging, splitting, and cropping pages.
+A Pure-Python PDF library for merging, splitting, and cropping pages.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

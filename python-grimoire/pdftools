@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.31" )
+ CATEGORY="development documentation"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/Software/$SPELL-$VERSION"
+ HOMEPAGE="http://www.boddie.org.uk/david/Projects/Python/pdftools"
+      URL="http://www.boddie.org.uk/david/Projects/Python"
+      REQ=( "Numeric" )
+#FRESHMEAT=""
+DESC="Basic classes for handling information in Adobe PDF files.
+Basic classes for handling information in Adobe PDF files.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
