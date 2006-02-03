@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.3.3" "0.3.2" "0.3.1" )
+  VERSION=( "0.4.4" "0.3.3" "0.3.2" "0.3.1" )
  CATEGORY="documentation"
 ATTRIBUTE="library"
    SOURCE="$SPELL-$VERSION"
@@ -14,19 +14,15 @@ ATTRIBUTE="library"
             "qt-x11-free::--disable-poppler-qt:build Qt wrapper" )
      OPTS="--enable-a4-paper --enable-opi"
 #FRESHMEAT=""
-DESC="gtranslator is an enhanced gettext po file editor for the GNOME desktop environment.
-gtranslator is an enhanced gettext po file editor for the GNOME desktop
-environment. It handles all forms of gettext po files like compiled gettext
-po files (gmo/mo files), compressed po files (po.gz/po.bz2 etc.) and
-features many comfortable everyday usage features likeFind/Replace, Auto
-Translation, Message Translation Learning, Messages Table (for having an
-overview of the translations/messages in the po file), Easy Navigation and
-Editing of translation messages & comments of the translation where
-accurate.
+DESC="Poppler is a PDF rendering library based on the xpdf-3.0 code base. 
+Poppler is a PDF rendering library based on the xpdf-3.0 code base. 
 "
 
 patches() {
-  sed -i '19i#if OPI_SUPPORT\nclass Dict;\n#endif\n' poppler/OutputDev.h 
+  case "$VERSION" in
+    "0.3.3")
+      sed -i '19i#if OPI_SUPPORT\nclass Dict;\n#endif\n' poppler/OutputDev.h ;;
+  esac
 }
 
 build() {
