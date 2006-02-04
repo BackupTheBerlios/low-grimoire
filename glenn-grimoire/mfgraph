@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4.1" )
+ CATEGORY="graphic math"
+ATTRIBUTE="x11"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://mfgraph.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "swig Python"
+            "doxygen:::buid documentation" )
+ ESTIMATE="83"
+#FRESHMEAT=""
+DESC="mfGraph is a graph rendering library for interactive applications.
+mfGraph is a graph rendering library for interactive applications. Written in C++
+and Python, mfGraph parses GraphViz DOT and XDOT files and provides
+rendering and hit-testing facilities. Supports Microsoft Windows natively,
+GNU/Linux through wxPython. 
+"
+
