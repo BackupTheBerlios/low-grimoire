@@ -1,7 +1,7 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "1.9" "1.8.2" )
- CATEGORY="development datababse"
+ CATEGORY="development database"
 ATTRIBUTE="library python"
    SOURCE="${SPELL}_Python_$VERSION.zip"
  HOMEPAGE="http://www.netpromi.com/kirbybase.html"
