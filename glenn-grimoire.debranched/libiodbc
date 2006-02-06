@@ -1,0 +1,15 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "3.52.4" )
+ CATEGORY="database"
+ATTRIBUTE="library"
+   SOURCE="iodbc/$SPELL-$VERSION"
+ HOMEPAGE="http://www.iodbc.org"
+      URL="$SOURCEFORGE_URL"
+      REQ=( ""
+            "gtk+-v1.2:--enable-gui:--disable-gui:compile gtk gui" )
+FRESHMEAT="exiv2"
+DESC="iODBC is an Open Source platform independent implementation of ODBC
+iODBC is the acronym for Independent Open DataBase Connectivity, an Open
+Source platform independent implementation of ODBC.
+"

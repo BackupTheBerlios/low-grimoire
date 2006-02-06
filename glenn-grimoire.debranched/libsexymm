@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.5" )
+ CATEGORY="graphic"
+ATTRIBUTE="library"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
+      URL="http://osiris.chipx86.com/projects/libsexy/releases"
+      REQ=( "gtkmm libsexy" )
+#FRESHMEAT=""
+DESC="libsexymm is a set of C++ bindings around libsexy.
+libsexymm is a set of C++ bindings around libsexy, compatible with programs
+using gtkmm. 
+"
