@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.5" )
+ CATEGORY="graphic"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
+      URL="http://osiris.chipx86.com/projects/libsexy/releases"
+      REQ=( "Python libsexy" )
+#FRESHMEAT=""
+DESC="sexy-python is a set of Python bindings around libsexy. 
+sexy-python is a set of Python bindings around libsexy. 
+"
