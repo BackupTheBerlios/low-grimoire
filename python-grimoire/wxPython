@@ -4,9 +4,22 @@ ATTRIBUTE="library x11 python"
       URL="$SOURCEFORGE_URL"
    SOURCE="wxpython/wxPython-src-$VERSION"
  HOMEPAGE="http://www.wxpython.org"
-      REQ=( "Python swig"
-            "gtk+-v1.2:--enable-gtk::Install wxGTK against gtk+-v1.2"
-            "gtk+:--enable-gtk2::Install wxGTK against gtk+" )
+      REQ=( "Python swig zlib"
+            ":--enable-unicode::enable unicode"
+            "gtk+::--disable-gtk2:use GTK+ 2.x instead of 1.2"
+#            "gtk+::--with-gtk=1:use GTK+ 2.x instead of 1.2"
+            ":--with-opengl::enable OpenGL"
+            "SDL:--with-sdl::enable SDL"
+            "libpng:--with-libpng::enable PNG support"
+            "jpeg:--with-libjpeg::enable JPEG support"
+            "tiff:--with-libtiff::enable TIFF support"
+            "libmspack:--with-libmspack::enable support for various Microsoft compressions formats"
+            "libiodbc:--with-odbc::enable ODBC support"
+            "libgnomeprintui:--with-gnomeprint::enable GNOME print"
+            "gstreamer:::enable gstreamer support"
+            "expat:--with-expat::enable XML support"
+            ":--enable-debug --enable-debug_gdb::make debug build" )
+     OPTS=""
 DESC="wxPython is a GUI toolkit for the Python
 
 wxPython is a GUI toolkit for the Python programming language. 
@@ -20,34 +33,39 @@ which is written in C++.
 build() {
   export WPREF="/usr/lib/wxPython"
 #  export  PATH="/opt/bison/1.35/bin:$PATH"
-  if echo $OPTS | grep gtk2 >/dev/null
-                        then
-                            GTK_OPTION="WXPORT=gtk2 UNICODE=1"
-                            OPTS="$OPTS --enable-unicode"
-                        else 
-                            GTK_OPTION="WXPORT=gtk"
+  if augur opt.on "$SPELL" | grep gtk+;
+    then
+        GTK_OPTION="WXPORT=gtk2"
+        #OPTS="$OPTS --enable-unicode"
+    else 
+        GTK_OPTION="WXPORT=gtk"
+  fi
+  
+  if echo $OPTS | grep -q unicode; then
+    GTK_OPTION="$GTK_OPTION UNICODE=1"
   fi
 
-  OPTS="$OPTS --x-libraries=/usr/X11R6/lib --x-includes=/usr/X11R6/include"
+  OPTS="$OPTS --x-libraries=/usr/X11R6/lib
+              --x-includes=/usr/X11R6/include"
 
-#  mkdir build						       &&
-  cd build						       &&
-  ../configure       --prefix=$WPREF    			\
-		     --enable-rpath=$WXPREF/lib			\
-                     --with-opengl                              \
-		     --enable-geometry 				\
-                     --enable-optimise 				\
-                     --enable-debug_flag 			\
-                     --enable-zipstream       			\
-		     $OPTS
-  		     		    
-  make LDFLAGS_GL="$LDFLAGS,-L/usr/X11R6/lib"                  &&
+#  mkdir build					       &&
+  cd build					       &&
+  ../configure   --prefix=$WPREF    			\
+                 --enable-rpath=$WXPREF/lib		\
+                 --enable-optimise 			\
+                 --enable-controls                      \
+                 --enable-mediactrl			\
+                 --enable-tabdialog     		\
+                 --enable-geometry 			\
+                 $OPTS                                 &&
+  make LDFLAGS_GL="$LDFLAGS,-L/usr/X11R6/lib"          &&
+  make -C contrib/src                                  &&
+  prepare_install                                      &&
+  make install                                         &&
+  make -C contrib/src install                          &&
 
-  prepare_install                                              &&
-
-  make install                                                 &&
-
-  cd $BUILD_DIR/wxPython                                       &&
-  python setup.py WX_CONFIG=/usr/lib/wxPython/bin/wx-config $GTK_OPTION install
+  cd $BUILD_DIR/wxPython                               &&
+  python setup.py WX_CONFIG=/usr/lib/wxPython/bin/wx-config \
+    $GTK_OPTION install
 
 }
