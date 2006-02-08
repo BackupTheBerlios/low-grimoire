@@ -1,0 +1,13 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.4" )
+ CATEGORY="desktop"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.galago-project.org"
+      URL="http://www.galago-project.org/files/releases/source"
+      REQ=( "libgalago" )
+#FRESHMEAT=""
+DESC="A collection of widgets that work with the Galago desktop presence framework.
+A collection of widgets that work with the Galago desktop presence framework.
+"

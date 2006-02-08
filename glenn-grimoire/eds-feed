@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.2" )
+ CATEGORY="desktop"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.galago-project.org"
+      URL="http://www.galago-project.org/files/releases/source"
+      REQ=( "libgalago evolution-data-server" )
+#FRESHMEAT=""
+DESC="A feed for Galago that uses contact entries in the Evolution address book to link people and accounts.
+A feed for Galago that uses contact entries in the Evolution address book
+to link people and accounts.
+"

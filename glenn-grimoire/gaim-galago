@@ -1,0 +1,14 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.2" )
+ CATEGORY="desktop plugin"
+ATTRIBUTE="library"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.galago-project.org"
+      URL="http://www.galago-project.org/files/releases/source"
+      REQ=( "libgalago gaim" )
+#FRESHMEAT=""
+DESC="A plugin for Gaim that allows it to act as a presence feed for Galago.
+A plugin for the Gaim instant messenger client that allows it to act as a
+presence feed for Galago.
+"

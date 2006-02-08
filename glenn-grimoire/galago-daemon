@@ -1,0 +1,16 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.3.4" )
+ CATEGORY="desktop"
+ATTRIBUTE="server"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://www.galago-project.org"
+      URL="http://www.galago-project.org/files/releases/source"
+      REQ=( "libgalago"
+            "binreloc:::compile with binary relocation support"
+            "check:::unit testing" )
+#FRESHMEAT=""
+DESC="The Galago presence daemon.
+The Galago presence daemon, which is the center of all presence transactions
+for Galago. This service is automatically launched by D-BUS when needed.
+"
