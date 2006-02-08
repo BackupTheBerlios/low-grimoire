@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://codespeak.net/lxml"
+      URL="http://codespeak.net"
+      REQ=( "Pyrex libxslt" )
+#FRESHMEAT=""
+DESC="lxml is a Pythonic binding for the libxml2 and libxslt libraries.
+lxml is a Pythonic binding for the libxml2 and libxslt libraries.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

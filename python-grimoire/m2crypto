@@ -1,0 +1,27 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.13" )
+ CATEGORY="development encryption"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION.zip"
+ HOMEPAGE="http://sandbox.rulemaker.net/ngps/m2"
+      URL="http://sandbox.rulemaker.net/ngps/Dist"
+      REQ=( "Python openssl swig" )
+#FRESHMEAT=""
+DESC="M2Crypto is a crypto and SSL toolkit for Python.
+M2Crypto is a crypto and SSL toolkit for Python.
+"
+
+patches() {
+  if [ "$VERSION" == "0.13" ]; then
+      sed -i 's:swig_sources (self, sources):swig_sources (self, sources, extensions=None):' setup.py;
+  fi
+}
+
+build() {
+  cd "$SPELL-$VERSION" &&
+  patches &&
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
