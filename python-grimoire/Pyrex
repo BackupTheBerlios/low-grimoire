@@ -4,7 +4,7 @@
  CATEGORY="development"
 ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
- HOMEPAGE="http://pyode.sourceforge.net"
+ HOMEPAGE="http://www.cosc.canterbury.ac.nz/~greg/python/Pyrex"
       URL="http://www.cosc.canterbury.ac.nz/~greg/python"
       REQ=( "Python" )
 #FRESHMEAT=""
