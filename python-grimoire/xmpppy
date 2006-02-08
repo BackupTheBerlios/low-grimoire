@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://xmpppy.sourceforge.net"
       URL="$SOURCEFORGE_URL"
-      REQ=( "Python libxml2 dnspython M2Crypto" )
+      REQ=( "Python" )
 #FRESHMEAT=""
 DESC="Library for hanling xmpp with python.
 Library for hanling xmpp with python.
