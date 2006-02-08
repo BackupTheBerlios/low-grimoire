@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.2.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://divmod.org/projects/pyflakes"
+      URL="http://divmod.org/static/projects"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="Pyflakes is a simple program which checks Python source files for errors.
+Pyflakes is a simple program which checks Python source files for errors.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
