@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.38" )
+ CATEGORY="documentation"
+ATTRIBUTE="console"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://pdftohtml.sourceforge.net"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "" )
+#FRESHMEAT=""
+DESC="Pdftohtml is a tool based on the Xpdf package which translates pdf documents into html format.
+Pdftohtml is a tool based on the Xpdf package which translates pdf documents
+into html format.
+"
+
+build() {
+  make &&
+  prepare_install &&
+  install -o root -g root -m 755 src/pdftohtml /usr/bin &&
+  install -o root -g root -m 644 pdf2xml.dtd /etc
+}
