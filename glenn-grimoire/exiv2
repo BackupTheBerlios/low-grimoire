@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
   VERSION=( "0.9" )
  CATEGORY="graphic"
-ATTRIBUTE="library"
+ATTRIBUTE="library console"
    SOURCE="$SPELL/$SPELL-$VERSION"
  HOMEPAGE="http://home.arcor.de/ahuggel/exiv2"
       URL="http://home.arcor.de/ahuggel"
