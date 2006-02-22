@@ -1,58 +1,22 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "0.6.4" "0.6.3" "0.4.2" "0.4.1" )
+  VERSION=( "0.7.6" "0.6.4" "0.6.3" "0.4.2" "0.4.1" )
  CATEGORY="development math"
 ATTRIBUTE="library"
-   SOURCE="$SPELL-$VERSION"
+   SOURCE="$SPELL-$VERSION.tar.gz"
  HOMEPAGE="http://helm.cs.unibo.it/mml-widget/"
       URL="http://helm.cs.unibo.it/mml-widget/sources"
-      REQ=( "gmetadom t1lib" )
+      REQ=( ""
+            ":--enable-breaks::enable linebreaking with mspace elements"
+            ":--enable-boxml::enable support for BoxML markup"
+            "libxml2:--enable-libxml2 --enable-libxml2-reader::enable the libxml2 frontend"
+            "gmetadom:--enable-gmetadom::enable the GMetaDOM frontend"
+            "gtk+:--enable-gtk::enable GTK backend"
+            ":--enable-svg::enable SVG backend"
+            "t1lib:--with-t1lib::compile with t1lib 1.x library"
+            "popt:--with-popt::required for mathmlsvg and viewer" )
+     OPTS="--enable-custom-reader "
 #FRESHMEAT=""
 DESC="GtkMathView is a C++ rendering engine for MathML documents.
 GtkMathView is a C++ rendering engine for MathML documents.
 "
-
-patch_source() {
-  case "$VERSION" in
-    "0.4.2")
-      sed -i "s:T1_Get_no_fonts:T1_GetNoFonts:" src/T1_FontManager.cc ;;
-    "0.6.4")
-      patch -p0 <<'EOF'
---- src/frontend/common/TemplateBuilder.hh~	2005-03-03 23:20:27.000000000 -0600
-+++ src/frontend/common/TemplateBuilder.hh	2005-03-03 23:20:42.000000000 -0600
-@@ -790,10 +790,10 @@
- 			 const SmartPtr<Value>& tableAlign,
- 			 unsigned columnIndex)
-     {
--      return
--	(cellAlign ? cellAlign : 
--	 (rowAlign ? GetComponent(rowAlign, columnIndex) :
--	  (tableAlign ? GetComponent(tableAlign, columnIndex) : 0)));
-+      if(cellAlign)  return cellAlign;
-+      if(rowAlign)   return GetComponent(rowAlign, columnIndex);
-+      if(tableAlign) return GetComponent(tableAlign, columnIndex);
-+      return 0;
-     }
- 
-     static void
-EOF
-      ;;
-  esac
-#  if [ "$VERSION" == "0.4.2" ]; then
-#    sed -i "s:T1_Get_no_fonts:T1_GetNoFonts:" src/T1_FontManager.cc
-#  elfi [ "$VERSION" == "0.6.3" ]; then
-#    :
-#  fi
-}
-
-build() {
-
-  patch_source                  &&
-  ./configure --prefix=/usr     \
-              --with-html-dir=/usr/doc/$SPELL \
-              $OPTS             &&
-  make                          &&
-  prepare_install               &&
-  make    install
-
-}
