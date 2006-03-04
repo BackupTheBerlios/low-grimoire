@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.4" )
+ CATEGORY="graphic-viewer"
+ATTRIBUTE="x11 python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sacredchao.net/~piman/software.shtml"
+      URL="http://sacredchao.net/~piman/software"
+      REQ=( "pygame" )
+#FRESHMEAT=""
+DESC="Superchick is a program to view manga, that is, Japanese comics.
+Superchick is a program to view manga, that is, Japanese comics. It can also be
+easily used to view American comics, or any other collection of images. However
+the feature set is slanted towards viewing images that should be displayed in
+alphabetical order, 1-2 per screen, and in right to left order.
+"
+
+build() {
+  prepare_install       &&
+  make install
+}

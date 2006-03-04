@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.1.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sacredchao.net/~piman/software/python.shtml"
+      URL="http://sacredchao.net/~piman/software"
+      REQ=( "Python"
+            "unrar:::support rar" )
+#FRESHMEAT=""
+DESC="DirStore provides a generic object to access files stored in a directory, tar, rar, or zip archive.
+DirStore provides a generic object to access files stored in a directory, tar,
+rar, or zip archive.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

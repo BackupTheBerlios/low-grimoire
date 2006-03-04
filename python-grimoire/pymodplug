@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://sacredchao.net/~piman/software/python.shtml"
+      URL="http://sacredchao.net/~piman/software"
+      REQ=( "Python libmodplug" )
+#FRESHMEAT=""
+DESC="This Python module lets you load and decode files supported by the ModPlug library.
+This Python module lets you load and decode files supported by the ModPlug library.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

@@ -1,0 +1,22 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.4.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="29078/$SPELL-$VERSION"
+ HOMEPAGE="http://pysvn.tigris.org"
+      URL="http://pysvn.tigris.org/files/documents/1233"
+      REQ=( "pycxx subversion" )
+#FRESHMEAT=""
+DESC="The pysvn project's goal is to enable Tools to be written in Python that use Subversion. 
+The pysvn project's goal is to enable Tools to be written in Python that use
+Subversion. 
+"
+
+build() {
+  cd Source &&
+  python setup.py configure &&
+  make &&
+  prepare_install       &&
+  cp -r pysvn $(python -c 'import sys; print [p for p in sys.path if p.endswith("site-packages")][0]')
+}

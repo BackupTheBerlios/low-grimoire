@@ -1,0 +1,19 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8.1" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://codespeak.net/pyrepl"
+      URL="http://codespeak.net"
+      REQ=( "pygame" )
+#FRESHMEAT=""
+DESC="pyrepl is a readline-a-like in Python.
+pyrepl is a readline-a-like in Python.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
