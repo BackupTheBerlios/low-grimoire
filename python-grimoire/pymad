@@ -1,9 +1,9 @@
    VERSION=( "0.5.4" "0.5.3" "0.5.2" "0.5.1" "0.4.1" "0.4" )
   CATEGORY="development"
  ATTRIBUTE="library python"
-    SOURCE="$SPELL/$SPELL-$VERSION"
+    SOURCE="$SPELL/download/$SPELL-$VERSION"
   HOMEPAGE="http://spacepants.org/src/pymad/"
-       URL="http://spacepants.org/src/pymad/download/"
+       URL="http://spacepants.org/src"
        REQ="Python libmad"
   ESTIMATE=17
 DESC="pymad is the Python binding to the MPEG Audio Decoder library
