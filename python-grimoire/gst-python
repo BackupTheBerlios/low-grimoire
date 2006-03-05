@@ -6,7 +6,7 @@ ATTRIBUTE="library python"
    SOURCE="$SPELL-$VERSION"
  HOMEPAGE="http://gstreamer.freedesktop.org/modules/gst-python.html"
       URL="http://gstreamer.freedesktop.org/src/gst-python"
-      REQ=( "pygtk gstreamer" )
+      REQ=( "pygtk gst-plugins-base" )
 #FRESHMEAT=""
 DESC="GStreamer python bindings.
 GStreamer python bindings.
