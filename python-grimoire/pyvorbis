@@ -4,7 +4,7 @@
   HOMEPAGE="http://www.andrewchatham.com/pyogg"
     SOURCE="$SPELL-$VERSION"
        URL="http://www.andrewchatham.com/pyogg/download"
-       REQ="Python libvorbis"
+       REQ="pyogg libvorbis"
 # FRESHMEAT="pyvorbis"
 DESC="Binding for python to the vorbis libraries
 
