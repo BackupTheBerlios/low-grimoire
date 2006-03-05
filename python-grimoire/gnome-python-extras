@@ -2,7 +2,7 @@
 # as they appear in http://www.gnu.org/licenses/gpl.txt
    VERSION=( "2.13.3" "2.10.2" "2.10.1" )
   CATEGORY="interpreter"
- ATTRIBUTE="gnome"
+ ATTRIBUTE="gnome python"
     SOURCE="sources/$SPELL/${VERSION:0:4}/$SPELL-$VERSION.tar.bz2"
   HOMEPAGE="http://www.gnome.org"
        URL="$GNOME_URL"
