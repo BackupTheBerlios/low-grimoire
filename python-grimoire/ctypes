@@ -16,7 +16,14 @@ pure Python. It is even possible to implement C callback functions in pure
 Python.
 "
 
+patch_source() {
+  case "$VERSION" in
+    "0.9.6")  sed -i "3883s:static::" source/_ctypes.c
+  esac
+}
+
 build() {
+  patch_source &&
   python setup.py build &&
   prepare_install       &&
   python setup.py install
