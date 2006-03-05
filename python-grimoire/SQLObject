@@ -1,0 +1,21 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.7.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL/$SPELL-$VERSION"
+ HOMEPAGE="http://sqlobject.org"
+      URL="http://cheeseshop.python.org/packages/source/S"
+      REQ=( "Python" )
+#FRESHMEAT=""
+DESC="SQLObject is a popular Object Relational Manager for providing an object interface to your database.
+SQLObject is a popular Object Relational Manager for providing an object
+interface to your database, with tables as classes, rows as instances, and
+columns as attributes.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

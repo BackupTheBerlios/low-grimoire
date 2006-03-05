@@ -1,0 +1,23 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "1.2.6-20050316" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="$SPELL-$VERSION"
+ HOMEPAGE="http://effbot.org/zone/element-index.htm"
+      URL="http://effbot.org/downloads"
+      REQ=( "Python"
+            "cElementTree:::install C optimized code" )
+#FRESHMEAT=""
+DESC="The Element type is a simple but flexible container object, designed to store hierarchical data structures.
+The Element type is a simple but flexible container object, designed to store
+hierarchical data structures, such as simplified XML infosets, in memory. The
+element type can be described as a cross between a Python list and a Python
+dictionary.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}
