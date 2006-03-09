@@ -1,0 +1,20 @@
+# This spell released under the terms of the GNU General Public License
+# as they appear in http://www.gnu.org/licenses/gpl.txt
+  VERSION=( "0.8.2.a-wx2.6.1.0" )
+ CATEGORY="development"
+ATTRIBUTE="library python"
+   SOURCE="spe/$SPELL-$VERSION"
+ HOMEPAGE="http://www.stani.be/python/spe"
+      URL="$SOURCEFORGE_URL"
+      REQ=( "wxPython" )
+#            "unrar:::support rar" )
+#FRESHMEAT=""
+DESC="Multi-platform, open-source Python IDE for Windows, Linux & Mac.
+Multi-platform, open-source Python IDE for Windows, Linux & Mac.
+"
+
+build() {
+  python setup.py build &&
+  prepare_install       &&
+  python setup.py install
+}

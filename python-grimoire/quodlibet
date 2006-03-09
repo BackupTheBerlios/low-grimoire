@@ -1,0 +1,30 @@
+   VERSION=( "0.18" "0.17.1" "0.17" "0.16" "0.15" "0.14" "0.13.1" )
+  CATEGORY="audio-player"
+ ATTRIBUTE="x11 python"
+    SOURCE="quodlibet-$VERSION.tar.gz"
+       URL="http://www.sacredchao.net/~piman/software"
+  HOMEPAGE="http://www.sacredchao.net/quodlibet"
+       REQ=( "gst-python"
+             "pyogg pyvorbis:::enable ogg support"
+             "pymad:::enable mp3 support"
+             "gnome-python-extras:::enable gnome support"
+             "ctypes:::support various other codecs" )
+  ESTIMATE="675"
+      DESC="quodlibet is a gtk+ based audio player written in Python.
+Quod Libet is a music management program. It provides several different ways
+to view your audio library, as well as support for Internet radio and
+audio feeds. It has extremely flexible metadata tag editing and searching
+capabilities.
+
+Ex Falso is a tag editor with the same tag editing interface as Quod Libet,
+but it does not play files.
+
+Supported file formats include Ogg Vorbis, MP3, FLAC, MOD/XM/IT, Musepack,
+and Wavpack.
+"
+
+build() {
+  make &&
+  prepare_install &&
+  make PREFIX=/usr install
+}
