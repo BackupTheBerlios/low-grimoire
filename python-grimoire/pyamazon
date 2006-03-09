@@ -16,7 +16,6 @@ similar, or best seller.
 
 build() {
   # add OnDemandAmazonList.py ?
-  cd pyamazon* &&
   prepare_install &&
   cp amazon.py /usr/lib/python$(python -V 2>&1| cut -d' ' -f2|cut -d. -f1,2)/site-packages
 }
