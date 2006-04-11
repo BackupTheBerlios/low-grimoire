@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "1.5-rc6a" )
+  VERSION=( "1.5" "1.5-rc6a" )
  CATEGORY="development interpreter"
 ATTRIBUTE="library"
  HOMEPAGE="http://www.mozilla.org/js/spidermonkey"
