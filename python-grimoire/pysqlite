@@ -1,6 +1,6 @@
 # This spell released under the terms of the GNU General Public License
 # as they appear in http://www.gnu.org/licenses/gpl.txt
-  VERSION=( "2.0.7" "2.0.5" "2.0.0" )
+  VERSION=( "2.2.2" "2.0.7" "2.0.5" "2.0.0" )
  CATEGORY="web"
 ATTRIBUTE="x11 python"
    SOURCE="${VERSION:0:3}/$VERSION/$SPELL-$VERSION"
